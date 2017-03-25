@@ -4,7 +4,8 @@ title: "Coursework to Complete"
 date: 2017-03-24
 ---
 
-`**Note:** This list is just for personal reference; you may use it if you like, but it is by no means an exhaustive list. That said, I have put in a fair bit of research into course information across MIT, Stanford and other top colleges whilst compiling this list that should provide a fair bit of understanding to an undergraduate student interested in exploring Machine Learning and Computer Vision with a mind to its applications in Genetics and Genomics (they're disparate branches of Biology).`  <br />
+**`Note`**`: This list is just for personal reference; you may use it if you like, but it is by no means an exhaustive list.`  <br />
+`That said, I have put in a fair bit of research into comparing prerequisites and course information across MIT, Stanford and other top colleges whilst compiling this list that should provide a fair overview, to an undergraduate student interested in exploring Machine Learning and Computer Vision, of the courses that relate to the applications of these practices in Genetics and Genomics (yes, they're disparate branches of Biology).`  <br />
 
 
 ## Algorithms:
@@ -17,12 +18,13 @@ date: 2017-03-24
 ## Mathematics and Statistics:
 
 #### Optional:
->*[opt] 6.042J/18.062J - Mathematics for Computer Science [UG]*  <br /> 
 
->*[opt-1] 18.085 - Computational Science and Engineering I (formerly Mathematical Methods for Engineers I)[G]*  <br /> 
->*[opt-2] 18.086 - Mathematical Methods for Engineers II [G]*  <br /> 
+*[opt] 6.042J/18.062J - Mathematics for Computer Science [UG]*  <br /> 
 
->*[opt-1] 18.01 - Single Variable Calculus [UG]*  <br /> 
+*[opt-1] 18.085 - Computational Science and Engineering I (formerly Mathematical Methods for Engineers I)[G]*  <br /> 
+*[opt-2] 18.086 - Mathematical Methods for Engineers II [G]*  <br /> 
+
+*[opt-1] 18.01 - Single Variable Calculus [UG]*  <br /> 
 
 4. 18.02 - **Multivariable Calculus** [UG]  *prerequisite for 6.041F*  <br /> 
 5. 18.06 - **Linear Algebra** [UG]  *prerequisite for CS229*  <br /> 
@@ -34,7 +36,8 @@ date: 2017-03-24
 ## Artificial Intelligence:
 
 #### Optional:
->[opt] 6.034 - Artificial Intelligence [UG]  <br /> 
+
+[opt] 6.034 - Artificial Intelligence [UG]  <br /> 
 
 
 ## Machine Learning:
@@ -51,7 +54,8 @@ date: 2017-03-24
 ## Biology (Genomics):
 
 #### Optional:
->*[opt] 8.591J - Systems Biology [UG/G]*  <br /> 
+
+*[opt] 8.591J - Systems Biology [UG/G]*  <br /> 
 
 13. 7.012 - **Introduction to Biology** [UG]  *prerequisite for 7.91J, 8.591J*  <br /> 
 14. 7.91J - **Foundations of Computational and Systems Biology** [UG/G]  <br /> 
