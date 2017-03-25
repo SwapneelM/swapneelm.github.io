@@ -5,8 +5,9 @@ date: 2017-03-24
 ---
 
 **`Note`**`: This list is just for personal reference; you may use it if you like, but it is by no means an exhaustive list.`  <br />
-`That said, I have put in a fair bit of research into comparing prerequisites and course information across MIT, Stanford and other top colleges whilst compiling this list that should provide a fair overview, to an undergraduate student interested in exploring Machine Learning and Computer Vision, of the courses that relate to the applications of these practices in Genetics and Genomics (yes, they're disparate branches of Biology).`  <br />
+`That said, I have put in a fair bit of research into comparing prerequisites and course information across MIT, Stanford and other colleges whilst compiling this list that should provide a fair overview, to an undergraduate student interested in exploring Machine Learning and Computer Vision, of the courses that relate to the applications of these practices in Genetics and Genomics (yes, they're disparate branches of Biology).`  <br />
 
+**`tl;dr`** <br />`It's just a list of courses that I'm interested in, oriented around ML and CV.`  <br />  
 
 ## Algorithms:
 
@@ -35,7 +36,7 @@ CS229 - **Machine Learning** [UG]  <br />
 10-715 - **Advanced Introduction to Machine Learning** [G]  <br /> 
 
 
-## Biology (Genomics):
+## Biology:
 
 7.012 - **Introduction to Biology** [UG]  *prerequisite for 7.91J, 8.591J*  <br /> 
 7.91J - **Foundations of Computational and Systems Biology** [UG/G]  <br /> 
