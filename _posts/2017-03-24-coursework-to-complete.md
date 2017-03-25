@@ -10,53 +10,53 @@ date: 2017-03-24
 
 ## Algorithms:
 
-1. 6.006J - Introduction to Algorithms [UG]  *prerequisite for 6.046J*  <br /> 
-2. 6.046J - Design and Analysis [UG]  *prerequisite for 6.84J*  <br /> 
-3. 6.84J - Advanced Algorithms [G]  <br /> 
+6.006J - Introduction to Algorithms [UG]  *prerequisite for 6.046J*  <br /> 
+6.046J - Design and Analysis [UG]  *prerequisite for 6.84J*  <br /> 
+6.84J - Advanced Algorithms [G]  <br /> 
 
 
 ## Mathematics and Statistics: 
 
-4. 18.02 - **Multivariable Calculus (II)** [UG]  *prerequisite for 6.041F*  <br /> 
-5. 18.06 - **Linear Algebra** [UG]  *prerequisite for CS229*  <br /> 
-6. 18.05 - **Introduction to Probability and Statistics** [UG]  *prerequisite for CS229*  <br /> 
-7. 6.041F - **Probabilistic Systems Analysis and Applied Probability** [UG/G]  <br /> 
-8. 6.262 - **Discrete Stochastic Processes** [G]  *prerequisite for 10-715 (CMU)*  <br /> 
+18.02 - **Multivariable Calculus (II)** [UG]  *prerequisite for 6.041F*  <br /> 
+18.06 - **Linear Algebra** [UG]  *prerequisite for CS229*  <br /> 
+18.05 - **Introduction to Probability and Statistics** [UG]  *prerequisite for CS229*  <br /> 
+6.041F - **Probabilistic Systems Analysis and Applied Probability** [UG/G]  <br /> 
+6.262 - **Discrete Stochastic Processes** [G]  *prerequisite for 10-715 (CMU)*  <br /> 
 
 
 ## Machine Learning:
 
 *10-401, 10-601, 10-701, and 10-715 are all introductory courses but 10-715 and 10-701 are intended for graduate students with a strong mathematical background.*  <br /> 
 
-9. CS229 - **Machine Learning** [UG]  <br /> 
+CS229 - **Machine Learning** [UG]  <br /> 
 
-10. 10-701 - **Introduction to Machine Learning** [UG/G]  *prerequisite for 10-702, 10-715*  <br /> 
-11. 10-702 - **Statistical Machine Learning** [G]  <br /> 
-12. 10-715 - **Advanced Introduction to Machine Learning** [G]  <br /> 
+10-701 - **Introduction to Machine Learning** [UG/G]  *prerequisite for 10-702, 10-715*  <br /> 
+10-702 - **Statistical Machine Learning** [G]  <br /> 
+10-715 - **Advanced Introduction to Machine Learning** [G]  <br /> 
 
 
 ## Biology (Genomics):
 
-13. 7.012 - **Introduction to Biology** [UG]  *prerequisite for 7.91J, 8.591J*  <br /> 
-14. 7.91J - **Foundations of Computational and Systems Biology** [UG/G]  <br /> 
+7.012 - **Introduction to Biology** [UG]  *prerequisite for 7.91J, 8.591J*  <br /> 
+7.91J - **Foundations of Computational and Systems Biology** [UG/G]  <br /> 
 
 
 ## Computer Vision:
 
-15. CS231N - **Convolutional Neural Networks for Visual Recognition** [UG]  <br /> 
-16. CAP5415 - **Computer Vision** [UG]  <br /> 
+CS231N - **Convolutional Neural Networks for Visual Recognition** [UG]  <br /> 
+CAP5415 - **Computer Vision** [UG]  <br /> 
 
 
 ## Optional Courses:
 
-* 8.591J - Systems Biology [UG/G]*  <br /> 
-* 6.034 - Artificial Intelligence [UG]*  <br /> 
-* 6.042J/18.062J - Mathematics for Computer Science [UG]*  <br /> 
+*8.591J - Systems Biology [UG/G]*  <br /> 
+*6.034 - Artificial Intelligence [UG]*  <br /> 
+*6.042J/18.062J - Mathematics for Computer Science [UG]*  <br /> 
 
-* 18.085 - Computational Science and Engineering (I) [G]*  <br /> 
-* 18.086 - Mathematical Methods for Engineers (II) [G]*  <br /> 
+*18.085 - Computational Science and Engineering (I) [G]*  <br /> 
+*18.086 - Mathematical Methods for Engineers (II) [G]*  <br /> 
 
-* 18.01 - Single Variable Calculus (I) [UG]*  <br />
+*18.01 - Single Variable Calculus (I) [UG]*  <br />
 
 ## Links:
 
