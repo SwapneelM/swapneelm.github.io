@@ -15,29 +15,13 @@ date: 2017-03-24
 3. 6.84J - Advanced Algorithms [G]  <br /> 
 
 
-## Mathematics and Statistics:
+## Mathematics and Statistics: 
 
-#### Optional:
-
-*[opt] 6.042J/18.062J - Mathematics for Computer Science [UG]*  <br /> 
-
-*[opt-1] 18.085 - Computational Science and Engineering I (formerly Mathematical Methods for Engineers I)[G]*  <br /> 
-*[opt-2] 18.086 - Mathematical Methods for Engineers II [G]*  <br /> 
-
-*[opt-1] 18.01 - Single Variable Calculus [UG]*  <br /> 
-
-4. 18.02 - **Multivariable Calculus** [UG]  *prerequisite for 6.041F*  <br /> 
+4. 18.02 - **Multivariable Calculus (II)** [UG]  *prerequisite for 6.041F*  <br /> 
 5. 18.06 - **Linear Algebra** [UG]  *prerequisite for CS229*  <br /> 
 6. 18.05 - **Introduction to Probability and Statistics** [UG]  *prerequisite for CS229*  <br /> 
 7. 6.041F - **Probabilistic Systems Analysis and Applied Probability** [UG/G]  <br /> 
 8. 6.262 - **Discrete Stochastic Processes** [G]  *prerequisite for 10-715 (CMU)*  <br /> 
-
-
-## Artificial Intelligence:
-
-#### Optional:
-
-[opt] 6.034 - Artificial Intelligence [UG]  <br /> 
 
 
 ## Machine Learning:
@@ -53,19 +37,28 @@ date: 2017-03-24
 
 ## Biology (Genomics):
 
-#### Optional:
-
-*[opt] 8.591J - Systems Biology [UG/G]*  <br /> 
-
 13. 7.012 - **Introduction to Biology** [UG]  *prerequisite for 7.91J, 8.591J*  <br /> 
 14. 7.91J - **Foundations of Computational and Systems Biology** [UG/G]  <br /> 
+
 
 ## Computer Vision:
 
 15. CS231N - **Convolutional Neural Networks for Visual Recognition** [UG]  <br /> 
 16. CAP5415 - **Computer Vision** [UG]  <br /> 
 
-# Links:
+
+## Optional Courses:
+
+* 8.591J - Systems Biology [UG/G]*  <br /> 
+* 6.034 - Artificial Intelligence [UG]*  <br /> 
+* 6.042J/18.062J - Mathematics for Computer Science [UG]*  <br /> 
+
+* 18.085 - Computational Science and Engineering (I) [G]*  <br /> 
+* 18.086 - Mathematical Methods for Engineers (II) [G]*  <br /> 
+
+* 18.01 - Single Variable Calculus (I) [UG]*  <br />
+
+## Links:
 
 [CMU Electives for ML Students](https://www.ml.cmu.edu/current-students/electives-for-ms-students.html)  <br /> 
 
