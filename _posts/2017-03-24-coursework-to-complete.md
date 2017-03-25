@@ -4,9 +4,6 @@ title: "Coursework to Complete"
 date: 2017-03-24
 ---
 
-Coursework to complete:
-=======================
-
 ## Algorithms:
 
 6.006J - Introduction to Algorithms [UG]  *prerequisite for 6.046J*  <br /> 
