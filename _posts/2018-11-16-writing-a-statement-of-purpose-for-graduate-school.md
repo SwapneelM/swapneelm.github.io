@@ -4,7 +4,7 @@ title: "Writing a Statement of Purpose for Graduate School"
 date: 2018-11-16
 ---
 
-## The Disclaimer
+### The Disclaimer
 
 1. There is _obviously_ no single way to achieve a successful outcome for your application to graduate school and this post comprises mainly of opinions that I hold based on no evidence other than a product of my personal experience with the process (which is limited, to say the least). All I'm trying to do by writing about this is to give you some perspective to enable you to think for yourself before you embark on the arduous process of applying to grad school. Goodluck!
 
@@ -13,7 +13,7 @@ date: 2018-11-16
 3. Look at this set of personal statements, instead, as the quality of essays that your competition writes (these are for a mix of Ph.D. and Masters programs) and use it as positive reinforcement to 'up your game,' so to speak.
 
 
-## Introduction
+### Introduction
 
 While applying to grad school, please don't make amateur-ish mistakes for your essays. It's a really cliched piece of advice when people say "you should tell them a story." Don't get me wrong, you can. But you don't have to.
 
@@ -24,22 +24,22 @@ That said, admissions are very variable and top schools almost always look favou
 Weaving stories, as stated before, may make or break your case depending on who reviews it. Ultimately I believe it's a math.random() process because there is a human on the other end, and human intelligence - unlike many manifestations of artificial intelligence - is highly unpredictable. I wanted to share some links for reading before you guys start writing (since we're only a month out from the earliest deadlines in November, hopefully you've already started writing a draft).
 
 
-## General Grad School Advice 
+### General Grad School Advice 
 
-###Statement of Purpose:
+#### Statement of Purpose:
 * [Very useful Meta Page of Links and Advice by Prof. Gary Cottrell](http://cseweb.ucsd.edu/~gary/Advice.html)
 * [Ph.D. specific advice from Prof. Philip Guo's Blog](http://pgbovine.net/grad-school-applications-summary.htm)
 * [Dr. Sean Holden's advice for applying to do a Ph.D. in Machine Learning (University of Cambridge)](https://www.cl.cam.ac.uk/~sbh11/phd_apply.html)
 * [Grad School Advice by Prof. Dan Horn](http://www-personal.umich.edu/~danhorn/graduate.html)
 * [SoP Advice from the GradCafe](https://forum.thegradcafe.com/topic/48905-some-advice-on-writing-an-sop/)
 
-### Letters of Recommendation:
+#### Letters of Recommendation:
 * [How to request a letter of recommendation, Michael Ernst (UWash)](https://homes.cs.washington.edu/~mernst/advice/request-recommendation.html)
 * [How to write a letter of recommendation, Michael Ernst (UWash)](https://homes.cs.washington.edu/~mernst/advice/write-recommendation.html)
 * [Advice to Letter Writers by Prof. Shriram Krishnamurthi (Brown Univ.)](https://cs.brown.edu/~sk/Memos/Grad-School-Recos/)
 
 
-## Some examples of SoPs:
+### Some examples of SoPs:
 * [Jeremy Lacomis' Statement of Purpose for a Ph.D. at Carnegie Mellon University focusing on Software Engineering focusing on Programming Languages](https://www.cs.cmu.edu/~jlacomis/assets/statement/personal-statement-cmu.pdf)
 * [Jean Yang's Statement of Purpose for a Ph.D. in Computer Science](https://github.com/jeanqasaur/academic-application-materials/blob/master/phd-application-2007/personal_statement.pdf)
 * [Philip Guo's Statement of Purpose for a Masters in Computer Science at Stanford University](http://pgbovine.net/PhD-applications/Philip_Guo-Stanford-PhD-app-statement.pdf)
@@ -55,7 +55,7 @@ Weaving stories, as stated before, may make or break your case depending on who 
 * [Jacob Steinhardt's Statement of Purpose (Stanford, Machine Learning)](https://cs.stanford.edu/~jsteinhardt/statement.pdf)
 * [U. N. Niranjan's Research Statement (U.C. Irvine, Machine Learning)](https://www.ics.uci.edu/~numanare/files/research_niranjan.pdf)
 
-### My personal favourite - Anant Bhardwaj (B.Eng. Pune Univ., M.S. Stanford, Ph.D. M.I.T.):
+#### My personal favourite - Anant Bhardwaj (B.Eng. Pune Univ., M.S. Stanford, Ph.D. M.I.T.):
 
 **Mainly because this was the first (and only) Statement of Purpose I read before applying for a Masters in Computer Science right after undergrad (although I later decided not to jump into it, but work at CERN for a year instead).**
 
@@ -73,7 +73,7 @@ Before you read this set of statements, I'd like to explain my reasons for highl
 * [Statement of Purpose - Ph.D. in Computer Science](http://people.csail.mit.edu/anantb/public/docs/sop/phd_admission_sop.pdf)
 
 
-## My Two Cents on this subject:
+### My Two Cents on this subject:
 
 A lot of these people and a lot of the advice you will see states that they know the exact field they wanted to work on. That is false. Nobody knows exactly what they want to to for the rest of their lives. Very few actually know the general area they want to work on. Most people have only a fair idea and as Ph.D. programs often state on their websites, that is OK. Most of your ideas will change with experience anyway. 
 
@@ -82,10 +82,10 @@ For instance, if you like X a lot but you've never tried doing Y, how do you kno
 Essentially, what you're trying to do in your essay is explain one or two directions that you would like to take, back your claim up with evidence (yes, material evidence - including grades, research, and/or projects) of why you would do well in those directions, and finally state what you see yourself doing once you actually get into that direction. Clarity of thoughts is way more important and the only reliable way to get that is to actually be aware of what that direction is; follow active research areas and people working in that direction, and finally, at least have some ideas of what you would do if you were given an opportunity to work there. Write confidently; you don't necessarily need to highlight why you failed or justify any misses if you can focus on the hits. It's not necessary that your statement of purpose would have to 'make up for why you're not as good as you could have been' as opposed to 'focus on how good you can be based on what you have already done.' 
 
 
-## Further Reading (strongly recommended if you have the time)
+### Further Reading (strongly recommended if you have the time)
 * [Reddit Thread on Resources for Graduate School](http://matt.might.net/articles/how-to-apply-and-get-in-to-graduate-school-in-science-mathematics-engineering-or-computer-science/)
 
-## References
+### References
 This post has been composed by using publicly available documents shared by a fantastic set of researchers in an effort to help those that are seeking such information. I've simply listed them as they are, linking back to the original references. 
 
 If there is any issue with this, please feel free to contact me via email and I will be happy to remove the link(s) from this post.
