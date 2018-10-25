@@ -1,3 +1,13 @@
-name: Swapneel Mehta
+title: Swapneel Mehta
+email: swapneel@ccdev.in
+description: >- # this means to ignore newlines until "baseurl:"
+        Swapneel is a Technical Student at the European Organisation for Nuclear Research working at the intersection of deep learning and high-energy physics.
+
+github_username: swapneelm
+
+# Build settings
 markdown: kramdown
+theme: minima
+plugins:
+- jekyll-feed
 permalink: /blog/:year/:month/:day/:title
