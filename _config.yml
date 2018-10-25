@@ -8,6 +8,6 @@ github_username: swapneelm
 # Build settings
 markdown: kramdown
 theme: minima
+permalink: /blog/:year/:month/:day/:title
 plugins:
 - jekyll-feed
-permalink: /blog/:year/:month/:day/:title
