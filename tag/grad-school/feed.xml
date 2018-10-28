@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-10-28T23:53:30+01:00</updated><id>/</id><title type="html">Swapneel Mehta</title><subtitle>Swapneel Mehta</subtitle><entry><title type="html">Writing a Statement of Purpose</title><link href="/writing-a-statement-of-purpose" rel="alternate" type="text/html" title="Writing a Statement of Purpose" /><published>2018-10-16T00:00:00+02:00</published><updated>2018-10-16T00:00:00+02:00</updated><id>/writing-a-statement-of-purpose</id><content type="html" xml:base="/writing-a-statement-of-purpose">&lt;h3 id=&quot;the-disclaimer&quot;&gt;The Disclaimer&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="/tag/grad-school/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2018-10-28T23:53:30+01:00</updated>
+  <id>/tag/grad-school/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Swapneel Mehta | </title>
+  
+
+  
+    <subtitle>Swapneel Mehta</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Writing a Statement of Purpose</title>
+      <link href="/writing-a-statement-of-purpose" rel="alternate" type="text/html" title="Writing a Statement of Purpose" />
+      <published>2018-10-16T00:00:00+02:00</published>
+      <updated>2018-10-16T00:00:00+02:00</updated>
+      <id>/writing-a-statement-of-purpose</id>
+      <content type="html" xml:base="/writing-a-statement-of-purpose">&lt;h3 id=&quot;the-disclaimer&quot;&gt;The Disclaimer&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;This comes first because people often tend to ignore this very relevant section.&lt;/strong&gt;&lt;/p&gt;
 
@@ -104,81 +143,32 @@
 &lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
 &lt;p&gt;This post has been composed by using publicly available documents shared by a fantastic set of researchers in an effort to help those that are seeking such information. I’ve simply listed them as they are, linking back to the original references.&lt;/p&gt;
 
-&lt;p&gt;If there is any issue with this, please feel free to contact me via email and I will be happy to remove the link(s) from this post.&lt;/p&gt;</content><author><name>Swapneel Mehta</name></author><category term="grad-school" /><summary type="html">The Disclaimer</summary></entry><entry><title type="html">Coursework to Complete</title><link href="/coursework-to-complete" rel="alternate" type="text/html" title="Coursework to Complete" /><published>2017-03-24T00:00:00+01:00</published><updated>2017-03-24T00:00:00+01:00</updated><id>/coursework-to-complete</id><content type="html" xml:base="/coursework-to-complete">&lt;h2 id=&quot;an-exhaustive-list-of-course-lectures&quot;&gt;An Exhaustive List of Course Lectures&lt;/h2&gt;
+&lt;p&gt;If there is any issue with this, please feel free to contact me via email and I will be happy to remove the link(s) from this post.&lt;/p&gt;</content>
 
-&lt;p&gt;This post comprises of a list of lectures that I intend to watch at some point in order to mainly just learn more about these domains. They seem like some interesting areas to explore and some are just plain fun!&lt;/p&gt;
+      
+      
+      
+      
+      
 
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Note&lt;/code&gt;&lt;/strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;: This list is just for personal reference; you may use it if you like, but it is by no means an exhaustive list.&lt;/code&gt;  &lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;That said, I have put in a fair bit of research into comparing prerequisites and course information across MIT, Stanford and other colleges whilst compiling this list that should provide a fair overview, to an undergraduate student interested in exploring Machine Learning and Computer Vision, of the courses that relate to the applications of these practices in Genetics and Genomics (yes, they're disparate branches of Biology).&lt;/code&gt;  &lt;br /&gt;&lt;/p&gt;
+      <author>
+          <name>Swapneel Mehta</name>
+        
+        
+      </author>
 
-&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tl;dr&lt;/code&gt;&lt;/strong&gt; &lt;br /&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;It's just a list of courses that I'm interested in, oriented around ML and CV.&lt;/code&gt;  &lt;br /&gt;&lt;/p&gt;
+      
 
-&lt;h2 id=&quot;algorithms&quot;&gt;Algorithms:&lt;/h2&gt;
+      
+        <category term="grad-school" />
+      
 
-&lt;p&gt;6.006J - Introduction to Algorithms [UG]  &lt;em&gt;prerequisite for 6.046J&lt;/em&gt;  &lt;br /&gt; 
-6.046J - Design and Analysis [UG]  &lt;em&gt;prerequisite for 6.84J&lt;/em&gt;  &lt;br /&gt; 
-6.84J - Advanced Algorithms [G]  &lt;br /&gt;&lt;/p&gt;
+      
+        <summary type="html">The Disclaimer</summary>
+      
 
-&lt;h2 id=&quot;mathematics-and-statistics&quot;&gt;Mathematics and Statistics:&lt;/h2&gt;
-
-&lt;p&gt;18.02 - &lt;strong&gt;Multivariable Calculus (II)&lt;/strong&gt; [UG]  &lt;em&gt;prerequisite for 6.041F&lt;/em&gt;  &lt;br /&gt; 
-18.06 - &lt;strong&gt;Linear Algebra&lt;/strong&gt; [UG]  &lt;em&gt;prerequisite for CS229&lt;/em&gt;  &lt;br /&gt; 
-18.05 - &lt;strong&gt;Introduction to Probability and Statistics&lt;/strong&gt; [UG]  &lt;em&gt;prerequisite for CS229&lt;/em&gt;  &lt;br /&gt; 
-6.041F - &lt;strong&gt;Probabilistic Systems Analysis and Applied Probability&lt;/strong&gt; [UG/G]  &lt;br /&gt; 
-6.262 - &lt;strong&gt;Discrete Stochastic Processes&lt;/strong&gt; [G]  &lt;em&gt;prerequisite for 10-715 (CMU)&lt;/em&gt;  &lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;machine-learning&quot;&gt;Machine Learning:&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;10-401, 10-601, 10-701, and 10-715 are all introductory courses but 10-715 and 10-701 are intended for graduate students with a strong mathematical background.&lt;/em&gt;  &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;CS229 - &lt;strong&gt;Machine Learning&lt;/strong&gt; [UG]  &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;10-701 - &lt;strong&gt;Introduction to Machine Learning&lt;/strong&gt; [UG/G]  &lt;em&gt;prerequisite for 10-702, 10-715&lt;/em&gt;  &lt;br /&gt; 
-10-702 - &lt;strong&gt;Statistical Machine Learning&lt;/strong&gt; [G]  &lt;br /&gt; 
-10-715 - &lt;strong&gt;Advanced Introduction to Machine Learning&lt;/strong&gt; [G]  &lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;biology&quot;&gt;Biology:&lt;/h2&gt;
-
-&lt;p&gt;7.012 - &lt;strong&gt;Introduction to Biology&lt;/strong&gt; [UG]  &lt;em&gt;prerequisite for 7.91J, 8.591J&lt;/em&gt;  &lt;br /&gt; 
-7.91J - &lt;strong&gt;Foundations of Computational and Systems Biology&lt;/strong&gt; [UG/G]  &lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;computer-vision&quot;&gt;Computer Vision:&lt;/h2&gt;
-
-&lt;p&gt;CS231N - &lt;strong&gt;Convolutional Neural Networks for Visual Recognition&lt;/strong&gt; [UG]  &lt;br /&gt; 
-CAP5415 - &lt;strong&gt;Computer Vision&lt;/strong&gt; [UG]  &lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;optional-courses&quot;&gt;Optional Courses:&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;8.591J - Systems Biology [UG/G]&lt;/em&gt;  &lt;br /&gt; 
-&lt;em&gt;6.034 - Artificial Intelligence [UG]&lt;/em&gt;  &lt;br /&gt; 
-&lt;em&gt;6.042J/18.062J - Mathematics for Computer Science [UG]&lt;/em&gt;  &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;18.085 - Computational Science and Engineering (I) [G]&lt;/em&gt;  &lt;br /&gt; 
-&lt;em&gt;18.086 - Mathematical Methods for Engineers (II) [G]&lt;/em&gt;  &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;18.01 - Single Variable Calculus (I) [UG]&lt;/em&gt;  &lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;links&quot;&gt;Links:&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.ml.cmu.edu/current-students/electives-for-ms-students.html&quot;&gt;CMU Electives for ML Students&lt;/a&gt;  &lt;br /&gt;&lt;/p&gt;</content><author><name>Swapneel Mehta</name></author><category term="getting-started" /><summary type="html">An Exhaustive List of Course Lectures</summary></entry><entry><title type="html">The Blog</title><link href="/the-blog" rel="alternate" type="text/html" title="The Blog" /><published>2017-03-21T00:00:00+01:00</published><updated>2017-03-21T00:00:00+01:00</updated><id>/the-blog</id><content type="html" xml:base="/the-blog">&lt;h3 id=&quot;why-blog&quot;&gt;Why Blog?&lt;/h3&gt;
-
-&lt;p&gt;I like to look back on the things that I do and writing comes easily to me - it just seems like the logical thing to do. Frankly, I’m surprised it took me so long to actually (finally) build a decent-ish blog.&lt;/p&gt;
-
-&lt;p&gt;In a line, it helps get things off my mind in a quick, efficient, indexable manner. Writing often serves as a great tool for introspection.&lt;/p&gt;
-
-&lt;p&gt;I finally got around to putting this together after a 5-year journey spanning Wordpress, Blogger, Medium, and plain ol’ &lt;code class=&quot;highlighter-rouge&quot;&gt;.txt&lt;/code&gt; drafts of posts that are now likely to see the light of day.&lt;/p&gt;
-
-&lt;h3 id=&quot;title&quot;&gt;Title&lt;/h3&gt;
-
-&lt;p&gt;I am still thinking of a better title for this blog but in the meanwhile I think I’m just going to leave it as &lt;code class=&quot;highlighter-rouge&quot;&gt;The Blog&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;technical-details&quot;&gt;Technical Details&lt;/h3&gt;
-
-&lt;p&gt;The site is powered by &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; with the posts written in Markdown. 
-I’ve used a theme called &lt;a href=&quot;https://github.com/jekyller/jasper2&quot;&gt;Jasper2&lt;/a&gt; that’s based on the default theme for a publishing platform called &lt;a href=&quot;https://www.ghost.org&quot;&gt;Ghost&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Try it out, it’s pretty neat!&lt;/p&gt;
-
-&lt;h3 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h3&gt;
-
-&lt;p&gt;Word of advice to the readers - my opinions are thoughtful, but loosely held (I swear this is not motivated by the &lt;a href=&quot;https://fs.blog/principles/&quot;&gt;Farnam Street Principles&lt;/a&gt;). When I write opinion pieces, I do not see it as a permanent and unchanging stance for the simple reason that I do not believe I know everything about anything. Happy reading!&lt;/p&gt;</content><author><name>Swapneel Mehta</name></author><category term="getting-started" /><summary type="html">Why Blog?</summary></entry></feed>
+      
+      
+    </entry>
+  
+</feed>

@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-10-28T23:53:30+01:00</updated><id>/</id><title type="html">Swapneel Mehta</title><subtitle>Swapneel Mehta</subtitle><entry><title type="html">Writing a Statement of Purpose</title><link href="/writing-a-statement-of-purpose" rel="alternate" type="text/html" title="Writing a Statement of Purpose" /><published>2018-10-16T00:00:00+02:00</published><updated>2018-10-16T00:00:00+02:00</updated><id>/writing-a-statement-of-purpose</id><content type="html" xml:base="/writing-a-statement-of-purpose">&lt;h3 id=&quot;the-disclaimer&quot;&gt;The Disclaimer&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="/author/swapneel/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2018-10-28T23:53:30+01:00</updated>
+  <id>/author/swapneel/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Swapneel Mehta | </title>
+  
+
+  
+    <subtitle>Swapneel Mehta</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Writing a Statement of Purpose</title>
+      <link href="/writing-a-statement-of-purpose" rel="alternate" type="text/html" title="Writing a Statement of Purpose" />
+      <published>2018-10-16T00:00:00+02:00</published>
+      <updated>2018-10-16T00:00:00+02:00</updated>
+      <id>/writing-a-statement-of-purpose</id>
+      <content type="html" xml:base="/writing-a-statement-of-purpose">&lt;h3 id=&quot;the-disclaimer&quot;&gt;The Disclaimer&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;This comes first because people often tend to ignore this very relevant section.&lt;/strong&gt;&lt;/p&gt;
 
@@ -104,7 +143,41 @@
 &lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
 &lt;p&gt;This post has been composed by using publicly available documents shared by a fantastic set of researchers in an effort to help those that are seeking such information. I’ve simply listed them as they are, linking back to the original references.&lt;/p&gt;
 
-&lt;p&gt;If there is any issue with this, please feel free to contact me via email and I will be happy to remove the link(s) from this post.&lt;/p&gt;</content><author><name>Swapneel Mehta</name></author><category term="grad-school" /><summary type="html">The Disclaimer</summary></entry><entry><title type="html">Coursework to Complete</title><link href="/coursework-to-complete" rel="alternate" type="text/html" title="Coursework to Complete" /><published>2017-03-24T00:00:00+01:00</published><updated>2017-03-24T00:00:00+01:00</updated><id>/coursework-to-complete</id><content type="html" xml:base="/coursework-to-complete">&lt;h2 id=&quot;an-exhaustive-list-of-course-lectures&quot;&gt;An Exhaustive List of Course Lectures&lt;/h2&gt;
+&lt;p&gt;If there is any issue with this, please feel free to contact me via email and I will be happy to remove the link(s) from this post.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Swapneel Mehta</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="grad-school" />
+      
+
+      
+        <summary type="html">The Disclaimer</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Coursework to Complete</title>
+      <link href="/coursework-to-complete" rel="alternate" type="text/html" title="Coursework to Complete" />
+      <published>2017-03-24T00:00:00+01:00</published>
+      <updated>2017-03-24T00:00:00+01:00</updated>
+      <id>/coursework-to-complete</id>
+      <content type="html" xml:base="/coursework-to-complete">&lt;h2 id=&quot;an-exhaustive-list-of-course-lectures&quot;&gt;An Exhaustive List of Course Lectures&lt;/h2&gt;
 
 &lt;p&gt;This post comprises of a list of lectures that I intend to watch at some point in order to mainly just learn more about these domains. They seem like some interesting areas to explore and some are just plain fun!&lt;/p&gt;
 
@@ -160,7 +233,41 @@ CAP5415 - &lt;strong&gt;Computer Vision&lt;/strong&gt; [UG]  &lt;br /&gt;&lt;/p&
 
 &lt;h2 id=&quot;links&quot;&gt;Links:&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.ml.cmu.edu/current-students/electives-for-ms-students.html&quot;&gt;CMU Electives for ML Students&lt;/a&gt;  &lt;br /&gt;&lt;/p&gt;</content><author><name>Swapneel Mehta</name></author><category term="getting-started" /><summary type="html">An Exhaustive List of Course Lectures</summary></entry><entry><title type="html">The Blog</title><link href="/the-blog" rel="alternate" type="text/html" title="The Blog" /><published>2017-03-21T00:00:00+01:00</published><updated>2017-03-21T00:00:00+01:00</updated><id>/the-blog</id><content type="html" xml:base="/the-blog">&lt;h3 id=&quot;why-blog&quot;&gt;Why Blog?&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.ml.cmu.edu/current-students/electives-for-ms-students.html&quot;&gt;CMU Electives for ML Students&lt;/a&gt;  &lt;br /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Swapneel Mehta</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="getting-started" />
+      
+
+      
+        <summary type="html">An Exhaustive List of Course Lectures</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">The Blog</title>
+      <link href="/the-blog" rel="alternate" type="text/html" title="The Blog" />
+      <published>2017-03-21T00:00:00+01:00</published>
+      <updated>2017-03-21T00:00:00+01:00</updated>
+      <id>/the-blog</id>
+      <content type="html" xml:base="/the-blog">&lt;h3 id=&quot;why-blog&quot;&gt;Why Blog?&lt;/h3&gt;
 
 &lt;p&gt;I like to look back on the things that I do and writing comes easily to me - it just seems like the logical thing to do. Frankly, I’m surprised it took me so long to actually (finally) build a decent-ish blog.&lt;/p&gt;
 
@@ -181,4 +288,32 @@ I’ve used a theme called &lt;a href=&quot;https://github.com/jekyller/jasper2&
 
 &lt;h3 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h3&gt;
 
-&lt;p&gt;Word of advice to the readers - my opinions are thoughtful, but loosely held (I swear this is not motivated by the &lt;a href=&quot;https://fs.blog/principles/&quot;&gt;Farnam Street Principles&lt;/a&gt;). When I write opinion pieces, I do not see it as a permanent and unchanging stance for the simple reason that I do not believe I know everything about anything. Happy reading!&lt;/p&gt;</content><author><name>Swapneel Mehta</name></author><category term="getting-started" /><summary type="html">Why Blog?</summary></entry></feed>
+&lt;p&gt;Word of advice to the readers - my opinions are thoughtful, but loosely held (I swear this is not motivated by the &lt;a href=&quot;https://fs.blog/principles/&quot;&gt;Farnam Street Principles&lt;/a&gt;). When I write opinion pieces, I do not see it as a permanent and unchanging stance for the simple reason that I do not believe I know everything about anything. Happy reading!&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Swapneel Mehta</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="getting-started" />
+      
+
+      
+        <summary type="html">Why Blog?</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
