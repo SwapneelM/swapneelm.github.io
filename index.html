@@ -34,24 +34,24 @@
     <![endif]-->
     
     <!-- This tag outputs SEO meta+structured data and other important settings -->
-    <meta name="description" content="The Blog" />
-    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="/" />
+    <meta name="description" content="Swapneel's Blog" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Swapneel Mehta" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Swapneel Mehta" />
-    <meta property="og:description" content="The Blog" />
-    <meta property="og:url" content="/" />
-    <meta property="og:image" content="/assets/images/blog-cover.jpg" />
+    <meta property="og:description" content="Swapneel's Blog" />
+    <meta property="og:url" content="http://localhost:4000/" />
+    <meta property="og:image" content="http://localhost:4000/assets/img/fb-cover-swapneel.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/swapneelm" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Swapneel Mehta" />
-    <meta name="twitter:description" content="The Blog" />
-    <meta name="twitter:url" content="/" />
-    <meta name="twitter:image" content="/assets/images/blog-cover.jpg" />
+    <meta name="twitter:description" content="Swapneel's Blog" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/img/fb-cover-swapneel.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Swapneel Mehta" />
     <meta name="twitter:site" content="@swapneel_mehta" />
@@ -66,20 +66,20 @@
     "publisher": {
         "@type": "Organization",
         "name": "Swapneel Mehta",
-        "logo": "/assets/images/blog-icon.png"
+        "logo": "http://localhost:4000/assets/images/blog-icon.png"
     },
-    "url": "/",
+    "url": "http://localhost:4000/",
     "image": {
         "@type": "ImageObject",
-        "url": "/assets/images/blog-cover.jpg",
+        "url": "http://localhost:4000/assets/img/fb-cover-swapneel.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/"
+        "@id": "http://localhost:4000/"
     },
-    "description": "The Blog"
+    "description": "Swapneel's Blog"
 }
     </script>
 
@@ -105,7 +105,7 @@
 into the {body} of the default.hbs template -->
 
 <!-- The big featured header, it uses blog cover image as a BG if available -->
-<header class="site-header outer " style="background-image:  url(/assets/images/blog-cover.jpg) ">
+<header class="site-header outer " style="background-image:  url(/assets/img/fb-cover-swapneel.jpg) ">
     <div class="inner">
         <div class="site-header-content">
             <h1 class="site-title">
@@ -113,7 +113,7 @@ into the {body} of the default.hbs template -->
                     <img class="site-logo" src="/assets/images/blog-icon.png" alt="Swapneel Mehta"/>
                 
             </h1>
-            <h2 class="site-description">The Blog</h2>
+            <h2 class="site-description">Swapneel's Blog</h2>
         </div>
         <nav class="site-nav">
     <div class="site-nav-left">
@@ -155,8 +155,39 @@ into the {body} of the default.hbs template -->
             
     <article class="post-card home-template">
         
-            <a class="post-card-image-link" href="/writing-a-statement-of-purpose">
+            <a class="post-card-image-link" href="/machine-learning-summer-schools">
                 <div class="post-card-image" style="background-image: url(/assets/images/advanced.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/machine-learning-summer-schools">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Summer-school</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Machine Learning Summer Schools</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>Machine Learning Summer Schools This post is the first in a series of posts highlighting my attempt(s) to prepare myself to undertake research and for graduate school. It will include a year in</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card home-template">
+        
+            <a class="post-card-image-link" href="/writing-a-statement-of-purpose">
+                <div class="post-card-image" style="background-image: url(/assets/images/writing.jpg)"></div>
             </a>
         
         <div class="post-card-content">
@@ -187,7 +218,7 @@ into the {body} of the default.hbs template -->
     <article class="post-card home-template">
         
             <a class="post-card-image-link" href="/coursework-to-complete">
-                <div class="post-card-image" style="background-image: url(/assets/images/advanced.jpg)"></div>
+                <div class="post-card-image" style="background-image: url(/assets/images/design.jpg)"></div>
             </a>
         
         <div class="post-card-content">
@@ -259,7 +290,7 @@ into the {body} of the default.hbs template -->
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="/">Swapneel Mehta</a> &copy; 2018</section>
+                <section class="copyright"><a href="http://localhost:4000/">Swapneel Mehta</a> &copy; 2018</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
@@ -283,7 +314,7 @@ into the {body} of the default.hbs template -->
                     <img class="subscribe-overlay-logo" src="/assets/images/blog-icon.png" alt="Swapneel Mehta" />
                 
                 <h1 class="subscribe-overlay-title">Subscribe to Swapneel Mehta</h1>
-                <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
+                <p class="subscribe-overlay-description">Coming soon!</p>
                 <form method="post" action="/subscribe/" class="">
     <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
 
