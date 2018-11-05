@@ -4,20 +4,20 @@
     <title> - Articles</title>
     <description>Swapneel's Blog</description>
     <link>
-    http://localhost:4000</link>
+    </link>
     
       
       <item>
         <title>Machine Learning Summer Schools</title>
         
-          <description>&lt;h2 id=&quot;machine-learning-summer-schools&quot;&gt;Machine Learning Summer Schools&lt;/h2&gt;
+          <description>&lt;p&gt;&lt;em&gt;This post is the first in a series of posts highlighting my attempt(s) to prepare myself to undertake research and for graduate school. It will include a year in review, learnings from working at CERN, and some technical posts about the kind of work I do.&lt;/em&gt;&lt;/p&gt;
 
 </description>
         
         <pubDate>Tue, 16 Oct 2018 00:00:00 +0200</pubDate>
         <link>
-        http://localhost:4000/machine-learning-summer-schools</link>
-        <guid isPermaLink="true">http://localhost:4000/machine-learning-summer-schools</guid>
+        /machine-learning-summer-schools</link>
+        <guid isPermaLink="true">/machine-learning-summer-schools</guid>
       </item>
       
     
@@ -31,8 +31,38 @@
         
         <pubDate>Tue, 16 Oct 2018 00:00:00 +0200</pubDate>
         <link>
-        http://localhost:4000/writing-a-statement-of-purpose</link>
-        <guid isPermaLink="true">http://localhost:4000/writing-a-statement-of-purpose</guid>
+        /writing-a-statement-of-purpose</link>
+        <guid isPermaLink="true">/writing-a-statement-of-purpose</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>A Student’s Guide to Living Abroad</title>
+        
+          <description>&lt;p&gt;&lt;em&gt;Note: This is part of a series of posts. While this one is focused on making preparations for the travel, the next one will (hopefully) provide deeper insight into how life works and what to expect from the outside world based on my experience so far.&lt;/em&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 10 Jul 2017 00:00:00 +0200</pubDate>
+        <link>
+        /a-students-guide-to-living-abroad</link>
+        <guid isPermaLink="true">/a-students-guide-to-living-abroad</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>CERN Openlab Internship</title>
+        
+          <description>&lt;p&gt;This post is about my internship within the CERN Openlab Program in 2017 and includes a questionnaire (hopefully) useful for students applying to the program.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 07 Apr 2017 00:00:00 +0200</pubDate>
+        <link>
+        /cern-openlab-internship</link>
+        <guid isPermaLink="true">/cern-openlab-internship</guid>
       </item>
       
     
@@ -46,8 +76,8 @@
         
         <pubDate>Fri, 24 Mar 2017 00:00:00 +0100</pubDate>
         <link>
-        http://localhost:4000/coursework-to-complete</link>
-        <guid isPermaLink="true">http://localhost:4000/coursework-to-complete</guid>
+        /coursework-to-complete</link>
+        <guid isPermaLink="true">/coursework-to-complete</guid>
       </item>
       
     
@@ -61,8 +91,8 @@
         
         <pubDate>Tue, 21 Mar 2017 00:00:00 +0100</pubDate>
         <link>
-        http://localhost:4000/the-blog</link>
-        <guid isPermaLink="true">http://localhost:4000/the-blog</guid>
+        /the-blog</link>
+        <guid isPermaLink="true">/the-blog</guid>
       </item>
       
     
