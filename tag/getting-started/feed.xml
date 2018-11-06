@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/tag/getting-started/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2018-11-06T23:48:00+01:00</updated>
-  <id>http://localhost:4000/tag/getting-started/feed.xml</id>
+  <link href="/tag/getting-started/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2018-11-07T00:12:03+01:00</updated>
+  <id>/tag/getting-started/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Coursework to Complete</title>
-      <link href="http://localhost:4000/coursework-to-complete" rel="alternate" type="text/html" title="Coursework to Complete" />
+      <link href="/coursework-to-complete" rel="alternate" type="text/html" title="Coursework to Complete" />
       <published>2017-03-24T00:00:00+01:00</published>
       <updated>2017-03-24T00:00:00+01:00</updated>
-      <id>http://localhost:4000/coursework-to-complete</id>
-      <content type="html" xml:base="http://localhost:4000/coursework-to-complete">&lt;h2 id=&quot;an-exhaustive-list-of-course-lectures&quot;&gt;An Exhaustive List of Course Lectures&lt;/h2&gt;
+      <id>/coursework-to-complete</id>
+      <content type="html" xml:base="/coursework-to-complete">&lt;h2 id=&quot;an-exhaustive-list-of-course-lectures&quot;&gt;An Exhaustive List of Course Lectures&lt;/h2&gt;
 
 &lt;p&gt;This post comprises of a list of lectures that I intend to watch at some point in order to mainly just learn more about these domains. They seem like some interesting areas to explore and some are just plain fun!&lt;/p&gt;
 
@@ -123,11 +123,11 @@ CAP5415 - &lt;strong&gt;Computer Vision&lt;/strong&gt; [UG]  &lt;br /&gt;&lt;/p&
   
     <entry>
       <title type="html">The Blog</title>
-      <link href="http://localhost:4000/the-blog" rel="alternate" type="text/html" title="The Blog" />
+      <link href="/the-blog" rel="alternate" type="text/html" title="The Blog" />
       <published>2017-03-21T00:00:00+01:00</published>
       <updated>2017-03-21T00:00:00+01:00</updated>
-      <id>http://localhost:4000/the-blog</id>
-      <content type="html" xml:base="http://localhost:4000/the-blog">&lt;h3 id=&quot;why-blog&quot;&gt;Why Blog?&lt;/h3&gt;
+      <id>/the-blog</id>
+      <content type="html" xml:base="/the-blog">&lt;h3 id=&quot;why-blog&quot;&gt;Why Blog?&lt;/h3&gt;
 
 &lt;p&gt;I like to look back on the things that I do and writing comes easily to me - it just seems like the logical thing to do. Frankly, I’m surprised it took me so long to actually (finally) build a decent-ish blog.&lt;/p&gt;
 

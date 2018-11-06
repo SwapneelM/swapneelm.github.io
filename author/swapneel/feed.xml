@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/author/swapneel/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2018-11-06T23:48:00+01:00</updated>
-  <id>http://localhost:4000/author/swapneel/feed.xml</id>
+  <link href="/author/swapneel/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2018-11-07T00:12:03+01:00</updated>
+  <id>/author/swapneel/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">How to be a Real Computer Science Major</title>
-      <link href="http://localhost:4000/how-to-be-a-real-computer-science-major" rel="alternate" type="text/html" title="How to be a Real Computer Science Major" />
+      <link href="/how-to-be-a-real-computer-science-major" rel="alternate" type="text/html" title="How to be a Real Computer Science Major" />
       <published>2018-10-16T00:00:00+02:00</published>
       <updated>2018-10-16T00:00:00+02:00</updated>
-      <id>http://localhost:4000/how-to-be-a-real-computer-science-major</id>
-      <content type="html" xml:base="http://localhost:4000/how-to-be-a-real-computer-science-major">&lt;p&gt;This post focuses on how to modify/hack your terminal with different plugins such that you can make Homer Simpson spout meaningful software engineering quotes on launching it.&lt;/p&gt;
+      <id>/how-to-be-a-real-computer-science-major</id>
+      <content type="html" xml:base="/how-to-be-a-real-computer-science-major">&lt;p&gt;This post focuses on how to modify/hack your terminal with different plugins such that you can make Homer Simpson spout meaningful software engineering quotes on launching it.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Note: This post contains a healthy dose of sarcasm.&lt;/em&gt;&lt;/p&gt;
 
@@ -251,11 +251,11 @@ Reference: &lt;a href=&quot;https://superuser.com/questions/132029/how-do-you-re
   
     <entry>
       <title type="html">Writing a Statement of Purpose</title>
-      <link href="http://localhost:4000/writing-a-statement-of-purpose" rel="alternate" type="text/html" title="Writing a Statement of Purpose" />
+      <link href="/writing-a-statement-of-purpose" rel="alternate" type="text/html" title="Writing a Statement of Purpose" />
       <published>2018-10-16T00:00:00+02:00</published>
       <updated>2018-10-16T00:00:00+02:00</updated>
-      <id>http://localhost:4000/writing-a-statement-of-purpose</id>
-      <content type="html" xml:base="http://localhost:4000/writing-a-statement-of-purpose">&lt;h3 id=&quot;the-disclaimer&quot;&gt;The Disclaimer&lt;/h3&gt;
+      <id>/writing-a-statement-of-purpose</id>
+      <content type="html" xml:base="/writing-a-statement-of-purpose">&lt;h3 id=&quot;the-disclaimer&quot;&gt;The Disclaimer&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;This comes first because people often tend to ignore this very relevant section.&lt;/em&gt;&lt;/p&gt;
 
@@ -391,11 +391,11 @@ Reference: &lt;a href=&quot;https://superuser.com/questions/132029/how-do-you-re
   
     <entry>
       <title type="html">Machine Learning Summer Schools</title>
-      <link href="http://localhost:4000/machine-learning-summer-schools" rel="alternate" type="text/html" title="Machine Learning Summer Schools" />
+      <link href="/machine-learning-summer-schools" rel="alternate" type="text/html" title="Machine Learning Summer Schools" />
       <published>2018-10-16T00:00:00+02:00</published>
       <updated>2018-10-16T00:00:00+02:00</updated>
-      <id>http://localhost:4000/machine-learning-summer-schools</id>
-      <content type="html" xml:base="http://localhost:4000/machine-learning-summer-schools">&lt;p&gt;&lt;em&gt;This post is the first in a series of posts highlighting my attempt(s) to prepare myself to undertake research and for graduate school. It will include a year in review, learnings from working at CERN, and some technical posts about the kind of work I do.&lt;/em&gt;&lt;/p&gt;
+      <id>/machine-learning-summer-schools</id>
+      <content type="html" xml:base="/machine-learning-summer-schools">&lt;p&gt;&lt;em&gt;This post is the first in a series of posts highlighting my attempt(s) to prepare myself to undertake research and for graduate school. It will include a year in review, learnings from working at CERN, and some technical posts about the kind of work I do.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;background&quot;&gt;Background&lt;/h3&gt;
 
@@ -506,11 +506,11 @@ Reference: &lt;a href=&quot;https://superuser.com/questions/132029/how-do-you-re
   
     <entry>
       <title type="html">A Student’s Guide to Living Abroad I</title>
-      <link href="http://localhost:4000/a-students-guide-to-living-abroad-I" rel="alternate" type="text/html" title="A Student’s Guide to Living Abroad I" />
+      <link href="/a-students-guide-to-living-abroad-I" rel="alternate" type="text/html" title="A Student’s Guide to Living Abroad I" />
       <published>2017-07-10T00:00:00+02:00</published>
       <updated>2017-07-10T00:00:00+02:00</updated>
-      <id>http://localhost:4000/a-students-guide-to-living-abroad-I</id>
-      <content type="html" xml:base="http://localhost:4000/a-students-guide-to-living-abroad-I">&lt;p&gt;&lt;em&gt;Note: This is part of a series of posts. While this one is focused on making preparations for the travel, the next one will (hopefully) provide deeper insight into how life works and what to expect from the outside world based on my experience so far.&lt;/em&gt;&lt;/p&gt;
+      <id>/a-students-guide-to-living-abroad-I</id>
+      <content type="html" xml:base="/a-students-guide-to-living-abroad-I">&lt;p&gt;&lt;em&gt;Note: This is part of a series of posts. While this one is focused on making preparations for the travel, the next one will (hopefully) provide deeper insight into how life works and what to expect from the outside world based on my experience so far.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Last summer, I told my mom that I’d be traveling to live in a new country: in this case, France.&lt;/p&gt;
 
@@ -835,11 +835,11 @@ The Backup Plan&lt;/p&gt;
   
     <entry>
       <title type="html">CERN Openlab Summer Student Program</title>
-      <link href="http://localhost:4000/cern-openlab-internship" rel="alternate" type="text/html" title="CERN Openlab Summer Student Program" />
+      <link href="/cern-openlab-internship" rel="alternate" type="text/html" title="CERN Openlab Summer Student Program" />
       <published>2017-04-07T00:00:00+02:00</published>
       <updated>2017-04-07T00:00:00+02:00</updated>
-      <id>http://localhost:4000/cern-openlab-internship</id>
-      <content type="html" xml:base="http://localhost:4000/cern-openlab-internship">&lt;p&gt;This post is about my internship within the CERN Openlab Program in 2017 and includes a questionnaire (hopefully) useful for students applying to the program.&lt;/p&gt;
+      <id>/cern-openlab-internship</id>
+      <content type="html" xml:base="/cern-openlab-internship">&lt;p&gt;This post is about my internship within the CERN Openlab Program in 2017 and includes a questionnaire (hopefully) useful for students applying to the program.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Disclaimer: The views represented here are solely my own, and do not reflect those of my employer.&lt;/em&gt;&lt;/p&gt;
 
@@ -1044,11 +1044,11 @@ The Backup Plan&lt;/p&gt;
   
     <entry>
       <title type="html">Coursework to Complete</title>
-      <link href="http://localhost:4000/coursework-to-complete" rel="alternate" type="text/html" title="Coursework to Complete" />
+      <link href="/coursework-to-complete" rel="alternate" type="text/html" title="Coursework to Complete" />
       <published>2017-03-24T00:00:00+01:00</published>
       <updated>2017-03-24T00:00:00+01:00</updated>
-      <id>http://localhost:4000/coursework-to-complete</id>
-      <content type="html" xml:base="http://localhost:4000/coursework-to-complete">&lt;h2 id=&quot;an-exhaustive-list-of-course-lectures&quot;&gt;An Exhaustive List of Course Lectures&lt;/h2&gt;
+      <id>/coursework-to-complete</id>
+      <content type="html" xml:base="/coursework-to-complete">&lt;h2 id=&quot;an-exhaustive-list-of-course-lectures&quot;&gt;An Exhaustive List of Course Lectures&lt;/h2&gt;
 
 &lt;p&gt;This post comprises of a list of lectures that I intend to watch at some point in order to mainly just learn more about these domains. They seem like some interesting areas to explore and some are just plain fun!&lt;/p&gt;
 
@@ -1134,11 +1134,11 @@ CAP5415 - &lt;strong&gt;Computer Vision&lt;/strong&gt; [UG]  &lt;br /&gt;&lt;/p&
   
     <entry>
       <title type="html">The Blog</title>
-      <link href="http://localhost:4000/the-blog" rel="alternate" type="text/html" title="The Blog" />
+      <link href="/the-blog" rel="alternate" type="text/html" title="The Blog" />
       <published>2017-03-21T00:00:00+01:00</published>
       <updated>2017-03-21T00:00:00+01:00</updated>
-      <id>http://localhost:4000/the-blog</id>
-      <content type="html" xml:base="http://localhost:4000/the-blog">&lt;h3 id=&quot;why-blog&quot;&gt;Why Blog?&lt;/h3&gt;
+      <id>/the-blog</id>
+      <content type="html" xml:base="/the-blog">&lt;h3 id=&quot;why-blog&quot;&gt;Why Blog?&lt;/h3&gt;
 
 &lt;p&gt;I like to look back on the things that I do and writing comes easily to me - it just seems like the logical thing to do. Frankly, I’m surprised it took me so long to actually (finally) build a decent-ish blog.&lt;/p&gt;
 

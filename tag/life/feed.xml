@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="http://localhost:4000/tag/life/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2018-11-06T23:48:00+01:00</updated>
-  <id>http://localhost:4000/tag/life/feed.xml</id>
+  <link href="/tag/life/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2018-11-07T00:12:03+01:00</updated>
+  <id>/tag/life/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">A Student’s Guide to Living Abroad I</title>
-      <link href="http://localhost:4000/a-students-guide-to-living-abroad-I" rel="alternate" type="text/html" title="A Student’s Guide to Living Abroad I" />
+      <link href="/a-students-guide-to-living-abroad-I" rel="alternate" type="text/html" title="A Student’s Guide to Living Abroad I" />
       <published>2017-07-10T00:00:00+02:00</published>
       <updated>2017-07-10T00:00:00+02:00</updated>
-      <id>http://localhost:4000/a-students-guide-to-living-abroad-I</id>
-      <content type="html" xml:base="http://localhost:4000/a-students-guide-to-living-abroad-I">&lt;p&gt;&lt;em&gt;Note: This is part of a series of posts. While this one is focused on making preparations for the travel, the next one will (hopefully) provide deeper insight into how life works and what to expect from the outside world based on my experience so far.&lt;/em&gt;&lt;/p&gt;
+      <id>/a-students-guide-to-living-abroad-I</id>
+      <content type="html" xml:base="/a-students-guide-to-living-abroad-I">&lt;p&gt;&lt;em&gt;Note: This is part of a series of posts. While this one is focused on making preparations for the travel, the next one will (hopefully) provide deeper insight into how life works and what to expect from the outside world based on my experience so far.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Last summer, I told my mom that I’d be traveling to live in a new country: in this case, France.&lt;/p&gt;
 

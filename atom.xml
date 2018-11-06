@@ -4,7 +4,7 @@
     <title> - Articles</title>
     <description>Swapneel's Blog</description>
     <link>
-    http://localhost:4000</link>
+    </link>
     
       
       <item>
@@ -16,8 +16,8 @@
         
         <pubDate>Tue, 16 Oct 2018 00:00:00 +0200</pubDate>
         <link>
-        http://localhost:4000/machine-learning-summer-schools</link>
-        <guid isPermaLink="true">http://localhost:4000/machine-learning-summer-schools</guid>
+        /machine-learning-summer-schools</link>
+        <guid isPermaLink="true">/machine-learning-summer-schools</guid>
       </item>
       
     
@@ -31,8 +31,8 @@
         
         <pubDate>Tue, 16 Oct 2018 00:00:00 +0200</pubDate>
         <link>
-        http://localhost:4000/writing-a-statement-of-purpose</link>
-        <guid isPermaLink="true">http://localhost:4000/writing-a-statement-of-purpose</guid>
+        /writing-a-statement-of-purpose</link>
+        <guid isPermaLink="true">/writing-a-statement-of-purpose</guid>
       </item>
       
     
@@ -46,8 +46,8 @@
         
         <pubDate>Tue, 16 Oct 2018 00:00:00 +0200</pubDate>
         <link>
-        http://localhost:4000/how-to-be-a-real-computer-science-major</link>
-        <guid isPermaLink="true">http://localhost:4000/how-to-be-a-real-computer-science-major</guid>
+        /how-to-be-a-real-computer-science-major</link>
+        <guid isPermaLink="true">/how-to-be-a-real-computer-science-major</guid>
       </item>
       
     
@@ -61,8 +61,8 @@
         
         <pubDate>Mon, 10 Jul 2017 00:00:00 +0200</pubDate>
         <link>
-        http://localhost:4000/a-students-guide-to-living-abroad-I</link>
-        <guid isPermaLink="true">http://localhost:4000/a-students-guide-to-living-abroad-I</guid>
+        /a-students-guide-to-living-abroad-I</link>
+        <guid isPermaLink="true">/a-students-guide-to-living-abroad-I</guid>
       </item>
       
     
@@ -76,8 +76,8 @@
         
         <pubDate>Fri, 07 Apr 2017 00:00:00 +0200</pubDate>
         <link>
-        http://localhost:4000/cern-openlab-internship</link>
-        <guid isPermaLink="true">http://localhost:4000/cern-openlab-internship</guid>
+        /cern-openlab-internship</link>
+        <guid isPermaLink="true">/cern-openlab-internship</guid>
       </item>
       
     
@@ -91,8 +91,8 @@
         
         <pubDate>Fri, 24 Mar 2017 00:00:00 +0100</pubDate>
         <link>
-        http://localhost:4000/coursework-to-complete</link>
-        <guid isPermaLink="true">http://localhost:4000/coursework-to-complete</guid>
+        /coursework-to-complete</link>
+        <guid isPermaLink="true">/coursework-to-complete</guid>
       </item>
       
     
@@ -106,8 +106,8 @@
         
         <pubDate>Tue, 21 Mar 2017 00:00:00 +0100</pubDate>
         <link>
-        http://localhost:4000/the-blog</link>
-        <guid isPermaLink="true">http://localhost:4000/the-blog</guid>
+        /the-blog</link>
+        <guid isPermaLink="true">/the-blog</guid>
       </item>
       
     
