@@ -43,7 +43,7 @@
     <meta property="og:site_name" content="Swapneel Mehta" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="About" />
-    <meta property="og:description" content="## Bio Swapneel holds a Bachelor’s degree in Computer Engineering from the University of Mumbai. He is currently working at the European Organisation for Nuclear Research (CERN) using deep learning for problems in high-energy physics including particle track reconstruction and multi-jet classification. ## Interests His interests lie in developing strategies" />
+    <meta property="og:description" content="Find out more about Swapneel's research, motivation, and background. ## Bio Swapneel holds a Bachelor’s degree in Computer Engineering from the University of Mumbai. He is currently working at the European Organisation for Nuclear Research (CERN) using deep learning for problems in high-energy physics including particle track reconstruction and multi-jet" />
     <meta property="og:url" content="/about/" />
     <meta property="og:image" content="/assets/images/fb-cover-swapneel.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/swapneelm" />
@@ -52,7 +52,7 @@
     <meta property="article:modified_time" content="" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="About" />
-    <meta name="twitter:description" content="## Bio Swapneel holds a Bachelor’s degree in Computer Engineering from the University of Mumbai. He is currently working at the European Organisation for Nuclear Research (CERN) using deep learning for problems in high-energy physics including particle track reconstruction and multi-jet classification. ## Interests His interests lie in developing strategies" />
+    <meta name="twitter:description" content="Find out more about Swapneel's research, motivation, and background. ## Bio Swapneel holds a Bachelor’s degree in Computer Engineering from the University of Mumbai. He is currently working at the European Organisation for Nuclear Research (CERN) using deep learning for problems in high-energy physics including particle track reconstruction and multi-jet" />
     <meta name="twitter:url" content="/" />
     <meta name="twitter:image" content="/assets/images/fb-cover-swapneel.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -82,7 +82,7 @@
         "@type": "WebPage",
         "@id": "/about/"
     },
-    "description": "## Bio Swapneel holds a Bachelor’s degree in Computer Engineering from the University of Mumbai. He is currently working at the European Organisation for Nuclear Research (CERN) using deep learning for problems in high-energy physics including particle track reconstruction and multi-jet classification. ## Interests His interests lie in developing strategies"
+    "description": "Find out more about Swapneel's research, motivation, and background. ## Bio Swapneel holds a Bachelor’s degree in Computer Engineering from the University of Mumbai. He is currently working at the European Organisation for Nuclear Research (CERN) using deep learning for problems in high-energy physics including particle track reconstruction and multi-jet"
 }
     </script>
 
@@ -164,13 +164,25 @@ into the {body} of the default.hbs template -->
             
 
             <section class="post-full-content">
-                <h2 id="bio">Bio</h2>
+                <p>Find out more about Swapneel’s research, motivation, and background.</p>
+
+<h2 id="bio">Bio</h2>
 
 <p>Swapneel holds a Bachelor’s degree in Computer Engineering from the University of Mumbai. He is currently working at the European Organisation for Nuclear Research (CERN) using deep learning for problems in high-energy physics including particle track reconstruction and multi-jet classification.</p>
 
-<h2 id="interests">Interests</h2>
+<h2 id="research-motivation">Research Motivation</h2>
 
-<p>His interests lie in developing strategies for using the cornerstone of artificial intelligence to advance the natural sciences with a focus on high-energy physics. Broadly, he seeks to work on statistical machine learning to build approaches that can deal with the growing scale, complexity, and variety of datasets in a computationally efficient manner. His work is also motivated by the goal of democratizing machine learning by improving reproducibility and interpretability of existing approaches. A few examples of past projects include a modified open-domain question-answering system, an automated assessment of basic Blender (3D Modeling) Assignments, and a dynamic, automated workflow for an award-winning cybersecurity tool.</p>
+<p>In <a href="http://science.sciencemag.org/content/293/5537/2051.long">1</a>, the authors describe the general framework of such discovery: a loop involving observatory studies, hypothesis generation, experimental design, iterative testing, and feedback. Almost as if in accordance with their predictions dating two decades ago, machine learning has provided a toolkit for accelerating the scientific method. Simultaneously, it has also drawn from disciplines like quantum mechanics that provide foundational principles for techniques including functional analysis, energy-based models and derivatives of the Boltzmann distribution. John Tukey once said, “The best part about being a statistician is you get to play in everyone’s backyard.”  Similarly, I seek to explore statistical machine learning in the context of extrapolating cross-domain principles to construct a common mathematical framework with a view to greater intuition on learning algorithms.</p>
+
+<p>Deep learning has established a unique perspective to approach data-intensive stages in the scientific process with its pros and cons. While neural networks boost resource-efficiency there is the issue of interpretability since the model behaves as a ‘black box’, failing to yield a consistent rationale supporting its predictions. For science, where a formal underpinning is a prerequisite for accepting hypotheses, this poses a non-trivial issue. Science often resorts to the Bayesian perspective incorporating prior knowledge often to improve on simply “throwing” more layers and data at a model. There are proposals of physics-informed learning: conditioned on physical constraints <a href="https://arxiv.org/abs/1711.10561">2</a> or utilising ‘physics-based’ loss functions <a href="https://arxiv.org/abs/1710.11431">3</a>. A known constraint for ML in the physical sciences is also the intractable nature of the likelihood function in complex, high-dimensional spaces. This begets strategies grounded in Bayesian statistics for instance those aimed at closely approximating the likelihood by means of sampling from the posterior using approximate Bayesian computation. Alternatively, there is a class of likelihood-free inference techniques which comes with its own set of constraints. In <a href="https://arxiv.org/abs/1805.12244">4</a> and <a href="https://arxiv.org/abs/1808.00973">5</a>, for instance, the authors propose a neural network as a surrogate model to learn the joint likelihood ratio over a latent variable obtained from the simulation, demonstrating that this can serve as a more sample-efficient technique for certain classes of problems with an intractable likelihood. There has been a resurgence of graph-based techniques in machine learning possibly linked to the increase in graph-structured data and compute. A recent, comprehensive review is offered in <a href="https://arxiv.org/abs/1806.01261">6</a> that argues the capacity of graphs for effectively modeling inter-object relationships. To highlight a simple use-case, they can be modified to solve the inherent problem of encoding high-dimensional data into lower dimensional latent spaces; <a href="https://arxiv.org/abs/1709.05584">7</a> presents a survey of approaches to this end. Recent advances have also sparked an interest in generative models utilised across a variety of disciplines for computationally efficient simulation.</p>
+
+<h2 id="research-interests---ml4science">Research Interests - “ML4Science”</h2>
+
+<p>His interests lie in developing strategies for using the cornerstone of artificial intelligence to advance the natural sciences. He seeks to work on statistical machine learning to build approaches that can deal with the growing scale, complexity, and variety of datasets in a computationally efficient manner.</p>
+
+<p>More recently, he is researching graph-based approaches to particle track reconstruction (similar to the <a href="https://www.kaggle.com/c/trackml-particle-identification">TrackML Challenge on Kaggle</a>) - specifically the representation of 3D point cloud data as a (lower-dimension) graph followed by training a graph neural network on it, possibly conditioned on additional physical information (meta data). Problems in high-energy physics and science in general prove to be a rich testbed for statistical machine learning and Bayesian inference. It is exciting to see a growing focus on making this area more practical especially as optimization toolkits and features are released for open-source machine learning frameworks.</p>
+
+<p>A few examples of past projects include a modified open-domain question-answering system, an automated assessment of basic Blender (3D Modeling) Assignments, and a dynamic, automated workflow for an award-winning cybersecurity tool.</p>
 
 <h2 id="knowledge-transfer-dj-unicode">Knowledge Transfer: DJ Unicode</h2>
 
@@ -182,9 +194,11 @@ into the {body} of the default.hbs template -->
 
 <p>Swapneel enjoys participating in hackathons and you are likely to find him scrounging for food around midnight at such events. He is partial to a sweet, milky cup of hot tea (also termed ‘cutting chai’ by the Indian streetside tea stalls).</p>
 
-<p>Apart from cooking and biking, Swapneel likes to spend time writing on <a href="https://medium.com/@swapneel_mehta">Medium</a>, curating his Pocket reading list, streaming videos from <a href="https://www.youtube.com/user/AGADMATOR">Agadmator’s Chess Channel on YouTube</a> and occasionally, attempting to share his knowledge on <a href="https://www.quora.com/profile/Swapneel-Mehta">Quora</a>.</p>
+<p>Apart from writing, cooking, and biking, Swapneel likes to spend time writing on <a href="https://medium.com/@swapneel_mehta">Medium</a>, curating his Pocket reading list, streaming videos from <a href="https://www.youtube.com/user/AGADMATOR">Agadmator’s Chess Channel on YouTube</a> and occasionally, attempting to share his knowledge on <a href="https://www.quora.com/profile/Swapneel-Mehta">Quora</a>.</p>
 
-<p>Swapneel also likes to participate in the occasional marathon, and pretends he is an artist.</p>
+<p>Swapneel also likes to participate in the occasional marathon, and pretends he is <a href="https://swapneelm.github.io/art">an artist</a>.</p>
+
+<p><strong>Look up Swapneel’s tech articles published in the <a href="https://opensourceforu.com/author/swapneel-mehta/">Open Source for You (OSFY) Magazine</a></strong></p>
 
 <h2 id="sites">Sites</h2>
 
