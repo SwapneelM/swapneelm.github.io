@@ -8,13 +8,58 @@
     
       
       <item>
+        <title>A Year of Machine Learning for High-energy Physics</title>
+        
+          <description>&lt;p&gt;I am a Computer Engineer working at the European Organisation for Nuclear Research (CERN) on machine learning for high-energy physics. I have formerly worked at CERN Openlab with the IT Dept. and currently work with the Experimental Physics Dept. at the Compact Muon Solenoid (CMS) Experiment. This few-thousand word post is a reflection of what I learnt from my supervisor, my team, my collaborators, and the high-energy physics (HEP) community at large. It is peppered with pointers to more resources about HEP for engineers with little background in HEP and lays particular emphasis on particle track reconstruction and graph neural networks, an area I spent a few months working on. Finally, it tells the story of the research, development, summer schools, and exploration that equipped me with a skillset to take into my doctoral degree that begins this year!&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 09 Apr 2019 00:00:00 -0400</pubDate>
+        <link>
+        /a-year-of-machine-learning-for-physics</link>
+        <guid isPermaLink="true">/a-year-of-machine-learning-for-physics</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>A Student’s Guide to Living Abroad II</title>
+        
+          <description>&lt;p&gt;This part is about the grind.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 18 Mar 2019 00:00:00 -0400</pubDate>
+        <link>
+        /a-students-guide-to-living-abroad-II</link>
+        <guid isPermaLink="true">/a-students-guide-to-living-abroad-II</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>On Traveling without Wanderlust</title>
+        
+          <description>&lt;p&gt;The definition of travel varies with what you want to get out of it. I write this post to highlight my perspective and learnings from a summer of traveling across a few countries.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 16 Feb 2019 00:00:00 -0500</pubDate>
+        <link>
+        /on-traveling-without-wanderlust</link>
+        <guid isPermaLink="true">/on-traveling-without-wanderlust</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Machine Learning Summer Schools</title>
         
           <description>&lt;p&gt;&lt;em&gt;This post is the first in a series of posts highlighting my attempt(s) to prepare myself to undertake research and for graduate school. It will include a year in review, learnings from working at CERN, and some technical posts about the kind of work I do.&lt;/em&gt;&lt;/p&gt;
 
 </description>
         
-        <pubDate>Tue, 16 Oct 2018 00:00:00 +0200</pubDate>
+        <pubDate>Tue, 16 Oct 2018 00:00:00 -0400</pubDate>
         <link>
         /machine-learning-summer-schools</link>
         <guid isPermaLink="true">/machine-learning-summer-schools</guid>
@@ -29,7 +74,7 @@
 
 </description>
         
-        <pubDate>Tue, 16 Oct 2018 00:00:00 +0200</pubDate>
+        <pubDate>Tue, 16 Oct 2018 00:00:00 -0400</pubDate>
         <link>
         /writing-a-statement-of-purpose</link>
         <guid isPermaLink="true">/writing-a-statement-of-purpose</guid>
@@ -44,7 +89,7 @@
 
 </description>
         
-        <pubDate>Tue, 16 Oct 2018 00:00:00 +0200</pubDate>
+        <pubDate>Tue, 16 Oct 2018 00:00:00 -0400</pubDate>
         <link>
         /how-to-be-a-real-computer-science-major</link>
         <guid isPermaLink="true">/how-to-be-a-real-computer-science-major</guid>
@@ -55,11 +100,11 @@
       <item>
         <title>A Student’s Guide to Living Abroad I</title>
         
-          <description>&lt;p&gt;&lt;em&gt;Note: This is part of a series of posts. While this one is focused on making preparations for the travel, the next one will (hopefully) provide deeper insight into how life works and what to expect from the outside world based on my experience so far.&lt;/em&gt;&lt;/p&gt;
+          <description>&lt;p&gt;&lt;em&gt;This is the first of a &lt;a href=&quot;/2018-12-21-a-students-guide-to-living-abroad-II&quot;&gt;2-part series&lt;/a&gt;. While this one is focused on making preparations for the travel, the next one will (hopefully) provide deeper insight into how life works and what to expect from the outside world based on my experience so far.&lt;/em&gt;&lt;/p&gt;
 
 </description>
         
-        <pubDate>Mon, 10 Jul 2017 00:00:00 +0200</pubDate>
+        <pubDate>Tue, 10 Jul 2018 00:00:00 -0400</pubDate>
         <link>
         /a-students-guide-to-living-abroad-I</link>
         <guid isPermaLink="true">/a-students-guide-to-living-abroad-I</guid>
@@ -74,7 +119,7 @@
 
 </description>
         
-        <pubDate>Fri, 07 Apr 2017 00:00:00 +0200</pubDate>
+        <pubDate>Fri, 07 Apr 2017 00:00:00 -0400</pubDate>
         <link>
         /cern-openlab-internship</link>
         <guid isPermaLink="true">/cern-openlab-internship</guid>
@@ -89,7 +134,7 @@
 
 </description>
         
-        <pubDate>Fri, 24 Mar 2017 00:00:00 +0100</pubDate>
+        <pubDate>Fri, 24 Mar 2017 00:00:00 -0400</pubDate>
         <link>
         /coursework-to-complete</link>
         <guid isPermaLink="true">/coursework-to-complete</guid>
@@ -104,7 +149,7 @@
 
 </description>
         
-        <pubDate>Tue, 21 Mar 2017 00:00:00 +0100</pubDate>
+        <pubDate>Tue, 21 Mar 2017 00:00:00 -0400</pubDate>
         <link>
         /the-blog</link>
         <guid isPermaLink="true">/the-blog</guid>
