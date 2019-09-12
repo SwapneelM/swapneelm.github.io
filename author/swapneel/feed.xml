@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/author/swapneel/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2019-09-04T15:25:04-04:00</updated>
+  <updated>2019-09-12T11:37:54-04:00</updated>
   <id>/author/swapneel/feed.xml</id>
 
   
@@ -30,107 +30,6 @@
   
   
 
-  
-    <entry>
-      <title type="html">A Year of Machine Learning for High-energy Physics</title>
-      <link href="/a-year-of-machine-learning-for-physics" rel="alternate" type="text/html" title="A Year of Machine Learning for High-energy Physics" />
-      <published>2019-04-09T00:00:00-04:00</published>
-      <updated>2019-04-09T00:00:00-04:00</updated>
-      <id>/a-year-of-machine-learning-for-physics</id>
-      <content type="html" xml:base="/a-year-of-machine-learning-for-physics">&lt;p&gt;I am a Computer Engineer working at the European Organisation for Nuclear Research (CERN) on machine learning for high-energy physics. I have formerly worked at CERN Openlab with the IT Dept. and currently work with the Experimental Physics Dept. at the Compact Muon Solenoid (CMS) Experiment. This few-thousand word post is a reflection of what I learnt from my supervisor, my team, my collaborators, and the high-energy physics (HEP) community at large. It is peppered with pointers to more resources about HEP for engineers with little background in HEP and lays particular emphasis on particle track reconstruction and graph neural networks, an area I spent a few months working on. Finally, it tells the story of the research, development, summer schools, and exploration that equipped me with a skillset to take into my doctoral degree that begins this year!&lt;/p&gt;
-
-&lt;h2 id=&quot;physics-is-fcking-awesome&quot;&gt;Physics is F*cking Awesome!&lt;/h2&gt;
-
-&lt;p&gt;The world went nuts when the Higgs Boson was discovered at CERN, even though it was essentially just two matching bumps on a histogram. The world was thrilled when astrophysicists revealed the first image of a Black Hole even though that image without context could be mistaken for an out-of-focus circular blot. Science is becoming cool again (tbh it always was, we just forgot about it)!&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Science was always cool, it was just that responsibility sometimes killed curiosity.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;In the last year, I realised physics, and science as a whole, is much more than just a decade’s worth of classes at elementary school and high school - it is an exploration of the world driven by pure fascination, guided by a curiosity to formalize what is known even as we investigate the unknown. For these reasons, I feel a title like this is not too far off from what most people would agree with.&lt;/p&gt;
-
-&lt;p&gt;This is assuming that I know what I am doing, but some of the smartest people I have had the pleasure of working with are involved in this field so I basically trust they know what they are doing and follow them into machine learning for high-energy physics. C’est la vie, or at least C’est ma vie.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Get to the point.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Okay, I have explored some bits and pieces of high energy physics so in a high-level overview, let me share what I know.&lt;/p&gt;
-
-&lt;p&gt;Physics explains the universe as we know it. It explains how we are born, blink, bathe, brush, bite, beget, and breathe unto death. Physics as I understand it is divided broadly into the classical and quantum realms:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Classical physics is the stuff most of us learnt in school. Newton’s Laws of Motion, Electricity, Magnetism, Fluid Mechanics; ideas in classical physics work with approximations that we once learned of. For instance, Heisenberg’s Uncertainty Principle tells us we cannot accurately measure both position and mass of an object but in practice we do not bother calculating the micrometer differences in position since they aren’t significant.&lt;/li&gt;
-  &lt;li&gt;Quantum physics, on the other hand, falls into the realm of atoms and molecules. We learnt about the Periodic Table and Aufbau’s Principle for filling orbitals with electrons but there is so much more to this. A brief Wikipedia search will reveal that contrary to what most elementary school physics taught us, the proton and neutron are not indivisible - in fact there are entire families of smaller charged particles. The study of their interactions and properties is governed by the laws of quantum mechanics.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Not to miss out on a related area since I already brought up the first black hole image, Astrophysics is another branch that deals with the study of celestial bodies, radiation, space, and all that it holds for mankind to comprehend. The kick-ass visualizations of the ‘5th dimension’ in Interstellar or the idea of the space-time continuum in some form draw from quantum physics but fall broadly under the umbrella of astrophysics.&lt;/p&gt;
-
-&lt;p&gt;Another upcoming area - quantum computing doesn’t immediately strike many people as belonging largely to the domain of quantum physics. It also has its roots in electrical and electronics engineering given the requirement for superconductivity and extremely low temperatures. It has a long way to go but&lt;/p&gt;
-
-&lt;h2 id=&quot;the-mentality-and-other-broken-things&quot;&gt;The Mentality, and other Broken Things&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Branding is &lt;strong&gt;BIG&lt;/strong&gt; in a country like India, as is the case with most other places. We think quality scales linearly with brand; we forget that expense scales geometrically with it, which would render even a great quality improvement worthless given alternative options. Many customers will shell out unreasonable amounts for sub-par products from recognizable brands than spend half that amount on high-quality, unbranded ones. Now extend this concept to education and you can understand how things get messy.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;Counter-claim:&lt;/strong&gt; This is not to say that everyone sees things the same way - brand over value at an exorbitant price not being worth it. Further criticism would involve arguments along the lines of ‘job prospects also scale linearly with brand’ and the fact that most recruiters are still biased in favor of brand-name schools. I am guilty of ascribing to brand over value at some points in my career and so are my friends, their parents, teachers, and counselors. It isn’t necessarily a bad thing; but when brand is misplaced and it adds little value - that’s when things spiral down a rabbit hole.&lt;/p&gt;
-
-&lt;p&gt;As Indians, we have been exposed to this ‘mentality’ right from our childhood - and it doesn’t help when the norms are skewed in favor of this mentality of ‘brand’ being king such that any other source of equivalent value is belittled. What I refer to is the fact that the Indian Institutes of Technology, National Institutes of Technology, and some top private colleges are treated as ‘premier’ institutes that produces an ‘elite’ breed of engineers. This crop of students is purportedly so fantastic that they are offered multiples of the salaries that graduates from other institutes are offered for the same role, at the same level of experience by most companies. The salaries are representative, on most occasions, of the respect and responsibilities accorded to them as employees solely on the basis of the institution name printed on their diplomas. Aside from real issues like false positives (undeserving people being hired), this doesn’t lead to a great culture and often foments discontentment and grudges between employees especially in the event of salary details being disclosed to one another. Companies need to realize that in spite of receiving superior training (let’s not debate this for now) every IITian is not a star. They are great engineers, but not always worth 2x - 3x a regular engineer. In fact, they miss out on a lot of great local talent in favor of hiring from what they see as better institutes.&lt;/p&gt;
-
-&lt;p&gt;I understand this is a rant. I understand IITians work hard, possibly harder on average than a student from a Tier-II institute. But if you take a look at the sheer number of opportunities made available to them, you will realize how unfair the distribution is in relation to the ratio of students at these premier institutes. I took two years to actually understand this disparity myself and was lucky to find a workaround and get to where I wanted. Most of my peers were not.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Well, these kids worked hard to get to the ‘premier’ institutes, so why are you shitting on them for that?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;At first glance, this probably makes it seem like I am salty about not being from one of these institutes. Not really. Sure, I had a slightly hard time digesting the fact that I would &lt;em&gt;always&lt;/em&gt; be seen as a student from a Tier-II institute whether it was for job applications, internships, or a Masters degree. But I quickly grew accustomed to it. Also, to be fair, I have seen both sides of this coin. Working at CERN has its perks, you see. Take the example of presenting your work to an audience that does not have a strong background in physics. This happened with me on a few occasions, but I do not feel like I took undue advantage of the CERN ‘brand’ simply because I worked extremely hard on the project (my supervisors could concur) and arguably deserved the positive feedback I received; but I could definitely imagine not working that hard and still receiving the same accolades for the work. I had obviously heard of academic biases towards ‘big names’ but it still disappointed me to experience something similar firsthand, at least to some extent. On the other hand, it makes sense that people would observe certain unchanging patterns in behavior regardless of their background, experience, and education. Human psychology is the same everywhere, I suppose. Following the logic, an argument in favor of such biases is that it just optimizes for low false-positives: Hinton, Bengio, or LeCun are more experienced and therefore better positioned, given their track-record, to produce the next game-changing construct for deep learning than a random Tom, Dick, or Harry, no? The discussion could go on, even though ethics and morals dictate everyone should receive a fair chance irrespective of prior biases.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;What’s your point?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Higher education has become a ‘status’ more than value-adding mechanism; it has become a societal norm more than an educative move to secure a better life. If your kid gets through engineering and you don’t have significant financial constraints (sometimes, even if you do!), they are almost &lt;em&gt;expected&lt;/em&gt; to pursue some form of higher education. The Masters degree at most institutions is structured as a professional degree and is designed to produce employable engineers, sure. But the sheer number of programs that are being made available indicates either the duplication of the same content under a different banner, or a serious loss in quality of programs. A lot of institutes simply do not have the resources to completely equip their students to succeed but since they realize that Indian students (I can’t speak to other nationalities) are willing to spend exorbitant sums of money on a ‘US education’ even in sub-par programs, they advertise themselves as the ideal fit. They go to ridiculous lengths to procure admissions - I received international calls solely based on my GRE Score (I did reasonably well on the test) to discuss my application to their school! Before even finding out about the rest of my profile, you want to offer fee waivers and ‘fast-tracked’ admission to your institute?! Sounds logical. The sad thing is, this works for them more than it should. A lot of parents get carried away and a lot of kids actually do the carrying away. Everyone is fascinated by the idea of living abroad, distance from the hearsay that is part and parcel of Indian society, independence from familial oversight, and a whole lot of pictures for boosting that social media profile that’s been lying dormant for a while. Not many realize it is not as easy to post cheerful selfies on Instagram whilst being fully aware that you won’t make the next loan payment unless you get a summer internship. Neither is it sustainable to party every weekend if you expect to make the deadlines for most of your assignments without plagiarising content and getting yourself kicked out of school. But I digress. My point, as it stands, is that education should not be about the brand but about the value it adds to our lives. Everyone should have the right to get a great education at a reasonable cost, but everyone should not feel the &lt;em&gt;need&lt;/em&gt; to pursue such opportunities as the &lt;em&gt;only&lt;/em&gt; means to a stable life. That leads to poor decision-making because of the wrong motivations, often resulting in unpaid student loans, low-paying jobs, dissatisfaction, and psychological side effects including stress.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;But you speak from a position of privilege. How can you claim to understand what those kids face?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Honestly, you’re right. I can’t. But those kids are my friends and I know of the hell that they have been through. It is not a great place, and I can cite examples to back my claims. Unfortunately, when we made our decisions, we didn’t have others to guide us along the way. But these kids are trying their level best to talk to their peers and juniors in an effort to prevent them from making the same mistakes all over again. All I am doing is putting my world-view out here for someone to read. There is no immediate need for them to align theirs with it. I find different perspectives help view the same problem with better resolution so that is all I hope to achieve.&lt;/p&gt;
-
-&lt;p&gt;As with all my posts, I would like to state that my view(s) might be a bit too sharp, naive, hopelessly misguided, uninformed, or plain wrong - &lt;em&gt;BUT&lt;/em&gt; I believe it is worthwhile to write about these experiences given &lt;strong&gt;not only&lt;/strong&gt; that -&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;MLHEP is a nascent and actively growing field with outsiders constantly attempting to enter without much domain knowledge; &lt;strong&gt;but also&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;At some point this might prove helpful to a confused student struggling to understand what working as an engineer in high-energy physics has in store for him/her. Heck, most of the time, that confused and struggling student is me but let’s just say it’s ‘for a friend’.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Finally, as I explain in my &lt;a href=&quot;/the-blog&quot;&gt;motivation to blog&lt;/a&gt;, I am mainly writing so that future me can read it and laugh at what an idiot I used to be. I am &lt;strong&gt;always&lt;/strong&gt; open to being corrected based on data that was unknown to me (or overlooked) at the time of writing of the articles.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Swapneel Mehta</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="research" />
-      
-
-      
-        <summary type="html">I am a Computer Engineer working at the European Organisation for Nuclear Research (CERN) on machine learning for high-energy physics. I have formerly worked at CERN Openlab with the IT Dept. and currently work with the Experimental Physics Dept. at the Compact Muon Solenoid (CMS) Experiment. This few-thousand word post is a reflection of what I learnt from my supervisor, my team, my collaborators, and the high-energy physics (HEP) community at large. It is peppered with pointers to more resources about HEP for engineers with little background in HEP and lays particular emphasis on particle track reconstruction and graph neural networks, an area I spent a few months working on. Finally, it tells the story of the research, development, summer schools, and exploration that equipped me with a skillset to take into my doctoral degree that begins this year!</summary>
-      
-
-      
-      
-    </entry>
   
     <entry>
       <title type="html">A Student’s Guide to Living Abroad II</title>
@@ -403,146 +302,6 @@ essentially, freedom from the bucketload of socioeconomic constraints affiliated
     </entry>
   
     <entry>
-      <title type="html">Writing a Statement of Purpose</title>
-      <link href="/writing-a-statement-of-purpose" rel="alternate" type="text/html" title="Writing a Statement of Purpose" />
-      <published>2018-10-16T00:00:00-04:00</published>
-      <updated>2018-10-16T00:00:00-04:00</updated>
-      <id>/writing-a-statement-of-purpose</id>
-      <content type="html" xml:base="/writing-a-statement-of-purpose">&lt;h3 id=&quot;the-disclaimer&quot;&gt;The Disclaimer&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;This comes first because people often tend to ignore this very relevant section.&lt;/em&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;There is &lt;em&gt;obviously&lt;/em&gt; no single way to achieve a successful outcome for your application to graduate school and this post comprises mainly of opinions that I hold based on no evidence other than a product of my personal experience with the process (which is limited, to say the least). All I’m trying to do by writing about this is to give you some perspective to enable you to think for yourself before you embark on the arduous process of applying to grad school. Goodluck!&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Needless to say, please refrain from plagiarising the content. You know how badly a few lifted (and/or uncited) lines could mess up your application (and academic career), right?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Look at this set of personal statements, instead, as the quality of essays that your competition writes (these are for a mix of Ph.D. and Masters programs) and use it as positive reinforcement to ‘up your game,’ so to speak.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
-
-&lt;p&gt;While applying to grad school, please don’t make amateur-ish mistakes for your essays. It’s a really cliched piece of advice when people say “you should tell them a story.” Don’t get me wrong, you can. But you don’t have to.&lt;/p&gt;
-
-&lt;p&gt;Please read this if you haven’t done so already: &lt;a href=&quot;http://www.cs.cmu.edu/~pavlo/blog/2015/10/how-to-write-a-bad-statement-for-a-computer-science-phd-admissions-application.html&quot;&gt;How to Write a Bad Statement for a Computer Science Ph.D. Admissions Application, Andy Pavlo (CMU)&lt;/a&gt; (it is Ph.D. specific, but you can extrapolate to Masters applications).&lt;/p&gt;
-
-&lt;p&gt;That said, admissions are very variable and top schools almost always look favourably upon relevant national and international awards, and publications at top-tier venues especially when they filter applicants for competitive programs like CS (AI/ML).&lt;/p&gt;
-
-&lt;p&gt;Weaving stories, as stated before, may make or break your case depending on who reviews it. Ultimately I believe it’s a math.random() process because there is a human on the other end, and human intelligence - unlike many manifestations of artificial intelligence - is highly unpredictable. I wanted to share some links for reading before you guys start writing (since we’re only a month out from the earliest deadlines in November, hopefully you’ve already started writing a draft).&lt;/p&gt;
-
-&lt;h3 id=&quot;general-grad-school-advice&quot;&gt;General Grad School Advice&lt;/h3&gt;
-
-&lt;h4 id=&quot;statement-of-purpose&quot;&gt;Statement of Purpose:&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://cseweb.ucsd.edu/~gary/Advice.html&quot;&gt;Very useful Meta Page of Links and Advice by Prof. Gary Cottrell&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://pgbovine.net/grad-school-applications-summary.htm&quot;&gt;Ph.D. specific advice from Prof. Philip Guo’s Blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cl.cam.ac.uk/~sbh11/phd_apply.html&quot;&gt;Dr. Sean Holden’s advice for applying to do a Ph.D. in Machine Learning (University of Cambridge)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www-personal.umich.edu/~danhorn/graduate.html&quot;&gt;Grad School Advice by Prof. Dan Horn&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://forum.thegradcafe.com/topic/48905-some-advice-on-writing-an-sop/&quot;&gt;SoP Advice from the GradCafe&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;letters-of-recommendation&quot;&gt;Letters of Recommendation:&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://homes.cs.washington.edu/~mernst/advice/request-recommendation.html&quot;&gt;How to request a letter of recommendation, Michael Ernst (UWash)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://homes.cs.washington.edu/~mernst/advice/write-recommendation.html&quot;&gt;How to write a letter of recommendation, Michael Ernst (UWash)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://cs.brown.edu/~sk/Memos/Grad-School-Recos/&quot;&gt;Advice to Letter Writers by Prof. Shriram Krishnamurthi (Brown Univ.)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;some-examples-of-sops&quot;&gt;Some examples of SoPs:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cs.cmu.edu/~jlacomis/assets/statement/personal-statement-cmu.pdf&quot;&gt;Jeremy Lacomis’ Statement of Purpose for a Ph.D. at Carnegie Mellon University focusing on Software Engineering focusing on Programming Languages&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jeanqasaur/academic-application-materials/blob/master/phd-application-2007/personal_statement.pdf&quot;&gt;Jean Yang’s Statement of Purpose for a Ph.D. in Computer Science&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://pgbovine.net/PhD-applications/Philip_Guo-Stanford-PhD-app-statement.pdf&quot;&gt;Philip Guo’s Statement of Purpose for a Masters in Computer Science at Stanford University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://seankross.com/notes/grad-school-essays/&quot;&gt;Sean Kross’ Set of Statements for Graduate School - focusing on Information and Cognitive Science&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.andrew.cmu.edu/user/vipuls/me/sop_vipulsingh.pdf&quot;&gt;Vipul Singh’s Statement of Purpose for a Masters in Computer Science at Carnegie Mellon University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Research Statements from professors/research scientists/Ph.D. Students often yield insight into not only their goals, but also areas of active research in general which is why I’m including some samples for candidates to read in order to ‘get a better idea of their field’ before writing their Statement of Purpose.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://sites.ualberta.ca/~szepesva/CV/Research%20Statement.pdf&quot;&gt;Csaba Szepesvári’s Research Statement (University of Alberta, DeepMind)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://people.eecs.berkeley.edu/~jda/docs/jda_research_statement.pdf&quot;&gt;Jacob Andreas’ Research Statement (Berkeley, MIT, Natural Language Processing)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://cs.nyu.edu/~ranzato/research/research_statement_ranzato.pdf&quot;&gt;Marc’Aurelio Ranzato’s Research Statement (New York University, Machine Learning)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;web.stanford.edu/~morteza/research_statement.pdf&quot;&gt;Morteza Mardani’s Reserach Statement (Stanford, Algorithms, Applications of Machine Learning)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://cs.stanford.edu/~jsteinhardt/statement.pdf&quot;&gt;Jacob Steinhardt’s Statement of Purpose (Stanford, Machine Learning)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.ics.uci.edu/~numanare/files/research_niranjan.pdf&quot;&gt;U. N. Niranjan’s Research Statement (U.C. Irvine, Machine Learning)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;my-personal-favourite---anant-bhardwaj-beng-pune-univ-ms-stanford-phd-mit&quot;&gt;My personal favourite - Anant Bhardwaj (B.Eng. Pune Univ., M.S. Stanford, Ph.D. M.I.T.):&lt;/h4&gt;
-
-&lt;p&gt;&lt;em&gt;Mainly because this was the first (and only) Statement of Purpose I read before applying for a Masters in Computer Science right after undergrad (although I later decided not to jump into it, but work at CERN for a year instead).&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Before you read this set of statements, I’d like to explain my reasons for highlighting this one.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;It clearly depicts how an SoP evolves from a story woven around nascent experience working in tech and aimed at a short-term goal into a research statement that focuses on a specific field and hopes to achieve a long-term goal.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;As an Indian B.Eng. student at Mumbai University, I could really identify with this as it was written by a fellow B.Eng. graduate from Pune University.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;It’s a good example of progress and change of plans coming from a student who went on to do a Masters at Stanford and a Ph.D. at MIT and then dropped out midway to found a company called Instabase.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Another disclaimer: please do not treat this as a single representative example of how to frame your statement of purpose.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://people.csail.mit.edu/anantb/public/docs/sop/ms_admission_sop.pdf&quot;&gt;Statement of Purpose - Masters in Computer Science&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://people.csail.mit.edu/anantb/public/docs/sop/phd_admission_sop.pdf&quot;&gt;Statement of Purpose - Ph.D. in Computer Science&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;my-two-cents-on-this-subject&quot;&gt;My Two Cents on this subject:&lt;/h3&gt;
-
-&lt;p&gt;A lot of these people and a lot of the advice you will see states that they know the exact field they wanted to work on. That is false. Nobody knows exactly what they want to to for the rest of their lives. Very few actually know the general area they want to work on. Most people have only a fair idea and as Ph.D. programs often state on their websites, that is OK. Most of your ideas will change with experience anyway.&lt;/p&gt;
-
-&lt;p&gt;For instance, if you like X a lot but you’ve never tried doing Y, how do you know you don’t like Y and how can you say you won’t like Y more than X once you try it out. That’s understandable. However, you will see that all of these people have one thing in common - clarity. They possess a high degree of clarity in their research focus and know that there are one or two fields that they would definitely like to pursue. All they have done is explain why this is the case. And their innate clarity made the rest of the work they did fit into the theme of their ‘stories.’&lt;/p&gt;
-
-&lt;p&gt;Essentially, what you’re trying to do in your essay is explain one or two directions that you would like to take, back your claim up with evidence (yes, material evidence - including grades, research, and/or projects) of why you would do well in those directions, and finally state what you see yourself doing once you actually get into that direction. Clarity of thoughts is way more important and the only reliable way to get that is to actually be aware of what that direction is; follow active research areas and people working in that direction, and finally, at least have some ideas of what you would do if you were given an opportunity to work there. Write confidently; you don’t necessarily need to highlight why you failed or justify any misses if you can focus on the hits. It’s not necessary that your statement of purpose would have to ‘make up for why you’re not as good as you could have been’ as opposed to ‘focus on how good you can be based on what you have already done.’&lt;/p&gt;
-
-&lt;h3 id=&quot;further-reading-strongly-recommended-if-you-have-the-time&quot;&gt;Further Reading (strongly recommended if you have the time)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://matt.might.net/articles/how-to-apply-and-get-in-to-graduate-school-in-science-mathematics-engineering-or-computer-science/&quot;&gt;Reddit Thread on Resources for Graduate School&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
-&lt;p&gt;This post has been composed by using publicly available documents shared by a fantastic set of researchers in an effort to help those that are seeking such information. I’ve simply listed them as they are, linking back to the original references.&lt;/p&gt;
-
-&lt;p&gt;If there is any issue with this, please feel free to contact me via email and I will be happy to remove the link(s) from this post.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Swapneel Mehta</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="grad-school" />
-      
-
-      
-        <summary type="html">The Disclaimer</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
       <title type="html">How to be a Real Computer Science Major</title>
       <link href="/how-to-be-a-real-computer-science-major" rel="alternate" type="text/html" title="How to be a Real Computer Science Major" />
       <published>2018-10-16T00:00:00-04:00</published>
@@ -754,6 +513,146 @@ Reference: &lt;a href=&quot;https://superuser.com/questions/132029/how-do-you-re
 
       
         <summary type="html">This post focuses on how to modify/hack your terminal with different plugins such that you can make Homer Simpson spout meaningful software engineering quotes on launching it.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Writing a Statement of Purpose</title>
+      <link href="/writing-a-statement-of-purpose" rel="alternate" type="text/html" title="Writing a Statement of Purpose" />
+      <published>2018-10-16T00:00:00-04:00</published>
+      <updated>2018-10-16T00:00:00-04:00</updated>
+      <id>/writing-a-statement-of-purpose</id>
+      <content type="html" xml:base="/writing-a-statement-of-purpose">&lt;h3 id=&quot;the-disclaimer&quot;&gt;The Disclaimer&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;This comes first because people often tend to ignore this very relevant section.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;There is &lt;em&gt;obviously&lt;/em&gt; no single way to achieve a successful outcome for your application to graduate school and this post comprises mainly of opinions that I hold based on no evidence other than a product of my personal experience with the process (which is limited, to say the least). All I’m trying to do by writing about this is to give you some perspective to enable you to think for yourself before you embark on the arduous process of applying to grad school. Goodluck!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Needless to say, please refrain from plagiarising the content. You know how badly a few lifted (and/or uncited) lines could mess up your application (and academic career), right?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Look at this set of personal statements, instead, as the quality of essays that your competition writes (these are for a mix of Ph.D. and Masters programs) and use it as positive reinforcement to ‘up your game,’ so to speak.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;While applying to grad school, please don’t make amateur-ish mistakes for your essays. It’s a really cliched piece of advice when people say “you should tell them a story.” Don’t get me wrong, you can. But you don’t have to.&lt;/p&gt;
+
+&lt;p&gt;Please read this if you haven’t done so already: &lt;a href=&quot;http://www.cs.cmu.edu/~pavlo/blog/2015/10/how-to-write-a-bad-statement-for-a-computer-science-phd-admissions-application.html&quot;&gt;How to Write a Bad Statement for a Computer Science Ph.D. Admissions Application, Andy Pavlo (CMU)&lt;/a&gt; (it is Ph.D. specific, but you can extrapolate to Masters applications).&lt;/p&gt;
+
+&lt;p&gt;That said, admissions are very variable and top schools almost always look favourably upon relevant national and international awards, and publications at top-tier venues especially when they filter applicants for competitive programs like CS (AI/ML).&lt;/p&gt;
+
+&lt;p&gt;Weaving stories, as stated before, may make or break your case depending on who reviews it. Ultimately I believe it’s a math.random() process because there is a human on the other end, and human intelligence - unlike many manifestations of artificial intelligence - is highly unpredictable. I wanted to share some links for reading before you guys start writing (since we’re only a month out from the earliest deadlines in November, hopefully you’ve already started writing a draft).&lt;/p&gt;
+
+&lt;h3 id=&quot;general-grad-school-advice&quot;&gt;General Grad School Advice&lt;/h3&gt;
+
+&lt;h4 id=&quot;statement-of-purpose&quot;&gt;Statement of Purpose:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cseweb.ucsd.edu/~gary/Advice.html&quot;&gt;Very useful Meta Page of Links and Advice by Prof. Gary Cottrell&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pgbovine.net/grad-school-applications-summary.htm&quot;&gt;Ph.D. specific advice from Prof. Philip Guo’s Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cl.cam.ac.uk/~sbh11/phd_apply.html&quot;&gt;Dr. Sean Holden’s advice for applying to do a Ph.D. in Machine Learning (University of Cambridge)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www-personal.umich.edu/~danhorn/graduate.html&quot;&gt;Grad School Advice by Prof. Dan Horn&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forum.thegradcafe.com/topic/48905-some-advice-on-writing-an-sop/&quot;&gt;SoP Advice from the GradCafe&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;letters-of-recommendation&quot;&gt;Letters of Recommendation:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://homes.cs.washington.edu/~mernst/advice/request-recommendation.html&quot;&gt;How to request a letter of recommendation, Michael Ernst (UWash)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://homes.cs.washington.edu/~mernst/advice/write-recommendation.html&quot;&gt;How to write a letter of recommendation, Michael Ernst (UWash)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cs.brown.edu/~sk/Memos/Grad-School-Recos/&quot;&gt;Advice to Letter Writers by Prof. Shriram Krishnamurthi (Brown Univ.)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;some-examples-of-sops&quot;&gt;Some examples of SoPs:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.cmu.edu/~jlacomis/assets/statement/personal-statement-cmu.pdf&quot;&gt;Jeremy Lacomis’ Statement of Purpose for a Ph.D. at Carnegie Mellon University focusing on Software Engineering focusing on Programming Languages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jeanqasaur/academic-application-materials/blob/master/phd-application-2007/personal_statement.pdf&quot;&gt;Jean Yang’s Statement of Purpose for a Ph.D. in Computer Science&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pgbovine.net/PhD-applications/Philip_Guo-Stanford-PhD-app-statement.pdf&quot;&gt;Philip Guo’s Statement of Purpose for a Masters in Computer Science at Stanford University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://seankross.com/notes/grad-school-essays/&quot;&gt;Sean Kross’ Set of Statements for Graduate School - focusing on Information and Cognitive Science&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.andrew.cmu.edu/user/vipuls/me/sop_vipulsingh.pdf&quot;&gt;Vipul Singh’s Statement of Purpose for a Masters in Computer Science at Carnegie Mellon University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Research Statements from professors/research scientists/Ph.D. Students often yield insight into not only their goals, but also areas of active research in general which is why I’m including some samples for candidates to read in order to ‘get a better idea of their field’ before writing their Statement of Purpose.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sites.ualberta.ca/~szepesva/CV/Research%20Statement.pdf&quot;&gt;Csaba Szepesvári’s Research Statement (University of Alberta, DeepMind)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://people.eecs.berkeley.edu/~jda/docs/jda_research_statement.pdf&quot;&gt;Jacob Andreas’ Research Statement (Berkeley, MIT, Natural Language Processing)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cs.nyu.edu/~ranzato/research/research_statement_ranzato.pdf&quot;&gt;Marc’Aurelio Ranzato’s Research Statement (New York University, Machine Learning)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;web.stanford.edu/~morteza/research_statement.pdf&quot;&gt;Morteza Mardani’s Reserach Statement (Stanford, Algorithms, Applications of Machine Learning)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cs.stanford.edu/~jsteinhardt/statement.pdf&quot;&gt;Jacob Steinhardt’s Statement of Purpose (Stanford, Machine Learning)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ics.uci.edu/~numanare/files/research_niranjan.pdf&quot;&gt;U. N. Niranjan’s Research Statement (U.C. Irvine, Machine Learning)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;my-personal-favourite---anant-bhardwaj-beng-pune-univ-ms-stanford-phd-mit&quot;&gt;My personal favourite - Anant Bhardwaj (B.Eng. Pune Univ., M.S. Stanford, Ph.D. M.I.T.):&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Mainly because this was the first (and only) Statement of Purpose I read before applying for a Masters in Computer Science right after undergrad (although I later decided not to jump into it, but work at CERN for a year instead).&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Before you read this set of statements, I’d like to explain my reasons for highlighting this one.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;It clearly depicts how an SoP evolves from a story woven around nascent experience working in tech and aimed at a short-term goal into a research statement that focuses on a specific field and hopes to achieve a long-term goal.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;As an Indian B.Eng. student at Mumbai University, I could really identify with this as it was written by a fellow B.Eng. graduate from Pune University.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It’s a good example of progress and change of plans coming from a student who went on to do a Masters at Stanford and a Ph.D. at MIT and then dropped out midway to found a company called Instabase.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Another disclaimer: please do not treat this as a single representative example of how to frame your statement of purpose.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://people.csail.mit.edu/anantb/public/docs/sop/ms_admission_sop.pdf&quot;&gt;Statement of Purpose - Masters in Computer Science&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://people.csail.mit.edu/anantb/public/docs/sop/phd_admission_sop.pdf&quot;&gt;Statement of Purpose - Ph.D. in Computer Science&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;my-two-cents-on-this-subject&quot;&gt;My Two Cents on this subject:&lt;/h3&gt;
+
+&lt;p&gt;A lot of these people and a lot of the advice you will see states that they know the exact field they wanted to work on. That is false. Nobody knows exactly what they want to to for the rest of their lives. Very few actually know the general area they want to work on. Most people have only a fair idea and as Ph.D. programs often state on their websites, that is OK. Most of your ideas will change with experience anyway.&lt;/p&gt;
+
+&lt;p&gt;For instance, if you like X a lot but you’ve never tried doing Y, how do you know you don’t like Y and how can you say you won’t like Y more than X once you try it out. That’s understandable. However, you will see that all of these people have one thing in common - clarity. They possess a high degree of clarity in their research focus and know that there are one or two fields that they would definitely like to pursue. All they have done is explain why this is the case. And their innate clarity made the rest of the work they did fit into the theme of their ‘stories.’&lt;/p&gt;
+
+&lt;p&gt;Essentially, what you’re trying to do in your essay is explain one or two directions that you would like to take, back your claim up with evidence (yes, material evidence - including grades, research, and/or projects) of why you would do well in those directions, and finally state what you see yourself doing once you actually get into that direction. Clarity of thoughts is way more important and the only reliable way to get that is to actually be aware of what that direction is; follow active research areas and people working in that direction, and finally, at least have some ideas of what you would do if you were given an opportunity to work there. Write confidently; you don’t necessarily need to highlight why you failed or justify any misses if you can focus on the hits. It’s not necessary that your statement of purpose would have to ‘make up for why you’re not as good as you could have been’ as opposed to ‘focus on how good you can be based on what you have already done.’&lt;/p&gt;
+
+&lt;h3 id=&quot;further-reading-strongly-recommended-if-you-have-the-time&quot;&gt;Further Reading (strongly recommended if you have the time)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://matt.might.net/articles/how-to-apply-and-get-in-to-graduate-school-in-science-mathematics-engineering-or-computer-science/&quot;&gt;Reddit Thread on Resources for Graduate School&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+&lt;p&gt;This post has been composed by using publicly available documents shared by a fantastic set of researchers in an effort to help those that are seeking such information. I’ve simply listed them as they are, linking back to the original references.&lt;/p&gt;
+
+&lt;p&gt;If there is any issue with this, please feel free to contact me via email and I will be happy to remove the link(s) from this post.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Swapneel Mehta</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="grad-school" />
+      
+
+      
+        <summary type="html">The Disclaimer</summary>
       
 
       
