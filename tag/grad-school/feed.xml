@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/tag/grad-school/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-01-20T16:06:18+05:30</updated>
+  <updated>2020-01-21T14:11:55+05:30</updated>
   <id>/tag/grad-school/feed.xml</id>
 
   
@@ -51,17 +51,24 @@
   &lt;li&gt;
     &lt;p&gt;Look at this set of personal statements, instead, as the quality of essays that your competition writes (these are for a mix of Ph.D. and Masters programs) and use it as positive reinforcement to ‘up your game,’ so to speak.&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I’m going to cite Prof. Ben Y. Zhao from his &lt;a href=&quot;https://www.quora.com/What-should-be-the-flow-of-thoughts-in-a-statement-of-purpose-SOP-for-graduate-admissions&quot;&gt;Quora answer&lt;/a&gt;: “As a faculty member who’s been working on admissions for nearly a decade, and my other colleagues from other schools will confirm this, the SOP is often the &lt;strong&gt;LEAST useful and impactful part of your application&lt;/strong&gt;. The short version: &lt;strong&gt;99% of SOPs sound identical&lt;/strong&gt;. Either avoid wasting time on it, or make it original by doing something different. But know that in all likelihood, it will likely have little impact on your admission chances.”&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+&lt;h3 id=&quot;the-graduate-admissions-process&quot;&gt;The Graduate Admissions Process&lt;/h3&gt;
 
-&lt;p&gt;While applying to grad school, please don’t make amateur-ish mistakes for your essays. It’s a really cliched piece of advice when people say “you should tell them a story.” Don’t get me wrong, you can. But you don’t have to.&lt;/p&gt;
+&lt;p&gt;The US University Admissions process is well-known to be a ‘black box’ (largely uninterpretable). You and I may draw our conclusions but nobody can provide a binary answer with 100% confidence as to whether a given applicant’s chances of getting in.&lt;/p&gt;
 
-&lt;p&gt;Please read this if you haven’t done so already: &lt;a href=&quot;http://www.cs.cmu.edu/~pavlo/blog/2015/10/how-to-write-a-bad-statement-for-a-computer-science-phd-admissions-application.html&quot;&gt;How to Write a Bad Statement for a Computer Science Ph.D. Admissions Application, Andy Pavlo (CMU)&lt;/a&gt; (it is Ph.D. specific, but you can extrapolate to Masters applications).&lt;/p&gt;
+&lt;p&gt;For a detailed breakdown of this process, &lt;strong&gt;please&lt;/strong&gt; read &lt;a href=&quot;https://nlp.stanford.edu/~rkarthik/DAGAP.pdf&quot;&gt;Karthik Raghunathan’s Demystification of the Graduate Admissions Process&lt;/a&gt;. While applying to grad school, you will get conflicting pieces of advice from people based on what has worked for them. It is natural for people to claim they have a hack to explain this ‘black box’ admissions process. However, my advice is to take their advice with a pinch of salt. But that too, is yet another piece of advice.&lt;/p&gt;
 
-&lt;p&gt;That said, admissions are very variable and top schools almost always look favourably upon relevant national and international awards, and publications at top-tier venues especially when they filter applicants for competitive programs like CS (AI/ML).&lt;/p&gt;
+&lt;p&gt;Prof. Andy Pavlo at Carnegie Mellon University provides some brilliant pointers in &lt;a href=&quot;http://www.cs.cmu.edu/~pavlo/blog/2015/10/how-to-write-a-bad-statement-for-a-computer-science-phd-admissions-application.html&quot;&gt;‘How to Write a Bad Statement for a Computer Science Ph.D. Admissions Application’&lt;/a&gt; (it is Ph.D. specific, but you can extrapolate most points to Masters applications).&lt;/p&gt;
 
-&lt;p&gt;Weaving stories, as stated before, may make or break your case depending on who reviews it. Ultimately I believe it’s a math.random() process because there is a human on the other end, and human intelligence - unlike many manifestations of artificial intelligence - is highly unpredictable. I wanted to share some links for reading before you guys start writing (since we’re only a month out from the earliest deadlines in November, hopefully you’ve already started writing a draft).&lt;/p&gt;
+&lt;p&gt;Admissions are variable but it is clear that top schools always look favourably upon relevant national and international awards, and publications at top-tier venues especially when they filter applicants for competitive programs like CS (AI/ML).&lt;/p&gt;
+
+&lt;p&gt;Weaving stories in your statement, as stated before, may make or break your case depending on who reviews it. Ultimately I believe it’s a math.random() process because there is a human on the other end, and human intelligence - not unlike many manifestations of artificial intelligence - is highly unpredictable. I wanted to share some links for reading before you start writing. But before that, I’d like to try and highlight the most important part of your statement of purpose - your research!&lt;/p&gt;
+
+&lt;p&gt;A natural question that plagues most MS and often Ph.D. applicants (myself included) is “What is Research?” Having started my own Ph.D. in 2019, I find that sections 2.3 and 2.4 of &lt;a href=&quot;http://www.cs.cmu.edu/~harchol/gradschooltalk.pdf&quot;&gt;Prof. Mor Harchol-Balter’s fantastic breakdown of the Ph.D. Application Process&lt;/a&gt; give a very accurate description of the process. In addition, the entire document is pretty insightful as a demystification of the Ph.D. Application Process.&lt;/p&gt;
 
 &lt;h3 id=&quot;general-grad-school-advice&quot;&gt;General Grad School Advice&lt;/h3&gt;
 
@@ -72,6 +79,7 @@
   &lt;li&gt;&lt;a href=&quot;https://www.cl.cam.ac.uk/~sbh11/phd_apply.html&quot;&gt;Dr. Sean Holden’s advice for applying to do a Ph.D. in Machine Learning (University of Cambridge)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www-personal.umich.edu/~danhorn/graduate.html&quot;&gt;Grad School Advice by Prof. Dan Horn&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://forum.thegradcafe.com/topic/48905-some-advice-on-writing-an-sop/&quot;&gt;SoP Advice from the GradCafe&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://vonahn.blogspot.com/2009/12/advice-on-grad-school-applications.html&quot;&gt;DON’Ts by BigLou - the guy who built CAPTCHA and reCAPTCHA, among other things&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;letters-of-recommendation&quot;&gt;Letters of Recommendation:&lt;/h4&gt;
@@ -112,7 +120,7 @@
     &lt;p&gt;It clearly depicts how an SoP evolves from a story woven around nascent experience working in tech and aimed at a short-term goal into a research statement that focuses on a specific field and hopes to achieve a long-term goal.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;As an Indian B.Eng. student at Mumbai University, I could really identify with this as it was written by a fellow B.Eng. graduate from Pune University.&lt;/p&gt;
+    &lt;p&gt;As an Indian B.Tech. student at Mumbai University, I could really identify with this as it was written by a fellow B.Eng. graduate from Pune University.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;It’s a good example of progress and change of plans coming from a student who went on to do a Masters at Stanford and a Ph.D. at MIT and then dropped out midway to found a company called Instabase.&lt;/p&gt;
@@ -138,9 +146,12 @@
 &lt;h3 id=&quot;further-reading-strongly-recommended-if-you-have-the-time&quot;&gt;Further Reading (strongly recommended if you have the time)&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://matt.might.net/articles/how-to-apply-and-get-in-to-graduate-school-in-science-mathematics-engineering-or-computer-science/&quot;&gt;Reddit Thread on Resources for Graduate School&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.quora.com/What-should-be-the-flow-of-thoughts-in-a-statement-of-purpose-SOP-for-graduate-admissions&quot;&gt;Quora Thread: Read Ben Y. Zhao and Jay Wacker’s answers in particular&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.umd.edu/grad/writing-statement-of-pupose&quot;&gt;Official Univ. of Maryland Advice&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://users.ece.cmu.edu/~mabdelm/statement-of-purpose-tips.html&quot;&gt;Former CMU Ph.D. student (now Google Research) on writing an SoP&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+&lt;h3 id=&quot;note-on-references&quot;&gt;Note on References&lt;/h3&gt;
 &lt;p&gt;This post has been composed by using publicly available documents shared by a fantastic set of researchers in an effort to help those that are seeking such information. I’ve simply listed them as they are, linking back to the original references.&lt;/p&gt;
 
 &lt;p&gt;If there is any issue with this, please feel free to contact me via email and I will be happy to remove the link(s) from this post.&lt;/p&gt;</content>
