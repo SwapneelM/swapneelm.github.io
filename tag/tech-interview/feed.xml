@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="/tag/tech-interview/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2020-12-02T21:04:59-05:00</updated>
+  <id>/tag/tech-interview/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Swapneel Mehta | </title>
+  
+
+  
+    <subtitle>Swapneel's Blog</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Interview Advice for Research Internships in Data Science</title>
+      <link href="/interview-advice-for-research-internships-in-data-science" rel="alternate" type="text/html" title="Interview Advice for Research Internships in Data Science" />
+      <published>2017-03-24T00:00:00-04:00</published>
+      <updated>2017-03-24T00:00:00-04:00</updated>
+      <id>/interview-advice-for-research-internships-in-data-science</id>
+      <content type="html" xml:base="/interview-advice-for-research-internships-in-data-science">&lt;h1 id=&quot;interview-advice-to-future-self&quot;&gt;Interview Advice (to Future Self)&lt;/h1&gt;
+
+&lt;p&gt;Mostly complete and informal set of pointers that serve as advice based on a historical record of the nature of interviews I have experienced and mistakes that I have made in the past. The advice is largely for research-related roles so I don’t claim that it applies across the table (but it probably does, though).&lt;/p&gt;
+
+&lt;h3 id=&quot;applying-for-internships-as-a-phd-student&quot;&gt;Applying for Internships as a Ph.D. student:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Applications open &lt;em&gt;really&lt;/em&gt; early, around August 2020 for Summer 2021. It is madness, I agree. But it is what it is. Usually just requires a resume and details, so no prep necessary.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Two page-resume preferred although senior Ph.D. students can go longer (I presume).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I’m going to sidestep general resume-editing advice because there’s a ton of that on the internet. If you’re lazy (like me), you will create one general-purpose resume applicable to ML research + engineering positions. Why bother about engineering? Because everyone loves development experience, especially given that everyone applying to Ph.D. research internships will have some research experience. Differentiates you from the rest.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Get referrals. Exploit your network. I didn’t in my first year and struggled but got lucky eventually. The next year I started by asking for referrals and immediately noticed the difference–instant replies from recruiters! It’s just to get you past the resume filtering stage, and sometimes skip a pre-screen. Rest of the process is the same regardless of referrals.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Interviews are not as hard as you might imagine. Some companies don’t have any coding rounds, most do. Standard SWE/SDE interview (advice available all over the internet), except they also add a 20-minute discussion of your research interests plus a real-world research challenge discussion in place of/in addition to your coding challenge. Typically one or two-round interviews tops. Some exceptions.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;takeaways-from-a-successful-a-interview&quot;&gt;Takeaways from a successful A* Interview.&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Was able to answer basic questions about recommender systems and effectively navigate what I would do to deal with real challenges like a cold start problem, generating item embeddings, etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;No coding round, interestingly enough.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Was able to effectively convey what work I was doing and what practical applications it could have. Clear, concise discussion of my past work and projects helped a lot.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;takeaways-from-unsuccessful-f-g-interviews&quot;&gt;Takeaways from unsuccessful F&lt;em&gt;, G&lt;/em&gt; Interviews&lt;/h3&gt;
+
+&lt;p&gt;I had a F&lt;strong&gt;* Data Science and a G&lt;/strong&gt;* AI Research interview in 2019 that didn’t go well because I was rusty on time management and on machine learning basics in general so here’s some feedback that I would give myself.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Be prepared to answer questions about why specifically you want to work there, and potential project ideas are always good to be prepared with. Still, don’t be too specific unless you are certain it is a project they will be interested in.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The questions will be easier than the ones you prepare for, just start solving them directly and keep an eye on time. For instance, I caught the trick in the question early on, but still wasted time whiteboard-ing a solution and got the correct answer but ran out of time coding it up.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Brush up your very basic statistics + ML questions. Choice of regularizer and consequences, what to do when there is class imbalance. FWIW if you have the interviewer’s details beforehand (even minutes before an interview), look them up. The questions will focus on their area of research (since they’re free to choose their own questions and most gravitate towards basic questions from their research areas).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I wasn’t too familiar with dequeue and heap, but it would help if you know more than just list, dict, set in python. Especially list comprehensions and other one-liners like sorting based on a lambda expression, etc. Standard SWE/SDE interview prep stuff.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;qualitative-advice&quot;&gt;Qualitative Advice&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;It is easier than you think it is. All your friends got through tech interviews and so will you.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It is not your job to impress the interviewer with your vocabulary. Keep it short. Keep it simple. But most importantly, keep it relatable! It is their job to be interested in your research description, but it won’t hurt if you throw them bone after bone to ensure they don’t feel like you’re a bad candidate for their team. This relates to number 5 below.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Game the system. I don’t mean this in a negative sense at all. I am just saying that the interviewers are people; especially people on your side because if good candidates are hired, the are doing their job well. Pick up on the clues they drop. If they ask you questions, think about why they would be asking those specific questions. Correct your mistakes if they interrupt you right after you have made one (this is usually the case, they don’t have the time to wait for you to make a major mistake).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Always remember Occam’s razor, ESPECIALLY when you speak. This is maybe just Swapneel-specific advice, so ignore it. You tend to talk too fast usually. People might follow, but don’t assume they do. And if you think they are not following (which is 99.99 percent your fault), pause and ask if they are with you. THEN LET THEM SPEAK UNTIL THEY WANT. This is crucial: it is a conversation, not a monologue. The only way you will get good at this is -
+ (a) read more papers and understand your own research area well enough to be able to connect it to practical problems for any third person/at their organisation. In fact, as a side note, brainstorm problem areas of their interest in advance; it helps drive the conversation and can potentially also lead them to discuss a closely related problem that they have worked on as part of your interview questions (and the bonus for you is you’re prepared for it).
+ (b) talk slowly, it gives you more time to coherently string words together.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To beleaguer this point, you need to practice turning your theoretical research into a generally relatable area with easy descriptions of problems you could apply it to. That is definitely not clear from your current explanation of it (as of October 2020). Where is it applicable? What is the extent to which it can be applied? If I give you an industry research team like ‘Core Data Science: Graph Science and Analytics’ who is interviewing you, be prepared to answer questions like why do you want to work with us? You will have to know what they do and how you can contribute. Again, relatability of research area is key.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You need to know more than just lists and dicts. Specifically, there is queue, there is dequeue, there is set. Practice using at least these three things, and you will be golden. You definitely need more experience with stacks, queues, and sets wrt knowing their properties and predefined functions to exploit quick use when whiteboard coding a solution.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Again a bit Swapneel-specific but your original (and true) ‘stumbled into one great opportunity after another with an open mind’ story is the best way to explain why you are open to exploring new areas of research if you fail to come up with a better explanation. Stick to this, don’t try to change your story because that’s never going to end well. This also helps answer the final few questions presented above in (5).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;successful-interview-with-m&quot;&gt;Successful Interview with M*&lt;/h3&gt;
+
+&lt;h4 id=&quot;interview-1-problem-discussion-45-min&quot;&gt;Interview 1: Problem Discussion (45 min)&lt;/h4&gt;
+
+&lt;p&gt;Explaiin your research + Discuss how to deal with a churn prediction problem&lt;/p&gt;
+
+&lt;p&gt;What stood out and what I missed&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I spoke about whether machine learning is even necessary or if heuristics would do the job well e.g. tickets filed/5 day period and setting a threshold to signal weaning clientele.&lt;/li&gt;
+  &lt;li&gt;I mentioned heterogenous data collection and some common sense small dataset to test overfitting of a model&lt;/li&gt;
+  &lt;li&gt;I missed out on discussing what exactly is churn (I implied a revenue based metric, which is a proxy for usage of microservices–the answer she was looking for) and if the problem makes sense&lt;/li&gt;
+  &lt;li&gt;I used RNNs/LSTMs but I am thinking she was expecting something better maybe graph related. edit: graph nets = unrolled rnns = can handle time-series prediction&lt;/li&gt;
+  &lt;li&gt;She asked me to elaborate further on data visualization, dimensionality reduction, feature normalization, imputing missing data, PCA for exploratory analysis of feature space, conversion from categorical to numerical/one-hot encoded features.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;interview-2-ml-rapid-fire-questions-45-min&quot;&gt;Interview 2: ML Rapid-fire Questions (45 min)&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What is precision and what is recall, explain with examples&lt;/li&gt;
+  &lt;li&gt;Cross validation implementation (K-fold, Leave one out)&lt;/li&gt;
+  &lt;li&gt;Explain what overfitting is and how to avoid it&lt;/li&gt;
+  &lt;li&gt;Which cross validation technique should be used for time series data&lt;/li&gt;
+  &lt;li&gt;How to deal with missing, corrupted values in the data&lt;/li&gt;
+  &lt;li&gt;Explain the curse of dimensionality and solutions&lt;/li&gt;
+  &lt;li&gt;How to evaluate ML models (quantitative as well as qualitative)&lt;/li&gt;
+  &lt;li&gt;How will you deal with class imbalance in your data&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;interview-3-coding-challenge-45-min&quot;&gt;Interview 3: Coding Challenge (45 min)&lt;/h4&gt;
+
+&lt;p&gt;Find the minimum difference between two sorted arrays of integers. Pretty simple problem, but I got stuck debugging while loops. Fortunately got some extra time and was able to submit it immediately after the final interview (~20 min extra). I was allowed to use a local IDE but unfortunately my PyCharm license expired.&lt;/p&gt;
+
+&lt;h4 id=&quot;interview-4-behavioural-45-min&quot;&gt;Interview 4: Behavioural (45 min)&lt;/h4&gt;
+
+&lt;p&gt;Two main questions:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Explain a project you’ve done in the past &lt;strong&gt;in detail&lt;/strong&gt; and follow-up questions about that work.&lt;/li&gt;
+  &lt;li&gt;Explain (2) situations where you had a conflict with your team and how you managed to deal with it.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;interview-with-a-science-team-results-tbd-but-i-think-it-went-well&quot;&gt;Interview with A*** (Science Team, results TBD but I think it went well)&lt;/h3&gt;
+
+&lt;h4 id=&quot;interview-1-behavioural--coding-challenge&quot;&gt;Interview 1: Behavioural + Coding Challenge&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A*** reveals interviewer names beforehand so I had a good chance to take a look at their work profile and a really good expectation of the kind of questions they would ask me. Even though I did not explicitly prepare for the interview, I did read one very unrelated (to my interview) robot chassis design paper by the interviewer just out of curiosity, and asked him a question about it later that he gladly clarified.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The questions were good riffs on the usual suspects: describe a time you faced a challenge and how you dealt with it was turned more specific and I don’t remember exactly what it was but I remember feeling like it was a more personal question that I was glad to answer.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A follow-up to the question above that went into how I approach problems I have no clue about (since I brought up high-energy physics). He also seemed to have read my resume properly (surprisingly few interviewers seem to do that) and again I recall feeling like it was a good set of questions and a very healthy air of discussion as opposed to interrogation that interviews can often turn into.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The interviewer asked me about deeply technical details about my CERN project on physics + ML and I liked that he prefaced it with “can you talk about it” (I think because I had mentioned my A&lt;em&gt;**&lt;/em&gt; NDA previously, or maybe just because he may have thought it was an old project, idk). I dove deep into more of the challenges I faced while working in that area especially answering his question about how I dealt with tight timelines.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;After a set of three or four behavioural questions probing into how I deal with time-management, lack of domain knowledge, and conflicts, he offered me a chance to ask a question which I deferred to after the programming aspect (I’ve messed up coding interviews based on time and I did not want a repeat).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The coding challenge was extremely simple, in fact a one-liner. Design a 4-way traffic intersection. That’s it. It’s that simple. I launched right into writing what entities I was dealing with after a very brief conversation about the setup and assumptions. It was very simple initially, just two traffic signals, each regulating one of North-South or East-West, to paint a clear picture of the problem. What was tricky was actually writing down the time-delays between one light going from red to green to yellow to red and the other going from green to yellow to red to green (try it out and you will see what I mean).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Once I wrote some code, iterated over it, caught the trick, and completed that code, we jumped into a discussion of how I could use machine learning in this setup. It was a fairly straightforward discussion and we discussed some corner cases before a final question about causality that seemed more like a sanity check than anything else. It was about a feedback loop existing between the time from red to green and the vehicle speed at the intersection being used to determine the time from red to green using machine learning. That would create a cycle in the DAG resulting in a violation of the acyclicity constriant.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;interview-2-behavioural--problem-discussion&quot;&gt;Interview 2: Behavioural + Problem Discussion&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;This interviewer worked on forecasting and I expected those sort of questions from him. Interestingly that was a very small fraction of the problems we discussed. We started with a set of similar behavioural questions albeit my answers for some reason were different. We drilled into a technical problem that I worked on at CERN that was based in high-energy physics and involved the use of graph neural networks as part of these questions.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The major thrust in this interview was a problem discussion that pertained to predicting the disease probabilities given the smptoms for an individual and I feel like I started off great, faltered, then picked up again. He had mentioned that we have not only symptoms but also demographic information about patients. I realized this was more of what we discuss as overlap in causal inference so you want to make predictions on “similar” individuals and not “different” ones. I cannot use a New-York-only dataset to predict a disease from the symptoms of people from Flint, Michigan, (known for groundwater pollution) because I’m likely to get very bad estimates if there’s no “matching” in our historical anonymized data (i.e. New York patient data) and the new individual (i.e. guy from Flint, Michgan). I answered that the simplest option was to start with regression models after creating subgroups of individuals based on the additional demographic information could help. So a separate regression for each subgroup. After a bit of discussion he asked about how to interpret the outcome of the regression as a probability and I wasn’t sure because honestly I have never done that practically, so I got stuck for a while.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The saving grace came when I started thinking aloud in terms of more complex models (“throw a deep neural network at it for a multi-class classification problem”, I said those words, and he probed me about what is the objective, how cross-entropy loss works, and so on) and in speaking out loud about what a neural net does and what activation functions are I realized oh right, the answer is a softmax. That’s how I use a neural 
+network for multiclass classification. It helped that I had just worked on this in my recent internship so I was able to quickly recall how I built the model. So that was it on the problem discussion, more or less. Then he got into almost exactly the same rapid-fire ML question set as I’ve mentioned in the M*** interview process above (that involved slightly more discussion and slightly less questions). That was the end of the it. I asked him a question about the challenges they face translating causality from theory into practice and he had a very nice answer where he went into the details of how outcomes of interventions are affected by practical factors downstream so we have very noisy observations at every stage. It was very cool to have that pointed out and I definitely gained a lot from that last question I asked him.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Swapneel Mehta</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="tech-interview" />
+      
+
+      
+        <summary type="html">Interview Advice (to Future Self)</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
