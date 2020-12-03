@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/author/swapneel/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-12-02T21:43:30-05:00</updated>
+  <updated>2020-12-02T22:16:23-05:00</updated>
   <id>/author/swapneel/feed.xml</id>
 
   
@@ -39,8 +39,6 @@
       <id>/interview-advice-for-research-internships-in-data-science</id>
       <content type="html" xml:base="/interview-advice-for-research-internships-in-data-science">&lt;p&gt;This is to my future self even though I don’t actually ever read my blog posts after having written them. It is a mostly complete and informal set of pointers that serve as advice based on a historical record of the nature of interviews I have experienced and mistakes that I have made in the past. The advice is largely for research-related roles so I don’t claim that it applies across the table (but it probably does, though).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/images/tech-interview.png&quot; alt=&quot;Tech Interviews are pretty meme-worthy (source: meme-generator)&quot; /&gt;&lt;/p&gt;
-
 &lt;h3 id=&quot;applying-for-internships-as-a-phd-student&quot;&gt;Applying for Internships as a Ph.D. student:&lt;/h3&gt;
 
 &lt;ul&gt;
@@ -61,7 +59,9 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;takeaways-from-a-successful-a-interview&quot;&gt;Takeaways from a successful A* Interview.&lt;/h3&gt;
+&lt;h2 id=&quot;my-experiences&quot;&gt;My Experiences&lt;/h2&gt;
+
+&lt;h3 id=&quot;takeaways-from-a-successful-a-bobby-name-changed-interview&quot;&gt;Takeaways from a successful A-bobby (name changed) Interview.&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -75,9 +75,9 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;takeaways-from-unsuccessful-f-g-interviews&quot;&gt;Takeaways from unsuccessful F&lt;em&gt;, G&lt;/em&gt; Interviews&lt;/h3&gt;
+&lt;h3 id=&quot;takeaways-from-unsuccessful-fatelock-gargoyle-names-changed-interviews&quot;&gt;Takeaways from unsuccessful Fatelock, Gargoyle (names changed) Interviews&lt;/h3&gt;
 
-&lt;p&gt;I had a F&lt;strong&gt;* Data Science and a G&lt;/strong&gt;* AI Research interview in 2019 that didn’t go well because I was rusty on time management and on machine learning basics in general so here’s some feedback that I would give myself.&lt;/p&gt;
+&lt;p&gt;I had a F. Data Science and a G. AI Research interview in 2019 that didn’t go well because I was rusty on time management and on machine learning basics in general so here’s some feedback that I would give myself.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -122,7 +122,7 @@
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;successful-interview-with-m&quot;&gt;Successful Interview with M*&lt;/h3&gt;
+&lt;h3 id=&quot;successful-interview-with-mycroft-name-changed&quot;&gt;Successful Interview with Mycroft (name changed)&lt;/h3&gt;
 
 &lt;h4 id=&quot;interview-1-problem-discussion-45-min&quot;&gt;Interview 1: Problem Discussion (45 min)&lt;/h4&gt;
 
@@ -164,13 +164,13 @@
   &lt;li&gt;Explain (2) situations where you had a conflict with your team and how you managed to deal with it.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;interview-with-a-science-team-results-tbd-but-i-think-it-went-well&quot;&gt;Interview with A*** (Science Team, results TBD but I think it went well)&lt;/h3&gt;
+&lt;h3 id=&quot;interview-with-am-in-the-zone-science-team-results-tbd-but-i-think-it-went-well&quot;&gt;Interview with Am-in-the-zone (Science Team, results TBD but I think it went well)&lt;/h3&gt;
 
 &lt;h4 id=&quot;interview-1-behavioural--coding-challenge&quot;&gt;Interview 1: Behavioural + Coding Challenge&lt;/h4&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;A*** reveals interviewer names beforehand so I had a good chance to take a look at their work profile and a really good expectation of the kind of questions they would ask me. Even though I did not explicitly prepare for the interview, I did read one very unrelated (to my interview) robot chassis design paper by the interviewer just out of curiosity, and asked him a question about it later that he gladly clarified.&lt;/p&gt;
+    &lt;p&gt;Am. sent me the interviewer names beforehand so I had a good chance to take a look at their work profile and a really good expectation of the kind of questions they would ask me. Even though I did not explicitly prepare for the interview, I did read one very unrelated (to my interview) robot chassis design paper by the interviewer just out of curiosity, and asked him a question about it later that he gladly clarified.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;The questions were good riffs on the usual suspects: describe a time you faced a challenge and how you dealt with it was turned more specific and I don’t remember exactly what it was but I remember feeling like it was a more personal question that I was glad to answer.&lt;/p&gt;
