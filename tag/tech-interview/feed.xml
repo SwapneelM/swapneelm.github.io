@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/tag/tech-interview/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-12-02T22:16:23-05:00</updated>
+  <updated>2020-12-30T13:59:05+05:30</updated>
   <id>/tag/tech-interview/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Interview Advice for Research Internships in Data Science</title>
       <link href="/interview-advice-for-research-internships-in-data-science" rel="alternate" type="text/html" title="Interview Advice for Research Internships in Data Science" />
-      <published>2020-12-01T00:00:00-05:00</published>
-      <updated>2020-12-01T00:00:00-05:00</updated>
+      <published>2020-12-01T00:00:00+05:30</published>
+      <updated>2020-12-01T00:00:00+05:30</updated>
       <id>/interview-advice-for-research-internships-in-data-science</id>
       <content type="html" xml:base="/interview-advice-for-research-internships-in-data-science">&lt;p&gt;This is to my future self even though I don’t actually ever read my blog posts after having written them. It is a mostly complete and informal set of pointers that serve as advice based on a historical record of the nature of interviews I have experienced and mistakes that I have made in the past. The advice is largely for research-related roles so I don’t claim that it applies across the table (but it probably does, though).&lt;/p&gt;
 
@@ -126,7 +126,7 @@
 
 &lt;h4 id=&quot;interview-1-problem-discussion-45-min&quot;&gt;Interview 1: Problem Discussion (45 min)&lt;/h4&gt;
 
-&lt;p&gt;Explaiin your research + Discuss how to deal with a churn prediction problem&lt;/p&gt;
+&lt;p&gt;Explain your research + Discuss how to deal with a churn prediction problem&lt;/p&gt;
 
 &lt;p&gt;What stood out and what I missed&lt;/p&gt;
 
@@ -179,7 +179,7 @@
     &lt;p&gt;A follow-up to the question above that went into how I approach problems I have no clue about (since I brought up high-energy physics). He also seemed to have read my resume properly (surprisingly few interviewers seem to do that) and again I recall feeling like it was a good set of questions and a very healthy air of discussion as opposed to interrogation that interviews can often turn into.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;The interviewer asked me about deeply technical details about my CERN project on physics + ML and I liked that he prefaced it with “can you talk about it” (I think because I had mentioned my A&lt;em&gt;**&lt;/em&gt; NDA previously, or maybe just because he may have thought it was an old project, idk). I dove deep into more of the challenges I faced while working in that area especially answering his question about how I dealt with tight timelines.&lt;/p&gt;
+    &lt;p&gt;The interviewer asked me about deeply technical details about my CERN project on physics + ML and I liked that he prefaced it with “can you talk about it” (I think because I had mentioned my A-bobby NDA previously, or maybe just because he may have thought it was an old project, idk). I dove deep into more of the challenges I faced while working in that area especially answering his question about how I dealt with tight timelines.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;After a set of three or four behavioural questions probing into how I deal with time-management, lack of domain knowledge, and conflicts, he offered me a chance to ask a question which I deferred to after the programming aspect (I’ve messed up coding interviews based on time and I did not want a repeat).&lt;/p&gt;
@@ -203,7 +203,7 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;The saving grace came when I started thinking aloud in terms of more complex models (“throw a deep neural network at it for a multi-class classification problem”, I said those words, and he probed me about what is the objective, how cross-entropy loss works, and so on) and in speaking out loud about what a neural net does and what activation functions are I realized oh right, the answer is a softmax. That’s how I use a neural 
-network for multiclass classification. It helped that I had just worked on this in my recent internship so I was able to quickly recall how I built the model. So that was it on the problem discussion, more or less. Then he got into almost exactly the same rapid-fire ML question set as I’ve mentioned in the M*** interview process above (that involved slightly more discussion and slightly less questions). That was the end of the it. I asked him a question about the challenges they face translating causality from theory into practice and he had a very nice answer where he went into the details of how outcomes of interventions are affected by practical factors downstream so we have very noisy observations at every stage. It was very cool to have that pointed out and I definitely gained a lot from that last question I asked him.&lt;/p&gt;
+network for multiclass classification. It helped that I had just worked on this in my recent internship so I was able to quickly recall how I built the model. So that was it on the problem discussion, more or less. Then he got into almost exactly the same rapid-fire ML question set as I’ve mentioned in the Mycroft interview process above (that involved slightly more discussion and slightly less questions). That was the end of the it. I asked him a question about the challenges they face translating causality from theory into practice and he had a very nice answer where he went into the details of how outcomes of interventions are affected by practical factors downstream so we have very noisy observations at every stage. It was very cool to have that pointed out and I definitely gained a lot from that last question I asked him.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;</content>
 

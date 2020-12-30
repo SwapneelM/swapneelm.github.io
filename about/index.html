@@ -43,7 +43,7 @@
     <meta property="og:site_name" content="Swapneel Mehta" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="About" />
-    <meta property="og:description" content="This page describes my research, background, and hobbies. ## Bio I hold a Bachelor’s degree in Computer Engineering and work at the European Organisation for Nuclear Research ([CERN](https://cern.ch)). I use deep learning to address problems in high-energy physics including particle track reconstruction and multi-jet classification. ## Research Interests - "ML4Science"" />
+    <meta property="og:description" content="This page describes my research, background, and hobbies. ## Bio I am a graduate student at NYU Data Science working on probabilistic programming, causal inference, and graph-based deep learning. hold a Bachelor’s degree in Computer Engineering and worked at Adobe Research and the European Organisation for Nuclear Research ([CERN](https://cern.ch)) until" />
     <meta property="og:url" content="/about/" />
     <meta property="og:image" content="/assets/images/fb-cover-swapneel.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/swapneelm" />
@@ -52,7 +52,7 @@
     <meta property="article:modified_time" content="" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="About" />
-    <meta name="twitter:description" content="This page describes my research, background, and hobbies. ## Bio I hold a Bachelor’s degree in Computer Engineering and work at the European Organisation for Nuclear Research ([CERN](https://cern.ch)). I use deep learning to address problems in high-energy physics including particle track reconstruction and multi-jet classification. ## Research Interests - "ML4Science"" />
+    <meta name="twitter:description" content="This page describes my research, background, and hobbies. ## Bio I am a graduate student at NYU Data Science working on probabilistic programming, causal inference, and graph-based deep learning. hold a Bachelor’s degree in Computer Engineering and worked at Adobe Research and the European Organisation for Nuclear Research ([CERN](https://cern.ch)) until" />
     <meta name="twitter:url" content="/" />
     <meta name="twitter:image" content="/assets/images/fb-cover-swapneel.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -82,7 +82,7 @@
         "@type": "WebPage",
         "@id": "/about/"
     },
-    "description": "This page describes my research, background, and hobbies. ## Bio I hold a Bachelor’s degree in Computer Engineering and work at the European Organisation for Nuclear Research ([CERN](https://cern.ch)). I use deep learning to address problems in high-energy physics including particle track reconstruction and multi-jet classification. ## Research Interests - "ML4Science""
+    "description": "This page describes my research, background, and hobbies. ## Bio I am a graduate student at NYU Data Science working on probabilistic programming, causal inference, and graph-based deep learning. hold a Bachelor’s degree in Computer Engineering and worked at Adobe Research and the European Organisation for Nuclear Research ([CERN](https://cern.ch)) until"
 }
     </script>
 
@@ -168,17 +168,21 @@ into the {body} of the default.hbs template -->
 
 <h2 id="bio">Bio</h2>
 
-<p>I hold a Bachelor’s degree in Computer Engineering and work at the European Organisation for Nuclear Research (<a href="https://cern.ch">CERN</a>). I use deep learning to address problems in high-energy physics including particle track reconstruction and multi-jet classification.</p>
+<p>I am a graduate student at NYU Data Science working on probabilistic programming, causal inference, and graph-based deep learning. hold a Bachelor’s degree in Computer Engineering and worked at Adobe Research and the European Organisation for Nuclear Research (<a href="https://cern.ch">CERN</a>) until recently. I’ve worked on <a href="https://openreview.net/pdf?id=B1gTR_QOcQ">machine learning for high-energy physics</a>, deep learning-based recommender systems, <a href="https://www.smokescreen.io/">machine learning in cybersecurity</a>, and have a working knowledge of language models and deep convolutional neural networks.</p>
 
-<h2 id="research-interests---ml4science">Research Interests - “ML4Science”</h2>
+<h2 id="probabilistic-programming-and-covid-19-models">Probabilistic Programming and COVID-19 Models</h2>
 
-<p>My interests lie in developing strategies for using the cornerstone of artificial intelligence to advance the natural sciences. I seek to work on Bayesian statistics and machine learning theory to build approaches that can deal with the growing scale, complexity, and variety of datasets in a computationally efficient manner.</p>
+<p><a href="https://docs.google.com/presentation/d/1Yf1eH43JQxsB7RM-duLf3gxD5OwlpAWO5WX5Fsiedjw/edit?usp=sharing">This project</a> offers an exposition of COVID-19 modeling techniques based on the ideas and problem setup highlighted in <a href="https://arxiv.org/abs/2003.13221">Wood et al., (2020)</a>. We define a generative model corresponding to our intuition about epidemiological modeling using the probabilistic programming framework <a href="https://pyro.ai">Pyro</a> and apply probabilistic inference to draw insights into controlling the COVID-19 pandemic through interventions. In particular, we estimate the confidence intervals for the outbreak parameters to ensure that a predetermined goal is achieved. We are not epidemiologists; the sole aim of this study is to serve as a guide to generative modeling, not to draw inference about real-world impact of policy-making for COVID-19.</p>
 
-<p>I am researching graph-based approaches to particle track reconstruction (similar to the <a href="https://www.kaggle.com/c/trackml-particle-identification">TrackML Challenge on Kaggle</a>) - specifically the representation of 3D point cloud data as a (lower-dimension) graph followed by training a graph neural network on it, possibly conditioned on additional physical information (meta data). Problems in high-energy physics and science in general prove to be a rich testbed for statistical machine learning and Bayesian inference. It is exciting to see a growing focus on making this area more practical especially as optimization toolkits and features are released within popular frameworks.</p>
+<h2 id="simulation-based-inference">Simulation-based Inference</h2>
 
-<p>I’ve built projects to explore a variety of domains; a few examples of these include a framework to prototype chatbots based on Jack the Reader (ACL, 2018), an automated assessment of basic Blender (3D Modeling) Assignments, and a dynamic, automated workflow for an award-winning cybersecurity tool.</p>
+<p>Simulators are causal generative models used to encode our understanding of complex phenomena. Knowledge of the causal relations embedded within them are crucial to making robust predictions. However, with high-fidelity simulations, we run into the challenge of intractable inference. Through a pedagogical example, we show that statistical inference can learn a model for a density estimation task, but it is not guaranteed to recover causal relations unless we make strong assumptions that happen to be correct. We rely on access to intervene on a simulator to recover a surrogate model which encodes the same set of conditional independence relations as the true model and can be used to predict its behaviour under intervention. <a href="https://docs.google.com/presentation/d/13CE9KoDUPgO_DVqAT3bNDvan6rha4zbdoflExE9PdGI/edit?usp=sharing">My research</a> theorizes on causal discovery and extends the solutions we build to more practical problems in the field.</p>
 
-<h2 id="research-motivation">Research Motivation</h2>
+<h2 id="graph-neural-networks">Graph Neural Networks</h2>
+
+<p>I’ve also developed strategies using the cornerstone of artificial intelligence to advance the natural sciences. I used to work on graph-based approaches to <a href="https://github.com/SwapneelM/TrackingNtuples/">particle track reconstruction</a> (similar to the <a href="https://www.kaggle.com/c/trackml-particle-identification">TrackML Challenge on Kaggle</a>) - specifically using the representation of 3D point cloud data as a (lower-dimension) graph followed by training a graph neural network on it, possibly conditioned on additional physical information (meta data). Problems in high-energy physics and science in general prove to be a rich testbed for statistical machine learning and Bayesian inference. It is exciting to see a growing focus on making this area more practical especially as optimization toolkits and features are released within popular frameworks.</p>
+
+<h2 id="machine-learning-for-science">Machine Learning for Science</h2>
 
 <p>In <a href="http://science.sciencemag.org/content/293/5537/2051.long">1</a>, Mjolsness and DeCoste describe the general framework of scientific discovery: a loop involving observatory studies, hypothesis generation, experimental design, iterative testing, and feedback. Almost as if in accordance with their predictions dating two decades ago, machine learning has provided a toolkit for accelerating the scientific method. Simultaneously, it has also drawn from disciplines like quantum mechanics that provide foundational principles for techniques including functional analysis, energy-based models and derivatives of the Boltzmann distribution. John Tukey once said, “The best part about being a statistician is you get to play in everyone’s backyard.”</p>
 
@@ -186,11 +190,15 @@ into the {body} of the default.hbs template -->
 
 <p>There has been a resurgence of graph-based techniques in machine learning possibly linked to the increase in graph-structured data and compute. A recent, comprehensive review is offered by researchers at DeepMind in <a href="https://arxiv.org/abs/1806.01261">6</a> that argues the capacity of graphs for effectively modeling inter-object relationships. As part of my work on particle track reconstruction graphical representations can encode entity-relationships into lower dimensional latent spaces; <a href="https://arxiv.org/abs/1709.05584">7</a> presents a survey of approaches to this end. I believe, as computational feasibility no longer remains a bottleneck, that graph-based models present a promising approach to learn complex relationships over large datasets.</p>
 
+<h2 id="natural-language-processing-3d-modeling">Natural Language Processing, 3D Modeling</h2>
+
+<p>I’ve built projects to demonstrate my understanding of a topic whilst exploring a variety of domains; a few examples of these include a framework to <a href="https://github.com/swapneelm/protobot">prototype chatbots with context-based question-answering models</a> based on Jack the Reader (ACL, 2018), an <a href="https://arxiv.org/ftp/arxiv/papers/1812/1812.00110.pdf">automated assessment of basic Blender (3D Modeling) Assignments</a>, and a dynamic, automated workflow for an award-winning cybersecurity tool, <a href="https://www.smokescreen.io/IllusionBLACK/">IllusionBlack</a>.</p>
+
 <h2 id="knowledge-transfer-dj-unicode">Knowledge Transfer: DJ Unicode</h2>
 
-<p>I am passionate about the need for knowledge transfer and actively work with a student-run organisation that I co-founded - <a href="https://github.com/djunicode">DJ Unicode</a>. Unicode was born of the need for skill development at the grassroots level in addition to the need for a rapport between college freshmen, sophomores, and juniors. Our aim is to devote time and effort towards programming and mentoring, eschewing both ‘bureaucratic’ practices and administrative logjams.</p>
+<p>I am passionate about knowledge transfer actively working with a student-run organisation that I co-founded - <a href="https://djunicode.in">DJ Unicode</a>. Unicode was born of the need for skill development at the grassroots level in addition to the need for a rapport between college freshmen, sophomores, and juniors at universities that don’t offer such opportunities by means of the coourse structure. Our aim is to extend the ‘summer-of-code’ workflow to the rest of the year helping our students to build a strong foundational understanding of software development. I’m leading the expansion of our mentorship into teaching math and statistics for machine learning through comprehensive reading groups on standard texts in the subject.</p>
 
-<p>Unicode started 5 teams of 6 sophomores mentored by 4 juniors and a senior, initially restricted within the Computer Department. They worked on 5 projects (3 web, 2 app) all of which are standalone, tested, and available on Github. Today, we are a thriving community of 70+ members (including ~30 women), have teams winning hackathons, international internship offers, and selections for Google Summer of Code 2018!</p>
+<p>Unicode started with 15-20 students separated into 5 teams based on their projects. Today, we are a thriving community of 140+ members, with teams winning hackathons, students receiving international internship offers, multiple selections for Google Summer of Code each year, and alumni at Ivy League universities and FAANG companies in the USA!</p>
 
 <h2 id="personal">Personal</h2>
 

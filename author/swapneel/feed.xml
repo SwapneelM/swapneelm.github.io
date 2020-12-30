@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/author/swapneel/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-12-02T22:16:23-05:00</updated>
+  <updated>2020-12-30T13:59:05+05:30</updated>
   <id>/author/swapneel/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Interview Advice for Research Internships in Data Science</title>
       <link href="/interview-advice-for-research-internships-in-data-science" rel="alternate" type="text/html" title="Interview Advice for Research Internships in Data Science" />
-      <published>2020-12-01T00:00:00-05:00</published>
-      <updated>2020-12-01T00:00:00-05:00</updated>
+      <published>2020-12-01T00:00:00+05:30</published>
+      <updated>2020-12-01T00:00:00+05:30</updated>
       <id>/interview-advice-for-research-internships-in-data-science</id>
       <content type="html" xml:base="/interview-advice-for-research-internships-in-data-science">&lt;p&gt;This is to my future self even though I don’t actually ever read my blog posts after having written them. It is a mostly complete and informal set of pointers that serve as advice based on a historical record of the nature of interviews I have experienced and mistakes that I have made in the past. The advice is largely for research-related roles so I don’t claim that it applies across the table (but it probably does, though).&lt;/p&gt;
 
@@ -126,7 +126,7 @@
 
 &lt;h4 id=&quot;interview-1-problem-discussion-45-min&quot;&gt;Interview 1: Problem Discussion (45 min)&lt;/h4&gt;
 
-&lt;p&gt;Explaiin your research + Discuss how to deal with a churn prediction problem&lt;/p&gt;
+&lt;p&gt;Explain your research + Discuss how to deal with a churn prediction problem&lt;/p&gt;
 
 &lt;p&gt;What stood out and what I missed&lt;/p&gt;
 
@@ -179,7 +179,7 @@
     &lt;p&gt;A follow-up to the question above that went into how I approach problems I have no clue about (since I brought up high-energy physics). He also seemed to have read my resume properly (surprisingly few interviewers seem to do that) and again I recall feeling like it was a good set of questions and a very healthy air of discussion as opposed to interrogation that interviews can often turn into.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;The interviewer asked me about deeply technical details about my CERN project on physics + ML and I liked that he prefaced it with “can you talk about it” (I think because I had mentioned my A&lt;em&gt;**&lt;/em&gt; NDA previously, or maybe just because he may have thought it was an old project, idk). I dove deep into more of the challenges I faced while working in that area especially answering his question about how I dealt with tight timelines.&lt;/p&gt;
+    &lt;p&gt;The interviewer asked me about deeply technical details about my CERN project on physics + ML and I liked that he prefaced it with “can you talk about it” (I think because I had mentioned my A-bobby NDA previously, or maybe just because he may have thought it was an old project, idk). I dove deep into more of the challenges I faced while working in that area especially answering his question about how I dealt with tight timelines.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;After a set of three or four behavioural questions probing into how I deal with time-management, lack of domain knowledge, and conflicts, he offered me a chance to ask a question which I deferred to after the programming aspect (I’ve messed up coding interviews based on time and I did not want a repeat).&lt;/p&gt;
@@ -203,7 +203,7 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;The saving grace came when I started thinking aloud in terms of more complex models (“throw a deep neural network at it for a multi-class classification problem”, I said those words, and he probed me about what is the objective, how cross-entropy loss works, and so on) and in speaking out loud about what a neural net does and what activation functions are I realized oh right, the answer is a softmax. That’s how I use a neural 
-network for multiclass classification. It helped that I had just worked on this in my recent internship so I was able to quickly recall how I built the model. So that was it on the problem discussion, more or less. Then he got into almost exactly the same rapid-fire ML question set as I’ve mentioned in the M*** interview process above (that involved slightly more discussion and slightly less questions). That was the end of the it. I asked him a question about the challenges they face translating causality from theory into practice and he had a very nice answer where he went into the details of how outcomes of interventions are affected by practical factors downstream so we have very noisy observations at every stage. It was very cool to have that pointed out and I definitely gained a lot from that last question I asked him.&lt;/p&gt;
+network for multiclass classification. It helped that I had just worked on this in my recent internship so I was able to quickly recall how I built the model. So that was it on the problem discussion, more or less. Then he got into almost exactly the same rapid-fire ML question set as I’ve mentioned in the Mycroft interview process above (that involved slightly more discussion and slightly less questions). That was the end of the it. I asked him a question about the challenges they face translating causality from theory into practice and he had a very nice answer where he went into the details of how outcomes of interventions are affected by practical factors downstream so we have very noisy observations at every stage. It was very cool to have that pointed out and I definitely gained a lot from that last question I asked him.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;</content>
 
@@ -236,8 +236,8 @@ network for multiclass classification. It helped that I had just worked on this 
     <entry>
       <title type="html">How to Write a Statement of Purpose for Grad School</title>
       <link href="/how-to-write-a-statement-of-purpose-for-grad-school" rel="alternate" type="text/html" title="How to Write a Statement of Purpose for Grad School" />
-      <published>2020-09-26T00:00:00-04:00</published>
-      <updated>2020-09-26T00:00:00-04:00</updated>
+      <published>2020-09-26T00:00:00+05:30</published>
+      <updated>2020-09-26T00:00:00+05:30</updated>
       <id>/how-to-write-a-statement-of-purpose-for-grad-school</id>
       <content type="html" xml:base="/how-to-write-a-statement-of-purpose-for-grad-school">&lt;h3 id=&quot;the-disclaimer&quot;&gt;The Disclaimer&lt;/h3&gt;
 
@@ -451,8 +451,8 @@ The domain I would work in would likely be at the nexus of machine learning and 
     <entry>
       <title type="html">A Student’s Guide to Living Abroad II</title>
       <link href="/a-students-guide-to-living-abroad-II" rel="alternate" type="text/html" title="A Student’s Guide to Living Abroad II" />
-      <published>2019-03-18T00:00:00-04:00</published>
-      <updated>2019-03-18T00:00:00-04:00</updated>
+      <published>2019-03-18T00:00:00+05:30</published>
+      <updated>2019-03-18T00:00:00+05:30</updated>
       <id>/a-students-guide-to-living-abroad-II</id>
       <content type="html" xml:base="/a-students-guide-to-living-abroad-II">&lt;p&gt;This part is about the grind.&lt;/p&gt;
 
@@ -627,8 +627,8 @@ essentially, freedom from the bucketload of socioeconomic constraints affiliated
     <entry>
       <title type="html">On Traveling without Wanderlust</title>
       <link href="/on-traveling-without-wanderlust" rel="alternate" type="text/html" title="On Traveling without Wanderlust" />
-      <published>2019-02-16T00:00:00-05:00</published>
-      <updated>2019-02-16T00:00:00-05:00</updated>
+      <published>2019-02-16T00:00:00+05:30</published>
+      <updated>2019-02-16T00:00:00+05:30</updated>
       <id>/on-traveling-without-wanderlust</id>
       <content type="html" xml:base="/on-traveling-without-wanderlust">&lt;p&gt;The definition of travel varies with what you want to get out of it. I write this post to highlight my perspective and learnings from a summer of traveling across a few countries.&lt;/p&gt;
 
@@ -721,8 +721,8 @@ essentially, freedom from the bucketload of socioeconomic constraints affiliated
     <entry>
       <title type="html">Machine Learning Summer Schools</title>
       <link href="/machine-learning-summer-schools" rel="alternate" type="text/html" title="Machine Learning Summer Schools" />
-      <published>2018-10-16T00:00:00-04:00</published>
-      <updated>2018-10-16T00:00:00-04:00</updated>
+      <published>2018-10-16T00:00:00+05:30</published>
+      <updated>2018-10-16T00:00:00+05:30</updated>
       <id>/machine-learning-summer-schools</id>
       <content type="html" xml:base="/machine-learning-summer-schools">&lt;p&gt;&lt;em&gt;This post is the first in a series of posts highlighting my attempt(s) to prepare myself to undertake research and for graduate school. It will include a year in review, learnings from working at CERN, and some technical posts about the kind of work I do.&lt;/em&gt;&lt;/p&gt;
 
@@ -836,8 +836,8 @@ essentially, freedom from the bucketload of socioeconomic constraints affiliated
     <entry>
       <title type="html">How to be a Real Computer Science Major</title>
       <link href="/how-to-be-a-real-computer-science-major" rel="alternate" type="text/html" title="How to be a Real Computer Science Major" />
-      <published>2018-10-16T00:00:00-04:00</published>
-      <updated>2018-10-16T00:00:00-04:00</updated>
+      <published>2018-10-16T00:00:00+05:30</published>
+      <updated>2018-10-16T00:00:00+05:30</updated>
       <id>/how-to-be-a-real-computer-science-major</id>
       <content type="html" xml:base="/how-to-be-a-real-computer-science-major">&lt;p&gt;This post focuses on how to modify/hack your terminal with different plugins such that you can make Homer Simpson spout meaningful software engineering quotes on launching it.&lt;/p&gt;
 
@@ -1054,8 +1054,8 @@ Reference: &lt;a href=&quot;https://superuser.com/questions/132029/how-do-you-re
     <entry>
       <title type="html">A Student’s Guide to Living Abroad I</title>
       <link href="/a-students-guide-to-living-abroad-I" rel="alternate" type="text/html" title="A Student’s Guide to Living Abroad I" />
-      <published>2018-07-10T00:00:00-04:00</published>
-      <updated>2018-07-10T00:00:00-04:00</updated>
+      <published>2018-07-10T00:00:00+05:30</published>
+      <updated>2018-07-10T00:00:00+05:30</updated>
       <id>/a-students-guide-to-living-abroad-I</id>
       <content type="html" xml:base="/a-students-guide-to-living-abroad-I">&lt;p&gt;&lt;em&gt;This is the first of a &lt;a href=&quot;/2018-12-21-a-students-guide-to-living-abroad-II&quot;&gt;2-part series&lt;/a&gt;. While this one is focused on making preparations for the travel, the next one will (hopefully) provide deeper insight into how life works and what to expect from the outside world based on my experience so far.&lt;/em&gt;&lt;/p&gt;
 
@@ -1383,8 +1383,8 @@ The Backup Plan&lt;/p&gt;
     <entry>
       <title type="html">CERN Openlab Summer Student Program</title>
       <link href="/cern-openlab-internship" rel="alternate" type="text/html" title="CERN Openlab Summer Student Program" />
-      <published>2017-04-07T00:00:00-04:00</published>
-      <updated>2017-04-07T00:00:00-04:00</updated>
+      <published>2017-04-07T00:00:00+05:30</published>
+      <updated>2017-04-07T00:00:00+05:30</updated>
       <id>/cern-openlab-internship</id>
       <content type="html" xml:base="/cern-openlab-internship">&lt;p&gt;This post is about my internship within the CERN Openlab Program in 2017 and includes a questionnaire (hopefully) useful for students applying to the program.&lt;/p&gt;
 
@@ -1592,8 +1592,8 @@ The Backup Plan&lt;/p&gt;
     <entry>
       <title type="html">Coursework to Complete</title>
       <link href="/coursework-to-complete" rel="alternate" type="text/html" title="Coursework to Complete" />
-      <published>2017-03-24T00:00:00-04:00</published>
-      <updated>2017-03-24T00:00:00-04:00</updated>
+      <published>2017-03-24T00:00:00+05:30</published>
+      <updated>2017-03-24T00:00:00+05:30</updated>
       <id>/coursework-to-complete</id>
       <content type="html" xml:base="/coursework-to-complete">&lt;h2 id=&quot;an-exhaustive-list-of-course-lectures&quot;&gt;An Exhaustive List of Course Lectures&lt;/h2&gt;
 
@@ -1682,8 +1682,8 @@ CAP5415 - &lt;strong&gt;Computer Vision&lt;/strong&gt; [UG]  &lt;br /&gt;&lt;/p&
     <entry>
       <title type="html">The Blog</title>
       <link href="/the-blog" rel="alternate" type="text/html" title="The Blog" />
-      <published>2017-03-21T00:00:00-04:00</published>
-      <updated>2017-03-21T00:00:00-04:00</updated>
+      <published>2017-03-21T00:00:00+05:30</published>
+      <updated>2017-03-21T00:00:00+05:30</updated>
       <id>/the-blog</id>
       <content type="html" xml:base="/the-blog">&lt;h3 id=&quot;why-blog&quot;&gt;Why Blog?&lt;/h3&gt;
 
