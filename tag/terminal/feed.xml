@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="/tag/terminal/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-12-30T13:59:05+05:30</updated>
-  <id>/tag/terminal/feed.xml</id>
+  <link href="http://localhost:4000/tag/terminal/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-07-21T19:12:06-04:00</updated>
+  <id>http://localhost:4000/tag/terminal/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">How to be a Real Computer Science Major</title>
-      <link href="/how-to-be-a-real-computer-science-major" rel="alternate" type="text/html" title="How to be a Real Computer Science Major" />
-      <published>2018-10-16T00:00:00+05:30</published>
-      <updated>2018-10-16T00:00:00+05:30</updated>
-      <id>/how-to-be-a-real-computer-science-major</id>
-      <content type="html" xml:base="/how-to-be-a-real-computer-science-major">&lt;p&gt;This post focuses on how to modify/hack your terminal with different plugins such that you can make Homer Simpson spout meaningful software engineering quotes on launching it.&lt;/p&gt;
+      <link href="http://localhost:4000/how-to-be-a-real-computer-science-major" rel="alternate" type="text/html" title="How to be a Real Computer Science Major" />
+      <published>2018-10-16T00:00:00-04:00</published>
+      <updated>2018-10-16T00:00:00-04:00</updated>
+      <id>http://localhost:4000/how-to-be-a-real-computer-science-major</id>
+      <content type="html" xml:base="http://localhost:4000/how-to-be-a-real-computer-science-major">&lt;p&gt;This post focuses on how to modify/hack your terminal with different plugins such that you can make Homer Simpson spout meaningful software engineering quotes on launching it.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Note: This post contains a healthy dose of sarcasm.&lt;/em&gt;&lt;/p&gt;
 

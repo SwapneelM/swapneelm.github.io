@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="/tag/grad-school/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-12-30T13:59:05+05:30</updated>
-  <id>/tag/grad-school/feed.xml</id>
+  <link href="http://localhost:4000/tag/grad-school/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-07-21T19:12:06-04:00</updated>
+  <id>http://localhost:4000/tag/grad-school/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">How to Write a Statement of Purpose for Grad School</title>
-      <link href="/how-to-write-a-statement-of-purpose-for-grad-school" rel="alternate" type="text/html" title="How to Write a Statement of Purpose for Grad School" />
-      <published>2020-09-26T00:00:00+05:30</published>
-      <updated>2020-09-26T00:00:00+05:30</updated>
-      <id>/how-to-write-a-statement-of-purpose-for-grad-school</id>
-      <content type="html" xml:base="/how-to-write-a-statement-of-purpose-for-grad-school">&lt;h3 id=&quot;the-disclaimer&quot;&gt;The Disclaimer&lt;/h3&gt;
+      <link href="http://localhost:4000/how-to-write-a-statement-of-purpose-for-grad-school" rel="alternate" type="text/html" title="How to Write a Statement of Purpose for Grad School" />
+      <published>2020-09-26T00:00:00-04:00</published>
+      <updated>2020-09-26T00:00:00-04:00</updated>
+      <id>http://localhost:4000/how-to-write-a-statement-of-purpose-for-grad-school</id>
+      <content type="html" xml:base="http://localhost:4000/how-to-write-a-statement-of-purpose-for-grad-school">&lt;h3 id=&quot;the-disclaimer&quot;&gt;The Disclaimer&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;This comes first because people often tend to ignore this very relevant section.&lt;/em&gt;&lt;/p&gt;
 
@@ -109,7 +109,7 @@
   &lt;li&gt;&lt;a href=&quot;https://www.ics.uci.edu/~numanare/files/research_niranjan.pdf&quot;&gt;U. N. Niranjan’s Research Statement (U.C. Irvine, Machine Learning)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;my-personal-favourite---anant-bhardwaj-beng-pune-univ-ms-stanford-phd-mit&quot;&gt;My personal favourite - Anant Bhardwaj (B.Eng. Pune Univ., M.S. Stanford, Ph.D. M.I.T.):&lt;/h4&gt;
+&lt;h4 id=&quot;my-personal-favourite---anant-bhardwaj-beng-pune-univ-ms-stanford-phd-mit&quot;&gt;My personal favourite - Anant Bhardwaj (B.Eng. Pune Univ., M.S. Stanford, Ph.D. M.I.T.)&lt;/h4&gt;
 
 &lt;p&gt;&lt;em&gt;Mainly because this was the first (and only) Statement of Purpose I read before applying for a Masters in Computer Science right after undergrad (although I later decided not to jump into it, but work at CERN for a year instead).&lt;/em&gt;&lt;/p&gt;
 
@@ -135,7 +135,7 @@
   &lt;li&gt;&lt;a href=&quot;http://people.csail.mit.edu/anantb/public/docs/sop/phd_admission_sop.pdf&quot;&gt;Statement of Purpose - Ph.D. in Computer Science&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;my-two-cents-on-this-subject&quot;&gt;My Two Cents on this subject:&lt;/h3&gt;
+&lt;h3 id=&quot;my-two-cents-on-this-subject&quot;&gt;My Two Cents on this subject&lt;/h3&gt;
 
 &lt;p&gt;A lot of these people and a lot of the advice you will see states that they know the exact field they wanted to work on. That is false. Nobody knows exactly what they want to to for the rest of their lives. Very few actually know the general area they want to work on. Most people have only a fair idea and as Ph.D. programs often state on their websites, that is OK. Most of your ideas will change with experience anyway.&lt;/p&gt;
 

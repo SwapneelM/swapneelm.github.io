@@ -4,7 +4,22 @@
     <title> - Articles</title>
     <description>Swapneel's Blog</description>
     <link>
-    </link>
+    http://localhost:4000</link>
+    
+      
+      <item>
+        <title>Guide to Asking Good Questions</title>
+        
+          <description>&lt;h1 id=&quot;a-guide-to-asking-good-questions&quot;&gt;A Guide to Asking Good Questions&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Wed, 21 Jul 2021 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/a-guide-to-asking-better-questions</link>
+        <guid isPermaLink="true">http://localhost:4000/a-guide-to-asking-better-questions</guid>
+      </item>
+      
     
       
       <item>
@@ -14,10 +29,10 @@
 
 </description>
         
-        <pubDate>Tue, 01 Dec 2020 00:00:00 +0530</pubDate>
+        <pubDate>Tue, 01 Dec 2020 00:00:00 -0500</pubDate>
         <link>
-        /interview-advice-for-research-internships-in-data-science</link>
-        <guid isPermaLink="true">/interview-advice-for-research-internships-in-data-science</guid>
+        http://localhost:4000/interview-advice-for-research-internships-in-data-science</link>
+        <guid isPermaLink="true">http://localhost:4000/interview-advice-for-research-internships-in-data-science</guid>
       </item>
       
     
@@ -29,10 +44,10 @@
 
 </description>
         
-        <pubDate>Sat, 26 Sep 2020 00:00:00 +0530</pubDate>
+        <pubDate>Sat, 26 Sep 2020 00:00:00 -0400</pubDate>
         <link>
-        /how-to-write-a-statement-of-purpose-for-grad-school</link>
-        <guid isPermaLink="true">/how-to-write-a-statement-of-purpose-for-grad-school</guid>
+        http://localhost:4000/how-to-write-a-statement-of-purpose-for-grad-school</link>
+        <guid isPermaLink="true">http://localhost:4000/how-to-write-a-statement-of-purpose-for-grad-school</guid>
       </item>
       
     
@@ -44,10 +59,10 @@
 
 </description>
         
-        <pubDate>Mon, 18 Mar 2019 00:00:00 +0530</pubDate>
+        <pubDate>Mon, 18 Mar 2019 00:00:00 -0400</pubDate>
         <link>
-        /a-students-guide-to-living-abroad-II</link>
-        <guid isPermaLink="true">/a-students-guide-to-living-abroad-II</guid>
+        http://localhost:4000/a-students-guide-to-living-abroad-II</link>
+        <guid isPermaLink="true">http://localhost:4000/a-students-guide-to-living-abroad-II</guid>
       </item>
       
     
@@ -59,10 +74,10 @@
 
 </description>
         
-        <pubDate>Sat, 16 Feb 2019 00:00:00 +0530</pubDate>
+        <pubDate>Sat, 16 Feb 2019 00:00:00 -0500</pubDate>
         <link>
-        /on-traveling-without-wanderlust</link>
-        <guid isPermaLink="true">/on-traveling-without-wanderlust</guid>
+        http://localhost:4000/on-traveling-without-wanderlust</link>
+        <guid isPermaLink="true">http://localhost:4000/on-traveling-without-wanderlust</guid>
       </item>
       
     
@@ -74,10 +89,10 @@
 
 </description>
         
-        <pubDate>Tue, 16 Oct 2018 00:00:00 +0530</pubDate>
+        <pubDate>Tue, 16 Oct 2018 00:00:00 -0400</pubDate>
         <link>
-        /machine-learning-summer-schools</link>
-        <guid isPermaLink="true">/machine-learning-summer-schools</guid>
+        http://localhost:4000/machine-learning-summer-schools</link>
+        <guid isPermaLink="true">http://localhost:4000/machine-learning-summer-schools</guid>
       </item>
       
     
@@ -89,10 +104,10 @@
 
 </description>
         
-        <pubDate>Tue, 16 Oct 2018 00:00:00 +0530</pubDate>
+        <pubDate>Tue, 16 Oct 2018 00:00:00 -0400</pubDate>
         <link>
-        /how-to-be-a-real-computer-science-major</link>
-        <guid isPermaLink="true">/how-to-be-a-real-computer-science-major</guid>
+        http://localhost:4000/how-to-be-a-real-computer-science-major</link>
+        <guid isPermaLink="true">http://localhost:4000/how-to-be-a-real-computer-science-major</guid>
       </item>
       
     
@@ -104,10 +119,10 @@
 
 </description>
         
-        <pubDate>Tue, 10 Jul 2018 00:00:00 +0530</pubDate>
+        <pubDate>Tue, 10 Jul 2018 00:00:00 -0400</pubDate>
         <link>
-        /a-students-guide-to-living-abroad-I</link>
-        <guid isPermaLink="true">/a-students-guide-to-living-abroad-I</guid>
+        http://localhost:4000/a-students-guide-to-living-abroad-I</link>
+        <guid isPermaLink="true">http://localhost:4000/a-students-guide-to-living-abroad-I</guid>
       </item>
       
     
@@ -119,10 +134,10 @@
 
 </description>
         
-        <pubDate>Fri, 07 Apr 2017 00:00:00 +0530</pubDate>
+        <pubDate>Fri, 07 Apr 2017 00:00:00 -0400</pubDate>
         <link>
-        /cern-openlab-internship</link>
-        <guid isPermaLink="true">/cern-openlab-internship</guid>
+        http://localhost:4000/cern-openlab-internship</link>
+        <guid isPermaLink="true">http://localhost:4000/cern-openlab-internship</guid>
       </item>
       
     
@@ -134,10 +149,10 @@
 
 </description>
         
-        <pubDate>Fri, 24 Mar 2017 00:00:00 +0530</pubDate>
+        <pubDate>Fri, 24 Mar 2017 00:00:00 -0400</pubDate>
         <link>
-        /coursework-to-complete</link>
-        <guid isPermaLink="true">/coursework-to-complete</guid>
+        http://localhost:4000/coursework-to-complete</link>
+        <guid isPermaLink="true">http://localhost:4000/coursework-to-complete</guid>
       </item>
       
     
@@ -149,10 +164,10 @@
 
 </description>
         
-        <pubDate>Tue, 21 Mar 2017 00:00:00 +0530</pubDate>
+        <pubDate>Tue, 21 Mar 2017 00:00:00 -0400</pubDate>
         <link>
-        /the-blog</link>
-        <guid isPermaLink="true">/the-blog</guid>
+        http://localhost:4000/the-blog</link>
+        <guid isPermaLink="true">http://localhost:4000/the-blog</guid>
       </item>
       
     
