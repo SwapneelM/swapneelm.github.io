@@ -43,7 +43,7 @@
     <meta property="og:site_name" content="Swapneel Mehta" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="About" />
-    <meta property="og:description" content="This page describes my research, background, and hobbies. ## Bio I am a graduate student at NYU Data Science working on probabilistic programming, causal inference, and graph-based deep learning. hold a Bachelor’s degree in Computer Engineering and worked at Adobe Research and the European Organisation for Nuclear Research ([CERN](https://cern.ch)) until" />
+    <meta property="og:description" content="## Bio I am a Ph.D. student at NYU Data Science working with the [Center for Social Media and Politics](csmapnyu.org/) with interests in simulation-based inference and causality. I use probabilistic programming to conduct social network analysis, with a focus on understanding misinformation spread and control. I hold a Bachelor’s degree" />
     <meta property="og:url" content="http://localhost:4000/about/" />
     <meta property="og:image" content="http://localhost:4000/assets/images/fb-cover-swapneel.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/swapneelm" />
@@ -52,7 +52,7 @@
     <meta property="article:modified_time" content="" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="About" />
-    <meta name="twitter:description" content="This page describes my research, background, and hobbies. ## Bio I am a graduate student at NYU Data Science working on probabilistic programming, causal inference, and graph-based deep learning. hold a Bachelor’s degree in Computer Engineering and worked at Adobe Research and the European Organisation for Nuclear Research ([CERN](https://cern.ch)) until" />
+    <meta name="twitter:description" content="## Bio I am a Ph.D. student at NYU Data Science working with the [Center for Social Media and Politics](csmapnyu.org/) with interests in simulation-based inference and causality. I use probabilistic programming to conduct social network analysis, with a focus on understanding misinformation spread and control. I hold a Bachelor’s degree" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/images/fb-cover-swapneel.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -82,7 +82,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/about/"
     },
-    "description": "This page describes my research, background, and hobbies. ## Bio I am a graduate student at NYU Data Science working on probabilistic programming, causal inference, and graph-based deep learning. hold a Bachelor’s degree in Computer Engineering and worked at Adobe Research and the European Organisation for Nuclear Research ([CERN](https://cern.ch)) until"
+    "description": "## Bio I am a Ph.D. student at NYU Data Science working with the [Center for Social Media and Politics](csmapnyu.org/) with interests in simulation-based inference and causality. I use probabilistic programming to conduct social network analysis, with a focus on understanding misinformation spread and control. I hold a Bachelor’s degree"
 }
     </script>
 
@@ -164,41 +164,72 @@ into the {body} of the default.hbs template -->
             
 
             <section class="post-full-content">
-                <p>This page describes my research, background, and hobbies.</p>
+                <h2 id="bio">Bio</h2>
 
-<h2 id="bio">Bio</h2>
+<p>I am a Ph.D. student at NYU Data Science working with the <a href="csmapnyu.org/">Center for Social Media and Politics</a> with interests in simulation-based inference and causality. I use probabilistic programming to conduct social network analysis, with a focus on understanding misinformation spread and control.</p>
 
-<p>I am a graduate student at NYU Data Science working on probabilistic programming, causal inference, and graph-based deep learning. hold a Bachelor’s degree in Computer Engineering and worked at Adobe Research and the European Organisation for Nuclear Research (<a href="https://cern.ch">CERN</a>) until recently. I’ve worked on <a href="https://openreview.net/pdf?id=B1gTR_QOcQ">machine learning for high-energy physics</a>, deep learning-based recommender systems, <a href="https://www.smokescreen.io/">machine learning in cybersecurity</a>, and have a working knowledge of language models and deep convolutional neural networks.</p>
+<p>I hold a Bachelor’s degree in Computer Engineering and worked at Adobe Research on trending hashtag recommendation <em>(accepted at ISM 2021)</em> and the European Organisation for Nuclear Research (<a href="https://cern.ch">CERN</a>) on particle physics. I’ve worked on graph neural networks, <a href="https://openreview.net/pdf?id=B1gTR_QOcQ">machine learning for high-energy physics</a>, recommender systems, <a href="https://www.smokescreen.io/">machine learning in cybersecurity</a>, and have a working knowledge of language models and deep convolutional neural networks.</p>
+
+<h2 id="social-network-simulation">Social Network Simulation</h2>
+
+<ul>
+  <li><strong>Talk at Facebook Research: Probability Org., Nov 2021.</strong></li>
+</ul>
+
+<p>I am building SimPPL - a social network simulator to demonstrate how to combine heterogeneous datasets in a principled manner so as to create an expressive model of online social networks that is conditioned on real-world data. It is part of my ongoing research on misinformation control to highlight the applications of such a tool towards understanding the diffusion of information and the evolution of beliefs on platforms like Facebook and Twitter. There are a rich set of downstream applications of such a simulator, including interventions to curb misinformation spread, and the causal modeling of online user behavior. I am collaborating with the <a href="https://www.robots.ox.ac.uk/~phst/">Torr Vision Group</a> at Oxford on the applications.</p>
 
 <h2 id="probabilistic-programming-and-covid-19-models">Probabilistic Programming and COVID-19 Models</h2>
 
+<ul>
+  <li><a href="https://probprog.cc/assets/posters/wed/30.pdf">Poster @ PROBPROG 2022</a> (S. Mehta, N. Kasmanoff)</li>
+</ul>
+
 <p><a href="https://docs.google.com/presentation/d/1Yf1eH43JQxsB7RM-duLf3gxD5OwlpAWO5WX5Fsiedjw/edit?usp=sharing">This project</a> offers an exposition of COVID-19 modeling techniques based on the ideas and problem setup highlighted in <a href="https://arxiv.org/abs/2003.13221">Wood et al., (2020)</a>. We define a generative model corresponding to our intuition about epidemiological modeling using the probabilistic programming framework <a href="https://pyro.ai">Pyro</a> and apply probabilistic inference to draw insights into controlling the COVID-19 pandemic through interventions. In particular, we estimate the confidence intervals for the outbreak parameters to ensure that a predetermined goal is achieved. We are not epidemiologists; the sole aim of this study is to serve as a guide to generative modeling, not to draw inference about real-world impact of policy-making for COVID-19.</p>
 
-<h2 id="simulation-based-inference">Simulation-based Inference</h2>
+<h2 id="recommender-systems-graph-neural-nets">Recommender Systems, Graph Neural Nets</h2>
 
-<p>Simulators are causal generative models used to encode our understanding of complex phenomena. Knowledge of the causal relations embedded within them are crucial to making robust predictions. However, with high-fidelity simulations, we run into the challenge of intractable inference. Through a pedagogical example, we show that statistical inference can learn a model for a density estimation task, but it is not guaranteed to recover causal relations unless we make strong assumptions that happen to be correct. We rely on access to intervene on a simulator to recover a surrogate model which encodes the same set of conditional independence relations as the true model and can be used to predict its behaviour under intervention. <a href="https://docs.google.com/presentation/d/13CE9KoDUPgO_DVqAT3bNDvan6rha4zbdoflExE9PdGI/edit?usp=sharing">My research</a> theorizes on causal discovery and extends the solutions we build to more practical problems in the field.</p>
+<ul>
+  <li>Paper: Open-domain Trending Hashtag Recommendation for Videos, S. Mehta et al., IEEE International Symposium on Multimedia (2021)</li>
+  <li>Patent: Under review, Adobe Research</li>
+</ul>
 
-<h2 id="graph-neural-networks">Graph Neural Networks</h2>
+<p>Recommendations determine the type, ranking, and placement of most content appearing on our screen ranging from social networks to e-commerce sites and advertisements. A laser focus on personalization has led to a plethora of issues from bias and lack of interpretability to filter bubbles and echo chambers. My work at Adobe dealt with a zero-shot prediction problem, building a production-ready graph attention-network based system and a novel hashtag matching algorithm that, in combination, effectively matched trending hashtags with relevant videos for improving content discovery via all Adobe products. Part of our motivation was to develop a tool to address the content discovery problem exacerbated by poorly designed recommendations. Furthermore, I am using open-source recommendation systems in SimPPL: A Social Network Simulator with Probabilistic Programs in order to simulate content spread and shilling attacks (bad actors using fake reviews to boost virality) and stimulate research on detection and control.</p>
+
+<h2 id="ml-x-particle-physics-graph-neural-nets">ML x Particle Physics, Graph Neural Nets</h2>
+
+<ul>
+  <li>Zenodo: <a href="https://zenodo.org/record/3670882#.YXQyltbMJhE">DeepJetCore, Kieseler et al., 2020</a></li>
+</ul>
 
 <p>I’ve also developed strategies using the cornerstone of artificial intelligence to advance the natural sciences. I used to work on graph-based approaches to <a href="https://github.com/SwapneelM/TrackingNtuples/">particle track reconstruction</a> (similar to the <a href="https://www.kaggle.com/c/trackml-particle-identification">TrackML Challenge on Kaggle</a>) - specifically using the representation of 3D point cloud data as a (lower-dimension) graph followed by training a graph neural network on it, possibly conditioned on additional physical information (meta data). Problems in high-energy physics and science in general prove to be a rich testbed for statistical machine learning and Bayesian inference. It is exciting to see a growing focus on making this area more practical especially as optimization toolkits and features are released within popular frameworks.</p>
 
-<h2 id="machine-learning-for-science">Machine Learning for Science</h2>
+<h2 id="natural-language-processing-3d-modeling-cybersecurity">Natural Language Processing, 3D Modeling, Cybersecurity</h2>
 
-<p>In <a href="http://science.sciencemag.org/content/293/5537/2051.long">1</a>, Mjolsness and DeCoste describe the general framework of scientific discovery: a loop involving observatory studies, hypothesis generation, experimental design, iterative testing, and feedback. Almost as if in accordance with their predictions dating two decades ago, machine learning has provided a toolkit for accelerating the scientific method. Simultaneously, it has also drawn from disciplines like quantum mechanics that provide foundational principles for techniques including functional analysis, energy-based models and derivatives of the Boltzmann distribution. John Tukey once said, “The best part about being a statistician is you get to play in everyone’s backyard.”</p>
+<p>As part of my Bachelor’s thesis, my teammates and I designed a framework to <a href="https://github.com/swapneelm/protobot">prototype chatbots with context-based question-answering models</a> based on Jack the Reader (ACL, 2018).</p>
 
-<p>Deep learning has established a unique perspective to approach data-intensive stages in the scientific process with its pros and cons. While neural networks boost resource-efficiency there is the issue of interpretability since the model behaves as a ‘black box’, failing to yield a consistent rationale supporting its predictions. For science, where a formal underpinning is a prerequisite for accepting hypotheses, this poses a non-trivial issue. Science often resorts to the Bayesian perspective incorporating prior knowledge often to improve on simply “throwing” more layers and data at a model. There are proposals of physics-informed learning: conditioned on physical constraints <a href="https://arxiv.org/abs/1711.10561">2</a> or utilising ‘physics-based’ loss functions <a href="https://arxiv.org/abs/1710.11431">3</a>. A known constraint for ML in the physical sciences is also the intractable nature of the likelihood function in complex, high-dimensional spaces. This begets strategies grounded in Bayesian statistics for instance those aimed at closely approximating the likelihood by means of sampling from the posterior using approximate Bayesian computation. Alternatively, there is a class of likelihood-free inference techniques which comes with its own set of constraints. In <a href="https://arxiv.org/abs/1805.12244">4</a> and <a href="https://arxiv.org/abs/1808.00973">5</a>, for instance, the authors propose a neural network as a surrogate model to learn the joint likelihood ratio over a latent variable obtained from the simulation, demonstrating that this can serve as a more sample-efficient technique for certain classes of problems with an intractable likelihood.</p>
-
-<p>There has been a resurgence of graph-based techniques in machine learning possibly linked to the increase in graph-structured data and compute. A recent, comprehensive review is offered by researchers at DeepMind in <a href="https://arxiv.org/abs/1806.01261">6</a> that argues the capacity of graphs for effectively modeling inter-object relationships. As part of my work on particle track reconstruction graphical representations can encode entity-relationships into lower dimensional latent spaces; <a href="https://arxiv.org/abs/1709.05584">7</a> presents a survey of approaches to this end. I believe, as computational feasibility no longer remains a bottleneck, that graph-based models present a promising approach to learn complex relationships over large datasets.</p>
-
-<h2 id="natural-language-processing-3d-modeling">Natural Language Processing, 3D Modeling</h2>
-
-<p>I’ve built projects to demonstrate my understanding of a topic whilst exploring a variety of domains; a few examples of these include a framework to <a href="https://github.com/swapneelm/protobot">prototype chatbots with context-based question-answering models</a> based on Jack the Reader (ACL, 2018), an <a href="https://arxiv.org/ftp/arxiv/papers/1812/1812.00110.pdf">automated assessment of basic Blender (3D Modeling) Assignments</a>, and a dynamic, automated workflow for an award-winning cybersecurity tool, <a href="https://www.smokescreen.io/IllusionBLACK/">IllusionBlack</a>.</p>
+<p>I have also built an <a href="https://arxiv.org/ftp/arxiv/papers/1812/1812.00110.pdf">automated assessment tool for Blender (3D Modeling) Assignments</a>, and a dynamic, automated workflow for an award-winning cybersecurity tool, <a href="https://www.smokescreen.io/IllusionBLACK/">IllusionBlack</a>.</p>
 
 <h2 id="knowledge-transfer-dj-unicode">Knowledge Transfer: DJ Unicode</h2>
 
-<p>I am passionate about knowledge transfer actively working with a student-run organisation that I co-founded - <a href="https://djunicode.in">DJ Unicode</a>. Unicode was born of the need for skill development at the grassroots level in addition to the need for a rapport between college freshmen, sophomores, and juniors at universities that don’t offer such opportunities by means of the coourse structure. Our aim is to extend the ‘summer-of-code’ workflow to the rest of the year helping our students to build a strong foundational understanding of software development. I’m leading the expansion of our mentorship into teaching math and statistics for machine learning through comprehensive reading groups on standard texts in the subject.</p>
+<p>Co-founder, 2017 - present, <a href="https://djunicode.in">DJ Unicode</a></p>
 
-<p>Unicode started with 15-20 students separated into 5 teams based on their projects. Today, we are a thriving community of 140+ members, with teams winning hackathons, students receiving international internship offers, multiple selections for Google Summer of Code each year, and alumni at Ivy League universities and FAANG companies in the USA!</p>
+<p>I am passionate about knowledge transfer actively working with a student-run organisation that I co-founded. Unicode was born of the need for skill development at the grassroots level in addition to the need for a rapport between college freshmen, sophomores, and juniors at universities that don’t offer such opportunities by means of the coourse structure. Our aim is to extend the ‘summer-of-code’ workflow to the rest of the year helping our students to build a strong foundational understanding of software development. I’m leading the expansion of our mentorship into teaching math and statistics for machine learning through comprehensive reading groups on standard texts in the subject.</p>
+
+<p>Unicode started in 2017 with 15-20 students separated into 5 teams based on their projects. Today, we are a thriving community of 200+ members, with teams winning hackathons, students receiving international internship offers, multiple selections for Google Summer of Code each year, and alumni at Ivy League universities and FAANG companies in the USA!</p>
+
+<h3 id="unicode-research">Unicode Research</h3>
+
+<ul>
+  <li>
+    <p><a href="https://unicode-research.netlify.app/people/">Unicode Research Group</a></p>
+  </li>
+  <li>Advanced Statistics Reading Group, 2021: <a href="https://www.youtube.com/playlist?list=PLob0yCmJjJ3XT9DfcQ63ly79ICmgGU5bt">Shalizi Stats</a></li>
+  <li>Google Research funded 9-week Unicode Machine Learning Summer Course, 2021: <a href="https://djunicode.github.io/umlsc-2021/">website</a></li>
+</ul>
+
+<p>I founded a research arm within Unicode, focused on doing collaborative research in statistics and machine learning, with particular emphasis on AI for social good. This includes extensions of <a href="https://djunicode.github.io/umlsc-2021/projects/">projects by students in our ML Summer Course</a>, and ideas by Unicode students and collaborators. I was joined by Dr. Akash Srivastava from the MIT-IBM AI Lab to help teach the students about deep generative models in a palatable fashion, introducing them to probabilistic machine learning.</p>
+
+<p>Ongoing research projects at Unicode Research include <strong>estimating the causal effect of mentorship on student career outcomes</strong>, <strong>social network analysis using probabilistic machine learning</strong>, and other topics in deep generative modeling.</p>
 
 <h2 id="personal">Personal</h2>
 
@@ -227,11 +258,11 @@ into the {body} of the default.hbs template -->
 
 <ul>
   <li><a href="https://twitter.com/swapneel_mehta">@swapneel_mehta</a></li>
-  <li><a href="http://www.ccdev.in/swapneel-mehta">Cutting Chai Developers</a></li>
+  <li><a href="http://www.ccdev.in/swapneel-mehta">[defunct] Cutting Chai Developers</a></li>
   <li><a href="https://linkedin.com/in/swapneelm">LinkedIn</a></li>
 </ul>
 
-<p>Feel free to browse through some of my older posts on <a href="http://punintended404.blogspot.in">Blogger</a> and <a href="http://www.ccdev.in">The CCDev Blog</a>.</p>
+<p>Feel free to browse through some of my older posts on <a href="http://punintended404.blogspot.in">Blogger</a> and <a href="http://www.ccdev.in">[defunct] The CCDev Blog</a>.</p>
 
 
             </section>
