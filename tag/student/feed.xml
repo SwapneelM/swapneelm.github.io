@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="http://localhost:4000/tag/student/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-10-23T12:37:03-04:00</updated>
+  <updated>2021-10-25T07:36:46-04:00</updated>
   <id>http://localhost:4000/tag/student/feed.xml</id>
 
   
@@ -32,12 +32,14 @@
 
   
     <entry>
-      <title type="html">Guide to Asking Good Questions</title>
-      <link href="http://localhost:4000/a-guide-to-asking-better-questions" rel="alternate" type="text/html" title="Guide to Asking Good Questions" />
+      <title type="html">Improving Communication Skills</title>
+      <link href="http://localhost:4000/improving-communication-skills" rel="alternate" type="text/html" title="Improving Communication Skills" />
       <published>2021-07-21T00:00:00-04:00</published>
       <updated>2021-07-21T00:00:00-04:00</updated>
-      <id>http://localhost:4000/a-guide-to-asking-better-questions</id>
-      <content type="html" xml:base="http://localhost:4000/a-guide-to-asking-better-questions">&lt;h1 id=&quot;a-guide-to-asking-good-questions&quot;&gt;A Guide to Asking Good Questions&lt;/h1&gt;
+      <id>http://localhost:4000/improving-communication-skills</id>
+      <content type="html" xml:base="http://localhost:4000/improving-communication-skills">&lt;h1 id=&quot;improving-communication-skills&quot;&gt;Improving Communication Skills&lt;/h1&gt;
+
+&lt;p&gt;You talk to hundreds of new people each year, very few of whom leave an impression on your mind. My hypothesis is having stimulating conversations that coherently challenge beliefs is the simplest way to be memorable. I try to learn something new from each conversation I have and when i don’t, I usually find it to be less memorable than otherwise. Most people think what I mean is intelligent conversation, but I think stimulation needs more than just intellect. It needs storytelling, experience, attention, but most of all, it needs perspective. Having a worldview is a prerequisite for meaningful opinions. I only understood a year ago what a worldview really meant and I suspect there’s far more to it than I think I follow–which is great, because I expect mine will evolve along many dimensions before it coalesces into an equilibrium state.&lt;/p&gt;
 
 &lt;p&gt;It’s very hard to maximize interest and information per unit conversation while constrained by professional etiquette and verbosity. I think this optimization task is the basis of good communication. I have by no means found a global optima for this problem (as I’m sure you’ll see), but I do have a sense of some local optima with respect to improving my own bad habits and I provide that as an example of how you could learn to improve your own conversations.&lt;/p&gt;
 
@@ -151,7 +153,7 @@
       
 
       
-        <summary type="html">A Guide to Asking Good Questions</summary>
+        <summary type="html">Improving Communication Skills</summary>
       
 
       
