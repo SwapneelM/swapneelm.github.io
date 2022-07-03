@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Machine Learning Summer Schools</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Swapneel's Blog" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/machine-learning-summer-schools" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Swapneel Mehta" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Machine Learning Summer Schools" />
+    <meta property="og:description" content="This post is the first in a series of posts highlighting my attempt(s) to prepare myself to undertake research and for graduate school. It will include a year in review, learnings from working at CERN, and some technical posts about the kind of work I do. Background I’m a recent" />
+    <meta property="og:url" content="http://localhost:4000/machine-learning-summer-schools" />
+    <meta property="og:image" content="http://localhost:4000/assets/images/advanced.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/swapneelm" />
+    <meta property="article:author" content="https://www.facebook.com/swapneelm" />
+    <meta property="article:published_time" content="2018-10-16T00:00:00-04:00" />
+    <meta property="article:modified_time" content="2018-10-16T00:00:00-04:00" />
+    <meta property="article:tag" content="Summer-school" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Machine Learning Summer Schools" />
+    <meta name="twitter:description" content="This post is the first in a series of posts highlighting my attempt(s) to prepare myself to undertake research and for graduate school. It will include a year in review, learnings from working at CERN, and some technical posts about the kind of work I do. Background I’m a recent" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/advanced.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Swapneel Mehta" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Summer-school" />
+    <meta name="twitter:site" content="@swapneel_mehta" />
+    <meta name="twitter:creator" content="@swapneel_mehta" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Swapneel Mehta",
+        "logo": "http://localhost:4000/assets/images/blog-icon.png"
+    },
+    "url": "http://localhost:4000/machine-learning-summer-schools",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:4000/assets/images/advanced.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/machine-learning-summer-schools"
+    },
+    "description": "This post is the first in a series of posts highlighting my attempt(s) to prepare myself to undertake research and for graduate school. It will include a year in review, learnings from working at CERN, and some technical posts about the kind of work I do. Background I’m a recent"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Machine Learning Summer Schools" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/blog-icon.png" alt="Swapneel Mehta" /></a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Blog</a></li>
+    <li class="nav-home" role="menuitem"><a href="/projects/">Projects</a></li>
+    <li class="nav-home" role="menuitem"><a href="/presentations/">Presentations</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-about" role="menuitem"><a href="/cv/cv.pdf">CV</a></li>
+    <li class="nav-about" role="menuitem"><a href="/art/">Art</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+                <a class="social-link social-link-fb" href="https://facebook.com/swapneelm" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+            
+            
+                <a class="social-link social-link-tw" href="https://twitter.com/swapneel_mehta" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+            
+        </div>
+        
+            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full post tag-summer-school ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="16 October 2018">16 October 2018</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/summer-school/'>SUMMER-SCHOOL</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">Machine Learning Summer Schools</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/assets/images/advanced.jpg)">
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p><em>This post is the first in a series of posts highlighting my attempt(s) to prepare myself to undertake research and for graduate school. It will include a year in review, learnings from working at CERN, and some technical posts about the kind of work I do.</em></p>
+
+<h3 id="background">Background</h3>
+
+<p>I’m a recent graduate of Computer Engineering working at the European Organisation for Nuclear Research (CERN). I got into a “US top-15” school for pursuing a Masters in Computer Science starting 2018 but chose to work as a Technical Student for a year instead. My goal in spending this year at CERN is to to gain more perspective and better understand my interests before diving straight into graduate school. As I worked on <a href="https://github.com/DL4Jets/DeepJetCore">projects</a> at the CMS Experiment, I really developed a strong liking for problems we face in high-energy physics. This series of posts will serve as a reflection of the people I have met and experiences I have shared over the past summer.</p>
+
+<h3 id="applying-to-summer-schools">Applying to Summer Schools</h3>
+
+<p>The year started on a mixed note;  I was excited about working at CERN, but also wondering what directions to take in order to prepare for graduate studies. My aim is to learn by doing and make the most of opportunities that come along. So I decided to figure out how to improve my knowledge of machine learning that was essentially self-taught—taking online courses and working on a project aiding the deployment Tensorflow models in production on the CMS Software Environment. I spent two weeks researching and applying to machine learning summer schools with my supervisor (and former supervisor) supporting me with reference letters wherever necessary.</p>
+
+<p>The schools had some really cool speakers lined up which I thought would make for a great introduction to subjects like gaussian processes, natural language processing, causal inference, probabilistic methods, bayesian non-parametrics, and optimisation. The application process for the schools was fairly straightforward (often doing away with the reference letter) and encouraged students to present posters of their ongoing/completed projects. I ended up visiting two schools - Machine Learning in High-energy Physics Summer School (Oxford, UK) and Machine Learning Summer School (Madrid, Spain), apart from the Deep Learning Indaba (Stellenbosch, SA). My poster on our work (DeepJet) was presented at MLSS and the Indaba.</p>
+
+<p><em>Note: I learnt later how presenting posters forms a critical part of the experience; it fosters discussions on a plethora of interconnected domains promoting quick and reliable knowledge transfer. As Jeff Dean said in a talk at the Deep Learning Indaba, “If I had a choice between reading one research paper in great depth or just skimming through ten papers, I would choose the latter because that gives me a broader idea of the problem space that I can then build upon.” Poster presentations accomplish pretty much the same goal and in addition foster collaboration and interest in relevant work by others you may not otherwise hear of.</em></p>
+
+<p><em>Note: I also learnt later how lucky I was to have qualified for these events that are otherwise primarily targeted at an audience of Ph.D. students (except for the Deep Learning Indaba). This gave me an invaluable set of opportunities to connect with researchers and graduate students who were perfectly equipped to offer <strong>relevant</strong> advice to me (a lot of people can offer advice, but very little is often relevant).</em></p>
+
+<h2 id="takeaways">Takeaways</h2>
+
+<p>Here’s a brief outline of each of these events along with what I learnt from each of them. In this post, I’ve focused on the <a href="https://indico.cern.ch/event/687473">Fourth Machine Learning in High-energy Physics Summer School</a>.</p>
+
+<h3 id="mlhep-2018">MLHEP 2018:</h3>
+<p>The Machine Learning in High-energy Physics Summer School was organised by researchers from Yandex, Skoltech, and HSE at Oxford University in the UK. It is an event targeted at Ph.D. students and Professors in Physics seeking a foothold in machine learning to find applications to their respective problem statements. However, given that I was working on a project along similar lines, it served as a pretty good primer for me.</p>
+
+<h5 id="school-highlights">School Highlights</h5>
+<ul>
+  <li>The school began with two tracks—one slightly more advanced introduction and another for beginners to programming and data science.</li>
+  <li>The lectures adhered to a (really useful) hands-on format where each talk was followed by a practical coding session teaching the practical uses of each model.</li>
+  <li>The <a href="https://github.com/yandexdataschool/mlhep2018">MLHEP Starter code</a> was really well documented and overall quite thorough in its treatment of the subject. It should serve as a useful reference even for those who have not attended the event.</li>
+  <li>There was a set of invited lectures (one per day) that was truly the highlight of each day. It made me wonder how they shortlisted speakers but whatever the process was, it clearly worked. From an introduction to Quantum Physics and Deep Learning to NVidia’s use of AI, to Advertisements on Oracle Data Cloud, and a detailed architectural breakdown of Google’s newly introduced Tensor Processing Unit - these lectures did not disappoint! The slides for each of these lectures has been kindly <a href="https://github.com/yandexdataschool/mlhep2018">made available</a> by the organisers.</li>
+</ul>
+
+<p><strong>The Codalab Challenge</strong></p>
+<ul>
+  <li>Amidst a packed (read 7:30 am - 7 pm) schedule that prevented me from visiting this popular vegan joint (sadly, it shut by 5 pm daily) we had yet another activity - a multi-phase <a href="https://competitions.codalab.org/competitions/19818">Codalab Challenge</a> on the Semantic Segmentation of LArTPC (<a href="https://en.wikipedia.org/wiki/Time_projection_chamber">Liquid Argon Time Projection Chamber</a>) tracks! Phase 1 was now open to us and the rest would follow soon after.</li>
+  <li>If you don’t understand much about the title, don’t be disappointed. I didn’t know much about it either. But I did know that we had free GPU Credit and some <a href="https://github.com/yandexdataschool/mlhep2018-starterkit">starter code</a>, and when someone is so kind as to give you a free GPU and some machine learning models, it is only natural for your overfitting instincts to kick into overdrive. So overfitting aside, that’s exactly what I did.</li>
+  <li>My first four attempts gave me exactly zero accuracy. I had no idea what I was doing wrong. After 14 hours of training (I woke up intermittently through the night to check up on the model) I realized I was not preprocessing the data correctly. Long story short, after a series of modifications to my code, I arrived upon a seriously crappy model and placed almost last on the leaderboard.</li>
+</ul>
+
+<p><em>That was probably my breaking point.</em></p>
+
+<ul>
+  <li>Now there were two undergrads at the school who didn’t really participate in the challenge (to my knowledge, and based on the leaderboard). The rest of the thirty-ish people were Physics Ph.D. Students. They understood exactly what a <a href="https://en.wikipedia.org/wiki/Time_projection_chamber">LArTPC</a> was, in addition to having the same starter code and a reasonably good understanding of machine learning. Then there was me - the third undergrad with almost entirely self-taught knowledge of machine learning (I’ll write another post sometime about my opinion on the Indian Education System) and barely any understanding of the properties of the track data. Did I really expect myself to miraculously arrive at the optimal hyperparameters for this problem given that I was already drained after 12 hours of attending the school daily?</li>
+</ul>
+
+<p><em>Then, I binged on a box of Pringles and reevaluated matters</em></p>
+
+<ul>
+  <li>I was an undergrad among 2nd and 3rd year Ph.D. students (also some Professors) and I still managed to not only get in but also successfully understand most of the topics taught in the school.</li>
+  <li>The very fact that I had a submission placed me in the top-30% of the school (many people decided against participating due to various issues including the time constraints and a limited understanding of the starter code).</li>
+  <li>I did finally start understanding what LArTPC was about, after watching some introductory lectures. It wasn’t that complicated. And the history of the TPC was pretty cool (I like reading about the story behind things).</li>
+  <li>I used the more complicated model - the Message-passing Neural Network instead of the Convolutional Neural Network simply because I wanted to ‘try something new.’ I managed my model fairly well by tweaking the learning rate, playing around with dropout to prevent overfitting, switching around optimizers, and adjusting the number of training epochs. The accuracy (to my recollection) was 80-something percent.</li>
+  <li>Given that it was my first Kaggle-like challenge, this was a pretty great outcome. Giving up now would be a very silly idea. Either way, there was only a day more left. Instead, why not try to push harder for a day without any expectation and see what I get.</li>
+</ul>
+
+<p><em>So I did.</em></p>
+
+<ul>
+  <li>For the next three nights, I didn’t waste a lot of time on dinner, grabbing what I could from the nearest restaurant. I focused on reading up about the physics end of things and understood what exactly the challenge expected us to do. Then, I dug up some esoteric stuff on graph nets that led me to the conclusion that this was not going to be easy to pick up in a few hours.</li>
+  <li>Earlier I had assumed the code would be easy to tweak since I was looking at it from an outsider’s perspective. On diving deeper, I realized that it was “messier” (arguably “over-modularized”) than I had thought. Custom functions were called that were defined in separate files and directories and overall it took me a bit of time to try and get it working. To be fair, this was really nice code, but in the time we had it was difficult to digest everything. So I figured out how to use the base architecture, hacked together a working model, and set it training while I read up on how message passing works.</li>
+  <li>The next few days were basically low on sleep and high on Tensorboard and excitement. I find that I get really excited about the little things especially when I like what I’m doing. Although I didn’t expect to achieve much, what I was doing seemed really interesting so I spent time understanding (or rather hypothesizing) why some models gave me better accuracy and losses but didn’t really produce an output as good as others on the test set (overfitting, maybe?). A very naive way of looking at it is that there’s tradeoffs between the learning rate you use and the number of training epochs that you need to monitor as the losses go down and accuracy increases. The plot has slight bumps (in the wrong direciton) after a point that seem to tell you that you might be overfitting.</li>
+  <li>I realized it wouldn’t be feasible to use all of the training data (I/O was waaaaay too slow) nor would it be easy to create batches currently given the time constraints and custom code (I just had a day left at that point and we still had lectures). These tradeoffs resulted in a lot of updates to my approach and the code, ultimately arriving at a set of models that seemed to do okay, placing somewhere near the upper half of the leaderboard.</li>
+  <li>As the deadline loomed and I submitted my last model, I landed up 4th on the Phase 1 Leaderboard for the challenge with an accuracy of 90-something percent. This wasn’t the miracle win I expected (blame Hollywood for setting my expectations high) but it was undoubtedly a decent result for a first-timer given the aforementioned constraints.</li>
+  <li>The next morning, the CodaLab Challenge winners were asked to present their models. <a href="https://github.com/yandexdataschool/mlhep2018/blob/master/day6-Sun/AlexHeld-20180812_MLHEP2018.pdf">Alex</a>, who stood first on the leaderboard, came up to explain his entry.</li>
+  <li>As I listened to Alex talk about how he visualized the data (used the CNN for visualizing the features? not clear on this) and tweaked the learning rate and a lot of jargon (but in the nice sense), I was very impressed with the work. Having nothing else to focus on as they announced the next winner, I started planning my journey back to Heathrow from Oxford - I didn’t want to miss my flight.</li>
+  <li>A friend sitting next to me elbows me as he points to the leaderboard. “Isn’t that you?” 
+“What?”
+“<code class="highlighter-rouge">smehta</code>, that’s your username right?”
+“Oh, right. Well, shit.”</li>
+  <li>Mother of God, I stood second. How? Well, you see the challenge had multiple phases, and they simply used the test data from the second phase (only slightly advanced from Phase 1) to evaluate the models. This resulted in some models not performing as well - surprisingly enough, mine did. They had told us this before, and I remember I had tweaked my training and preprocessing to accommodate for a better score overall, but I was so busy with training afterwards that I forgot they would consider the results of Phase 2.</li>
+</ul>
+
+<p><em>“Can the user <code class="highlighter-rouge">smehta</code> please come up and explain their approach?”</em></p>
+
+<ul>
+  <li>I knew I wasn’t going to follow up Alex’s presentation with something really technical so I decided to do the easy thing - tell them exactly how I did it.</li>
+</ul>
+
+<p><em>“I’ve never used a Message-passing Neural Network and I wanted to see how it works so that was my main motivation in participating in this challenge. My first few tries failed which was when I updated my preprocessing pipeline. The core principle I used to tweak my training parameters was basically what Andrew Ng said in Coursera Machine Learning, Week 4 - ‘If you are approaching a minima you need to adjust your number of training steps and learning rate such that you neither overshoot it nor converge too slow.’”</em></p>
+
+<p>That, ladies and gentlemen, is what I call machine learning (sarcasm? maybe).</p>
+
+<p><strong>Stay tuned for more posts about experiences from the two other events that I had the privilege to attend this year - Machine Learning Summer School (Madrid), and the Deep Learning Indaba (South Africa).</strong></p>
+
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to Swapneel Mehta</h3>
+                    <p>Coming Soon!</p>
+                    <form method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+    </div>
+    <button class="" type="submit" disabled><span>Subscribe</span></button>
+    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+</form>
+
+                </section>
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = 'http://localhost:4000/';
+                            this.page.identifier = 'Swapneel Mehta';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://swapneelm.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/on-traveling-without-wanderlust">
+                <div class="post-card-image" style="background-image: url(/assets/images/welcome.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/on-traveling-without-wanderlust">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Travel</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">On Traveling without Wanderlust</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>The definition of travel varies with what you want to get out of it. I write this post to highlight my perspective and learnings from a summer of traveling across a few countries.</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/how-to-be-a-real-computer-science-major">
+                <div class="post-card-image" style="background-image: url(/assets/images/zsh-homer-simpson.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/how-to-be-a-real-computer-science-major">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Terminal</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">How to be a Real Computer Science Major</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>This post focuses on how to modify/hack your terminal with different plugins such that you can make Homer Simpson spout meaningful software engineering quotes on launching it. Note: This post contains a healthy</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="http://localhost:4000/">
+            
+                <img src="/assets/images/favicon.png" alt="Swapneel Mehta icon" />
+            
+            <span>Swapneel Mehta</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Machine Learning Summer Schools</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Machine+Learning+Summer+Schools&amp;url=https://swapneelm.github.io/machine-learning-summer-schools"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://swapneelm.github.io//machine-learning-summer-schools"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="http://localhost:4000/">Swapneel Mehta</a> &copy; 2022</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    <a href="https://facebook.com/swapneelm" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/swapneel_mehta" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+        <div id="subscribe" class="subscribe-overlay">
+            <a class="subscribe-overlay-close" href="#"></a>
+            <div class="subscribe-overlay-content">
+                
+                    <img class="subscribe-overlay-logo" src="/assets/images/blog-icon.png" alt="Swapneel Mehta" />
+                
+                <h1 class="subscribe-overlay-title">Subscribe to Swapneel Mehta</h1>
+                <p class="subscribe-overlay-description">Coming soon!</p>
+                <form method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+    </div>
+    <button class="" type="submit" disabled><span>Subscribe</span></button>
+    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+</form>
+
+            </div>
+        </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-128164562-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

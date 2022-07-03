@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> - Articles</title>
+    <description>Swapneel's Blog</description>
+    <link>
+    http://localhost:4000</link>
+    
+      
+      <item>
+        <title>Get People to Respond to Your Cold Calls</title>
+        
+          <description>&lt;h1 id=&quot;get-people-to-respond-to-your-cold-calls&quot;&gt;Get People to Respond to Your Cold Calls&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Fri, 01 Jul 2022 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/get-people-to-respond-to-your-cold-calls</link>
+        <guid isPermaLink="true">http://localhost:4000/get-people-to-respond-to-your-cold-calls</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Interview Advice for Research Internships in Data Science</title>
+        
+          <description>&lt;p&gt;This is to my future self even though I don’t actually ever read my blog posts after having written them. It is a mostly complete and informal set of pointers that serve as advice based on a historical record of the nature of interviews I have experienced and mistakes that I have made in the past. The advice is largely for research-related roles so I don’t claim that it applies across the table (but it probably does, though).&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 01 Dec 2020 00:00:00 -0500</pubDate>
+        <link>
+        http://localhost:4000/interview-advice-for-research-internships-in-data-science</link>
+        <guid isPermaLink="true">http://localhost:4000/interview-advice-for-research-internships-in-data-science</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>How to Write a Statement of Purpose for Grad School</title>
+        
+          <description>&lt;h3 id=&quot;the-disclaimer&quot;&gt;The Disclaimer&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Sat, 26 Sep 2020 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/how-to-write-a-statement-of-purpose-for-grad-school</link>
+        <guid isPermaLink="true">http://localhost:4000/how-to-write-a-statement-of-purpose-for-grad-school</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>A Student’s Guide to Living Abroad II</title>
+        
+          <description>&lt;p&gt;This part is about the grind.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 18 Mar 2019 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/a-students-guide-to-living-abroad-II</link>
+        <guid isPermaLink="true">http://localhost:4000/a-students-guide-to-living-abroad-II</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>On Traveling without Wanderlust</title>
+        
+          <description>&lt;p&gt;The definition of travel varies with what you want to get out of it. I write this post to highlight my perspective and learnings from a summer of traveling across a few countries.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 16 Feb 2019 00:00:00 -0500</pubDate>
+        <link>
+        http://localhost:4000/on-traveling-without-wanderlust</link>
+        <guid isPermaLink="true">http://localhost:4000/on-traveling-without-wanderlust</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Machine Learning Summer Schools</title>
+        
+          <description>&lt;p&gt;&lt;em&gt;This post is the first in a series of posts highlighting my attempt(s) to prepare myself to undertake research and for graduate school. It will include a year in review, learnings from working at CERN, and some technical posts about the kind of work I do.&lt;/em&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 16 Oct 2018 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/machine-learning-summer-schools</link>
+        <guid isPermaLink="true">http://localhost:4000/machine-learning-summer-schools</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>How to be a Real Computer Science Major</title>
+        
+          <description>&lt;p&gt;This post focuses on how to modify/hack your terminal with different plugins such that you can make Homer Simpson spout meaningful software engineering quotes on launching it.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 16 Oct 2018 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/how-to-be-a-real-computer-science-major</link>
+        <guid isPermaLink="true">http://localhost:4000/how-to-be-a-real-computer-science-major</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>A Student’s Guide to Living Abroad I</title>
+        
+          <description>&lt;p&gt;&lt;em&gt;This is the first of a &lt;a href=&quot;/2018-12-21-a-students-guide-to-living-abroad-II&quot;&gt;2-part series&lt;/a&gt;. While this one is focused on making preparations for the travel, the next one will (hopefully) provide deeper insight into how life works and what to expect from the outside world based on my experience so far.&lt;/em&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 10 Jul 2018 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/a-students-guide-to-living-abroad-I</link>
+        <guid isPermaLink="true">http://localhost:4000/a-students-guide-to-living-abroad-I</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>CERN Openlab Summer Student Program</title>
+        
+          <description>&lt;p&gt;This post is about my internship within the CERN Openlab Program in 2017 and includes a questionnaire (hopefully) useful for students applying to the program.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 07 Apr 2017 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/cern-openlab-internship</link>
+        <guid isPermaLink="true">http://localhost:4000/cern-openlab-internship</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Coursework to Complete</title>
+        
+          <description>&lt;h2 id=&quot;an-exhaustive-list-of-course-lectures&quot;&gt;An Exhaustive List of Course Lectures&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Fri, 24 Mar 2017 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/coursework-to-complete</link>
+        <guid isPermaLink="true">http://localhost:4000/coursework-to-complete</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>The Blog</title>
+        
+          <description>&lt;h3 id=&quot;why-blog&quot;&gt;Why Blog?&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Tue, 21 Mar 2017 00:00:00 -0400</pubDate>
+        <link>
+        http://localhost:4000/the-blog</link>
+        <guid isPermaLink="true">http://localhost:4000/the-blog</guid>
+      </item>
+      
+    
+  </channel>
+</rss>

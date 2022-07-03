@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/tag/grad-school/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-07-03T00:32:17-04:00</updated>
+  <id>http://localhost:4000/tag/grad-school/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Swapneel Mehta | </title>
+  
+
+  
+    <subtitle>Swapneel's Blog</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">How to Write a Statement of Purpose for Grad School</title>
+      <link href="http://localhost:4000/how-to-write-a-statement-of-purpose-for-grad-school" rel="alternate" type="text/html" title="How to Write a Statement of Purpose for Grad School" />
+      <published>2020-09-26T00:00:00-04:00</published>
+      <updated>2020-09-26T00:00:00-04:00</updated>
+      <id>http://localhost:4000/how-to-write-a-statement-of-purpose-for-grad-school</id>
+      <content type="html" xml:base="http://localhost:4000/how-to-write-a-statement-of-purpose-for-grad-school">&lt;h3 id=&quot;the-disclaimer&quot;&gt;The Disclaimer&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;This comes first because people often tend to ignore this very relevant section.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;There is &lt;em&gt;obviously&lt;/em&gt; no single way to achieve a successful outcome for your application to graduate school and this post comprises mainly of opinions that I hold based on no evidence other than a product of my personal experience with the process (which is limited, to say the least). All I’m trying to do by writing about this is to give you some perspective to enable you to think for yourself before you embark on the arduous process of applying to grad school. Goodluck!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Needless to say, please refrain from plagiarising the content. You know how badly a few lifted (and/or uncited) lines could mess up your application (and academic career), right?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Look at this set of personal statements, instead, as the quality of essays that your competition writes (these are for a mix of Ph.D. and Masters programs) and use it as positive reinforcement to ‘up your game,’ so to speak.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I’m going to cite Prof. Ben Y. Zhao from his &lt;a href=&quot;https://www.quora.com/What-should-be-the-flow-of-thoughts-in-a-statement-of-purpose-SOP-for-graduate-admissions&quot;&gt;Quora answer&lt;/a&gt;: “As a faculty member who’s been working on admissions for nearly a decade, and my other colleagues from other schools will confirm this, the SOP is often the &lt;strong&gt;LEAST useful and impactful part of your application&lt;/strong&gt;. The short version: &lt;strong&gt;99% of SOPs sound identical&lt;/strong&gt;. Either avoid wasting time on it, or make it original by doing something different. But know that in all likelihood, it will likely have little impact on your admission chances.”&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;the-graduate-admissions-process&quot;&gt;The Graduate Admissions Process&lt;/h3&gt;
+
+&lt;p&gt;The US University Admissions process is well-known to be a ‘black box’ (largely uninterpretable). You and I may draw our conclusions but nobody can provide a binary answer with 100% confidence as to whether a given applicant’s chances of getting in.&lt;/p&gt;
+
+&lt;p&gt;For a detailed breakdown of this process, &lt;strong&gt;please&lt;/strong&gt; read &lt;a href=&quot;https://nlp.stanford.edu/~rkarthik/DAGAP.pdf&quot;&gt;Karthik Raghunathan’s Demystification of the Graduate Admissions Process&lt;/a&gt;. While applying to grad school, you will get conflicting pieces of advice from people based on what has worked for them. It is natural for people to claim they have a hack to explain this ‘black box’ admissions process. However, my advice is to take their advice with a pinch of salt. But that too, is yet another piece of advice.&lt;/p&gt;
+
+&lt;p&gt;Prof. Andy Pavlo at Carnegie Mellon University provides some brilliant pointers in &lt;a href=&quot;http://www.cs.cmu.edu/~pavlo/blog/2015/10/how-to-write-a-bad-statement-for-a-computer-science-phd-admissions-application.html&quot;&gt;‘How to Write a Bad Statement for a Computer Science Ph.D. Admissions Application’&lt;/a&gt; (it is Ph.D. specific, but you can extrapolate most points to Masters applications).&lt;/p&gt;
+
+&lt;p&gt;Admissions are variable but it is clear that top schools always look favourably upon relevant national and international awards, and publications at top-tier venues especially when they filter applicants for competitive programs like CS (AI/ML).&lt;/p&gt;
+
+&lt;p&gt;Weaving stories in your statement, as stated before, may make or break your case depending on who reviews it. Ultimately I believe it’s a math.random() process because there is a human on the other end, and human intelligence - not unlike many manifestations of artificial intelligence - is highly unpredictable. I wanted to share some links for reading before you start writing. But before that, I’d like to try and highlight the most important part of your statement of purpose - your research!&lt;/p&gt;
+
+&lt;p&gt;A natural question that plagues most MS and often Ph.D. applicants (myself included) is “What is Research?” Having started my own Ph.D. in 2019, I find that sections 2.3 and 2.4 of &lt;a href=&quot;http://www.cs.cmu.edu/~harchol/gradschooltalk.pdf&quot;&gt;Prof. Mor Harchol-Balter’s fantastic breakdown of the Ph.D. Application Process&lt;/a&gt; give a very accurate description of the process. In addition, the entire document is pretty insightful as a demystification of the Ph.D. Application Process.&lt;/p&gt;
+
+&lt;h3 id=&quot;general-grad-school-advice&quot;&gt;General Grad School Advice&lt;/h3&gt;
+
+&lt;h4 id=&quot;statement-of-purpose&quot;&gt;Statement of Purpose:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cseweb.ucsd.edu/~gary/Advice.html&quot;&gt;Very useful Meta Page of Links and Advice by Prof. Gary Cottrell&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pgbovine.net/grad-school-applications-summary.htm&quot;&gt;Ph.D. specific advice from Prof. Philip Guo’s Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cl.cam.ac.uk/~sbh11/phd_apply.html&quot;&gt;Dr. Sean Holden’s advice for applying to do a Ph.D. in Machine Learning (University of Cambridge)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www-personal.umich.edu/~danhorn/graduate.html&quot;&gt;Grad School Advice by Prof. Dan Horn&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forum.thegradcafe.com/topic/48905-some-advice-on-writing-an-sop/&quot;&gt;SoP Advice from the GradCafe&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://vonahn.blogspot.com/2009/12/advice-on-grad-school-applications.html&quot;&gt;DON’Ts by BigLou - the guy who built CAPTCHA and reCAPTCHA, among other things&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;letters-of-recommendation&quot;&gt;Letters of Recommendation:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://homes.cs.washington.edu/~mernst/advice/request-recommendation.html&quot;&gt;How to request a letter of recommendation, Michael Ernst (UWash)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://homes.cs.washington.edu/~mernst/advice/write-recommendation.html&quot;&gt;How to write a letter of recommendation, Michael Ernst (UWash)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cs.brown.edu/~sk/Memos/Grad-School-Recos/&quot;&gt;Advice to Letter Writers by Prof. Shriram Krishnamurthi (Brown Univ.)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;some-examples-of-sops&quot;&gt;Some examples of SoPs:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.cmu.edu/~jlacomis/assets/statement/personal-statement-cmu.pdf&quot;&gt;Jeremy Lacomis’ Statement of Purpose for a Ph.D. at Carnegie Mellon University focusing on Software Engineering focusing on Programming Languages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jeanqasaur/academic-application-materials/blob/master/phd-application-2007/personal_statement.pdf&quot;&gt;Jean Yang’s Statement of Purpose for a Ph.D. in Computer Science&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pgbovine.net/PhD-applications/Philip_Guo-Stanford-PhD-app-statement.pdf&quot;&gt;Philip Guo’s Statement of Purpose for a Masters in Computer Science at Stanford University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://seankross.com/notes/grad-school-essays/&quot;&gt;Sean Kross’ Set of Statements for Graduate School - focusing on Information and Cognitive Science&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.andrew.cmu.edu/user/vipuls/me/sop_vipulsingh.pdf&quot;&gt;Vipul Singh’s Statement of Purpose for a Masters in Computer Science at Carnegie Mellon University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Research Statements from professors/research scientists/Ph.D. Students often yield insight into not only their goals, but also areas of active research in general which is why I’m including some samples for candidates to read in order to ‘get a better idea of their field’ before writing their Statement of Purpose.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sites.ualberta.ca/~szepesva/CV/Research%20Statement.pdf&quot;&gt;Csaba Szepesvári’s Research Statement (University of Alberta, DeepMind)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://people.eecs.berkeley.edu/~jda/docs/jda_research_statement.pdf&quot;&gt;Jacob Andreas’ Research Statement (Berkeley, MIT, Natural Language Processing)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cs.nyu.edu/~ranzato/research/research_statement_ranzato.pdf&quot;&gt;Marc’Aurelio Ranzato’s Research Statement (New York University, Machine Learning)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;web.stanford.edu/~morteza/research_statement.pdf&quot;&gt;Morteza Mardani’s Reserach Statement (Stanford, Algorithms, Applications of Machine Learning)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cs.stanford.edu/~jsteinhardt/statement.pdf&quot;&gt;Jacob Steinhardt’s Statement of Purpose (Stanford, Machine Learning)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ics.uci.edu/~numanare/files/research_niranjan.pdf&quot;&gt;U. N. Niranjan’s Research Statement (U.C. Irvine, Machine Learning)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;my-personal-favourite---anant-bhardwaj-beng-pune-univ-ms-stanford-phd-mit&quot;&gt;My personal favourite - Anant Bhardwaj (B.Eng. Pune Univ., M.S. Stanford, Ph.D. M.I.T.)&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Mainly because this was the first (and only) Statement of Purpose I read before applying for a Masters in Computer Science right after undergrad (although I later decided not to jump into it, but work at CERN for a year instead).&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Before you read this set of statements, I’d like to explain my reasons for highlighting this one.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;It clearly depicts how an SoP evolves from a story woven around nascent experience working in tech and aimed at a short-term goal into a research statement that focuses on a specific field and hopes to achieve a long-term goal.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;As an Indian B.Tech. student at Mumbai University, I could really identify with this as it was written by a fellow B.Eng. graduate from Pune University.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It’s a good example of progress and change of plans coming from a student who went on to do a Masters at Stanford and a Ph.D. at MIT and then dropped out midway to found a company called Instabase.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Another disclaimer: please do not treat this as a single representative example of how to frame your statement of purpose.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://people.csail.mit.edu/anantb/public/docs/sop/ms_admission_sop.pdf&quot;&gt;Statement of Purpose - Masters in Computer Science&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://people.csail.mit.edu/anantb/public/docs/sop/phd_admission_sop.pdf&quot;&gt;Statement of Purpose - Ph.D. in Computer Science&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;my-two-cents-on-this-subject&quot;&gt;My Two Cents on this subject&lt;/h3&gt;
+
+&lt;p&gt;A lot of these people and a lot of the advice you will see states that they know the exact field they wanted to work on. That is false. Nobody knows exactly what they want to to for the rest of their lives. Very few actually know the general area they want to work on. Most people have only a fair idea and as Ph.D. programs often state on their websites, that is OK. Most of your ideas will change with experience anyway.&lt;/p&gt;
+
+&lt;p&gt;For instance, if you like X a lot but you’ve never tried doing Y, how do you know you don’t like Y and how can you say you won’t like Y more than X once you try it out. That’s understandable. However, you will see that all of these people have one thing in common - clarity. They possess a high degree of clarity in their research focus and know that there are one or two fields that they would definitely like to pursue. All they have done is explain why this is the case. And their innate clarity made the rest of the work they did fit into the theme of their ‘stories.’&lt;/p&gt;
+
+&lt;p&gt;Essentially, what you’re trying to do in your essay is explain one or two directions that you would like to take, back your claim up with evidence (yes, material evidence - including grades, research, and/or projects) of why you would do well in those directions, and finally state what you see yourself doing once you actually get into that direction. Clarity of thoughts is way more important and the only reliable way to get that is to actually be aware of what that direction is; follow active research areas and people working in that direction, and finally, at least have some ideas of what you would do if you were given an opportunity to work there. Write confidently; you don’t necessarily need to highlight why you failed or justify any misses if you can focus on the hits. It’s not necessary that your statement of purpose would have to ‘make up for why you’re not as good as you could have been’ as opposed to ‘focus on how good you can be based on what you have already done.’&lt;/p&gt;
+
+&lt;h3 id=&quot;further-reading-strongly-recommended-if-you-have-the-time&quot;&gt;Further Reading (strongly recommended if you have the time)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://matt.might.net/articles/how-to-apply-and-get-in-to-graduate-school-in-science-mathematics-engineering-or-computer-science/&quot;&gt;Reddit Thread on Resources for Graduate School&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.quora.com/What-should-be-the-flow-of-thoughts-in-a-statement-of-purpose-SOP-for-graduate-admissions&quot;&gt;Quora Thread: Read Ben Y. Zhao and Jay Wacker’s answers in particular&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.umd.edu/grad/writing-statement-of-pupose&quot;&gt;Official Univ. of Maryland Advice&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://users.ece.cmu.edu/~mabdelm/statement-of-purpose-tips.html&quot;&gt;Former CMU Ph.D. student (now Google Research) on writing an SoP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;how-to-edit-a-statement-of-purpose&quot;&gt;How to Edit a Statement of Purpose&lt;/h2&gt;
+
+&lt;p&gt;The statement of purpose is one of the most critical parts of your application and while I have provided some examples of what I consider a great statement of purpose by people who achieved objectively good outcomes, it seems non-obvious to distill the principles that make for a good application essay purely by reading a few good examples. I decided, therefore, to write an addendum describing how I would go about editing my own (first draft) statement of purpose to make it sound better. I use excerpts from the document and critique it in the sections to follow with the goal being to establish my approach and elucidate my thought process through qualitative examples (which is far from perfect).&lt;/p&gt;
+
+&lt;h2 id=&quot;principles-underlying-an-sop&quot;&gt;Principles underlying an SoP&lt;/h2&gt;
+
+&lt;p&gt;My main advice would be twofold:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;It is a statement of &lt;strong&gt;your&lt;/strong&gt; purpose and that should show.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Every line should be framed such that it applies to you, specifically. If you are using anecdotes, do not use them unless you feel it is uncommon enough to justify their use. You don’t have to be one of the millions of kids who were “introduced to a computer at eight years of age and immediately fell in love with it”. You’re not coming across as special if you “saw the potential of software to impact millions of lives”, or “realized that technology is the salient factor stimulating the progress of civilization itself”. I would discourage quotes that you’ve rummaged off the internet unless you’ve read a specific quote in a book and feel compelled to use it to bolster your vision for the future. I would lean towards encouraging contrarian views highlighting the pitfalls of technology as long as the direction you are taking with the rest of the essay (in some sense) advocates solutions for it.&lt;/p&gt;
+
+&lt;p&gt;I will use the term ‘too generic’ a lot in this case study so I should explain what it means. Think about yourself as a reviewer faced with several hundred student essays to go through within the span of a few days. Are you going to remember each of the applicants with the motivation of ‘I &lt;em&gt;luuurve&lt;/em&gt; computers and software oomg so coooool’ or the one guy that skipped that part and said look I may have had an indifferent initiation into tech, &lt;strong&gt;but&lt;/strong&gt; I ended up building this cool product at this company that helped them raise their revenues 3x? There is no rule stating you have to be inspired by computers from your childhood, in fact (this is an opinion, but) I would argue that if you were really one of those people, I would implicitly tend to expect a bit more from the rest of your essay. Like, okay, you learned about computers by eight, so what did you do that was driven by this passion for the next decade? So don’t try to fake a motivating story if you don’t have a compelling narrative. Your work can do that for you.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Keep it simple and (yet) make it compelling.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;By keeping it simple, I mean to discourage the use of esoteric newfangled lexicons that not only evade the reaches of your vast intellectual faculties but often sound hyperbolic and characterize an undue disparity between the vision you possess and the impression you furnish. I trust this sentence made the point clear, but if not, I mean that any sentence that you need to do a ‘search and replace with smarter-sounding words’ for should be triple-checked for pretentiousness quotient and ambiguity.&lt;/p&gt;
+
+&lt;p&gt;I spoke about simplicity but how do you write a compelling essay? First, think hard. Why are you pursuing grad school? Is it to contribute to your field of research? Is it to gain access to better prospects for yourself? Is it just to make more money or get a job in a different field? There is no wrong answer, but there are unsellable answers. The bottom line is to ask you if the reasons are noble enough to sell in an essay (make no mistake, a grad app is a sales pitch and you are the product) or will they need rephrasing? If they need rephrasing (most of us are in this category, no shame in admitting it), what is the best alternative storyline for your pitch? These are extremely important high-level questions to answer for two reasons. The first is that very few of us at 18-20 years of age actually have a long-term goal other than becoming financially, professionally, and personally stable. Most of us spend the majority of our lives seeking these three things, and why shouldn’t we? It is fair. But it is not easy to sell to an application reviewing committee, so we need a bigger vision; a better storyline. And that’s where reason number two comes in: storylines come from ideas, and ideas are hard. Coming up with good ideas is easy, just Google a bad idea and you will find alternatives that are much better. Coming up with great ideas is exponentially harder, because then even Google can’t churn out related search results. That’s when it becomes dubious to tell whether you’re a genius storyteller or an idiot. And, as you might imagine, not a lot of us are good at telling them apart. I would say that there is your opportunity.&lt;/p&gt;
+
+&lt;p&gt;The answer to the questions about your motivation combined with how you choose to (re)phrase them will dictate your ‘connecting story’; the theme that weaves in all your experiences regardless of how (un)related they might actually be and your reasons for taking them up in the first place. It is important to mention that this theme cannot entail motivations that are unrealistically technical (‘I want to build artificial general intelligence by 2050’). At the same time, they cannot be something generic, even though that may be true (‘I love learning new things and taking on advanced coursework so grad school is the next logical step’) because then you are stepping back into being one of the million other applicants who, like I mentioned earlier, “fell in love with a computer at eight years of age and never looked back.” The theme should be unique to you as a candidate with a diverse set of experiences and that is why I cannot offer generic advice as to creating this theme. I can, however, write about what I did so that’s what I will do.&lt;/p&gt;
+
+&lt;h3 id=&quot;first-draft-statement-of-purpose-ms-in-cs-fall-2018&quot;&gt;First Draft, Statement of Purpose, MS in CS, Fall 2018&lt;/h3&gt;
+
+&lt;p&gt;While I may have thought otherwise back then, I definitely would warn you that it does not look pretty to me anymore. Here it is, raw and unedited.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Gartner’s hype curve holding true even in the backdrop of Nostradamus’ contentious predictions of an apocalyptic future implies that this decade has some sensational breakthroughs in store for us. As I leaf through the pages of my journal, a repository of diurnal records and moonshot concepts dating back nearly a decade, I imagine the future I want to build based on my understanding of the present as a time reinforced by the omnipresence of artificial intelligence.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The final version of the essay I wrote back in 2018 adopts this theme of ‘reading back pages of a diary’. I have mixed feelings about this, in hindsight (obviously). That is because I have gained some experience in the few years since I wrote this statement of purpose. I’m no longer a fan of the ‘make it a story’ approach because I find it often distracts from the point–I want the reviewers to focus on my competencies and the idea of reading back pages from a diary describing all the cool things I did doesn’t read as well as I had hoped it would (and I would argue it gives off a showboaty vibe). Another issue is, as we discussed earlier, the first paragraph is extremely non-specific about my goals or my motivations. The saving grace keeping it from falling into the ‘generic’ bandwagon is the fact that it is more about the diary and theme of the essay than about any description that is commonly used by applicants to talk abotu their motivations to pursue graduate school. So maybe, just maybe, it is different enough to pique the reviewers’ interest.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Reading page 11, I reminisce about my schooling, the math, science, and cyber olympiad experiences and ranking 25th in India. My undergraduate education in Computer Engineering focused on applied mathematics and exposed me to the concepts of data structures, operating systems, compiler design, network security, database management, and computer architecture. An open-source development enthusiast, I won awards at national and international hackathons organized by Barclays and the Computer Society of India in addition to a Google and Tata Trust Scholarship. We have been offered incubation by the Indian Space Research Organisation and the Indian Institute of Management for our project built for the Ministry of Agriculture. My distinguished academic record resulted in being selected for the prestigious Indian Academies of Science Fellowship, a prestigious award offered to select undergraduates across India, by the Indian Institutes of Technology, Science, and National Institutes of Technology. 
+On page 13, there are sketches of database architecture and system designs from 2015 when, as a sophomore, I built over ten websites for diverse clients from a variety of sectors ranging from education to healthcare. This freelance venture, Cutting Chai Developers (CCDev), served as an impetus for myself and my team to take up full-stack web-development, providing unique foundational training with technologies that proved instrumental in igniting our careers.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Reviewing the next two paragraphs the upside is I talk about concrete experience and achievements in a continuous manner, but the tone seems more like showboating to me now rather than a genuine description of my work. and that is critical because I have only one shot with a reviewing committee; they will take the first impression and walk with it, not necessarily giving me the benefit of doubt if they feel something is not right. Finally, and this is nitpicking, but the tense switches between past and present and that’s subtle but off-putting to me when I re-read it carefully.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Encapsulating my sophomore year on page 18, I mention how my academic credentials and unique exposure to web-technologies, led to being offered a Microsoft Research (MSR) project at the Indian Institute of Technology, Bombay (IIT-B), developing a farmer-welfare Android e-commerce application named ‘Lokacart’. Apart from adding features as directed, I took the initiative to integrate a Google Analytics dashboard with the application, commended by Ms. XYZ at MSR India. I continued my association with IIT-B working on a project with Dr. X involving the automation of assessment for Blender assignments. This research led me to train a classifier for grading assignments based on geometric parameters. I am working on integrating this into a real-time system for 5,000 students. Developing an interest in machine learning, I interned with a California-based AI and IoT firm, Z. It served as an introduction to pattern recognition algorithms as I worked with an international team on open-source codebases applying reactive programming in Python, Java and Javascript.
+Page 28 commences with my exploration of concrete opportunities to work with machine learning algorithms at A. I tested Markov chains and edit-distance based approaches for hostname generation as part of a dynamic workflow for their product.  Publishing research talks as part of the Stanford Scholar Initiative by Dr. B, leading the Machine Learning Team—a group of international academics and researchers—spurred me to work with state-of-the-art neural network models. An invitation to undertake industry-funded research at the European Organisation for Nuclear Research (CERN) served to provide a solid grasp of unsupervised learning as my project involved developing models for the detection of anomalous database connections. Guided by Mr. C, a senior member of the IT/DB Group at CERN, I worked with data streaming using Apache Spark and Hadoop Distribute File Storage, applying an ensemble of temporal, distance and density-based clustering methods and classifiers to accurately flag outlying database connections. It was this summer experience to interface with academics ranging from incoming doctoral students at MIT to postdoctoral researchers at Caltech and professors at Stanford, that reinforced my ambitions to pursue a Masters degree in Computer Science.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This reads slightly better to me because I shift focus from the theme of the diary to concrete achievements, project descriptions, and internship experiences. I am able to quantify the work I did and show that this work was done under the supervision of able researchers/organisations (just to validate my efforts and confirm to the reviewers that I am not misrepresenting my knowledge). There are minor issues with sentence structure, but overall it is continuous, clear, and concise. There is an unnecessary mention of MIT, Caltech, probably because I was fascinated by seeing all these fancy scholars around me, and working with them was a huge achievement for me. When they tell you that as a reviewer you have to ‘step out of your own shoes’, these are the kinds of empty statements you have to be able to identify, detach from your sense of accomplpishment, and edit out. Still, it’s not the worst idea if you forget and it’s left in there. Just don’t overdo it. Avoid things like ‘I took Stanford’s online course on Coursera and I did really well with a 90% score and accreditation’. There are millions of students who will say exactly that, if not a version of it. Instead, use the ‘real estate’ (space on paper, quite literally) to talk about what real-life problem the knowledge and skills you gained from the course motivated you to apply yourself to. That is where you come out ahead of the majority that took the course; not all of them will have a detailed, real-world application of machine learning to talk about because that is an unstructured problem, and as we have discussed earlier, unstructured problems are much harder to solve.&lt;/p&gt;
+
+&lt;p&gt;In this excerpt, I have been extremely technical, without providing an explanation for everything and that is okay to do because you can expect the reviewer to understand basic Computer Science lingo. However, if you have done something special, don’t undersell it. Talk about it briefly, but accurately. Similarly, if you have done something generic, don’t pretend you changed the world with it. It is not hard to tell that you are exaggerating when a single essay will have ten different applications of machine learning through internship or research projects that ‘totally changed the way the company operated before it was created’. And if you have actually done those things, provide the metrics and evaluation to validate your claims such that someone can believe you without having to Google if you said the right things. ‘I built an feature into their trademark lead generation product using an open-source GPT3 implementation to build a chatbot that can resolve customer queries. As a direct consequence, our response time for incoming queries halved and costs reduced by a factor of 1.8.’ This would be an excellent statement to make because it is technically sound, plausible as an internship project within a 3-month timeline, and achieves easily understood outcomes with quantification of impact. On the other hand, ‘I conducted research on applying deep neural networks to predict climate change and its impact on the short-term weather conditions based on agriculture data in a specific region with the goal to achieve farmer welfare.’ Okay, you did something but it’s unclear what the data looked like, what model(s) you used and in addition, what the outcome was. Even if you published work, try to summarize the findings, and especially mention the venue where you published it and whether it received any awards.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Delineating how knowledge base construction from dark data presents an interesting challenge, page 42 articulates my interests, and challenges that I see myself addressing. With a marked surge in pattern recognition and cloud-based services, data is fast becoming the currency of the tech industry. Research at the Stanford Artificial Intelligence Laboratory as well as startups including the likes of Diffbot and (recently) Clarifai situated in Silicon Valley, is poised to lead breakthroughs in these fields. During a visit to ETH Zurich, I had the pleasure of discussing a former project—DeepDive—with Prof. C. He spoke highly about the research environment at Stanford adding that it is the people, more than their projects, that make the experience extraordinary. 
+As the synopsis on page 48 elucidates, a Masters degree would  not only impart relevant skills but also afford me the opportunity to contribute to cutting-edge research in a suitable capacity. On its completion, I would seek a role with a small to mid-sized organisation in the Valley, where I’d be responsible for the development cycle of the product from ideation to launch. My short-term goal would be to gain breadthwise exposure collaborating on a large-scale data analytics and pattern recognition project. I would prefer to work with a startup where I could exploit my arsenal of domain-specific skills as well as business acumen in order to achieve organic growth.
+The domain I would work in would likely be at the nexus of machine learning and cybersecurity, since the digital age is symbiotic with data security. With increased reliance on cloud-based storage, providers face rising incidents of outages and data theft, setting the stage for the necessity of secure data pipelines. Building on my past experiences, my product would leverage automated and dynamic intrusion detection strategies as I worked on providing intelligent protection systems as well as distributed data security as a service. Finally I would endeavour towards my long-term goal of a bootstrapped startup in India to corner the potential market of a billion-plus users, as they seek reliable, intelligent systems to aid their migration into the digital age. I believe an education at Stanford would enable me to shape the future of computing in India, and eventually the world.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Interestingly, this last part focuses entirely on my motivation for a Masters degree and the future. At first glance, I feel like this is too long a statement of purpose since there is usually a two-page/1200 word limit but maybe I edited this down at some point? Anyway, I am quite specific about where I want to apply the knowledge I will gain from a Masters. In fact, I even outline career trajectories for myself. Maybe that’s a bit too specific because I know I wasn’t this sure about machine learning for cybersecurity (although I had really enjoyed working in cybersecurity more than my other internships up until that point). But I provide strong evidence in favor of my possession of the knowledge that would make me an excellent candidate so I probably figured that was a viable direction I could take and worked with it.&lt;/p&gt;
+
+&lt;p&gt;Some criticism for this section would include the theme of the diary again. It is distracting to keep ‘reading from the pages of my journal’, instead just mentioning what I want to do could be more direct and appealing. Short essays are not bad essays, and longer ones just add more opportunities for you to slip up. Still, it was a theme choice I made early on, one I clearly favored at that point. And I can say now that I have the results of my applications that not every school disliked it because one of them admitted me to their graduate program (although that could just have been due to my recommendation letters or some other factor).&lt;/p&gt;
+
+&lt;p&gt;In the interest of full disclosure, I did get iterative feedback from a career counseling team so I didn’t create this essay entirely by myself. Now, they were not consultants with a technical background but they had seen enough (top B-school) application essays and successfully counselled applicants to top business programs to develop a sense of what makes for a good/bad essay in general. So the way they operated was to have me write everything myself and simply point out high-level flaws or directions I could take to improve the flow of the essay. This happened over three rounds of iteration, and the output was the essay I published above. I also had the luxury of a job offer from CERN so I did not even consider applying to safe schools. The outcome of my Masters application process that year was an admission into the MS in CS program at the University of California at Los Angeles, while I received rejections from those at Stanford, MIT, Berkeley, ETH Zurich, EPFL, and Carnegie Mellon University. For completeness’ sake, my application package also included recommendation letters from my supervisors at CERN, IIT-Bombay, and from the Head of my Department at DJ Sanghvi College of Engineering.&lt;/p&gt;
+
+&lt;h3 id=&quot;note-on-references&quot;&gt;Note on References&lt;/h3&gt;
+&lt;p&gt;This post has been composed by using publicly available documents shared by a fantastic set of researchers in an effort to help those that are seeking such information. I’ve simply listed them as they are, linking back to the original references.&lt;/p&gt;
+
+&lt;p&gt;If there is any issue with this, please feel free to contact me via email and I will be happy to remove the link(s) from this post.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Swapneel Mehta</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="grad-school" />
+      
+
+      
+        <summary type="html">The Disclaimer</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
