@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/tag/tech-interview/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-12-30T13:59:05+05:30</updated>
+  <updated>2022-10-25T14:04:05-04:00</updated>
   <id>/tag/tech-interview/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Interview Advice for Research Internships in Data Science</title>
       <link href="/interview-advice-for-research-internships-in-data-science" rel="alternate" type="text/html" title="Interview Advice for Research Internships in Data Science" />
-      <published>2020-12-01T00:00:00+05:30</published>
-      <updated>2020-12-01T00:00:00+05:30</updated>
+      <published>2020-12-01T00:00:00-05:00</published>
+      <updated>2020-12-01T00:00:00-05:00</updated>
       <id>/interview-advice-for-research-internships-in-data-science</id>
       <content type="html" xml:base="/interview-advice-for-research-internships-in-data-science">&lt;p&gt;This is to my future self even though I don’t actually ever read my blog posts after having written them. It is a mostly complete and informal set of pointers that serve as advice based on a historical record of the nature of interviews I have experienced and mistakes that I have made in the past. The advice is largely for research-related roles so I don’t claim that it applies across the table (but it probably does, though).&lt;/p&gt;
 

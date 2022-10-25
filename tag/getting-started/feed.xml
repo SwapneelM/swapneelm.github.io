@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/tag/getting-started/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-12-30T13:59:05+05:30</updated>
+  <updated>2022-10-25T14:04:05-04:00</updated>
   <id>/tag/getting-started/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Coursework to Complete</title>
       <link href="/coursework-to-complete" rel="alternate" type="text/html" title="Coursework to Complete" />
-      <published>2017-03-24T00:00:00+05:30</published>
-      <updated>2017-03-24T00:00:00+05:30</updated>
+      <published>2017-03-24T00:00:00-04:00</published>
+      <updated>2017-03-24T00:00:00-04:00</updated>
       <id>/coursework-to-complete</id>
       <content type="html" xml:base="/coursework-to-complete">&lt;h2 id=&quot;an-exhaustive-list-of-course-lectures&quot;&gt;An Exhaustive List of Course Lectures&lt;/h2&gt;
 
@@ -124,8 +124,8 @@ CAP5415 - &lt;strong&gt;Computer Vision&lt;/strong&gt; [UG]  &lt;br /&gt;&lt;/p&
     <entry>
       <title type="html">The Blog</title>
       <link href="/the-blog" rel="alternate" type="text/html" title="The Blog" />
-      <published>2017-03-21T00:00:00+05:30</published>
-      <updated>2017-03-21T00:00:00+05:30</updated>
+      <published>2017-03-21T00:00:00-04:00</published>
+      <updated>2017-03-21T00:00:00-04:00</updated>
       <id>/the-blog</id>
       <content type="html" xml:base="/the-blog">&lt;h3 id=&quot;why-blog&quot;&gt;Why Blog?&lt;/h3&gt;
 
