@@ -2,17 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-<<<<<<< HEAD
-  <link href="/author/swapneel/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-10-25T14:04:05-04:00</updated>
-  <id>/author/swapneel/feed.xml</id>
-=======
   <link href="http://localhost:4000/author/swapneel/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T01:04:23-04:00</updated>
+  <updated>2022-11-14T15:37:33-05:00</updated>
   <id>http://localhost:4000/author/swapneel/feed.xml</id>
->>>>>>> 7fef279bf34ee4b6c1d2094d5711c93560e675e6
 
   
   
@@ -165,19 +158,11 @@
   
     <entry>
       <title type="html">Interview Advice for Research Internships in Data Science</title>
-<<<<<<< HEAD
-      <link href="/interview-advice-for-research-internships-in-data-science" rel="alternate" type="text/html" title="Interview Advice for Research Internships in Data Science" />
-      <published>2020-12-01T00:00:00-05:00</published>
-      <updated>2020-12-01T00:00:00-05:00</updated>
-      <id>/interview-advice-for-research-internships-in-data-science</id>
-      <content type="html" xml:base="/interview-advice-for-research-internships-in-data-science">&lt;p&gt;This is to my future self even though I don’t actually ever read my blog posts after having written them. It is a mostly complete and informal set of pointers that serve as advice based on a historical record of the nature of interviews I have experienced and mistakes that I have made in the past. The advice is largely for research-related roles so I don’t claim that it applies across the table (but it probably does, though).&lt;/p&gt;
-=======
       <link href="http://localhost:4000/interview-advice-for-research-internships-in-data-science" rel="alternate" type="text/html" title="Interview Advice for Research Internships in Data Science" />
       <published>2020-12-01T00:00:00-05:00</published>
       <updated>2020-12-01T00:00:00-05:00</updated>
       <id>http://localhost:4000/interview-advice-for-research-internships-in-data-science</id>
       <content type="html" xml:base="http://localhost:4000/interview-advice-for-research-internships-in-data-science">&lt;p&gt;This is to my future self even though I don’t actually ever read my blog posts after having written them. It is a mostly complete and informal set of pointers that serve as advice based on a historical record of the nature of interviews I have experienced and mistakes that I have made in the past. The advice is largely for research-related roles so I don’t claim that it applies across the table (but it probably does, though).&lt;/p&gt;
->>>>>>> 7fef279bf34ee4b6c1d2094d5711c93560e675e6
 
 &lt;h3 id=&quot;applying-for-internships-as-a-phd-student&quot;&gt;Applying for Internships as a Ph.D. student:&lt;/h3&gt;
 
@@ -375,19 +360,11 @@ network for multiclass classification. It helped that I had just worked on this 
   
     <entry>
       <title type="html">How to Write a Statement of Purpose for Grad School</title>
-<<<<<<< HEAD
-      <link href="/how-to-write-a-statement-of-purpose-for-grad-school" rel="alternate" type="text/html" title="How to Write a Statement of Purpose for Grad School" />
-      <published>2020-09-26T00:00:00-04:00</published>
-      <updated>2020-09-26T00:00:00-04:00</updated>
-      <id>/how-to-write-a-statement-of-purpose-for-grad-school</id>
-      <content type="html" xml:base="/how-to-write-a-statement-of-purpose-for-grad-school">&lt;h3 id=&quot;the-disclaimer&quot;&gt;The Disclaimer&lt;/h3&gt;
-=======
       <link href="http://localhost:4000/how-to-write-a-statement-of-purpose-for-grad-school" rel="alternate" type="text/html" title="How to Write a Statement of Purpose for Grad School" />
       <published>2020-09-26T00:00:00-04:00</published>
       <updated>2020-09-26T00:00:00-04:00</updated>
       <id>http://localhost:4000/how-to-write-a-statement-of-purpose-for-grad-school</id>
       <content type="html" xml:base="http://localhost:4000/how-to-write-a-statement-of-purpose-for-grad-school">&lt;h3 id=&quot;the-disclaimer&quot;&gt;The Disclaimer&lt;/h3&gt;
->>>>>>> 7fef279bf34ee4b6c1d2094d5711c93560e675e6
 
 &lt;p&gt;&lt;em&gt;This comes first because people often tend to ignore this very relevant section.&lt;/em&gt;&lt;/p&gt;
 
@@ -598,19 +575,11 @@ The domain I would work in would likely be at the nexus of machine learning and 
   
     <entry>
       <title type="html">A Student’s Guide to Living Abroad II</title>
-<<<<<<< HEAD
-      <link href="/a-students-guide-to-living-abroad-II" rel="alternate" type="text/html" title="A Student’s Guide to Living Abroad II" />
-      <published>2019-03-18T00:00:00-04:00</published>
-      <updated>2019-03-18T00:00:00-04:00</updated>
-      <id>/a-students-guide-to-living-abroad-II</id>
-      <content type="html" xml:base="/a-students-guide-to-living-abroad-II">&lt;p&gt;This part is about the grind.&lt;/p&gt;
-=======
       <link href="http://localhost:4000/a-students-guide-to-living-abroad-II" rel="alternate" type="text/html" title="A Student’s Guide to Living Abroad II" />
       <published>2019-03-18T00:00:00-04:00</published>
       <updated>2019-03-18T00:00:00-04:00</updated>
       <id>http://localhost:4000/a-students-guide-to-living-abroad-II</id>
       <content type="html" xml:base="http://localhost:4000/a-students-guide-to-living-abroad-II">&lt;p&gt;This part is about the grind.&lt;/p&gt;
->>>>>>> 7fef279bf34ee4b6c1d2094d5711c93560e675e6
 
 &lt;p&gt;&lt;em&gt;This is the last post in a 2-part series. While the &lt;a href=&quot;/2018-07-10-a-students-guide-to-living-abroad-I&quot;&gt;first part&lt;/a&gt; highlights the preparatory phase, this post focuses on how life is different from what I expected when I first went abroad; it highlights the ups and downs based on a set of anecdotes and experiences.&lt;/em&gt;&lt;/p&gt;
 
@@ -782,19 +751,11 @@ essentially, freedom from the bucketload of socioeconomic constraints affiliated
   
     <entry>
       <title type="html">On Traveling without Wanderlust</title>
-<<<<<<< HEAD
-      <link href="/on-traveling-without-wanderlust" rel="alternate" type="text/html" title="On Traveling without Wanderlust" />
-      <published>2019-02-16T00:00:00-05:00</published>
-      <updated>2019-02-16T00:00:00-05:00</updated>
-      <id>/on-traveling-without-wanderlust</id>
-      <content type="html" xml:base="/on-traveling-without-wanderlust">&lt;p&gt;The definition of travel varies with what you want to get out of it. I write this post to highlight my perspective and learnings from a summer of traveling across a few countries.&lt;/p&gt;
-=======
       <link href="http://localhost:4000/on-traveling-without-wanderlust" rel="alternate" type="text/html" title="On Traveling without Wanderlust" />
       <published>2019-02-16T00:00:00-05:00</published>
       <updated>2019-02-16T00:00:00-05:00</updated>
       <id>http://localhost:4000/on-traveling-without-wanderlust</id>
       <content type="html" xml:base="http://localhost:4000/on-traveling-without-wanderlust">&lt;p&gt;The definition of travel varies with what you want to get out of it. I write this post to highlight my perspective and learnings from a summer of traveling across a few countries.&lt;/p&gt;
->>>>>>> 7fef279bf34ee4b6c1d2094d5711c93560e675e6
 
 &lt;p&gt;I haven’t traveled a lot by conventional standards - I do not (cannot) claim to represent the broad generality of travel in my views. But I did take a whirlwind tour of summer schools and conferences across London, Madrid, and South Africa across a month that gave me reasonable insight into the world of travel.&lt;/p&gt;
 
@@ -884,19 +845,11 @@ essentially, freedom from the bucketload of socioeconomic constraints affiliated
   
     <entry>
       <title type="html">Machine Learning Summer Schools</title>
-<<<<<<< HEAD
-      <link href="/machine-learning-summer-schools" rel="alternate" type="text/html" title="Machine Learning Summer Schools" />
-      <published>2018-10-16T00:00:00-04:00</published>
-      <updated>2018-10-16T00:00:00-04:00</updated>
-      <id>/machine-learning-summer-schools</id>
-      <content type="html" xml:base="/machine-learning-summer-schools">&lt;p&gt;&lt;em&gt;This post is the first in a series of posts highlighting my attempt(s) to prepare myself to undertake research and for graduate school. It will include a year in review, learnings from working at CERN, and some technical posts about the kind of work I do.&lt;/em&gt;&lt;/p&gt;
-=======
       <link href="http://localhost:4000/machine-learning-summer-schools" rel="alternate" type="text/html" title="Machine Learning Summer Schools" />
       <published>2018-10-16T00:00:00-04:00</published>
       <updated>2018-10-16T00:00:00-04:00</updated>
       <id>http://localhost:4000/machine-learning-summer-schools</id>
       <content type="html" xml:base="http://localhost:4000/machine-learning-summer-schools">&lt;p&gt;&lt;em&gt;This post is the first in a series of posts highlighting my attempt(s) to prepare myself to undertake research and for graduate school. It will include a year in review, learnings from working at CERN, and some technical posts about the kind of work I do.&lt;/em&gt;&lt;/p&gt;
->>>>>>> 7fef279bf34ee4b6c1d2094d5711c93560e675e6
 
 &lt;h3 id=&quot;background&quot;&gt;Background&lt;/h3&gt;
 
@@ -1007,19 +960,11 @@ essentially, freedom from the bucketload of socioeconomic constraints affiliated
   
     <entry>
       <title type="html">How to be a Real Computer Science Major</title>
-<<<<<<< HEAD
-      <link href="/how-to-be-a-real-computer-science-major" rel="alternate" type="text/html" title="How to be a Real Computer Science Major" />
-      <published>2018-10-16T00:00:00-04:00</published>
-      <updated>2018-10-16T00:00:00-04:00</updated>
-      <id>/how-to-be-a-real-computer-science-major</id>
-      <content type="html" xml:base="/how-to-be-a-real-computer-science-major">&lt;p&gt;This post focuses on how to modify/hack your terminal with different plugins such that you can make Homer Simpson spout meaningful software engineering quotes on launching it.&lt;/p&gt;
-=======
       <link href="http://localhost:4000/how-to-be-a-real-computer-science-major" rel="alternate" type="text/html" title="How to be a Real Computer Science Major" />
       <published>2018-10-16T00:00:00-04:00</published>
       <updated>2018-10-16T00:00:00-04:00</updated>
       <id>http://localhost:4000/how-to-be-a-real-computer-science-major</id>
       <content type="html" xml:base="http://localhost:4000/how-to-be-a-real-computer-science-major">&lt;p&gt;This post focuses on how to modify/hack your terminal with different plugins such that you can make Homer Simpson spout meaningful software engineering quotes on launching it.&lt;/p&gt;
->>>>>>> 7fef279bf34ee4b6c1d2094d5711c93560e675e6
 
 &lt;p&gt;&lt;em&gt;Note: This post contains a healthy dose of sarcasm.&lt;/em&gt;&lt;/p&gt;
 
@@ -1233,19 +1178,11 @@ Reference: &lt;a href=&quot;https://superuser.com/questions/132029/how-do-you-re
   
     <entry>
       <title type="html">A Student’s Guide to Living Abroad I</title>
-<<<<<<< HEAD
-      <link href="/a-students-guide-to-living-abroad-I" rel="alternate" type="text/html" title="A Student’s Guide to Living Abroad I" />
-      <published>2018-07-10T00:00:00-04:00</published>
-      <updated>2018-07-10T00:00:00-04:00</updated>
-      <id>/a-students-guide-to-living-abroad-I</id>
-      <content type="html" xml:base="/a-students-guide-to-living-abroad-I">&lt;p&gt;&lt;em&gt;This is the first of a &lt;a href=&quot;/2018-12-21-a-students-guide-to-living-abroad-II&quot;&gt;2-part series&lt;/a&gt;. While this one is focused on making preparations for the travel, the next one will (hopefully) provide deeper insight into how life works and what to expect from the outside world based on my experience so far.&lt;/em&gt;&lt;/p&gt;
-=======
       <link href="http://localhost:4000/a-students-guide-to-living-abroad-I" rel="alternate" type="text/html" title="A Student’s Guide to Living Abroad I" />
       <published>2018-07-10T00:00:00-04:00</published>
       <updated>2018-07-10T00:00:00-04:00</updated>
       <id>http://localhost:4000/a-students-guide-to-living-abroad-I</id>
       <content type="html" xml:base="http://localhost:4000/a-students-guide-to-living-abroad-I">&lt;p&gt;&lt;em&gt;This is the first of a &lt;a href=&quot;/2018-12-21-a-students-guide-to-living-abroad-II&quot;&gt;2-part series&lt;/a&gt;. While this one is focused on making preparations for the travel, the next one will (hopefully) provide deeper insight into how life works and what to expect from the outside world based on my experience so far.&lt;/em&gt;&lt;/p&gt;
->>>>>>> 7fef279bf34ee4b6c1d2094d5711c93560e675e6
 
 &lt;p&gt;Last summer, I told my mom that I’d be traveling to live in a new country: in this case, France.&lt;/p&gt;
 
@@ -1570,19 +1507,11 @@ The Backup Plan&lt;/p&gt;
   
     <entry>
       <title type="html">CERN Openlab Summer Student Program</title>
-<<<<<<< HEAD
-      <link href="/cern-openlab-internship" rel="alternate" type="text/html" title="CERN Openlab Summer Student Program" />
-      <published>2017-04-07T00:00:00-04:00</published>
-      <updated>2017-04-07T00:00:00-04:00</updated>
-      <id>/cern-openlab-internship</id>
-      <content type="html" xml:base="/cern-openlab-internship">&lt;p&gt;This post is about my internship within the CERN Openlab Program in 2017 and includes a questionnaire (hopefully) useful for students applying to the program.&lt;/p&gt;
-=======
       <link href="http://localhost:4000/cern-openlab-internship" rel="alternate" type="text/html" title="CERN Openlab Summer Student Program" />
       <published>2017-04-07T00:00:00-04:00</published>
       <updated>2017-04-07T00:00:00-04:00</updated>
       <id>http://localhost:4000/cern-openlab-internship</id>
       <content type="html" xml:base="http://localhost:4000/cern-openlab-internship">&lt;p&gt;This post is about my internship within the CERN Openlab Program in 2017 and includes a questionnaire (hopefully) useful for students applying to the program.&lt;/p&gt;
->>>>>>> 7fef279bf34ee4b6c1d2094d5711c93560e675e6
 
 &lt;p&gt;&lt;em&gt;Disclaimer: The views represented here are solely my own, and do not reflect those of my employer.&lt;/em&gt;&lt;/p&gt;
 
@@ -1787,19 +1716,11 @@ The Backup Plan&lt;/p&gt;
   
     <entry>
       <title type="html">Coursework to Complete</title>
-<<<<<<< HEAD
-      <link href="/coursework-to-complete" rel="alternate" type="text/html" title="Coursework to Complete" />
-      <published>2017-03-24T00:00:00-04:00</published>
-      <updated>2017-03-24T00:00:00-04:00</updated>
-      <id>/coursework-to-complete</id>
-      <content type="html" xml:base="/coursework-to-complete">&lt;h2 id=&quot;an-exhaustive-list-of-course-lectures&quot;&gt;An Exhaustive List of Course Lectures&lt;/h2&gt;
-=======
       <link href="http://localhost:4000/coursework-to-complete" rel="alternate" type="text/html" title="Coursework to Complete" />
       <published>2017-03-24T00:00:00-04:00</published>
       <updated>2017-03-24T00:00:00-04:00</updated>
       <id>http://localhost:4000/coursework-to-complete</id>
       <content type="html" xml:base="http://localhost:4000/coursework-to-complete">&lt;h2 id=&quot;an-exhaustive-list-of-course-lectures&quot;&gt;An Exhaustive List of Course Lectures&lt;/h2&gt;
->>>>>>> 7fef279bf34ee4b6c1d2094d5711c93560e675e6
 
 &lt;p&gt;This post comprises of a list of lectures that I intend to watch at some point in order to mainly just learn more about these domains. They seem like some interesting areas to explore and some are just plain fun!&lt;/p&gt;
 
@@ -1883,72 +1804,4 @@ CAP5415 - &lt;strong&gt;Computer Vision&lt;/strong&gt; [UG]  &lt;br /&gt;&lt;/p&
       
     </entry>
   
-<<<<<<< HEAD
-    <entry>
-      <title type="html">The Blog</title>
-      <link href="/the-blog" rel="alternate" type="text/html" title="The Blog" />
-      <published>2017-03-21T00:00:00-04:00</published>
-      <updated>2017-03-21T00:00:00-04:00</updated>
-      <id>/the-blog</id>
-      <content type="html" xml:base="/the-blog">&lt;h3 id=&quot;why-blog&quot;&gt;Why Blog?&lt;/h3&gt;
-
-&lt;p&gt;I like to look back on the things that I do and writing comes easily to me - it just seems like the logical thing to do. Frankly, I’m surprised it took me so long to actually (finally) build a decent-ish blog.&lt;/p&gt;
-
-&lt;p&gt;In a line, it helps get things off my mind in a quick, efficient, indexable manner. Writing often serves as a great tool for introspection, I find.&lt;/p&gt;
-
-&lt;p&gt;I finally got around to putting this together after a 5-year journey spanning Wordpress, Blogger, Medium, and plain ol’ &lt;code class=&quot;highlighter-rouge&quot;&gt;.txt&lt;/code&gt; drafts of posts that are now likely to see the light of day.&lt;/p&gt;
-
-&lt;h3 id=&quot;on-the-motivation-to-blog&quot;&gt;On The Motivation to Blog&lt;/h3&gt;
-
-&lt;p&gt;As an undergraduate student, I had a lot of questions to ask people about a variety of things related to academia, research, internships, and even good ol’ survival. Getting through engineering with a decent GPA, decent experience, and decent skillset is a surprisingly non-trivial task. I could go on for hours about how it is a poorly designed system (with exceptions, obviously) and - as I later learnt - how it isn’t just India that faces these issues. My friends in Germany, the USA, and a few other places face similar issues as well. I got lucky in finding a set of mentors who were more experienced than me and could guide me well. Experience, here, simply means they made the mistakes I would probably end up making and could thus provide enough perspective to prevent me from making &lt;em&gt;their&lt;/em&gt; mistake. I still did make other mistakes but thankfully none were fatal to my career (or life, for that matter).&lt;/p&gt;
-
-&lt;p&gt;I solicited advice from a variety of sources ranging from undergraduates to professors, and from accountants to nuclear physicists. Over time, I learnt how to really use that advice (getting advice and acting on it are entirely disparate skills, as I later realized). The usefulness of a ‘fresh’ perspective is seriously undervalued. I would say this is the real reason diversity is important (especially in tech); on occasion it took barely five seconds before my colleague or advisor asked me a simple question that completely stumped me - why hadn’t I thought of that?! Well, it’s simply because of biases. We are taught (based on culture, demographics, or simply the environment we are used to) to look at things a certain way and eventually, just as the Russian scientist Ivan Pavlov demonstrated in his experiment with a dog, we get attuned to looking at them the same way and it is difficult to break out of it. We might not find it as easy to find bugs in our manner of thinking as easily as someone who is attuned to a different nature of thinking is used to. It goes both ways, obviously.&lt;/p&gt;
-
-&lt;p&gt;I get called up by a lot of my peers and juniors to ask for my advice or simply thoughts on a certain set of subjects currently revolving around starting life abroad, doing reasonably well at academics, surviving engineering, undergraduate studies, finding internships, jobs, conducting research, exploring computer science - in particular machine learning - and on a few occasions even cooking. I offer everyone the same disclaimer - I know nothing about most of these things, but I can try to ask you some questions that might help you find your own answers. Most of the time, it is a repetition of the same thoughts and ideas; a regurgitation of the same adages I have been offered by my mentors, and (I would presume) the inheritance of such ideas continues ad infinitum. At some point, writing them down should break the loop and motivate a new set of questions to arise. I believe new questions are necessary and will eventually come about regardless of whether someone writes the answers down. In my case, penning thoughts is a simple means to avoid a repetitive regurgitation of ideals pertaining to education; answering the same old queries about moving to a new country or finding a new job. Most importantly, though, it allows me to reflect and re-look at some pretty fucking stupid opinions I held in the (more recent than I would care to admit) past. I say ‘fucking stupid’ because I realized they were a result of my own biases, but fortunately I have been lucky to surround myself with smarter people who break those down and point me to my flaws painfully often.&lt;/p&gt;
-
-&lt;p&gt;Having said that, I have faced a truckload of issues most Indian engineering undergrads battle at some point and while my solutions might not work ‘off-the-shelf’ for everyone, my approach might just help some others out. I’ve been told more than a few people like reading what I write so it’s not a complete waste of my time. That’s more than I could ask for. Thanks for reading!&lt;/p&gt;
-
-&lt;h3 id=&quot;title&quot;&gt;Title&lt;/h3&gt;
-
-&lt;p&gt;I am still thinking of a better title for this blog but in the meanwhile I think I’m just going to leave it as &lt;code class=&quot;highlighter-rouge&quot;&gt;The Blog&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;technical-details&quot;&gt;Technical Details&lt;/h3&gt;
-
-&lt;p&gt;The site is powered by &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; with the posts written in Markdown. 
-I’ve used a theme called &lt;a href=&quot;https://github.com/jekyller/jasper2&quot;&gt;Jasper2&lt;/a&gt; that’s based on the default theme for a publishing platform called &lt;a href=&quot;https://www.ghost.org&quot;&gt;Ghost&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Try it out, it’s pretty neat!&lt;/p&gt;
-
-&lt;h3 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h3&gt;
-
-&lt;p&gt;Word of advice to the readers - my opinions are thoughtful, but loosely held (I swear this is not motivated by the &lt;a href=&quot;https://fs.blog/principles/&quot;&gt;Farnam Street Principles&lt;/a&gt;); I arrived at that conclusion myself, albeit used their title for it because it made sense. When I furnish my opinions on a subject that is all I offer it as - I do not see it as a permanent and unchanging stance for the simple reason that I do not believe I know everything about anything. Happy reading!&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Swapneel Mehta</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="getting-started" />
-      
-
-      
-        <summary type="html">Why Blog?</summary>
-      
-
-      
-      
-    </entry>
-  
-=======
->>>>>>> 7fef279bf34ee4b6c1d2094d5711c93560e675e6
 </feed>

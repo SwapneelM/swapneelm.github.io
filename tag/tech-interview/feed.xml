@@ -2,17 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-<<<<<<< HEAD
-  <link href="/tag/tech-interview/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-10-25T14:04:05-04:00</updated>
-  <id>/tag/tech-interview/feed.xml</id>
-=======
   <link href="http://localhost:4000/tag/tech-interview/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T01:04:23-04:00</updated>
+  <updated>2022-11-14T15:37:33-05:00</updated>
   <id>http://localhost:4000/tag/tech-interview/feed.xml</id>
->>>>>>> 7fef279bf34ee4b6c1d2094d5711c93560e675e6
 
   
   
@@ -40,19 +33,11 @@
   
     <entry>
       <title type="html">Interview Advice for Research Internships in Data Science</title>
-<<<<<<< HEAD
-      <link href="/interview-advice-for-research-internships-in-data-science" rel="alternate" type="text/html" title="Interview Advice for Research Internships in Data Science" />
-      <published>2020-12-01T00:00:00-05:00</published>
-      <updated>2020-12-01T00:00:00-05:00</updated>
-      <id>/interview-advice-for-research-internships-in-data-science</id>
-      <content type="html" xml:base="/interview-advice-for-research-internships-in-data-science">&lt;p&gt;This is to my future self even though I don’t actually ever read my blog posts after having written them. It is a mostly complete and informal set of pointers that serve as advice based on a historical record of the nature of interviews I have experienced and mistakes that I have made in the past. The advice is largely for research-related roles so I don’t claim that it applies across the table (but it probably does, though).&lt;/p&gt;
-=======
       <link href="http://localhost:4000/interview-advice-for-research-internships-in-data-science" rel="alternate" type="text/html" title="Interview Advice for Research Internships in Data Science" />
       <published>2020-12-01T00:00:00-05:00</published>
       <updated>2020-12-01T00:00:00-05:00</updated>
       <id>http://localhost:4000/interview-advice-for-research-internships-in-data-science</id>
       <content type="html" xml:base="http://localhost:4000/interview-advice-for-research-internships-in-data-science">&lt;p&gt;This is to my future self even though I don’t actually ever read my blog posts after having written them. It is a mostly complete and informal set of pointers that serve as advice based on a historical record of the nature of interviews I have experienced and mistakes that I have made in the past. The advice is largely for research-related roles so I don’t claim that it applies across the table (but it probably does, though).&lt;/p&gt;
->>>>>>> 7fef279bf34ee4b6c1d2094d5711c93560e675e6
 
 &lt;h3 id=&quot;applying-for-internships-as-a-phd-student&quot;&gt;Applying for Internships as a Ph.D. student:&lt;/h3&gt;
 
