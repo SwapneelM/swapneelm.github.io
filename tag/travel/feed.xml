@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
-  <link href="/tag/travel/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-12-16T01:27:12-05:00</updated>
-  <id>/tag/travel/feed.xml</id>
+  <link href="http://localhost:4000/tag/travel/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-12-22T08:57:56-05:00</updated>
+  <id>http://localhost:4000/tag/travel/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">On Traveling without Wanderlust</title>
-      <link href="/on-traveling-without-wanderlust" rel="alternate" type="text/html" title="On Traveling without Wanderlust" />
+      <link href="http://localhost:4000/on-traveling-without-wanderlust" rel="alternate" type="text/html" title="On Traveling without Wanderlust" />
       <published>2019-02-16T00:00:00-05:00</published>
       <updated>2019-02-16T00:00:00-05:00</updated>
-      <id>/on-traveling-without-wanderlust</id>
-      <content type="html" xml:base="/on-traveling-without-wanderlust">&lt;p&gt;The definition of travel varies with what you want to get out of it. I write this post to highlight my perspective and learnings from a summer of traveling across a few countries.&lt;/p&gt;
+      <id>http://localhost:4000/on-traveling-without-wanderlust</id>
+      <content type="html" xml:base="http://localhost:4000/on-traveling-without-wanderlust">&lt;p&gt;The definition of travel varies with what you want to get out of it. I write this post to highlight my perspective and learnings from a summer of traveling across a few countries.&lt;/p&gt;
 
 &lt;p&gt;I haven’t traveled a lot by conventional standards - I do not (cannot) claim to represent the broad generality of travel in my views. But I did take a whirlwind tour of summer schools and conferences across London, Madrid, and South Africa across a month that gave me reasonable insight into the world of travel.&lt;/p&gt;
 
