@@ -1,0 +1,32 @@
+life:
+  name: life
+  description: Some lessons learnt the hard way.
+  cover: assets/images/speeches.jpg
+tech:
+  name: tech
+  description: From the world of technplogy.
+  cover: False
+story:
+  name: story
+  description: A collection of random short stories.
+  cover: assets/images/fables.jpg
+getting-started:
+  name: getting-started
+  description: Introductory posts aimed at beginners.
+  cover: False
+engineering:
+  name: engineering
+  description: Stories and lessons from one engineer to others.
+  cover: False
+grad-school:
+  name: grad-school
+  description: Posts for those preparing to undertake graduate studies.
+  cover: False
+summer-school:
+  name: summer-school
+  description: Stories and lessons from summer schools.
+  cover: False
+internships:
+  name: internships
+  description: Experiences undertaking software-development and research internships.
+  cover: False

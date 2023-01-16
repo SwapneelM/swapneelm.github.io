@@ -1,0 +1,73 @@
+---
+layout: post
+current: post
+cover: assets/images/welcome.jpg
+navigation: True
+title: On Traveling without Wanderlust
+date: 2019-02-16
+tags: [travel]
+class: post-template
+subclass: 'post tag-travel'
+author: swapneel
+---
+
+The definition of travel varies with what you want to get out of it. I write this post to highlight my perspective and learnings from a summer of traveling across a few countries. 
+
+I haven't traveled a lot by conventional standards - I do not (cannot) claim to represent the broad generality of travel in my views. But I did take a whirlwind tour of summer schools and conferences across London, Madrid, and South Africa across a month that gave me reasonable insight into the world of travel.
+
+
+## What I Think of Travel
+
+>Craziness is what my mother called it; adventure is my preferred description for traveling the way I do.
+
+My view of travel has its nuances based on my expectations of what an ideal trip is, and as I said before, these expectations are bound to vary with people of different ages, cultures, professions, and backgrounds. Sure, having fun is top priority but I like to make travel about more than just 'fun'. For me, it's a process of distilling interesting parts of diverse cultures and peoples and using it to inform my perspective. I find that following this principle helps me have a far more lasting impression of a place than my Instagram handle does. 
+
+**Note:** I don't have anything against Instagram (or for that matter Facebook or Snapchat) - in fact I do have the occasional post to my own handle. It's just that I felt (at least in my social circles) people are overdoing it and not in a good way. Sharing happiness and momentous occasions are fine but we (especially the younger generations) start drawing a sense of fulfilment and validation from making our lives seem picture-perfect. In the longer run, this could have far-reaching psychological consequences which scares me away.
+
+In the past year, I have scoured the murky depths of price-comparison websites for last-minute deals, booked flights on seedy airlines, missed connections, been denied a Visa until hours before the flight, been dropped off to my hotel by kind strangers, and been mugged (without loss of any valuables; sucks for the robbers). I've learnt a few lessons about travel that I hope to share in this post.
+
+
+## Lesson 1: Break the Ice
+
+>Everyone has a story to tell but most people don't bother trying because they lack good listeners.
+
+I like stories. I always have. From Disney's Golden Book Collection of the classics to Roald Dahl and Ruskin Bond, I am fascinated by the occasional novella. This quirk morphed into my proclivity for people's life stories, and travel, I quickly found, was a wonderful opportunity to do this. All I had to do was ask nicely and listen carefully!
+
+The conversations began quite formally but took surprisingly interesting turns. Following one of my flights, I found myself being dropped off to my Airbnb in Madrid by a kindly aviation official who said I reminded her of her son. We're now friends on Facebook and LinkedIn. On another, I chatted with a recruiter from an investment bank about opportunities to work with them. On a third, I found a Ph.D. student working on pretty cool Linguistics stuff and was offered advice on pursuing one. In retrospect, most of this happened simply because I broke the ice as opposed to putting on my headphones and switching on a movie in the flight. It also worked out because they didn't do the same right upon taking their seats. *But most importantly, it worked out because I tried.*
+
+
+## Lesson 2: Bring Yourself Joy
+
+>Don't run through the fields so fast that you can't stop and smell the flowers.
+
+Unless you're biking in the mountains, travel is meant to be relaxing (some would argue biking is more relaxing which I find fairly reasonable). Find what makes you happy and keep doing it. 
+
+If you like taking pictures, go the fuck ahead and take them. If you like eating a burger and fries at a French Restaurant, ignore the waiter's judgemental looks and order that damn cheeseburger! Stop worrying about what people say or think about you. I know it isn't as easily done, but when you're happy you will be surprised at how easy it is to let go.
+
+I *really* wanted to experience firsthand how summer schools work: from the structure and actual delivery of the lectures to things like organising outings, I think it is incredibly cool that machine learning schools are popping up across the globe offering us a firsthand experience of lectures from a diverse set of academics. So I clubbed travel with summer schools because I realized that satisfied my definition of 'traveling with a purpose' and brought me joy. In my understanding of travel, I preferred attending lectures by day with the evenings reserved for hanging out with participants hailing from all across the world discussing quirks in our cultures and traditions. I also received critical feedback on my poster about our work at CERN and a **ton** of advice on going about a Ph.D. that was quite useful as I set about applying to grad school. 
+
+We explored the cities, heading off in search of cafes and pubs that were known for their local fare. I didn't mind missing out on the most popular tourist spots as long as I could learn about a bit of the historical significance, find some cool cuisines, or simply enjoy the city and its architecture. It brought me joy and I didn't care what people thought of it *(I got comments along the lines of being a workaholic which I might agree with, but I had way more fun than I would care to admit so the tradeoff was quite worth it).*
+
+
+## Lesson 3: Adapt and Improvise
+
+>Things do not always go according to plan.
+
+Plans do go awry more often than you would imagine. Traveling is like trying to eat a piece of pie precariously balanced on the edge of a knife - it looks delicious but before you know it, it might tip over and splatter across your trousers (I have absolutely no idea why I used that analogy but belated Happy Pi Day, everybody!). For instance, being a vegetarian, you are almost certain to have to compromise on available food options, and trying to travel cheap almost always ends in discomfort. On one occasion at Oxford, I was stranded about three miles out from my hostel in the middle of the night while it rained and the streetlamps blew out all because I wanted to see a pretty sunset and lost my way to the river. Another time in Madrid, we missed the bus meant to transport us to Segovia and instead took a train and raced it down to the destination (turns out it was so much fun that it ended up being the best experience we had in all of the two weeks we spent in Madrid). I have been hiking while we ran out of water; freezing cold on top of a mountain in the rain; bathed with freezing cold water in the chilly winters for over a week. I never complained frankly because I didn't see the point - it would have solved nothing anyway. The only solution was to adapt and move on.
+
+These are just a small subset of reasons that force you to adjust in terms of comfort and familiarity or force you to think on your feet and come up with viable solutions to address the situation. Improvisation can be the best and worst parts of travel depending on what you choose to make of it!
+
+
+## Lesson 4: Stay Vigilant
+
+>Don't die. That's about it.
+
+This is the part where a lot of us take things for granted and end up in bad situations. I am careless, I will admit that. I do not keep track of my belongings and on occasion, I end up paying a heavy price for it. For instance, I ended up overpacking my bags on a few occasions and whilst removing some belongings at the very last gate right before boarding, I dropped my wallet at London Heathrow, realizing this right after the flight took off. I was *extremely* lucky to get it back with cash and cards intact, but things could have gone very wrong had I kept my Swiss Card in that wallet.
+
+I will not shed more light on this via anecdotes but suffice it to say I have seen my fair share of unsafe experiences mainly on account of my own stupidity. Don't be like me. Be smarter. Thanks.
+
+
+With that, we come to the end of this brief article and my learnings from a summer of travel. I do hope to travel a bit more over the next few years so I expect to update this with more lessons and interesting anecdotes soon!
+
+
+
