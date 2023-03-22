@@ -1,607 +1,437 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
 
-    <!-- Document Settings -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <!-- Base Meta -->
-    <!-- dynamically fixing the title for tag/author pages -->
-
-
-
-    <title>Swapneel Mehta</title>
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Styles'n'Scripts -->
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
-    <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <style>.hljs { background: none; }</style>
-
-    <!--[if IE]>
-        <style>
-            p, ol, ul{
-                width: 100%;
-            }
-            blockquote{
-                width: 100%;
-            }
-        </style>
-    <![endif]-->
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
     
-    <!-- This tag outputs SEO meta+structured data and other important settings -->
-    <meta name="description" content="Swapneel's Blog" />
-    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/" />
-    <meta name="referrer" content="no-referrer-when-downgrade" />
 
-     <!--title below is coming from _includes/dynamic_title-->
-    <meta property="og:site_name" content="Swapneel Mehta" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Swapneel Mehta" />
-    <meta property="og:description" content="Swapneel's Blog" />
-    <meta property="og:url" content="http://localhost:4000/" />
-    <meta property="og:image" content="http://localhost:4000/assets/images/fb-cover-swapneel.jpg" />
-    <meta property="article:publisher" content="https://www.facebook.com/swapneelm" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Swapneel Mehta" />
-    <meta name="twitter:description" content="Swapneel's Blog" />
-    <meta name="twitter:url" content="http://localhost:4000/" />
-    <meta name="twitter:image" content="http://localhost:4000/assets/images/fb-cover-swapneel.jpg" />
-    <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="Swapneel Mehta" />
-    <meta name="twitter:site" content="@swapneel_mehta" />
-    <meta name="twitter:creator" content="@swapneel_mehta" />
-    <meta property="og:image:width" content="2000" />
-    <meta property="og:image:height" content="666" />
-
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Website",
-    "publisher": {
-        "@type": "Organization",
-        "name": "Swapneel Mehta",
-        "logo": "http://localhost:4000/assets/images/blog-icon.png"
-    },
-    "url": "http://localhost:4000/",
-    "image": {
-        "@type": "ImageObject",
-        "url": "http://localhost:4000/assets/images/fb-cover-swapneel.jpg",
-        "width": 2000,
-        "height": 666
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "http://localhost:4000/"
-    },
-    "description": "Swapneel's Blog"
-}
-    </script>
-
-    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
-    <script type="text/javascript">
-    ghost.init({
-    	clientId: "ghost-frontend",
-    	clientSecret: "f84a07a72b17"
-    });
-    </script> -->
-
-    <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Swapneel Mehta" href="/feed.xml" />
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mehtaverse</title>
+    <meta name="author" content="Swapneel S. Mehta">
+    <meta name="description" content="Swapneel Mehta, Data Science Ph.D. Candidate researching online disinformation. 
+">
+    <meta name="keywords" content="swapneel, mehta, phd, grad-school, academic-website, portfolio-website">
 
 
-</head>
-<body class="home-template">
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
 
-    <div class="site-wrapper">
-        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-        <!-- < default -->
-<!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template -->
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
 
-<!-- The big featured header, it uses blog cover image as a BG if available -->
-<header class="site-header outer " style="background-image:  url(/assets/images/fb-cover-swapneel.jpg) ">
-    <div class="inner">
-        <div class="site-header-content">
-            <h1 class="site-title">
-                
-                    <img class="site-logo" src="/assets/images/blog-icon.png" alt="Swapneel Mehta"/>
-                
-            </h1>
-            <h2 class="site-description">Swapneel's Blog</h2>
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/">
+    
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item active">
+                <a class="nav-link" href="/">about<span class="sr-only">(current)</span></a>
+              </li>
+              
+              <!-- Blog -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/blog/">blog</a>
+              </li>
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/publications/">publications</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/projects/">projects</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/code/">code</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/cv/">cv</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/events/">events</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
-        <nav class="site-nav">
-    <div class="site-nav-left">
-        
-        
-            <ul class="nav" role="menu">
-    <li class="nav-home" role="menuitem"><a href="/publications/">Publications</a></li>
-    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
-    <li class="nav-about" role="menuitem"><a href="https://unicode-research.netlify.app/people">Students</a></li>
-    <li class="nav-about" role="menuitem"><a href="/cv/cv.pdf">CV</a></li>
-    <li class="nav-home" role="menuitem"><a href="/oldtalks/">Old Talks</a></li>
-    <li class="nav-about" role="menuitem"><a href="/art/">Art</a></li>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      <!-- about.html -->
+      <div class="post">
+        <header class="post-header">
+          <h1 class="post-title">
+           Mehtaverse
+          </h1>
+          <p class="desc">by Swapneel</p>
+        </header>
+
+        <article>
+          <div class="profile float-right">
+
+              <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/swapneel_headshot-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/swapneel_headshot-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/swapneel_headshot-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/swapneel_headshot.jpg" class="img-fluid z-depth-1 rounded" width="auto" height="auto" alt="swapneel_headshot.jpg" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+            <div class="address">
+              <p>Swapneel Mehta</p> <p>Ph.D. Candidate</p> <p>NYU Center for Data Science</p> <p>New York, USA</p>
+
+            </div>
+          </div>
+
+          <div class="clearfix">
+            <h2 id="bio">Bio</h2>
+
+<p>I am a Ph.D. candidate at NYU Data Science and founder at <a href="https://simppl.org" rel="external nofollow noopener" target="_blank">SimPPL</a>, primarily at <a href="https://csmapnyu.org/" rel="external nofollow noopener" target="_blank">CSMAP</a>, collaborating with folks at <a href="https://www.torrvision.com" rel="external nofollow noopener" target="_blank">Oxford TVG</a> and the <a href="https://integrityinstitute.org" rel="external nofollow noopener" target="_blank">Integrity Institute</a>. My research deals with limiting disinformation on social networks using tools from machine learning and causal inference:</p>
+
+<ol>
+  <li>Estimating the Causal Effects of Policy Interventions</li>
+  <li>Auditing the Impact of Content Recommendation Algorithms</li>
+  <li>Building Civic Integrity Tools for Practitioners and Policymakers</li>
+</ol>
+
+<p>I’ve interned with Twitter Civic Integrity, Adobe Research, and worked on machine learning for particle physics at CERN.</p>
+
+<p>I founded <a href="https://simppl.org" rel="external nofollow noopener" target="_blank">SimPPL</a> (read: ‘sim people’) as a collective that builds better civic integrity tools such as <a href="https://parrot.report" rel="external nofollow noopener" target="_blank">Parrot Report</a>. We’ve worked with The Sunday Times, Ippen Media, Deutsche Welle, the Yale Daily News, the Vermont Digger, and others on:</p>
+<ol>
+  <li>Supporting newsrooms to better understand their audiences on social networks.</li>
+  <li>Study the spread of unreliable news and identify influence operations online.</li>
+</ol>
+
+<p>SimPPL has received support from the Wikimedia Foundation, Google, AWS, the <a href="https://www.nycmedialab.org/ai-local-news-blog-update/nyc-media-lab-announces-inaugural-cohort-of-ai-amp-local-news-challenge" rel="external nofollow noopener" target="_blank">NYC Media Lab</a>, and the NYU Tech Venture Workshop. It is materially supported by the <a href="https://onefact.org" rel="external nofollow noopener" target="_blank">One Fact Foundation</a> and the <a href="https://ai4abm.org" rel="external nofollow noopener" target="_blank">AI4ABM Foundation</a> at Oxford.</p>
+
+<p>I mentor students and conduct collaborative research with <a href="https://unicode-research.netlify.app/people" rel="external nofollow noopener" target="_blank">Unicode Research</a>. This team was born out of the parent org. I co-founded in 2017 to teach open-source development to undergrads, called <a href="https://djunicode.in" rel="external nofollow noopener" target="_blank">DJ Unicode</a>.</p>
+
+<h3 id="2023">2023</h3>
+
+<ul>
+  <li>Accepted into the <a href="https://integrityinstitute.org" rel="external nofollow noopener" target="_blank">Integrity Institute</a>.</li>
+  <li>Received a <a href="https://cloud.google.com/edu/researchers/innovators" rel="external nofollow noopener" target="_blank">Google Research Innovator Award</a>.</li>
+  <li>Received <a href="https://meta.m.wikimedia.org/wiki/WikiCred/2022_CFP/Audit_the_Impact_of_Credibility_in_Online_Information_Ecosystems" rel="external nofollow noopener" target="_blank">WikiCred</a> (Wikimedia) funding for expanding <a href="https://parrot.report" rel="external nofollow noopener" target="_blank">Parrot Report</a> with a featured blog post up <a href="https://misinfocon.com/project-korikath-bringing-wikimedia-commons-closer-to-daily-life-80ad93bf0f32?source=publication_recirc-----5ba39af5789c----4----------------------------" rel="external nofollow noopener" target="_blank">here</a>
+</li>
+  <li>Hosting multiple talks, workshops for Deutsche Welle Akademie staff and partners (<a href="/projects/journalism_ai">read more</a>)</li>
 </ul>
 
-        
-    </div>
-    <div class="site-nav-right">
-        <div class="social-links">
+<h3 id="2022">2022</h3>
+
+<ul>
+  <li>Our workshop on <a href="https://ai4abm.org/workshop_icml2022/" rel="external nofollow noopener" target="_blank">AI for Agent-based Models</a> accepted at ICLR 2023!</li>
+  <li>Training undergrads from multilingual countries like India to conduct social network analysis via <a href="https://github.com/SimPPL/SocialMediaAnalysis" rel="external nofollow noopener" target="_blank">Unicode Research Seminars</a>
+</li>
+  <li>Co-organizing the NeurIPS 2022 <a href="https://sites.google.com/view/broadening-collaboration-in-ml/home?authuser=0&amp;pli=1" rel="external nofollow noopener" target="_blank">Workshop on Broadening Research Collaborations in ML</a>.</li>
+  <li>Accepted a position on the Board of Studies at my alma mater, D.J. Sanghvi College of Engineering!</li>
+  <li>Invited to present my research on ‘Tools to Limit Disinformation on Social Networks’ at:
+    <ul>
+      <li><a href="https://mit.zoom.us/rec/play/HUx3w0qbrk0GabWNnjD34p74v8ZUqz4qQoWNoMM5eUU5VBcaIAxfWbTDpn0mdKCK2SHnodkIIpSQ6ytG.3Ej_O2g_ZMVV1F0D?continueMode=true&amp;_x_zm_rtaid=VpEYPUCiQcShqnS1qWpWVQ.1663645177551.d8d0bd48a4f8984379b5d086da83363a&amp;_x_zm_rhtaid=557" rel="external nofollow noopener" target="_blank">MIT Media Lab</a></li>
+      <li><a href="https://defcon.misinfocon.com" rel="external nofollow noopener" target="_blank">Misinfo. Village @ DEFCON 2022</a></li>
+      <li><a href="https://truthandtrustonline.com/pre-conference-workshops/" rel="external nofollow noopener" target="_blank">Truth and Trust Online</a></li>
+      <li><a href="https://graphika.com" rel="external nofollow noopener" target="_blank">Graphika</a></li>
+    </ul>
+  </li>
+  <li>Presented <a href="/assets/pdf/slides/nyu_ds_lunch_seminar.pdf">this work</a> on studying the causal effects of Twitter’s interventions on Donald Trump’s tweets at the first <strong><a href="https://cyber.fsi.stanford.edu/io/news/trust-safety-research-conference" rel="external nofollow noopener" target="_blank">Stanford Trust and Safety Research Conference</a></strong>.</li>
+  <li>
+<a href="/assets/pdf/papers/ai4abm_updated.pdf">This paper</a> with Oxford and CSMAP studying the effects of influence operations on content ranking and recommendations accepted for an Oral <strong>(top 3/26 papers)</strong> at the <a href="https://ai4abm.org/workshop_icml2022/" rel="external nofollow noopener" target="_blank">AI for Agent-based Models</a> Workshop at ICML 2022.</li>
+  <li>Interning at <strong>Twitter’s Civic Integrity team</strong> working on the early detection of misinformation in tweets.</li>
+</ul>
+
+<h3 id="2021">2021</h3>
+
+<ul>
+  <li>SimPPL selected for <a href="https://www.nycmedialab.org/ai-local-news-blog-update/nyc-media-lab-announces-inaugural-cohort-of-ai-amp-local-news-challenge" rel="external nofollow noopener" target="_blank">NYC Media Lab’s AI and Local News Challenge</a>!</li>
+  <li>Early work on SimPPL: Simulating Social Network Interventions with Probabilistic Programs was invited for a presentation to:
+    <ul>
+      <li>Twitter’s Cortex Org.</li>
+      <li>Facebook’s Probability Org.</li>
+    </ul>
+  </li>
+  <li>I received an offer to be a Data Scientist Intern with Microsoft’s Azure ML Team</li>
+  <li>
+<a href="https://arxiv.org/abs/2203.02860" rel="external nofollow noopener" target="_blank">Compartmental Models for COVID-19 and Control via Policy Interventions</a> accepted at PROBPROG 2021, MIT.</li>
+  <li>
+<a href="https://ieeexplore.ieee.org/document/9666058" rel="external nofollow noopener" target="_blank">“Open Domain Trending Hashtag Recommendation for Videos”</a> with Adobe Research was accepted at the International Symposium for Multimedia, 2021.</li>
+</ul>
+
+<h3 id="2019---2020">2019 - 2020</h3>
+
+<ul>
+  <li>I’m a Data Science Research Intern at Adobe Research from May - Dec 2020 at the BEL Lab.</li>
+  <li>I’m grateful to have received the IRIS-HEP Fellowship, 2019</li>
+  <li>I launched <a href="https://unicode-research.netlify.app/people" rel="external nofollow noopener" target="_blank">Unicode Research</a>
+</li>
+  <li>For published articles on technology look up my contributions to the <a href="https://opensourceforu.com/author/swapneel-mehta/" rel="external nofollow noopener" target="_blank">Open Source for You (OSFY) Magazine</a>
+</li>
+</ul>
+
+
+          </div>
+
+          <!-- News -->
+          <!-- <h2><a href="/news/" style="color: inherit;">news</a></h2>          
+          <div class="news">
+            <div class="table-responsive" style="max-height: 10vw">
+              <table class="table table-sm table-borderless">
+               
+                <tr>
+                  <th scope="row">Jan 1, 2023</th>
+                  <td>
+                    A simple inline announcement.
+ 
+                  </td>
+                </tr> 
+                <tr>
+                  <th scope="row">Nov 1, 2022</th>
+                  <td>
+                    <a class="news-title" href="/news/announcement_2/">A long announcement with details</a> 
+                  </td>
+                </tr> 
+                <tr>
+                  <th scope="row">Jun 1, 2021</th>
+                  <td>
+                    I received a generous grant from Google Research India to teach a (independent) 10-week <a href="https://djunicode.github.io/umlsc-2021/">Unicode ML Summer Course</a> in Summer 2021 to students from Tier II and Tier III universities in India. Much obliged to my TAs from Unicode Research for their hard work and commitment!
+
+<ul>
+  <li>We had a fantastic <a href="https://www.youtube.com/watch?v=Ff__8mj2oAI">Demo Day</a> showcasing student projects at the Unicode ML Summer Course!</li>
+</ul>
+ 
+                  </td>
+                </tr> 
+                <tr>
+                  <th scope="row">Jan 15, 2016</th>
+                  <td>
+                    A simple inline announcement with Markdown emoji! :sparkles: :smile:
+ 
+                  </td>
+                </tr> 
+              </table>
+            </div> 
+          </div>
+ -->
+
+          <!-- Selected papers -->
+          <h2><a href="/publications/" style="color: inherit;">selected publications</a></h2>
+          <div class="publications">
+            <ol class="bibliography"></ol>
+          </div>
+
+
+          <!-- Social -->
+            <div class="social">
+              <div class="contact-icons">
+                <a href="mailto:%73%77%61%70%6E%65%65%6C.%6D%65%68%74%61@%6E%79%75.%65%64%75" title="email"><i class="fas fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?user=CyjtCXkAAAAJ" title="Google Scholar" rel="external nofollow noopener" target="_blank"><i class="ai ai-google-scholar"></i></a>
+            <a href="https://github.com/swapneelm" title="GitHub" rel="external nofollow noopener" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/swapneelm" title="LinkedIn" rel="external nofollow noopener" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/swapneel_mehta" title="Twitter" rel="external nofollow noopener" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://youtube.com/@swapneel_mehta" title="YouTube" rel="external nofollow noopener" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="/feed.xml" title="RSS Feed"><i class="fas fa-rss-square"></i></a>
             
-                <a class="social-link social-link-fb" href="https://facebook.com/swapneelm" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
-</a>
-            
-            
-                <a class="social-link social-link-tw" href="https://twitter.com/swapneel_mehta" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
-</a>
-            
-        </div>
-        
-            <a class="subscribe-button" href="#subscribe">Subscribe</a>
-        
-    </div>
-</nav>
 
-    </div>
-</header>
+              </div>
 
-<!-- The main content area -->
-<main id="site-main" class="site-main outer" role="main">
-    <div class="inner">
+              <div class="contact-note">
+                You can even add a little note about which of these is the best way to reach you.
 
-        <div class="post-feed">
-            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
-            
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/how-to-ask-better-questions">
-                <div class="post-card-image" style="background-image: url(/assets/images/design.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/how-to-ask-better-questions">
-                <header class="post-card-header">
-                    
-                        
-                            
-                               <span class="post-card-tags">Guide</span>
-                            
-                        
-                            
-                                <span class="post-card-tags">Student</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">How to Ask Better Questions</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>How to Ask Better Questions I really like talking to students. It’s fun to see the excitement, enthusiasm, and intelligence that each successive generation has developed, especially since (IMO) each generation seems so</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/interview-advice-for-research-internships-in-data-science">
-                <div class="post-card-image" style="background-image: url(/assets/images/conference-room.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/interview-advice-for-research-internships-in-data-science">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Tech-interview</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Interview Advice for Research Internships in Data Science</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>This is to my future self even though I don’t actually ever read my blog posts after having written them. It is a mostly complete and informal set of pointers that serve as</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/how-to-write-a-statement-of-purpose-for-grad-school">
-                <div class="post-card-image" style="background-image: url(/assets/images/writing.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/how-to-write-a-statement-of-purpose-for-grad-school">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Grad-school</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">How to Write a Statement of Purpose for Grad School</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>The Disclaimer This comes first because people often tend to ignore this very relevant section. There is obviously no single way to achieve a successful outcome for your application to graduate school and</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/a-students-guide-to-living-abroad-II">
-                <div class="post-card-image" style="background-image: url(/assets/images/bus.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/a-students-guide-to-living-abroad-II">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Life</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">A Student’s Guide to Living Abroad II</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>This part is about the grind. This is the last post in a 2-part series. While the first part highlights the preparatory phase, this post focuses on how life is different from what</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/on-traveling-without-wanderlust">
-                <div class="post-card-image" style="background-image: url(/assets/images/welcome.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/on-traveling-without-wanderlust">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Travel</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">On Traveling without Wanderlust</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>The definition of travel varies with what you want to get out of it. I write this post to highlight my perspective and learnings from a summer of traveling across a few countries.</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/machine-learning-summer-schools">
-                <div class="post-card-image" style="background-image: url(/assets/images/advanced.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/machine-learning-summer-schools">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Summer-school</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Machine Learning Summer Schools</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>This post is the first in a series of posts highlighting my attempt(s) to prepare myself to undertake research and for graduate school. It will include a year in review, learnings from working</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/how-to-be-a-real-computer-science-major">
-                <div class="post-card-image" style="background-image: url(/assets/images/zsh-homer-simpson.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/how-to-be-a-real-computer-science-major">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Terminal</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">How to be a Real Computer Science Major</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>This post focuses on how to modify/hack your terminal with different plugins such that you can make Homer Simpson spout meaningful software engineering quotes on launching it. Note: This post contains a healthy</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/a-students-guide-to-living-abroad-I">
-                <div class="post-card-image" style="background-image: url(/assets/images/summit.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/a-students-guide-to-living-abroad-I">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Life</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">A Student’s Guide to Living Abroad I</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>This is the first of a 2-part series. While this one is focused on making preparations for the travel, the next one will (hopefully) provide deeper insight into how life works and what</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/cern-openlab-internship">
-                <div class="post-card-image" style="background-image: url(/assets/images/cern-openlab.jpeg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/cern-openlab-internship">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Internships</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">CERN Openlab Summer Student Program</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>This post is about my internship within the CERN Openlab Program in 2017 and includes a questionnaire (hopefully) useful for students applying to the program. Disclaimer: The views represented here are solely my</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/coursework-to-complete">
-                <div class="post-card-image" style="background-image: url(/assets/images/design.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/coursework-to-complete">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting-started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Coursework to Complete</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>An Exhaustive List of Course Lectures This post comprises of a list of lectures that I intend to watch at some point in order to mainly just learn more about these domains. They</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/the-blog">
-                <div class="post-card-image" style="background-image: url(/assets/images/bus.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/the-blog">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting-started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">The Blog</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>Why Blog? I like to look back on the things that I do and writing comes easily to me - it just seems like the logical thing to do. Frankly, I’m surprised it</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-
-        </div>
-
-    </div>
-</main>
-
-
-        <!-- Previous/next page links - displayed on every page -->
-        
-
-        <!-- The footer at the very bottom of the screen -->
-        <footer class="site-footer outer">
-            <div class="site-footer-content inner">
-                <section class="copyright"><a href="http://localhost:4000/">Swapneel Mehta</a> &copy; 2023</section>
-                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
-                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
-                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
-                <nav class="site-footer-nav">
-                    <a href="/">Latest Posts</a>
-                    <a href="https://facebook.com/swapneelm" target="_blank" rel="noopener">Facebook</a>
-                    <a href="https://twitter.com/swapneel_mehta" target="_blank" rel="noopener">Twitter</a>
-                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-                </nav>
+              </div>
+              
             </div>
-        </footer>
+        </article>
+
+</div>
 
     </div>
 
-    <!-- The big email subscribe modal content -->
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2023 Swapneel S. Mehta. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
+
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
     
-        <div id="subscribe" class="subscribe-overlay">
-            <a class="subscribe-overlay-close" href="#"></a>
-            <div class="subscribe-overlay-content">
-                
-                    <img class="subscribe-overlay-logo" src="/assets/images/blog-icon.png" alt="Swapneel Mehta" />
-                
-                <h1 class="subscribe-overlay-title">Subscribe to Swapneel Mehta</h1>
-                <p class="subscribe-overlay-description">Coming soon!</p>
-                <form method="post" action="/subscribe/" class="">
-    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script><!-- Load Common JS -->
+  <script defer src="/assets/js/common.js"></script>
 
-    <div class="form-group">
-        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
-    </div>
-    <button class="" type="submit" disabled><span>Subscribe</span></button>
-    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
-</form>
+    
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  <script async src="https://badge.dimensions.ai/badge.js"></script>
 
-            </div>
-        </div>
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
     
 
-    <!-- highlight.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
-    <script>$(document).ready(function() {
-      $('pre code').each(function(i, block) {
-        hljs.highlightBlock(block);
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
       });
-    });</script>
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
 
-    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
 
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
 
-    <!-- Paginator increased to "infinit" in _config.yml -->
-    <!-- if paginator.posts  -->
-    <!-- <script>
-        var maxPages = parseInt('1');
-    </script>
-    <script src="/assets/js/infinitescroll.js"></script> -->
-    <!-- /endif -->
-
-    
-
-
-    <!-- Add Google Analytics  -->
-    <!-- Google Analytics Tracking code -->
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-128164562-1', 'auto');
-  ga('send', 'pageview');
-
- </script>
-
-
-    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
-    
-
-    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
-    <!-- ghost_foot -->
-
-</body>
+  </body>
 </html>
