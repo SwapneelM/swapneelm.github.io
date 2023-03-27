@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://mehtaver.se/sitemap.xml
