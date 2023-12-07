@@ -1,5 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-08-01T18:07:58-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mehtaverse</title><subtitle>Swapneel Mehta, Data Science Ph.D. Candidate researching online disinformation. 
-</subtitle><entry><title type="html">How to Ask Better Questions</title><link href="http://localhost:4000/how-to-ask-better-questions/" rel="alternate" type="text/html" title="How to Ask Better Questions" /><published>2022-07-01T00:00:00-04:00</published><updated>2022-07-01T00:00:00-04:00</updated><id>http://localhost:4000/how-to-ask-better-questions</id><content type="html" xml:base="http://localhost:4000/how-to-ask-better-questions/"><![CDATA[<p>I really like talking to students. It’s fun to see the excitement, enthusiasm, and intelligence that each successive generation has developed, especially since (IMO) each generation seems so much smarter than the next. So in principle I always plan to respond to students messaging me on different platforms but in practice I am unable to devote time to write back to each message. I feel bad not responding to individuals who asked me about my past work, but I did think of them when I carefully described every project I have ever worked on in the internship description field on LinkedIn, where they originally connected with me. I uploaded multiple versions of my resume to a public github.io website year-on-year so people have access to it when they’re building theirs. So while I love to talk to students and help them make important decisions for their lives, I find it to be tiring if it only involves directing them towards easily accessible information that is one click away or on my website already. It’s really good practice, in my opinion, to cultivate the <a href="https://stackoverflow.com/help/how-to-ask">StackOverflow ‘question-asking guidelines’</a> in life. But most importantly, this essay is, like most other posts on this website, to 18-year old Swapneel who asked a lot of busy, kind, and intelligent people some really stupid questions that they spent time answering anyway. I will always owe it to those kindly folks to try and help other students ask better questions than I did.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-12-07T16:53:11-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mehtaverse</title><subtitle>Researching online information networks and building tools to improve trust on the social internet. 
+</subtitle><entry><title type="html">The Origin of DJ Unicode</title><link href="http://localhost:4000/the-origin-of-dj-unicode/" rel="alternate" type="text/html" title="The Origin of DJ Unicode" /><published>2023-09-21T00:00:00-04:00</published><updated>2023-09-21T00:00:00-04:00</updated><id>http://localhost:4000/the-origin-of-dj-unicode</id><content type="html" xml:base="http://localhost:4000/the-origin-of-dj-unicode/"><![CDATA[<h2 id="background">Background</h2>
+
+<p>This story is my recollection of the events leading up to the creation of <a href="https://djunicode.in">DJ Unicode</a>, a student organization that trains other students in programming, software development, and building free and open-source software. I co-founded this venture back in 2017 alongside friends from my undergraduate program and the program has been thriving (if I do say so myself), with over 250+ students trained so far (considering our batch size is 120 students each year, this is a significant fraction of the cohort over the past few years). Our members have achieved quite a bit since then, with international internships and hackathon wins, Ivy league college admits, funding for Masters degrees, research publications at top venues, job offers at FAANG (or should I say MANGA) companies, and more. But the really interesting takeaway is we’ve successfully transitioned out the management committee and co-founders to an advisory role (pretty loosely used, since we barely offer advice once or twice a year when needed), and activities are wholly managed by a new team of incoming final-year students (you might call them BE students or senior undergrads). Every mentor at Unicode is a volunteer–they don’t really get paid to do their jobs (although teams are free to take up contract projects to generate their own revenue; and many now do). The team rotates each year and yet we’ve managed to develop a culture that promotes teamwork, leadership, giving back to the community, and peer-teaching and learning. It’s really fun to have been part of this story from the start, and eventually founding <a href="https://unicode-research.netlify.app/people">Unicode Research</a> to advance the same for conducting and publishing impactful research. But that’s a story for another day.</p>
+
+<h2 id="history">History</h2>
+
+<p>We’ve not shared the origin story before this to my recollection but I figured it was a nice tidbit to send out close to an important date in Unicode’s history, September 18th.</p>
+
+<p>Before there was Unicode, two of our friends ran a separate IT Solutions company focused on Android development called <a href="https://www.facebook.com/ThePixelFactoryMumbai/">The Pixel Factory</a> while Rudresh, Avais and I ran a small web dev shop called <a href="https://www.facebook.com/ccdevs/">CCDevs</a> or Cutting Chai Developers, named after our shared love of <a href="https://en.wikipedia.org/wiki/Masala_chai">cutting chai</a>. At a certain point in CCDevs’ history we were doing quite well with a bunch of clients under our belt, building websites in India, China, Dubai, and elsewhere. We reached an inflection point when we got a pretty big offer at the time, roughly 2L to build a site for a client who actually took us out to Cafe Coffee Day for a business conversation and offered to cover food. It was so funny that neither of us actually ate any food out of either nervousness, overwhelming suspicion (we had just nearly been screwed over by our last client resulting in a time challenge battle to recover the hosting that we had not been paid back for, by guessing the password his new web developer would set up — a thriller for another time), or just surprise that someone might offer three undergrads expensive free food.</p>
+
+<p>We asked for time to mull over the offer as we left that conversation with mixed feelings. At face value, this was a fantastic and very viable path forward for CCDevs, but surprisingly (or unsurprisingly, if you knew us) as we walked out and looked at each other there was a lot more to explore that we hadn’t gotten around to doing.</p>]]></content><author><name></name></author><category term="blog" /><category term="template" /><category term="students" /><category term="getting-started" /><summary type="html"><![CDATA[Background]]></summary></entry><entry><title type="html">How to Ask Better Questions</title><link href="http://localhost:4000/how-to-ask-better-questions/" rel="alternate" type="text/html" title="How to Ask Better Questions" /><published>2022-07-01T00:00:00-04:00</published><updated>2022-07-01T00:00:00-04:00</updated><id>http://localhost:4000/how-to-ask-better-questions</id><content type="html" xml:base="http://localhost:4000/how-to-ask-better-questions/"><![CDATA[<p>I really like talking to students. It’s fun to see the excitement, enthusiasm, and intelligence that each successive generation has developed, especially since (IMO) each generation seems so much smarter than the next. So in principle I always plan to respond to students messaging me on different platforms but in practice I am unable to devote time to write back to each message. I feel bad not responding to individuals who asked me about my past work, but I did think of them when I carefully described every project I have ever worked on in the internship description field on LinkedIn, where they originally connected with me. I uploaded multiple versions of my resume to a public github.io website year-on-year so people have access to it when they’re building theirs. So while I love to talk to students and help them make important decisions for their lives, I find it to be tiring if it only involves directing them towards easily accessible information that is one click away or on my website already. It’s really good practice, in my opinion, to cultivate the <a href="https://stackoverflow.com/help/how-to-ask">StackOverflow ‘question-asking guidelines’</a> in life. But most importantly, this essay is, like most other posts on this website, to 18-year old Swapneel who asked a lot of busy, kind, and intelligent people some really stupid questions that they spent time answering anyway. I will always owe it to those kindly folks to try and help other students ask better questions than I did.</p>
 
 <p>This essay does not explicitly cover cold emails because that’s a slightly different ball game, but I will say there are similar principles involved that require you to write short, thought-provoking emails that make the other person want to write back.</p>
 
@@ -1372,60 +1382,4 @@ The Backup Plan</p>
 
 <p><em>Picture Credit <a href="http://quantumgrid.com/wp-content/uploads/2015/03/hadron-collider.jpg">Quantum Grid</a></em></p>
 
-<p>Originally published at <a href="https://punintended404.blogspot.com">Punintended 404</a> on April 7, 2018.</p>]]></content><author><name></name></author><category term="work" /><category term="cern" /><category term="internship" /><summary type="html"><![CDATA[This post is about my internship within the CERN Openlab Program in 2017 and includes a questionnaire (hopefully) useful for students applying to the program.]]></summary></entry><entry><title type="html">Coursework to Complete</title><link href="http://localhost:4000/coursework-to-complete/" rel="alternate" type="text/html" title="Coursework to Complete" /><published>2017-03-24T00:00:00-04:00</published><updated>2017-03-24T00:00:00-04:00</updated><id>http://localhost:4000/coursework-to-complete</id><content type="html" xml:base="http://localhost:4000/coursework-to-complete/"><![CDATA[<h2 id="an-exhaustive-list-of-course-lectures">An Exhaustive List of Course Lectures</h2>
-
-<p>This post comprises of a list of lectures that I intend to watch at some point in order to mainly just learn more about these domains. They seem like some interesting areas to explore and some are just plain fun!</p>
-
-<p><strong><code class="language-plaintext highlighter-rouge">Note</code></strong><code class="language-plaintext highlighter-rouge">: This list is just for personal reference; you may use it if you like, but it is by no means an exhaustive list.</code>  <br />
-<code class="language-plaintext highlighter-rouge">That said, I have put in a fair bit of research into comparing prerequisites and course information across MIT, Stanford and other colleges whilst compiling this list that should provide a fair overview, to an undergraduate student interested in exploring Machine Learning and Computer Vision, of the courses that relate to the applications of these practices in Genetics and Genomics (yes, they're disparate branches of Biology).</code>  <br /></p>
-
-<p><strong><code class="language-plaintext highlighter-rouge">tl;dr</code></strong> <br /><code class="language-plaintext highlighter-rouge">It's just a list of courses that I'm interested in, oriented around ML and CV.</code>  <br /></p>
-
-<h2 id="algorithms">Algorithms:</h2>
-
-<p>6.006J - Introduction to Algorithms [UG]  <em>prerequisite for 6.046J</em>  <br /> 
-6.046J - Design and Analysis [UG]  <em>prerequisite for 6.84J</em>  <br /> 
-6.84J - Advanced Algorithms [G]  <br /></p>
-
-<h2 id="mathematics-and-statistics">Mathematics and Statistics:</h2>
-
-<p>18.02 - <strong>Multivariable Calculus (II)</strong> [UG]  <em>prerequisite for 6.041F</em>  <br /> 
-18.06 - <strong>Linear Algebra</strong> [UG]  <em>prerequisite for CS229</em>  <br /> 
-18.05 - <strong>Introduction to Probability and Statistics</strong> [UG]  <em>prerequisite for CS229</em>  <br /> 
-6.041F - <strong>Probabilistic Systems Analysis and Applied Probability</strong> [UG/G]  <br /> 
-6.262 - <strong>Discrete Stochastic Processes</strong> [G]  <em>prerequisite for 10-715 (CMU)</em>  <br /></p>
-
-<h2 id="machine-learning">Machine Learning:</h2>
-
-<p><em>10-401, 10-601, 10-701, and 10-715 are all introductory courses but 10-715 and 10-701 are intended for graduate students with a strong mathematical background.</em>  <br /></p>
-
-<p>CS229 - <strong>Machine Learning</strong> [UG]  <br /></p>
-
-<p>10-701 - <strong>Introduction to Machine Learning</strong> [UG/G]  <em>prerequisite for 10-702, 10-715</em>  <br /> 
-10-702 - <strong>Statistical Machine Learning</strong> [G]  <br /> 
-10-715 - <strong>Advanced Introduction to Machine Learning</strong> [G]  <br /></p>
-
-<h2 id="biology">Biology:</h2>
-
-<p>7.012 - <strong>Introduction to Biology</strong> [UG]  <em>prerequisite for 7.91J, 8.591J</em>  <br /> 
-7.91J - <strong>Foundations of Computational and Systems Biology</strong> [UG/G]  <br /></p>
-
-<h2 id="computer-vision">Computer Vision:</h2>
-
-<p>CS231N - <strong>Convolutional Neural Networks for Visual Recognition</strong> [UG]  <br /> 
-CAP5415 - <strong>Computer Vision</strong> [UG]  <br /></p>
-
-<h2 id="optional-courses">Optional Courses:</h2>
-
-<p><em>8.591J - Systems Biology [UG/G]</em>  <br /> 
-<em>6.034 - Artificial Intelligence [UG]</em>  <br /> 
-<em>6.042J/18.062J - Mathematics for Computer Science [UG]</em>  <br /></p>
-
-<p><em>18.085 - Computational Science and Engineering (I) [G]</em>  <br /> 
-<em>18.086 - Mathematical Methods for Engineers (II) [G]</em>  <br /></p>
-
-<p><em>18.01 - Single Variable Calculus (I) [UG]</em>  <br /></p>
-
-<h2 id="links">Links:</h2>
-
-<p><a href="https://www.ml.cmu.edu/current-students/electives-for-ms-students.html">CMU Electives for ML Students</a>  <br /></p>]]></content><author><name></name></author><category term="template" /><category term="getting-started" /><category term="coursework" /><summary type="html"><![CDATA[An Exhaustive List of Course Lectures]]></summary></entry></feed>
+<p>Originally published at <a href="https://punintended404.blogspot.com">Punintended 404</a> on April 7, 2018.</p>]]></content><author><name></name></author><category term="work" /><category term="cern" /><category term="internship" /><summary type="html"><![CDATA[This post is about my internship within the CERN Openlab Program in 2017 and includes a questionnaire (hopefully) useful for students applying to the program.]]></summary></entry></feed>
