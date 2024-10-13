@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-12-07T19:28:59-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mehtaverse</title><subtitle>Researching online information networks and building tools to improve trust on the social internet. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-10-13T18:19:26-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mehtaverse</title><subtitle>Researching online information networks and building tools to improve trust on the social internet. 
 </subtitle><entry><title type="html">The Origin of DJ Unicode</title><link href="http://localhost:4000/the-origin-of-dj-unicode/" rel="alternate" type="text/html" title="The Origin of DJ Unicode" /><published>2023-09-21T00:00:00-04:00</published><updated>2023-09-21T00:00:00-04:00</updated><id>http://localhost:4000/the-origin-of-dj-unicode</id><content type="html" xml:base="http://localhost:4000/the-origin-of-dj-unicode/"><![CDATA[<h2 id="background">Background</h2>
 
 <p>This story is my recollection of the events leading up to the creation of <a href="https://djunicode.in">DJ Unicode</a>, a student organization that trains other students in programming, software development, and building free and open-source software. I co-founded this venture back in 2017 alongside friends from my undergraduate program and the program has been thriving (if I do say so myself), with over 250+ students trained so far (considering our batch size is 120 students each year, this is a significant fraction of the cohort over the past few years). Our members have achieved quite a bit since then, with international internships and hackathon wins, Ivy league college admits, funding for Masters degrees, research publications at top venues, job offers at FAANG (or should I say MANGA) companies, and more. But the really interesting takeaway is we’ve successfully transitioned out the management committee and co-founders to an advisory role (pretty loosely used, since we barely offer advice once or twice a year when needed), and activities are wholly managed by a new team of incoming final-year students (you might call them BE students or senior undergrads). Every mentor at Unicode is a volunteer–they don’t really get paid to do their jobs (although teams are free to take up contract projects to generate their own revenue; and many now do). The team rotates each year and yet we’ve managed to develop a culture that promotes teamwork, leadership, giving back to the community, and peer-teaching and learning. It’s really fun to have been part of this story from the start, and eventually founding <a href="https://unicode-research.netlify.app/people">Unicode Research</a> to advance the same for conducting and publishing impactful research. But that’s a story for another day.</p>
@@ -1223,7 +1223,7 @@ The Backup Plan</p>
 
 <p>I still remember that was the day I was discussing something with my mother who was cooking. I was leaning against the door then, and we were casually chatting when the notification popped up.</p>
 
-<p><img src="assets/images/openlab-selection-email.png" alt="The Openlab Summer Student Program Selection Email" /></p>
+<p><img src="/assets/images/openlab-selection-email.png" alt="The Openlab Summer Student Program Selection Email" /></p>
 
 <p>I had read in novels about someone that ‘fell flat down’ on receiving some news. For the first time it actually happened to me. I literally just dropped down to the floor in a cross-legged position and told mom:</p>
 
@@ -1247,7 +1247,7 @@ The Backup Plan</p>
 
 <p>To be fair, CERN <em>was paying</em> me while Stanford required me to (more or less) support myself. More importantly, the professors were open to discussing potential opportunities in the future. That made my decision slightly easier to make. Anyway, fast-forward to a month later, and there I was sitting on the Y Bus traveling from Geneva Airport to my hotel in Saint-Genis Pouilly, France (yep, work in Switzerland, live in France - the CERN life ;))</p>
 
-<p><img src="assets/images/geneva.jpeg" alt="The Openlab Program is hosted at CERN in Geneva, Switzerland" />
+<p><img src="/assets/images/geneva.jpeg" alt="The Openlab Program is hosted at CERN in Geneva, Switzerland" />
 <em>The City of Geneva</em></p>
 
 <p>My internship at CERN has been an amazing learning experience not just in terms of the work but also in terms of people — each with a unique story to tell. These factors have contributed in no small part to the life-changing experience this has been. I arrived as a wide-eyed teenager, and left as a wider-eyed teenager, with an insatiable curiosity to learn more.</p>
@@ -1264,7 +1264,7 @@ The Backup Plan</p>
   <p>It was really encouraging to find this kind of support being extended and responsibilities being shared with us in one of the most active and experienced groups at CERN compared to the common treatment as ‘just an intern.’</p>
 </blockquote>
 
-<p><img src="assets/images/globe-of-science.jpeg" alt="CERN Openlab: Globe of Science and Innovation" />
+<p><img src="/assets/images/globe-of-science.jpeg" alt="CERN Openlab: Globe of Science and Innovation" />
 <em>The Globe of Science and Innovation — emblematic of the values CERN embodies (Picture Credit: <a href="https://jessicawallis.files.wordpress.com/2015/09/18680544482_2cccb5efac_b.jpg">Jessica Wallis</a>)</em></p>
 
 <p>The project I was working on involved detecting anomalous database connections in order to serve multiple purposes including but not limited to analysing and deriving insights from usage patterns, monitoring the number of connections, and ultimately database security. With no real benchmarks or training data in this field, we set out to find a solution and use various machine learning practices and models to apply unsupervised learning and arrive at a conclusive result. We managed to utilise an ensemble of different models that measured deviation based on differing metrics. Further, we cross-verified results and extracted common anomalies that were then flagged to be verified. Through my interactions with my peers within the same program, I realized a lot of us were working on the same problem with different forms of data. I was motivated to move beyond the scope of my project and build an intuitive system that could not only provide a common base to leverage these models, but also offer an intuitive interface for non-technical users, seeing as a lot of CERN staff include physicists that may not be familiar with cutting-edge computing practices. It was a start towards utilising the research that has gone into multiple Openlab projects into a single end-user application.</p>
@@ -1275,7 +1275,7 @@ The Backup Plan</p>
 
 <p>I was lucky enough to have probably the best roommates I’ve ever had — notwithstanding the fact that these are the only roommates I’ve ever had. We have cooked, cleaned, driven, trekked, hitchhiked, played, and somersaulted off boats together. Openlab has really provided a unique platform that has resulted in friendships across continents and a network that encompasses most countries across the world. It leads to a sense of security — no matter where we go on after this experience, we will have friends nearby that we can count on in times of need or maybe just to blow off some steam over the weekends.</p>
 
-<p><img src="assets/images/openlab-interns-cms.png" alt="CERN Openlab Internship" />
+<p><img src="/assets/images/openlab-interns-cms.png" alt="CERN Openlab Internship" />
 <em>A few Openlab Interns at one of the Experiments</em></p>
 
 <p>I could rave about the past summer until the end of time because it’s hard to out all my experiences into a single blog post but I figure I have to sum it up at some point so I would like to conclude with some quotes from one of the wiser role models in my life, Master Shifu from Kung-Fu Panda, as answers to some of the common questions people have been asking me about getting into CERN:</p>
@@ -1317,7 +1317,7 @@ The Backup Plan</p>
 
 <h2 id="further-reading-cern-and-openlab">Further Reading: CERN and Openlab</h2>
 
-<p>If you’d like to know more about Openlab or CERN in general please refer to some of the answers I’ve written on Quora or check out my <a href="https://swapneelm.github.io/presentations/slides/internships.pdf">presentation on Internships</a>:</p>
+<p>If you’d like to know more about Openlab or CERN in general please refer to some of the answers I’ve written on Quora or check out my <a href="/assets/pdf/slides/internships.pdf">presentation on Internships</a>:</p>
 
 <ol>
   <li>
