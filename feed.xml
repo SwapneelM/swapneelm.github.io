@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-10-14T17:45:06-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mehtaverse</title><subtitle>Researching online information networks and building tools to improve trust on the social internet. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-10-24T03:10:21-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mehtaverse</title><subtitle>Researching online information networks and building tools to improve trust on the social internet. 
 </subtitle><entry><title type="html">The Origin of DJ Unicode</title><link href="http://localhost:4000/the-origin-of-dj-unicode/" rel="alternate" type="text/html" title="The Origin of DJ Unicode" /><published>2023-09-21T00:00:00-04:00</published><updated>2023-09-21T00:00:00-04:00</updated><id>http://localhost:4000/the-origin-of-dj-unicode</id><content type="html" xml:base="http://localhost:4000/the-origin-of-dj-unicode/"><![CDATA[<h2 id="background">Background</h2>
 
 <p>This story is my recollection of the events leading up to the creation of <a href="https://djunicode.in">DJ Unicode</a>, a student organization that trains other students in programming, software development, and building free and open-source software. I co-founded this venture back in 2017 alongside friends from my undergraduate program and the program has been thriving (if I do say so myself), with over 250+ students trained so far (considering our batch size is 120 students each year, this is a significant fraction of the cohort over the past few years). Our members have achieved quite a bit since then, with international internships and hackathon wins, Ivy league college admits, funding for Masters degrees, research publications at top venues, job offers at FAANG (or should I say MANGA) companies, and more. But the really interesting takeaway is we’ve successfully transitioned out the management committee and co-founders to an advisory role (pretty loosely used, since we barely offer advice once or twice a year when needed), and activities are wholly managed by a new team of incoming final-year students (you might call them BE students or senior undergrads). Every mentor at Unicode is a volunteer–they don’t really get paid to do their jobs (although teams are free to take up contract projects to generate their own revenue; and many now do). The team rotates each year and yet we’ve managed to develop a culture that promotes teamwork, leadership, giving back to the community, and peer-teaching and learning. It’s really fun to have been part of this story from the start, and eventually founding <a href="https://unicode-research.netlify.app/people">Unicode Research</a> to advance the same for conducting and publishing impactful research. But that’s a story for another day.</p>
@@ -285,7 +285,7 @@ network for multiclass classification. It helped that I had just worked on this 
 
 <h3 id="the-graduate-admissions-process">The Graduate Admissions Process</h3>
 
-<p>The US University Admissions process is well-known to be a ‘black box’ (largely uninterpretable). You and I may draw our conclusions but nobody can provide a binary answer with 100% confidence as to whether a given applicant’s chances of getting in.</p>
+<p>The US University Admissions process is well-known to be a ‘black box’ (largely uninterpretable). You and I may draw our conclusions but nobody can provide a binary answer with 100% confidence as to a given applicant’s chances of getting in.</p>
 
 <p>For a detailed breakdown of this process, <strong>please</strong> read <a href="https://nlp.stanford.edu/~rkarthik/DAGAP.pdf">Karthik Raghunathan’s Demystification of the Graduate Admissions Process</a>. While applying to grad school, you will get conflicting pieces of advice from people based on what has worked for them. It is natural for people to claim they have a hack to explain this ‘black box’ admissions process. However, my advice is to take their advice with a pinch of salt. But that too, is yet another piece of advice.</p>
 
@@ -299,12 +299,16 @@ network for multiclass classification. It helped that I had just worked on this 
 
 <h3 id="general-grad-school-advice">General Grad School Advice</h3>
 
+<ul>
+  <li><a href="https://github.com/pliang279/awesome-phd-advice">An all-encompassing collection of grad-school resources by Prof. Paul Liang at Stanford</a></li>
+</ul>
+
 <h4 id="statement-of-purpose">Statement of Purpose:</h4>
 <ul>
-  <li><a href="http://cseweb.ucsd.edu/~gary/Advice.html">Very useful Meta Page of Links and Advice by Prof. Gary Cottrell</a></li>
-  <li><a href="http://pgbovine.net/grad-school-applications-summary.htm">Ph.D. specific advice from Prof. Philip Guo’s Blog</a></li>
-  <li><a href="https://www.cl.cam.ac.uk/~sbh11/phd_apply.html">Dr. Sean Holden’s advice for applying to do a Ph.D. in Machine Learning (University of Cambridge)</a></li>
-  <li><a href="http://www-personal.umich.edu/~danhorn/graduate.html">Grad School Advice by Prof. Dan Horn</a></li>
+  <li><a href="http://cseweb.ucsd.edu/~gary/Advice.html">Very useful Meta Page of Links and Advice by Prof. Gary Cottrell</a>
+<!-- * [Ph.D. specific advice from Prof. Philip Guo's Blog](http://pgbovine.net/grad-school-applications-summary.htm) -->
+<!-- * [Dr. Sean Holden's advice for applying to do a Ph.D. in Machine Learning (University of Cambridge)](https://www.cl.cam.ac.uk/~sbh11/phd_apply.html) -->
+<!-- * [Grad School Advice by Prof. Dan Horn](http://www-personal.umich.edu/~danhorn/graduate.html) --></li>
   <li><a href="https://forum.thegradcafe.com/topic/48905-some-advice-on-writing-an-sop/">SoP Advice from the GradCafe</a></li>
   <li><a href="http://vonahn.blogspot.com/2009/12/advice-on-grad-school-applications.html">DON’Ts by BigLou - the guy who built CAPTCHA and reCAPTCHA, among other things</a></li>
 </ul>
@@ -318,22 +322,22 @@ network for multiclass classification. It helped that I had just worked on this 
 
 <h3 id="some-examples-of-sops">Some examples of SoPs:</h3>
 <ul>
-  <li><a href="https://www.cs.cmu.edu/~jlacomis/assets/statement/personal-statement-cmu.pdf">Jeremy Lacomis’ Statement of Purpose for a Ph.D. at Carnegie Mellon University focusing on Software Engineering focusing on Programming Languages</a></li>
-  <li><a href="https://github.com/jeanqasaur/academic-application-materials/blob/master/phd-application-2007/personal_statement.pdf">Jean Yang’s Statement of Purpose for a Ph.D. in Computer Science</a></li>
-  <li><a href="http://pgbovine.net/PhD-applications/Philip_Guo-Stanford-PhD-app-statement.pdf">Philip Guo’s Statement of Purpose for a Masters in Computer Science at Stanford University</a></li>
-  <li><a href="http://seankross.com/notes/grad-school-essays/">Sean Kross’ Set of Statements for Graduate School - focusing on Information and Cognitive Science</a></li>
-  <li><a href="https://www.andrew.cmu.edu/user/vipuls/me/sop_vipulsingh.pdf">Vipul Singh’s Statement of Purpose for a Masters in Computer Science at Carnegie Mellon University</a></li>
+  <li><a href="https://jeremylacomis.com/application-info">Jeremy Lacomis’ Statement of Purpose for a Ph.D. at Carnegie Mellon University focusing on Software Engineering focusing on Programming Languages</a></li>
+  <li><a href="https://github.com/jeanqasaur/academic-application-materials/blob/master/phd-application-2007/personal_statement.pdf">Jean Yang’s Statement of Purpose for a Ph.D. in Computer Science</a>
+<!-- * [Philip Guo's Statement of Purpose for a Masters in Computer Science at Stanford University](http://pgbovine.net/PhD-applications/Philip_Guo-Stanford-PhD-app-statement.pdf) --></li>
+  <li><a href="http://seankross.com/notes/grad-school-essays/">Sean Kross’ Set of Statements for Graduate School - focusing on Information and Cognitive Science</a>
+<!-- * [Vipul Singh's Statement of Purpose for a Masters in Computer Science at Carnegie Mellon University](https://www.andrew.cmu.edu/user/vipuls/me/sop_vipulsingh.pdf) --></li>
 </ul>
 
 <p><strong>Research Statements from professors/research scientists/Ph.D. Students often yield insight into not only their goals, but also areas of active research in general which is why I’m including some samples for candidates to read in order to ‘get a better idea of their field’ before writing their Statement of Purpose.</strong></p>
 
+<!-- * [Csaba Szepesvári's Research Statement (University of Alberta, DeepMind)](https://sites.ualberta.ca/~szepesva/CV/Research%20Statement.pdf) -->
+<!-- * [Jacob Andreas' Research Statement (Berkeley, MIT, Natural Language Processing)](https://people.eecs.berkeley.edu/~jda/docs/jda_research_statement.pdf) -->
+<!-- * [Marc'Aurelio Ranzato's Research Statement (New York University, Machine Learning)](https://cs.nyu.edu/~ranzato/research/research_statement_ranzato.pdf) -->
+<!-- * [Morteza Mardani's Reserach Statement (Stanford, Algorithms, Applications of Machine Learning)](https://web.stanford.edu/~morteza/research_statement.pdf) -->
 <ul>
-  <li><a href="https://sites.ualberta.ca/~szepesva/CV/Research%20Statement.pdf">Csaba Szepesvári’s Research Statement (University of Alberta, DeepMind)</a></li>
-  <li><a href="https://people.eecs.berkeley.edu/~jda/docs/jda_research_statement.pdf">Jacob Andreas’ Research Statement (Berkeley, MIT, Natural Language Processing)</a></li>
-  <li><a href="https://cs.nyu.edu/~ranzato/research/research_statement_ranzato.pdf">Marc’Aurelio Ranzato’s Research Statement (New York University, Machine Learning)</a></li>
-  <li><a href="web.stanford.edu/~morteza/research_statement.pdf">Morteza Mardani’s Reserach Statement (Stanford, Algorithms, Applications of Machine Learning)</a></li>
-  <li><a href="https://cs.stanford.edu/~jsteinhardt/statement.pdf">Jacob Steinhardt’s Statement of Purpose (Stanford, Machine Learning)</a></li>
-  <li><a href="https://www.ics.uci.edu/~numanare/files/research_niranjan.pdf">U. N. Niranjan’s Research Statement (U.C. Irvine, Machine Learning)</a></li>
+  <li><a href="https://cs.stanford.edu/~jsteinhardt/statement.pdf">Jacob Steinhardt’s Statement of Purpose (Stanford, Machine Learning)</a>
+<!-- * [U. N. Niranjan's Research Statement (U.C. Irvine, Machine Learning)](https://www.ics.uci.edu/~numanare/files/research_niranjan.pdf) --></li>
 </ul>
 
 <h4 id="my-personal-favourite---anant-bhardwaj-beng-pune-univ-ms-stanford-phd-mit">My personal favourite - Anant Bhardwaj (B.Eng. Pune Univ., M.S. Stanford, Ph.D. M.I.T.)</h4>
@@ -373,8 +377,8 @@ network for multiclass classification. It helped that I had just worked on this 
 <h3 id="further-reading-strongly-recommended-if-you-have-the-time">Further Reading (strongly recommended if you have the time)</h3>
 <ul>
   <li><a href="http://matt.might.net/articles/how-to-apply-and-get-in-to-graduate-school-in-science-mathematics-engineering-or-computer-science/">Reddit Thread on Resources for Graduate School</a></li>
-  <li><a href="https://www.quora.com/What-should-be-the-flow-of-thoughts-in-a-statement-of-purpose-SOP-for-graduate-admissions">Quora Thread: Read Ben Y. Zhao and Jay Wacker’s answers in particular</a></li>
-  <li><a href="https://www.cs.umd.edu/grad/writing-statement-of-pupose">Official Univ. of Maryland Advice</a></li>
+  <li><a href="https://www.quora.com/What-should-be-the-flow-of-thoughts-in-a-statement-of-purpose-SOP-for-graduate-admissions">Quora Thread: Read Ben Y. Zhao and Jay Wacker’s answers in particular</a>
+<!-- * [Official Univ. of Maryland Advice](https://www.cs.umd.edu/grad/writing-statement-of-pupose) --></li>
   <li><a href="https://users.ece.cmu.edu/~mabdelm/statement-of-purpose-tips.html">Former CMU Ph.D. student (now Google Research) on writing an SoP</a></li>
 </ul>
 
@@ -653,7 +657,7 @@ essentially, freedom from the bucketload of socioeconomic constraints affiliated
 
 <p><strong>Most of this article can be represented by this meme.</strong></p>
 
-<p><img src="assets/images/cs-meme.jpeg" alt="Computer Science Major - Z Shell, Oh-My-Zsh, Terminal" />
+<p><img src="/assets/images/cs-meme.jpeg" alt="Computer Science Major - Z Shell, Oh-My-Zsh, Terminal" />
 Expectations are aplenty when you study Computer Science</p>
 
 <p>In this case, however, we are going to bring alive the <em>What I think I do</em> part. We’re going to pump our terminals full of steroids and make it spout pointless nonsense that — to the non-CS folk— makes us look like we know what we are doing.</p>
@@ -678,19 +682,19 @@ Expectations are aplenty when you study Computer Science</p>
   <p>So you’re using a Linux distro (or Mac OSX)? That’s awesome. But you’re still using the plain old bash terminal? Probably something that looks like this.</p>
 </blockquote>
 
-<p><img src="assets/images/good-old-bash.png" alt="The Bourne Again Shell or Bash" />
+<p><img src="/assets/images/good-old-bash.png" alt="The Bourne Again Shell or Bash" />
 Good old Bash :’)</p>
 
 <blockquote>
   <p>Or you’ve become a programmer and modified the default profile to something that is actually colorful. Good job. In that case, you’re looking at something of this sort.</p>
 </blockquote>
 
-<p><img src="assets/images/homebrew-profiles.png" alt="Homebrew has Profiles for the Terminal" />
+<p><img src="/assets/images/homebrew-profiles.png" alt="Homebrew has Profiles for the Terminal" />
 Homebrew has profiles that you can activate (<a href="www.jejemaes.net">Photo Credit</a>)</p>
 
 <p><strong>What if I told you that you can get from these terminals to this next one in a matter of about 29.7 minutes (average case, varies with innate geekiness quotient).</strong></p>
 
-<p><img src="assets/images/awesome-terminal.png" alt="The Awesome Terminal" />
+<p><img src="/assets/images/awesome-terminal.png" alt="The Awesome Terminal" />
 The “OMFG THAT LOOKS AWESOME” Terminal</p>
 
 <p><strong>Ladies and Gentlemen, I present to you, the Z Shell.</strong></p>
