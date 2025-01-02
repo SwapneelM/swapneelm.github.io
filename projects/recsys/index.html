@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Recommender Systems | Mehtaverse</title>
     <meta name="author" content="Swapneel S. Mehta">
-    <meta name="description" content="Building multimodal content distribution algorithms">
+    <meta name="description" content="Building multimodal content distribution algorithms and testing their robustness to adversarial actors">
     <meta name="keywords" content="phd, research, machine learning, misinformation, disinformation, network">
 
 
@@ -128,7 +128,7 @@
 
           <header class="post-header">
             <h1 class="post-title">Recommender Systems</h1>
-            <p class="post-description">Building multimodal content distribution algorithms</p>
+            <p class="post-description">Building multimodal content distribution algorithms and testing their robustness to adversarial actors</p>
           </header>
 
           <article>
@@ -170,7 +170,11 @@
 
 <p>Most importantly, we solved a zero-shot learning problem where incoming “trending” hashtags are not in our training data and we need to predict accurate videos that they can be shared alongside. So we created a video-hashtag graph as our knowledge base on which we defined an edge prediction task between video and incoming hashtag nodes. This knowledge graph was continuously updated with new data so that retraining the graph neural network would not be necessary when deployed and dealing with novel trends.</p>
 
-<p>Furthermore, I am using open-source recommendation systems in <a href="/projects/">SimPPL: A Social Network Simulator</a> with Probabilistic Programs in order to simulate content spread and shilling attacks (bad actors using fake reviews to boost virality) and stimulate research on detection and control of misleading content online.</p>
+<h2 id="modeling-the-amplification-of-harms-by-adversarial-gaming-of-online-recommendations">Modeling the Amplification of Harms by Adversarial Gaming of Online Recommendations</h2>
+
+<p>To understand how modern ranking and recommendation algorithms <a href="https://www.reddit.com/r/blog/comments/o5tjcn/evolving_the_best_sort_for_reddits_home_feed/" rel="external nofollow noopener" target="_blank">like Reddit’s</a> can be gamed, I recreated their algorithms and modeled how bad actors can manipulate each type of algorithm to attack, takedown, or spread harmful content on different subreddits! Our work (jointly with Oxford’s Torr Vision Group) <a href="https://icml.cc/virtual/2022/workshop/13470#wse-detail-18453" rel="external nofollow noopener" target="_blank">received an Oral talk</a> at the AI4ABM workshop at the International Conference on Machine Learning in 2022. <a href="https://ora.ox.ac.uk/objects/uuid:d1b07465-cf5b-4cee-8c02-8ab1ff900623/files/s8623j018t" rel="external nofollow noopener" target="_blank">Read the Paper</a>.</p>
+
+<p>I am also using simplified recommendation systems in <a href="/projects/">SimPPL: A Social Network Simulator</a> with Probabilistic Programs in order to simulate content spread and shilling attacks (bad actors using fake reviews to boost virality) and stimulate research on detection and control of misleading content online.</p>
 
           </article>
 
@@ -181,8 +185,8 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        © Copyright 2024 Swapneel S. Mehta. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
-Last updated: December 31, 2024.
+        © Copyright 2025 Swapneel S. Mehta. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
+Last updated: January 02, 2025.
       </div>
     </footer>
 
