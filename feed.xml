@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-06-13T23:34:16-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mehtaverse</title><subtitle>Researching online information networks and building tools to improve digital trust. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-06-25T15:23:43-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mehtaverse</title><subtitle>Researching online information networks and building tools to improve digital trust. 
 </subtitle><entry><title type="html">The Origin of DJ Unicode</title><link href="http://localhost:4000/the-origin-of-dj-unicode/" rel="alternate" type="text/html" title="The Origin of DJ Unicode" /><published>2023-09-21T00:00:00-04:00</published><updated>2023-09-21T00:00:00-04:00</updated><id>http://localhost:4000/the-origin-of-dj-unicode</id><content type="html" xml:base="http://localhost:4000/the-origin-of-dj-unicode/"><![CDATA[<h2 id="background">Background</h2>
 
 <p>This story is my recollection of the events leading up to the creation of <a href="https://djunicode.in">DJ Unicode</a>, a student organization that trains other students in programming, software development, and building free and open-source software. I co-founded this venture back in 2017 alongside friends from my undergraduate program and the program has been thriving (if I do say so myself), with over 250+ students trained so far (considering our batch size is 120 students each year, this is a significant fraction of the cohort over the past few years). Our members have achieved quite a bit since then, with international internships and hackathon wins, Ivy league college admits, funding for Masters degrees, research publications at top venues, job offers at FAANG (or should I say MANGA) companies, and more. But the really interesting takeaway is we’ve successfully transitioned out the management committee and co-founders to an advisory role (pretty loosely used, since we barely offer advice once or twice a year when needed), and activities are wholly managed by a new team of incoming final-year students (you might call them BE students or senior undergrads). Every mentor at Unicode is a volunteer–they don’t really get paid to do their jobs (although teams are free to take up contract projects to generate their own revenue; and many now do). The team rotates each year and yet we’ve managed to develop a culture that promotes teamwork, leadership, giving back to the community, and peer-teaching and learning. It’s really fun to have been part of this story from the start, and eventually founding <a href="https://unicode-research.netlify.app/people">Unicode Research</a> to advance the same for conducting and publishing impactful research. But that’s a story for another day.</p>
@@ -9,7 +9,167 @@
 
 <p>Before there was Unicode, two of our friends ran a separate IT Solutions company focused on Android development called <a href="https://www.facebook.com/ThePixelFactoryMumbai/">The Pixel Factory</a> while Rudresh, Avais and I ran a small web dev shop called <a href="https://www.facebook.com/ccdevs/">CCDevs</a> or Cutting Chai Developers, named after our shared love of <a href="https://en.wikipedia.org/wiki/Masala_chai">cutting chai</a>. At a certain point in CCDevs’ history we were doing quite well with a bunch of clients under our belt, building websites in India, China, Dubai, and elsewhere. We reached an inflection point when we got a pretty big offer at the time, roughly 2L to build a site for a client who actually took us out to Cafe Coffee Day for a business conversation and offered to cover food. It was so funny that neither of us actually ate any food out of either nervousness, overwhelming suspicion (we had just nearly been screwed over by our last client resulting in a time challenge battle to recover the hosting that we had not been paid back for, by guessing the password his new web developer would set up — a thriller for another time), or just surprise that someone might offer three undergrads expensive free food.</p>
 
-<p>We asked for time to mull over the offer as we left that conversation with mixed feelings. At face value, this was a fantastic and very viable path forward for CCDevs, but surprisingly (or unsurprisingly, if you knew us) as we walked out and looked at each other there was a lot more to explore that we hadn’t gotten around to doing.</p>]]></content><author><name></name></author><category term="student" /><category term="getting-started" /><summary type="html"><![CDATA[Background]]></summary></entry><entry><title type="html">How to Ask Better Questions</title><link href="http://localhost:4000/how-to-ask-better-questions/" rel="alternate" type="text/html" title="How to Ask Better Questions" /><published>2022-07-01T00:00:00-04:00</published><updated>2022-07-01T00:00:00-04:00</updated><id>http://localhost:4000/how-to-ask-better-questions</id><content type="html" xml:base="http://localhost:4000/how-to-ask-better-questions/"><![CDATA[<p>I really like talking to students. It’s fun to see the excitement, enthusiasm, and intelligence that each successive generation has developed, especially since (imho) each generation seems so much smarter than the next. So in principle I always plan to respond to students messaging me on different platforms but in practice I am unable to devote time to write back to each message. I feel bad not responding to individuals who asked me about my past work, but I did think of them when I carefully described every project I have ever worked on in the internship description field on LinkedIn, where they originally connected with me. I uploaded multiple versions of my resume to a public github.io website year-on-year so people have access to it when they’re building theirs. So while I love to talk to students and help them make important decisions for their lives, I find it to be tiring if it only involves directing them towards easily accessible information that is one click away or on my website already. It’s really good practice, in my opinion, to cultivate the <a href="https://stackoverflow.com/help/how-to-ask">StackOverflow ‘question-asking guidelines’</a> in life. But most importantly, this essay is, like most other posts on this website, to 18-year old Swapneel who asked a lot of busy, kind, and intelligent people some really stupid questions that they spent time answering anyway. I will always owe it to those kindly folks to try and help other students ask better questions than I did.</p>
+<p>We asked for time to mull over the offer as we left that conversation with mixed feelings. At face value, this was a fantastic and very viable path forward for CCDevs, but surprisingly (or unsurprisingly, if you knew us) as we walked out and looked at each other there was a lot more to explore that we hadn’t gotten around to doing.</p>]]></content><author><name></name></author><category term="student" /><category term="getting-started" /><summary type="html"><![CDATA[Background]]></summary></entry><entry><title type="html">Using AI to Write Minimal, Modular, and Human-extensible Code</title><link href="http://localhost:4000/using-ai-to-write-code/" rel="alternate" type="text/html" title="Using AI to Write Minimal, Modular, and Human-extensible Code" /><published>2023-09-21T00:00:00-04:00</published><updated>2023-09-21T00:00:00-04:00</updated><id>http://localhost:4000/using-ai-to-write-code</id><content type="html" xml:base="http://localhost:4000/using-ai-to-write-code/"><![CDATA[<p>We used AI assistants in Cursor AI to recreate 2 years of work by ~20-member team of undergraduate students, graduate students, a postdoctoral researcher, and a couple of professors and I am writing this article to help people understand what it takes to write code using AI copilots.</p>
+
+<p>For those of you who are engineers just looking to get the <em>gist of it</em>, incidentally here is a <a href="https://gist.github.com/SwapneelM/6ae57c10ae209361d6782e86d0801db0">Github gist</a> of how I created a product requirement document (PRD) by prompting Gemini, and then edited it surgically to get an <a href="https://gist.github.com/SwapneelM/6ae57c10ae209361d6782e86d0801db0#file-product-requirement-document-md">updated output PRD</a> that I could then use within cursor through multiple rounds of implementation-debugging-deployment cycles in order to rebuild our marketplace. But take a look at the marketplace first on the home page of our lab website, cheekily called <a href="https://truthmarket.com">Truth Market</a>, so that you understand what it means when I say “we built a two-sided marketplace for behavioral experimentation in Javascript”. And to be fair we did build it on top of an <em>experimental</em> (i.e. under active development) experimentation library (yes, I know it was confusing) called <a href="https://empirica.ly">Empirica</a>, developed largely as a labor of love at MIT. his file contains the prompts we used to get Cursor to design an entire platform for us (to be honest cursor did 35% of the work and we had to do 65% but it was of huge help either way!). Let me confirm that you did in fact check out the final version of the product that we developed, in the videos on the landing page at <a href="https://truthmarket.com">Truth Market</a>, and then I can walk you through how we went about using AI to help write code.</p>
+
+<p>In this article–intended more for the students I work with and my team at the nonprofit I run called <a href="https://simppl.org">SimPPL</a> more than anyone else–are the things naive vibe coders might not grasp about assistants like Cursor, and I will use an intuitive example to help you understand why this is the case. I like examples siu=mply because they help me understand and ultimately remember ideas better.</p>
+
+<h2 id="a-fictional-story-about-marco-and-gordon-to-teach-you-about-ai-coding">A Fictional story about Marco and Gordon to Teach you about AI Coding</h2>
+
+<p>Say you are a chef called Marco, and you are opening a new restaurant in London. You would like to create a new take on a marvelous dessert, <a href="https://en.wikipedia.org/wiki/Cr%C3%A8me_br%C3%BBl%C3%A9e">Crème brûlée</a>, to round off the meal for a dinner that you are hosting for dignitaries at your new restaurant’s opening night. You have a genius idea to reinvent this age-old dish: if you could add some kind of spice (ginger, nutmeg, cinnamon), you could create a new variant of it! The sweetness will balance the spice and your restaurant will be the talk of the town (until they go back to featuring the next top TikTok trend, at least).</p>
+
+<p>But come the morning of the event, you are held up on the tube (for non-Brits, read: <em>train</em>) and cannot make it in time to the kitchen! Oh no! But fear not, to help you save the day and create the dish, you have a second-in-command, or a <em><a href="https://en.wikipedia.org/wiki/Sous-chef">sous chef</a></em> that has made it to the restaurant and is busy preparing for the event. You give the sous chef a call!</p>
+
+<p><em>“Gordon, listen to me!”</em></p>
+
+<p><em>“Yes, Marco, what’s going on, I’m busy running your f*cking kitchen for you while you’re not around”</em></p>
+
+<blockquote>
+  <p>“Stop with the snarky attitude young man, it’s not my fault this tiny train full of smelly people (for Brits read: the tube) is stuck here, but while I get there, I need you to start to make the most marvelous spiced crème brûlée for dessert tonight! I’ll join you in making it when I get there.”</p>
+</blockquote>
+
+<blockquote>
+  <p><em>“Yes chef, will do.”</em></p>
+</blockquote>
+
+<p>If that were all Marco needed to do for getting Gordon to make crème brûlée, life would be all rainbows and unicorns and while he made that, we would be able to eradicate poverty and achieve world peace. But sadly, that isn’t the case.</p>
+
+<p>The first thing Gordon needs is a list of <em>ingredients</em>. He doesn’t know which ingredients exactly Marco wants him to use to make the crème brûlée. He finds that there are several different sets of ingredients people recommend for the same dish. And then there’s different brands that make each ingredient and he knows Marco is very particular about the brands he uses so he cannot just pick one at random. This dinner is the opening night and many food critics will be in attendance. The success of their restaurant might depend on it!</p>
+
+<p>Gordon thinks to himself: <em>F*ck me, there’s way too many different lists of ingredients available online. I don’t know which one Marco wants. I should call him up again.</em></p>
+
+<p>_“Marco, you didn’t tell me what are the ingredients to add in. There’s tons available online and even among our restaurant notes for I see at least 3 ingredient lists noted down. Can you clarify?”</p>
+
+<p><em>“Ah yeah, follow the one with 3 hours of cooking time, 20 mins. prep time, for 4 servings. It should need 3 large egg yolks, 1/4 cup white sugar, 1 teaspoon vanilla extract, 1 cup heavy cream, 2 tablespoons white sugar, and 1 tablespoon brown sugar. Found it yet?”</em></p>
+
+<p><em>“Yes, chef! But this is all for crème brûlée. What about the ‘spiced’ stuff that you want to use to reinvent this dish?”</em></p>
+
+<p><em>“All in good time Gordon, let’s have you put together the tried-and-tested base ingredients first, then I’ll tell you about when to add in the spices. As an example, you remember how we made the puddings, mousses, and flans in the past few months. This will be similar in essence to the way we made those dishes with a spiced twist at the end of it. Capische?”</em></p>
+
+<p><em>“Yes, chef!”</em></p>
+
+<p>So now there is a list of ingredients but Gordon realizes he doesn’t know what to do first, preheat the oven (since prep time is barely 20 mins) and a larger oven takes longer to preheat, or to whisk the eggs together first. Also should he add sugar and cream in during or after whisking. Should the cream be room temperature or hot? Should he add any water in to improve the consistency? And at what point should he stop whisking if so?</p>
+
+<p><em>“Chef Marco, sorry to bother you again, I need some details clarified. Can you tell me about the steps to follow in making this? When should I add in items, whether the cream should be hot or room temperature when mixed in, and whether I should add sugar before or after the cream? And again, what about the spices? I’m not sure how you want it.”</em></p>
+
+<p><em>“Gordon, if you wanted the full recipe why didn’t you just ask for it? Look in the third drawer in my office desk. No wait, that’s where I keep my <a href="https://en.wikipedia.org/wiki/Labubu">Labubus</a>. Look in the fourth drawer and you’ll find a binder with the recipe for the dish. Follow the steps I’ve enlisted there, and start by sticking to the regular recipe for crème brûlée ok? I will tell you about the spices later.”</em></p>
+
+<p><em>“Yes chef!”</em></p>
+
+<p>So Gordon starts off and it is going well when he realizes they have an issue. The recipe was intended for 4 servings, but the dinner has several hundred guests. How should he get this done? Clearly, 4 servings at a time isn’t going to get anything done within time!</p>
+
+<p><em>“Chef, I’m making following the recipe and making four servings but I need to get some advice on how to speed things up or we won’t be done on time!”</em></p>
+
+<p><em>“Gordon–I hate to say this–but that’s actually a great point. I forgot that I had made that recipe for preparing a weekend dessert for my family of 4, not a dinner party of 75 guests. What you’ll want to do is set up three stations, one for egg whisking, one for mixing in hot cream and sugar, and an area for pouring it out into the <a href="https://en.wikipedia.org/wiki/Ramekin">ramekins</a> that you’ll find at the corner of the pantry on a shelf. Get help from a couple of others and staff each of the stations so you can do things faster. Use the electric whisk for the eggs, and use a larger pan to heat more portions of cream at once but be careful not to overheat it, and set up a couple of ovens so that you don’t have to wait to load multiple batches into them. That way you should be able to get things done faster!”</em></p>
+
+<p><em>“Yes chef! Thank you.”</em></p>
+
+<p><em>“Ok and now that you understand this, let me tell you about the spices: I just need you to add a pinch of ground nutmeg, ginger, and cinnamon to the mixture after the cream is in. So remember that’s about 1/4 teaspoon each, and additionally 1/8 teaspoon of cloves to the preparation. That should bring out the spiced flavor in the crème brûlée! Did you get all that?”</em></p>
+
+<p><em>“Ohhh now I get it. Understood, yes chef!”</em></p>
+
+<p>And things start progressing smoothly on Gordon’s end even as Marco’s train pulls up into the stop, he steps off and rushes on foot to the restaurant since he checked to see that there’s surge pricing on the apps and who hails a cab these days–it’s all in on technology or back to the stone age. So Marco, huffing and puffing, enters the kitchen and walks up in horror to see Gordon dropping literal pieces of ginger and semi-whole cinnamon sticks into the ramekin as he prepares the mix for crème brûlée!</p>
+
+<p><em>“Gordon why the f*ck are you dropping pieces of uncut ginger and cloves into my dessert!?”</em></p>
+
+<p><em>“But chef you said ground nutmeg, ginger, and cinnamon into the mix… so I added ground nutmeg, then added ginger, and then added cinnamon and I remembered to measure them out 1/4 teaspoon each!!! I just have to add in 1/8 teaspoons of whole cloves.”</em></p>
+
+<p><em>“For f*ck’s sake Gordon, I meant ground EVERYTHING, nutmeg, ginger, and cinnamon–and of course I meant ground cloves not whole cloves. Who the f*ck has whole ginger, cloves, and sticks of cinnamon in a dessert dish? Use your f*cking brain!”</em></p>
+
+<p><em>“But chef, it’s a new recipe, I thought you are innovating and I should respect your ideas!”</em></p>
+
+<p>And Marco looks at his young protegé, with an expression that can only be described as incredulous disbelief, and sighs to himself. He lets out a deep sigh and walks over to the table to start picking whole ginger and cinnamon sticks out of the crème brûlée mix, thinking to himself <em>I only have myself to hold responsible for this.</em></p>
+
+<p><em>“Ok Gordon, let’s start fixing the spiced crème brûlée. We can still salvage the remaining ones for the dinner.”</em></p>
+
+<p><em>“Yes, chef!”</em></p>
+
+<hr />
+
+<p>And that, dear reader, is where I segue into AI copilots for accomplishing our tasks because the one statement that remains true for any copilot is that humans are really bad at expressing their ideas clearly the first time around. We learn, and we get better at it, but the reason that happens is we get <em>feedback</em> about our ideas! The one thing AI <em>does not do</em> is talk back at humans to tell them they’re not being clear, not expressing the right ideas, thinking in a logically incorrect manner, or asking it to do things that are functionally impossible to achieve. AI is trained to <em>just do it</em> (sorry, Nike). Even if it does an absolute garbage job and leaves you the worse off for it. So please, learn to give yourself that feedback especially when using AI for programming, because writing bad code is <em>really</em> easy! Just ask <a href="https://michalfita.medium.com/how-to-write-bad-code-6611a96a4da6">Michal Fita</a> about how to go from bad code to worse code, even without AI assistance.</p>
+
+<h2 id="if-you-didnt-read-the-article-at-least-watch-this-video">If you didn’t read the article, at least watch this video</h2>
+
+<p>I really like the video of a dad making a sandwich below as a great example of how to follow instructions <em>exactly as stated</em> and end up being unable to make even a simple peanut butter sandwich. AI is kinda like that, in fact it is exactly like that a lot of times, and I honestly wonder about the amount of “AI waste” produced because we need to correct prompts, and reprompt, and metaprompt just because it’s so easy to write bad prompts that we are all incentivized to <em>just prompt it</em> (I’m registering this one, Nike) without care for whether we need to add some ingredients, provide a recipe, and add bells and whistles to create our personal</p>
+
+<p><a href="https://www.facebook.com/DailyMailVideo/videos/dad-follows-kids-sandwich-instructions-very-literally/764162380697425/">How to make a Peanut Butter Sandwich</a></p>
+
+<h1 id="what-are-the-steps-that-we-learnt-about-prompting-ai-models-for-generating-code">What are the steps that we learnt about Prompting AI Models for Generating Code</h1>
+
+<h2 id="step-1">Step 1</h2>
+
+<p>First, you will understand the prompt we used to generate a product requirement document. If you do not know what that is, look up this <a href="https://www.atlassian.com/agile/product-management/requirements">Atlassian post</a> about it and then (and only then) read a <a href="https://coda.io/@yuhki/figmas-approach-to-product-requirement-docs">lightweight version</a> by Figma so you understand how you might reduce it down a little. Think of it as the ingredients AND recipe that the model needs for making the new dish.</p>
+
+<p>Here is the prompt I used on <a href="https://aistudio.google.com/">Gemini (free)</a> in order to get an LLM to generate a PRD for me.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I want you to look up and understand the documentation for the open-source behavioral experimentation library Empirica at https://docs.empirica.ly to understand the architecture it follows in designing two-sided games. I want you to think step by step to generate a clear and concise product requirement document to build a two-sided digital marketplace where some human buyers can "play" against some human sellers.  Each buyer has the goal of maximizing their individual utility gained from a product purchase through advertisements on a marketplace like Amazon, and each seller will gain a profit from the sale of a product in a marketplace like Amazon. The details of such a marketplace design can be extracted from the attached research paper in order to compose this product requirement document. I want you to be minimalistic and suggest only a single-round marketplace with Empirica stages as determined from the documentation.
+Focus on the parts of the paper that talk about the marketplace design and suggest a concrete product requirement document along with suggested modularization of functionality that will be input into a copilot assistant to build out the codebase iteratively.
+</code></pre></div></div>
+
+<p>Now, I attached an entire research paper (<a href="https://drive.google.com/file/d/1UNFshEfII5MgMlAWUpAy_bVl5W8HIlJF/view?usp=sharing">this one</a>) in order to generate a PRD and that was OK but it did not work perfectly because at the end of the day your prompt has to have some more details and you can provide all the links, documentation, research papers, whitepapers, and such, but you will need to put in the hard work of editing and ensuring you are prompting your LLM with clear requirements that need to be reflected in the PRD. So here is the series of steps I followed in order to get the right PRD.</p>
+
+<h2 id="step-2-go-section-wise-and-explain-your-motivation">Step 2: Go section-wise, and explain your motivation</h2>
+
+<p>You really need to know what you want, <em>why</em> you want it, and need to convey that to the model. Just like Marco started with explaining to Gordon that this was for dessert, and did not explain how to add spices (in order to avoid confusing Gordon) until he got to the point of adding them in, first I get to <em>core</em> functionality and only then I get to UI/UX.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is good! But please make a reputation functionality (thumbs up and thumbs down application to a product seller by the product buyer who saw the advertisement for it) an explicit feature that can also be enabled or disabled based on Empirica factor within a treatment.
+Also please enlist all of the game-specific nuances and select which of these you want to ensure are implemented as factors (hint: if there is a game variable that is changed in different market conditions for testing the effects of staked claims then they should be factors, so that it is easier to randomize them across games. These may include but not be limited to the cost, price, or value of a product, number of each type of seller--honest, cheat, bait-and-switch--in the market, number of human buyers, number of human sellers, number of LLM "agentic" sellers, presence of a stakesEnabled option, then they should be included as a factor)
+Finally, I want you to also describe the UI/UX of each of the stages in detail so that the product designer may be able to better understand what kind of UI layouts to design for the project.
+</code></pre></div></div>
+
+<h2 id="step-3-provide-explicit-instructions-and-link-specific-documentation">Step 3: Provide explicit instructions and link specific documentation</h2>
+
+<p>You will need to ensure the model is aware of documentation especially for custom libraries / software because otherwise you will run into issues with it designing everything from scratch! Marco had to explain to Gordon how to scale the recipe from a 4-serving family dinner into a 75-person seated dinner!</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>First, you must review the documentation for Empirica v2 here: https://docs.empirica.ly/, then review the codebase here: https://github.com/empiricaly/empirica, and ensure that you understand how to architect this platform so that your product requirement document is aligned with features that the library supports.
+The rest of your suggestions are fantastic, now please include a functionality where pricing for a product is determined by a slider that the producer selects. This allows elastic pricing (you can restrict to integer price values). The producer will choose to produce a certain quality of the product, but the pricing will be set by them to either be above or below fair market price for that product (fair market price falls exactly between the cost of production of a product and value gained by the consumer from its purchase). Profit is defined as the price minus the cost of production for the seller while consumer utility is defined as the value gained by the consumer minus the price paid for a product. So if the price selected by the seller on the slider is higher than the fair market price, then the seller makes a profit, and the consumer loses some utility compared to purchasing at the fair market price. Note that you will have to visually display the fair market price on another slider so that the seller makes an explicit choice about the production of a product.
+Also note that if there are no humans on either side of the marketplace, that side should be automated (as in, there will be automatic decisions made by bots and LLM agents according to the strategies and prompts that they are preprogrammed or prompted with, respectively). Then, any humans entering the marketplace should only be assigned to roles that are intended for humanParticipants, and you need to accommodate the player assignment accordingly.
+</code></pre></div></div>
+
+<h2 id="step-4-modularize-the-results">Step 4: Modularize the Results</h2>
+
+<p>Marco helped Gordon set up individual stations for scaling up the recipe for the dinner. Similarly, it is always better to split output into sections so that even when Cursor AI is programming your feature, it goes through tasks step-wise <em>and asks for your approval after each stage</em>. You <strong>must</strong> manually review the code Cursor AI writes otherwise you will almost certainly get fucked. This is not a joke. AI uses initial garbage code to generate even more garbage code. It is going to waste 2 mins today or 2 hrs tomorrow. You decide.
+Never get AI to write code for an entire feature in a single step!</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ok now review your PRD and ensure that it present a series of steps and separate stages that achieve the desired functionality in a clear, concise, and logical order for engineers to read it and start their programming implementation in Empirica. Generate a corresponding final draft with the required information.
+</code></pre></div></div>
+
+<h2 id="step-5-use-examples">Step 5: Use Examples</h2>
+
+<p>Marco used the examples of mousse, pudding, and flan to help Gordon recognize their past experiences and process of making creamy desserts. For my part, as I noted the output of the model, I realized that this was looking too generic as a PRD and I could do better if I gave it examples of a product (in this case a behavioral experiment) that was built off of the base package I was using. This was super helpful because it included basic patterns from the library I was using <a href="https://docs.empirica.ly">Empirica</a> and allowed Cursor to follow those basic patterns and use builtin functionality rather than what it would otherwise do which is <em>build everything from scratch in JS</em>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>First, consider the code structure in this example repository and accordingly structure the files you will edit and components that you will create in your codebase following best practices for programming javascript based libraries: https://github.com/JamesPHoughton/prisonersDilemmaDemo
+Summarize what you have learnt from this repository about the structure of Empirica projects and accordingly propose a file structure for our two-sided marketplace design. Then, lay out the stages that you will develop and the minimal set of variables that need to be defined in each stage. Next, go into the logic that needs to be included in each stage to account for market state updates. And finally, describe the UI/UX elements that need to be presented to the user in each stage so that the engineers reviewing this can understand what functionality is required on the frontend for the implementation of the product features you are describing.
+When you are doing this, please be clear on the primitives for the experiment: cost of production (producer pays this), value of consumption (consumer gains this), and a fair market price that is the average of these two numbers that are originally set by the researchers running the experiment (game parameters). Note that since this is a product marketplace, the game parameter values are set as the minimum (low) quality, and maximum (high) quality and because of the slider permitting pricing flexibility for advertisements (that may mislead customers about the true quality of the product) the market price set by the producer need not match the fair market price but rather can take any interim integer values as well. This means that producers may actively decide to cheat consumers by charging them more (or less, though that would lose the producers money) than the fair market price for a product. Advertisements can be either high quality or low quality.
+Producers make 4 choices in this game -- and this includes human producers, pre-programmed 'bot' producers that adapt to market conditions each round, and large language model based 'agentic' bot producers (three types: honest, cheat, and bait-and-switch) that dynamically determine these choices based on market conditions each round:
+Choice of true quality of the product (high or low)
+Choice of market price (between high and low cost price and the value of the product).
+Choice of application of the truth warrant to a product
+Choice of whether to rebrand and reenter the marketplace under a new seller name with their reputation history and warrant history wiped clean.
+Consumers make two choices in this marketplace:
+When shown products, they will decide whether or not to buy each product, for whatever number of products that their budget permits them to pay for.
+When shown the results of their product purchase, they may elect to challenge any warranted product claims presented in product advertisements based on which they decided to purchase the product(s).
+Design a PRD for the game accordingly.
+</code></pre></div></div>
+
+<h2 id="step-6-introduce-new-elements">Step 6: Introduce new elements</h2>
+
+<p>The spices and all the other novelty is only introduced <em>after</em> you are sure your base instructions are clearly being followed. Only introduce new elements (read: bells and whistles) on top of your core feature <strong>AFTER</strong> your base functionality is crystal clear. There is absolutely no need to do it all at once and in fact you will almost certainly fail if you try to do so. Here, I start to introduce LLM bots into my experiment.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is a great start, and I want you to maintain this level of clarity when it comes to the design of the PRD for the experiment.
+I want to make a change from the design presented earlier: we will enable ads to be of two qualities and the choice is made by the seller: high quality and low quality ads are both possible to produce.
+Also, the LLM agent will use open-source javascript based libraries so that we avoid prompting and instead focus on programming language models so please review what axllm.dev and dspy suggest when it comes to a basic implementation within javascript: https://axllm.dev/ and https://dspy.ai are the URLs for each of them.
+</code></pre></div></div>
+
+<h2 id="step-7-get-minimum-viable-output">Step 7: Get minimum viable output</h2>
+
+<p>Process matters a lot: that’s why Marco could fix mistakes that Gordon made even after he f*cked up. Explicitly prompt your model to generate output useful for build-test-deploy cycles so that the generated PRD is useful to buiold and test in an iterative manner (remember you must test the code at each iteration, not just after you’ve built the entire system out).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Great, let's structure our work as appropriate for a series of iterative build-test-deploy cycles for creating this marketplace starting with the prisonersDilemma demo (whose code is available at this Github URL: https://docs.empirica.ly/tutorials/beginner-experiment-prisoners-dilemma/part-4-coding-the-prisoners-dilemma-game) and indexing the documentation for this experiment (available at https://docs.empirica.ly/tutorials/beginner-experiment-prisoners-dilemma/part-4-coding-the-prisoners-dilemma-game) and suggesting how to build a multi-stage experiment as a single-round marketplace with two-sided competitive gameplay between buyers and sellers (including agentic AI sellers) in the marketplace.
+</code></pre></div></div>
+
+<p>This is how we generated the file below, which you can now go through in detail to understand what the PRD looks like. That PRD was the basis of 14 iterative build-test-deploy cycles with Cursor as I built out my platform. And even after each step in that 14-step process, I had to go through debugging stages which I enlisted in the debugging doc that is the <a href="https://gist.github.com/SwapneelM/6ae57c10ae209361d6782e86d0801db0#file-cursor-codebase-fixes-md">second file in the Github gist I shared earlier</a>.</p>]]></content><author><name></name></author><category term="blog" /><category term="template" /><category term="students" /><category term="getting-started" /><summary type="html"><![CDATA[We used AI assistants in Cursor AI to recreate 2 years of work by ~20-member team of undergraduate students, graduate students, a postdoctoral researcher, and a couple of professors and I am writing this article to help people understand what it takes to write code using AI copilots.]]></summary></entry><entry><title type="html">How to Ask Better Questions</title><link href="http://localhost:4000/how-to-ask-better-questions/" rel="alternate" type="text/html" title="How to Ask Better Questions" /><published>2022-07-01T00:00:00-04:00</published><updated>2022-07-01T00:00:00-04:00</updated><id>http://localhost:4000/how-to-ask-better-questions</id><content type="html" xml:base="http://localhost:4000/how-to-ask-better-questions/"><![CDATA[<p>I really like talking to students. It’s fun to see the excitement, enthusiasm, and intelligence that each successive generation has developed, especially since (imho) each generation seems so much smarter than the next. So in principle I always plan to respond to students messaging me on different platforms but in practice I am unable to devote time to write back to each message. I feel bad not responding to individuals who asked me about my past work, but I did think of them when I carefully described every project I have ever worked on in the internship description field on LinkedIn, where they originally connected with me. I uploaded multiple versions of my resume to a public github.io website year-on-year so people have access to it when they’re building theirs. So while I love to talk to students and help them make important decisions for their lives, I find it to be tiring if it only involves directing them towards easily accessible information that is one click away or on my website already. It’s really good practice, in my opinion, to cultivate the <a href="https://stackoverflow.com/help/how-to-ask">StackOverflow ‘question-asking guidelines’</a> in life. But most importantly, this essay is, like most other posts on this website, to 18-year old Swapneel who asked a lot of busy, kind, and intelligent people some really stupid questions that they spent time answering anyway. I will always owe it to those kindly folks to try and help other students ask better questions than I did.</p>
 
 <p>This essay does not explicitly cover cold emails because that’s a slightly different ball game, but I will say there are similar principles involved that require you to write short, thought-provoking emails that make the other person want to write back.</p>
 
@@ -1211,179 +1371,4 @@ The Backup Plan</p>
   <li>Pack of Cards: Monopoly Deal, Uno, plain old playing cards; try to stuff in whatever you can once you’re done packing the important stuff. Extremely useful when you decide to travel around with your friends and have nothing to do once you’ve uploaded 1500 snap-stories from the car/train/hotel.</li>
 </ol>
 
-<p>So that covers pretty much all of the basic items you’d require to survive comfortably in a new environment. I’ll update the post with relevant information over time. But for now, good luck preparing for your travels!</p>]]></content><author><name></name></author><category term="perspective" /><category term="student" /><summary type="html"><![CDATA[This is the first of a 2-part series. While this one is focused on making preparations for the travel, the next one will (hopefully) provide deeper insight into how life works and what to expect from the outside world based on my experience so far.]]></summary></entry><entry><title type="html">CERN Openlab Summer Student Program</title><link href="http://localhost:4000/cern-openlab-internship/" rel="alternate" type="text/html" title="CERN Openlab Summer Student Program" /><published>2017-04-07T00:00:00-04:00</published><updated>2017-04-07T00:00:00-04:00</updated><id>http://localhost:4000/cern-openlab-internship</id><content type="html" xml:base="http://localhost:4000/cern-openlab-internship/"><![CDATA[<p>This post is about my internship within the CERN Openlab Program in 2017 and includes a questionnaire (hopefully) useful for students applying to the program.</p>
-
-<p><em>Disclaimer: The views represented here are solely my own, and do not reflect those of my employer.</em></p>
-
-<p>Over the past summer, I worked as an intern at the European Organisation for Nuclear Research (CERN). It is an international research collboration working on high-energy physics and computing, set in a picturesque location cradling the borders of France and Switzerland. I have been receiving a lot of messages about the application process and this post is an attempt to try and address some queries regarding the experience.</p>
-
-<p>I had filled out a highly detailed application form last October, wondering if I had a snowball’s chance in hell to get selected into one of the most prestigious international internship programs at a research collaboration that was truly unparalleled in its domain. After a few months of sleepless nights and particle-filled daydreams, I received the much-awaited email from CERN…</p>
-
-<p><em>It was a rejection email from the Summer Student program.</em></p>
-
-<p>It was a disappointing week for me as I tried to move on and apply for other internships. All of a sudden, there was a ray of light shining through this darkness, in the form of an offer to undertake research at Stanford University. I jumped at the marvelous opportunity and initiated the formalities necessary for the process.</p>
-
-<p>As I finally completed my US Visa Application and acceptance of the Stanford offer, I received yet another email from CERN.</p>
-
-<p>I still remember that was the day I was discussing something with my mother who was cooking. I was leaning against the door then, and we were casually chatting when the notification popped up.</p>
-
-<p><img src="/assets/images/openlab-selection-email.png" alt="The Openlab Summer Student Program Selection Email" /></p>
-
-<p>I had read in novels about someone that ‘fell flat down’ on receiving some news. For the first time it actually happened to me. I literally just dropped down to the floor in a cross-legged position and told mom:</p>
-
-<blockquote>
-  <p>“Ma, I got into CERN”</p>
-
-  <p>“Huh, what are you saying? And get up, who asked you to sit there!”</p>
-
-  <p>“Ma… I got into CERN!”</p>
-
-  <p>“What is that?”</p>
-
-  <p>“CERN, Ma! The internship that I applied to in Switzerland?”</p>
-
-  <p>“If you keep going around like a fool applying to all these places how do you expect me to remember!”</p>
-</blockquote>
-
-<p><em>My mother, ladies and gentlement.</em></p>
-
-<p>Getting back to the story, I spoke with my potential advisor at CERN and the Professors at Stanford discussing at length about what would be a better idea for me. Despite not knowing me beyond our email threads, the professors were extremely generous with their time and supportive of my decision to accept the offer from CERN. My Openlab supervisor even offered to accommodate dates of the program such that I could do both! It was then that I knew that I had struck gold in terms of people.</p>
-
-<p>To be fair, CERN <em>was paying</em> me while Stanford required me to (more or less) support myself. More importantly, the professors were open to discussing potential opportunities in the future. That made my decision slightly easier to make. Anyway, fast-forward to a month later, and there I was sitting on the Y Bus traveling from Geneva Airport to my hotel in Saint-Genis Pouilly, France (yep, work in Switzerland, live in France - the CERN life ;))</p>
-
-<p><img src="/assets/images/geneva.jpeg" alt="The Openlab Program is hosted at CERN in Geneva, Switzerland" />
-<em>The City of Geneva</em></p>
-
-<p>My internship at CERN has been an amazing learning experience not just in terms of the work but also in terms of people — each with a unique story to tell. These factors have contributed in no small part to the life-changing experience this has been. I arrived as a wide-eyed teenager, and left as a wider-eyed teenager, with an insatiable curiosity to learn more.</p>
-
-<blockquote>
-  <p>CERN drives you to push a little harder, seek a deeper understanding, and try to find a better solution to the problems you work on.</p>
-</blockquote>
-
-<p>My work was understanding, modeling, and ultimately solving a problem — also about addressing the complexities that arose when we attempted to expand the solution to a broader set of applications. With an organisation of this scale, there are going to be multiple problems of a similar nature, with fine lines of separation. As my supervisor told me, it’s a personal decision whether you’d want to focus on a microscopic solution that can address a niche problem which may impact macroscopic issues intrinsically, or to attempt to create an an inherently macroscopic solution that could potentially be tweaked to address challenges affecting narrower segments of work in greater depth. CERN afforded me the opportunity to choose my path in spite of being just one of many hundreds of summer students. Amazingly enough, I learnt over the course of the summer, this was a privilege extended to all members of CERN regardless of position or responsibilities.</p>
-
-<p>The credit for a fantastic summer belongs, in no small part, with my supervisors, both of whom were the driving forces constantly challenging me to research and review better practices and improve the models for my project — Anomaly Detection in Database Connections. Mr. Prasanth Kothuri and Mr. Daniel Lanza Garcia helped me figure out the research subjects that aligned with my interests and constantly supporting me in terms of resources and domain expertise. If Mr. Kothuri was doubtful about the solution to my issues that were seemingly esoteric, he would encourage me to find others at CERN who possessed the domain-specific knowledge and even accompanied me to some seminars in order to seek the same understanding as I would — and eventually figure out a solution together.</p>
-
-<blockquote>
-  <p>It was really encouraging to find this kind of support being extended and responsibilities being shared with us in one of the most active and experienced groups at CERN compared to the common treatment as ‘just an intern.’</p>
-</blockquote>
-
-<p><img src="/assets/images/globe-of-science.jpeg" alt="CERN Openlab: Globe of Science and Innovation" />
-<em>The Globe of Science and Innovation — emblematic of the values CERN embodies (Picture Credit: <a href="https://jessicawallis.files.wordpress.com/2015/09/18680544482_2cccb5efac_b.jpg">Jessica Wallis</a>)</em></p>
-
-<p>The project I was working on involved detecting anomalous database connections in order to serve multiple purposes including but not limited to analysing and deriving insights from usage patterns, monitoring the number of connections, and ultimately database security. With no real benchmarks or training data in this field, we set out to find a solution and use various machine learning practices and models to apply unsupervised learning and arrive at a conclusive result. We managed to utilise an ensemble of different models that measured deviation based on differing metrics. Further, we cross-verified results and extracted common anomalies that were then flagged to be verified. Through my interactions with my peers within the same program, I realized a lot of us were working on the same problem with different forms of data. I was motivated to move beyond the scope of my project and build an intuitive system that could not only provide a common base to leverage these models, but also offer an intuitive interface for non-technical users, seeing as a lot of CERN staff include physicists that may not be familiar with cutting-edge computing practices. It was a start towards utilising the research that has gone into multiple Openlab projects into a single end-user application.</p>
-
-<p>On the personal front, this experience has taught me a lot about people and the way they look at a problem.</p>
-
-<p><strong>I had always been reading about how it helps to have different perspectives towards the same problem and I often wondered what it meant. Meeting students literally from the other side of the globe has taught me that there is a lot of truth to this statement.</strong></p>
-
-<p>I was lucky enough to have probably the best roommates I’ve ever had — notwithstanding the fact that these are the only roommates I’ve ever had. We have cooked, cleaned, driven, trekked, hitchhiked, played, and somersaulted off boats together. Openlab has really provided a unique platform that has resulted in friendships across continents and a network that encompasses most countries across the world. It leads to a sense of security — no matter where we go on after this experience, we will have friends nearby that we can count on in times of need or maybe just to blow off some steam over the weekends.</p>
-
-<p><img src="/assets/images/openlab-interns-cms.png" alt="CERN Openlab Internship" />
-<em>A few Openlab Interns at one of the Experiments</em></p>
-
-<p>I could rave about the past summer until the end of time because it’s hard to out all my experiences into a single blog post but I figure I have to sum it up at some point so I would like to conclude with some quotes from one of the wiser role models in my life, Master Shifu from Kung-Fu Panda, as answers to some of the common questions people have been asking me about getting into CERN:</p>
-
-<p><strong>What is CERN looking for? What do I write on my application? How did you get into CERN?</strong></p>
-
-<p>“Your real strength comes from being the best you you can be. Who are you? What are you good at? What makes you, you?”
-“There is no secret ingredient”</p>
-
-<p>Write about yourself, your experiences, your projects, and trust the universe to align the rest of the factors. Maybe you get in, maybe you don’t. All I can say is that you need to ensure you research every detail about CERN before applying because my motivation for applying was derived from the nature of work being undertaken within the specific department that ultimately accepted me. Keep trying until you make it, because honestly, if I did it, you can.</p>
-
-<p><strong>How was your experience at CERN? Is it really worth it?</strong></p>
-
-<p>(in case the blog post wasn’t clear enough)</p>
-
-<p>I would do it all over again, twelve times over. Because thirteen is just an unlucky number.</p>
-
-<p><strong>Are the other programs similar? Is it worth undertaking other opportunities at CERN?</strong></p>
-
-<p>My perspective is rather biased because like I said, I’ve had an amazing summer. I would always want to go back to CERN (and I did get back as a Technical Student for a year following Openlab). However there are periods where I’ve been told there’s very little activity, when the climate isn’t all that great, and there are hardly any people on the streets of Geneva. It’s not ideal, but your work is undoubtedly going to remain challenging and interesting regardless of how it is outside the window. It’s just that life becomes slightly slow. You must learn to adapt at some point, and this is a great place bustling with activities ranging from Zumba and Krav Maga to lunch hours with random people in order to get to know them better. It’s such a diverse environment that you never going to be bored with so many different nationalities around!</p>
-
-<p><strong>What is the format for your resume? Can you share it with us?</strong></p>
-
-<p>(added this since there have been so many students asking me about this)</p>
-
-<p>Pretty much a no-brainer, there is no single acceptable format for the resume. All they ask for is a document that carries your experience, achievements, and possibly projects in a succinct, neat format. It is really a pretty simple document to create using the infinite wisdom of the internet.</p>
-
-<p><strong>I have been selected as a reserve candidate. What are my chances of getting selected?</strong></p>
-
-<p>The nature of selection at CERN (Openlab, Technical Student, and Summer Student), as I probably mentioned already (or maybe not) is that they have unique projects each year, for which they require a diverse skillset. There is no single set of skills for which they have an opening each year.</p>
-
-<p>Furthermore, each supervisor proposes his/her own set of students — there isn’t really a centralized selection committee to filter through the thousands of candidates that apply (although there is one to oversee final selections). So again, nobody can really tell you what your chances are based on past candidates or projects. Please refrain from spamming people with emails regarding this particular aspect because when most of them say they aren’t aware, they really do mean it.</p>
-
-<p>Specifically for the ‘reserved candidates’ I am unaware of the exact process — all I can tell is that it is not an outright rejection but neither does it imply with certainty that your selection is imminent. That is all I know of at this point.</p>
-
-<p><strong>With that, I’ve reached the end of the tiny window that I’ve provided into my work and life at CERN. It was an amazing eight weeks and I look forward to seeing more of this place in the near future!</strong></p>
-
-<p><em>Update: I am back at CERN, working as a Technical Student so I’ll probably be updating this article to eliminate any inaccuracies for posterity.</em></p>
-
-<h2 id="further-reading-cern-and-openlab">Further Reading: CERN and Openlab</h2>
-
-<p>If you’d like to know more about Openlab or CERN in general please refer to some of the answers I’ve written on Quora or check out my <a href="/assets/pdf/slides/internships.pdf">presentation on Internships</a>:</p>
-
-<ol>
-  <li>
-    <p><a href="https://www.quora.com/How-did-Swapneel-Mehta-become-a-summer-intern-at-CERN-What-did-he-do-in-the-internship/answer/Swapneel-Mehta">How did Swapneel Mehta become a Summer Intern at CERN? What did he do in the internship?</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/What-should-I-do-to-get-a-summer-internship-at-CERN/answer/Swapneel-Mehta">What should I do to get a summer internship at CERN?</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/What-is-it-like-to-work-at-CERN/answer/Swapneel-Mehta">What is it like to work at CERN?</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/What-is-the-process-for-being-selected-as-a-summer-intern-in-Summer-Students-Program-at-CERN/answer/Swapneel-Mehta">What is the process for being selected as a summer intern in Summer Student’s Program at CERN?</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/How-do-I-get-back-to-CERN-I-spent-a-few-months-there-when-I-was-a-computer-engineering-student/answer/Swapneel-Mehta">How do I get back to CERN? I spent a few months there when I was a computer engineering student.</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/Are-the-results-of-the-CERN-experiments-satisfactory-compared-to-the-billions-spent-for-construction/answer/Swapneel-Mehta">Are the results of the CERN experiments satisfactory compared to the billions spent for construction?</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/Can-CERN-be-made-self-sufficient-by-utilising-a-small-amount-of-the-profits-generated-by-its-technology/answer/Swapneel-Mehta">Can CERN be made self-sufficient by utilising a small amount of the profits generated by it’s technology?</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/Who-can-get-an-internship-at-CERN-and-how/answer/Swapneel-Mehta">Who can get an internship at CERN and how?</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/What-are-the-various-ways-to-work-for-CERN/answer/Swapneel-Mehta">What are the various ways to work for CERN?</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/What-are-the-kind-of-projects-that-students-work-on-during-their-summer-internship-at-CERN/answer/Swapneel-Mehta">What are the kind of projects that students work on, during their summer internship at CERN?</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/Can-I-get-an-internship-at-CERN-as-a-summer-student-working-on-some-CS-related-project-if-Im-not-a-CS-student-at-college/answer/Swapneel-Mehta">Can I get an internship at CERN (as a summer student) working on some CS related project if I’m not a CS student at college?</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/Is-it-possible-to-do-a-summer-internship-2-Months-Im-from-Mumbai-University-and-they-only-give-one-month-holidays/answer/Swapneel-Mehta">Is it possible to do a summer internship?(2 Months) I’m from Mumbai University, and they only give one month holidays.</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/What-is-your-view-about-CERN-and-will-the-Higgs-Boson-lead-to-the-end-of-the-universe/answer/Swapneel-Mehta">What might be the cost for a Bangladeshi student to join the Cern Summer Programme?</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/How-can-I-get-an-internship-at-CERN-I-am-an-Indian/answer/Swapneel-Mehta">How can I get an internship at CERN (I am an Indian)?</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/Did-CERN-destroy-the-universe-in-2012/answer/Swapneel-Mehta">Did CERN destroy the universe in 2012?</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/Can-Indian-engineering-students-apply-for-summer-internship-at-CERN/answer/Swapneel-Mehta">Can Indian engineering students apply for summer internship at CERN?</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/Does-cern-pay-for-internships/answer/Swapneel-Mehta">Does cern pay for internships?</a></p>
-  </li>
-  <li>
-    <p><a href="https://www.quora.com/What-specific-skill-set-should-an-undergrad-possess-to-land-an-internship-at-CERN/answer/Swapneel-Mehta">What specific skill set should an undergrad possess to land an internship at CERN?</a></p>
-  </li>
-</ol>
-
-<h4 id="references">References</h4>
-
-<p><strong>Cover Image: One of the experiments at CERN.</strong></p>
-
-<p><em>Picture Credit <a href="http://quantumgrid.com/wp-content/uploads/2015/03/hadron-collider.jpg">Quantum Grid</a></em></p>
-
-<p>Originally published at <a href="https://punintended404.blogspot.com">Punintended 404</a> on April 7, 2018.</p>]]></content><author><name></name></author><category term="tech-job" /><category term="cern" /><category term="internship" /><summary type="html"><![CDATA[This post is about my internship within the CERN Openlab Program in 2017 and includes a questionnaire (hopefully) useful for students applying to the program.]]></summary></entry></feed>
+<p>So that covers pretty much all of the basic items you’d require to survive comfortably in a new environment. I’ll update the post with relevant information over time. But for now, good luck preparing for your travels!</p>]]></content><author><name></name></author><category term="perspective" /><category term="student" /><summary type="html"><![CDATA[This is the first of a 2-part series. While this one is focused on making preparations for the travel, the next one will (hopefully) provide deeper insight into how life works and what to expect from the outside world based on my experience so far.]]></summary></entry></feed>
