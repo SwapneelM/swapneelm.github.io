@@ -134,22 +134,45 @@
           </header>
 
           <article>
-            <p>Bringing Behavioral Economics Theory to Practice: My research focuses on the economic drivers of digital trust erosion, particularly the externalities caused by fake ads in two-sided marketplaces (e.g., social networks, e-commerce platforms). Using Nobel Prize-winning economic theories from Spence, Coase, and Stiglitz, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414261" rel="external nofollow noopener" target="_blank">van Alstyne, 2023</a> proposes that consumer harms from misleading claims be measured through the magnitude of decision errors induced by misleading claims. This quantifiable metric allows us to internalize market externalities and design interventions that achieve equilibrium between content producers and consumers.</p>
+            <ul>
+  <li>
+    <p>My postdoctoral research focuses on the economic drivers of digital trust erosion, particularly the externalities caused by fraudulent advertisements in two-sided marketplaces (e.g., social networks, e-commerce platforms).</p>
+  </li>
+  <li>
+    <p><strong>Motivation</strong>: Using Nobel Prize-winning economic theories from Spence, Coase, and Stiglitz, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414261" rel="external nofollow noopener" target="_blank">van Alstyne, 2023</a> proposes that consumer harms from misleading claims be measured through the magnitude of decision errors induced by misleading claims. This quantifiable metric allows us to internalize market externalities and design interventions that achieve equilibrium between producers and consumers in information marketplaces.</p>
+  </li>
+  <li>
+    <p><strong>Impact</strong>: Our research has resulted in an invited talk to Google’s Monetized Policy Team, letters of commitment to support our research from Bluesky (decentralized social platform with 30+ million users) and the Trust and Safety Foundation (one of the leading research professional associations in T&amp;S).</p>
+  </li>
+</ul>
 
-<h2 id="building-a-real-time-online-advertising-marketplace">Building a Real-time Online Advertising Marketplace</h2>
+<h2 id="building-a-virtual-online-marketplace-for-multi-turn-human-ai-interaction">Building a Virtual Online Marketplace for Multi-turn Human-AI Interaction</h2>
 
-<p>To test these theories, in the past year, I helped my PIs set up the <a href="https://truthmarket.com" rel="external nofollow noopener" target="_blank">Platform Governance lab</a> at BU and MIT, and developed an experimental marketplace where advertisers escrow a “truth warrant” — a monetary deposit signaling the credibility of their claims (aka providing advertisers the option to ‘put their money where their mouth is’). In our ads market, consumers can challenge misleading claims at a nominal cost, with disputes adjudicated by a peer jury. In over 1,350 rounds of human-buyer experiments, this intervention:</p>
+<p>I helped my PIs set up the <a href="https://truthmarket.com" rel="external nofollow noopener" target="_blank">Platform Governance lab</a> at BU and MIT, and developed an experimental marketplace where sellers advertise products to buyers over multiple rounds of sales. Ads may not accurately represent true product quality, introducing the option for a seller to deceive a buyer. We introduce an economic intervention called <em>staking</em> that:</p>
 
 <ol>
-  <li>Increased profits for honest advertisers.</li>
-  <li>Penalized deceptive advertisers, significantly reducing their profitability.</li>
+  <li>Increases profits for honest advertisers.</li>
+  <li>Penalizes deceptive advertisers, significantly reducing their dishonest sales and profitability.</li>
 </ol>
 
-<p><img src="/assets/img/wise-truthmarket-screencap.png" alt="Building an interactive advertising marketplace for online advertising experiments"></p>
+<!-- ![Building an interactive advertising marketplace for online advertising experiments](/assets/img/wise-truthmarket-screencap.png) -->
 
-<h3 id="creating-reproducible-behavioral-experiments-with-human-participants">Creating Reproducible Behavioral Experiments with Human Participants</h3>
+<div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 2em;">
+  <div style="flex: 1; min-width: 300px;">
+    <p style="text-align: center; font-weight: bold; margin-bottom: 8px;">Buyer Gameplay</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/UYqRWRiqOw4" title="Buyer Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="max-width: 100%;">
+    </iframe>
+  </div>
+  <div style="flex: 1; min-width: 300px;">
+    <p style="text-align: center; font-weight: bold; margin-bottom: 8px;">Seller Gameplay</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/pQC36cFApVs" title="Seller Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="max-width: 100%;">
+    </iframe>
+  </div>
+</div>
 
-<p>In our research, we have created reproducible infrastructure to run interactive online experiments at scale. The marketplace supports experiments where we can run tens of parallel “games” with 5-8 advertisers and 5-8 buyers in an e-commerce setting that captures the intricacies of online sales for both sides e.g. choosing how accurately product quality is reflected in an advertisement, selecting from a number of products to purchase, having a limited wallet to spend money, relying on reviews and adding ratings after learning of a product’s true quality, post-purchase. Modeling online sales is a challenging process, and we make it seamless, in order to reflect these complexities. In our framework, built atop MIT’s <a href="https://empirica.ly" rel="external nofollow noopener" target="_blank">Empirica library</a>, we can now launch online sales experiments at the click of a button.</p>
+<h3 id="replicable-behavioral-experiments">Replicable Behavioral Experiments</h3>
+
+<p>We have created reproducible infrastructure to run interactive online experiments at scale. The marketplace supports experiments where we can run tens of parallel “games” with 5-8 advertisers and 5-8 buyers in an e-commerce setting that captures the intricacies of online sales for both sides e.g. choosing how accurately product quality is reflected in an advertisement, selecting from a number of products to purchase, having a limited wallet to spend money, relying on reviews and adding ratings after learning of a product’s true quality, post-purchase. Modeling online sales is a challenging process, and we make it seamless, in order to reflect these complexities. In our framework, built atop MIT’s <a href="https://empirica.ly" rel="external nofollow noopener" target="_blank">Empirica library</a>, we can now launch online sales experiments at the click of a button.</p>
 
 <p><img src="/assets/img/truthmarket-workflow.png" alt="The Flowchart of User Activity in our Two-Sided Online Ads Marketplace"></p>
 
@@ -164,11 +187,11 @@
 
 <p>I demonstrated how platforms could integrate mechanisms like truth warrants to reduce false claims without resorting to censorship or central authority. Field experiments are underway to compare human and bot participants’ strategies in two-sided marketplaces under different incentive structures. We are also designing a political marketplace to test these theories on social networks.</p>
 
-<h2 id="intervening-on-manipulative-genai-sellers">Intervening on Manipulative “GenAI” Sellers</h2>
+<h2 id="curbing-strategic-deception-by-ai-sellers">Curbing Strategic Deception by AI Sellers</h2>
 
-<p>Generative artificial intelligence and ‘agentic’ sellers are already supporting advertisers in online marketplaces like Amazon and eBay. It is extremely important to develop economic models of their benefits as well as a risk assessment of the potential harms, in light of the risks from deploying GenAI in consumer-facing applications.</p>
+<p>Generative artificial intelligence and <em>agentic</em> AI sellers are already supporting advertisers in online marketplaces like Amazon and eBay. It is extremely important to develop economic models of their benefits as well as a risk assessment of the potential harms, in light of the risks from deploying GenAI in consumer-facing applications.</p>
 
-<p>Our marketplace was extended to analyze agentic sellers using large language models (LLMs) can affect sales. Results showed that while GenAI/LLM sellers employed deceptive strategies to maximize sales in control settings (‘Reputation Market’), the truth-warrant mechanism (‘Warrants’ market) curtailed these behaviors effectively.</p>
+<p>Our marketplace was extended to analyze agentic sellers using large language models (LLMs) can affect sales. Results showed that while GenAI/LLM sellers employed deceptive strategies to maximize sales in control settings (‘Reputation Market’), the <em>staking</em> mechanism (‘Warrants’ market) curtailed these behaviors effectively.</p>
 
 <p><img src="/assets/img/gen-ai-sellers.png" alt="GenAI sellers make money in the control market in order to maximize profit, but our intervention successfully limits their dishonest sales"></p>
 
