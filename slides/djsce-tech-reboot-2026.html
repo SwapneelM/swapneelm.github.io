@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>Tech Reboot Session 7: Research Topics — Swapneel Mehta</title>
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css"/>
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/theme/serif.css" id="theme"/>
+<style>
+  :root {
+    --navy: #1B2A4A;
+    --coral: #E8734A;
+    --teal: #00A89D;
+    --light-bg: #F7F8FA;
+    --muted: #6B7280;
+    --border: #E5E7EB;
+  }
+
+  /* Let serif theme handle all typography. Only override colors. */
+  .reveal { color: var(--navy); }
+  .reveal h1, .reveal h2, .reveal h3 { color: var(--navy); text-transform: none; }
+
+  /* Single base size for all content slides */
+  .reveal section {
+    text-align: left;
+    font-size: 0.65em;
+    line-height: 1.5;
+    padding: 20px 40px 50px 40px !important;
+    box-sizing: border-box;
+  }
+
+  .reveal ul, .reveal ol { margin-left: 0.3em; }
+  .reveal li { margin-bottom: 0.3em; }
+  .reveal a { color: var(--teal); }
+
+  .accent { color: var(--coral); font-weight: 600; }
+  .teal { color: var(--teal); font-weight: 600; }
+  .muted { color: var(--muted); }
+  .text-center { text-align: center; }
+
+  /* === LAYOUT: Title (centered) === */
+  .title-slide {
+    display: flex !important; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center !important; min-height: 100%;
+  }
+  .divider {
+    width: 4px; height: 50px;
+    background: linear-gradient(to bottom, var(--coral), var(--navy));
+    margin: 16px auto; border-radius: 2px;
+  }
+
+  /* === LAYOUT: Two columns === */
+  .two-col { display: flex; gap: 30px; align-items: flex-start; margin-top: 10px; }
+  .two-col > div { flex: 1; }
+
+  /* === LAYOUT: Stat row === */
+  .stat-row { display: flex; gap: 30px; justify-content: center; text-align: center; margin-top: 16px; }
+  .stat .number { font-size: 1.8em; font-weight: 700; color: var(--coral); }
+  .stat .label { color: var(--muted); margin-top: 2px; }
+
+  /* === LAYOUT: Cards === */
+  .card-row { display: flex; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+  .card {
+    background: var(--navy); color: #fff;
+    border-radius: 10px; padding: 18px 16px; flex: 1; min-width: 180px;
+  }
+  .card h3 { color: #fff; margin-top: 0; text-align: center; }
+  .card p { color: #ddd; }
+  .research-card {
+    background: #fff; border: 2px solid var(--navy);
+    border-radius: 10px; padding: 14px; flex: 1; min-width: 200px;
+  }
+  .research-card h3 {
+    color: var(--navy); margin-top: 0;
+    border-bottom: 2px solid var(--coral); padding-bottom: 4px;
+  }
+
+  /* === LAYOUT: Highlight box === */
+  .highlight-box {
+    background: var(--light-bg); border-left: 3px solid var(--coral);
+    padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0;
+  }
+
+  /* === LAYOUT: Table === */
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  table th { background: var(--navy); color: #fff; padding: 6px 10px; text-align: left; }
+  table td { padding: 6px 10px; border-bottom: 1px solid var(--border); }
+  table tr:nth-child(even) td { background: var(--light-bg); }
+
+  /* === Small elements === */
+  .tag {
+    display: inline-block; background: var(--teal); color: #fff;
+    padding: 1px 8px; border-radius: 10px; font-size: 0.75em; margin: 2px;
+  }
+  .pipeline-step {
+    background: var(--navy); color: #fff;
+    padding: 6px 12px; border-radius: 6px; display: inline-block; margin: 3px;
+  }
+  .pipeline-arrow { color: var(--coral); font-weight: bold; font-size: 1.1em; margin: 0 2px; }
+  .appendix-header {
+    background: var(--light-bg); border-radius: 8px;
+    padding: 8px; text-align: center; margin-bottom: 12px;
+    color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em;
+  }
+
+  /* === Responsive === */
+  @media (max-width: 768px) {
+    .two-col, .card-row, .stat-row { flex-direction: column; }
+    .reveal section { padding: 10px 16px 30px 16px !important; font-size: 0.55em; }
+  }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ============ 1. TITLE ============ -->
+<section>
+<div class="title-slide">
+  <h1>Research and Major Project Topics</h1>
+  <div class="divider"></div>
+  <div class="speaker">
+    <strong>Swapneel Mehta, Ph.D.</strong><br/>
+    Cofounder, SimPPL<br/>
+    Postdoc, Boston University &amp; MIT<br/>
+    March 2026
+  </div>
+</div>
+</section>
+
+<!-- ============ 2. ABOUT SIMPPL ============ -->
+<section>
+<h2>SimPPL: Rebuilding Digital Trust</h2>
+
+<p>SimPPL is a global community of 200+ engineers and researchers working to make reliable information accessible for the global majority. We are a U.S. 501(c)(3) nonprofit that builds responsible computing tools and publishes research at top venues.</p>
+
+<div class="stat-row fragment">
+  <div class="stat">
+    <div class="number">$500K+</div>
+    <div class="label">Raised with collaborators<br/>(Google, Mozilla, Ford, Omidyar)</div>
+  </div>
+  <div class="stat">
+    <div class="number">16+</div>
+    <div class="label">Publications<br/>(AAAI, NeurIPS, ICML, ICWSM)</div>
+  </div>
+  <div class="stat">
+    <div class="number">8</div>
+    <div class="label">Countries<br/>with active partnerships</div>
+  </div>
+</div>
+
+<p>Accepted into the <span class="accent">Fast Forward Tech Nonprofit Accelerator</span> (previous: Amnesty International, Allen Institute for AI, ICFJ). Selected for <span class="accent">UNDP AI Trust and Safety</span> inaugural cohort.</p>
+</section>
+
+<!-- ============ 3. SAKHI: THE STORY ============ -->
+<section>
+<h2>Sakhi: Health Literacy on Mobile</h2>
+
+<p>We asked how to deliver reliable information for critical healthcare needs in multilingual contexts? That research question led to Sakhi: a multilingual platform delivering verified women's health information to mobile phones.</p>
+
+<div class="two-col fragment">
+  <div>
+    <h3>What was built</h3>
+    <ul>
+      <li>Mobile multimodal messaging for health education</li>
+      <li>Monitoring dashboards for last-mile care delivery</li>
+      <li>Gamified rewards for community health workers</li>
+      <li>Multilingual Q&amp;A for reproductive health (1000 Q&amp;A dataset)</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Where it went</h3>
+    <ul>
+      <li>RCT with <span class="accent">100 families</span> in Jalgaon, Maharashtra over 2 years</li>
+      <li>Expanded to <span class="accent">250 families</span> in Bangladesh for menstrual health</li>
+      <li>Presented at Psychology of Technology Conference in DC</li>
+      <li>Technical evaluations with <span class="accent">Cohere</span> (co-authoring publication)</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- ============ 4. SAKHI: THE STUDENTS ============ -->
+<section>
+<h2>The Students Behind Sakhi</h2>
+
+<div class="card-row">
+  <div class="research-card">
+    <h3>Mrunmayi Parkar</h3>
+    <p>Former Program Manager and Research Engineer at SimPPL. Led the Sakhi team. Selected for <span class="accent">MIT IDEAS Social Innovation Challenge</span>.</p>
+    <p>Now: TPM Intern and soon full-time at Google, MS CS at UT Dallas.</p>
+  </div>
+  <div class="research-card">
+    <h3>Nahush Patil</h3>
+    <p>Former Research Engineer at SimPPL. Part of the Sakhi team. Part of team that won the <span class="accent">MIT PKG Center 10K Amazon Prize for Social Good</span>.</p>
+    <p>Now: Intern at an industrial engg. firm and now full-time. MS CS at UT Dallas.</p>
+  </div>
+  <div class="research-card">
+    <h3>Utkarsh Verma</h3>
+    <p>Software Developer, now senior member of the ML Engineering team at SimPPL.</p>
+    <p>B.E. Computer Engineering from <span class="accent">DJ Sanghvi College of Engineering</span> (2021-2025). One of your own.</p>
+  </div>
+</div>
+
+<div class="highlight-box fragment">
+  All three were undergraduates when they built this. Side project, then research project at top venues, then a product serving 450 families across India and Bangladesh.
+</div>
+</section>
+
+<!-- ============ 5. INFLUENCECHECK: THE STORY ============ -->
+<section>
+<h2>InfluenceCheck: Verifying Influencer Claims</h2>
+
+<p>From that same survey, we asked: which influencers are shaping what young people believe about health and finance, and are their claims actually true?</p>
+
+<div class="two-col fragment">
+  <div>
+    <h3>What was built</h3>
+    <ul>
+      <li>A system that verifies claims influencers make in their online videos across Instagram</li>
+      <li>Focused on health and finance sectors, where misleading claims cause real harm</li>
+      <li>Automated claim extraction from video transcripts + fact-checking pipeline</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Where it went</h3>
+    <ul>
+      <li>Presented to the head of <span class="accent">Jagran New Media</span>, who was also head of the <span class="accent">International Fact-Checking Network</span> (IFCN)</li>
+      <li>This person worked collaboratively with the team for a year</li>
+      <li>Presented at the <span class="accent">India AI Summit</span> to Ashwini Vaishnaw (Minister of MeitY)</li>
+      <li>The Jagran head <span class="accent">left his organization to launch a startup</span> around this product</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- ============ 6. INFLUENCECHECK: THE STUDENTS ============ -->
+<section>
+<h2>The Students Behind InfluenceCheck</h2>
+
+<div class="card-row">
+  <div class="research-card">
+    <h3>Dhvani Shah</h3>
+    <p>Built the InfluenceCheck system. Worked directly with the head of the IFCN on influencer claim verification. Now working with NYU Data Science professor, former hedge fund manager to study prediction markets.</p>
+    <p>Currently: <span class="accent">Still an undergraduate</span>, wrapping up her final year.</p>
+  </div>
+  <div class="research-card">
+    <h3>Atmik Shetty</h3>
+    <p>ML Engineer at SimPPL. Co-built InfluenceCheck. Specializes in NLP, LLM inferencing, and optimization.</p>
+    <p>B.E. IT, St. Francis Institute of Technology (2021-2025). <span class="accent">Recently graduated.</span></p>
+  </div>
+</div>
+
+<div class="highlight-box fragment">
+  A product built by two undergraduates convinced the former President of one of the world's most important fact-checking organization to leave his job and build a startup around it. It does not take preexisting knowledge to do good research. It takes determination and an open mind.
+</div>
+</section>
+
+<!-- ============ 7. WHAT GOOD RESEARCH LOOKS LIKE ============ -->
+<section>
+<h2>Real Talk: What Good Research Looks Like</h2>
+
+<div class="two-col fragment">
+  <div>
+    <h3>The problem I see</h3>
+    <ul>
+      <li>Students publishing at low-quality journals because it seems easier</li>
+      <li>To everyone outside your college, <span class="accent">more papers at bad venues = less credibility</span>, not more. You are self-selecting into a community that does not care about research but about posturing</li>
+      <li>The bar for NeurIPS, ICML, and AAAI <strong>workshop papers</strong> is genuinely achievable in 4-6 months with a good research problem</li>
+    </ul>
+  </div>
+  <div>
+    <h3>What matters more than papers</h3>
+    <ul>
+      <li>Write a really good <strong>technical blog post</strong> and release a well-documented library. LLMs will use your library without users even knowing, and you can cite that as impact</li>
+      <li>This is a day and age of <span class="accent">builders</span>. If you are not building, ask yourself why. It is clearly not technology stopping you</li>
+      <li>Research is about <strong>learning new things about the world</strong>, not about writing papers. The point is exploration and genuine curiosity</li>
+    </ul>
+  </div>
+</div>
+
+<div class="highlight-box fragment">
+  When I was in your position, I did research into machine learning and nuclear physics. I had neither expertise nor any idea about the value of either. But doing that research taught me I enjoy working with large datasets, optimization, and productionizing code. The research you do does not have to dictate your career goals.
+</div>
+</section>
+
+<!-- ============ 8. THE JOB MARKET ============ -->
+<section>
+<h2>The Job Market Right Now</h2>
+
+<div class="two-col fragment">
+  <div>
+    <h3>What the data says</h3>
+    <ul>
+      <li><span class="accent">40% of jobs globally</span> exposed to AI, 60% in advanced economies (IMF, 2024). Exposure is not displacement, but it is task redesign</li>
+      <li>AI increased productivity <span class="accent">14%</span> in customer support (NBER) and <span class="accent">37% faster</span> writing tasks (SSRN). Biggest gains for less experienced workers</li>
+      <li>Heavy AI use makes junior developers <span class="accent">less capable</span> of supervising AI effectively (Anthropic)</li>
+      <li>Value capture goes to integrators and infrastructure, not model builders. Foundation models are commoditizing</li>
+    </ul>
+  </div>
+  <div>
+    <h3>What I learned interviewing</h3>
+    <p>I interviewed at <span class="accent">OpenAI, Anthropic, and DeepMind</span> for data science and research engineer roles. Here is what I learned:</p>
+    <ul>
+      <li><strong>Debugging is the new entry-level skill</strong>. Programming is assumed, not differentiating. The bar has shifted to debugging code and planning architecture</li>
+      <li>LeetCode-style interviews are being replaced by <span class="accent">debugging exercises</span> on platforms</li>
+      <li>What differentiates you: systems thinking, the ability to plan, and building things that work in production</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- ============ 9. SKILLS THAT STILL MATTER ============ -->
+<section>
+<h2>Skills That Still Matter</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>What companies test for</th>
+      <th>Why it matters</th>
+      <th>How to build it</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Debugging</strong></td>
+      <td>AI generates code, humans fix it. Entry-level is no longer writing code</td>
+      <td>Debug on platforms, read others' code, contribute to open source</td>
+    </tr>
+    <tr>
+      <td><strong>Planning &amp; architecture</strong></td>
+      <td>Knowing what to build before building it. AI cannot decide what matters</td>
+      <td>Design systems before coding. Write design docs. Lead a project</td>
+    </tr>
+    <tr>
+      <td><strong>Building products</strong></td>
+      <td>A shipped product with real users &gt; 10 papers at low-tier venues</td>
+      <td>Ship something. Deploy it. Get 5 real users. Iterate on feedback</td>
+    </tr>
+    <tr>
+      <td><strong>Research taste</strong></td>
+      <td>Knowing which problems are worth solving. Comes from reading good papers</td>
+      <td>Read 2 papers/week from top venues. Follow researchers. Attend talks</td>
+    </tr>
+    <tr>
+      <td><strong>Communication</strong></td>
+      <td>If you cannot explain what you built, it does not exist to anyone else</td>
+      <td>Write blog posts. Give talks. Document projects with care</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="highlight-box fragment">
+  "How much of this do you do?"
+</div>
+</section>
+
+<!-- ============ 10. HOW TO DO RESEARCH ============ -->
+<section>
+<h2>How We Do Research at SimPPL</h2>
+
+<div class="two-col fragment">
+  <div>
+    <h3>Project pitch (1 page, 4 questions)</h3>
+    <ol>
+      <li><strong>What is the idea?</strong> (2 sentences max)</li>
+      <li><strong>Why is it important?</strong> (2 sentences max)</li>
+      <li><strong>What have others done and how is this different?</strong> (review 4-6 papers)</li>
+      <li><strong>What experiment will highlight this difference?</strong></li>
+    </ol>
+    <p class="muted">Methodology from Rajesh Ranganath (NYU), Dan Fu and Jennifer Widom (Stanford)</p>
+  </div>
+  <div>
+    <h3>Collaborative process</h3>
+    <ol>
+      <li>First meeting: write a <strong>set of questions</strong> together</li>
+      <li>Spend time reading and reviewing papers! Refine your research question before you start looking for answers.</li>
+      <li>Meet 1-3 times/week, iterate for 12-36 weeks</li>
+      <li>First authors handle the hardest subtasks + organizing</li>
+      <li>Last author does mentoring, feedback, and guidance including several 1-2 hour live editing walkthrough</li>
+    </ol>
+  </div>
+</div>
+
+<div class="highlight-box fragment">
+  <strong>Tools we use:</strong> Overleaf, Zotero, cloud compute. <strong>Tools you should learn:</strong> Google Scholar, Semantic Scholar, Elicit, Perplexity for literature reviews. AlphaXiv for paper discussions.
+</div>
+</section>
+
+<!-- ============ 11. ARBITER ============ -->
+<section>
+<h2>Arbiter: Our Research Platform</h2>
+
+<p>Arbiter is an open investigative platform for cross-platform discourse analysis. We analyze posts across X, YouTube, Reddit, Bluesky, and TikTok. Our partners include Deutsche Welle Akademie (Kenya), NEST Center (Mongolia), Jagran New Media (India), and New York Public Radio (US).</p>
+
+<div style="text-align:center;margin:12px 0">
+  <span class="pipeline-step">Collection</span>
+  <span class="pipeline-arrow">&rarr;</span>
+  <span class="pipeline-step">Embedding</span>
+  <span class="pipeline-arrow">&rarr;</span>
+  <span class="pipeline-step">Retrieval</span>
+  <span class="pipeline-arrow">&rarr;</span>
+  <span class="pipeline-step">Clustering</span>
+  <span class="pipeline-arrow">&rarr;</span>
+  <span class="pipeline-step">Labeling</span>
+  <span class="pipeline-arrow">&rarr;</span>
+  <span class="pipeline-step">AI Agent</span>
+</div>
+
+<p>Each stage in this pipeline involves open research questions. I'll present some research questions that will make it a little more intuitive to you what I believe is worth studying for a major project and <span class="accent">use Arbiter as an example</span> to motivate those questions.</p> 
+<div class="card-row">
+  <div class="card">
+    <h3>What makes it different</h3>
+    <p>Cross-platform harms tracing (not just one social network). Designed for journalists and researchers. Investigative social intelligence.</p>
+  </div>
+  <div class="card">
+    <h3>Real-world outcomes</h3>
+    <p>Contributed to Meta's takedown of Bangladeshi networks. Twitter/X Site Integrity followed up on accounts we identified. $15K quarterly revenue.</p>
+  </div>
+</div>
+</section>
+
+<!-- ============ 12. PLUGIN: RETRIEVAL ============ -->
+<section>
+<h2>Better Retrieval for Social Media</h2>
+
+<p>When a journalist asks "show me posts about election manipulation in the Philippines," how do you find the right posts from millions of candidates?</p>
+
+<div class="two-col fragment">
+  <div>
+    <h3>What exists and why it falls short</h3>
+    <ul>
+      <li>Keyword matching misses relevant posts using different words for the same concept</li>
+      <li>Semantic search returns too many vaguely related results</li>
+      <li>Social media text is short and noisy, so standard query expansion adds more noise than signal</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Research questions</h3>
+    <ul>
+      <li>How do you evaluate retrieval quality on social media data where no gold-standard relevance set exists?</li>
+      <li>Can you build better query expansion for non-English languages where training data is sparse?</li>
+      <li>How does retrieval precision change across platforms with different post formats?</li>
+    </ul>
+    <div><span class="tag">NLP</span> <span class="tag">Information Retrieval</span> <span class="tag">Elasticsearch</span></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ EXAMPLE: RETRIEVAL IN ACTION ============ -->
+<section>
+<h2>Example: What Retrieval Looks Like</h2>
+
+<p>A journalist in Kenya types "Ibrahim Traore Burkina Faso" into Arbiter. Two words in, and the system needs to find dozens of related concepts across platforms in multiple languages.</p>
+
+<table class="fragment">
+  <thead>
+    <tr><th>She typed</th><th>What the system also needs to find</th></tr>
+  </thead>
+  <tbody>
+    <tr class="fragment"><td>"Ibrahim Traore"</td><td>Actors: "Captain Traoré," "Capitaine Traoré," "IB"</td></tr>
+    <tr class="fragment"><td>"Burkina Faso"</td><td>Organizations: MPSR, Alliance of Sahel States, CNSP</td></tr>
+    <tr class="fragment"><td><em>(nothing typed)</em></td><td>Events: Wagner Group departure, Sahel sovereignty movement</td></tr>
+    <tr class="fragment"><td><em>(nothing typed)</em></td><td>Phrases: "military junta," "pan-African sovereignty"</td></tr>
+  </tbody>
+</table>
+
+<div class="highlight-box fragment">
+  We analyzed 974 YouTube posts and 1,117 Twitter posts about Traoré. YouTube showed templated promotional accounts using identical sentence structures with only the positive claim swapped out, consistent with AI-generated content. Twitter showed more organic political discourse.
+</div>
+</section>
+
+<!-- ============ 13. THEME DISCOVERY ============ -->
+<section>
+<h2>Theme Discovery from Posts</h2>
+
+<p>Given thousands of social media posts, how do you automatically discover what people are talking about and label those topics in a way that is actually useful?</p>
+
+<div class="two-col fragment">
+  <div>
+    <h3>Current state of the art</h3>
+    <ul>
+      <li>Traditional topic models (LDA) struggle with short text</li>
+      <li>LLMs generate labels but repeat themselves: "IndiGo Flight Disruptions" appeared in <span class="accent">28 out of 53 labels</span></li>
+      <li>We solved this using embedding geometry to guarantee 100% unique labels</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Research questions</h3>
+    <ul>
+      <li>Can you improve clustering for multilingual data where embeddings are weaker?</li>
+      <li>What is the right way to evaluate whether a topic label is "good"?</li>
+      <li>Can you do theme discovery in real-time as posts arrive?</li>
+    </ul>
+    <div><span class="tag">Clustering</span> <span class="tag">UMAP</span> <span class="tag">HDBSCAN</span> <span class="tag">LLMs</span></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ 14. PLUGIN: AI AGENTS ============ -->
+<section>
+<h2>AI Agents for Analysis</h2>
+
+<p>Can we build an AI assistant that helps journalists analyze social media data by calling the right tools at the right time? Arbiter's agent uses GPT-4o with 7 tools. We used GEPA (ICLR 2026) to optimize its system prompt for <span class="accent">$5.77</span> total.</p>
+
+<div class="two-col fragment">
+  <div>
+    <h3>What is still hard</h3>
+    <ul>
+      <li>Getting agents to pick the right tool for ambiguous queries</li>
+      <li>Evaluating correctness (not just whether it ran without errors)</li>
+      <li>Preventing hallucination when agents produce charts people trust</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Research questions</h3>
+    <ul>
+      <li>Can you build specialized agents for specific journalism tasks?</li>
+      <li>How do you design evaluation benchmarks where policy compliance conflicts with task completion?</li>
+      <li>What happens when you red-team an agent with prompt injection?</li>
+    </ul>
+    <div><span class="tag">Agents</span> <span class="tag">Tool-Calling</span> <span class="tag">Evaluation</span></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ EXAMPLE: AI AGENT IN ACTION ============ -->
+<section>
+<h2>Example: AI Agent Investigation</h2>
+
+<p>A journalist asks: "Are there accounts coordinating to promote banned trading platforms across YouTube and Twitter?"</p>
+
+<div class="fragment">
+<p>The agent chains 5 tools automatically:</p>
+<ul>
+  <li class="fragment"><strong>searchPosts</strong> retrieves mentions of Exness, Quotex, Pocket Option across all platforms</li>
+  <li class="fragment"><strong>getThemeActors</strong> identifies which accounts post most within promotional themes</li>
+  <li class="fragment"><strong>getActorTimeline</strong> checks posting frequency to surface coordinated scheduling</li>
+  <li class="fragment"><strong>getTopicStance</strong> separates promotional from educational content</li>
+  <li class="fragment"><strong>compareAcrossPlatforms</strong> checks if the same accounts appear on other platforms</li>
+</ul>
+</div>
+
+<div class="highlight-box fragment">
+  Result: 6,345 posts analyzed. Promotion is concentrated almost entirely on YouTube. Exness (banned by SEBI in India): 102 YouTube posts. Quotex (banned in EU): 99. These accounts disguise promotion as financial education.
+</div>
+</section>
+
+<!-- ============ 15. NETWORK DETECTION ============ -->
+<section>
+<h2>Coordinated Network Detection</h2>
+
+<p>How do you find groups of accounts working together to spread misleading information? Our Parrot tool analyzed 70M tweets from 14M accounts. Twitter/X's Site Integrity lead followed up. On Meta, our analysis of 600 public Facebook pages led to a takedown of Bangladeshi harassment networks.</p>
+
+<div class="two-col fragment">
+  <div>
+    <h3>Real impact from student work</h3>
+    <ul>
+      <li>600 pages, <span class="accent">95M views</span>, 500K posts analyzed on Meta</li>
+      <li>4,500 Telegram channels spreading pro-Russian disinformation identified</li>
+      <li>Accepted at Stanford T&amp;S and Underground Economy Conference</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Research questions</h3>
+    <ul>
+      <li>Can you detect coordination <em>across</em> platforms, not just within one?</li>
+      <li>How do you distinguish organic consensus from manufactured coordination?</li>
+      <li>Can temporal GNNs scale to millions of nodes in near-real-time?</li>
+    </ul>
+    <div><span class="tag">Graph Analysis</span> <span class="tag">Network Science</span> <span class="tag">GNNs</span></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ 16. PLUGIN: MULTILINGUAL ============ -->
+<section>
+<h2>Multilingual Analysis</h2>
+
+<p>83% of NLP misinformation research focused on monolingual high-resource languages. Social media in India is full of code-mixing and transliteration. If you speak a non-English language, you have a genuine research advantage that most Western labs lack.</p>
+
+<div class="two-col fragment">
+  <div>
+    <h3>Why this matters for Arbiter</h3>
+    <ul>
+      <li>Partners in Kenya, India, Mongolia, Bangladesh need analysis in their languages</li>
+      <li>LLMs are <span class="accent">overconfident in languages where they perform worst</span> (<a href="https://www.nature.com/articles/s41598-026-39046-w">Nature Sci. Reports, 2026</a>)</li>
+      <li>Even small annotated datasets are publishable contributions</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Research questions</h3>
+    <ul>
+      <li>Does translate-then-retrieve or retrieve-in-native-language work better for RAG?</li>
+      <li>Can you build a code-mixing-aware sentiment analyzer for Hindi-English?</li>
+      <li>How does Arbiter's clustering degrade on non-English posts?</li>
+    </ul>
+    <div><span class="tag">Multilingual NLP</span> <span class="tag">RAG</span> <span class="tag">Code-Mixing</span></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ 17. PLUGIN: AUDITING ============ -->
+<section>
+<h2>Algorithmic Auditing Tools</h2>
+
+<p>A <a href="https://arxiv.org/abs/2402.17861">CHI 2025 paper</a> found 435 AI auditing tools but none that support the full audit lifecycle. India's DPDP Act is being implemented. The EU requires algorithmic audits. The infrastructure to do them does not exist.</p>
+
+<div class="two-col fragment">
+  <div>
+    <h3>Why this is an engineering problem</h3>
+    <ul>
+      <li>Building usable audit tools requires <strong>good engineering</strong>, not novel ML</li>
+      <li>Exactly the kind of work undergraduate engineers are good at</li>
+      <li>FAccT 2026 lists "audits and assurance testing" as a focus area</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Research questions</h3>
+    <ul>
+      <li>Can you build an open-source tool that automates data schema documentation for auditors?</li>
+      <li>How would you test a recommendation algorithm for differential treatment across user profiles?</li>
+      <li>What does an "inspectability API" for Arbiter look like?</li>
+    </ul>
+    <div><span class="tag">Engineering</span> <span class="tag">Policy</span> <span class="tag">Transparency</span></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ 18. AI CONTENT DETECTION ============ -->
+<section>
+<h2>AI-Generated Content Detection</h2>
+
+<p>Deepfake videos grew from ~500K (2023) to ~8M (2025). The bigger problem is "cheap fakes": real images paired with misleading captions. Current detectors focus on pixel-level forgery and miss semantic mismatch entirely.</p>
+
+<div class="two-col fragment">
+  <div>
+    <h3>What is broken</h3>
+    <ul>
+      <li class="fragment">Detectors trained on one generation model fail on newer models</li>
+      <li class="fragment">False positives on edited authentic content create legal problems</li>
+      <li class="fragment">Text-based AI detectors <a href="https://www.nature.com/articles/s41467-025-67145-1">cannot reliably distinguish</a> human from AI text (Nature Communications, 2025)</li>
+    </ul>
+  </div>
+  <div>
+    <h3>What you could build</h3>
+    <ul>
+      <li class="fragment">Benchmark AI-text detectors on code-mixed content</li>
+      <li class="fragment">Test false positive rates on edited journalistic photos</li>
+      <li class="fragment">Build a C2PA content provenance tracker</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- ============ 19. CROWDSOURCED FACT-CHECKING ============ -->
+<section>
+<h2>Crowdsourced Fact-Checking Systems</h2>
+
+<p>Meta, YouTube, and TikTok launched Community Notes-style systems. X open-sources its algorithm and data. Do bridging-based algorithms systematically fail on polarizing content?</p>
+
+<div class="two-col fragment">
+  <div>
+    <h3>What you could build</h3>
+    <ul>
+      <li class="fragment">Measure latency gap between note creation and viral peak</li>
+      <li class="fragment">Compare note quality on polarizing vs. non-polarizing topics</li>
+      <li class="fragment">Test LLM-augmented note-writing</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Key references</h3>
+    <ul>
+      <li class="fragment"><a href="https://arxiv.org/html/2509.15434">Beyond Community Notes</a> (arXiv)</li>
+      <li class="fragment"><a href="https://pubsonline.informs.org/doi/10.1287/isre.2024.1609">Crowdchecking Curb Misinfo</a> (ISR, 2024)</li>
+      <li class="fragment"><a href="https://www.isdglobal.org/digital-dispatch/the-trust-consensus-paradox-why-decentralized-fact-checking-faces-challenges-on-polarizing-topics/">Trust-Consensus Paradox</a> (ISD)</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- ============ 20. SIMULATING SOCIAL SYSTEMS ============ -->
+<section>
+<h2>Simulating Social Systems with AI</h2>
+
+<p>MIT Media Lab's AgentTorch (AAMAS 2025) built a digital twin of NYC with 8.4M agents. What's interesting about this?</p>
+
+<div class="two-col fragment">
+  <div>
+    <h3>What you could build</h3>
+    <ul>
+      <li class="fragment">Simulate misinfo spread through WhatsApp groups during an election</li>
+      <li class="fragment">Validate simulation predictions against fact-checker databases</li>
+      <li class="fragment">Test proposed moderation policies in simulation before deployment</li>
+    </ul>
+  </div>
+  <div>
+    <h3>SimPPL connection</h3>
+    <ul>
+      <li class="fragment">Social network simulation at ICML '23</li>
+      <li class="fragment">Marketplace design at IC2S2 '24</li>
+      <li class="fragment">Transparency regulation at ACM DGO '24</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- ============ 21. WHICH AREAS FIT ============ -->
+<section>
+<h2>Which Areas Fit Your Skills?</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Research Area</th>
+      <th>ML Depth</th>
+      <th>Data Access</th>
+      <th>Publish Where</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Retrieval</td>
+      <td>Medium</td>
+      <td>High (Arbiter data)</td>
+      <td>SIGIR, ACL, EMNLP</td>
+    </tr>
+    <tr>
+      <td>Theme Discovery</td>
+      <td>Medium</td>
+      <td>High (Arbiter data)</td>
+      <td>ICWSM, ACL, EMNLP</td>
+    </tr>
+    <tr>
+      <td>AI Agents</td>
+      <td>Low-Medium</td>
+      <td>High (build your own)</td>
+      <td>NeurIPS, ICML, FAccT</td>
+    </tr>
+    <tr>
+      <td>Network Detection</td>
+      <td>Medium</td>
+      <td>Medium (API limits)</td>
+      <td>WebSci, ICWSM, WWW</td>
+    </tr>
+    <tr>
+      <td>Multilingual Analysis</td>
+      <td>Medium</td>
+      <td>Low (must annotate)</td>
+      <td>ACL, EACL SRW, EMNLP</td>
+    </tr>
+    <tr>
+      <td>Algorithmic Auditing</td>
+      <td>Low</td>
+      <td>High (public systems)</td>
+      <td>CHI, FAccT</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="highlight-box fragment">
+  If you can code but lack deep ML expertise, <strong>AI agents, algorithmic auditing, and multilingual analysis</strong> are the most accessible starting points. The <a href="https://2026.eacl.org/calls/srw/">EACL 2026 Student Research Workshop</a> explicitly welcomes undergraduate submissions.
+</div>
+</section>
+
+<!-- ============ CLOSING: WHAT MAKES A GOOD RESEARCHER ============ -->
+<section>
+<h2>What Makes a Good Researcher - I</h2>
+
+<div class="fragment">
+<h3>1. Curiosity</h3>
+<p>If you are not curious, do not do research. You will waste your time and your collaborators' time. Do engineering instead. You will both benefit more and be happier.</p>
+</div>
+
+<div class="fragment">
+<h3>2. Time</h3>
+<p>Most people seem to think research is a side pursuit. It is not. Research is a full-time job, and good research gets you both visibility and hired at top companies.</p>
+</div>
+</section>
+
+<section>
+<h2>What Makes a Good Researcher - II</h2>
+
+<div class="fragment">
+<h3>3. Determination</h3>
+<p>You will keep hitting wall after wall. Nothing works, compute is too expensive, ideas are a dime a dozen, Claude Code can solve a problem faster than you. If you do research just for the heck of it, you will quit after the third wall. Or you will compromise and write a meaningless paper that never gets noted anywhere. That is a waste of your time and that of others.</p>
+</div>
+
+<div class="fragment">
+<h3>4. Creativity</h3>
+<p>There is seldom a linear solution in good research. Creativity generally increases from having time on your hands and having curiosity about learning new ideas. Without those, it is really hard to be creative.</p>
+</div>
+</section>
+
+<!-- ============ THANK YOU ============ -->
+<section>
+<div class="title-slide">
+  <h1>Thank You</h1>
+  <div class="divider"></div>
+  <p class="muted">Questions?</p>
+  <p>
+    <a href="https://arbiter.simppl.org">Arbiter</a> &middot;
+    <a href="https://nextgenai.simppl.org">Our Student Fellowship Program</a> &middot;
+    <a href="https://simppl.org">simppl.org</a>
+  </p>
+  <p class="muted">swapneel@simppl.org &middot; All rights reserved. &copy; SimPPL 2026.</p>
+</div>
+</section>
+
+<!-- ====================================================================== -->
+<!-- APPENDIX -->
+<!-- ====================================================================== -->
+
+<section>
+<div class="title-slide">
+  <h1>Appendix</h1>
+  <div class="divider"></div>
+  <p class="muted">Additional slides for reference</p>
+</div>
+</section>
+
+<!-- A1: PRODUCTS -->
+<section>
+<div class="appendix-header">APPENDIX</div>
+<h2>All Products Built by Students</h2>
+
+<div class="card-row">
+  <div class="research-card">
+    <h3>Parrot</h3>
+    <p>Coordinated network detection. 10M+ accounts. Wikimedia award. Times/Sunday Times funding.</p>
+  </div>
+  <div class="research-card">
+    <h3>Arbiter</h3>
+    <p>Cross-platform social listening. 1B+ posts. Semantic search, alerts, AI agent.</p>
+  </div>
+  <div class="research-card">
+    <h3>Sakhi</h3>
+    <p>Multilingual health literacy. 450 families in India and Bangladesh.</p>
+  </div>
+</div>
+<div class="card-row">
+  <div class="research-card">
+    <h3>Audience Analytics</h3>
+    <p>GenAI for newsroom analytics. Pilot at NYPR, expanding to LION Network.</p>
+  </div>
+  <div class="research-card">
+    <h3>Audio Search</h3>
+    <p>Multimodal search for podcasts. 50+ languages. Built with UN agencies.</p>
+  </div>
+  <div class="research-card">
+    <h3>InfluenceCheck</h3>
+    <p>Verify influencer claims in health/finance videos. Presented at India AI Summit.</p>
+  </div>
+</div>
+</section>
+
+<!-- A2: IMPACT -->
+<section>
+<div class="appendix-header">APPENDIX</div>
+<h2>Impact and Partnerships</h2>
+
+<div class="stat-row">
+  <div class="stat">
+    <div class="number">100M+</div>
+    <div class="label">Global News Views</div>
+  </div>
+  <div class="stat">
+    <div class="number">$500K+</div>
+    <div class="label">Raised with collaborators</div>
+  </div>
+  <div class="stat">
+    <div class="number">16+</div>
+    <div class="label">Publications</div>
+  </div>
+  <div class="stat">
+    <div class="number">40+</div>
+    <div class="label">Talks globally</div>
+  </div>
+</div>
+
+<p><strong>Partners:</strong> Deutsche Welle, Jagran New Media, NEST Center, Spreeha Foundation, Migrasia, VTDigger, New York Public Radio, The Times, United Nations, UN Global Pulse, Tattle, TechGlobal Institute, Yale News</p>
+<p><strong>Presented at:</strong> UNESCO, Stanford T&amp;S, MIT Media Lab, Columbia, NYU, Swiss Embassy, Embassy of Finland, World Economic Forum</p>
+</section>
+
+<!-- A3: NEXTGENAI -->
+<section>
+<div class="appendix-header">APPENDIX</div>
+<h2>NextGenAI Fellowship Program</h2>
+
+<p>6-12 month programs to train 200+ undergraduate students from the global majority to build and launch responsible computing tools.</p>
+
+<ol>
+  <li><strong>Unicode:</strong> Programming Community</li>
+  <li><strong>Shalizi Stats Reading Group:</strong> Advanced Statistics</li>
+  <li><strong>Unicode ML Summer Course:</strong> Machine Learning</li>
+  <li><strong>NYU AI School:</strong> AI/ML education for non-STEM majors</li>
+  <li><strong>NYU AI, Misinformation, and Policy Seminar</strong></li>
+</ol>
+
+<div class="highlight-box fragment">
+  Outcomes: 8+ top-tier publications, partnerships in 4 countries, USD 132,000 in competitive global awards.
+</div>
+</section>
+
+<!-- A4: HOW TO GET INVOLVED (moved from main deck) -->
+<section>
+<div class="appendix-header">APPENDIX</div>
+<h2>NextGenAI Fellowship</h2>
+
+<div class="two-col fragment">
+  <div>
+    <h3>What we look for</h3>
+    <ul>
+      <li>Students who want to build real products that real people use</li>
+      <li>Comfort with Python or JavaScript (we teach the rest)</li>
+      <li>Curiosity about how information spreads online</li>
+      <li>Willingness to read papers, run experiments, and iterate</li>
+    </ul>
+  </div>
+  <div>
+    <h3>What you get</h3>
+    <ul>
+      <li>Co-authorship on publications at top venues</li>
+      <li>Your code deployed and used by journalists in 8 countries</li>
+      <li>Mentorship from researchers at MIT, NYU, Oxford, and BU</li>
+      <li>Access to Overleaf, Zotero, compute, and real datasets</li>
+    </ul>
+  </div>
+</div>
+
+<p>No current iterations. Past program details at <a href="https://nextgenai.simppl.org">nextgenai.simppl.org</a></p>
+</section>
+
+<!-- A5: FOUR PILLARS -->
+<section>
+<div class="appendix-header">APPENDIX</div>
+<h2>Four Research Pillars at SimPPL</h2>
+
+<div class="card-row">
+  <div class="card" class="text-center">
+    <h3>Misleading Claims</h3>
+    <p>Twitter, Meta, YouTube, Telegram, Truth Social, Bluesky, Wikipedia</p>
+  </div>
+  <div class="card" class="text-center">
+    <h3>User Behavior</h3>
+    <p>Decentralized platforms, influencer strategies, political transcendence</p>
+  </div>
+  <div class="card" class="text-center">
+    <h3>Social Media Policy</h3>
+    <p>Transparency regulation, platform interventions, shared language</p>
+  </div>
+  <div class="card" class="text-center">
+    <h3>Safety by Design</h3>
+    <p>Recommendation algorithms, marketplace design, causal effects</p>
+  </div>
+</div>
+</section>
+
+</div>
+</div>
+
+<script src="https://unpkg.com/reveal.js@4.0.2/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'slide',
+    width: 1280,
+    height: 720,
+    margin: 0.1,
+    center: false,
+    responsive: true
+  });
+</script>
+</body>
+</html>
