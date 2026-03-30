@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>From AI Project to AI Product</title>
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css"/>
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/theme/serif.css" id="theme"/>
+<style>
+  :root {
+    --navy: #1B2A4A;
+    --coral: #E8734A;
+    --teal: #00A89D;
+    --light-bg: #F7F8FA;
+    --muted: #6B7280;
+    --border: #E5E7EB;
+  }
+
+  /* Let serif theme handle all typography. Only override colors. */
+  .reveal { color: var(--navy); }
+  .reveal h1, .reveal h2, .reveal h3 { color: var(--navy); text-transform: none; }
+
+  /* Single base size for all content slides */
+  .reveal section {
+    text-align: left;
+    font-size: 0.65em;
+    line-height: 1.5;
+    padding: 20px 40px 50px 40px !important;
+    box-sizing: border-box;
+  }
+
+  .reveal ul, .reveal ol { margin-left: 0.3em; }
+  .reveal li { margin-bottom: 0.3em; }
+  .reveal a { color: var(--teal); }
+
+  .accent { color: var(--coral); font-weight: 600; }
+  .teal { color: var(--teal); font-weight: 600; }
+  .muted { color: var(--muted); }
+  .text-center { text-align: center; }
+
+  /* === LAYOUT: Title (centered) === */
+  .title-slide {
+    display: flex !important; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center !important; min-height: 100%;
+  }
+  .divider {
+    width: 4px; height: 50px;
+    background: linear-gradient(to bottom, var(--coral), var(--navy));
+    margin: 16px auto; border-radius: 2px;
+  }
+
+  /* === LAYOUT: Two columns === */
+  .two-col { display: flex; gap: 30px; align-items: flex-start; margin-top: 10px; }
+  .two-col > div { flex: 1; }
+
+  /* === LAYOUT: Stat row === */
+  .stat-row { display: flex; gap: 30px; justify-content: center; text-align: center; margin-top: 16px; }
+  .stat .number { font-size: 1.8em; font-weight: 700; color: var(--coral); }
+  .stat .label { color: var(--muted); margin-top: 2px; }
+
+  /* === LAYOUT: Cards === */
+  .card-row { display: flex; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+  .card {
+    background: var(--navy); color: #fff;
+    border-radius: 10px; padding: 18px 16px; flex: 1; min-width: 180px;
+  }
+  .card h3 { color: #fff; margin-top: 0; text-align: center; }
+  .card p { color: #ddd; }
+  .research-card {
+    background: #fff; border: 2px solid var(--navy);
+    border-radius: 10px; padding: 14px; flex: 1; min-width: 200px;
+  }
+  .research-card h3 {
+    color: var(--navy); margin-top: 0;
+    border-bottom: 2px solid var(--coral); padding-bottom: 4px;
+  }
+
+  /* === LAYOUT: Highlight box === */
+  .highlight-box {
+    background: var(--light-bg); border-left: 3px solid var(--coral);
+    padding: 10px 14px; margin: 10px 0; border-radius: 0 6px 6px 0;
+  }
+
+  /* === LAYOUT: Table === */
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  table th { background: var(--navy); color: #fff; padding: 6px 10px; text-align: left; }
+  table td { padding: 6px 10px; border-bottom: 1px solid var(--border); }
+  table tr:nth-child(even) td { background: var(--light-bg); }
+
+  /* === Small elements === */
+  .tag {
+    display: inline-block; background: var(--teal); color: #fff;
+    padding: 1px 8px; border-radius: 10px; font-size: 0.75em; margin: 2px;
+  }
+  .appendix-header {
+    background: var(--light-bg); border-radius: 8px;
+    padding: 8px; text-align: center; margin-bottom: 12px;
+    color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em;
+  }
+
+  /* === Responsive === */
+  @media (max-width: 768px) {
+    .two-col, .card-row, .stat-row { flex-direction: column; }
+    .reveal section { padding: 10px 16px 30px 16px !important; font-size: 0.55em; }
+  }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ============ 1. TITLE ============ -->
+<section>
+<div class="title-slide">
+  <h1>From AI Project to AI Product</h1>
+  <div class="divider"></div>
+  <p>Building Sustainable Solutions for Journalism:<br/>A Guide for Kenyan Newsrooms</p>
+  <div class="muted" style="margin-top:24px;">
+    DW AI in the Newsroom Fellowship<br/>
+    SimPPL Product Development Framework<br/>
+    February 2026
+  </div>
+</div>
+<aside class="notes">
+  15-minute talk. Practical framework for turning working prototypes into products newsrooms actually use. Not a pitch, not theory. The ideas here come from watching journalism AI projects succeed and fail across 8 countries.
+</aside>
+</section>
+
+<!-- ============ 2. WHY THIS MATTERS ============ -->
+<section>
+<h2>Why This Matters</h2>
+
+<p>Your projects work. You've proven AI can help with election coverage, misinformation detection, energy data, artivism storytelling, and more. The challenge now is different: turning prototypes into tools that serve real audiences over time, sustainably and reliably.</p>
+
+<div class="card-row fragment">
+  <div class="card">
+    <h3>Election Coverage</h3>
+    <p>Automated monitoring, candidate profiles</p>
+  </div>
+  <div class="card">
+    <h3>Misinfo Detection</h3>
+    <p>Coordinated campaigns, deepfakes</p>
+  </div>
+  <div class="card">
+    <h3>Data Hubs</h3>
+    <p>Energy, SRHR, infrastructure</p>
+  </div>
+  <div class="card">
+    <h3>Artivism</h3>
+    <p>AI documentary, protest data</p>
+  </div>
+</div>
+
+<div class="highlight-box fragment">
+  <strong>Common mentor feedback:</strong> "Projects are too ambitious." "Need clearer MVPs." "Define users specifically." "Focus on what you can do manually first." Today is about closing the gap between prototype and product.
+</div>
+
+<aside class="notes">
+  Start by validating what they've accomplished. The mentor feedback is real and common across all DW cohorts. This talk is about closing the gap between code that runs and a tool someone opens on Tuesday morning.
+</aside>
+</section>
+
+<!-- ============ 3. PROJECT VS PRODUCT ============ -->
+<section>
+<h2>Project vs Product: Know the Difference</h2>
+
+<table>
+  <thead>
+    <tr><th></th><th>A Project</th><th>A Product</th></tr>
+  </thead>
+  <tbody>
+    <tr class="fragment"><td><strong>Purpose</strong></td><td>Prove it works</td><td>Solve user problems</td></tr>
+    <tr class="fragment"><td><strong>Audience</strong></td><td>You and your team</td><td>Specific users with needs</td></tr>
+    <tr class="fragment"><td><strong>Lifespan</strong></td><td>Until demo is done</td><td>Ongoing, maintained</td></tr>
+    <tr class="fragment"><td><strong>Success</strong></td><td>It runs</td><td>People use it repeatedly</td></tr>
+  </tbody>
+</table>
+
+<div class="highlight-box fragment">
+  A project proves something is possible. A product solves a real problem for specific people, works reliably, and people use it without you explaining how. The gap between these two is what we're bridging today.
+</div>
+
+<aside class="notes">
+  This distinction matters because most AI projects in journalism never become products. The code works in a demo but nobody uses it six months later. A product means someone opens it under deadline pressure and it helps them do their job.
+</aside>
+</section>
+
+<!-- ============ 4. START WITH THE REAL PROBLEM ============ -->
+<section>
+<h2>Start with the Real Problem</h2>
+
+<p>Before writing more code, understand the problem better than anyone else.</p>
+
+<div class="two-col fragment">
+  <div>
+    <h3>Not this</h3>
+    <p>"We need AI for elections."</p>
+    <p class="muted">Too vague. Doesn't explain who needs it or why.</p>
+
+    <h3 style="margin-top:16px;">This</h3>
+    <p>"With limited staff, we cannot cover 24 electoral areas during by-elections, which means voters lack information to make informed decisions."</p>
+    <p class="muted">Specific, urgent, and measurable.</p>
+  </div>
+  <div>
+    <h3>Your problem statement must answer:</h3>
+    <ol>
+      <li class="fragment"><strong>Who experiences this problem?</strong> Identify the specific people or groups affected.</li>
+      <li class="fragment"><strong>What makes it painful or urgent?</strong> Describe the consequences of not solving it.</li>
+      <li class="fragment"><strong>What happens when it's not solved?</strong> Explain the real-world impact on users.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="highlight-box fragment">
+  <strong>Exercise:</strong> Write one paragraph describing your problem <strong>without mentioning AI</strong>. If you can't explain why it matters without technology, you don't understand the problem well enough.
+</div>
+
+<aside class="notes">
+  The exercise is the most important thing on this slide. If a fellow can't describe their problem without mentioning AI, they are building a solution looking for a problem. Give them 2 minutes to try this right now.
+</aside>
+</section>
+
+<!-- ============ 5. KNOW YOUR USERS ============ -->
+<section>
+<h2>Know Your Users Deeply</h2>
+
+<p>You cannot build for "journalists" or "the public." Those groups are too broad. Think about the actual person who will open your tool on Tuesday morning when they're stressed and on deadline.</p>
+
+<div class="two-col fragment">
+  <div>
+    <h3>Disinformation tracking</h3>
+    <ul>
+      <li><strong>Who:</strong> Fact-checkers during election periods</li>
+      <li><strong>Context:</strong> Tracking multiple narratives, time pressure, limited staff</li>
+      <li><strong>Need:</strong> Spot coordination patterns without learning complex tools</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Infrastructure reporting</h3>
+    <ul>
+      <li><strong>Who:</strong> Urban planning journalists</li>
+      <li><strong>Context:</strong> Writing about failures, lack technical tools</li>
+      <li><strong>Need:</strong> Show patterns without GIS expertise</li>
+    </ul>
+  </div>
+</div>
+
+<div class="highlight-box fragment">
+  <strong>Create user profiles:</strong> For each user, write down <span class="accent">Who</span> (specific person), <span class="accent">When</span> (time and situation), <span class="accent">Pain</span> (what frustrates them), and <span class="accent">Goal</span> (what they need). Can you name a real person, not a category?
+</div>
+
+<aside class="notes">
+  The two examples are drawn directly from fellows' projects. The user profile framework is something they should fill out before leaving today. Ask them: "Can you name the person who would use this? Not a category, but someone you've talked to."
+</aside>
+</section>
+
+<!-- ============ 6. RESEARCH YOUR USERS ============ -->
+<section>
+<h2>Research Your Users This Week</h2>
+
+<p>You don't need a big budget. Here's what to do:</p>
+
+<div class="two-col">
+  <div>
+    <ol>
+      <li class="fragment"><strong>Interview 5-7 potential users.</strong> Ask about current workflow, pain points, what they've tried before. Record and transcribe if possible.</li>
+      <li class="fragment"><strong>Shadow someone.</strong> Watch them work. Note where they get stuck, what shortcuts they take, what frustrates them.</li>
+      <li class="fragment"><strong>Survey with specific questions.</strong> Not "would you use this?" but "how often do you face this problem?" and "what do you do now?"</li>
+      <li class="fragment"><strong>Test your prototype.</strong> Watch them use it without helping. Write down every confusion point. Don't explain, observe.</li>
+    </ol>
+  </div>
+  <div>
+    <h3>Key questions to ask</h3>
+    <ul>
+      <li class="fragment">Walk me through your current workflow...</li>
+      <li class="fragment">Where do you get stuck or frustrated?</li>
+      <li class="fragment">What have you tried before to solve this?</li>
+      <li class="fragment">How often does this problem occur?</li>
+      <li class="fragment">What would make your job easier?</li>
+    </ul>
+  </div>
+</div>
+
+<div class="highlight-box fragment">
+  Your social media data session: everyone engaged heavily because it solved an immediate problem. That's your standard for success.
+</div>
+
+<aside class="notes">
+  The reference to the social media data session is key. They already experienced what a useful tool feels like. The research methods here are practical and doable within a week with no budget.
+</aside>
+</section>
+
+<!-- ============ 7. DEFINE YOUR MVP ============ -->
+<section>
+<h2>Define Your MVP with MoSCoW</h2>
+
+<p>An MVP is not a broken version of your big idea. It's the smallest thing that solves the core problem.</p>
+
+<table>
+  <thead>
+    <tr><th>Priority</th><th>Definition</th><th>Example (writing assistant)</th></tr>
+  </thead>
+  <tbody>
+    <tr class="fragment"><td><span class="accent"><strong>Must Have</strong></span></td><td>Core features without which the tool can't solve the problem</td><td>Text input, basic grammar correction, structure suggestions</td></tr>
+    <tr class="fragment"><td><strong>Should Have</strong></td><td>Important features that significantly improve experience</td><td>Accept/reject suggestions, learn from past edits</td></tr>
+    <tr class="fragment"><td><strong>Could Have</strong></td><td>Nice additions if time allows</td><td>Multiple writing styles, CMS integration</td></tr>
+    <tr class="fragment"><td class="muted"><strong>Won't Have</strong></td><td>Features you're explicitly not building yet</td><td>Fact-checking, multi-language, collaborative editing</td></tr>
+  </tbody>
+</table>
+
+<div class="highlight-box fragment">
+  Your mentor feedback noted proposals are "too ambitious." This focuses your effort on what truly matters. The <span class="accent">Won't Have</span> column is the most important: it forces discipline.
+</div>
+
+<aside class="notes">
+  MoSCoW is a prioritization framework. The key move here is the "Won't Have" column. Fellows need to practice saying no. They should map their own project onto these four categories. Give them 3 minutes to do this.
+</aside>
+</section>
+
+<!-- ============ 8. VALIDATE ASSUMPTIONS ============ -->
+<section>
+<h2>Validate Your Assumptions</h2>
+
+<p>Your project is built on assumptions. Test them before going further.</p>
+
+<div class="card-row fragment">
+  <div class="research-card">
+    <h3>The Hallway Test</h3>
+    <p>Show your tool to a colleague who didn't build it. Can they use it without instructions?</p>
+    <p><span class="accent">Success: zero explanation needed.</span></p>
+  </div>
+  <div class="research-card">
+    <h3>The Accuracy Test</h3>
+    <p>Manually verify 100 AI outputs. What's your error rate?</p>
+    <p><span class="accent">Success: &lt;5% error rate for MVP.</span></p>
+  </div>
+  <div class="research-card">
+    <h3>The Deadline Test</h3>
+    <p>Offer it to someone on actual story deadline. Will they use it when it matters?</p>
+    <p><span class="accent">Success: they choose it under pressure.</span></p>
+  </div>
+  <div class="research-card">
+    <h3>The Abandonment Test</h3>
+    <p>Watch where users stop using your tool. That's where it fails them.</p>
+    <p><span class="accent">Success: complete task without dropping off.</span></p>
+  </div>
+</div>
+
+<div class="highlight-box fragment">
+  If users can't complete tasks without help, your product isn't ready. Fix the friction points first.
+</div>
+
+<aside class="notes">
+  These four tests are practical and can be run this week. The hallway test catches the biggest usability problems. The accuracy test matters specifically for AI tools because a wrong answer is worse than no answer for a journalist.
+</aside>
+</section>
+
+<!-- ============ 9. BUILD FOR REAL CONSTRAINTS ============ -->
+<section>
+<h2>Build for Real Constraints</h2>
+
+<p>AI projects fail when they meet reality. Design for actual conditions.</p>
+
+<div class="two-col fragment">
+  <div>
+    <h3>Technical realities</h3>
+    <ul>
+      <li>Unreliable internet in newsrooms</li>
+      <li>Older hardware, not powerful machines</li>
+      <li>API costs add up at scale</li>
+      <li>Government data is often late or incomplete</li>
+    </ul>
+
+    <h3 style="margin-top:12px;">Resource realities</h3>
+    <ul>
+      <li>Journalists work tight deadlines: save time, don't add steps</li>
+      <li>Users need to interpret outputs, can they?</li>
+      <li>Someone must maintain it when platforms change</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Trust realities</h3>
+    <ul>
+      <li>How do users verify AI didn't make mistakes?</li>
+      <li>How does translation preserve meaning?</li>
+      <li>What happens when the AI is wrong?</li>
+    </ul>
+
+    <h3 style="margin-top:12px;">Ethics questions</h3>
+    <ul>
+      <li><strong>Attribution:</strong> Who created the content your AI uses?</li>
+      <li><strong>Consent:</strong> Did sources agree to data processing?</li>
+      <li><strong>Privacy:</strong> How do you protect people in datasets?</li>
+      <li><strong>Bias:</strong> What biases exist in training data?</li>
+      <li><strong>Errors:</strong> How do users know when to trust your tool?</li>
+    </ul>
+  </div>
+</div>
+
+<div class="highlight-box fragment">
+  Your tool should work even when conditions aren't perfect. Plan for failure modes from day one. AI cannot verify facts: it predicts patterns. Always have humans in the loop for verification and editorial decisions.
+</div>
+
+<aside class="notes">
+  This slide is grounded in the specific realities of Kenyan newsrooms. Unreliable internet means offline-first or lightweight design. Older hardware means heavy ML models running locally are out. API costs mean you need to think about what happens when the grant money runs out. The ethics questions are not optional for journalism AI.
+</aside>
+</section>
+
+<!-- ============ 10. TRANSPARENCY ============ -->
+<section>
+<h2>Build Trust Through Transparency</h2>
+
+<p>AI in journalism carries special responsibilities. Show users clearly what your tool does and does not do.</p>
+
+<div class="two-col fragment">
+  <div>
+    <h3>What to communicate</h3>
+    <ul>
+      <li>What the AI does and what it doesn't do</li>
+      <li>What data you collect and why</li>
+      <li>Known limitations and error rates</li>
+      <li>How to verify outputs independently</li>
+      <li>What happens when the AI is wrong</li>
+    </ul>
+  </div>
+  <div>
+    <h3>How to build it in</h3>
+    <ul>
+      <li>Label AI-generated content clearly in the interface</li>
+      <li>Show confidence scores where possible</li>
+      <li>Provide source links so users can verify</li>
+      <li>Log errors and surface them, don't hide them</li>
+      <li>Write a one-page "how this works" for users</li>
+    </ul>
+  </div>
+</div>
+
+<div class="highlight-box fragment">
+  Journalists' credibility depends on the tools they use. If your tool gets something wrong and a journalist publishes it, that's your responsibility. Build transparency into the product, not as an afterthought.
+</div>
+
+<aside class="notes">
+  This is not optional. Journalism AI tools are held to a higher standard than consumer AI because editorial credibility is at stake. The transparency checklist is something each fellow should build into their product. Human-in-the-loop is non-negotiable for journalism applications.
+</aside>
+</section>
+
+<!-- ============ 11. TWO-WEEK ACTION PLAN ============ -->
+<section>
+<h2>Your Two-Week Action Plan</h2>
+
+<p>Concrete steps to move from project to product.</p>
+
+<div class="two-col">
+  <div>
+    <h3><span class="accent">Week 1: Validate &amp; Focus</span></h3>
+    <ol>
+      <li class="fragment"><strong>Write your problem statement.</strong> No AI mentioned: focus on the human problem.</li>
+      <li class="fragment"><strong>Interview 5 potential users.</strong> Ask about workflow, pain points, current solutions.</li>
+      <li class="fragment"><strong>Define your MVP using MoSCoW.</strong> Be ruthless about what you won't build yet.</li>
+      <li class="fragment"><strong>Identify top 3 assumptions.</strong> Design quick tests for each.</li>
+      <li class="fragment"><strong>Document one failure mode.</strong> Plan how you'll handle it gracefully.</li>
+    </ol>
+  </div>
+  <div>
+    <h3>Week 2: Build Foundation</h3>
+    <ol>
+      <li class="fragment"><strong>Create user documentation.</strong> For your core feature: assume reader knows less.</li>
+      <li class="fragment"><strong>Set up basic error logging.</strong> Track what fails and when.</li>
+      <li class="fragment"><strong>Define 3 metrics that matter.</strong> Not vanity metrics: signals of real value.</li>
+      <li class="fragment"><strong>Map workflow integration.</strong> Where does your tool fit in existing processes?</li>
+      <li class="fragment"><strong>Write sustainability requirements.</strong> Who maintains it? What's the cost?</li>
+    </ol>
+  </div>
+</div>
+
+<aside class="notes">
+  This is the takeaway slide. Each fellow should leave with a plan for the next two weeks. Week 1 is validation: making sure you're building the right thing. Week 2 is foundation: making sure what you build can last. The sustainability question is crucial because grants end.
+</aside>
+</section>
+
+<!-- ============ 12. CLOSING ============ -->
+<section>
+<div class="title-slide">
+  <h1>Building What Lasts</h1>
+  <div class="divider"></div>
+  <p>Moving from project to product is not about writing more code. It's about deeply understanding the problem, knowing your users, building the smallest thing that works, testing in the real world, and improving based on what you learn.</p>
+  <p style="margin-top:20px; font-style:italic;">"A good product is not the one with the most features. It's the one that solves a real problem so well that people keep coming back."</p>
+  <div style="margin-top:24px; display:flex; gap:48px;">
+    <div><span class="accent">Know Your Users</span></div>
+    <div><span class="accent">Solve Real Problems</span></div>
+    <div><span class="accent">Iterate &amp; Improve</span></div>
+  </div>
+</div>
+<aside class="notes">
+  End with conviction. They have the skills. The shift is in mindset: from proving it works to making it useful. Leave time for questions.
+</aside>
+</section>
+
+<!-- ====================================================================== -->
+<!-- APPENDIX -->
+<!-- ====================================================================== -->
+
+<section>
+<div class="title-slide">
+  <h1>Appendix</h1>
+  <div class="divider"></div>
+  <p class="muted">Additional slides for reference</p>
+</div>
+</section>
+
+<!-- A1: USER PROFILE TEMPLATE -->
+<section>
+<div class="appendix-header">APPENDIX</div>
+<h2>User Profile Template</h2>
+
+<p>Fill this out for your primary user before building further.</p>
+
+<table>
+  <thead>
+    <tr><th>#</th><th>Question</th><th>Your answer</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td><strong>Who is this person?</strong> Job title, organization, experience level</td><td></td></tr>
+    <tr><td>2</td><td><strong>When do they need your tool?</strong> Specific situation, time pressure, context</td><td></td></tr>
+    <tr><td>3</td><td><strong>What frustrates them today?</strong> Current pain points, workarounds</td><td></td></tr>
+    <tr><td>4</td><td><strong>What does success look like?</strong> What outcome makes them come back?</td><td></td></tr>
+    <tr><td>5</td><td><strong>What would make them stop using it?</strong> Deal-breakers, friction, trust issues</td><td></td></tr>
+  </tbody>
+</table>
+</section>
+
+<!-- A2: MOSCOW WORKSHEET -->
+<section>
+<div class="appendix-header">APPENDIX</div>
+<h2>MoSCoW Prioritization Worksheet</h2>
+
+<p>List your features in each category. Be honest about what you won't build.</p>
+
+<div class="card-row">
+  <div class="research-card" style="min-height:200px;">
+    <h3><span class="accent">Must Have</span></h3>
+    <p class="muted">Without these, the tool doesn't solve the core problem. List 2-3 features maximum.</p>
+  </div>
+  <div class="research-card" style="min-height:200px;">
+    <h3>Should Have</h3>
+    <p class="muted">Important but not blocking. Would significantly improve the experience.</p>
+  </div>
+  <div class="research-card" style="min-height:200px;">
+    <h3>Could Have</h3>
+    <p class="muted">Nice to have. Only build if Must and Should are done.</p>
+  </div>
+  <div class="research-card" style="min-height:200px;">
+    <h3>Won't Have</h3>
+    <p class="muted">Explicitly out of scope. Writing this down prevents scope creep.</p>
+  </div>
+</div>
+</section>
+
+<!-- A3: VALIDATION CHECKLIST -->
+<section>
+<div class="appendix-header">APPENDIX</div>
+<h2>Validation Checklist</h2>
+
+<p>Run through these checks before calling your tool "ready."</p>
+
+<div class="two-col">
+  <div>
+    <h3>Usability</h3>
+    <ul>
+      <li>Can a new user complete the core task without help?</li>
+      <li>Does it work on the hardware your users actually have?</li>
+      <li>Does it work on slow or intermittent internet?</li>
+      <li>Is the interface in the right language(s)?</li>
+      <li>Can users tell when AI is confident vs guessing?</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Sustainability</h3>
+    <ul>
+      <li>Who maintains this after the fellowship?</li>
+      <li>What are the monthly running costs?</li>
+      <li>What breaks when an API changes?</li>
+      <li>Is there documentation for someone new to maintain it?</li>
+      <li>Do you have a plan for when grant funding ends?</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+</div>
+</div>
+
+<script src="https://unpkg.com/reveal.js@4.0.2/dist/reveal.js"></script>
+<script src="https://unpkg.com/reveal.js@4.0.2/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    transition: 'slide',
+    width: 1280,
+    height: 720,
+    margin: 0.1,
+    center: false,
+    responsive: true,
+    plugins: [RevealNotes]
+  });
+</script>
+</body>
+</html>
