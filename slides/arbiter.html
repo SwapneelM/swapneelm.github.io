@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arbiter — Pitch Deck</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Inter:wght@400;500;600;700&family=Geist+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #0A0E1A; --blue: #3b82f6; --red: #f87171; --amber: #fbbf24; }
+    .reveal { font-family: 'Inter', system-ui, sans-serif; }
+    .reveal .slides { text-align: left; }
+    .reveal .slides section { padding: 56px 80px; box-sizing: border-box; display: flex !important; flex-direction: column; justify-content: center; }
+    .reveal h1, .reveal h2, .reveal h3 { font-family: 'Source Serif 4', Georgia, serif; text-transform: none; font-weight: 700; line-height: 1.15; color: #fff; }
+    .reveal h1 { font-size: 3.8em; }
+    .reveal h2 { font-size: 1.5em; }
+    .reveal p { line-height: 1.6; margin: 0; }
+    .reveal .slide-number { font-family: 'Geist Mono', monospace; font-size: 14px; color: #4b5563; background: transparent; }
+    .reveal .controls .controls-arrow { color: var(--blue); }
+    .reveal .progress span { background: var(--blue); }
+    .mono { font-family: 'Geist Mono', monospace; }
+    .serif { font-family: 'Source Serif 4', Georgia, serif; }
+    .ref { font-size: 0.38em; color: #4b5563; margin-top: 24px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.04); }
+    .ref a { color: #4b5563; text-decoration: none; }
+    .ref a:hover { color: var(--blue); text-decoration: underline; }
+    sup a { color: #4b5563; text-decoration: none; font-size: 0.7em; font-weight: 600; }
+    sup a:hover { color: var(--blue); }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+    .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 22px; }
+    .card-blue { border-color: rgba(59,130,246,0.3); }
+    .label-blue { font-size: 0.42em; color: var(--blue); font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; }
+    .tweet { background: rgba(127,29,29,0.2); border: 1px solid rgba(239,68,68,0.25); border-radius: 12px; padding: 14px; font-size: 0.55em; margin-bottom: 10px; }
+    .tweet-head { display: flex; gap: 8px; align-items: center; }
+    .tweet-avatar { width: 26px; height: 26px; border-radius: 50%; background: #2F3336; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-size: 10px; font-weight: 700; }
+    .tweet-name { color: #fff; font-weight: 700; }
+    .tweet-handle { color: #6b7280; font-size: 0.9em; }
+    .tweet-body { color: #e5e7eb; margin-top: 6px; line-height: 1.4; }
+    .tweet-badge { font-size: 0.65em; color: #f87171; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-top: 6px; padding-top: 6px; border-top: 1px solid rgba(239,68,68,0.2); }
+    .big { font-family: 'Geist Mono', monospace; font-weight: 700; line-height: 1; }
+    @media print { .reveal .slides section { page-break-after: always; } }
+  </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══ 1. TITLE ═══ -->
+<section data-background-color="#0A0E1A">
+  <div style="text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%">
+    <h1>Arbiter</h1>
+    <p style="font-size:0.85em;color:#9ca3af;margin-top:28px">The transparency layer for the social internet.</p>
+    <p style="font-size:0.55em;color:#4b5563;margin-top:56px">SimPPL &middot; 501(c)(3) nonprofit</p>
+  </div>
+</section>
+
+<!-- ═══ 2. SCALE — The big number ═══ -->
+<section data-background-color="#0A0E1A">
+  <div style="text-align:center">
+    <p class="big" style="font-size:3.5em;color:#fff;letter-spacing:-0.02em">5,660,000,000</p>
+    <p style="font-size:0.85em;color:#d1d5db;margin-top:16px">people access social media every day.<sup><a href="https://datareportal.com/social-media-users">[1]</a></sup></p>
+  </div>
+  <div class="grid-3" style="margin-top:44px;text-align:center">
+    <div>
+      <p class="big" style="font-size:1.8em;color:var(--blue)">1B+</p>
+      <p style="font-size:0.48em;color:#9ca3af;margin-top:4px">posts created every day across platforms<sup><a href="https://datareportal.com/social-media-users">[1]</a></sup></p>
+    </div>
+    <div>
+      <p class="big" style="font-size:1.8em;color:var(--blue)">2h 23m</p>
+      <p style="font-size:0.48em;color:#9ca3af;margin-top:4px">average daily time on social media<sup><a href="https://datareportal.com/social-media-users">[1]</a></sup></p>
+    </div>
+    <div>
+      <p class="big" style="font-size:1.8em;color:var(--blue)">54%</p>
+      <p style="font-size:0.48em;color:#9ca3af;margin-top:4px">of Americans now get news from social media, more than TV<sup><a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025/dnr-executive-summary">[2]</a></sup></p>
+    </div>
+  </div>
+  <p class="ref" style="text-align:center">[1] <a href="https://datareportal.com/social-media-users">DataReportal, 2025</a> &ensp; [2] <a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025/dnr-executive-summary">Reuters Institute, 2025</a></p>
+</section>
+
+<!-- ═══ 3. TRUST IS BROKEN ═══ -->
+<section data-background-color="#0A0E1A">
+  <div class="grid-2" style="align-items:center">
+    <div>
+      <h2 style="font-size:1.4em">We have no idea what is trustworthy and what isn't.</h2>
+      <ul style="font-size:0.65em;color:#d1d5db;margin-top:16px;padding-left:1.2em;list-style:none">
+        <li style="margin-bottom:6px">&bull; Trust in media has fallen to <strong style="color:#fff">28%</strong>, the lowest in Gallup's 50-year history<sup><a href="https://news.gallup.com/poll/695762/trust-media-new-low.aspx">[3]</a></sup></li>
+        <li style="margin-bottom:6px">&bull; <strong style="color:#fff">58%</strong> of people worldwide struggle to tell real news from fake<sup><a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025/dnr-executive-summary">[4]</a></sup></li>
+        <li>&bull; The social internet produces more content than any person or institution can assess</li>
+      </ul>
+      <p class="ref">[3] <a href="https://news.gallup.com/poll/695762/trust-media-new-low.aspx">Gallup, 2025</a> &ensp; [4] <a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025/dnr-executive-summary">Reuters Institute, 2025</a></p>
+    </div>
+    <div style="text-align:center">
+      <!-- Trust chart -->
+      <div class="card">
+        <p style="color:#fff;font-size:0.6em;font-weight:600">Trust in media: 50-year decline</p>
+        <svg viewBox="0 0 380 180" style="width:100%;margin-top:8px">
+          <line x1="30" y1="128" x2="360" y2="128" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+          <text x="25" y="131" text-anchor="end" fill="#4B5563" font-size="8">20%</text>
+          <line x1="30" y1="96" x2="360" y2="96" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+          <text x="25" y="99" text-anchor="end" fill="#4B5563" font-size="8">40%</text>
+          <line x1="30" y1="64" x2="360" y2="64" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+          <text x="25" y="67" text-anchor="end" fill="#4B5563" font-size="8">60%</text>
+          <defs>
+            <linearGradient id="ag" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3"/><stop offset="100%" stop-color="#f87171" stop-opacity="0.3"/></linearGradient>
+            <linearGradient id="lg" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#f87171"/></linearGradient>
+          </defs>
+          <path d="M40,44.8 L90,48 L145,72 L185,89.6 L230,96 L280,96 L320,110.4 L345,115.2 L345,165 L40,165Z" fill="url(#ag)"/>
+          <polyline points="40,44.8 90,48 145,72 185,89.6 230,96 280,96 320,110.4 345,115.2" fill="none" stroke="url(#lg)" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="40" cy="44.8" r="4" fill="#3b82f6" stroke="#0A0E1A" stroke-width="2"/>
+          <text x="40" y="36" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">72%</text>
+          <text x="40" y="175" text-anchor="middle" fill="#6b7280" font-size="7">1972</text>
+          <circle cx="345" cy="115.2" r="4" fill="#f87171" stroke="#0A0E1A" stroke-width="2"/>
+          <text x="345" y="107" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">28%</text>
+          <text x="345" y="175" text-anchor="middle" fill="#6b7280" font-size="7">2025</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 4. WHY INTERVENTIONS FAIL ═══ -->
+<section data-background-color="#0A0E1A">
+  <h2 style="font-size:1.35em;text-align:center">We tried to fix fake news. Every approach has failed at scale.</h2>
+  <div class="grid-3" style="margin-top:28px">
+    <div class="card" style="text-align:center">
+      <p class="big" style="font-size:1.6em;color:var(--red)">6&times; faster</p>
+      <p style="font-size:0.55em;color:#d1d5db;margin-top:8px">False stories reach people six times faster than true ones. Humans drive the spread, not bots.<sup><a href="https://news.mit.edu/2018/study-twitter-false-news-travels-faster-true-stories-0308">[5]</a></sup></p>
+      <p style="font-size:0.48em;color:#9ca3af;margin-top:6px;font-weight:600">Fact-checking can't keep up</p>
+    </div>
+    <div class="card" style="text-align:center">
+      <p class="big" style="font-size:1.6em;color:var(--red)">6&times; engagement</p>
+      <p style="font-size:0.55em;color:#d1d5db;margin-top:8px">Misinformation on Facebook received six times more interactions than factual news during the 2020 election.<sup><a href="https://engineering.nyu.edu/news/misinformation-facebook-got-six-times-more-clicks-factual-news-during-2020-election-study-says">[6]</a></sup></p>
+      <p style="font-size:0.48em;color:#9ca3af;margin-top:6px;font-weight:600">Platforms reward engagement, not accuracy</p>
+    </div>
+    <div class="card" style="text-align:center">
+      <p class="big" style="font-size:1.6em;color:var(--red)">2,900</p>
+      <p style="font-size:0.55em;color:#d1d5db;margin-top:8px">U.S. newsrooms have shut down. The reporters who remain cannot gather cross-platform evidence fast enough to matter.<sup><a href="https://localnewsinitiative.northwestern.edu">[7]</a></sup></p>
+      <p style="font-size:0.48em;color:#9ca3af;margin-top:6px;font-weight:600">Journalism is under-resourced</p>
+    </div>
+  </div>
+  <p style="text-align:center;font-size:0.75em;color:var(--blue);margin-top:28px;font-weight:600" class="serif">Instead of telling people what to trust, show them who is manipulating them.</p>
+</section>
+
+<!-- ═══ 5. PERSONAL STORY ═══ -->
+<section data-background-color="#1A0F0F">
+  <div class="grid-2">
+    <div>
+      <h2 style="font-size:1.25em">My grandfather got scammed by a coordinated social media campaign.</h2>
+      <ul style="font-size:0.62em;color:#d1d5db;margin-top:14px;padding-left:1.2em;list-style:none">
+        <li style="margin-bottom:8px">&bull; Dozens of accounts across YouTube, Twitter, and WhatsApp all promoted the same company. If everyone is saying it, it must be real. He invested.</li>
+        <li style="margin-bottom:8px">&bull; OnPassive never launched a product. The SEC confirmed it defrauded <strong style="color:#fff">800,000 people of $108 million</strong>.<sup><a href="https://www.sec.gov/enforcement-litigation/litigation-releases/lr-25809">[8]</a></sup></li>
+        <li style="margin-bottom:8px">&bull; The campaign spanned 5 platforms simultaneously, but no single platform showed the full picture, and no existing tool could trace the coordination.</li>
+      </ul>
+      <div style="margin-top:14px;padding:12px 16px;background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.25);border-radius:8px">
+        <p style="font-size:0.65em;color:var(--blue);font-weight:700">Arbiter could have surfaced the coordinated network before the public was influenced.</p>
+      </div>
+      <ul style="font-size:0.62em;color:#d1d5db;padding-left:1.2em;list-style:none;display:none">
+      </ul>
+      <p class="ref">[8] <a href="https://www.sec.gov/enforcement-litigation/litigation-releases/lr-25809">SEC Litigation Release LR-25809, 2023</a></p>
+    </div>
+    <div>
+      <p class="label-blue" style="margin-bottom:10px">Coordinated promotion across platforms</p>
+      <div class="tweet">
+        <div class="tweet-head"><div class="tweet-avatar">O</div><div><span class="tweet-name">ONPASSIVE</span> <span style="color:#3b82f6">&#10004;</span><br><span class="tweet-handle">@ONPASSIVE</span></div></div>
+        <div class="tweet-body">Achieve your digital goals using the ONPASSIVE Ecosystem. Register now!<br><br>#ONPASSIVE #ArtificialIntelligence #TheFutureOfInternet</div>
+        <div class="tweet-badge">Coordinated promotion detected</div>
+      </div>
+      <div class="tweet">
+        <div class="tweet-head"><div class="tweet-avatar">G</div><div><span class="tweet-name">Ginger-Grammy #ONPASSIVE</span><br><span class="tweet-handle">@dvdesanto</span></div></div>
+        <div class="tweet-body">The future is bright with #ONPASSIVE! Ground floor opportunity. #WinWithONPASSIVE #TheFutureOfInternet</div>
+        <div class="tweet-badge">Same hashtag network</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 6. NATIONAL STAKES ═══ -->
+<section data-background-color="#0A0E1A">
+  <h2 style="text-align:center;font-size:1.35em;margin-bottom:28px">Coordinated campaigns are reshaping elections.</h2>
+  <div class="grid-3">
+    <div class="card">
+      <p class="label-blue">Romania 2024</p>
+      <h3 style="font-size:0.85em;margin-top:8px">Election annulled</h3>
+      <p style="font-size:0.52em;color:#9ca3af;margin-top:8px">25,000 coordinated TikTok accounts. 179 million impressions. The Constitutional Court cancelled the election.<sup><a href="https://globalwitness.org/en/campaigns/digital-threats/what-happened-on-tiktok-around-the-annulled-romanian-presidential-election-an-investigation-and-poll/">[9]</a></sup></p>
+    </div>
+    <div class="card">
+      <p class="label-blue">Slovakia 2023</p>
+      <h3 style="font-size:0.85em;margin-top:8px">Deepfake audio</h3>
+      <p style="font-size:0.52em;color:#9ca3af;margin-top:8px">AI-cloned voice of an opposition leader spread during the media silence period. Russia's SVR referenced it within two hours.<sup><a href="https://misinforeview.hks.harvard.edu/article/beyond-the-deepfake-hype-ai-democracy-and-the-slovak-case/">[10]</a></sup></p>
+    </div>
+    <div class="card">
+      <p class="label-blue">Germany 2025</p>
+      <h3 style="font-size:0.85em;margin-top:8px">Three Russian operations</h3>
+      <p style="font-size:0.52em;color:#9ca3af;margin-top:8px">Cloned media websites. Fabricated ballot videos. A single endorsement on X increased a party's visibility 8x overnight.<sup><a href="https://dfrlab.org/2025/02/20/the-musk-effect-xs-impact-on-germanys-election/">[11]</a></sup></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 7. TRANSPARENCY VISUAL ═══ -->
+<section data-background-color="#0A0E1A">
+  <h2 style="font-size:1.3em;text-align:center;margin-bottom:24px">Protect free speech, but don't enable free reach.</h2>
+  <div class="grid-2">
+    <div>
+      <p style="font-size:0.5em;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:8px">Without transparency</p>
+      <div style="background:#16181C;border:1px solid #2F3336;border-radius:12px;padding:16px;font-size:0.55em">
+        <div class="tweet-head"><div class="tweet-avatar">A</div><div><span class="tweet-name">@activist_2024</span></div></div>
+        <div class="tweet-body" style="margin-top:8px">"Breaking: leaked documents prove election officials manipulated ballot counts in three swing states."</div>
+        <p style="color:#6b7280;font-size:0.85em;margin-top:8px">2,847 reposts &middot; 12.4K likes</p>
+        <p style="color:#4b5563;font-size:0.8em;margin-top:6px;font-style:italic">Looks like a real post from a real person. You have no reason to doubt it.</p>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:0.5em;color:var(--blue);font-weight:600;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:8px">With Arbiter's transparency layer</p>
+      <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.25);border-radius:12px;padding:16px;font-size:0.55em">
+        <div class="tweet-head"><div class="tweet-avatar">A</div><div><span class="tweet-name">@activist_2024</span></div></div>
+        <div class="tweet-body" style="margin-top:8px">"Breaking: leaked documents prove election officials manipulated ballot counts in three swing states."</div>
+        <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(59,130,246,0.2)">
+          <p style="color:var(--blue);font-weight:700;font-size:0.75em;margin-bottom:6px">COORDINATION CONTEXT</p>
+          <p style="color:#d1d5db;font-size:0.95em;margin-bottom:4px"><span style="color:var(--blue);font-weight:600">107 accounts</span> posted copies of this claim in the last 4 hours</p>
+          <p style="color:#d1d5db;font-size:0.95em;margin-bottom:4px">Spread across <span style="color:var(--blue);font-weight:600">6 languages</span> on X, Telegram, and Facebook</p>
+          <p style="color:#d1d5db;font-size:0.95em;margin-bottom:4px"><span style="color:var(--blue);font-weight:600">83%</span> of sharing accounts were created in the last 30 days</p>
+          <p style="color:#d1d5db;font-size:0.95em">No source documents found matching the claim</p>
+        </div>
+      </div>
+      <p style="font-size:0.5em;color:#9ca3af;margin-top:8px;font-style:italic">You decide what to believe. We show you what you're looking at.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 8. SOLUTION ═══ -->
+<section data-background-color="#0A0E1A">
+  <p class="label-blue" style="margin-bottom:8px">Our Solution</p>
+  <h2 style="font-size:1.35em">Arbiter makes the hidden structure of online campaigns visible, before the public is influenced.</h2>
+  <ul style="font-size:0.65em;color:#d1d5db;margin-top:14px;padding-left:1.2em;list-style:none">
+    <li style="margin-bottom:8px">&bull; A journalist types one question</li>
+    <li style="margin-bottom:8px">&bull; Our AI agents collect posts from <strong style="color:#fff">nine platforms</strong>, trace networks promoting claims across platforms, languages, and countries</li>
+    <li style="margin-bottom:8px">&bull; Every claim in the investigation links back to the original post</li>
+    <li style="color:var(--blue);font-weight:600">&bull; Instead of asking you to believe them, journalists can now show you who is behind your feed</li>
+  </ul>
+  <div class="grid-3" style="margin-top:28px;text-align:center">
+    <div><p class="big" style="font-size:1.8em;color:var(--blue)">9</p><p style="font-size:0.5em;color:#9ca3af">platforms</p><p style="font-size:0.38em;color:#4b5563;margin-top:2px">X, YouTube, Reddit, TikTok, Bluesky, Meta, Telegram, Instagram, 4chan</p></div>
+    <div><p class="big" style="font-size:1.8em;color:var(--blue)">200M+</p><p style="font-size:0.5em;color:#9ca3af">posts analyzed monthly</p></div>
+    <div><p class="big" style="font-size:1.8em;color:var(--blue)">8</p><p style="font-size:0.5em;color:#9ca3af">countries with journalist users</p></div>
+  </div>
+</section>
+
+<!-- ═══ 9. IMPACT — Investigations ═══ -->
+<section data-background-color="#0A0E1A">
+  <p class="label-blue" style="margin-bottom:8px">Impact</p>
+  <h2 style="font-size:1.25em;margin-bottom:20px">Journalists using Arbiter have uncovered coordinated operations reaching hundreds of millions.</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+    <div class="card card-blue">
+      <p class="label-blue">Investigation</p>
+      <h3 style="font-size:0.8em;margin-top:6px">Bondi Beach attack</h3>
+      <p style="font-size:0.5em;color:#9ca3af;margin-top:4px">6,000 posts across YouTube and Twitter. Information distortion accounted for 34% of all engagement.</p>
+      <p class="big" style="font-size:1.2em;color:var(--blue);margin-top:6px">406.7M interactions</p>
+    </div>
+    <div class="card card-blue">
+      <p class="label-blue">Investigation</p>
+      <h3 style="font-size:0.8em;margin-top:6px">Online scams &amp; crypto trading</h3>
+      <p style="font-size:0.5em;color:#9ca3af;margin-top:4px">6,345 posts across Twitter, YouTube, and Bluesky. Gambling promotions normalized undisclosed claims.</p>
+      <p class="big" style="font-size:1.2em;color:var(--blue);margin-top:6px">229.7M interactions</p>
+    </div>
+    <div class="card">
+      <p class="label-blue">Platform Enforcement</p>
+      <h3 style="font-size:0.8em;margin-top:6px">Meta threat takedown</h3>
+      <p style="font-size:0.5em;color:#9ca3af;margin-top:4px">Contributed to Meta's Q1 2024 adversarial threat report. Coordinated networks in Bangladesh removed.</p>
+    </div>
+    <div class="card">
+      <p class="label-blue">Platform Enforcement</p>
+      <h3 style="font-size:0.8em;margin-top:6px">YouTube content removal</h3>
+      <p style="font-size:0.5em;color:#9ca3af;margin-top:4px">Detected AI-generated campaign with 100% positive sentiment. YouTube removed the content after our report.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 10. PARTNERSHIPS & CAPACITY BUILDING ═══ -->
+<section data-background-color="#0A0E1A">
+  <p class="label-blue" style="margin-bottom:8px">Partnerships &amp; Capacity Building</p>
+  <h2 style="font-size:1.2em;margin-bottom:20px">We work with newsrooms, agencies, and civil society across 8 countries.</h2>
+  <div class="grid-3">
+    <div>
+      <p style="font-size:0.5em;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px">Newsroom Partners</p>
+      <ul style="font-size:0.5em;color:#d1d5db;padding-left:0;list-style:none">
+        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Rappler</strong> (Philippines)</li>
+        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Tempo Media</strong> (Indonesia)</li>
+        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Jagran New Media</strong> (India)</li>
+        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">NY Public Radio / Gothamist</strong> (US)</li>
+        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">VTDigger</strong> (US)</li>
+        <li style="padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Yale Daily News</strong> (US)</li>
+      </ul>
+    </div>
+    <div>
+      <p style="font-size:0.5em;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px">Capacity Building</p>
+      <ul style="font-size:0.5em;color:#d1d5db;padding-left:0;list-style:none">
+        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Kenya</strong> &middot; 10+ journalists trained with Africa Uncensored</li>
+        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Mongolia</strong> &middot; 2-month training for 18 CSOs with NEST Center</li>
+        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Germany</strong> &middot; DW Akademie partnership since 2022</li>
+        <li style="padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">JournalismAI</strong> &middot; Supporting newsrooms with AI tools</li>
+      </ul>
+    </div>
+    <div>
+      <p style="font-size:0.5em;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px">International Organizations</p>
+      <ul style="font-size:0.5em;color:#d1d5db;padding-left:0;list-style:none">
+        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">UNDP</strong> &middot; AI Trust and Safety program</li>
+        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">UN Peacekeeping Operations</strong></li>
+        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Fast Forward</strong> &middot; Tech Nonprofit Accelerator</li>
+        <li style="padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">YouTube</strong> &middot; 1.2M API calls/day granted</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 11. TEAM ═══ -->
+<section data-background-color="#0A0E1A">
+  <p class="label-blue" style="margin-bottom:8px">Team</p>
+  <h2 style="font-size:1.2em">Built by researchers who worked inside the platforms.</h2>
+  <div class="grid-2" style="margin-top:16px">
+    <div class="card">
+      <h3 style="font-size:0.85em">Swapneel Mehta</h3>
+      <p class="label-blue" style="margin-top:4px">Co-founder &amp; President</p>
+      <ul style="font-size:0.48em;color:#9ca3af;margin-top:8px;padding-left:1em;list-style:none">
+        <li style="margin-bottom:3px">&bull; PhD NYU, Postdoc MIT and Boston University</li>
+        <li style="margin-bottom:3px">&bull; Built AI systems at Twitter, Adobe, with Meta</li>
+        <li style="margin-bottom:3px">&bull; Published at NeurIPS, ICML, AAAI</li>
+        <li>&bull; Presented to heads of state through the UN</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="font-size:0.85em">Dhara Mungra</h3>
+      <p class="label-blue" style="margin-top:4px">Co-founder &amp; Engineering Lead</p>
+      <ul style="font-size:0.48em;color:#9ca3af;margin-top:8px;padding-left:1em;list-style:none">
+        <li style="margin-bottom:3px">&bull; NYU, Bombora (senior data scientist)</li>
+        <li style="margin-bottom:3px">&bull; Research with Anthropic</li>
+        <li style="margin-bottom:3px">&bull; Center for AI and Digital Policy</li>
+        <li>&bull; Leads engineering, operations, and partnerships</li>
+      </ul>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:center;gap:48px;margin-top:18px">
+    <div style="text-align:center"><p class="big" style="font-size:1.3em;color:var(--blue)">4</p><p style="font-size:0.42em;color:#9ca3af">ML engineers</p></div>
+    <div style="text-align:center"><p class="big" style="font-size:1.3em;color:var(--blue)">$350K</p><p style="font-size:0.42em;color:#9ca3af">raised to date</p></div>
+  </div>
+  <p style="text-align:center;font-size:0.38em;color:#4b5563;margin-top:12px">Google &middot; Mozilla &middot; Ford Foundation &middot; Omidyar Network &middot; Wikimedia &middot; UNDP &middot; Fast Forward</p>
+</section>
+
+<!-- ═══ 12. ASK ═══ -->
+<section data-background-color="#0A0E1A">
+  <div style="text-align:center">
+    <p class="label-blue" style="margin-bottom:14px">The Ask</p>
+    <p class="big" style="font-size:3.2em;color:#fff">$850,000</p>
+    <ul style="font-size:0.6em;color:#d1d5db;margin-top:14px;max-width:900px;margin-left:auto;margin-right:auto;padding-left:0;list-style:none;text-align:center">
+      <li style="margin-bottom:6px">&bull; Every journalist we onboard creates investigation templates that others reuse</li>
+      <li>&bull; The harms are the same everywhere, so the investigations should be replicable</li>
+    </ul>
+  </div>
+  <div class="grid-2" style="margin-top:28px">
+    <div>
+      <p style="font-size:0.5em;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px">What the funding supports</p>
+      <div class="card" style="margin-bottom:10px"><h3 style="font-size:0.75em">Scale to 1B+ posts/month</h3><p style="font-size:0.5em;color:#9ca3af;margin-top:4px">12+ platforms. More languages. More countries.</p></div>
+      <div class="card" style="margin-bottom:10px"><h3 style="font-size:0.75em">100 journalists, 5+ countries</h3><p style="font-size:0.5em;color:#9ca3af;margin-top:4px">Partnerships with press associations and journalism schools.</p></div>
+      <div class="card"><h3 style="font-size:0.75em">Open-source investigation tools</h3><p style="font-size:0.5em;color:#9ca3af;margin-top:4px">Peer-reviewed methods. Public datasets.</p></div>
+    </div>
+    <div>
+      <p style="font-size:0.5em;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px">Other ways to support us</p>
+      <ul style="font-size:0.55em;color:#d1d5db;padding-left:0;list-style:none">
+        <li style="margin-bottom:10px;padding:10px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px"><strong style="color:#fff">Champion our cause</strong><br><span style="color:#9ca3af;font-size:0.9em">Introduce us to funders, journalists, and partners in this space</span></li>
+        <li style="margin-bottom:10px;padding:10px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px"><strong style="color:#fff">Invite us to present</strong><br><span style="color:#9ca3af;font-size:0.9em">We presented at MIT, Harvard, tech companies, to heads of state, and UN agencies. Let us share our work with your team!</span></li>
+        <li style="padding:10px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px"><strong style="color:#fff">Connect us with journalists</strong><br><span style="color:#9ca3af;font-size:0.9em">Newsrooms, press associations, and investigative teams who need cross-platform tools</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 13. REAL HARM ═══ -->
+<section data-background-color="#1A0F0F">
+  <h2 style="font-size:1.3em;text-align:center;margin-bottom:24px">The scams cause real harm. With Arbiter, we can finally fight back.</h2>
+  <div style="display:flex;justify-content:center;gap:20px;align-items:flex-start">
+    <div style="text-align:center;max-width:220px">
+      <div style="border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,0.1);box-shadow:0 8px 32px rgba(0,0,0,0.4)">
+        <img src="images/whatsapp/dada_founder_scam.jpeg" style="width:100%;display:block" alt="WhatsApp scam: OnPassive founder promotion">
+      </div>
+      <p style="font-size:0.38em;color:#9ca3af;margin-top:8px">Scammer recruiting "founders" for commissions that never came</p>
+    </div>
+    <div style="text-align:center;max-width:220px">
+      <div style="border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,0.1);box-shadow:0 8px 32px rgba(0,0,0,0.4)">
+        <img src="images/whatsapp/dada_scammers_post.jpeg" style="width:100%;display:block" alt="WhatsApp scam: forwarded AI claims in Hindi">
+      </div>
+      <p style="font-size:0.38em;color:#9ca3af;margin-top:8px">Forwarded posts promoting fake AI products in Hindi</p>
+    </div>
+    <div style="text-align:center;max-width:220px">
+      <div style="border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,0.1);box-shadow:0 8px 32px rgba(0,0,0,0.4)">
+        <img src="images/whatsapp/iphone_selling_scam.jpeg" style="width:100%;display:block" alt="WhatsApp scam: iPhone selling scam">
+      </div>
+      <p style="font-size:0.38em;color:#9ca3af;margin-top:8px">Phone selling scam targeting seniors for bank credentials</p>
+    </div>
+    <div style="text-align:center;max-width:220px">
+      <div style="border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,0.1);box-shadow:0 8px 32px rgba(0,0,0,0.4)">
+        <img src="images/whatsapp/solar_panel_scam.jpeg" style="width:100%;display:block" alt="WhatsApp scam: solar panel investment scam">
+      </div>
+      <p style="font-size:0.38em;color:#9ca3af;margin-top:8px">Solar panel investment scam with fake donation claims</p>
+    </div>
+  </div>
+  <p style="font-size:0.5em;color:#9ca3af;text-align:center;margin-top:16px;font-style:italic">My grandfather aggregating scams for me to fight.</p>
+</section>
+
+<!-- ═══ 14. CLOSE ═══ -->
+<section data-background-color="#0A0E1A">
+  <div style="text-align:center;max-width:700px;margin:0 auto">
+    <h2 style="font-size:1.45em">My grandfather deserved to know who was flooding his feed. Millions of people do.</h2>
+    <p style="color:var(--blue);font-size:0.85em;margin-top:24px" class="serif">We built Arbiter to help you understand what is shaping public conversation before it shapes your views.</p>
+    <p style="color:#fff;font-size:0.8em;margin-top:24px;font-weight:600">Become the arbiters of your own truth.</p>
+    <div style="margin-top:40px;display:flex;justify-content:center;gap:16px">
+      <a href="https://calendly.com/simppl/arbiter-demo" style="background:#2563eb;color:#fff;padding:12px 32px;border-radius:999px;font-size:0.6em;font-weight:600;text-decoration:none">Request a Demo</a>
+      <a href="https://arbiter.simppl.org" style="border:1px solid rgba(255,255,255,0.15);color:#fff;padding:12px 32px;border-radius:999px;font-size:0.6em;font-weight:600;text-decoration:none">Open Arbiter</a>
+    </div>
+    <p style="color:#4b5563;font-size:0.45em;margin-top:24px">team@simppl.org &middot; simppl.org</p>
+  </div>
+</section>
+
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    controls: true,
+    progress: true,
+    center: true,
+    transition: 'fade',
+    width: 1920,
+    height: 1080,
+    margin: 0.04,
+    minScale: 0.2,
+    maxScale: 2.0,
+    pdfSeparateFragments: false,
+    pdfMaxPagesPerSlide: 1
+  });
+</script>
+</body>
+</html>
