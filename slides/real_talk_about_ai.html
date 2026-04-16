@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Talk About AI</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --accent: #0d9488;
+  --accent-light: #f0fdfa;
+  --bg-card: #f8f9fa;
+  --border-card: #e5e7eb;
+  --bg-highlight: #f0fdfa;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  --red: #dc2626;
+  --green: #16a34a;
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+.reveal { font-family: var(--font-main); font-size: 28px; color: var(--text-primary); }
+.reveal h1,.reveal h2,.reveal h3,.reveal h4 { font-family: var(--font-main); color: var(--text-primary); font-weight: 700; text-transform: none; letter-spacing: -0.01em; }
+.reveal h1 { font-size: 2.2em; line-height: 1.15; }
+.reveal h2 { font-size: 1.5em; line-height: 1.2; }
+.reveal h3 { font-size: 1.1em; line-height: 1.3; font-weight: 600; }
+.reveal h4 { font-size: 0.9em; font-weight: 600; color: var(--text-primary); }
+.reveal section { padding-bottom: 40px !important; max-height: 90vh; overflow: hidden; }
+.reveal ul { list-style: disc; margin-left: 1.2em; }
+.reveal li { margin-bottom: 0.5em; font-size: 0.85em; line-height: 1.5; color: var(--text-secondary); }
+.reveal img { border: none; box-shadow: none; }
+
+/* Title slide */
+.slide-title { display: flex !important; flex-direction: column; align-items: center; justify-content: center; min-height: 100%; }
+.slide-title h1 { margin-bottom: 0.3em; }
+.slide-title .subtitle { font-size: 0.65em; color: var(--text-secondary); font-weight: 400; font-style: italic; margin-bottom: 1.5em; }
+.slide-title .author { font-size: 0.7em; font-weight: 600; }
+.slide-title .affiliation { font-size: 0.6em; color: var(--text-secondary); }
+
+/* Question title slides */
+.slide-question { display: flex !important; flex-direction: column; align-items: center; justify-content: center; min-height: 100%; }
+.slide-question h1 { font-size: 2em; font-weight: 600; }
+.slide-question .q-num { font-size: 0.5em; color: var(--accent); font-weight: 500; letter-spacing: 0.05em; margin-bottom: 0.3em; }
+
+/* Full-page image slides */
+.slide-image { display: flex !important; align-items: center; justify-content: center; padding: 0 !important; padding-bottom: 0 !important; }
+.slide-image img { max-width: 100%; max-height: 85vh; object-fit: contain; }
+
+/* Image with title */
+.slide-titled-image { text-align: left; }
+.slide-titled-image img { max-width: 100%; max-height: 72vh; object-fit: contain; display: block; margin: 0.5em auto 0; }
+
+/* Cards — restrained academic style */
+.card-grid { display: grid; gap: 1em; margin-top: 1em; }
+.card-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.card-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.card { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 6px; padding: 1em 1.2em; text-align: left; }
+.card h4 { color: var(--text-primary); margin-bottom: 0.4em; font-size: 0.82em; }
+.card p,.card li { font-size: 0.72em; color: var(--text-secondary); line-height: 1.5; }
+.card .source { font-size: 0.6em; color: var(--text-muted); margin-top: 0.5em; }
+.card .source a { color: var(--accent); text-decoration: none; }
+.card .source a:hover { text-decoration: underline; }
+
+/* Evidence card — subtle left accent */
+.card-evidence { border-left: 3px solid var(--accent); }
+
+/* Callout — academic style */
+.callout { border-left: 3px solid var(--accent); background: var(--bg-highlight); border-radius: 4px; padding: 0.8em 1.2em; margin-top: 1em; text-align: left; }
+.callout p { font-size: 0.75em; color: var(--text-primary); margin: 0; }
+
+/* Takeaway — clean bottom accent */
+.takeaway { border-left: 3px solid var(--accent); padding: 0.6em 1em; margin-top: 1em; text-align: left; background: var(--bg-highlight); border-radius: 4px; }
+.takeaway h4 { color: var(--accent); margin-bottom: 0.3em; font-size: 0.82em; }
+.takeaway p { font-size: 0.75em; color: var(--text-secondary); margin: 0; }
+
+/* Two-column layout */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; text-align: left; }
+
+/* Quote card */
+.quote-card { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 6px; padding: 1em 1.2em; margin: 0.5em 0; text-align: left; border-left: 3px solid var(--text-muted); }
+.quote-card p { font-size: 0.72em; color: var(--text-secondary); line-height: 1.5; margin: 0; }
+.quote-card .attr { font-size: 0.6em; color: var(--accent); margin-top: 0.4em; font-weight: 500; }
+
+/* Headline card */
+.headline { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 6px; padding: 0.8em 1em; margin: 0.4em 0; text-align: left; }
+.headline h4 { font-size: 0.78em; color: var(--text-primary); margin-bottom: 0.2em; font-weight: 700; }
+.headline .meta { font-size: 0.55em; color: var(--text-muted); }
+
+/* Timeline */
+.timeline { display: flex; flex-direction: column; gap: 0.6em; margin-top: 0.8em; padding-left: 1em; border-left: 2px solid var(--accent); }
+.timeline-item { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 6px; padding: 0.6em 1em; text-align: left; }
+.timeline-item h4 { font-size: 0.8em; margin-bottom: 0.2em; color: var(--text-primary); }
+.timeline-item p { font-size: 0.65em; color: var(--text-secondary); margin: 0; }
+.timeline-item .source { font-size: 0.55em; color: var(--text-muted); }
+.timeline-item .source a { color: var(--accent); text-decoration: none; }
+
+/* Three-column grid (replaces chevron-flow) */
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8em; margin-top: 1em; }
+.grid-item { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 6px; padding: 0.8em 1em; text-align: left; }
+.grid-item h4 { font-size: 0.78em; margin-bottom: 0.3em; }
+.grid-item p { font-size: 0.65em; color: var(--text-secondary); margin: 0; }
+
+/* About Me */
+.about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 2em; align-items: start; text-align: left; }
+.about-grid .bio li { font-size: 0.78em; margin-bottom: 0.6em; }
+.about-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; display: block; margin: 0.5em auto; }
+/* Logo strip is a single cropped image from the original page render */
+
+/* RAI grid */
+.rai-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8em; margin-top: 0.8em; }
+.rai-item { text-align: center; padding: 0.6em; }
+.rai-item h4 { font-size: 0.72em; color: var(--accent); margin-bottom: 0.2em; }
+.rai-item p { font-size: 0.6em; color: var(--text-secondary); margin: 0; }
+
+/* Stat highlight (replaces stock-ticker) */
+.stat-highlight { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 6px; padding: 1em 1.2em; text-align: left; margin-top: 0.6em; }
+.stat-highlight .label { font-size: 0.65em; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+.stat-highlight .value { font-size: 1.6em; font-weight: 700; color: var(--text-primary); margin: 0.1em 0; }
+.stat-highlight .change { font-size: 0.9em; font-weight: 600; }
+.stat-highlight .date { font-size: 0.6em; color: var(--text-muted); }
+
+.reveal .slide-number { font-family: var(--font-main); font-size: 14px; }
+@media print { .reveal section { page-break-after: always; } }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ===== P1: TITLE ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-01.png" alt="Real Talk About Artificial Intelligence - Swapneel Mehta, Boston University and SimPPL">
+</section>
+
+<!-- ===== P2: ABOUT ME ===== -->
+<section>
+  <h2 style="text-align:left;">About Me</h2>
+  <div class="about-grid" style="margin-top:0.8em;">
+    <div style="text-align:center;">
+      <img src="images/real_talk_about_ai/embed-p02-00.jpeg" alt="Swapneel Mehta" class="about-photo">
+      <p style="font-size:0.7em; font-weight:600; margin-top:0.5em;">Swapneel Mehta, Ph.D.</p>
+      <p style="font-size:0.6em; color:var(--accent); font-weight:600;">Co-founder and President, SimPPL</p>
+    </div>
+    <div class="bio">
+      <ul>
+        <li class="fragment">Postdoctoral Researcher, MIT and Boston University</li>
+        <li class="fragment">Ph.D. in Data Science at New York University</li>
+        <li class="fragment">Running a nonprofit team working in 7 countries, founded in 2021</li>
+        <li class="fragment">Raised <strong>$2.5+ million</strong> in awards and grants from Google, Mozilla, Wikimedia, Ford, Omidyar, etc.</li>
+        <li class="fragment">Worked at <strong>X, Slack, Adobe</strong>, with <strong>Meta, CERN</strong> on rolling out AI and ML algorithms in products</li>
+      </ul>
+    </div>
+  </div>
+  <div class="fragment" style="text-align:center; margin-top:0.8em;">
+    <img src="images/real_talk_about_ai/logo-strip-clean.png" alt="Twitter/X, Adobe, Google, Slack, NYU, Boston University, MIT logos" style="max-width:480px; height:auto;">
+  </div>
+</section>
+
+<!-- ===== P3: SESSION GOALS ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-03.png" alt="Session Goals: Challenge Assumptions, Debate and Discuss, Extract Takeaways">
+</section>
+
+<!-- ===== P4: Q1 TITLE ===== -->
+<section class="slide-question">
+  <p class="q-num">QUESTION 1</p>
+  <h1>Does AI Make You More Productive?</h1>
+</section>
+
+<!-- ===== P5: Q1 EVIDENCE ===== -->
+<section>
+  <h2 style="text-align:left; font-size:1.4em;">Q1: Does AI Make You More Productive?</h2>
+  <div class="card-grid cols-3" style="margin-top:0.8em;">
+    <div class="card card-evidence fragment">
+      <h4>Fortune 500 Field Experiment</h4>
+      <p>Customer support productivity up <strong>~14%</strong>, biggest gains for less-experienced agents</p>
+      <p class="source"><a href="https://www.nber.org/papers/w31161">NBER Working Paper</a></p>
+    </div>
+    <div class="card card-evidence fragment">
+      <h4>Writing Tasks Study</h4>
+      <p>Non-expert workers completed higher-quality work <strong>37% faster</strong>. Performance converged across skill levels.</p>
+      <p class="source"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4375283">SSRN / Science</a></p>
+    </div>
+    <div class="card card-evidence fragment">
+      <h4>AI Index Meta-Analysis</h4>
+      <p>Benefits vary by task complexity and worker experience</p>
+      <p class="source"><a href="https://hai.stanford.edu/ai-index/2024-ai-index-report">Stanford HAI 2024</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== P6: ANTHROPIC SKILL FORMATION (screenshot slide) ===== -->
+<section class="slide-titled-image">
+  <h2 style="font-size:1.2em;">Anthropic: Heavy AI Use Makes Junior Devs <em>Less Capable</em> of Supervising AI</h2>
+  <img src="images/real_talk_about_ai/embed-p06-00.jpeg" alt="How AI Impacts Skill Formation - Shen and Tamkin paper abstract" class="fragment">
+</section>
+
+<!-- ===== P7: Q1 DISCUSSION ===== -->
+<section>
+  <h2 style="text-align:left;">Q1: Discussion and Takeaways</h2>
+  <h4 style="font-size:0.82em; text-align:left; margin-top:0.6em;">Questions to Consider</h4>
+  <p class="fragment" style="font-size:0.75em; color:var(--text-secondary); text-align:left;">Where <em>exactly</em> in your workflow would AI remove the most friction: ideas, drafts, QA, or analysis?</p>
+  <ul>
+    <li class="fragment">How do we avoid "automation complacency" while keeping humans in the loop for edge cases?</li>
+    <li class="fragment">What metrics will tell you whether productivity gains are real vs. cosmetic?</li>
+  </ul>
+  <div class="takeaway fragment">
+    <h4>Key Takeaway</h4>
+    <p>Pilot with high-volume, repeatable tasks. Measure cycle time, quality, and escalation rates pre/post. Pair junior staff with AI to compress ramp-up time and skill convergence.</p>
+  </div>
+</section>
+
+<!-- ===== P8: Q2 TITLE ===== -->
+<section class="slide-question">
+  <p class="q-num">QUESTION 2</p>
+  <h1>Will AI Take Your Job?</h1>
+</section>
+
+<!-- ===== P9: Q2 EVIDENCE ===== -->
+<section>
+  <h2 style="text-align:left;">Q2: Will AI Take Your Job?</h2>
+  <div class="card-grid cols-2" style="margin-top:0.8em;">
+    <div class="card card-evidence fragment">
+      <h4>IMF Global Analysis (2024)</h4>
+      <p><strong>~40% of jobs globally</strong> are exposed to AI; <strong>~60% in advanced economies</strong>. But exposure does not mean displacement. Outcomes depend on whether companies augment workers or replace them.</p>
+      <p class="source"><a href="https://www.elibrary.imf.org/view/journals/066/2024/001/article-A001-en.xml">IMF eLibrary</a> | <a href="https://www.oecd-ilibrary.org/employment/oecd-employment-outlook-2023_08785bba-en">OECD Report</a></p>
+    </div>
+    <div class="card card-evidence fragment">
+      <h4>Occupation Exposure Maps</h4>
+      <p>Jobs with heavy text-based, analytical, and interpersonal tasks are most affected (customer ops, marketing, coding, legal), but effects vary widely across roles and industries</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== P10: Q2 ANECDOTAL (screenshot collage) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-10.png" alt="Anecdotal Evidence: rvivek tweet about Claude Code hackathon, Anthropic article about AI writing code, CBS News about AI layoffs">
+</section>
+
+<!-- ===== P11: VCBENCH (paper abstract screenshot) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-11.png" alt="VCBench: Benchmarking LLMs in Venture Capital - Chen et al paper abstract">
+</section>
+
+<!-- ===== P12: SIGNALFIRE HIRING CHART ===== -->
+<section class="slide-titled-image">
+  <h2 style="font-size:1.3em;">Will AI Replace Software Engineers?</h2>
+  <img src="images/real_talk_about_ai/embed-p12-00.jpeg" alt="Percentage change in number of new hires by seniority 2023-2024 - Signalfire" class="fragment">
+</section>
+
+<!-- ===== P13: JUNIOR HIRES CHART ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/embed-p13-00.jpeg" alt="Percentage of new hires with one year or less of experience - declining trend 2019-2024 - Signalfire">
+</section>
+
+<!-- ===== P14: ANDY HALL TWEET ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/embed-p14-00.jpeg" alt="Andy Hall tweet: Claude Code coming for politics research like a freight train, with Alex Imas quote about 24-48 hours of work in 20 minutes">
+</section>
+
+<!-- ===== P15: OPEN JOBS CHART ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-15.png" alt="Number of open software engineering jobs at top tech companies - trending upward from 2023-2025 - Trueup via The Pragmatic Engineer">
+</section>
+
+<!-- ===== P16: Q2 DISCUSSION ===== -->
+<section>
+  <h2 style="text-align:left;">Q2: Discussion and Takeaways</h2>
+  <div class="grid-3" style="margin-top:1em;">
+    <div class="grid-item fragment"><h4>Audit Your Role</h4><p>What parts of your job can AI substitute vs. what parts does AI complement?</p></div>
+    <div class="grid-item fragment"><h4>AI Will "Redesign" Jobs</h4><p>If 20 to 30% of tasks are automated, how will you redesign jobs, KPIs, and career ladders?</p></div>
+    <div class="grid-item fragment"><h4>Track Pathways</h4><p>Monitor redeployment and reskilling, not just net headcount changes</p></div>
+  </div>
+  <div class="takeaway fragment" style="margin-top:1.2em;"><h4>Strategic Takeaway</h4><p>Treat AI as a task-level shock, not a job-level tsunami. Companies will build role redesign and reskilling around high-exposure tasks first.</p></div>
+</section>
+
+<!-- ===== P17: Q3 TITLE ===== -->
+<section class="slide-question">
+  <p class="q-num">QUESTION 3</p>
+  <h1>What Counts as Responsible AI?</h1>
+</section>
+
+<!-- ===== P18: Q3 REGULATORY LANDSCAPE ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-18.png" alt="Q3 Regulatory and Framework Landscape: EU AI Act, NIST AI Risk Management Framework, Human-AI Interaction Guidelines">
+</section>
+
+<!-- ===== P19: BAIN RAI FRAMEWORK (diagram) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-19.png" alt="Bain and Company: Responsible AI commitments span six critical risk areas - security, transparency, fairness, privacy, society, accountability">
+</section>
+
+<!-- ===== P20: Q3 NEWS HEADLINES (screenshot collage) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-20.png" alt="News headlines: Anthropic $1.5B settlement, OpenAI whistleblower Suchir Balaji, teenager sues OpenAI, Disney vs Character.AI, Meta torrented pirated books">
+</section>
+
+<!-- ===== P21: Q3 RAI ACTIONS ===== -->
+<section>
+  <h2 style="text-align:left;">What "Responsible AI" Looks Like in Practice</h2>
+  <div class="two-col" style="margin-top:0.8em;">
+    <div><ul>
+      <li class="fragment">Regular <strong>adversarial testing</strong> with external red teams</li>
+      <li class="fragment"><strong>Automated monitoring</strong> that alerts when outputs deviate from expected ranges</li>
+      <li class="fragment"><strong>Model cards</strong> documenting data sources, architecture, and known limitations</li>
+      <li class="fragment">Customer-facing <strong>explanation features</strong> showing why AI made specific decisions</li>
+      <li class="fragment"><strong>Incident response</strong> procedures with defined escalation paths</li>
+    </ul></div>
+    <div><ul>
+      <li class="fragment">Systems to <strong>detect copyright-protected content</strong> in training data</li>
+      <li class="fragment">Measuring and reporting the <strong>carbon footprint</strong> of model training and inference</li>
+      <li class="fragment">Designated executives <strong>accountable for AI safety</strong> decisions</li>
+      <li class="fragment"><strong>Human review requirements</strong> for high-stakes AI decisions (hiring, lending, medical)</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- ===== P22: Q3 DISCUSSION ===== -->
+<section>
+  <h2 style="text-align:left;">Q3: Discussion and Takeaways</h2>
+  <ul style="margin-top:0.6em;">
+    <li class="fragment">Where does your current AI use trigger <strong style="color:var(--accent);">"high-risk"</strong> under the EU AI Act (hiring, credit, safety-critical systems)?</li>
+    <li class="fragment">Which <em>one</em> NIST AI RMF control would most reduce your real risk: incident response, data governance, or ongoing evals?</li>
+  </ul>
+  <div class="grid-3" style="margin-top:0.8em;">
+    <div class="grid-item fragment"><h4>Start Lightweight</h4><p>AI Impact Assessment tied to NIST AI RMF</p></div>
+    <div class="grid-item fragment"><h4>Map Use Cases</h4><p>Align to EU AI Act risk tiers</p></div>
+    <div class="grid-item fragment"><h4>Document Everything</h4><p>Log testing, oversight, provenance</p></div>
+  </div>
+</section>
+
+<!-- ===== P23: Q4 TITLE ===== -->
+<section class="slide-question">
+  <p class="q-num">QUESTION 4</p>
+  <h1>Who Controls the AI?</h1>
+</section>
+
+<!-- ===== P24: Q4 CONCENTRATION ===== -->
+<section>
+  <h2 style="text-align:left;">Q4: Who Controls the AI?</h2>
+  <div class="card-grid cols-3" style="margin-top:1em;">
+    <div class="card card-evidence fragment"><h4>Industry Dominance</h4><p>Frontier models are concentrated in a few firms with massive compute budgets and proprietary data/evals</p></div>
+    <div class="card card-evidence fragment"><h4>Open-Weight Trend</h4><p>Meta Llama 3 (8B to 405B) increases access under custom licenses, but it is still not "fully open source"</p></div>
+    <div class="card card-evidence fragment"><h4>Infrastructure Costs</h4><p>Capital-intensive training; costs and scale reinforce centralization in hyperscalers and chip vendors</p></div>
+  </div>
+  <p class="fragment" style="font-size:0.55em; color:var(--text-muted); margin-top:0.6em;"><a href="https://aiindex.stanford.edu/report/" style="color:var(--accent);">Stanford AI Index 2024</a> | <a href="https://llama.meta.com/" style="color:var(--accent);">Meta Llama 3</a> | McKinsey Compute Analysis</p>
+</section>
+
+<!-- ===== P25: LARRY ELLISON (screenshot collage) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-25.png" alt="Larry Ellison wants US to unify national data for AI - Fortune article, and Blair institute lobbying for Oracle">
+</section>
+
+<!-- ===== P26: ELON MUSK EMAIL (screenshot collage) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-26.png" alt="Elon Musk email to OpenAI: Discussions are over. Plus Internal Tech Emails Twitter account showing Steve Jobs email">
+</section>
+
+<!-- ===== P27: Q4 DISCUSSION ===== -->
+<section>
+  <h2 style="text-align:left;">Q4: Discussion and Takeaways</h2>
+  <div class="card-grid cols-2" style="margin-top:1em;">
+    <div class="card fragment"><h4>Sovereignty Plan</h4><p>Will you rely solely on APIs, or build a dual stack (closed APIs + open-weight models on your VPC)?</p></div>
+    <div class="card fragment"><h4>Vendor Concentration Risk</h4><p>How do export controls and market concentration affect your resilience and bargaining power?</p></div>
+  </div>
+  <div class="takeaway fragment" style="margin-top:1.5em;"><h4>Strategic Imperative</h4><p><strong>Avoid one-way doors.</strong> Design a portable architecture: model abstraction layer, standardized evals, and configurable guardrails so you can switch models as prices and quality shift.</p></div>
+</section>
+
+<!-- ===== P28: Q5 TITLE ===== -->
+<section class="slide-question">
+  <p class="q-num">QUESTION 5</p>
+  <h1>Why Are LLMs Priced So Cheap?</h1>
+</section>
+
+<!-- ===== P29: Q5 ECONOMICS ===== -->
+<section>
+  <h2 style="text-align:left; font-size:1.4em;">Q5: Why Are LLMs Priced So Cheaply?</h2>
+  <div class="card-grid cols-3" style="margin-top:0.8em;">
+    <div class="card card-evidence fragment"><h4>Race for Mindshare</h4><p>Providers cut prices aggressively to win developer adoption. Competition intensified in China during 2024.</p></div>
+    <div class="card card-evidence fragment"><h4>Inference Cost Dynamics</h4><p>Serving is the main ongoing cost at scale. Hardware, batching, and distillation improve economics, but margins stay thin.</p></div>
+    <div class="card card-evidence fragment"><h4>Macro Build-Out</h4><p>Multi-trillion dollar data center expansion creates pressure for low per-token pricing</p>
+    <p class="source"><a href="https://semianalysis.com">SemiAnalysis</a> | McKinsey</p></div>
+  </div>
+</section>
+
+<!-- ===== P30: OPENAI BURNS THE BOATS (screenshot) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-30.png" alt="Substack article: OpenAI burns the boats - the $334 machine that OpenAI is aiming at Anthropic - by Ethan Ding">
+</section>
+
+<!-- ===== P31: Q5 ANECDOTAL (screenshot collage) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-31.png" alt="Anecdotal examples of LLM costs: Reddit thread about Anthropic fast mode, thdxr tweet about real team dynamics, and thinking token costs">
+</section>
+
+<!-- ===== P32: Q5 DISCUSSION ===== -->
+<section>
+  <h2 style="text-align:left;">Q5: Discussion and Takeaways</h2>
+  <div class="two-col" style="margin-top:1em;">
+    <div class="fragment"><h4>The Jevons Paradox Question</h4><p style="font-size:0.75em; color:var(--text-secondary);">As tokens get cheaper, will your <em>total</em> spend actually fall, or will usage balloon, keeping costs constant or higher?</p></div>
+    <div class="fragment"><h4>Optimization Levers</h4><ul>
+      <li class="fragment">Where can <strong>retrieval</strong> (RAG) replace expensive generation?</li>
+      <li class="fragment">Can <strong>smaller models</strong> handle specific tasks at lower cost?</li>
+      <li class="fragment">How much can <strong>caching</strong> reduce redundant inference?</li>
+    </ul></div>
+  </div>
+  <div class="callout fragment" style="margin-top:1em;"><p><strong>Metric That Matters:</strong> Track <span style="color:var(--accent);">cost-per-business-outcome</span> (e.g., cost per qualified lead, per resolved ticket), not cost per token alone.</p></div>
+</section>
+
+<!-- ===== P33: Q6 TITLE ===== -->
+<section class="slide-question">
+  <p class="q-num">QUESTION 6</p>
+  <h1>What Is the Business Model for AI Companies?</h1>
+</section>
+
+<!-- ===== P34: Q6 VALUE CAPTURE (pyramid diagram) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-34.png" alt="Q6 Value Capture in the AI Stack: Applications, Downstream Integrators, Infrastructure, Foundation Models. Complementary assets drive value.">
+</section>
+
+<!-- ===== P35: BUILDER.AI (screenshot collage) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-35.png" alt="Builder.ai Faked Business With Indian Firm VerSe to Inflate Sales - Bloomberg article with round-tripping details">
+</section>
+
+<!-- ===== P36: AI MONEY VORTEX (screenshot collage) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-36.png" alt="The Atlantic: The AI Money Vortex - OpenAI worth $500B, recursive cash flow between Nvidia, OpenAI, and Oracle">
+</section>
+
+<!-- ===== P37: SAM ALTMAN CHIPS (screenshot collage) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-37.png" alt="OpenAI agreed to buy $51M of AI chips from a startup backed by CEO Sam Altman - Wired article, Reuters article about Sam Altman ownership">
+</section>
+
+<!-- ===== P38: Q6 DISCUSSION ===== -->
+<section>
+  <h2 style="text-align:left;">Q6: Discussion and Takeaways</h2>
+  <p class="fragment" style="font-size:0.8em; color:var(--text-secondary); text-align:left; margin-top:1em;">Which complements do <em>you</em> own: distribution, proprietary data, brand equity, deep integration, or regulatory compliance? If you don't own any of these, you are donating all your value to platform providers.</p>
+  <div class="takeaway fragment" style="margin-top:1.5em;"><h4>Differentiation Strategy</h4><p>Treat foundation models as a commodity input. Differentiate on data advantage, user experience, and last-mile integration where you control the customer relationship.</p></div>
+</section>
+
+<!-- ===== P39: Q7 TITLE ===== -->
+<section class="slide-question">
+  <p class="q-num">QUESTION 7</p>
+  <h1>When Is AGI Expected?</h1>
+</section>
+
+<!-- ===== P40: Q7 AGI EVIDENCE ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-40.png" alt="Q7 AGI When and Why Care Now: Expert expectations vary widely, cautionary research views remain unsolved">
+</section>
+
+<!-- ===== P41: SAM ALTMAN AGI HEADLINE ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-41.png" alt="CNBC headline: Sam Altman now says AGI or human-level AI is not a super useful term">
+</section>
+
+<!-- ===== P42: GENERAL ENOUGH (screenshot collage) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-42.png" alt="General enough to do what exactly? Sam Altman Reddit post, Google DeepMind CEO on AGI timeline, OpenClaw AI agent">
+</section>
+
+<!-- ===== P43: Q7 DISCUSSION ===== -->
+<section>
+  <h2 style="text-align:left;">Q7: Discussion and Takeaways</h2>
+  <div class="grid-3" style="margin-top:1em;">
+    <div class="grid-item fragment"><h4>Define Your Trigger Table</h4><p>What specific evals or capability thresholds would force you to re-evaluate strategy?</p></div>
+    <div class="grid-item fragment"><h4>Build Model-Swap Flexibility</h4><p>Design systems with abstraction layers so you can switch models as capabilities and costs shift</p></div>
+    <div class="grid-item fragment"><h4>Continuous Skills Development</h4><p>Invest in workforce adaptability and evaluation infrastructure, not speculative roadmaps</p></div>
+  </div>
+  <div class="callout fragment" style="margin-top:1.2em;"><p><strong>AGI-Agnostic Operating Model:</strong> Build flexibility, continuous learning, and product roadmaps that don't depend on speculative breakthroughs.</p></div>
+</section>
+
+<!-- ===== P44: Q8 TITLE ===== -->
+<section class="slide-question">
+  <p class="q-num">QUESTION 8</p>
+  <h1>Will Geopolitics Affect AI's Future?</h1>
+</section>
+
+<!-- ===== P45: Q8 EXPORT CONTROLS ===== -->
+<section>
+  <h2 style="text-align:left;">Q8: Will Geopolitics Affect AI's Future?</h2>
+  <div class="timeline" style="margin-top:1em;">
+    <div class="timeline-item fragment"><h4>U.S. Export Controls (2022 to 2024)</h4><p>Restrict advanced chips and manufacturing equipment to China; rules refreshed Oct 2023 and Apr 2024 to close loopholes</p><p class="source"><a href="https://www.federalregister.gov/">Federal Register</a></p></div>
+    <div class="timeline-item fragment"><h4>EU AI Act (2024)</h4><p>First comprehensive horizontal AI regulation with <strong>extraterritorial effects</strong> for providers placing systems on EU market</p><p class="source"><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">EUR-Lex</a></p></div>
+    <div class="timeline-item fragment"><h4>International Coordination</h4><p>UK Bletchley Declaration (Nov 2023) and Seoul AI Summit (May 2024) produced safety commitments, but these are still voluntary norms</p><p class="source">UK Government</p></div>
+  </div>
+</section>
+
+<!-- ===== P46: SOVEREIGN AI DISTILLATION (screenshot collage) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-46.png" alt="Sovereign AI Models are distilling each other: Gergely Orosz tweet about Anthropic hypocrisy on scraping, cartoon about data ownership">
+</section>
+
+<!-- ===== P47: PETTINESS (photo collage) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-47.png" alt="Pettiness might impact AI more than geopolitics: Suchir Balaji photo, PM Modi with Sam Altman and Dario Amodei at AI Impact Summit">
+</section>
+
+<!-- ===== P48: OTHER EXPLANATIONS (screenshot collage) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-48.png" alt="Or maybe there are other explanations: Palantir CEO Karp on stage, Elon Musk ketamine use, Musk attacking Anthropic, Anthropic $30B funding">
+</section>
+
+<!-- ===== P50: Q8 DISCUSSION ===== -->
+<section>
+  <h2 style="text-align:left;">Q8: Discussion and Takeaways</h2>
+  <ul style="margin-top:0.8em;">
+    <li class="fragment">How do you hedge supply-chain and compliance risk (compute, chips, data transfer, model access)?</li>
+    <li class="fragment">What is your contingency if export controls tighten or new regulations emerge?</li>
+    <li class="fragment">Are you over-concentrated in a single vendor or jurisdiction?</li>
+  </ul>
+  <div class="grid-3" style="margin-top:1em;">
+    <div class="grid-item fragment"><h4>Build a Regulatory Radar</h4><p>Monitor evolving rules across jurisdictions where you operate</p></div>
+    <div class="grid-item fragment"><h4>Diversify Vendors and Regions</h4><p>Reduce single points of failure in compute, chips, and data infrastructure</p></div>
+    <div class="grid-item fragment"><h4>Document Provenance</h4><p>Log evals, human oversight, and decision trails for high-risk use cases</p></div>
+  </div>
+</section>
+
+<!-- ===== P51: CROSS-CUTTING RISKS ===== -->
+<section>
+  <h2 style="text-align:left;">Cross-Cutting Risks</h2>
+  <div class="card-grid cols-3" style="margin-top:1em;">
+    <div class="card fragment"><h4>Hallucinations</h4><p>LLMs can produce confident falsehoods. Mitigation requires retrieval (RAG), task decomposition, verification steps, and clear UX to set user expectations.</p><p class="source"><a href="https://arxiv.org/abs/2311.05232">Hallucination Survey</a></p></div>
+    <div class="card fragment"><h4>Copyright and Data Provenance</h4><p>Active legal fronts (NYT v. Microsoft and OpenAI; Authors Guild v. OpenAI). Licensing and provenance tooling will become critical differentiators.</p></div>
+    <div class="card fragment"><h4>Safety and Governance</h4><p>Establish continuous evals and red-teaming protocols. Log and review AI decisions. Implement guardrails. Prefer traceable training and fine-tuning data where feasible.</p></div>
+  </div>
+</section>
+
+<!-- ===== P52: WHERE TO PLACE BETS ===== -->
+<section>
+  <h2 style="text-align:left;">Where to Place Your First (or Next) Bets</h2>
+  <div class="card-grid cols-3" style="margin-top:1em;">
+    <div class="card card-evidence fragment"><h4>Pick 2 to 3 High-Volume Use Cases</h4><p>Focus on measurable outcomes: customer support, sales ops, knowledge management. Track clear before/after metrics.</p></div>
+    <div class="card card-evidence fragment"><h4>Ship a Thin Slice in 60 to 90 Days</h4><p>Baseline, pilot, A/B test, scale. Treat models as replaceable. Build abstraction layers from day one.</p></div>
+    <div class="card card-evidence fragment"><h4>Embed Governance Early</h4><p>Adopt <strong>NIST AI RMF</strong> "govern-map-measure-manage." Align with <strong>EU AI Act</strong> risk tiers if you touch EU markets.</p></div>
+  </div>
+  <div class="takeaway fragment" style="margin-top:1em;"><h4>Final Thought</h4><p>The organizations that win with AI won't be the ones with the best models. They'll be the ones with the best <span style="color:var(--accent);">processes, evals, and change management</span>.</p></div>
+</section>
+
+<!-- ===== RECENT DEVELOPMENTS: ALLBIRDS ===== -->
+<section>
+  <h2 style="text-align:left;">Recent Developments: Yes, This Is Real</h2>
+  <div class="two-col" style="margin-top:0.8em;">
+    <div>
+      <div class="headline fragment"><h4>Allbirds, the shoe company, is pivoting to become a GPU cloud provider</h4><p class="meta">CNBC, CNN, TechCrunch, April 15, 2026</p></div>
+      <div class="fragment" style="margin-top:0.6em;"><ul>
+        <li class="fragment">Sold its footwear IP and assets for <strong>$39 million</strong></li>
+        <li class="fragment">Rebranding as <strong>"NewBird AI"</strong>, a GPU-as-a-Service provider</li>
+        <li class="fragment">Raised <strong>$50M</strong> in convertible debt to acquire GPU hardware</li>
+        <li class="fragment">Stock surged <strong style="color:var(--green);">+582%</strong> in a single day, from under $3 to $16.99</li>
+      </ul></div>
+    </div>
+    <div>
+      <div class="stat-highlight fragment">
+        <p class="label">BIRD (NASDAQ)</p>
+        <p class="value">$16.99 <span class="change" style="color:var(--green);">+582%</span></p>
+        <p class="date">Apr 15, 2026 &middot; Market Close</p>
+      </div>
+      <div class="callout fragment" style="margin-top:0.6em;"><p>A shoe company valued at $21M on Tuesday is now worth $148M as a GPU provider. The "AI" label alone added $127 million in market cap.</p></div>
+      <p class="fragment" style="font-size:0.6em; color:var(--text-muted); margin-top:0.5em;">For context: Long Island Iced Tea rebranded to "Long Blockchain" in 2017 and saw a similar surge. That company was later charged with securities fraud.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOBODY IS SAFE (screenshot collage) ===== -->
+<section class="slide-image">
+  <img src="images/real_talk_about_ai/page-52.png" alt="Nobody is safe: Jack tweet about hacking 7000 DJI robot vacuums with Claude, Meta AI Safety head emails nuked by OpenClaw, Indian IT services market eroded by $50B">
+</section>
+
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  hash: true, width: 1280, height: 720, margin: 0.04,
+  minScale: 0.2, maxScale: 2.0,
+  transition: 'none', backgroundTransition: 'none',
+  center: true, controls: true, progress: true, slideNumber: true
+});
+</script>
+</body>
+</html>
