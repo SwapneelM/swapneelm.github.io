@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Sonnet 5 — what it does & doesn't do well</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Sonnet 5 deck — component library  (v1)
+   "Clay on paper": Anthropic-evoking ink + clay on warm paper.
+   Display: Newsreader (serif) · Utility/mono: JetBrains Mono
+   ============================================================ */
+
+:root{
+  --paper:#faf7f2;
+  --paper-2:#f2ece1;
+  --ink:#2a2521;
+  --ink-soft:#5b524a;
+  --ink-faint:#8a7f74;
+  --clay:#c15f3c;        /* Claude coral/clay */
+  --clay-deep:#9e4a2c;
+  --line:#e2d9cb;
+  --line-strong:#cabca7;
+  /* stance semantics */
+  --support:#3f7d5a;
+  --support-bg:#e5efe7;
+  --neutral:#a99372;
+  --neutral-bg:#efe8db;
+  --oppose:#b4472e;
+  --oppose-bg:#f4e2da;
+  --amber:#c98a2b;
+}
+
+/* ---------- reveal base overrides ---------- */
+.reveal{ font-family:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  color:var(--ink); font-weight:400; }
+.reveal .slides{ text-align:left; }
+.reveal .slides > section{        /* height:100% is required for reveal's
+  print-pdf pagination. Layout is handled by the inner .si flex column so we
+  never depend on reveal's inline display:block on the section itself. */
+  width:100%; height:100%; box-sizing:border-box; padding:0; }
+
+/* .si fills the slide; .si-body vertically centres the content between the top
+   edge and the footer, which is pinned to the bottom. Works identically on
+   screen and in reveal print-pdf (no @media print, no fixed heights). */
+.si{ display:flex; flex-direction:column; min-height:100%; height:100%;
+  box-sizing:border-box; padding:44px 68px 26px; }
+.si-body{ flex:1 1 auto; display:flex; flex-direction:column;
+  justify-content:center; min-height:0; }
+.reveal .slides section .frag{ }
+
+.reveal h1,.reveal h2,.reveal h3{
+  font-family:"Newsreader", Georgia, "Times New Roman", serif;
+  font-weight:500; color:var(--ink); text-transform:none;
+  letter-spacing:-.01em; line-height:1.05; margin:0; }
+.reveal h1{ font-size:2.55rem; }
+.reveal h2{ font-size:1.9rem; }
+.reveal h3{ font-size:1.28rem; }
+.reveal p,.reveal li,.reveal td,.reveal th{ font-size:.86rem; line-height:1.42; }
+.reveal a{ color:var(--clay-deep); text-decoration:none; border-bottom:1px solid var(--line-strong); }
+.reveal strong{ color:var(--ink); font-weight:700; }
+.reveal em{ font-style:normal; color:var(--clay-deep); font-weight:600; }
+
+/* solid flat background — no gradients (third-party PDF viewers such as
+   LinkedIn band-posterise soft radial gradients into grey smudges) */
+.reveal-viewport{ background:var(--paper); }
+.reveal .slides > section{ background:var(--paper); }
+
+/* ---------- kicker / eyebrow ---------- */
+.kicker{ font-family:"JetBrains Mono",monospace; font-size:.6rem; letter-spacing:.26em;
+  text-transform:uppercase; color:var(--clay-deep); font-weight:600;
+  display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+.kicker::before{ content:""; width:26px; height:2px; background:var(--clay); display:inline-block; }
+.kicker .n{ color:var(--ink-faint); margin-left:auto; letter-spacing:.18em; }
+
+/* ---------- lede ---------- */
+.lede{ font-family:"Newsreader",serif; font-size:1.18rem; line-height:1.4;
+  color:var(--ink-soft); max-width:44ch; }
+
+/* ---------- fact rail (title slide + launch facts) ---------- */
+.factrail{ display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+  border-top:1.5px solid var(--ink); margin-top:26px; }
+.factrail .cell{ padding:14px 16px 12px; border-right:1px solid var(--line); }
+.factrail .cell:last-child{ border-right:none; }
+.factrail .k{ font-size:.58rem; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--ink-faint); margin-bottom:7px; }
+.factrail .v{ font-family:"Newsreader",serif; font-size:1.42rem; color:var(--ink); line-height:1; }
+.factrail .v small{ font-size:.72rem; color:var(--ink-soft); font-family:"JetBrains Mono",monospace; }
+
+/* ---------- big stat ---------- */
+.statgrid{ display:grid; gap:18px; }
+.bignum{ font-family:"Newsreader",serif; font-size:3.1rem; line-height:.9; color:var(--clay-deep); }
+.bignum .u{ font-size:1rem; color:var(--ink-faint); font-family:"JetBrains Mono",monospace; letter-spacing:.02em; }
+
+/* ---------- stance bar ---------- */
+.stance{ display:flex; height:30px; border-radius:3px; overflow:hidden;
+  border:1px solid var(--line-strong); font-size:.62rem; }
+.stance span{ display:flex; align-items:center; justify-content:center; color:#fff;
+  font-family:"JetBrains Mono",monospace; letter-spacing:.04em; white-space:nowrap; }
+.stance .s{ background:var(--support); }
+.stance .n{ background:var(--neutral); }
+.stance .o{ background:var(--oppose); }
+.stance-key{ display:flex; gap:16px; margin-top:8px; font-size:.62rem; color:var(--ink-faint); }
+.stance-key i{ width:9px; height:9px; border-radius:2px; display:inline-block; margin-right:5px; }
+
+/* ---------- ledger table (strengths / weaknesses) ---------- */
+table.ledger{ width:100%; border-collapse:collapse; margin-top:4px; }
+table.ledger th{ text-align:left; font-family:"JetBrains Mono",monospace; font-size:.58rem;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint);
+  border-bottom:1.5px solid var(--ink); padding:0 12px 8px; }
+table.ledger td{ padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:middle; }
+table.ledger tr:last-child td{ border-bottom:none; }
+table.ledger .theme{ font-family:"Newsreader",serif; font-size:1rem; color:var(--ink); }
+table.ledger .who{ font-size:.68rem; color:var(--ink-faint); }
+table.ledger td.num{ font-family:"JetBrains Mono",monospace; text-align:right; color:var(--ink-soft); }
+/* volume meter cell */
+.meter{ position:relative; height:8px; background:var(--paper-2); border-radius:5px; min-width:90px; }
+.meter i{ position:absolute; left:0; top:0; bottom:0; border-radius:5px; }
+.meter.pos i{ background:var(--support); }
+.meter.neg i{ background:var(--clay); }
+.count{ font-family:"JetBrains Mono",monospace; font-size:.72rem; color:var(--ink); font-weight:700; }
+
+/* ---------- post entry (dossier quote) ---------- */
+.posts{ display:grid; gap:12px; }
+.post{ border-left:3px solid var(--line-strong); padding:2px 0 2px 16px; }
+.post.up{ border-left-color:var(--support); }
+.post.down{ border-left-color:var(--oppose); }
+.post .h{ display:flex; align-items:baseline; gap:10px; margin-bottom:4px; }
+.post .handle{ font-family:"JetBrains Mono",monospace; font-size:.72rem; color:var(--ink); font-weight:700; }
+.post .plat{ font-size:.56rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-faint); }
+.post .eng{ margin-left:auto; font-family:"JetBrains Mono",monospace; font-size:.66rem;
+  color:var(--clay-deep); font-weight:600; }
+.post .q{ font-family:"Newsreader",serif; font-size:.94rem; line-height:1.34; color:var(--ink-soft); }
+/* clean solid emphasis — no background/underline tricks that rasterise as
+   black redaction bars in third-party PDF viewers */
+.post .q b{ color:var(--clay-deep); font-weight:700; }
+
+/* ---------- claims check (diverging support vs contradict) ---------- */
+.claims{ display:grid; gap:14px; margin-top:6px; }
+.claimrow{ display:grid; grid-template-columns:1fr 250px 118px; gap:18px; align-items:center; }
+.claimrow .clm{ font-family:"Newsreader",serif; font-size:1.02rem; color:var(--ink); line-height:1.2; }
+.claimrow .clm small{ display:block; font-family:"JetBrains Mono",monospace;
+  font-size:.6rem; color:var(--ink-faint); margin-top:3px; letter-spacing:.02em; }
+/* diverging bar: contradict (left, clay) | midline | support (right, green) */
+.diverge{ position:relative; height:22px; display:flex; align-items:center; }
+.diverge .mid{ position:absolute; left:50%; top:-3px; bottom:-3px; width:1px; background:var(--line-strong); }
+.diverge .sup,.diverge .con{ height:16px; display:flex; align-items:center; font-family:"JetBrains Mono",monospace;
+  font-size:.62rem; color:#fff; }
+.diverge .con{ background:var(--clay); justify-content:flex-start; padding-left:6px;
+  margin-left:auto; border-radius:3px 0 0 3px; }
+.diverge .sup{ background:var(--support); justify-content:flex-end; padding-right:6px;
+  margin-right:auto; border-radius:0 3px 3px 0; }
+.diverge .half{ width:50%; display:flex; }
+.diverge .half.l{ justify-content:flex-end; } .diverge .half.r{ justify-content:flex-start; }
+.verdict{ font-family:"JetBrains Mono",monospace; font-size:.6rem; letter-spacing:.1em;
+  text-transform:uppercase; font-weight:700; text-align:right; }
+.verdict.holds{ color:var(--support); } .verdict.contested{ color:var(--amber); }
+.verdict.fails{ color:var(--clay-deep); }
+.claims-key{ display:flex; gap:20px; font-size:.6rem; color:var(--ink-faint);
+  font-family:"JetBrains Mono",monospace; margin-top:2px; }
+.claims-key i{ width:9px; height:9px; border-radius:2px; display:inline-block; margin-right:5px; }
+
+/* ---------- callout ---------- */
+.callout{ background:var(--paper-2); border:1px solid var(--line-strong);
+  border-left:4px solid var(--clay); border-radius:4px; padding:14px 18px; }
+.callout .lab{ font-family:"JetBrains Mono",monospace; font-size:.58rem; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--clay-deep); font-weight:600; margin-bottom:6px; }
+.callout p{ margin:0; }
+
+/* ---------- effort meter motif (signature) ---------- */
+.effort{ display:flex; gap:4px; align-items:flex-end; height:34px; }
+.effort b{ width:12px; background:var(--line-strong); border-radius:2px 2px 0 0; }
+.effort b:nth-child(1){ height:30%; } .effort b:nth-child(2){ height:48%; }
+.effort b:nth-child(3){ height:66%; } .effort b:nth-child(4){ height:84%; }
+.effort b:nth-child(5){ height:100%; background:var(--clay); }
+
+/* ---------- two-column ---------- */
+.cols{ display:grid; grid-template-columns:1fr 1fr; gap:34px; }
+.cols.tight{ gap:22px; }
+
+/* ---------- footer provenance ---------- */
+.foot{ flex:0 0 auto; margin-top:18px;   /* pinned below the centred body */
+  display:flex; justify-content:space-between; align-items:center;
+  font-family:"JetBrains Mono",monospace; font-size:.56rem; letter-spacing:.08em;
+  color:var(--ink-faint); border-top:1px solid var(--line); padding-top:9px; }
+.foot .src{ color:var(--ink-faint); }
+.foot .brand{ color:var(--clay-deep); font-weight:600; letter-spacing:.14em; }
+
+/* ---------- take/usage list ---------- */
+.take{ list-style:none; padding:0; margin:0; display:grid; gap:13px; }
+.take li{ display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:start; }
+.take li .dot{ font-family:"JetBrains Mono",monospace; font-size:.66rem; color:#fff;
+  background:var(--clay); width:22px; height:22px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center; margin-top:1px; }
+.take li .dot.g{ background:var(--support); }
+.take li .dot.a{ background:var(--amber); }
+.take li p{ margin:0; }
+.take li .t{ font-family:"Newsreader",serif; font-size:1.02rem; color:var(--ink); }
+
+/* utility */
+.mt8{margin-top:8px} .mt14{margin-top:14px} .mt22{margin-top:22px}
+.muted{ color:var(--ink-faint); }
+.small{ font-size:.72rem; }
+
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- 1 · TITLE -->
+<section><div class="si"><div class="si-body">
+  <div class="kicker">Social intelligence snapshot <span class="n">01 / 11</span></div>
+  <h1 style="font-size:3.1rem; max-width:20ch;">Claude Sonnet 5</h1>
+  <h1 style="font-size:3.1rem; color:var(--clay-deep); max-width:26ch; margin-top:2px;">what it does, and doesn't, do well.</h1>
+  <p class="lede mt22">A read of what people actually said in the first three days after launch, drawn from 953 posts across X, YouTube and Bluesky and verified against the reviews they cited.</p>
+  <div class="factrail">
+    <div class="cell"><div class="k">Window</div><div class="v">3 days<br><small>Jun 28 – Jul 1, 2026</small></div></div>
+    <div class="cell"><div class="k">Posts read</div><div class="v">953<br><small>of 4,914 collected</small></div></div>
+    <div class="cell"><div class="k">Reach</div><div class="v">22.6M<br><small>interactions on X</small></div></div>
+    <div class="cell"><div class="k">Source</div><div class="v">Arbiter<br><small>arbiter.simppl.org</small></div></div>
+  </div>
+</div><div class="foot"><span class="src">Case study · "How's Claude Sonnet 5 performing?"</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 2 · THE LAUNCH -->
+<section><div class="si"><div class="si-body">
+  <div class="kicker">The launch <span class="n">02 / 11</span></div>
+  <h2>A near-flagship model at mid-tier prices</h2>
+  <p class="lede mt8" style="max-width:60ch;">Anthropic shipped Sonnet 5 on June 30 and made it the default for Free and Pro users the same day. The pitch: Opus-class performance for agents and coding, at a fraction of Opus pricing.</p>
+  <div class="factrail mt22">
+    <div class="cell"><div class="k">Pricing</div><div class="v">$2 / $10<br><small>per M tok · promo to Aug 31, then $3 / $15</small></div></div>
+    <div class="cell"><div class="k">Context</div><div class="v">1M<br><small>tokens · 128k max output</small></div></div>
+    <div class="cell"><div class="k">Cutoff</div><div class="v">Jan 2026<br><small>knowledge</small></div></div>
+    <div class="cell"><div class="k">Positioning</div><div class="v">Near Opus<br><small>"most agentic Sonnet yet"</small></div></div>
+  </div>
+  <div class="callout mt22">
+    <div class="lab">Context · how loud</div>
+    <p>The launch drew <strong>22.6M interactions on X in three days</strong>. Anthropic's own announcement post alone reached <strong>7.7M</strong>. Coverage was global within 48 hours, with hands-on reviews in English, Spanish, Korean, French and Japanese.</p>
+  </div>
+</div><div class="foot"><span class="src">Verified · Anthropic, VentureBeat, TechCrunch, Simon Willison (Jun 30, 2026)</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 3 · RECEPTION -->
+<section><div class="si"><div class="si-body">
+  <div class="kicker">The reception <span class="n">03 / 11</span></div>
+  <h2>Warm at first glance, split among the people who tested it</h2>
+  <div class="cols mt22" style="grid-template-columns:1.05fr 1fr; align-items:center;">
+    <div>
+      <div class="k" style="font-size:.6rem; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:9px;">Stance across analysed posts</div>
+      <div class="stance">
+        <span class="s" style="flex:0 0 66.7%;">Support 66.7%</span>
+        <span class="n" style="flex:0 0 33.3%;">Neutral 33.3%</span>
+      </div>
+      <div class="stance-key"><span><i style="background:var(--support)"></i>Support</span><span><i style="background:var(--neutral)"></i>Neutral</span><span><i style="background:var(--oppose)"></i>Oppose 0%</span></div>
+      <p class="small muted mt14">Emotion skews to admiration and approval. Clickbait and emotional-manipulation scores both read <strong>0 / 5</strong>: the conversation is informational, not hype-driven.</p>
+    </div>
+    <div class="callout">
+      <div class="lab">The nuance</div>
+      <p>Announcements and news accounts drove the positive top line. The <strong>builders and reviewers who ran it</strong> were the ones who split, and that is where the useful signal lives. YouTube's early coverage was openly <em>polarized</em>: the same model earned "changed how I use AI" and "worst model Anthropic ever shipped" in the same 48 hours.</p>
+    </div>
+  </div>
+  <div class="posts mt22">
+    <div class="post up"><div class="h"><span class="handle">@AlexFinn</span><span class="plat">YouTube</span><span class="eng">1,212 int.</span></div><div class="q">"Claude Sonnet 5 just dropped, and my plan to <b>change how I use AI</b>."</div></div>
+    <div class="post down"><div class="h"><span class="handle">@WorldofAI</span><span class="plat">YouTube</span><span class="eng">835 int.</span></div><div class="q">"Sonnet 5 is out and <b>it's horrible</b>. Worst model by Anthropic ever? (Fully tested)"</div></div>
+  </div>
+</div><div class="foot"><span class="src">Arbiter · Stance & Emotion breakdown, YouTube "Story at a Glance"</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 4 · WHAT IT DOES WELL -->
+<section><div class="si"><div class="si-body">
+  <div class="kicker">What people praise <span class="n">04 / 11</span></div>
+  <h2>Strengths, by how much they came up</h2>
+  <table class="ledger mt14">
+    <thead><tr><th style="width:34%">Theme</th><th style="width:26%">Volume of praise</th><th style="width:14%; text-align:right">Posts</th><th>Who's saying it</th></tr></thead>
+    <tbody>
+      <tr><td class="theme">Agentic tool use & workflows</td><td><div class="meter pos"><i style="width:100%"></i></div></td><td class="num"><span class="count">51</span></td><td class="who">@ClaudeDevs, @github, @charles_maddock</td></tr>
+      <tr><td class="theme">Price & value</td><td><div class="meter pos"><i style="width:49%"></i></div></td><td class="num"><span class="count">25</span></td><td class="who">@atomic_chat_hq, @milesdeutscher</td></tr>
+      <tr><td class="theme">Coding & debugging</td><td><div class="meter pos"><i style="width:47%"></i></div></td><td class="num"><span class="count">24</span></td><td class="who">@daniel_mac8, @AlexFinn, @cognition</td></tr>
+      <tr><td class="theme">Reasoning & reliability</td><td><div class="meter pos"><i style="width:16%"></i></div></td><td class="num"><span class="count">8</span></td><td class="who">@kimmonismus, @ArtificialAnlys</td></tr>
+      <tr><td class="theme">Long-context, math, writing</td><td><div class="meter pos"><i style="width:10%"></i></div></td><td class="num"><span class="count">5</span></td><td class="who">@Mr_Salio, @MikesWorld</td></tr>
+    </tbody>
+  </table>
+  <div class="callout mt22"><div class="lab">In one line</div><p>The praise clusters where Anthropic aimed it: <strong>running agents and writing code</strong>. "Lower hallucination and sycophancy than Sonnet 4.6" and "better at resisting prompt injection" recur as reliability wins.</p></div>
+</div><div class="foot"><span class="src">Arbiter · Social Intelligence Agent, strengths query (953-post corpus)</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 5 · DEEP DIVE: AGENTIC + CODING -->
+<section><div class="si"><div class="si-body">
+  <div class="kicker">Where it's strongest <span class="n">05 / 11</span></div>
+  <h2>Agents and coding, with receipts</h2>
+  <div class="cols mt14">
+    <div class="posts">
+      <div class="post up"><div class="h"><span class="handle">@cursor_ai</span><span class="plat">X</span><span class="eng">923K int.</span></div><div class="q">"Now available in Cursor. On CursorBench it's a meaningful step up from Sonnet 4.6: <b>57% vs 49%</b>."</div></div>
+      <div class="post up"><div class="h"><span class="handle">@github</span><span class="plat">X</span><span class="eng">112K int.</span></div><div class="q">"Rolling out in Copilot. Strong across coding scenarios, <b>particularly CLI-style tasks</b>, with excellent prompt-cache utilization and competitive latency at lower effort."</div></div>
+      <div class="post up"><div class="h"><span class="handle">@ArtificialAnlys</span><span class="plat">X</span><span class="eng">195K int.</span></div><div class="q">"On agentic knowledge work it sits <b>just ahead of Opus 4.8</b>, trailing only Fable 5."</div></div>
+    </div>
+    <div>
+      <div class="callout"><div class="lab">The benchmark read</div>
+        <p>Independent evaluation put Sonnet 5 at <strong>#5 on the Artificial Analysis Intelligence Index (53)</strong>, only 2–3 points behind Opus 4.8 and GPT-5.5. Gains over Sonnet 4.6: Terminal-Bench <strong>+9</strong>, Humanity's Last Exam <strong>+10</strong>, SciCode <strong>+7</strong>.</p></div>
+      <p class="small muted mt14"><strong>The signature use case:</strong> a fast, cheap-per-token implementer that plans, uses a terminal and browser, and holds a 1M-token context. Practitioners describe pairing it with a bigger model for the hard thinking and letting Sonnet 5 do the long-running execution.</p>
+      <div class="effort mt14" title="effort levels"><b></b><b></b><b></b><b></b><b></b></div>
+      <p class="small muted" style="margin-top:6px;">Five effort levels (low → max), now matching Opus. Higher effort buys quality at the cost of tokens.</p>
+    </div>
+  </div>
+</div><div class="foot"><span class="src">Arbiter posts · Cursor, GitHub, Artificial Analysis · benchmarks as reported by @ArtificialAnlys</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 6 · WHAT IT DOESN'T DO WELL -->
+<section><div class="si"><div class="si-body">
+  <div class="kicker">Where it struggles <span class="n">06 / 11</span></div>
+  <h2>Complaints, by how much they came up</h2>
+  <table class="ledger mt14">
+    <thead><tr><th style="width:38%">Theme</th><th style="width:24%">Volume of complaint</th><th style="width:12%; text-align:right">Posts</th><th>Who's saying it</th></tr></thead>
+    <tbody>
+      <tr><td class="theme">Cost, token inefficiency, rate limits</td><td><div class="meter neg"><i style="width:100%"></i></div></td><td class="num"><span class="count">157</span></td><td class="who">@synthwavedd, @atomic_chat_hq</td></tr>
+      <tr><td class="theme">Benchmark underperformance vs Opus</td><td><div class="meter neg"><i style="width:22%"></i></div></td><td class="num"><span class="count">34</span></td><td class="who">@daniel_mac8, @RoundtableSpace</td></tr>
+      <tr><td class="theme">Coding quality (bugs, weak refactors)</td><td><div class="meter neg"><i style="width:13%"></i></div></td><td class="num"><span class="count">19</span></td><td class="who">@ClaudeDevs, @kimmonismus</td></tr>
+      <tr><td class="theme">Refusals & over-cautious safety</td><td><div class="meter neg"><i style="width:6%"></i></div></td><td class="num"><span class="count">9</span></td><td class="who">@alanhoward, @KineticElle</td></tr>
+      <tr><td class="theme">Context / memory · tone & lecturing</td><td><div class="meter neg"><i style="width:5%"></i></div></td><td class="num"><span class="count">8</span></td><td class="who">@DaveShapi, @kromem2dot0</td></tr>
+    </tbody>
+  </table>
+  <div class="callout mt22"><div class="lab">In one line</div><p>One complaint dwarfs the rest: <strong>cost</strong>. The sticker price is low, but people report the model burning tokens fast enough that a task can cost more than Opus. The next slide is why.</p></div>
+</div><div class="foot"><span class="src">Arbiter · Social Intelligence Agent, criticisms query (953-post corpus)</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 7 · THE TOKEN-COST PARADOX -->
+<section><div class="si"><div class="si-body">
+  <div class="kicker">The catch worth knowing <span class="n">07 / 11</span></div>
+  <h2>Cheap per token, not always cheap per task</h2>
+  <div class="cols mt14" style="grid-template-columns:.9fr 1.1fr;">
+    <div>
+      <div class="bignum">+30%<span class="u"> more tokens</span></div>
+      <p class="small muted mt8">A new tokenizer emits roughly 30% more tokens than Sonnet 4.6 for the same text, up to <strong>1.42×</strong> for English. Independent tests add ~40% more output tokens and up to <strong>3× the agentic turns</strong> at high effort.</p>
+      <div class="callout mt14"><div class="lab">The result</div><p>At standard pricing, one reviewer measured <strong>$2.29 per task</strong>, about <strong>15% more than Opus 4.8</strong>, driven entirely by token usage. On CursorBench, testers saw it spend nearly as much as Opus.</p></div>
+    </div>
+    <div class="posts">
+      <div class="post down"><div class="h"><span class="handle">@theo (t3.gg)</span><span class="plat">X</span><span class="eng">600K int.</span></div><div class="q">"Sonnet 5 was <b>more expensive than Fable</b> to run the whole bench."</div></div>
+      <div class="post down"><div class="h"><span class="handle">@goodworse</span><span class="plat">X</span><span class="eng">58K int.</span></div><div class="q">"<b>Very inefficient on CursorBench.</b> It spent almost the same money as Opus 4.8."</div></div>
+      <div class="post up"><div class="h"><span class="handle">@atomic_chat_hq</span><span class="plat">X</span><span class="eng">585K int.</span></div><div class="q">"On a small build, it used <b>fewer tokens than every other model</b>: $0.15 vs Opus 4.8 $0.58."</div></div>
+      <p class="small muted" style="margin-top:2px;">The honest read: on short tasks it can be the cheapest in the room; on long agentic runs at high effort, the token multiplier can erase the price advantage. Budget by task, not by sticker.</p>
+    </div>
+  </div>
+</div><div class="foot"><span class="src">Verified · Simon Willison (tokenizer), Artificial Analysis ($/task) · Arbiter posts</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 8 · CLAIMS CHECK -->
+<section><div class="si"><div class="si-body">
+  <div class="kicker">Do the claims hold up? <span class="n">08 / 11</span></div>
+  <h2>Which comparisons the crowd actually backs</h2>
+  <p class="lede mt8" style="max-width:64ch;">Grouping the comparative assertions into templates, then counting posts that back each one against posts that push back. This is where a headline turns out to be true, contested, or wishful.</p>
+  <div class="claims mt22">
+    <div class="claimrow">
+      <div class="clm">"Worse than Opus 4.8 on benchmarks"<small>@daniel_mac8 backs · @charles_maddock pushes back</small></div>
+      <div class="diverge"><div class="half l"><span class="con" style="width:61%">17</span></div><div class="mid"></div><div class="half r"><span class="sup" style="width:100%">28</span></div></div>
+      <div class="verdict contested">Leans true</div>
+    </div>
+    <div class="claimrow">
+      <div class="clm">"A strong day-to-day coding model"<small>@github backs · Claudius Papirus pushes back</small></div>
+      <div class="diverge"><div class="half l"><span class="con" style="width:4%">1</span></div><div class="mid"></div><div class="half r"><span class="sup" style="width:29%">8</span></div></div>
+      <div class="verdict holds">Holds up</div>
+    </div>
+    <div class="claimrow">
+      <div class="clm">"Cheaper / better value than Opus for most use"<small>@ValencianaAbel backs · @claudeai's own users push back</small></div>
+      <div class="diverge"><div class="half l"><span class="con" style="width:86%">24</span></div><div class="mid"></div><div class="half r"><span class="sup" style="width:61%">17</span></div></div>
+      <div class="verdict fails">Doesn't hold</div>
+    </div>
+    <div class="claimrow">
+      <div class="clm">"Cheaper per token, pricier per task"<small>@kimmonismus backs · @atomic_chat_hq pushes back</small></div>
+      <div class="diverge"><div class="half l"><span class="con" style="width:25%">7</span></div><div class="mid"></div><div class="half r"><span class="sup" style="width:14%">4</span></div></div>
+      <div class="verdict contested">Contested</div>
+    </div>
+    <div class="claimrow">
+      <div class="clm">"Worse than rivals like GLM"<small>@ArtificialAnlys backs · @mweinbach pushes back</small></div>
+      <div class="diverge"><div class="half l"><span class="con" style="width:11%">3</span></div><div class="mid"></div><div class="half r"><span class="sup" style="width:11%">3</span></div></div>
+      <div class="verdict contested">Unresolved</div>
+    </div>
+  </div>
+  <div class="claims-key"><span><i style="background:var(--support)"></i>Posts backing the claim</span><span><i style="background:var(--clay)"></i>Posts pushing back</span><span class="muted">Bars scaled to the largest side (28)</span></div>
+</div><div class="foot"><span class="src">Arbiter · citation-driven claim-template tally (discrete claim extraction returned none on this launch discourse)</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 9 · SAFETY & TONE -->
+<section><div class="si"><div class="si-body">
+  <div class="kicker">The friction points <span class="n">09 / 11</span></div>
+  <h2>Over-caution and a tone that grates</h2>
+  <p class="lede mt8" style="max-width:64ch;">Smaller by volume, but vivid and reputationally costly. Two threads recur: safety systems firing on harmless prompts, and a lecturing personality.</p>
+  <div class="posts mt22">
+    <div class="post down"><div class="h"><span class="handle">@alanhoward</span><span class="plat">X</span><span class="eng">28.5K int.</span></div><div class="q">"It told me to check my mental health and gave me a lifeline number at the end of a reply to a <b>tech security query</b>. Nothing touched on mental health. A safety control that can't explain its own trigger wouldn't survive a design review."</div></div>
+    <div class="post down"><div class="h"><span class="handle">@KineticElle</span><span class="plat">X</span><span class="eng">20.2K int.</span></div><div class="q">"A simple 'hi' triggered a <b>paranoid rant about safety rules</b> in the chain of thought. The model instantly became suspicious of me."</div></div>
+    <div class="post down"><div class="h"><span class="handle">@DaveShapi</span><span class="plat">X</span><span class="eng">15.8K int.</span></div><div class="q">"It goes off task too much. It <b>lectures too much</b>, answers questions you didn't ask, and it's too haughty."</div></div>
+  </div>
+  <div class="callout mt22"><div class="lab">Reading it fairly</div><p>These are early anecdotes, not measured rates, and Anthropic markets Sonnet 5 as <strong>safer than 4.6 with lower sycophancy</strong>. The signal is that tighter safety tuning has a visible false-positive cost that power users notice first.</p></div>
+</div><div class="foot"><span class="src">Arbiter · criticisms query · verbatim posts (early reports, unverified rates)</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 10 · IF YOU'RE A USER -->
+<section><div class="si"><div class="si-body">
+  <div class="kicker">If you're a user <span class="n">10 / 11</span></div>
+  <h2>What to actually do with this</h2>
+  <ul class="take mt22">
+    <li><span class="dot g">✓</span><p><span class="t">Reach for it on agentic and coding work.</span> <span class="small muted">Terminal and browser tool use, CLI tasks, long-running multi-step jobs, and a 1M-token context are its home turf. It's the new default in Claude Code for a reason.</span></p></li>
+    <li><span class="dot a">$</span><p><span class="t">Budget by task, not by sticker price.</span> <span class="small muted">The $2/$10 promo is real, but the token multiplier means long high-effort runs can cost near-Opus. Watch effort settings; drop to lower effort when quality allows.</span></p></li>
+    <li><span class="dot">↑</span><p><span class="t">Pair it, don't stretch it.</span> <span class="small muted">On heavy reasoning and frontier science it trails Opus 4.8. A common pattern: a bigger model as advisor, Sonnet 5 as the fast implementer.</span></p></li>
+    <li><span class="dot a">!</span><p><span class="t">Expect the occasional over-cautious moment.</span> <span class="small muted">Safety tuning is tighter. If it misreads a benign prompt, rephrase and move on. Migrating from 4.6? Note temperature, top_p and top_k are no longer supported.</span></p></li>
+  </ul>
+</div><div class="foot"><span class="src">Synthesis grounded in the 953-post corpus and cited reviews</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 11 · METHOD -->
+<section><div class="si"><div class="si-body">
+  <div class="kicker">Method & provenance <span class="n">11 / 11</span></div>
+  <h2>How this was built</h2>
+  <div class="cols mt22">
+    <div>
+      <p class="small"><strong>The data.</strong> One Arbiter case study, "How's Claude Sonnet 5 performing?", run over June 28 – July 1, 2026 across X, YouTube and Bluesky. Arbiter collected 4,914 posts, kept 953 as relevant, and analysed them for stance, emotion, concepts, actors and claims.</p>
+      <p class="small mt14"><strong>The method.</strong> Strength and complaint themes come from the Social Intelligence Agent over that corpus, each tied to specific accounts and posts. Every load-bearing fact, pricing, context window, the tokenizer change, benchmark scores, was checked against the reviews the posts cited.</p>
+    </div>
+    <div>
+      <div class="callout"><div class="lab">Read honestly</div><p>This is a <strong>3-day launch snapshot</strong>, weighted toward early adopters and English-language X. Interaction counts measure attention, not accuracy. Complaint and praise volumes are relative signal within this corpus, not population rates. Safety and tone reports are early anecdotes.</p></div>
+      <p class="small muted mt14"><strong>Sources.</strong> Arbiter (arbiter.simppl.org); Anthropic launch materials; Simon Willison; Artificial Analysis; TechCrunch; VentureBeat; Cursor; GitHub. Full ledger and screenshots retained with this deck.</p>
+    </div>
+  </div>
+</div><div class="foot"><span class="src">Built with Arbiter social intelligence · SimPPL</span><span class="brand">ARBITER</span></div></div></section>
+
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  width:1280, height:720, margin:0.04,
+  center:false, hash:true, controls:true, progress:true,
+  transition:'fade', transitionSpeed:'fast'
+});
+</script>
+</body>
+</html>
