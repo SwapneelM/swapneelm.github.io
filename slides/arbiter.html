@@ -103,6 +103,19 @@ section.dark .kicker .idx{ color:var(--dfaint); }
 section.dark .foot{ border-top-color:var(--vline-soft); color:var(--dfaint); }
 section.dark .foot .brand{ color:var(--dmut); }
 
+/* ---------- rendered-spacing floors (user correction 2026-07-07) ----------
+   Dark grounds visually compress gaps; enforce floors regardless of the
+   mt-utility a slide author picked. Applies to every heading/text pair,
+   including side-by-side columns. */
+.si-body h2 + p{ margin-top:26px; }
+.si-body h3 + p{ margin-top:10px; }
+.chips{ row-gap:10px; }
+.chips + p{ margin-top:30px; }
+.reveal .si-body p + p{ margin-top:18px; }
+.ebars + p{ margin-top:16px; }
+.wire + p{ margin-top:14px; }
+.wire + .ebars{ margin-top:18px; }
+
 /* ---------- lede ---------- */
 .lede{ font-size:23px; line-height:1.45; color:var(--ink-soft); max-width:52ch; }
 section.dark .lede{ color:var(--dmut); }
@@ -344,6 +357,34 @@ section.cta a{ color:#12131a; font-weight:700; border-bottom:2.5px solid #12131a
 /* reveal chrome */
 .reveal .progress{ color:var(--blue); height:4px; }
 .reveal .controls{ color:var(--blue); }
+
+/* ==========================================================================
+   v18 additions · technical section (deck_v3)
+   ========================================================================== */
+
+/* dark-mode pipeline */
+section.dark .pl-node{ border-color:var(--vline); background:var(--panel); }
+section.dark .pl-node::before{ background:var(--dblue); }
+section.dark .pl-node .st{ color:var(--dblue); }
+section.dark .pl-node p{ color:var(--dmut); }
+
+/* appendix model table */
+.modeltable{ display:grid; gap:0; border-top:2px solid var(--vline); }
+.modeltable .mrow{ display:grid; grid-template-columns:185px 265px 1fr; gap:20px;
+  align-items:baseline; padding:10px 0; border-bottom:1px solid var(--vline-soft); }
+.modeltable .stage{ font-family:"IBM Plex Mono",monospace; font-size:12px;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--dmut); }
+.modeltable .model{ font-family:"Space Grotesk",sans-serif; font-size:15.5px;
+  font-weight:700; color:var(--dtext); }
+.modeltable .why{ font-size:13.5px; line-height:1.45; color:var(--dmut); }
+
+/* v18 fix: .reveal p{margin:0} (0,1,1) outranked the .mtN utilities (0,1,0),
+   so paragraph top-margins silently collapsed. Raise specificity for p. */
+.reveal p.mt6{margin-top:6px}.reveal p.mt10{margin-top:10px}.reveal p.mt16{margin-top:16px}
+.reveal p.mt24{margin-top:24px}.reveal p.mt32{margin-top:32px}.reveal p.mt44{margin-top:44px}
+
+/* v18: wider label column for long ebar labels */
+.ebars.wide .ebar{ grid-template-columns:195px 1fr 64px; }
 
 </style>
 </head>
@@ -605,7 +646,7 @@ section.cta a{ color:#12131a; font-weight:700; border-bottom:2.5px solid #12131a
         </div>
         <div class="wire">
           <div class="bar"><i></i><i></i><i></i><span class="url">social intelligence agent · deep research</span></div>
-          <div style="height:330px; overflow:hidden;"><img src="images/arbiter-2026/agent_p16.png" alt="Deep research agent: model reasoning and ranked providers with citations"></div>
+          <div><img src="images/arbiter-2026/agent_p16.png" alt="Deep research agent: model reasoning and ranked providers with citations"></div>
         </div>
       </div>
     </div>
@@ -638,7 +679,7 @@ section.cta a{ color:#12131a; font-weight:700; border-bottom:2.5px solid #12131a
             <div class="n">02<small>Measure</small></div>
             <div>
               <h3>Engagement without an audience trail</h3>
-              <p>One account lands <b>88.8K interactions from a single post</b> (views, comments, and likes combined). Clickbait score 1 of 5, the lowest band on Arbiter's five-point scale: the campaign impersonates organic praise instead of baiting clicks. That polish is the tell.</p>
+              <p>One account lands <b>88.8K interactions from a single post</b> (views, comments, and likes combined). Its clickbait score is a clean 1 of 5 on Arbiter's five-point scale: the campaign reads as organic praise rather than engagement bait, which is how it escapes review.</p>
             </div>
           </div>
           <div class="act">
@@ -738,8 +779,6 @@ section.cta a{ color:#12131a; font-weight:700; border-bottom:2.5px solid #12131a
             <div class="bar"><i></i><i></i><i></i><span class="url">entity mentions · key narrative</span></div>
             <div style="height:330px; overflow:hidden;"><img src="images/arbiter-2026/gambling_entities_pdf.png" alt="Gambling study entity mentions"></div>
           </div>
-          <div class="mt16"><span class="stamp blue">Used by a Big Tech trust team</span></div>
-          <p class="tiny muted mt10">A Big Tech company's team used Arbiter to source illicit betting platforms through their own marketing campaigns.</p>
         </div>
       </div>
     </div>
