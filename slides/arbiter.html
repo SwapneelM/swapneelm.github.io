@@ -1,445 +1,1063 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arbiter — Pitch Deck</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Inter:wght@400;500;600;700&family=Geist+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root { --bg: #0A0E1A; --blue: #3b82f6; --red: #f87171; --amber: #fbbf24; }
-    .reveal { font-family: 'Inter', system-ui, sans-serif; }
-    .reveal .slides { text-align: left; }
-    .reveal .slides section { padding: 56px 80px; box-sizing: border-box; display: flex !important; flex-direction: column; justify-content: center; }
-    .reveal h1, .reveal h2, .reveal h3 { font-family: 'Source Serif 4', Georgia, serif; text-transform: none; font-weight: 700; line-height: 1.15; color: #fff; }
-    .reveal h1 { font-size: 3.8em; }
-    .reveal h2 { font-size: 1.5em; }
-    .reveal p { line-height: 1.6; margin: 0; }
-    .reveal .slide-number { font-family: 'Geist Mono', monospace; font-size: 14px; color: #4b5563; background: transparent; }
-    .reveal .controls .controls-arrow { color: var(--blue); }
-    .reveal .progress span { background: var(--blue); }
-    .mono { font-family: 'Geist Mono', monospace; }
-    .serif { font-family: 'Source Serif 4', Georgia, serif; }
-    .ref { font-size: 0.38em; color: #4b5563; margin-top: 24px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.04); }
-    .ref a { color: #4b5563; text-decoration: none; }
-    .ref a:hover { color: var(--blue); text-decoration: underline; }
-    sup a { color: #4b5563; text-decoration: none; font-size: 0.7em; font-weight: 600; }
-    sup a:hover { color: var(--blue); }
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
-    .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 22px; }
-    .card-blue { border-color: rgba(59,130,246,0.3); }
-    .label-blue { font-size: 0.42em; color: var(--blue); font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; }
-    .tweet { background: rgba(127,29,29,0.2); border: 1px solid rgba(239,68,68,0.25); border-radius: 12px; padding: 14px; font-size: 0.55em; margin-bottom: 10px; }
-    .tweet-head { display: flex; gap: 8px; align-items: center; }
-    .tweet-avatar { width: 26px; height: 26px; border-radius: 50%; background: #2F3336; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-size: 10px; font-weight: 700; }
-    .tweet-name { color: #fff; font-weight: 700; }
-    .tweet-handle { color: #6b7280; font-size: 0.9em; }
-    .tweet-body { color: #e5e7eb; margin-top: 6px; line-height: 1.4; }
-    .tweet-badge { font-size: 0.65em; color: #f87171; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-top: 6px; padding-top: 6px; border-top: 1px solid rgba(239,68,68,0.2); }
-    .big { font-family: 'Geist Mono', monospace; font-weight: 700; line-height: 1; }
-    @media print { .reveal .slides section { page-break-after: always; } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arbiter by SimPPL</title><!-- v2: reviewer-roleplay round-1 fixes -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   ARBITER EVIDENCE-ROOM SLIDE SYSTEM  v1
+   Two modes per slide: .lite (signal-white briefing) / .dark (evidence room).
+   Display: Space Grotesk · Body: Inter · Utility: IBM Plex Mono.
+   Solid colours only, no colour ramps of any kind (third-party PDF
+   viewers rasterise soft colour transitions into redaction bars / smudges).
+   Layout contract: every slide wraps content in .si > .si-body + .foot;
+   sections stay height:100% with zero padding so reveal print-pdf paginates.
+   ========================================================================== */
+
+:root{
+  /* briefing (light) */
+  --paper:#f7f5f0;
+  --ink:#12131a;
+  --ink-soft:#494d5c;
+  --ink-faint:#878b9d;
+  --line:#dcd8cd;
+  --line-strong:#a9a599;
+  /* evidence (dark) — matches the Arbiter product UI ground */
+  --void:#0b0d12;
+  --panel:#12151d;
+  --vline:#262b38;
+  --vline-soft:#1a1e28;
+  --dtext:#e9eaf0;
+  --dmut:#9aa1b2;
+  --dfaint:#5d6373;
+  /* signals */
+  --blue:#2b48f0;        /* brand / action (light ground) */
+  --dblue:#7288ff;       /* brand on dark ground */
+  --yellow:#ffd900;      /* finding / highlight */
+  --green:#2e9e6b;       /* verified / support */
+  --dgreen:#43c98b;
+  --red:#d64545;         /* harm / contradict */
+  --dred:#ff6b5e;
+  --magenta:#d829b4;     /* URLs, brand carryover */
+  --dmagenta:#ff4fd8;
+}
+
+/* ---------- reveal base ---------- */
+.reveal{ font-family:"Inter",-apple-system,"Helvetica Neue",sans-serif;
+  font-size:19px; color:var(--ink); }
+.reveal .slides{ text-align:left; }
+.reveal .slides > section{
+  width:100%; height:100%; box-sizing:border-box; padding:0; }
+/* reveal's print layout sizes sections to their content, which collapses the
+   .si 100%-height chain; pin the section to the pdf page instead. */
+html.reveal-print .reveal .slides section{ height:100% !important; }
+.reveal-viewport{ background:var(--paper); }
+
+.reveal h1,.reveal h2,.reveal h3{
+  font-family:"Space Grotesk","Inter",sans-serif; font-weight:700;
+  text-transform:none; letter-spacing:-0.022em; line-height:1.02;
+  color:var(--ink); margin:0; }
+.reveal h1{ font-size:110px; }
+.reveal h2{ font-size:42px; }
+.reveal h3{ font-size:22px; }
+.reveal p{ font-size:19px; line-height:1.5; margin:0; color:var(--ink-soft); }
+.reveal a{ color:var(--magenta); text-decoration:none; }
+.reveal strong{ color:var(--ink); font-weight:700; }
+
+/* dark-mode overrides ride on the section class */
+section.dark h1, section.dark h2, section.dark h3{ color:var(--dtext); }
+section.dark p{ color:var(--dmut); }
+section.dark strong{ color:var(--dtext); }
+section.dark a{ color:var(--dmagenta); }
+
+/* ---------- slide skeleton ---------- */
+.si{ display:flex; flex-direction:column; height:100%; min-height:100%;
+  box-sizing:border-box; padding:48px 64px 24px; position:relative; }
+.si-body{ flex:1 1 auto; display:flex; flex-direction:column;
+  justify-content:center; min-height:0; position:relative; }
+
+/* ---------- kicker ---------- */
+.kicker{ font-family:"IBM Plex Mono",monospace; font-size:12px;
+  letter-spacing:.28em; text-transform:uppercase; font-weight:600;
+  color:var(--blue); display:flex; align-items:center; gap:12px;
+  margin-bottom:20px; }
+.kicker::before{ content:""; width:30px; height:3px; background:var(--blue); }
+.kicker .idx{ margin-left:auto; color:var(--ink-faint); letter-spacing:.2em; }
+section.dark .kicker{ color:var(--dblue); }
+section.dark .kicker::before{ background:var(--dblue); }
+section.dark .kicker .idx{ color:var(--dfaint); }
+
+/* ---------- provenance footer ---------- */
+.foot{ flex:0 0 auto; margin-top:20px; display:flex; gap:24px;
+  justify-content:space-between; align-items:baseline;
+  font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.04em;
+  color:var(--ink-faint); border-top:1px solid var(--line); padding-top:10px; }
+.foot .src{ min-width:0; }
+.foot .brand{ flex:0 0 auto; letter-spacing:.22em; font-weight:600; color:var(--ink-soft); }
+section.dark .foot{ border-top-color:var(--vline-soft); color:var(--dfaint); }
+section.dark .foot .brand{ color:var(--dmut); }
+
+/* ---------- lede ---------- */
+.lede{ font-size:23px; line-height:1.45; color:var(--ink-soft); max-width:52ch; }
+section.dark .lede{ color:var(--dmut); }
+.lede b, .lede strong{ font-weight:700; }
+
+/* ==========================================================================
+   SIGNATURE COMPONENTS
+   ========================================================================== */
+
+/* ---------- case plate (dossier header) ---------- */
+.case-plate{ position:relative; border:1.5px solid var(--vline);
+  padding:16px 22px 15px; display:flex; align-items:baseline; gap:18px;
+  font-family:"IBM Plex Mono",monospace; margin-bottom:26px; }
+.case-plate::before,.case-plate::after{ content:""; position:absolute;
+  width:9px; height:9px; background:var(--yellow); }
+.case-plate::before{ top:-5px; left:-5px; }
+.case-plate::after{ bottom:-5px; right:-5px; }
+.case-plate .no{ font-size:13px; letter-spacing:.3em; color:var(--yellow);
+  font-weight:600; text-transform:uppercase; }
+.case-plate .nm{ font-family:"Space Grotesk",sans-serif; font-size:21px;
+  font-weight:700; color:var(--dtext); letter-spacing:.01em; }
+.case-plate .win{ margin-left:auto; font-size:12px; color:var(--dfaint);
+  letter-spacing:.12em; text-transform:uppercase; }
+section.lite .case-plate{ border-color:var(--line-strong); }
+section.lite .case-plate .nm{ color:var(--ink); }
+section.lite .case-plate .no{ color:var(--blue); }
+section.lite .case-plate::before,section.lite .case-plate::after{ background:var(--blue); }
+
+/* ---------- platform chips ---------- */
+.chips{ display:flex; gap:8px; flex-wrap:wrap; }
+.chips i{ font-style:normal; font-family:"IBM Plex Mono",monospace;
+  font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  border:1px solid var(--vline); color:var(--dmut); padding:4px 10px 3px; }
+section.lite .chips i{ border-color:var(--line-strong); color:var(--ink-soft); }
+
+/* ---------- verdict stamp ---------- */
+.stamp{ display:inline-block; font-family:"IBM Plex Mono",monospace;
+  font-size:13px; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
+  border:2px solid currentColor; padding:7px 14px 6px;
+  transform:rotate(-2deg); transform-origin:center; }
+.stamp.green{ color:var(--dgreen); }
+.stamp.red{ color:var(--dred); }
+.stamp.yellow{ color:var(--yellow); }
+.stamp.blue{ color:var(--dblue); }
+section.lite .stamp.green{ color:var(--green); }
+section.lite .stamp.red{ color:var(--red); }
+section.lite .stamp.blue{ color:var(--blue); }
+
+/* ---------- evidence bar ---------- */
+.ebars{ display:grid; gap:12px; }
+.ebar{ display:grid; grid-template-columns:150px 1fr 64px; gap:14px;
+  align-items:center; }
+.ebar .lb{ font-family:"IBM Plex Mono",monospace; font-size:13px;
+  color:var(--dmut); letter-spacing:.04em; white-space:nowrap;
+  overflow:hidden; text-overflow:ellipsis; }
+.ebar .track{ height:14px; background:var(--vline-soft); position:relative; }
+.ebar .fill{ position:absolute; left:0; top:0; bottom:0; background:var(--dblue); }
+.ebar .fill.green{ background:var(--dgreen); }
+.ebar .fill.yellow{ background:var(--yellow); }
+.ebar .fill.red{ background:var(--dred); }
+.ebar .val{ font-family:"IBM Plex Mono",monospace; font-size:13px;
+  color:var(--dtext); font-weight:600; text-align:right; }
+section.lite .ebar .track{ background:#e8e5dc; }
+section.lite .ebar .lb{ color:var(--ink-soft); }
+section.lite .ebar .val{ color:var(--ink); }
+section.lite .ebar .fill{ background:var(--blue); }
+section.lite .ebar .fill.green{ background:var(--green); }
+section.lite .ebar .fill.red{ background:var(--red); }
+
+/* ---------- wire frame (product screenshot chrome) ---------- */
+.wire{ border:1px solid var(--vline); background:var(--panel); }
+.wire .bar{ display:flex; align-items:center; gap:7px; padding:9px 14px;
+  border-bottom:1px solid var(--vline); }
+.wire .bar i{ width:9px; height:9px; border-radius:50%; background:var(--vline);
+  display:inline-block; font-style:normal; }
+.wire .bar .url{ margin-left:10px; font-family:"IBM Plex Mono",monospace;
+  font-size:11.5px; color:var(--dfaint); letter-spacing:.05em; }
+.wire img{ display:block; width:100%; height:auto; }
+section.lite .wire{ border-color:var(--line-strong); background:#fff; }
+section.lite .wire .bar{ border-bottom-color:var(--line); }
+section.lite .wire .bar i{ background:var(--line-strong); }
+
+/* ---------- stat rail ---------- */
+.statrail{ display:grid; grid-template-columns:repeat(4,1fr);
+  border-top:2.5px solid var(--ink); }
+.statrail .cell{ padding:16px 18px 6px 0; border-right:1px solid var(--line);
+  margin-right:18px; }
+.statrail .cell:last-child{ border-right:none; margin-right:0; }
+.statrail .v{ font-family:"Space Grotesk",sans-serif; font-size:46px;
+  font-weight:700; color:var(--ink); letter-spacing:-0.03em; line-height:1; }
+.statrail .v small{ font-size:23px; font-weight:600; color:var(--blue); }
+.statrail .k{ font-family:"IBM Plex Mono",monospace; font-size:12px;
+  color:var(--ink-faint); margin-top:8px; line-height:1.45; letter-spacing:.02em; }
+section.dark .statrail{ border-top-color:var(--dtext); }
+section.dark .statrail .cell{ border-right-color:var(--vline); }
+section.dark .statrail .v{ color:var(--dtext); }
+section.dark .statrail .v small{ color:var(--dblue); }
+section.dark .statrail .k{ color:var(--dfaint); }
+
+/* ---------- pipeline (collect → organize → investigate) ---------- */
+.pipeline{ display:grid; grid-template-columns:1fr 44px 1fr 44px 1fr;
+  align-items:stretch; gap:0; }
+.pl-node{ border:1.5px solid var(--line-strong); padding:18px 20px 16px;
+  position:relative; background:#fdfcf9; }
+.pl-node::before{ content:""; position:absolute; top:-5px; left:-5px;
+  width:9px; height:9px; background:var(--blue); }
+.pl-node .st{ font-family:"IBM Plex Mono",monospace; font-size:11px;
+  letter-spacing:.26em; color:var(--blue); font-weight:600; margin-bottom:8px; }
+.pl-node h3{ font-size:23px; margin-bottom:8px; }
+.pl-node p{ font-size:15.5px; line-height:1.5; color:var(--ink-soft); }
+.pl-arrow{ display:flex; align-items:center; justify-content:center; }
+.pl-arrow svg{ width:26px; height:26px; }
+
+/* ---------- act strip (case narrative) ---------- */
+.acts{ display:grid; gap:0; }
+.act{ display:grid; grid-template-columns:86px 1fr; gap:20px;
+  padding:15px 0; border-bottom:1px solid var(--vline-soft); align-items:start; }
+.act:last-child{ border-bottom:none; }
+.act .n{ font-family:"Space Grotesk",sans-serif; font-size:40px; font-weight:700;
+  color:var(--yellow); line-height:.95; }
+.act .n small{ display:block; font-family:"IBM Plex Mono",monospace;
+  font-size:10.5px; font-weight:600; letter-spacing:.24em; color:var(--dfaint);
+  margin-top:5px; text-transform:uppercase; }
+.act h3{ font-size:19px; margin-bottom:5px; color:var(--dtext); }
+.act p{ font-size:15.5px; line-height:1.5; }
+.act p b{ color:var(--dtext); }
+
+/* ---------- dossier row (proof slide) ---------- */
+.dossier{ display:grid; gap:0; }
+.dossier .row{ display:grid; grid-template-columns:120px 1fr 250px; gap:24px;
+  align-items:center; padding:20px 0; border-bottom:1px solid var(--vline-soft); }
+.dossier .row:last-child{ border-bottom:none; }
+.dossier .who{ font-family:"Space Grotesk",sans-serif; font-size:26px;
+  font-weight:700; color:var(--dtext); }
+.dossier .who small{ display:block; font-family:"IBM Plex Mono",monospace;
+  font-size:11.5px; font-weight:400; color:var(--dfaint); letter-spacing:.18em;
+  margin-top:4px; }
+.dossier .what{ font-size:16.5px; line-height:1.5; color:var(--dmut); }
+.dossier .what b{ color:var(--dtext); }
+.dossier .st{ text-align:right; }
+
+/* ---------- claims check ---------- */
+.claims{ display:grid; gap:10px; }
+.claimrow{ display:grid; grid-template-columns:1fr 190px; gap:18px;
+  align-items:center; padding:9px 0; border-bottom:1px solid var(--vline-soft); }
+.claimrow:last-child{ border-bottom:none; }
+.claimrow .c{ font-size:15px; line-height:1.4; color:var(--dmut); }
+.claimrow .c b{ color:var(--dtext); font-weight:600; }
+.claimrow .verdict{ font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+  letter-spacing:.14em; text-transform:uppercase; font-weight:600; text-align:right; }
+.verdict.fails{ color:var(--dred); }
+.verdict.holds{ color:var(--dgreen); }
+.verdict.contested{ color:var(--yellow); }
+
+/* ---------- partner ledger ---------- */
+.partners{ display:grid; grid-template-columns:repeat(3,1fr); gap:36px; }
+.pcol .ph{ font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+  letter-spacing:.24em; text-transform:uppercase; color:var(--blue);
+  font-weight:600; border-bottom:2px solid var(--ink); padding-bottom:8px;
+  margin-bottom:4px; }
+.pcol .pr{ display:flex; justify-content:space-between; align-items:baseline;
+  gap:10px; padding:9px 2px 8px; border-bottom:1px solid var(--line); }
+.pcol .pr .nm{ font-size:16.5px; font-weight:600; color:var(--ink); }
+.pcol .pr .cc{ font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+  color:var(--ink-faint); letter-spacing:.1em; }
+
+/* ---------- team entries ---------- */
+.people{ display:grid; grid-template-columns:1fr 1fr; gap:0 44px; }
+.person{ padding:14px 0 12px; border-bottom:1px solid var(--line); }
+.person .nm{ font-family:"Space Grotesk",sans-serif; font-size:21px;
+  font-weight:700; color:var(--ink); }
+.person .rl{ font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--blue);
+  margin:3px 0 6px; }
+.person p{ font-size:14.5px; line-height:1.5; color:var(--ink-soft); }
+
+/* ---------- typed query ---------- */
+.query{ border:1px solid var(--vline); background:var(--panel);
+  padding:14px 18px; display:flex; gap:12px; align-items:baseline; }
+.query .ps{ font-family:"IBM Plex Mono",monospace; color:var(--yellow);
+  font-size:15px; font-weight:600; flex:0 0 auto; }
+.query .typed{ font-family:"IBM Plex Mono",monospace; font-size:15px;
+  color:var(--dtext); line-height:1.5; }
+.query .typed .caret{ display:inline-block; width:8px; height:16px;
+  background:var(--yellow); vertical-align:-2px; margin-left:2px; }
+
+/* ---------- big arrow glyph ---------- */
+.arrowg{ display:block; }
+
+/* ---------- dot field (print-safe texture) ---------- */
+.dotfield{ position:absolute; pointer-events:none; }
+
+/* ---------- net constellation ---------- */
+.net line{ stroke:var(--vline); stroke-width:1.1; }
+.net circle{ fill:#39404f; }
+.net circle.hub{ fill:var(--yellow); }
+.net circle.b{ fill:var(--dblue); }
+.net text{ font-family:"IBM Plex Mono",monospace; fill:var(--dfaint);
+  font-size:10px; letter-spacing:.14em; }
+
+/* ---------- CTA (yellow) ---------- */
+section.cta h2{ font-size:76px; letter-spacing:-0.03em; color:var(--ink); }
+section.cta p{ color:#3d3a10; }
+section.cta .foot{ border-top-color:#d8b900; color:#6b6414; }
+section.cta .foot .brand{ color:#12131a; }
+section.cta .kicker{ color:#12131a; }
+section.cta .kicker::before{ background:#12131a; }
+section.cta a{ color:#12131a; font-weight:700; border-bottom:2.5px solid #12131a; }
+
+/* ---------- columns ---------- */
+.cols{ display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center; }
+.cols.w64{ grid-template-columns:1.55fr 1fr; }
+.cols.w46{ grid-template-columns:1fr 1.55fr; }
+.cols.top{ align-items:start; }
+
+/* ---------- stat block (problem slide) ---------- */
+.bigstats{ display:grid; gap:2px; }
+.bigstat{ display:grid; grid-template-columns:158px 1fr; gap:20px;
+  align-items:baseline; padding:14px 0; border-bottom:1px solid var(--line); }
+.bigstat:last-child{ border-bottom:none; }
+.bigstat .v{ font-family:"Space Grotesk",sans-serif; font-size:58px;
+  font-weight:700; letter-spacing:-0.035em; color:var(--ink); line-height:.95; }
+.bigstat.hot .v{ color:var(--red); }
+.bigstat p{ font-size:15.5px; line-height:1.45; }
+.bigstat p b{ font-weight:700; }
+
+/* ---------- utility ---------- */
+.mt6{margin-top:6px}.mt10{margin-top:10px}.mt16{margin-top:16px}
+.mt24{margin-top:24px}.mt32{margin-top:32px}.mt44{margin-top:44px}
+.mono{ font-family:"IBM Plex Mono",monospace; }
+.reveal .muted{ color:var(--ink-faint); } section.dark .muted{ color:var(--dfaint); }
+.reveal .small{ font-size:14px; line-height:1.5; }
+.reveal .tiny{ font-size:12.5px; line-height:1.55; }
+.yellow-txt{ color:var(--yellow); }
+.blue-txt{ color:var(--blue); } section.dark .blue-txt{ color:var(--dblue); }
+.green-txt{ color:var(--green); } section.dark .green-txt{ color:var(--dgreen); }
+.red-txt{ color:var(--red); } section.dark .red-txt{ color:var(--dred); }
+
+/* reveal chrome */
+.reveal .progress{ color:var(--blue); height:4px; }
+.reveal .controls{ color:var(--blue); }
+
+</style>
 </head>
 <body>
 <div class="reveal">
 <div class="slides">
 
-<!-- ═══ 1. TITLE ═══ -->
-<section data-background-color="#0A0E1A">
-  <div style="text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%">
-    <h1>Arbiter</h1>
-    <p style="font-size:0.85em;color:#9ca3af;margin-top:28px">The transparency layer for the social internet.</p>
-    <p style="font-size:0.55em;color:#4b5563;margin-top:56px">SimPPL &middot; 501(c)(3) nonprofit</p>
-  </div>
-</section>
-
-<!-- ═══ 2. SCALE — The big number ═══ -->
-<section data-background-color="#0A0E1A">
-  <div style="text-align:center">
-    <p class="big" style="font-size:3.5em;color:#fff;letter-spacing:-0.02em">5,660,000,000</p>
-    <p style="font-size:0.85em;color:#d1d5db;margin-top:16px">people access social media every day.<sup><a href="https://datareportal.com/social-media-users">[1]</a></sup></p>
-  </div>
-  <div class="grid-3" style="margin-top:44px;text-align:center">
-    <div>
-      <p class="big" style="font-size:1.8em;color:var(--blue)">1B+</p>
-      <p style="font-size:0.48em;color:#9ca3af;margin-top:4px">posts created every day across platforms<sup><a href="https://datareportal.com/social-media-users">[1]</a></sup></p>
-    </div>
-    <div>
-      <p class="big" style="font-size:1.8em;color:var(--blue)">2h 23m</p>
-      <p style="font-size:0.48em;color:#9ca3af;margin-top:4px">average daily time on social media<sup><a href="https://datareportal.com/social-media-users">[1]</a></sup></p>
-    </div>
-    <div>
-      <p class="big" style="font-size:1.8em;color:var(--blue)">54%</p>
-      <p style="font-size:0.48em;color:#9ca3af;margin-top:4px">of Americans now get news from social media, more than TV<sup><a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025/dnr-executive-summary">[2]</a></sup></p>
-    </div>
-  </div>
-  <p class="ref" style="text-align:center">[1] <a href="https://datareportal.com/social-media-users">DataReportal, 2025</a> &ensp; [2] <a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025/dnr-executive-summary">Reuters Institute, 2025</a></p>
-</section>
-
-<!-- ═══ 3. TRUST IS BROKEN ═══ -->
-<section data-background-color="#0A0E1A">
-  <div class="grid-2" style="align-items:center">
-    <div>
-      <h2 style="font-size:1.4em">We have no idea what is trustworthy and what isn't.</h2>
-      <ul style="font-size:0.65em;color:#d1d5db;margin-top:16px;padding-left:1.2em;list-style:none">
-        <li style="margin-bottom:6px">&bull; Trust in media has fallen to <strong style="color:#fff">28%</strong>, the lowest in Gallup's 50-year history<sup><a href="https://news.gallup.com/poll/695762/trust-media-new-low.aspx">[3]</a></sup></li>
-        <li style="margin-bottom:6px">&bull; <strong style="color:#fff">58%</strong> of people worldwide struggle to tell real news from fake<sup><a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025/dnr-executive-summary">[4]</a></sup></li>
-        <li>&bull; The social internet produces more content than any person or institution can assess</li>
-      </ul>
-      <p class="ref">[3] <a href="https://news.gallup.com/poll/695762/trust-media-new-low.aspx">Gallup, 2025</a> &ensp; [4] <a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025/dnr-executive-summary">Reuters Institute, 2025</a></p>
-    </div>
-    <div style="text-align:center">
-      <!-- Trust chart -->
-      <div class="card">
-        <p style="color:#fff;font-size:0.6em;font-weight:600">Trust in media: 50-year decline</p>
-        <svg viewBox="0 0 380 180" style="width:100%;margin-top:8px">
-          <line x1="30" y1="128" x2="360" y2="128" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
-          <text x="25" y="131" text-anchor="end" fill="#4B5563" font-size="8">20%</text>
-          <line x1="30" y1="96" x2="360" y2="96" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
-          <text x="25" y="99" text-anchor="end" fill="#4B5563" font-size="8">40%</text>
-          <line x1="30" y1="64" x2="360" y2="64" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
-          <text x="25" y="67" text-anchor="end" fill="#4B5563" font-size="8">60%</text>
-          <defs>
-            <linearGradient id="ag" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3"/><stop offset="100%" stop-color="#f87171" stop-opacity="0.3"/></linearGradient>
-            <linearGradient id="lg" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#f87171"/></linearGradient>
-          </defs>
-          <path d="M40,44.8 L90,48 L145,72 L185,89.6 L230,96 L280,96 L320,110.4 L345,115.2 L345,165 L40,165Z" fill="url(#ag)"/>
-          <polyline points="40,44.8 90,48 145,72 185,89.6 230,96 280,96 320,110.4 345,115.2" fill="none" stroke="url(#lg)" stroke-width="2.5" stroke-linecap="round"/>
-          <circle cx="40" cy="44.8" r="4" fill="#3b82f6" stroke="#0A0E1A" stroke-width="2"/>
-          <text x="40" y="36" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">72%</text>
-          <text x="40" y="175" text-anchor="middle" fill="#6b7280" font-size="7">1972</text>
-          <circle cx="345" cy="115.2" r="4" fill="#f87171" stroke="#0A0E1A" stroke-width="2"/>
-          <text x="345" y="107" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">28%</text>
-          <text x="345" y="175" text-anchor="middle" fill="#6b7280" font-size="7">2025</text>
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ 4. WHY INTERVENTIONS FAIL ═══ -->
-<section data-background-color="#0A0E1A">
-  <h2 style="font-size:1.35em;text-align:center">We tried to fix fake news. Every approach has failed at scale.</h2>
-  <div class="grid-3" style="margin-top:28px">
-    <div class="card" style="text-align:center">
-      <p class="big" style="font-size:1.6em;color:var(--red)">6&times; faster</p>
-      <p style="font-size:0.55em;color:#d1d5db;margin-top:8px">False stories reach people six times faster than true ones. Humans drive the spread, not bots.<sup><a href="https://news.mit.edu/2018/study-twitter-false-news-travels-faster-true-stories-0308">[5]</a></sup></p>
-      <p style="font-size:0.48em;color:#9ca3af;margin-top:6px;font-weight:600">Fact-checking can't keep up</p>
-    </div>
-    <div class="card" style="text-align:center">
-      <p class="big" style="font-size:1.6em;color:var(--red)">6&times; engagement</p>
-      <p style="font-size:0.55em;color:#d1d5db;margin-top:8px">Misinformation on Facebook received six times more interactions than factual news during the 2020 election.<sup><a href="https://engineering.nyu.edu/news/misinformation-facebook-got-six-times-more-clicks-factual-news-during-2020-election-study-says">[6]</a></sup></p>
-      <p style="font-size:0.48em;color:#9ca3af;margin-top:6px;font-weight:600">Platforms reward engagement, not accuracy</p>
-    </div>
-    <div class="card" style="text-align:center">
-      <p class="big" style="font-size:1.6em;color:var(--red)">2,900</p>
-      <p style="font-size:0.55em;color:#d1d5db;margin-top:8px">U.S. newsrooms have shut down. The reporters who remain cannot gather cross-platform evidence fast enough to matter.<sup><a href="https://localnewsinitiative.northwestern.edu">[7]</a></sup></p>
-      <p style="font-size:0.48em;color:#9ca3af;margin-top:6px;font-weight:600">Journalism is under-resourced</p>
-    </div>
-  </div>
-  <p style="text-align:center;font-size:0.75em;color:var(--blue);margin-top:28px;font-weight:600" class="serif">Instead of telling people what to trust, show them who is manipulating them.</p>
-</section>
-
-<!-- ═══ 5. PERSONAL STORY ═══ -->
-<section data-background-color="#1A0F0F">
-  <div class="grid-2">
-    <div>
-      <h2 style="font-size:1.25em">My grandfather got scammed by a coordinated social media campaign.</h2>
-      <ul style="font-size:0.62em;color:#d1d5db;margin-top:14px;padding-left:1.2em;list-style:none">
-        <li style="margin-bottom:8px">&bull; Dozens of accounts across YouTube, Twitter, and WhatsApp all promoted the same company. If everyone is saying it, it must be real. He invested.</li>
-        <li style="margin-bottom:8px">&bull; OnPassive never launched a product. The SEC confirmed it defrauded <strong style="color:#fff">800,000 people of $108 million</strong>.<sup><a href="https://www.sec.gov/enforcement-litigation/litigation-releases/lr-25809">[8]</a></sup></li>
-        <li style="margin-bottom:8px">&bull; The campaign spanned 5 platforms simultaneously, but no single platform showed the full picture, and no existing tool could trace the coordination.</li>
-      </ul>
-      <div style="margin-top:14px;padding:12px 16px;background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.25);border-radius:8px">
-        <p style="font-size:0.65em;color:var(--blue);font-weight:700">Arbiter could have surfaced the coordinated network before the public was influenced.</p>
-      </div>
-      <ul style="font-size:0.62em;color:#d1d5db;padding-left:1.2em;list-style:none;display:none">
-      </ul>
-      <p class="ref">[8] <a href="https://www.sec.gov/enforcement-litigation/litigation-releases/lr-25809">SEC Litigation Release LR-25809, 2023</a></p>
-    </div>
-    <div>
-      <p class="label-blue" style="margin-bottom:10px">Coordinated promotion across platforms</p>
-      <div class="tweet">
-        <div class="tweet-head"><div class="tweet-avatar">O</div><div><span class="tweet-name">ONPASSIVE</span> <span style="color:#3b82f6">&#10004;</span><br><span class="tweet-handle">@ONPASSIVE</span></div></div>
-        <div class="tweet-body">Achieve your digital goals using the ONPASSIVE Ecosystem. Register now!<br><br>#ONPASSIVE #ArtificialIntelligence #TheFutureOfInternet</div>
-        <div class="tweet-badge">Coordinated promotion detected</div>
-      </div>
-      <div class="tweet">
-        <div class="tweet-head"><div class="tweet-avatar">G</div><div><span class="tweet-name">Ginger-Grammy #ONPASSIVE</span><br><span class="tweet-handle">@dvdesanto</span></div></div>
-        <div class="tweet-body">The future is bright with #ONPASSIVE! Ground floor opportunity. #WinWithONPASSIVE #TheFutureOfInternet</div>
-        <div class="tweet-badge">Same hashtag network</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ 6. NATIONAL STAKES ═══ -->
-<section data-background-color="#0A0E1A">
-  <h2 style="text-align:center;font-size:1.35em;margin-bottom:28px">Coordinated campaigns are reshaping elections.</h2>
-  <div class="grid-3">
-    <div class="card">
-      <p class="label-blue">Romania 2024</p>
-      <h3 style="font-size:0.85em;margin-top:8px">Election annulled</h3>
-      <p style="font-size:0.52em;color:#9ca3af;margin-top:8px">25,000 coordinated TikTok accounts. 179 million impressions. The Constitutional Court cancelled the election.<sup><a href="https://globalwitness.org/en/campaigns/digital-threats/what-happened-on-tiktok-around-the-annulled-romanian-presidential-election-an-investigation-and-poll/">[9]</a></sup></p>
-    </div>
-    <div class="card">
-      <p class="label-blue">Slovakia 2023</p>
-      <h3 style="font-size:0.85em;margin-top:8px">Deepfake audio</h3>
-      <p style="font-size:0.52em;color:#9ca3af;margin-top:8px">AI-cloned voice of an opposition leader spread during the media silence period. Russia's SVR referenced it within two hours.<sup><a href="https://misinforeview.hks.harvard.edu/article/beyond-the-deepfake-hype-ai-democracy-and-the-slovak-case/">[10]</a></sup></p>
-    </div>
-    <div class="card">
-      <p class="label-blue">Germany 2025</p>
-      <h3 style="font-size:0.85em;margin-top:8px">Three Russian operations</h3>
-      <p style="font-size:0.52em;color:#9ca3af;margin-top:8px">Cloned media websites. Fabricated ballot videos. A single endorsement on X increased a party's visibility 8x overnight.<sup><a href="https://dfrlab.org/2025/02/20/the-musk-effect-xs-impact-on-germanys-election/">[11]</a></sup></p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ 7. TRANSPARENCY VISUAL ═══ -->
-<section data-background-color="#0A0E1A">
-  <h2 style="font-size:1.3em;text-align:center;margin-bottom:24px">Protect free speech, but don't enable free reach.</h2>
-  <div class="grid-2">
-    <div>
-      <p style="font-size:0.5em;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:8px">Without transparency</p>
-      <div style="background:#16181C;border:1px solid #2F3336;border-radius:12px;padding:16px;font-size:0.55em">
-        <div class="tweet-head"><div class="tweet-avatar">A</div><div><span class="tweet-name">@activist_2024</span></div></div>
-        <div class="tweet-body" style="margin-top:8px">"Breaking: leaked documents prove election officials manipulated ballot counts in three swing states."</div>
-        <p style="color:#6b7280;font-size:0.85em;margin-top:8px">2,847 reposts &middot; 12.4K likes</p>
-        <p style="color:#4b5563;font-size:0.8em;margin-top:6px;font-style:italic">Looks like a real post from a real person. You have no reason to doubt it.</p>
-      </div>
-    </div>
-    <div>
-      <p style="font-size:0.5em;color:var(--blue);font-weight:600;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:8px">With Arbiter's transparency layer</p>
-      <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.25);border-radius:12px;padding:16px;font-size:0.55em">
-        <div class="tweet-head"><div class="tweet-avatar">A</div><div><span class="tweet-name">@activist_2024</span></div></div>
-        <div class="tweet-body" style="margin-top:8px">"Breaking: leaked documents prove election officials manipulated ballot counts in three swing states."</div>
-        <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(59,130,246,0.2)">
-          <p style="color:var(--blue);font-weight:700;font-size:0.75em;margin-bottom:6px">COORDINATION CONTEXT</p>
-          <p style="color:#d1d5db;font-size:0.95em;margin-bottom:4px"><span style="color:var(--blue);font-weight:600">107 accounts</span> posted copies of this claim in the last 4 hours</p>
-          <p style="color:#d1d5db;font-size:0.95em;margin-bottom:4px">Spread across <span style="color:var(--blue);font-weight:600">6 languages</span> on X, Telegram, and Facebook</p>
-          <p style="color:#d1d5db;font-size:0.95em;margin-bottom:4px"><span style="color:var(--blue);font-weight:600">83%</span> of sharing accounts were created in the last 30 days</p>
-          <p style="color:#d1d5db;font-size:0.95em">No source documents found matching the claim</p>
+<!-- ═══ 01 · TITLE ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <div class="cols w64">
+        <div>
+          <h1 style="color:#e9eaf0; font-size:128px;">Arbiter</h1>
+          <p class="lede mt24" style="font-size:27px; max-width:44ch; color:#c9cdd8;">See the accounts shaping your feed before they shape your views.</p>
+          <p class="mt44" style="font-size:16px; color:#9aa1b2;">An AI copilot for public discourse · by SimPPL, a U.S. <span style="white-space:nowrap">501(c)(3)</span> nonprofit</p>
+          <svg class="arrowg mt32" width="66" height="66" viewBox="0 0 100 100" style="transform:rotate(45deg)"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#ffd900"/></svg>
+        </div>
+        <div>
+          <svg class="net" viewBox="0 0 520 520" style="width:100%; max-height:480px;">
+            <line x1="330" y1="260" x2="180" y2="180"/><line x1="330" y1="260" x2="280" y2="120"/>
+            <line x1="330" y1="260" x2="420" y2="90"/><line x1="330" y1="260" x2="470" y2="200"/>
+            <line x1="330" y1="260" x2="450" y2="370"/><line x1="330" y1="260" x2="350" y2="440"/>
+            <line x1="330" y1="260" x2="210" y2="420"/><line x1="330" y1="260" x2="100" y2="350"/>
+            <line x1="180" y1="180" x2="90" y2="80"/><line x1="180" y1="180" x2="60" y2="220"/>
+            <line x1="280" y1="120" x2="200" y2="60"/><line x1="420" y1="90" x2="280" y2="120"/>
+            <line x1="450" y1="370" x2="480" y2="300"/><line x1="210" y1="420" x2="140" y2="470"/>
+            <line x1="100" y1="350" x2="60" y2="220"/><line x1="470" y1="200" x2="480" y2="300"/>
+            <circle cx="90" cy="80" r="7"/><circle cx="200" cy="60" r="5" class="b"/>
+            <circle cx="420" cy="90" r="8"/><circle cx="470" cy="200" r="6" class="b"/>
+            <circle cx="450" cy="370" r="9"/><circle cx="350" cy="440" r="6"/>
+            <circle cx="210" cy="420" r="10" class="b"/><circle cx="100" cy="350" r="7"/>
+            <circle cx="60" cy="220" r="5"/><circle cx="180" cy="180" r="8" class="b"/>
+            <circle cx="280" cy="120" r="6"/><circle cx="140" cy="470" r="4"/>
+            <circle cx="480" cy="300" r="5"/><circle cx="330" cy="260" r="14" class="hub"/>
+            <text x="352" y="252">AMPLIFIER</text>
+          </svg>
         </div>
       </div>
-      <p style="font-size:0.5em;color:#9ca3af;margin-top:8px;font-style:italic">You decide what to believe. We show you what you're looking at.</p>
+    </div>
+    <div class="foot">
+      <span class="src">AWARDED BY GOOGLE · MOZILLA · WIKIMEDIA · FORD · OMIDYAR</span>
+      <span class="brand"><a href="https://arbiter.simppl.org" style="color:#9aa1b2; border:none;">arbiter.simppl.org</a></span>
     </div>
   </div>
 </section>
 
-<!-- ═══ 8. SOLUTION ═══ -->
-<section data-background-color="#0A0E1A">
-  <p class="label-blue" style="margin-bottom:8px">Our Solution</p>
-  <h2 style="font-size:1.35em">Arbiter makes the hidden structure of online campaigns visible, before the public is influenced.</h2>
-  <ul style="font-size:0.65em;color:#d1d5db;margin-top:14px;padding-left:1.2em;list-style:none">
-    <li style="margin-bottom:8px">&bull; A journalist types one question</li>
-    <li style="margin-bottom:8px">&bull; Our AI agents collect posts from <strong style="color:#fff">nine platforms</strong>, trace networks promoting claims across platforms, languages, and countries</li>
-    <li style="margin-bottom:8px">&bull; Every claim in the investigation links back to the original post</li>
-    <li style="color:var(--blue);font-weight:600">&bull; Instead of asking you to believe them, journalists can now show you who is behind your feed</li>
-  </ul>
-  <div class="grid-3" style="margin-top:28px;text-align:center">
-    <div><p class="big" style="font-size:1.8em;color:var(--blue)">9</p><p style="font-size:0.5em;color:#9ca3af">platforms</p><p style="font-size:0.38em;color:#4b5563;margin-top:2px">X, YouTube, Reddit, TikTok, Bluesky, Meta, Telegram, Instagram, 4chan</p></div>
-    <div><p class="big" style="font-size:1.8em;color:var(--blue)">200M+</p><p style="font-size:0.5em;color:#9ca3af">posts analyzed monthly</p></div>
-    <div><p class="big" style="font-size:1.8em;color:var(--blue)">8</p><p style="font-size:0.5em;color:#9ca3af">countries with journalist users</p></div>
-  </div>
-</section>
-
-<!-- ═══ 9. IMPACT — Investigations ═══ -->
-<section data-background-color="#0A0E1A">
-  <p class="label-blue" style="margin-bottom:8px">Impact</p>
-  <h2 style="font-size:1.25em;margin-bottom:20px">Journalists using Arbiter have uncovered coordinated operations reaching hundreds of millions.</h2>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-    <div class="card card-blue">
-      <p class="label-blue">Investigation</p>
-      <h3 style="font-size:0.8em;margin-top:6px">Bondi Beach attack</h3>
-      <p style="font-size:0.5em;color:#9ca3af;margin-top:4px">6,000 posts across YouTube and Twitter. Information distortion accounted for 34% of all engagement.</p>
-      <p class="big" style="font-size:1.2em;color:var(--blue);margin-top:6px">406.7M interactions</p>
-    </div>
-    <div class="card card-blue">
-      <p class="label-blue">Investigation</p>
-      <h3 style="font-size:0.8em;margin-top:6px">Online scams &amp; crypto trading</h3>
-      <p style="font-size:0.5em;color:#9ca3af;margin-top:4px">6,345 posts across Twitter, YouTube, and Bluesky. Gambling promotions normalized undisclosed claims.</p>
-      <p class="big" style="font-size:1.2em;color:var(--blue);margin-top:6px">229.7M interactions</p>
-    </div>
-    <div class="card">
-      <p class="label-blue">Platform Enforcement</p>
-      <h3 style="font-size:0.8em;margin-top:6px">Meta threat takedown</h3>
-      <p style="font-size:0.5em;color:#9ca3af;margin-top:4px">Contributed to Meta's Q1 2024 adversarial threat report. Coordinated networks in Bangladesh removed.</p>
-    </div>
-    <div class="card">
-      <p class="label-blue">Platform Enforcement</p>
-      <h3 style="font-size:0.8em;margin-top:6px">YouTube content removal</h3>
-      <p style="font-size:0.5em;color:#9ca3af;margin-top:4px">Detected AI-generated campaign with 100% positive sentiment. YouTube removed the content after our report.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ 10. PARTNERSHIPS & CAPACITY BUILDING ═══ -->
-<section data-background-color="#0A0E1A">
-  <p class="label-blue" style="margin-bottom:8px">Partnerships &amp; Capacity Building</p>
-  <h2 style="font-size:1.2em;margin-bottom:20px">We work with newsrooms, agencies, and civil society across 8 countries.</h2>
-  <div class="grid-3">
-    <div>
-      <p style="font-size:0.5em;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px">Newsroom Partners</p>
-      <ul style="font-size:0.5em;color:#d1d5db;padding-left:0;list-style:none">
-        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Rappler</strong> (Philippines)</li>
-        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Tempo Media</strong> (Indonesia)</li>
-        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Jagran New Media</strong> (India)</li>
-        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">NY Public Radio / Gothamist</strong> (US)</li>
-        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">VTDigger</strong> (US)</li>
-        <li style="padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Yale Daily News</strong> (US)</li>
-      </ul>
-    </div>
-    <div>
-      <p style="font-size:0.5em;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px">Capacity Building</p>
-      <ul style="font-size:0.5em;color:#d1d5db;padding-left:0;list-style:none">
-        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Kenya</strong> &middot; 10+ journalists trained with Africa Uncensored</li>
-        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Mongolia</strong> &middot; 2-month training for 18 CSOs with NEST Center</li>
-        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Germany</strong> &middot; DW Akademie partnership since 2022</li>
-        <li style="padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">JournalismAI</strong> &middot; Supporting newsrooms with AI tools</li>
-      </ul>
-    </div>
-    <div>
-      <p style="font-size:0.5em;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px">International Organizations</p>
-      <ul style="font-size:0.5em;color:#d1d5db;padding-left:0;list-style:none">
-        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">UNDP</strong> &middot; AI Trust and Safety program</li>
-        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">UN Peacekeeping Operations</strong></li>
-        <li style="margin-bottom:6px;padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">Fast Forward</strong> &middot; Tech Nonprofit Accelerator</li>
-        <li style="padding:6px 10px;background:rgba(255,255,255,0.03);border-radius:6px">&bull; <strong style="color:#fff">YouTube</strong> &middot; 1.2M API calls/day granted</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ 11. TEAM ═══ -->
-<section data-background-color="#0A0E1A">
-  <p class="label-blue" style="margin-bottom:8px">Team</p>
-  <h2 style="font-size:1.2em">Built by researchers who worked inside the platforms.</h2>
-  <div class="grid-2" style="margin-top:16px">
-    <div class="card">
-      <h3 style="font-size:0.85em">Swapneel Mehta</h3>
-      <p class="label-blue" style="margin-top:4px">Co-founder &amp; President</p>
-      <ul style="font-size:0.48em;color:#9ca3af;margin-top:8px;padding-left:1em;list-style:none">
-        <li style="margin-bottom:3px">&bull; PhD NYU, Postdoc MIT and Boston University</li>
-        <li style="margin-bottom:3px">&bull; Built AI systems at Twitter, Adobe, with Meta</li>
-        <li style="margin-bottom:3px">&bull; Published at NeurIPS, ICML, AAAI</li>
-        <li>&bull; Presented to heads of state through the UN</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3 style="font-size:0.85em">Dhara Mungra</h3>
-      <p class="label-blue" style="margin-top:4px">Co-founder &amp; Engineering Lead</p>
-      <ul style="font-size:0.48em;color:#9ca3af;margin-top:8px;padding-left:1em;list-style:none">
-        <li style="margin-bottom:3px">&bull; NYU, Bombora (senior data scientist)</li>
-        <li style="margin-bottom:3px">&bull; Research with Anthropic</li>
-        <li style="margin-bottom:3px">&bull; Center for AI and Digital Policy</li>
-        <li>&bull; Leads engineering, operations, and partnerships</li>
-      </ul>
-    </div>
-  </div>
-  <div style="display:flex;justify-content:center;gap:48px;margin-top:18px">
-    <div style="text-align:center"><p class="big" style="font-size:1.3em;color:var(--blue)">4</p><p style="font-size:0.42em;color:#9ca3af">ML engineers</p></div>
-    <div style="text-align:center"><p class="big" style="font-size:1.3em;color:var(--blue)">$350K</p><p style="font-size:0.42em;color:#9ca3af">raised to date</p></div>
-  </div>
-  <p style="text-align:center;font-size:0.38em;color:#4b5563;margin-top:12px">Google &middot; Mozilla &middot; Ford Foundation &middot; Omidyar Network &middot; Wikimedia &middot; UNDP &middot; Fast Forward</p>
-</section>
-
-<!-- ═══ 12. ASK ═══ -->
-<section data-background-color="#0A0E1A">
-  <div style="text-align:center">
-    <p class="label-blue" style="margin-bottom:14px">The Ask</p>
-    <p class="big" style="font-size:3.2em;color:#fff">$850,000</p>
-    <ul style="font-size:0.6em;color:#d1d5db;margin-top:14px;max-width:900px;margin-left:auto;margin-right:auto;padding-left:0;list-style:none;text-align:center">
-      <li style="margin-bottom:6px">&bull; Every journalist we onboard creates investigation templates that others reuse</li>
-      <li>&bull; The harms are the same everywhere, so the investigations should be replicable</li>
-    </ul>
-  </div>
-  <div class="grid-2" style="margin-top:28px">
-    <div>
-      <p style="font-size:0.5em;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px">What the funding supports</p>
-      <div class="card" style="margin-bottom:10px"><h3 style="font-size:0.75em">Scale to 1B+ posts/month</h3><p style="font-size:0.5em;color:#9ca3af;margin-top:4px">12+ platforms. More languages. More countries.</p></div>
-      <div class="card" style="margin-bottom:10px"><h3 style="font-size:0.75em">100 journalists, 5+ countries</h3><p style="font-size:0.5em;color:#9ca3af;margin-top:4px">Partnerships with press associations and journalism schools.</p></div>
-      <div class="card"><h3 style="font-size:0.75em">Open-source investigation tools</h3><p style="font-size:0.5em;color:#9ca3af;margin-top:4px">Peer-reviewed methods. Public datasets.</p></div>
-    </div>
-    <div>
-      <p style="font-size:0.5em;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px">Other ways to support us</p>
-      <ul style="font-size:0.55em;color:#d1d5db;padding-left:0;list-style:none">
-        <li style="margin-bottom:10px;padding:10px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px"><strong style="color:#fff">Champion our cause</strong><br><span style="color:#9ca3af;font-size:0.9em">Introduce us to funders, journalists, and partners in this space</span></li>
-        <li style="margin-bottom:10px;padding:10px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px"><strong style="color:#fff">Invite us to present</strong><br><span style="color:#9ca3af;font-size:0.9em">We presented at MIT, Harvard, tech companies, to heads of state, and UN agencies. Let us share our work with your team!</span></li>
-        <li style="padding:10px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px"><strong style="color:#fff">Connect us with journalists</strong><br><span style="color:#9ca3af;font-size:0.9em">Newsrooms, press associations, and investigative teams who need cross-platform tools</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ 13. REAL HARM ═══ -->
-<section data-background-color="#1A0F0F">
-  <h2 style="font-size:1.3em;text-align:center;margin-bottom:24px">The scams cause real harm. With Arbiter, we can finally fight back.</h2>
-  <div style="display:flex;justify-content:center;gap:20px;align-items:flex-start">
-    <div style="text-align:center;max-width:220px">
-      <div style="border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,0.1);box-shadow:0 8px 32px rgba(0,0,0,0.4)">
-        <img src="images/whatsapp/dada_founder_scam.jpeg" style="width:100%;display:block" alt="WhatsApp scam: OnPassive founder promotion">
+<!-- ═══ 02 · PROBLEM ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>Trust in what we read online has collapsed</h2>
+      <div class="cols mt32">
+        <div class="bigstats">
+          <div class="bigstat hot">
+            <div class="v"><span class="counter" data-final="28">28</span>%</div>
+            <p>of Americans trust the mass media. The <b>lowest reading in Gallup's five-decade trend</b> (Sept 2025).</p>
+          </div>
+          <div class="bigstat">
+            <div class="v"><span class="counter" data-final="58">58</span>%</div>
+            <p>of people worldwide are worried about <b>what is real and what is fake</b> online when it comes to news (Reuters Institute, 2025).</p>
+          </div>
+          <div class="bigstat">
+            <div class="v"><span class="counter" data-final="54">54</span>%</div>
+            <p>of Americans now get news via <b>social media and video networks</b>, ahead of TV for the first time (Reuters Institute, 2025).</p>
+          </div>
+        </div>
+        <div>
+          <svg viewBox="0 0 420 300" style="width:100%;">
+            <text x="70" y="36" font-family="Space Grotesk" font-size="34" font-weight="700" fill="#12131a" text-anchor="middle">72%</text>
+            <rect x="30" y="50" width="80" height="220" fill="#12131a"/>
+            <text x="70" y="292" font-family="IBM Plex Mono" font-size="13" fill="#878b9d" text-anchor="middle">1976</text>
+            <polygon points="150,120 250,190 250,170 290,205 250,240 250,220 150,140" fill="#d64545"/>
+            <text x="345" y="170" font-family="Space Grotesk" font-size="34" font-weight="700" fill="#d64545" text-anchor="middle">28%</text>
+            <rect x="305" y="184" width="80" height="86" fill="#d64545"/>
+            <text x="345" y="292" font-family="IBM Plex Mono" font-size="13" fill="#878b9d" text-anchor="middle">2025</text>
+            <line x1="20" y1="270" x2="400" y2="270" stroke="#12131a" stroke-width="2.5"/>
+          </svg>
+          <p class="tiny mono muted mt10" style="text-align:center; letter-spacing:.08em;">AMERICANS WITH A GREAT DEAL OR FAIR AMOUNT OF TRUST IN MASS MEDIA · GALLUP</p>
+        </div>
       </div>
-      <p style="font-size:0.38em;color:#9ca3af;margin-top:8px">Scammer recruiting "founders" for commissions that never came</p>
     </div>
-    <div style="text-align:center;max-width:220px">
-      <div style="border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,0.1);box-shadow:0 8px 32px rgba(0,0,0,0.4)">
-        <img src="images/whatsapp/dada_scammers_post.jpeg" style="width:100%;display:block" alt="WhatsApp scam: forwarded AI claims in Hindi">
-      </div>
-      <p style="font-size:0.38em;color:#9ca3af;margin-top:8px">Forwarded posts promoting fake AI products in Hindi</p>
-    </div>
-    <div style="text-align:center;max-width:220px">
-      <div style="border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,0.1);box-shadow:0 8px 32px rgba(0,0,0,0.4)">
-        <img src="images/whatsapp/iphone_selling_scam.jpeg" style="width:100%;display:block" alt="WhatsApp scam: iPhone selling scam">
-      </div>
-      <p style="font-size:0.38em;color:#9ca3af;margin-top:8px">Phone selling scam targeting seniors for bank credentials</p>
-    </div>
-    <div style="text-align:center;max-width:220px">
-      <div style="border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,0.1);box-shadow:0 8px 32px rgba(0,0,0,0.4)">
-        <img src="images/whatsapp/solar_panel_scam.jpeg" style="width:100%;display:block" alt="WhatsApp scam: solar panel investment scam">
-      </div>
-      <p style="font-size:0.38em;color:#9ca3af;margin-top:8px">Solar panel investment scam with fake donation claims</p>
+    <div class="foot">
+      <span class="src">SRC · news.gallup.com/poll/695762 · Reuters Institute Digital News Report 2025</span>
+      <span class="brand">ARBITER · SIMPPL</span>
     </div>
   </div>
-  <p style="font-size:0.5em;color:#9ca3af;text-align:center;margin-top:16px;font-style:italic">My grandfather aggregating scams for me to fight.</p>
 </section>
 
-<!-- ═══ 14. CLOSE ═══ -->
-<section data-background-color="#0A0E1A">
-  <div style="text-align:center;max-width:700px;margin:0 auto">
-    <h2 style="font-size:1.45em">My grandfather deserved to know who was flooding his feed. Millions of people do.</h2>
-    <p style="color:var(--blue);font-size:0.85em;margin-top:24px" class="serif">We built Arbiter to help you understand what is shaping public conversation before it shapes your views.</p>
-    <p style="color:#fff;font-size:0.8em;margin-top:24px;font-weight:600">Become the arbiters of your own truth.</p>
-    <div style="margin-top:40px;display:flex;justify-content:center;gap:16px">
-      <a href="https://calendly.com/simppl/arbiter-demo" style="background:#2563eb;color:#fff;padding:12px 32px;border-radius:999px;font-size:0.6em;font-weight:600;text-decoration:none">Request a Demo</a>
-      <a href="https://arbiter.simppl.org" style="border:1px solid rgba(255,255,255,0.15);color:#fff;padding:12px 32px;border-radius:999px;font-size:0.6em;font-weight:600;text-decoration:none">Open Arbiter</a>
+<!-- ═══ 03 · GAP ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>Campaigns run across platforms. Review stays inside them.</h2>
+      <div class="cols w64 mt32 top">
+        <div>
+          <p style="font-size:18px;">On Twitter, true stories took <strong>about six times as long</strong> as false ones to reach 1,500 people (MIT, <i>Science</i>, 2018). By the time a claim is checked, the campaign that planted it has moved on.</p>
+          <p class="mt16" style="font-size:18px;">Platform integrity teams work one platform at a time. A campaign that spans X, YouTube, Telegram, and WhatsApp is <strong>four separate partial views</strong>, and nobody holds the whole picture.</p>
+          <div class="mt24" style="border-left:4px solid #d64545; padding:12px 0 12px 18px;">
+            <p style="font-size:16px;"><strong>OnPassive</strong>, an "AI-powered" tech scheme, ran its promotion on five platforms at once. The SEC charged it with fraudulently raising <strong>over $108 million from more than 800,000 investors</strong>. Each platform saw only its own slice.</p>
+          </div>
+        </div>
+        <div>
+          <svg viewBox="0 0 360 330" style="width:100%;">
+            <text x="45" y="22" font-family="IBM Plex Mono" font-size="11" fill="#878b9d" text-anchor="middle">X</text>
+            <text x="130" y="22" font-family="IBM Plex Mono" font-size="11" fill="#878b9d" text-anchor="middle">YOUTUBE</text>
+            <text x="215" y="22" font-family="IBM Plex Mono" font-size="11" fill="#878b9d" text-anchor="middle">TELEGRAM</text>
+            <text x="300" y="22" font-family="IBM Plex Mono" font-size="11" fill="#878b9d" text-anchor="middle">WHATSAPP</text>
+            <line x1="45" y1="34" x2="45" y2="300" stroke="#dcd8cd" stroke-width="2"/>
+            <line x1="130" y1="34" x2="130" y2="300" stroke="#dcd8cd" stroke-width="2"/>
+            <line x1="215" y1="34" x2="215" y2="300" stroke="#dcd8cd" stroke-width="2"/>
+            <line x1="300" y1="34" x2="300" y2="300" stroke="#dcd8cd" stroke-width="2"/>
+            <polyline points="45,70 130,105 215,90 300,140 215,180 130,210 45,190 130,260 215,245 300,280" fill="none" stroke="#d64545" stroke-width="2.5"/>
+            <circle cx="45" cy="70" r="6" fill="#d64545"/><circle cx="130" cy="105" r="6" fill="#d64545"/>
+            <circle cx="215" cy="90" r="6" fill="#d64545"/><circle cx="300" cy="140" r="6" fill="#d64545"/>
+            <circle cx="215" cy="180" r="6" fill="#d64545"/><circle cx="130" cy="210" r="6" fill="#d64545"/>
+            <circle cx="45" cy="190" r="6" fill="#d64545"/><circle cx="130" cy="260" r="6" fill="#d64545"/>
+            <circle cx="215" cy="245" r="6" fill="#d64545"/><circle cx="300" cy="280" r="6" fill="#d64545"/>
+            <text x="180" y="325" font-family="IBM Plex Mono" font-size="12" fill="#878b9d" text-anchor="middle">ONE CAMPAIGN · FOUR PARTIAL VIEWS</text>
+          </svg>
+        </div>
+      </div>
     </div>
-    <p style="color:#4b5563;font-size:0.45em;margin-top:24px">team@simppl.org &middot; simppl.org</p>
+    <div class="foot">
+      <span class="src">SRC · news.mit.edu (Vosoughi, Roy &amp; Aral 2018) · SEC LR-25809 (2023)</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 04 · WHAT ARBITER IS ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>Arbiter reads public conversation across platforms</h2>
+      <div class="pipeline mt32">
+        <div class="pl-node">
+          <div class="st">01 · COLLECT</div>
+          <h3>Licensed, cross-platform data</h3>
+          <p>We buy social data under license or collect it through platform-granted APIs, across X, Reddit, YouTube, Bluesky, Telegram, and Instagram.</p>
+        </div>
+        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node">
+          <div class="st">02 · ORGANIZE</div>
+          <h3>Themes, actors, networks</h3>
+          <p>Posts cluster into themes and sub-themes. Each theme surfaces the accounts moving it, with per-actor dossiers and influence maps.</p>
+        </div>
+        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node">
+          <div class="st">03 · INVESTIGATE</div>
+          <h3>Agentic investigations</h3>
+          <p>Deep research agents answer your questions across the corpus and cite every post they draw on. You keep the judgment.</p>
+        </div>
+      </div>
+      <div class="statrail mt44">
+        <div class="cell"><div class="v"><span class="counter" data-final="3.7" data-decimals="1">3.7</span><small>M+</small></div><div class="k">posts collected across investigations</div></div>
+        <div class="cell"><div class="v"><span class="counter" data-final="248">248</span><small>B</small></div><div class="k">interactions on content from the accounts we monitor</div></div>
+        <div class="cell"><div class="v"><span class="counter" data-final="50">50</span><small>+</small></div><div class="k">organizations with journalists signed up</div></div>
+        <div class="cell"><div class="v"><span class="counter" data-final="12">12</span></div><div class="k">countries with newsroom and civil-society partners</div></div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · arbiter.simppl.org live counters (May 2026) · simppl.org/about</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 05 · PROOF ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <h2>Platforms acted on what Arbiter surfaced</h2>
+      <div class="dossier mt24">
+        <div class="row">
+          <div class="who">X <small>2023</small></div>
+          <div class="what">Our 2023 reporting prompted an internal investigation at X into <b>pro-Russian bot networks</b>.</div>
+          <div class="st"><span class="stamp blue">Investigation opened</span></div>
+        </div>
+        <div class="row">
+          <div class="who">Meta <small>Q1 2024</small></div>
+          <div class="what">We shared findings with Meta's team; their <a href="https://transparency.meta.com/sr/Q1-2024-Adversarial-threat-report">public Q1 2024 Adversarial Threat Report</a> details the takedown of a Bangladesh network: <b>50 accounts and 98 Pages with 3.4M followers</b>.</div>
+          <div class="st"><span class="stamp red">Network removed</span></div>
+        </div>
+        <div class="row">
+          <div class="who">YouTube <small>2025</small></div>
+          <div class="what">Channels we flagged for AI-generated propaganda were <b>terminated by YouTube independently</b>. We had filed no report; enforcement confirmed the detection.</div>
+          <div class="st"><span class="stamp green">Channels terminated</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · transparency.meta.com/sr/Q1-2024-Adversarial-threat-report</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 06 · PRODUCT · LIBRARY ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <div class="cols w46 top">
+        <div>
+          <h2 style="font-size:36px;">Investigations start from a live case-study library</h2>
+          <p class="mt16" style="font-size:16.5px;">Pick a topic or a set of accounts, set a date window, and Arbiter builds the corpus. <strong>31 public case studies</strong> are open to read today, from the Online Safety Act to Air India 171.</p>
+          <div class="chips mt24"><i>X</i><i>YouTube</i><i>Reddit</i><i>Bluesky</i><i>Telegram</i><i>Instagram</i></div>
+          <p class="mt24 small muted">Every study keeps its sources attached: each number traces back to the posts behind it.</p>
+        </div>
+        <div class="wire">
+          <div class="bar"><i></i><i></i><i></i><span class="url">arbiter.simppl.org/studies</span></div>
+          <div style="height:430px; overflow:hidden;"><img src="images/arbiter-2026/library_from_pdf.png" alt="Arbiter case-study library"></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · arbiter.simppl.org/studies · product screenshot</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 07 · PRODUCT · NETWORKS ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <div class="cols w64 top">
+        <div class="wire">
+          <div class="bar"><i></i><i></i><i></i><span class="url">arbiter.simppl.org · topic modeling</span></div>
+          <div style="height:430px; overflow:hidden;"><img src="images/arbiter-2026/network_from_pdf.png" alt="Arbiter influence network graph"></div>
+        </div>
+        <div>
+          <h2 style="font-size:36px;">Themes surface the actors moving them</h2>
+          <p class="mt16" style="font-size:16.5px;">Posts cluster into themes, themes into sub-themes, and each cluster names the accounts driving it. The graph turns a feed into a map: <strong>who amplifies whom, in which language, on which platform</strong>.</p>
+          <p class="mt16" style="font-size:16.5px;">Reports built this way sit behind both platform outcomes on the track-record slide: <strong>X's internal investigation</strong> and <strong>Meta's Bangladesh takedown</strong>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · product screenshot</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 08 · PRODUCT · AGENT ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <h2 style="font-size:36px;">Ask the agent. It answers with receipts.</h2>
+      <div class="query mt24">
+        <span class="ps">&gt;</span>
+        <span class="typed">Identify the key providers of online gambling and casino operations across the platforms in this dataset.</span>
+      </div>
+      <div class="cols w46 mt24 top">
+        <div>
+          <p style="font-size:16px;">The agent analyzed <strong>333 of 397 documents</strong> across YouTube, Twitter, Reddit, and Bluesky, ranked the operators (1win, Stake.com, 1xbet, Betfair, Betway, PokerStars, Dream11), and showed its reasoning.</p>
+          <p class="mt16" style="font-size:16px;"><strong>Every claim cites the posts it came from</strong>, across platform silos. You audit the answer instead of trusting it.</p>
+        </div>
+        <div class="wire">
+          <div class="bar"><i></i><i></i><i></i><span class="url">social intelligence agent · deep research</span></div>
+          <div style="height:330px; overflow:hidden;"><img src="images/arbiter-2026/agent_p16.png" alt="Deep research agent: model reasoning and ranked providers with citations"></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · public gambling study, Jul 31 to Aug 30 2025 · arbiter.simppl.org/studies</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 09 · CASE FILE 01 · DETECT ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="case-plate">
+      <span class="no">Case file 01</span>
+      <span class="nm">Burkina Faso · AI-generated PR campaign</span>
+      <span class="win">Jun 30 – Aug 30 2025 · X · YouTube · Reddit</span>
+    </div>
+    <div class="si-body">
+      <div class="cols w64 top">
+        <div class="acts">
+          <div class="act">
+            <div class="n">01<small>Detect</small></div>
+            <div>
+              <h3>A cluster of accounts pushes a flawless president</h3>
+              <p>Coordinated pages promote Ibrahim Traoré with sentiment reading <b>100% positive, 100% joy</b>. Real discourse never looks like this.</p>
+            </div>
+          </div>
+          <div class="act">
+            <div class="n">02<small>Measure</small></div>
+            <div>
+              <h3>Engagement without an audience trail</h3>
+              <p>One account lands <b>88.8K interactions from a single post</b> (views, comments, and likes combined). Clickbait score 1 of 5, the lowest band on Arbiter's five-point scale: the campaign impersonates organic praise instead of baiting clicks. That polish is the tell.</p>
+            </div>
+          </div>
+          <div class="act">
+            <div class="n">03<small>Identify</small></div>
+            <div>
+              <h3>The videos are AI-generated slop</h3>
+              <p>Fake factories, fake railways, fake tributes, drawing <b>millions of views</b> before any platform labels them.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="wire">
+            <div class="bar"><i></i><i></i><i></i><span class="url">ibrahim traoré · key narrative</span></div>
+            <div style="height:320px; overflow:hidden;"><img src="images/arbiter-2026/traore_sentiment_pdf.png" alt="Traore panel: 100% positive sentiment, 100% joy, Info Pulse top post"></div>
+          </div>
+          <div class="ebars mt16">
+            <div class="ebar"><span class="lb">POSITIVE</span><span class="track"><span class="fill green" style="width:100%"></span></span><span class="val">100%</span></div>
+            <div class="ebar"><span class="lb">JOY</span><span class="track"><span class="fill green" style="width:100%"></span></span><span class="val">100%</span></div>
+          </div>
+          <p class="tiny muted mt10">Uniformly green panels are the anomaly that starts the investigation.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · public Arbiter study panels · arbiter.simppl.org/studies</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 10 · CASE FILE 01 · CLAIMS ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="case-plate">
+      <span class="no">Case file 01</span>
+      <span class="nm">Did the campaign's claims hold up?</span>
+      <span class="win">Verdicts · study window + enforcement</span>
+    </div>
+    <div class="si-body">
+      <div class="cols w64 top">
+        <div>
+          <div class="claims">
+            <div class="claimrow">
+              <div class="c"><b>The claim: new factories, railways, and mega-projects across Burkina Faso.</b> The flagship videos celebrating them are synthetic.</div>
+              <div class="verdict fails">AI-generated</div>
+            </div>
+            <div class="claimrow">
+              <div class="c"><b>The claim: an organic pan-African support wave.</b> Uniform 100%-positive sentiment and single-post interaction spikes match coordination patterns, and platforms later labeled videos as altered.</div>
+              <div class="verdict fails">Coordination pattern</div>
+            </div>
+            <div class="claimrow">
+              <div class="c"><b>The claim: harmless fan content.</b> YouTube terminated the flagged channels on its own; we had filed no report.</div>
+              <div class="verdict fails">Enforced against</div>
+            </div>
+          </div>
+          <div class="mt24"><span class="stamp green">Early detection · validated by YouTube</span></div>
+        </div>
+        <div>
+          <div class="wire">
+            <div class="bar"><i></i><i></i><i></i><span class="url">youtube.com · flagged channel</span></div>
+            <div style="height:250px; overflow:hidden;"><img src="images/arbiter-2026/yt_terminated.png" alt="YouTube: account terminated"></div>
+          </div>
+          <p class="tiny muted mt10">"This video is no longer available because the YouTube account associated with this video has been terminated."</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · study panels + subsequent platform enforcement</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 11 · CASE FILE 02 · GAMBLING ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="case-plate">
+      <span class="no">Case file 02</span>
+      <span class="nm">Illicit betting sold through mirror networks</span>
+      <span class="win">Jul 31 – Aug 30 2025 · X · YouTube · Reddit · Bluesky</span>
+    </div>
+    <div class="si-body">
+      <div class="cols w46 top">
+        <div>
+          <p style="font-size:16.5px;">Betting brands banned in India stay alive through <strong>mirror domains, promo codes, and influencer campaigns</strong>. Arbiter grouped the promotions by narrative and named the operators behind them.</p>
+          <div class="ebars mt24">
+            <div class="ebar"><span class="lb">1WIN</span><span class="track"><span class="fill yellow" style="width:100%"></span></span><span class="val">90</span></div>
+            <div class="ebar"><span class="lb">EXNESS</span><span class="track"><span class="fill" style="width:47%"></span></span><span class="val">42</span></div>
+            <div class="ebar"><span class="lb">GOLD TRADING LIVE</span><span class="track"><span class="fill" style="width:30%"></span></span><span class="val">27</span></div>
+            <div class="ebar"><span class="lb">1XBET</span><span class="track"><span class="fill" style="width:12%"></span></span><span class="val">11</span></div>
+          </div>
+          <p class="tiny muted mt10">Entity mentions in the study corpus; bars scaled to the leader (1win, 90 mentions).</p>
+          <p class="mt16" style="font-size:16.5px;">Influencer dossiers separate <strong>disclosed from undisclosed sponsorships</strong>, and claims analysis flags promotion patterns shaped like violations of SEBI rules (India's securities regulator).</p>
+        </div>
+        <div>
+          <div class="wire">
+            <div class="bar"><i></i><i></i><i></i><span class="url">entity mentions · key narrative</span></div>
+            <div style="height:330px; overflow:hidden;"><img src="images/arbiter-2026/gambling_entities_pdf.png" alt="Gambling study entity mentions"></div>
+          </div>
+          <div class="mt16"><span class="stamp blue">Used by a Big Tech trust team</span></div>
+          <p class="tiny muted mt10">A Big Tech company's team used Arbiter to source illicit betting platforms through their own marketing campaigns.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · public Arbiter study · arbiter.simppl.org/studies</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 12 · CASE FILE 03 · JAILBREAKS ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="case-plate">
+      <span class="no">Case file 03</span>
+      <span class="nm">Communities trading working LLM jailbreaks</span>
+      <span class="win">Aug 31 – Sep 29 2025 · X · Reddit · YouTube · Bluesky</span>
+    </div>
+    <div class="si-body">
+      <div class="cols w46 top">
+        <div>
+          <p style="font-size:16.5px;">Accounts share <strong>functional jailbreaks</strong> for shipping AI products: persona injection, "negative manifesto" prompts, uncensored-AI personas. Arbiter clusters the actors and scores their tactics.</p>
+          <p class="mt16" style="font-size:16.5px;">The top actor drew <strong>832 interactions from 4 posts</strong>. Clickbait score 4.2 of 5. Focused entities: <strong>GPT 5.0, Gemini, Grok</strong>.</p>
+          <p class="mt16" style="font-size:16.5px;">If you ship AI products, this discourse is your <strong>early-warning channel</strong>: exploits circulate publicly before they reach your abuse reports.</p>
+          <div class="mt24"><span class="stamp yellow">Product safety signal</span></div>
+        </div>
+        <div>
+          <div class="wire">
+            <div class="bar"><i></i><i></i><i></i><span class="url">actor dossier · @soft_vehicle1108</span></div>
+            <div style="height:190px; overflow:hidden;"><img src="images/arbiter-2026/jailbreak_scores.png" alt="Jailbreak actor scores: clickbait 4.2/5, focused entities"></div>
+          </div>
+          <p class="tiny muted mt10">Per-actor scoring: clickbait tactics, emotional manipulation, and the AI models each community targets.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · public Arbiter study · arbiter.simppl.org/studies</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 13 · WHO USES IT ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>Newsrooms, researchers, and agencies in twelve countries</h2>
+      <div class="partners mt32">
+        <div class="pcol">
+          <div class="ph">Newsrooms</div>
+          <div class="pr"><span class="nm">Rappler</span><span class="cc">PH</span></div>
+          <div class="pr"><span class="nm">Jagran New Media</span><span class="cc">IN</span></div>
+          <div class="pr"><span class="nm">Gothamist · NYPR</span><span class="cc">US</span></div>
+          <div class="pr"><span class="nm">VTDigger</span><span class="cc">US</span></div>
+          <div class="pr"><span class="nm">Africa Uncensored</span><span class="cc">KE</span></div>
+        </div>
+        <div class="pcol">
+          <div class="ph">Programs &amp; civil society</div>
+          <div class="pr"><span class="nm"><a href="https://arbiter.simppl.org/case-study-reports/nest-mongolia-article-13-14.html" style="color:inherit; border-bottom:1px solid #b9b5a8;">NEST · Mongolia’s only accredited fact-checkers</a></span><span class="cc">MN</span></div>
+          <div class="pr"><span class="nm"><a href="https://arbiter.simppl.org/report/understanding-overseas-job-recruitment-and-scam-networks-for-indonesian-workers" style="color:inherit; border-bottom:1px solid #b9b5a8;">Migrasia · scam-recruitment reports</a></span><span class="cc">HK</span></div>
+          <div class="pr"><span class="nm">DW Akademie</span><span class="cc">DE</span></div>
+          <div class="pr"><span class="nm">dpa</span><span class="cc">DE</span></div>
+        </div>
+        <div class="pcol">
+          <div class="ph">Agencies &amp; platforms</div>
+          <div class="pr"><span class="nm">UNDP AI Trust &amp; Safety</span><span class="cc">UN</span></div>
+          <div class="pr"><span class="nm">UN peacekeeping briefings</span><span class="cc">UN</span></div>
+        </div>
+      </div>
+      <p class="mt32" style="font-size:17px;">Journalists from <strong>50+ organizations</strong> in 12 countries have signed up, spanning newsrooms, civil society, and policymakers, and YouTube grants us <strong>1.2M API calls a day</strong> for data access. The harms repeat across borders, so investigations built in one country become templates for the next.</p>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · arbiter.simppl.org partner strip · simppl.org/about</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 14 · TEAM ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>Built by researchers who shipped at Twitter, Adobe, and Slack</h2>
+      <div class="people mt24">
+        <div class="person">
+          <div class="nm">Swapneel Mehta</div>
+          <div class="rl">Founder &amp; President</div>
+          <p>Full time at SimPPL since March 2026, after a postdoc at Boston University and MIT Sloan and a PhD at NYU. Built AI systems at Twitter, Adobe, and Slack. Google Research Innovator.</p>
+        </div>
+        <div class="person">
+          <div class="nm">Dhara Mungra</div>
+          <div class="rl">Co-founder · Engineering lead</div>
+          <p>Led audience-analytics ML as Data Scientist III at Bombora. M.S. in Data Science at NYU. Fellow with the Center for AI and Digital Policy.</p>
+        </div>
+        <div class="person">
+          <div class="nm">Six full-time engineers</div>
+          <div class="rl">Utkarsh Verma · Atmik Shetty · Dev Bhut and team</div>
+          <p>System design and infrastructure, NLP and deep research agents, platform backend and APIs.</p>
+        </div>
+        <div class="person">
+          <div class="nm">Why trust us</div>
+          <div class="rl">Credibility</div>
+          <p><strong>14 peer-reviewed papers</strong> (NeurIPS, ICML, AAAI, ICWSM). Awards from Google, Mozilla, Wikimedia, Ford, and Omidyar. Bootstrapped as a nonprofit since 2021.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · simppl.org/team · simppl.org/research</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 15 · SCOPING ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>What Arbiter does, and what stays human</h2>
+      <div class="cols mt32 top">
+        <div>
+          <h3 class="blue-txt">The agent</h3>
+          <p class="mt10" style="font-size:17px;">Collects licensed data, clusters themes, maps actors and networks, and answers questions <strong>with a citation for every claim</strong>.</p>
+          <h3 class="mt24 blue-txt">The human</h3>
+          <p class="mt10" style="font-size:17px;">Draws the conclusions. Journalists, researchers, and trust &amp; safety teams keep the judgment; Arbiter keeps the evidence attached.</p>
+        </div>
+        <div>
+          <h3>Honest scope</h3>
+          <p class="mt10" style="font-size:17px;">We <strong>fact-source</strong>: the system surfaces claims and groups related ones, so one verified fact-check scales to thousands of posts.</p>
+          <p class="mt16" style="font-size:17px;">The case files in this deck are <strong>public studies from 2025 windows</strong>. A study scoped to your issue tracks your actors, in your languages, on your timeline.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · arbiter.simppl.org/studies · methods grounded in peer-reviewed research</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 16 · THE ASK ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>The ask: $1M a year keeps Arbiter free for independent journalists</h2>
+      <div class="cols w46 mt32 top">
+        <div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:110px; font-weight:700; letter-spacing:-0.04em; color:#2b48f0; line-height:.9;">$1M</div>
+          <p class="mono mt10" style="font-size:13px; letter-spacing:.16em; color:#878b9d;">ANNUAL FUNDRAISING TARGET</p>
+        </div>
+        <div>
+          <div style="padding:14px 0 12px; border-bottom:1px solid #dcd8cd;">
+            <h3>Free access, sustained</h3>
+            <p class="mt6" style="font-size:16px;">Grants subsidize free access for independent journalists and fact-checkers.</p>
+          </div>
+          <div style="padding:14px 0 12px; border-bottom:1px solid #dcd8cd;">
+            <h3>Training cohorts in all 12 partner countries</h3>
+            <p class="mt6" style="font-size:16px;">On the Kenya model, built with Africa Uncensored and DW Akademie.</p>
+          </div>
+          <div style="padding:14px 0 12px;">
+            <h3>Independence from grant cycles</h3>
+            <p class="mt6" style="font-size:16px;">Commercial client work and subscriptions from larger newsrooms carry more of the core costs each year.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · simppl.org/about · business plan available on request</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 17 · CTA ═══ -->
+<section class="cta" data-background-color="#ffd900">
+  <div class="si">
+    <div class="si-body">
+      <div class="cols w64">
+        <div>
+          <h2>See it on your issue.</h2>
+          <p class="mt24" style="font-size:20px; color:#12131a;">Request a demo: write to <a href="mailto:team@simppl.org">team@simppl.org</a><br>and we follow up within the week.</p>
+          <p class="mt24" style="font-size:17px; color:#3d3a10;">A pilot is one case study scoped to your issue: we set the date window together, run the investigation with you, and you keep the evidence and the sources. Our grants subsidize free access for independent journalists and fact-checkers; commercial client work and subscriptions from larger newsrooms fund the long-term model beyond grant cycles. Free investigation reports land in your inbox via <a href="https://simppl.org/newsletter">simppl.org/newsletter</a>. The platform is live at <a href="https://arbiter.simppl.org">arbiter.simppl.org</a>.</p>
+        </div>
+        <div style="display:flex; justify-content:center;">
+          <svg width="300" height="300" viewBox="0 0 100 100" style="transform:rotate(-45deg)"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#12131a"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SIMPPL · U.S. 501(C)(3) · BOOTSTRAPPED SINCE 2021</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
   </div>
 </section>
 
 </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
 <script>
+/* ==========================================================================
+   ARBITER deck behaviours (jQuery + reveal.js)
+   Contract: the markup always carries the FINAL state (real numbers, full
+   bar widths, complete query text, drawn constellation). This file only
+   animates FROM zero when a slide becomes visible in a live browser.
+   In print-pdf mode (?print-pdf) it does nothing, so the exported PDF and
+   any JS-off reader see the finished slide.
+   ========================================================================== */
+(function ($) {
+  'use strict';
+
+  var PRINT = /print-pdf/gi.test(window.location.search);
+
+  /* ---------- 1 · count-up numerals ----------
+     <span class="counter" data-final="3.7" data-decimals="1">3.7</span> */
+  function runCounters($slide) {
+    $slide.find('.counter').each(function () {
+      var $el = $(this);
+      if ($el.data('ran')) return;
+      $el.data('ran', true);
+      var final = parseFloat($el.attr('data-final'));
+      var dec = parseInt($el.attr('data-decimals') || '0', 10);
+      $({ n: 0 }).animate({ n: final }, {
+        duration: 1100,
+        easing: 'swing',
+        step: function (now) { $el.text(now.toFixed(dec)); },
+        complete: function () { $el.text(final.toFixed(dec)); }
+      });
+    });
+  }
+
+  /* ---------- 2 · evidence-bar fills ----------
+     .ebar .fill carries its final width inline; animate 0 → final once. */
+  function runBars($slide) {
+    $slide.find('.ebar .fill').each(function () {
+      var $f = $(this);
+      if ($f.data('ran')) return;
+      $f.data('ran', true);
+      var w = this.style.width;           // final width from markup
+      $f.css('width', 0).animate({ width: w }, 900, 'swing');
+    });
+  }
+
+  /* ---------- 3 · typed query ----------
+     .typed holds the full text in markup; live mode retypes it. */
+  function runTyped($slide) {
+    $slide.find('.typed').each(function () {
+      var $t = $(this);
+      if ($t.data('ran')) return;
+      $t.data('ran', true);
+      var full = $t.text();
+      $t.empty().append($('<span class="txt">')).append($('<span class="caret">'));
+      var $txt = $t.find('.txt');
+      var i = 0;
+      var tick = setInterval(function () {
+        i += 1 + Math.floor(Math.random() * 2);
+        if (i >= full.length) { i = full.length; clearInterval(tick); }
+        $txt.text(full.slice(0, i));
+      }, 24);
+    });
+  }
+
+  /* ---------- 4 · constellation draw-in ----------
+     .net edges get a dash animation; nodes pop. Final state = drawn. */
+  function runNet($slide) {
+    $slide.find('svg.net').each(function () {
+      var $svg = $(this);
+      if ($svg.data('ran')) return;
+      $svg.data('ran', true);
+      $svg.find('line').each(function (k) {
+        var len = Math.hypot(
+          this.x2.baseVal.value - this.x1.baseVal.value,
+          this.y2.baseVal.value - this.y1.baseVal.value);
+        $(this).css({
+          'stroke-dasharray': len,
+          'stroke-dashoffset': len,
+          'transition': 'stroke-dashoffset .8s ease ' + (k * 45) + 'ms'
+        });
+        var el = this;
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () { el.style.strokeDashoffset = 0; });
+        });
+      });
+      $svg.find('circle').each(function (k) {
+        $(this).css({
+          'transform-origin': this.cx.baseVal.value + 'px ' + this.cy.baseVal.value + 'px',
+          'transform': 'scale(0)',
+          'transition': 'transform .45s cubic-bezier(.2,1.6,.4,1) ' + (150 + k * 55) + 'ms'
+        });
+        var el = this;
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () { el.style.transform = 'scale(1)'; });
+        });
+      });
+    });
+  }
+
+  function activate(slide) {
+    var $slide = $(slide);
+    runCounters($slide); runBars($slide); runTyped($slide); runNet($slide);
+  }
+
+  window.ArbiterDeck = {
+    init: function (deck) {
+      if (PRINT || typeof $ === 'undefined') return;   // static = final state
+      deck.on('ready', function (e) { activate(e.currentSlide); });
+      deck.on('slidechanged', function (e) { activate(e.currentSlide); });
+    }
+  };
+}(window.jQuery));
+
+</script>
+<script>
   Reveal.initialize({
-    hash: true,
-    slideNumber: true,
-    controls: true,
-    progress: true,
-    center: true,
-    transition: 'fade',
-    width: 1920,
-    height: 1080,
-    margin: 0.04,
-    minScale: 0.2,
-    maxScale: 2.0,
-    pdfSeparateFragments: false,
-    pdfMaxPagesPerSlide: 1
-  });
+    width: 1280, height: 720, margin: 0,
+    center: false, hash: true, controls: false, progress: true,
+    transition: 'fade', transitionSpeed: 'fast',
+    pdfSeparateFragments: false, pdfMaxPagesPerSlide: 1
+  }).then(function () { ArbiterDeck.init(Reveal); });
 </script>
 </body>
 </html>
