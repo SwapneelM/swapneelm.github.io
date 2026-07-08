@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Fable 5: the week it came back</title>
+<link rel="stylesheet" href="claude-fable-5/vendor/reveal.css">
+<link rel="stylesheet" href="claude-fable-5/vendor/fonts/fonts.css">
+<link rel="stylesheet" href="claude-fable-5/vendor/fonts/cjk.css">
+<link rel="stylesheet" href="claude-fable-5/components/library.css?v=9">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- 1 · TITLE -->
+<section><div class="si"><div class="si-body">
+  <h1 style="max-width:24ch;">Claude Fable 5:</h1>
+  <h1 style="color:var(--clay-deep); max-width:26ch; margin-top:2px;">the week it came back.</h1>
+  <p class="lede" style="max-width:58ch;">Anthropic's most capable public model came back from a government suspension and, a week later, left subscriptions for usage credits.</p>
+  <p class="small mt14" style="color:var(--ink-soft);">A SimPPL case study, built with Arbiter, our social-intelligence agent. We read the posts and checked the claims they carried.</p>
+  <div class="factrail mt50">
+    <div class="cell"><div class="k">Window</div><div class="v">8 days<small>Jun 29 to Jul 6, 2026</small></div></div>
+    <div class="cell"><div class="k">Posts analysed</div><div class="v">762<small>on Fable, from the corpus</small></div></div>
+    <div class="cell"><div class="k">Platforms</div><div class="v">3<small>X · YouTube · Bluesky</small></div></div>
+    <div class="cell"><div class="k">Verdicts</div><div class="v">9 claims<small>checked, with receipts</small></div></div>
+  </div>
+</div><div class="foot"><span class="src">Arbiter case study · "Claude Fable 5 capabilities and applications" · arbiter.simppl.org</span><span class="n">01 / 14</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 2 · THE ARC -->
+<section><div class="si"><div class="si-body">
+  <h2>Twenty-eight days from launch to usage credits</h2>
+  <p class="lede" style="max-width:62ch;">The discourse in this study only makes sense against the model's June. Six dated events, each confirmed against a primary source.</p>
+  <div class="arc mt50">
+    <div class="ev"><div class="d">Jun 9</div><div class="t">Launched</div><p>GA at $10 in, $50 out per million tokens. Its twin Mythos 5, the same model with fewer safeguards, goes to vetted cyberdefenders.</p></div>
+    <div class="ev"><div class="d">Jun 10</div><div class="t">Prompt in the open</div><p>A jailbreak researcher publishes the 120,000-character system prompt. GitHub mirrors it within a day.</p></div>
+    <div class="ev gov"><div class="d">Jun 12</div><div class="t">Ordered offline</div><p>A Commerce directive lands at 5:21pm ET after a jailbreak drew out cyberattack-useful answers. Fable and Mythos go dark worldwide.</p></div>
+    <div class="ev gov"><div class="d">Jun 30</div><div class="t">Order lifted</div><p>Anthropic agrees to detect security risks, share release protocols, and report misuse.</p></div>
+    <div class="ev"><div class="d">Jul 1</div><div class="t">Back on</div><p>Access restores across Claude surfaces, up to half of weekly limits on paid plans.</p></div>
+    <div class="ev"><div class="d">Jul 7</div><div class="t">Off subscriptions</div><p>Fable moves to usage credits at the same $10/$50. Anthropic calls it a temporary capacity measure.</p></div>
+  </div>
+  <div class="callout mt22"><div class="lab">Where this study sits</div><p>Our window opens the day before the order lifted and closes the night before Fable left subscriptions. The directive was an export control; with no real-time way to verify nationality, Anthropic turned the model off for everyone. That kept it dark for nineteen of its first twenty-eight days.</p></div>
+</div><div class="foot"><span class="src">Verified · Anthropic launch, access and redeployment posts · 9to5mac · BleepingComputer</span><span class="n">02 / 14</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 3 · A BUILDER CONVERSATION -->
+<section><div class="si"><div class="si-body">
+  <h2>This is a builder's conversation, first</h2>
+  <p class="lede" style="max-width:62ch;">We sorted every hands-on post by what it was actually about. Software and agent work dominates the room, on both volume and reach.</p>
+  <div class="sectors mt50">
+    <div class="sectorrow"><div class="nm">Software &amp; agents</div><div class="track"><i style="width:100%"></i></div><div class="val">296 · 5.4M</div></div>
+    <div class="sectorrow"><div class="nm">Games &amp; creative</div><div class="track"><i style="width:17%"></i></div><div class="val">41 · 902K</div></div>
+    <div class="sectorrow"><div class="nm">Finance &amp; quant</div><div class="track"><i style="width:11%"></i></div><div class="val">62 · 276K</div></div>
+    <div class="sectorrow"><div class="nm">Research &amp; science</div><div class="track"><i style="width:10%"></i></div><div class="val">7 · 273K</div></div>
+    <div class="sectorrow"><div class="nm">Marketing &amp; SEO</div><div class="track"><i style="width:5%"></i></div><div class="val">16 · 131K</div></div>
+    <div class="sectorrow"><div class="nm">Business ops</div><div class="track"><i style="width:3%"></i></div><div class="val">14 · 79K</div></div>
+  </div>
+  <div class="callout mt22"><div class="lab">How to read it</div><p>Bars are total interactions, labels are post count and reach. A post is filed by its dominant use, so a trading bot lands in finance before software. Research is tiny by count but high by reach, carried by a handful of viral science threads.</p></div>
+</div><div class="foot"><span class="src">Arbiter · sector classification over 762 Fable posts pulled from the case-study corpus</span><span class="n">03 / 14</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 4 · WHO IS VISIBLE -->
+<section><div class="si"><div class="si-body">
+  <h2>Who is visible in each application space</h2>
+  <p class="lede" style="max-width:62ch;">The loudest raw accounts are vendors and aggregators. Set those aside and the builders carrying each sector are specific and findable.</p>
+  <div class="cols mt50" style="grid-template-columns:1fr 1fr; gap:26px;">
+    <div class="qcol">
+      <div class="qcard sup"><div class="h"><span class="handle">@svpino</span><span class="tag">Software</span><span class="eng">20.3K</span></div><p class="q">Had Fable read and optimise his Claude Code skills: <b>40% shorter, everything works</b>, plus a parallel-write trick that ran a skill 2× faster.</p><span class="lnk">x.com/svpino/status/2074108642899775800</span></div>
+      <div class="qcard sup"><div class="h"><span class="handle">@__paleologo</span><span class="tag">Finance</span><span class="eng">24.3K</span></div><p class="q">Balyasny's quant lead ran his research programs on Fable: <b>"significantly improved. They went nowhere on Codex 5.5 and Opus 4.8. A new world."</b></p><span class="lnk">x.com/__paleologo/status/2073921153576448134</span></div>
+      <div class="qcard sup"><div class="h"><span class="handle">@RoundtableSpace</span><span class="tag">Marketing</span><span class="eng">61.2K</span></div><p class="q">"Fable read <b>9 years of my content</b>, wrote atomic notes, built backlinks and filed everything in 22 minutes."</p><span class="lnk">x.com/RoundtableSpace/status/2073968930792538578</span></div>
+    </div>
+    <div class="qcol">
+      <div class="qcard sup"><div class="h"><span class="handle">@igus_ai</span><span class="tag">Quant</span><span class="eng">56.7K</span></div><p class="q">Fable read one article, picked 7 GitHub repos, and deployed <b>an autonomous Polymarket trading system</b> that scanned 412K trades.</p><span class="lnk">x.com/igus_ai/status/2074222099124957259</span></div>
+      <div class="qcard sup"><div class="h"><span class="handle">@sonnylazuardi</span><span class="tag">Creative</span><span class="eng">10.9K</span></div><p class="q">Rebuilt an <b>Excalidraw-style canvas</b> in a single sitting, driving the model as the editor rather than the illustrator.</p><span class="lnk">x.com/sonnylazuardi/status/2074074912491511948</span></div>
+      <div class="qcard sup"><div class="h"><span class="handle">@ajitcodes</span><span class="tag">Business ops</span><span class="eng">17.6K</span></div><p class="q"><b>"Stop looking for the perfect model, build the perfect workflow."</b> The most-shared operating advice of the week.</p><span class="lnk">x.com/ajitcodes/status/2074298972898984285</span></div>
+    </div>
+  </div>
+</div><div class="foot"><span class="src">Arbiter · most-visible accounts per sector by interactions, news aggregators and the ChatLLM reseller excluded</span><span class="n">04 / 14</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 5 · NOVEL USES -->
+<section><div class="si"><div class="si-body">
+  <h2>The builds that read as genuinely new</h2>
+  <p class="lede" style="max-width:62ch;">Past the demos of demos, a handful of specific artifacts stand out for what they attempt, not how loud they were.</p>
+  <div class="novel mt50">
+    <div class="n"><span class="mk">1</span><div><span class="who">@Lentils80</span><p class="what">A pure C++ spinning-black-hole renderer, no engine, using real general-relativistic ray tracing and null geodesics.</p></div></div>
+    <div class="n"><span class="mk">2</span><div><span class="who">@kylekabasares</span><p class="what">For under $50 in under an hour: a week of his PhD astrophysics work plus a 10-page paper with figures and references.</p></div></div>
+    <div class="n"><span class="mk">3</span><div><span class="who">@nichochar</span><p class="what">One weekend, one product across three surfaces: an iOS app, a mac app, and a postgres server running an agent, sharing state.</p></div></div>
+    <div class="n"><span class="mk">4</span><div><span class="who">@mikefutia</span><p class="what">A skill that mines a brand's reviews and sorts "voice of customer" into planted, category-standard, and organic-gold piles.</p></div></div>
+    <div class="n"><span class="mk">5</span><div><span class="who">@ob12er</span><p class="what">An open-source rebuild of Anthropic's own Claude Science, on half a weekly quota, shipping biotech and physics skills.</p></div></div>
+    <div class="n"><span class="mk">6</span><div><span class="who">@edytwithme</span><p class="what">Wrote zero code all weekend, stuck on the honest hard part: how do you teach an agent a designer's taste and timing?</p></div></div>
+  </div>
+  <div class="callout mt22"><div class="lab">The pattern</div><p>The strongest posts are not "it built me an app." They are long, dependent, multi-step jobs a person could not finish in a weekend, handed off and mostly completed. Links to all six sit in the receipts appendix.</p></div>
+</div><div class="foot"><span class="src">Arbiter · hand-picked from the 762-post corpus by novelty, each with author and original link</span><span class="n">05 / 14</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 6 · OFFICIAL VS STREET -->
+<section><div class="si"><div class="si-body">
+  <h2>The official claim, against the hands-on report</h2>
+  <p class="lede" style="max-width:64ch;">Anthropic called Fable "our most capable public model, state-of-the-art on nearly all tested benchmarks." Here is what builders said after running it, on both sides.</p>
+  <div class="cols mt50" style="grid-template-columns:1fr 1fr; gap:26px;">
+    <div class="qcol">
+      <div class="qhead sup">Agrees, from hands-on work</div>
+      <div class="qcard sup"><div class="h"><span class="handle">@hkarthik</span><span class="eng">4.3K</span></div><p class="q">Ported a node+postgres app he had never read from Replit to Railway, live in ~20 minutes. <b>"A step-function change over Opus."</b></p><span class="lnk">x.com/hkarthik/status/2074234049410052151</span></div>
+      <div class="qcard sup"><div class="h"><span class="handle">@svpino</span><span class="eng">20.3K</span></div><p class="q">Fable rewrote his own tooling <b>40% shorter with everything still passing</b>, and found a 2× speedup he had missed.</p><span class="lnk">x.com/svpino/status/2074108642899775800</span></div>
+    </div>
+    <div class="qcol">
+      <div class="qhead con">Disputes, from hands-on work</div>
+      <div class="qcard con"><div class="h"><span class="handle">@beaverd</span><span class="eng">116K</span></div><p class="q">Cancelled his plan: <b>"opus and fable are both lazy, lobotomized models,"</b> useless next to GLM-5.2 and GPT-5.5 for his work.</p><span class="lnk">x.com/beaverd/status/2073982156531970081</span></div>
+      <div class="qcard con"><div class="h"><span class="handle">@dashboardlim</span><span class="eng">1.2K</span></div><p class="q">Read the viral 86→26 chart's method: <b>9 of 12 tasks never reached Fable</b>, the safety classifier rerouted them and scored each as zero.</p><span class="lnk">x.com/dashboardlim/status/2073935005613506775</span></div>
+    </div>
+  </div>
+  <div class="callout mt18"><div class="lab">The receipt that matters</div><p>@dashboardlim's correction is the most useful post of the week: a headline benchmark number that fell apart once someone read how it was produced. That is the difference between the official claim and the street test.</p></div>
+</div><div class="foot"><span class="src">Arbiter · hands-on posts only, opinion-only posts excluded · full links in the receipts appendix</span><span class="n">06 / 14</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 7 · CLAIM: ONE-SHOT -->
+<section><div class="si"><div class="si-body">
+  <h2>Claim: it one-shots whole games and apps</h2>
+  <p class="lede" style="max-width:64ch;">Contested in the data. The loudest endorsements are vendor demos; the credible hands-on builds are quieter and more specific; the correction is that cost and structure decide the result.</p>
+  <div class="cols mt50" style="grid-template-columns:1fr 1fr; gap:26px;">
+    <div class="qcol">
+      <div class="qhead sup">Backing it</div>
+      <div class="qcard con"><div class="h"><span class="handle">@bindureddy</span><span class="tag vendor">Vendor</span><span class="eng">1.18M</span></div><p class="q">"Fable can <b>one-shot almost anything</b> on the Abacus SuperComputer: complex 3D games, full SaaS apps, mobile and desktop."</p><span class="lnk">x.com/bindureddy/status/2074021076221263877</span></div>
+      <div class="qcard sup"><div class="h"><span class="handle">@vikktorrrre</span><span class="eng">3.6K</span></div><p class="q">"One prompt built me an entire space-tourism site: <b>3 bookable trips, a seat picker, a rocket that flies on scroll.</b>"</p><span class="lnk">x.com/vikktorrrre/status/2074065641200394250</span></div>
+    </div>
+    <div class="qcol">
+      <div class="qhead con">Correcting it</div>
+      <div class="qcard con"><div class="h"><span class="handle">@haider1</span><span class="eng">2.1K</span></div><p class="q">"Fable hype comes from two camps: <b>one-shotters who prompt 'build me a…'</b> and people who don't care about cost."</p><span class="lnk">x.com/haider1/status/2074312446869979423</span></div>
+      <div class="qcard con"><div class="h"><span class="handle">@DaveShapi</span><span class="eng">5.3K</span></div><p class="q">"Outside a few prestige tasks it <b>gets lazy and aims for vibes-plus-sounds-good.</b> But on the right task it still destroys."</p><span class="lnk">x.com/DaveShapi/status/2074271283819258149</span></div>
+    </div>
+  </div>
+  <div class="callout mt18"><div class="lab">Verdict</div><p>The one-shot claim holds for landing pages and toy apps and breaks on anything a team would ship. The vendor at 1.18M interactions sets the expectation; the builders at a few thousand set the record straight.</p></div>
+</div><div class="foot"><span class="src">Arbiter · claim receipts, distinct accounts per side, vendor posts flagged</span><span class="n">07 / 14</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 8 · CLAIM: SMARTEST -->
+<section><div class="si"><div class="si-body">
+  <h2>Claim: the smartest model you can use</h2>
+  <p class="lede" style="max-width:64ch;">The single most-repeated line, and the most argued: 51 posts back it, 28 push back, often the same influencer voices on both sides.</p>
+  <div class="cols mt50" style="grid-template-columns:1fr 1fr; gap:26px;">
+    <div class="qcol">
+      <div class="qhead sup">Backing it</div>
+      <div class="qcard sup"><div class="h"><span class="handle">@kirillk_web3</span><span class="eng">5.2K</span></div><p class="q">"The most capable public model, and <b>the lead widens as tasks get longer and harder.</b>"</p><span class="lnk">x.com/kirillk_web3/status/2074153586083106828</span></div>
+      <div class="qcard sup"><div class="h"><span class="handle">@rubenhassid</span><span class="eng">19.9K</span></div><p class="q">"The smartest AI ever made is <b>free for 2 more days.</b> Here is exactly what to do in your first 20 minutes."</p><span class="lnk">x.com/rubenhassid/status/2074012304635748781</span></div>
+    </div>
+    <div class="qcol">
+      <div class="qhead con">Pushing back</div>
+      <div class="qcard con"><div class="h"><span class="handle">@goodworse</span><span class="eng">12K</span></div><p class="q">"<b>Gemini 3.5 Pro is better</b> than Fable 5, fresh benchmarks leaked: 2M context, Deep Think mode."</p><span class="lnk">x.com/goodworse/status/2074253684318380032</span></div>
+      <div class="qcard con"><div class="h"><span class="handle">@lovestolead</span><span class="eng">174</span></div><p class="q">"Fable is better than Opus, but <b>most of the hype is people trying to get views.</b> As someone who reviews the code regularly."</p><span class="lnk">x.com/lovestolead/status/2074326343857094844</span></div>
+    </div>
+  </div>
+  <div class="callout mt18"><div class="lab">Verdict</div><p>No consensus, and the loudest claim carries its own rebuttal. The useful signal is not the yes-or-no; it is the pattern in the next slide, where the two camps quietly agree on when the model is worth it.</p></div>
+</div><div class="foot"><span class="src">Arbiter · 51 support / 28 contradict in-corpus · distinct accounts quoted per side</span><span class="n">08 / 14</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 9 · THREAD B: THE RECONCILIATION -->
+<section><div class="si"><div class="si-body">
+  <h2>Where the argument actually settles</h2>
+  <p class="lede" style="max-width:64ch;">Read the smartest-model thread in order and the two camps converge from opposite directions on the same finding.</p>
+  <div class="thread mt50">
+    <div class="t"><div class="when">Jul 6 · 00:15</div><div><div class="who">@RoundtableSpace<span class="eng">59.4K</span></div><div class="said">"Fable is back and <b>the divide is immediately obvious</b>. People who structure their prompts get fantastic results."</div></div></div>
+    <div class="t"><div class="when">Jul 6 · 19:41</div><div><div class="who">@kobaHUB<span class="eng">2.8K</span></div><div class="said">"I almost gave up after a week. Every prompt came back fine, just fine. Then I gave it <b>a messy multi-file migration. That's when it clicked.</b>"</div></div></div>
+    <div class="t"><div class="when">Jul 6 · 20:56</div><div><div class="who">@Skaly__Bull<span class="eng">3.3K</span></div><div class="said">"The leaked prompt explains why it feels overrated to almost everyone: <b>people judge it on five-minute prompts Sonnet already crushes.</b>"</div></div></div>
+    <div class="t"><div class="when">Jul 6 · 23:16</div><div><div class="who">@DaveShapi<span class="eng">5.3K</span></div><div class="said">"Outside a few prestige tasks Claude isn't that bright. <b>But even Fable on Max will still utterly destroy some tasks.</b>"</div></div></div>
+  </div>
+  <div class="callout mt18"><div class="lab">The finding under the noise</div><p>Skeptic and booster land in the same place: Fable underwhelms on short prompts and separates on long, dependent, multi-step work. That is the capability, stated plainly, that the hype and the countdowns both talk over.</p></div>
+</div><div class="foot"><span class="src">Arbiter · four standalone posts by different accounts, ordered by timestamp · replies not collected</span><span class="n">09 / 14</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 10 · THREAD A: THE CLIFF -->
+<section><div class="si"><div class="si-body">
+  <h2>The July 7 cliff, argued in real time</h2>
+  <p class="lede" style="max-width:64ch;">The loudest availability story of the week played out as a disagreement about whether the deadline was real, settled by a receipt.</p>
+  <div class="thread mt50">
+    <div class="t"><div class="when">Jul 6 · 06:07</div><div><div class="who">@rubenhassid<span class="eng">19.9K</span></div><div class="said">"The smartest AI ever made is <b>free for 2 more days.</b> Here is exactly what to do in your first 20 minutes."</div></div></div>
+    <div class="t"><div class="when">Jul 6 · 13:25</div><div><div class="who">@hqmank<span class="eng">202K</span></div><div class="said">Pushes back: <b>"My bet: Fable will stay in the Claude subscription plan. Give it 24 hours."</b></div></div></div>
+    <div class="t"><div class="when">Jul 6 · 17:05</div><div><div class="who">@Bhavani_00007<span class="eng">63.2K</span></div><div class="said">"If Anthropic makes Fable paid-only, everyone switches to a rival. <b>So they'll keep it in the plan at limited usage.</b>"</div></div></div>
+    <div class="t"><div class="when">Jul 7 · 00:16</div><div><div class="who">@Polymarket<span class="eng">301K</span></div><div class="said">Settles it with the receipt: <b>"Access for subscribers ends 11:59:59pm PT July 7, shifting to usage credits only."</b></div></div></div>
+  </div>
+  <div class="callout mt18"><div class="lab">Who was right</div><p>The calm camp was directionally correct that it was not permanent, and Anthropic later confirmed a temporary capacity measure. They were wrong on the literal cutoff, which Polymarket nailed to the second. Both halves matter, and the countdown posts carried only the first.</p></div>
+</div><div class="foot"><span class="src">Arbiter · four standalone posts ordered by timestamp · availability facts verified in research/08</span><span class="n">10 / 14</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 11 · CLAIMS VERDICTS -->
+<section><div class="si"><div class="si-body">
+  <h2>Every claim, with a verdict</h2>
+  <p class="lede" style="max-width:64ch;">Nine repeated claims, counted for support and pushback inside the corpus, then checked against primary sources. Each row has receipts in the appendix.</p>
+  <div class="claims mt50" style="gap:12px;">
+    <div class="claimrow"><div class="clm">Export controls lifted, it's back<small>@RoundtableSpace, @dl_weekly · 9to5mac confirms</small></div><div class="diverge"><div class="half l"><span class="zero">0</span></div><div class="mid"></div><div class="half r"><span class="sup" style="width:41%">21</span></div></div><div class="verdict holds">Holds up</div></div>
+    <div class="claimrow"><div class="clm">Leaves subscriptions Jul 7, pay-per-token<small>@Polymarket confirms · @hqmank disputes permanence</small></div><div class="diverge"><div class="half l"><span class="con" style="width:8%">4</span></div><div class="mid"></div><div class="half r"><span class="sup" style="width:100%">51</span></div></div><div class="verdict contested">True, temporary</div></div>
+    <div class="claimrow"><div class="clm">The smartest model available<small>@kirillk_web3 backs · @goodworse, @lovestolead push back</small></div><div class="diverge"><div class="half l"><span class="con" style="width:55%">28</span></div><div class="mid"></div><div class="half r"><span class="sup" style="width:100%">51</span></div></div><div class="verdict contested">Contested</div></div>
+    <div class="claimrow"><div class="clm">One-shots whole games and apps<small>@vikktorrrre builds one · @haider1 corrects</small></div><div class="diverge"><div class="half l"><span class="con" style="width:14%">7</span></div><div class="mid"></div><div class="half r"><span class="sup" style="width:8%">4</span></div></div><div class="verdict contested">Holds for toys</div></div>
+    <div class="claimrow"><div class="clm">System prompt just leaked<small>@RoundtableSpace amplifies · @WesRoth casts doubt</small></div><div class="diverge"><div class="half l"><span class="con" style="width:2%">1</span></div><div class="mid"></div><div class="half r"><span class="sup" style="width:37%">19</span></div></div><div class="verdict contested">True, stale</div></div>
+    <div class="claimrow"><div class="clm">Low-effort Fable beats max-effort Opus<small>asserted once · 15 posts argue the reverse</small></div><div class="diverge"><div class="half l"><span class="con" style="width:29%">15</span></div><div class="mid"></div><div class="half r"><span class="zero">0</span></div></div><div class="verdict fails">Doesn't hold</div></div>
+  </div>
+  <div class="claims-key"><span><i style="background:var(--support)"></i>Posts backing the claim</span><span><i style="background:var(--clay)"></i>Posts pushing back</span><span class="muted">Bars scaled to the largest side (51)</span></div>
+</div><div class="foot"><span class="src">Arbiter · in-corpus support vs contradict · availability rows cross-checked against primary sources</span><span class="n">11 / 14</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 12 · PUSHBACK -->
+<section><div class="si"><div class="si-body">
+  <h2>What the pushback is actually about</h2>
+  <p class="lede" style="max-width:60ch;">Sort every critical post and one thing is clear: people argue about the price and the gate, almost never about the output.</p>
+  <table class="ledger mt50">
+    <thead><tr><th style="width:40%">Complaint</th><th style="width:26%">Share</th><th style="width:12%; text-align:right">Posts</th><th>A voice</th></tr></thead>
+    <tbody>
+      <tr><td class="theme">Pricing and value for money</td><td><div class="meter neg"><i style="width:100%"></i></div></td><td class="num"><span class="count">147</span></td><td class="who">@lemonDefi1</td></tr>
+      <tr><td class="theme">Would rather use Opus or a rival</td><td><div class="meter neg"><i style="width:76%"></i></div></td><td class="num"><span class="count">111</span></td><td class="who">@beaverd</td></tr>
+      <tr><td class="theme">Access and availability limits</td><td><div class="meter neg"><i style="width:42%"></i></div></td><td class="num"><span class="count">62</span></td><td class="who">@AlexisonPan</td></tr>
+      <tr><td class="theme">Safety refusals firing on benign work</td><td><div class="meter neg"><i style="width:11%"></i></div></td><td class="num"><span class="count">16</span></td><td class="who">@cattodata</td></tr>
+      <tr><td class="theme">Quality: bugs, hallucinations</td><td><div class="meter neg"><i style="width:5%"></i></div></td><td class="num"><span class="count">7</span></td><td class="who">@DaveShapi</td></tr>
+    </tbody>
+  </table>
+  <div class="callout mt22"><div class="lab">The one refusal story worth reading</div><p>@cattodata, a Thai developer, got Safeguard-blocked and suspended for asking Fable to restyle an ugly UI button. Sixteen posts like it are a small pile, but each one is a builder turned away from harmless work, which is the kind of friction that moves people to a rival.</p></div>
+</div><div class="foot"><span class="src">Arbiter · criticism classification over the Fable corpus · a voice named per complaint</span><span class="n">12 / 14</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 13 · OPPORTUNITIES -->
+<section><div class="si"><div class="si-body">
+  <h2>What users asked Anthropic for</h2>
+  <p class="lede" style="max-width:60ch;">199 posts state a want. Pricing and access dominate with 153; the rest split across workflows, regional access, and API clarity.</p>
+  <div class="take mt50">
+    <div class="item"><span class="dot g">$</span><p><span class="t">Pricing they can plan around.</span> <span class="small muted">153 posts. The sharpest reading called it "the luxury-watch playbook of artificial scarcity" (@ShravanGReddy). The sourced answer is capacity; either way, these accounts want a price they can predict.</span></p></div>
+    <div class="item"><span class="dot">→</span><p><span class="t">Workflows past the chat box.</span> <span class="small muted">16 posts asking for templates, integrations, and repeatable runbooks. "These prompts use it like a senior engineer who never sleeps" (@VV_aksym).</span></p></div>
+    <div class="item"><span class="dot s">◍</span><p><span class="t">Access where they live.</span> <span class="small muted">12 posts read the episode as geography. "We now gate AI models the way we gate weapons and chips" (@ralphsenpaidev).</span></p></div>
+    <div class="item"><span class="dot a">?</span><p><span class="t">Self-serve clarity on API, quotas, and what a subscription buys.</span> <span class="small muted">14 posts on provisioning and timeboxed access; 4 more scatter across creative, memory, and refusal controls.</span></p></div>
+  </div>
+  <div class="callout mt22"><div class="lab">The packaging signal</div><p>Users treat the capability as settled and argue with the meter. The demand is for a product surface they can budget against, not for a smarter model.</p></div>
+</div><div class="foot"><span class="src">Arbiter · opportunity classification over the Fable corpus</span><span class="n">13 / 14</span><span class="brand">ARBITER</span></div></div></section>
+
+<!-- 14 · METHOD -->
+<section><div class="si"><div class="si-body">
+  <h2>How this was built, and what we cut</h2>
+  <div class="cols mt50">
+    <div>
+      <p class="small"><strong>The data.</strong> One Arbiter case study, June 29 to July 6, 2026, across X, YouTube and Bluesky. We pulled the study's posts straight from the index and worked from the raw text, not summaries.</p>
+      <p class="small mt14"><strong>Scope, kept clean.</strong> The window also held Sonnet 5's launch. We filtered the corpus by subject: <strong>685 posts are about Fable or Mythos, 8 mention only Sonnet, and those 8 are excluded from every count here.</strong> Adjacent-model posts do not pad these numbers.</p>
+      <p class="small mt14"><strong>The method.</strong> Sectors, visible accounts, and claim receipts come from classifying and ranking the raw posts. Every date, price, and policy fact is checked against Anthropic's own posts and the coverage the posts cite.</p>
+    </div>
+    <div>
+      <div class="callout"><div class="lab">Read honestly</div><p>An 8-day snapshot, weighted toward early adopters and X. Interaction counts measure attention, not endorsement, and a viral skeptic scores as high as a viral booster. Replies were not collected, so the threads are ordered standalone posts, not captured reply trees.</p></div>
+      <p class="small muted mt14"><strong>Who we are.</strong> SimPPL builds Arbiter, the social-intelligence agent behind this study. For the receipts behind any slide, or a study of your own: arbiter.simppl.org.</p>
+      <p class="small muted mt14"><strong>Sources.</strong> Arbiter; Anthropic launch, access and redeployment posts; 9to5mac; BleepingComputer. Full ledger, raw corpus, and per-claim receipts retained with this deck.</p>
+    </div>
+  </div>
+</div><div class="foot"><span class="src">Built with Arbiter social intelligence · SimPPL</span><span class="n">14 / 14</span><span class="brand">ARBITER</span></div></div></section>
+
+</div>
+</div>
+<script src="claude-fable-5/vendor/reveal.js"></script>
+<script>
+Reveal.initialize({
+  width:1280, height:720, margin:0.04,
+  center:false, hash:true, controls:true, progress:true,
+  transition:'fade', transitionSpeed:'fast',
+  pdfSeparateFragments:false
+});
+</script>
+</body>
+</html>
