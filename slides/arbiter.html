@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="arbiter-2026/arbiter.css?v=23">
+<link rel="stylesheet" href="arbiter-2026/arbiter.css?v=25">
 </head>
 <body>
 <div class="reveal">
@@ -146,7 +146,7 @@
         <div class="pl-node">
           <div class="st">01 · COLLECT</div>
           <h3>Public data, collected within platform rules</h3>
-          <p>We help collect public social data from sources within platform terms of service, including platform-granted APIs, across X, Reddit, YouTube, Bluesky, Telegram, and Instagram.</p>
+          <p>We help collect public social data from sources within platform terms of service, including platform-granted APIs, across X, YouTube, Reddit, Bluesky, Instagram, Facebook, TikTok, LinkedIn, Telegram, and 4chan, plus 20,000+ newspapers and Wikidata.</p>
         </div>
         <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
         <div class="pl-node">
@@ -273,12 +273,12 @@
               <table class="mini">
                 <thead><tr><th>Account</th><th class="n">Posts</th><th class="n">Interactions</th><th>Outbound links</th></tr></thead>
                 <tbody>
-                  <tr><td>zoomafrika1</td><td class="n">1</td><td class="n">56,860</td><td>none detected</td></tr>
-                  <tr><td>SahelAlerte</td><td class="n">1</td><td class="n">29,721</td><td>none detected</td></tr>
-                  <tr><td>WelcomeTheGulag</td><td class="n">1</td><td class="n">23,175</td><td>none detected</td></tr>
-                  <tr><td>kelevitch</td><td class="n">1</td><td class="n">22,426</td><td>none detected</td></tr>
-                  <tr><td>WithoutHistory</td><td class="n">1</td><td class="n">10,499</td><td>none detected</td></tr>
-                  <tr><td>kwadwosheldon</td><td class="n">1</td><td class="n">8,725</td><td>youtube.com</td></tr>
+                  <tr class="fragment"><td>zoomafrika1</td><td class="n">1</td><td class="n">56,860</td><td>none detected</td></tr>
+                  <tr class="fragment"><td>SahelAlerte</td><td class="n">1</td><td class="n">29,721</td><td>none detected</td></tr>
+                  <tr class="fragment"><td>WelcomeTheGulag</td><td class="n">1</td><td class="n">23,175</td><td>none detected</td></tr>
+                  <tr class="fragment"><td>kelevitch</td><td class="n">1</td><td class="n">22,426</td><td>none detected</td></tr>
+                  <tr class="fragment"><td>WithoutHistory</td><td class="n">1</td><td class="n">10,499</td><td>none detected</td></tr>
+                  <tr class="fragment"><td>kwadwosheldon</td><td class="n">1</td><td class="n">8,725</td><td>youtube.com</td></tr>
                 </tbody>
               </table>
               <div class="takeaway">"Driver" status here is concentrated in single spikes rather than sustained volume.</div>
@@ -299,7 +299,7 @@
 <section class="dark" data-background-color="#0b0d12">
   <div class="si">
     <div class="si-body">
-      <h2 style="font-size:36px;">Under the hood: three problems we treat as research</h2>
+      <h2 style="font-size:36px;">Under the hood: three problems we solve through rigorous science</h2>
       <div class="pipeline mt32">
         <div class="pl-node">
           <div class="st">01 · SEARCH</div>
@@ -455,10 +455,10 @@
             <span style="color:#43c98b;">OURS</span>&nbsp; <span style="color:#c9cdd8;">Science Explainers · Extreme Impacts · Climate Policy · Indigenous Livelihoods</span>
           </div>
           <div class="ebars wide">
-            <div class="ebar"><span class="lb">"AVOID PRIOR LABELS"</span><span class="track"><span class="fill red" style="width:100%"></span></span><span class="val">0.509</span></div>
-            <div class="ebar"><span class="lb">POST-HOC DEDUP</span><span class="track"><span class="fill" style="width:87%"></span></span><span class="val">0.443</span></div>
-            <div class="ebar"><span class="lb">TWO-PHASE EXTRACT</span><span class="track"><span class="fill" style="width:86%"></span></span><span class="val">0.438</span></div>
-            <div class="ebar"><span class="lb">OURS · HYBRID</span><span class="track"><span class="fill green" style="width:45%"></span></span><span class="val">0.231</span></div>
+            <div class="ebar fragment"><span class="lb">"AVOID PRIOR LABELS"</span><span class="track"><span class="fill red" style="width:100%"></span></span><span class="val">0.509</span></div>
+            <div class="ebar fragment"><span class="lb">POST-HOC DEDUP</span><span class="track"><span class="fill" style="width:87%"></span></span><span class="val">0.443</span></div>
+            <div class="ebar fragment"><span class="lb">TWO-PHASE EXTRACT</span><span class="track"><span class="fill" style="width:86%"></span></span><span class="val">0.438</span></div>
+            <div class="ebar fragment"><span class="lb">OURS · HYBRID</span><span class="track"><span class="fill green" style="width:45%"></span></span><span class="val">0.231</span></div>
           </div>
           <p class="tiny muted mt16">Average pairwise label similarity, lower is better. We benchmarked eight strategies; ours keeps over <b>98% of labels unique</b>.</p>
           <p class="mt24" style="font-size:15.5px;">The same embedding space powers entity extraction: <strong>nine entity types</strong>, resolved to Wikidata, name variants merged automatically. Each actor gets sentiment, emotion, and a clickbait score on a five-point scale.</p>
@@ -478,12 +478,12 @@
     <div class="si-body">
       <h2 style="font-size:36px;">Deception signals Arbiter reads in every corpus</h2>
       <div class="modeltable mt24">
-        <div class="mrow"><div class="stage">Sentiment uniformity</div><div class="model">Discourse that agrees too much</div><div class="why">The Traoré PR campaign read 100% positive, 100% joy across coordinated pages. Organic discourse rarely does.</div></div>
-        <div class="mrow"><div class="stage">Clickbait score</div><div class="model">Bait at 5, camouflage at 1</div><div class="why">The top jailbreak seller scores 4.2. The Traoré operation scores 1, polished to pass as organic praise.</div></div>
-        <div class="mrow"><div class="stage">Amplification anomaly</div><div class="model">Reach with no audience trail</div><div class="why">One crypto casino drew 36.9M interactions from four identical posts; one Traoré post drew 88.8K alone.</div></div>
-        <div class="mrow"><div class="stage">Entity mention share</div><div class="model">Who benefits from the story</div><div class="why">1win led the betting corpus at 90 mentions while mirror domains kept the banned brand alive.</div></div>
-        <div class="mrow"><div class="stage">Impersonation</div><div class="model">Borrowed legitimacy</div><div class="why">Entity resolution surfaced one page posing as 16 real manufacturers, Indofood to Yamaha, recruiting into scam compounds.</div></div>
-        <div class="mrow"><div class="stage">Sponsorship disclosure</div><div class="model">Paid voice posing as organic</div><div class="why">Influencer dossiers separate disclosed from undisclosed promotion and flag SEBI-violation-shaped patterns.</div></div>
+        <div class="mrow fragment"><div class="stage">Sentiment uniformity</div><div class="model">Discourse that agrees too much</div><div class="why">The Traoré PR campaign read 100% positive, 100% joy across coordinated pages. Organic discourse rarely does.</div></div>
+        <div class="mrow fragment"><div class="stage">Clickbait score</div><div class="model">Bait at 5, camouflage at 1</div><div class="why">The top jailbreak seller scores 4.2. The Traoré operation scores 1, polished to pass as organic praise.</div></div>
+        <div class="mrow fragment"><div class="stage">Amplification anomaly</div><div class="model">Reach with no audience trail</div><div class="why">One crypto casino drew 36.9M interactions from four identical posts; one Traoré post drew 88.8K alone.</div></div>
+        <div class="mrow fragment"><div class="stage">Entity mention share</div><div class="model">Who benefits from the story</div><div class="why">1win led the betting corpus at 90 mentions while mirror domains kept the banned brand alive.</div></div>
+        <div class="mrow fragment"><div class="stage">Impersonation</div><div class="model">Borrowed legitimacy</div><div class="why">Entity resolution surfaced one page posing as 16 real manufacturers, Indofood to Yamaha, recruiting into scam compounds.</div></div>
+        <div class="mrow fragment"><div class="stage">Sponsorship disclosure</div><div class="model">Paid voice posing as organic</div><div class="why">Influencer dossiers separate disclosed from undisclosed promotion and flag SEBI-violation-shaped patterns.</div></div>
       </div>
       <p class="mt24" style="font-size:16px;">Arbiter sits as an <strong>analytical layer over social platforms and online sources</strong>. Signals compose into tactics: manufactured consensus, coordinated amplification, borrowed legitimacy, undisclosed promotion. We audit the classifiers in non-Latin scripts, Hindi through Cyrillic, so a campaign cannot hide behind an alphabet.</p>
     </div>
@@ -508,10 +508,10 @@
         </div>
         <div>
           <div class="ebars wide">
-            <div class="ebar"><span class="lb">NO CODE WRITTEN</span><span class="track"><span class="fill red" style="width:100%"></span></span><span class="val">140</span></div>
-            <div class="ebar"><span class="lb">GENERIC CODE</span><span class="track"><span class="fill yellow" style="width:77%"></span></span><span class="val">108</span></div>
-            <div class="ebar"><span class="lb">CONTRADICTS OUTPUT</span><span class="track"><span class="fill red" style="width:63%"></span></span><span class="val">88</span></div>
-            <div class="ebar"><span class="lb">NEEDLESS CLARIFYING</span><span class="track"><span class="fill" style="width:37%"></span></span><span class="val">52</span></div>
+            <div class="ebar fragment"><span class="lb">NO CODE WRITTEN</span><span class="track"><span class="fill red" style="width:100%"></span></span><span class="val">140</span></div>
+            <div class="ebar fragment"><span class="lb">GENERIC CODE</span><span class="track"><span class="fill yellow" style="width:77%"></span></span><span class="val">108</span></div>
+            <div class="ebar fragment"><span class="lb">CONTRADICTS OUTPUT</span><span class="track"><span class="fill red" style="width:63%"></span></span><span class="val">88</span></div>
+            <div class="ebar fragment"><span class="lb">NEEDLESS CLARIFYING</span><span class="track"><span class="fill" style="width:37%"></span></span><span class="val">52</span></div>
           </div>
           <p class="tiny muted mt16">Top failure codes across 540 graded runs; the most common defect is answering in prose when code was needed. Partners see what the agent gets wrong before they rely on it.</p>
         </div>
@@ -531,11 +531,11 @@
       <h2 style="font-size:36px;">Accessing social data isn't the hardest part</h2>
       <p class="mt16" style="font-size:16.5px; max-width:100ch;">Getting the posts is the straightforward part. The layer that turns them into evidence is what we build, and it carries five problems at once.</p>
       <div class="qrows mt24">
-        <div class="qrow"><div class="qk">Vendor sampling</div><div class="qv">Every feed is a sample, and the vendor's sampling choices ride into every count computed downstream.</div></div>
-        <div class="qrow"><div class="qk">Continuous analysis</div><div class="qv">Pipelines have to keep running over new posts and their images, video, and audio, long after the first export.</div></div>
-        <div class="qrow"><div class="qk">Cross-platform patterns</div><div class="qv">Campaigns move across platforms, languages, and countries. The analysis follows them or misses the pattern.</div></div>
-        <div class="qrow"><div class="qk">Evidence of harm</div><div class="qv">Harm gets labeled, flagged, and documented to a standard platforms and regulators will act on.</div></div>
-        <div class="qrow"><div class="qk">Near real time</div><div class="qv">All of it lands faster than the harm reaches a larger audience, or the finding arrives too late to matter.</div></div>
+        <div class="qrow fragment"><div class="qk">Vendor sampling</div><div class="qv">Every feed is a sample, and the vendor's sampling choices ride into every count computed downstream.</div></div>
+        <div class="qrow fragment"><div class="qk">Continuous analysis</div><div class="qv">Pipelines have to keep running over new posts and their images, video, and audio, long after the first export.</div></div>
+        <div class="qrow fragment"><div class="qk">Cross-platform patterns</div><div class="qv">Campaigns move across platforms, languages, and countries. The analysis follows them or misses the pattern.</div></div>
+        <div class="qrow fragment"><div class="qk">Evidence of harm</div><div class="qv">Harm gets labeled, flagged, and documented to a standard platforms and regulators will act on.</div></div>
+        <div class="qrow fragment"><div class="qk">Near real time</div><div class="qv">All of it lands faster than the harm reaches a larger audience, or the finding arrives too late to matter.</div></div>
       </div>
     </div>
     <div class="foot">
@@ -584,8 +584,8 @@
             <div style="height:320px; overflow:hidden;"><img src="images/arbiter-2026/traore_sentiment_pdf.png" alt="Traore panel: 100% positive sentiment, 100% joy, Info Pulse top post"></div>
           </div>
           <div class="ebars mt16">
-            <div class="ebar"><span class="lb">POSITIVE</span><span class="track"><span class="fill green" style="width:100%"></span></span><span class="val">100%</span></div>
-            <div class="ebar"><span class="lb">JOY</span><span class="track"><span class="fill green" style="width:100%"></span></span><span class="val">100%</span></div>
+            <div class="ebar fragment"><span class="lb">POSITIVE</span><span class="track"><span class="fill green" style="width:100%"></span></span><span class="val">100%</span></div>
+            <div class="ebar fragment"><span class="lb">JOY</span><span class="track"><span class="fill green" style="width:100%"></span></span><span class="val">100%</span></div>
           </div>
           <p class="tiny muted mt10">Uniformly green panels are the anomaly that starts the investigation.</p>
         </div>
@@ -660,11 +660,11 @@
         </div>
         <div>
           <div class="ebars">
-            <div class="ebar"><span class="lb">LEGITIMACY SCRIPT</span><span class="track"><span class="fill yellow" style="width:100%"></span></span><span class="val">489</span></div>
-            <div class="ebar"><span class="lb">TESTIMONIALS</span><span class="track"><span class="fill" style="width:47%"></span></span><span class="val">229</span></div>
-            <div class="ebar"><span class="lb">URGENCY</span><span class="track"><span class="fill" style="width:34%"></span></span><span class="val">167</span></div>
-            <div class="ebar"><span class="lb">PHONE NUMBER</span><span class="track"><span class="fill" style="width:31%"></span></span><span class="val">154</span></div>
-            <div class="ebar"><span class="lb">WHATSAPP</span><span class="track"><span class="fill" style="width:25%"></span></span><span class="val">124</span></div>
+            <div class="ebar fragment"><span class="lb">LEGITIMACY SCRIPT</span><span class="track"><span class="fill yellow" style="width:100%"></span></span><span class="val">489</span></div>
+            <div class="ebar fragment"><span class="lb">TESTIMONIALS</span><span class="track"><span class="fill" style="width:47%"></span></span><span class="val">229</span></div>
+            <div class="ebar fragment"><span class="lb">URGENCY</span><span class="track"><span class="fill" style="width:34%"></span></span><span class="val">167</span></div>
+            <div class="ebar fragment"><span class="lb">PHONE NUMBER</span><span class="track"><span class="fill" style="width:31%"></span></span><span class="val">154</span></div>
+            <div class="ebar fragment"><span class="lb">WHATSAPP</span><span class="track"><span class="fill" style="width:25%"></span></span><span class="val">124</span></div>
           </div>
           <p class="tiny muted">Recruitment tactics by post count, Indonesian corpus (1,492 posts); bars scaled to the leader.</p>
           <p class="mt16" style="font-size:15.5px;">A quarter of the Filipino corpus is the aftermath: airport interdictions, arrests for illegal recruitment, repatriations of trafficking victims.</p>
@@ -696,9 +696,9 @@
         </div>
         <div>
           <div class="ebars">
-            <div class="ebar"><span class="lb">CULTURE WAR</span><span class="track"><span class="fill red" style="width:100%"></span></span><span class="val">57.0%</span></div>
-            <div class="ebar"><span class="lb">BELONGING</span><span class="track"><span class="fill" style="width:99%"></span></span><span class="val">56.8%</span></div>
-            <div class="ebar"><span class="lb">ANALYTICAL TAKES</span><span class="track"><span class="fill" style="width:16%"></span></span><span class="val">9.1%</span></div>
+            <div class="ebar fragment"><span class="lb">CULTURE WAR</span><span class="track"><span class="fill red" style="width:100%"></span></span><span class="val">57.0%</span></div>
+            <div class="ebar fragment"><span class="lb">BELONGING</span><span class="track"><span class="fill" style="width:99%"></span></span><span class="val">56.8%</span></div>
+            <div class="ebar fragment"><span class="lb">ANALYTICAL TAKES</span><span class="track"><span class="fill" style="width:16%"></span></span><span class="val">9.1%</span></div>
           </div>
           <p class="tiny muted">Share of total interactions carried by each theme (themes overlap, so shares exceed 100% combined).</p>
           <p class="mt16" style="font-size:15.5px;">Inside the conversation, a few accounts like <strong>@DrewPavlou</strong> and <strong>@MikhailaFuller</strong> carry it, each turning one or two posts into millions of interactions. The recurring claims run from testosterone decline to dating advice, wrapped in culture-war and media-accountability framing; Netflix's documentary was one entry point.</p>
@@ -937,15 +937,15 @@
     <div class="si-body">
       <h2 style="font-size:34px;">Appendix: models in the pipeline, and why</h2>
       <div class="modeltable mt24">
-        <div class="mrow"><div class="stage">Query planning</div><div class="model">GPT-5-nano</div><div class="why">Constrained decoding for typed facet decomposition</div></div>
-        <div class="mrow"><div class="stage">Post embeddings</div><div class="model">Voyage 3.5-lite (1024-dim)</div><div class="why">Cost and quality tradeoff at corpus scale</div></div>
-        <div class="mrow"><div class="stage">Neural reranking</div><div class="model">Voyage rerank-2.5</div><div class="why">Absolute relevance scores that hold across topics</div></div>
-        <div class="mrow"><div class="stage">Entity extraction</div><div class="model">gpt-oss-120b via Groq</div><div class="why">Fast open-weights inference; 20b fallback</div></div>
-        <div class="mrow"><div class="stage">Theme labels</div><div class="model">GPT-4o-mini</div><div class="why">Best quality at lowest cost in our labeling benchmarks (GPU theme service)</div></div>
-        <div class="mrow"><div class="stage">Entity narratives</div><div class="model">GPT-5-nano</div><div class="why">Lightweight generation with a rule-based fallback</div></div>
-        <div class="mrow"><div class="stage">Agent task LLM</div><div class="model">GPT-5.2</div><div class="why">Tool selection and code generation</div></div>
-        <div class="mrow"><div class="stage">Agent judge</div><div class="model">Model-agnostic (OpenRouter)</div><div class="why">Six-dimension rubric; Claude Sonnet 4.6 judged the 540-run campaign</div></div>
-        <div class="mrow"><div class="stage">Prompt optimization</div><div class="model">GEPA + Claude Sonnet 4.6</div><div class="why">Prompt evolution via natural-language reflection (arxiv.org/abs/2507.19457)</div></div>
+        <div class="mrow fragment"><div class="stage">Query planning</div><div class="model">GPT-5-nano</div><div class="why">Constrained decoding for typed facet decomposition</div></div>
+        <div class="mrow fragment"><div class="stage">Post embeddings</div><div class="model">Voyage 3.5-lite (1024-dim)</div><div class="why">Cost and quality tradeoff at corpus scale</div></div>
+        <div class="mrow fragment"><div class="stage">Neural reranking</div><div class="model">Voyage rerank-2.5</div><div class="why">Absolute relevance scores that hold across topics</div></div>
+        <div class="mrow fragment"><div class="stage">Entity extraction</div><div class="model">gpt-oss-120b via Groq</div><div class="why">Fast open-weights inference; 20b fallback</div></div>
+        <div class="mrow fragment"><div class="stage">Theme labels</div><div class="model">GPT-4o-mini</div><div class="why">Best quality at lowest cost in our labeling benchmarks (GPU theme service)</div></div>
+        <div class="mrow fragment"><div class="stage">Entity narratives</div><div class="model">GPT-5-nano</div><div class="why">Lightweight generation with a rule-based fallback</div></div>
+        <div class="mrow fragment"><div class="stage">Agent task LLM</div><div class="model">GPT-5.2</div><div class="why">Tool selection and code generation</div></div>
+        <div class="mrow fragment"><div class="stage">Agent judge</div><div class="model">Model-agnostic (OpenRouter)</div><div class="why">Six-dimension rubric; Claude Sonnet 4.6 judged the 540-run campaign</div></div>
+        <div class="mrow fragment"><div class="stage">Prompt optimization</div><div class="model">GEPA + Claude Sonnet 4.6</div><div class="why">Prompt evolution via natural-language reflection (arxiv.org/abs/2507.19457)</div></div>
       </div>
     </div>
     <div class="foot">
