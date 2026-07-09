@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="arbiter-2026/arbiter.css?v=25">
+<link rel="stylesheet" href="arbiter-2026/arbiter.css?v=29">
 </head>
 <body>
 <div class="reveal">
@@ -143,19 +143,19 @@
     <div class="si-body">
       <h2>Arbiter reads public conversation across platforms</h2>
       <div class="pipeline mt32">
-        <div class="pl-node">
+        <div class="pl-node fragment">
           <div class="st">01 · COLLECT</div>
           <h3>Public data, collected within platform rules</h3>
           <p>We help collect public social data from sources within platform terms of service, including platform-granted APIs, across X, YouTube, Reddit, Bluesky, Instagram, Facebook, TikTok, LinkedIn, Telegram, and 4chan, plus 20,000+ newspapers and Wikidata.</p>
         </div>
-        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
-        <div class="pl-node">
+        <div class="pl-arrow fragment"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node fragment">
           <div class="st">02 · ORGANIZE</div>
           <h3>Themes, actors, networks</h3>
           <p>Posts cluster into themes and sub-themes. Each theme surfaces the accounts moving it, with per-actor dossiers and influence maps.</p>
         </div>
-        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
-        <div class="pl-node">
+        <div class="pl-arrow fragment"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node fragment">
           <div class="st">03 · INVESTIGATE</div>
           <h3>Agentic investigations</h3>
           <p>Deep research agents answer your questions across the corpus and cite every post they draw on. You keep the judgment.</p>
@@ -301,19 +301,19 @@
     <div class="si-body">
       <h2 style="font-size:36px;">Under the hood: three problems we solve through rigorous science</h2>
       <div class="pipeline mt32">
-        <div class="pl-node">
+        <div class="pl-node fragment">
           <div class="st">01 · SEARCH</div>
           <h3>Find the right posts among millions</h3>
           <p>Platforms do not share data with each other, so cross-platform patterns stay invisible. Retrieval has to rebuild the picture.</p>
         </div>
-        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#7288ff"/></svg></div>
-        <div class="pl-node">
+        <div class="pl-arrow fragment"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#7288ff"/></svg></div>
+        <div class="pl-node fragment">
           <div class="st">02 · ORGANIZE</div>
           <h3>Theme labels collapse into duplicates</h3>
           <p>Ask an LLM to label clusters one at a time and it repeats itself. The failure is documented across the field (<a href="https://aclanthology.org/2024.cl-1.8/">Ziems et al. 2024</a>).</p>
         </div>
-        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#7288ff"/></svg></div>
-        <div class="pl-node">
+        <div class="pl-arrow fragment"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#7288ff"/></svg></div>
+        <div class="pl-node fragment">
           <div class="st">03 · INVESTIGATE</div>
           <h3>Agent answers arrive ungraded</h3>
           <p>An agent that picks tools and writes code can be wrong quietly. We grade every answer against hand-written baselines.</p>
@@ -339,14 +339,14 @@
             <div class="n">01<small>Plan</small></div>
             <div>
               <h3>Typed facets from structured sources</h3>
-              <p>The <b>Context Expansion Engine</b> breaks a question into actors, organizations, places, and phrases. It draws on a daily-refreshed knowledge graph: Wikipedia, GDELT, national and regional news.</p>
+              <p>The <b>Context Expansion Engine</b> breaks a question into actors, organizations, places, and phrases, drawing on a daily-refreshed knowledge graph of Wikipedia, GDELT, and news.</p>
             </div>
           </div>
           <div class="act">
             <div class="n">02<small>Retrieve</small></div>
             <div>
               <h3>Two searches, fused</h3>
-              <p>Keyword search catches exact strings like <b>#BurkinaFaso</b> that embeddings miss. Semantic search over 1024-dim embeddings catches paraphrases with no keyword overlap. <b>Reciprocal rank fusion</b> merges the two rankings.</p>
+              <p>Keyword search catches exact strings like <b>#BurkinaFaso</b> that embeddings miss. Semantic search over embeddings catches paraphrases with no shared words. <b>Reciprocal rank fusion</b> merges the two rankings.</p>
             </div>
           </div>
           <div class="act">
@@ -360,7 +360,7 @@
             <div class="n">04<small>Measure</small></div>
             <div>
               <h3>Graded against hand-labeled posts</h3>
-              <p>We grade the whole funnel against posts we labeled by hand. On that benchmark, reranking lifted the share of relevant results in the top 200 from <b>81% to 99%</b>.</p>
+              <p>We grade the whole funnel against hand-labeled posts. Reranking lifted relevant results in the top 200 from <b>81% to 99%</b>.</p>
             </div>
           </div>
         </div>
@@ -382,6 +382,7 @@
             <span class="n hot">138</span><span class="k">relevant &middot; white-monkey study</span>
           </div>
           <p class="tiny muted mt10">"White monkey" is coded slang for foreigners hired as props by Chinese firms. The wording moves too fast for keyword lists, so the engine reads the intent of the question and retrieves posts that share none of its words. Expansion casts wide; the whole funnel, plan through rerank, keeps what answers.</p>
+          <div class="openq fragment" style="margin-top:16px;"><span class="lb">Open challenge</span><div class="txt">LLM query expansion is tuned on clean IR benchmarks, not short coded social text, where wider recall trades away precision. <span class="cite"><a href="https://arxiv.org/abs/2305.03653">Jagerman et al. 2023</a>; <a href="https://aclanthology.org/2023.emnlp-main.585/">Query2doc, Wang et al. 2023</a></span></div></div>
         </div>
       </div>
     </div>
@@ -465,6 +466,7 @@
         </div>
       </div>
     </div>
+      <div class="openq fragment"><span class="lb">Open challenge</span><div class="txt">Topic models over sparse social data over-split, and LLM labels repeat across clusters. <span class="cite"><a href="https://arxiv.org/abs/2509.19365">Janssens et al. 2025</a>; <a href="https://aclanthology.org/2024.cl-1.8/">Ziems et al. 2024</a></span></div></div>
     <div class="foot">
       <span class="src">SRC · SimPPL labeling benchmark (2026), silhouette 0.71 vs 0.55 K-Means · Ziems et al. 2024 · UMAP: arxiv.org/abs/1802.03426</span>
       <span class="brand">ARBITER · SIMPPL</span>
@@ -517,6 +519,7 @@
         </div>
       </div>
     </div>
+      <div class="openq fragment"><span class="lb">Open challenge</span><div class="txt">LLM judges agree with humans only about 80% and swing with prompt formatting, so automated grading stays imperfect. <span class="cite"><a href="https://arxiv.org/abs/2306.05685">Zheng et al. 2023</a>; <a href="https://arxiv.org/abs/2310.11324">Sclar et al. 2024</a></span></div></div>
     <div class="foot">
       <span class="src">SRC · SimPPL agent evaluation framework · LLM-as-judge: Zheng et al. 2023, arxiv.org/abs/2306.05685</span>
       <span class="brand">ARBITER · SIMPPL</span>
@@ -764,19 +767,19 @@
     <div class="si-body">
       <h2>Where Arbiter fits in your workflow</h2>
       <div class="pipeline mt32">
-        <div class="pl-node">
+        <div class="pl-node fragment">
           <div class="st">01 · SCOPE</div>
           <h3>You bring the question</h3>
           <p>A tip, a beat, a policy window. We scope the corpus, platforms, and dates together.</p>
         </div>
-        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
-        <div class="pl-node">
+        <div class="pl-arrow fragment"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node fragment">
           <div class="st">02 · RUN</div>
           <h3>The pipeline does the sweep</h3>
           <p>Retrieval, themes, and actor dossiers land in a case-study library. Your analysts question it through the agent, with a citation on every answer.</p>
         </div>
-        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
-        <div class="pl-node">
+        <div class="pl-arrow fragment"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node fragment">
           <div class="st">03 · PUBLISH</div>
           <h3>You keep the evidence</h3>
           <p>The findings are yours to publish. Evidence stays attached, so editors and reviewers can audit every number.</p>
