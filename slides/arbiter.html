@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="arbiter-2026/arbiter.css?v=31">
+<link rel="stylesheet" href="arbiter-2026/arbiter.css?v=35">
 </head>
 <body>
 <div class="reveal">
@@ -259,8 +259,8 @@
       <h2 style="font-size:36px;">Ask the agent a real question</h2>
       <div class="cols w46 mt24 top">
         <div>
-          <p style="font-size:16px;">We asked this on the Traoré study, a Burkina Faso PR campaign, live, on July 8. The agent read the 191 posts, ranked the accounts by engagement, and checked where each one sends its audience.</p>
-          <p style="font-size:16px;">The answer came back with a sortable table and a finding we could act on: <strong>the top posts carry no outbound links at all</strong>. This engagement lives in native video, so link-tracing tools would miss it.</p>
+          <p style="font-size:16px;">We put this to a live study of the manufactured attention around Ibrahim Traoré, the officer who seized power in Burkina Faso. The agent read all 191 posts and ranked the accounts driving the conversation.</p>
+          <p style="font-size:16px;">You interrogate a corpus too large to read in plain language and get an answer you can act on. The engagement traces to a handful of accounts spiking in single bursts rather than sustained volume, the shape of a coordinated push, not a real audience.</p>
           <p style="font-size:16px;"><strong>Every row ties back to the posts behind it.</strong> A question like this costs 5 credits and takes under a minute.</p>
         </div>
         <div class="aq">
@@ -303,26 +303,26 @@
       <div class="pipeline mt32">
         <div class="pl-node fragment">
           <div class="st">01 · SEARCH</div>
-          <h3>Find the right posts among millions</h3>
-          <p>Platforms do not share data with each other, so cross-platform patterns stay invisible. Retrieval has to rebuild the picture.</p>
+          <h3>Find the posts you meant, not the words you typed</h3>
+          <p>The language that carries a story is coded, multilingual, and shifts week to week. The hard part is retrieving what someone intended even when the obvious keywords would miss it.</p>
         </div>
         <div class="pl-arrow fragment"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#7288ff"/></svg></div>
         <div class="pl-node fragment">
           <div class="st">02 · ORGANIZE</div>
-          <h3>Theme labels collapse into duplicates</h3>
-          <p>Ask an LLM to label clusters one at a time and it repeats itself. The failure is documented across the field (<a href="https://aclanthology.org/2024.cl-1.8/">Ziems et al. 2024</a>).</p>
+          <h3>Map who drives which narrative, across languages</h3>
+          <p>A feed of millions of posts hides its own structure. Turning it into a navigable map of narratives and the accounts moving each one, resolved to real entities, is more than clustering.</p>
         </div>
         <div class="pl-arrow fragment"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#7288ff"/></svg></div>
         <div class="pl-node fragment">
           <div class="st">03 · INVESTIGATE</div>
-          <h3>Agent answers arrive ungraded</h3>
-          <p>An agent that picks tools and writes code can be wrong quietly. We grade every answer against hand-written baselines.</p>
+          <h3>Interrogate millions of posts on demand</h3>
+          <p>Ask any question of the corpus and an agent writes and runs the analysis, returning a cited answer. Surfacing custom insight on demand is the value; grading each answer against baselines is what makes it safe to rely on.</p>
         </div>
       </div>
       <p class="mt32" style="font-size:16.5px;">Most listening tools answer with RAG over whatever their feeds already collected. <strong>Arbiter plans the collection itself</strong> and surfaces conversations you did not know to ask for. The next slides show the method; the appendix lists every model.</p>
     </div>
     <div class="foot">
-      <span class="src">SRC · SimPPL methods talk, NYU CSMAP (Mar 2026) · aclanthology.org/2024.cl-1.8</span>
+      <span class="src">SRC · SimPPL methods talk, NYU CSMAP (Mar 2026)</span>
       <span class="brand">ARBITER · SIMPPL</span>
     </div>
   </div>
@@ -466,9 +466,9 @@
         </div>
       </div>
     </div>
-      <div class="openq fragment"><span class="lb">Open challenge</span><div class="txt">Topic models over sparse social data over-split, and LLM labels repeat across clusters. <span class="cite"><a href="https://arxiv.org/abs/2509.19365">Janssens et al. 2025</a>; <a href="https://aclanthology.org/2024.cl-1.8/">Ziems et al. 2024</a></span></div></div>
+      <div class="openq fragment"><span class="lb">Open challenge</span><div class="txt">Topic models over noisy social data over-split, and LLM topic labels need explicit de-duplication to stay distinct. <span class="cite"><a href="https://arxiv.org/abs/2509.19365">Janssens et al. 2025</a>; <a href="https://aclanthology.org/2024.naacl-long.164/">TopicGPT, Pham et al. 2024</a></span></div></div>
     <div class="foot">
-      <span class="src">SRC · SimPPL labeling benchmark (2026), silhouette 0.71 vs 0.55 K-Means · Ziems et al. 2024 · UMAP: arxiv.org/abs/1802.03426</span>
+      <span class="src">SRC · SimPPL labeling benchmark (2026), silhouette 0.71 vs 0.55 K-Means · BERTopic: Grootendorst 2022 · UMAP: arxiv.org/abs/1802.03426</span>
       <span class="brand">ARBITER · SIMPPL</span>
     </div>
   </div>
@@ -506,7 +506,7 @@
           <p style="font-size:16px;">The agent picks from an analysis toolkit of <strong>30+ functions across six families</strong>: actor profiling, topics, themes, claims, retrieval, and visualization. It answers by writing code against the corpus in a sandbox.</p>
           <p class="mt16" style="font-size:16px;">Each answer is a tool-calling loop capped at eight steps, and the <strong>executor writes and runs TypeScript in a sandbox</strong>. An answer arrives as an artifact you can verify: the code it ran and the posts it cites.</p>
           <p class="mt16" style="font-size:16px;">We graded <strong>540 agent runs</strong> by hand across nine case studies. An LLM judge scores the code the agent writes against implementations we built ourselves, on everything from tool choice to error recovery.</p>
-          <p class="mt16" style="font-size:16px;">That grading runs continuously in production. <strong>Flagged errors become the input to prompt-optimization runs</strong> (GEPA, appendix table), with no person inside each loop. Our engineers review the surfaced error patterns at the system level; each fix propagates to every future query.</p>
+          <p class="mt16" style="font-size:16px;">Grading runs on every answer. The error patterns it surfaces feed an <strong>offline GEPA prompt-evolution pass</strong> (appendix table) that our engineers review, and each fix then propagates to every future query.</p>
         </div>
         <div>
           <div class="ebars wide">
@@ -757,6 +757,77 @@
     <div class="foot">
       <span class="src">SRC · 1,485-post study, saved claims + coordination runs · elections.maryland.gov · FactCheck.org · AP · congress.gov (H.R. 7296)</span>
       <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ T4b · TECH ADVANCES · CROSS-PLATFORM ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <h2 style="font-size:36px;">Technical advances in cross-platform discourse analysis</h2>
+      <p class="mt16" style="font-size:16px; max-width:104ch; color:#9aa1b2;">We tested our own pipeline against hand-labeled data before trusting it. Two results changed how we build.</p>
+      <div class="adv mt24">
+        <div class="advrow fragment">
+          <div class="claim">
+            <div class="hd">A plain entity filter beat our neural reranker</div>
+            <div class="why">Fusion scores are not comparable across queries, so no fixed cutoff works. We calibrated the reranker to emit an absolute relevance score, then found a deterministic entity prefilter matched it on most candidates for almost no compute.</div>
+          </div>
+          <div class="metric">
+            <div class="row">on-topic results, top 200 <span class="numchip bad">81%</span> <span class="arr">&#8594;</span> <span class="numchip good">99%</span></div>
+            <div class="row">rerank GPU per case study <span class="numchip key">~99% less</span> <span class="arr">&#8594;</span> <span class="numchip good">~$50</span></div>
+            <span class="note">Measured on replayed case studies against hand-labeled posts. Full funnel in the appendix.</span>
+          </div>
+        </div>
+        <div class="advrow fragment">
+          <div class="claim">
+            <div class="hd">Geometry keeps theme labels distinct, not the LLM</div>
+            <div class="why">An LLM labeling clusters one at a time repeats itself. So the LLM only proposes vocabulary; the embedding geometry discards any label within 0.7 cosine of an existing one. Nine entity types resolve to Wikidata, name variants merged by union-find.</div>
+          </div>
+          <div class="metric">
+            <div class="row">unique cluster labels <span class="numchip bad">naive: 28 of 53 dupes</span> <span class="arr">&#8594;</span> <span class="numchip good">98% unique</span></div>
+            <div class="row">clustering quality, silhouette <span class="numchip good">0.71</span> vs <span class="numchip bad">0.55</span> K-Means</div>
+            <span class="note">Silhouette from our labeling benchmark. Cost scales with a few dozen clusters, not 100k posts.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · SimPPL retrieval + labeling benchmarks · code: packages/retriever, packages/analysis · RRF: Cormack et al. 2009</span>
+      <span class="brand">ARBITER &middot; SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ T4c · SCALING AGENTIC INVESTIGATIONS ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <h2 style="font-size:36px;">Scaling agentic investigations to millions of posts</h2>
+      <p class="mt16" style="font-size:16px; max-width:104ch; color:#9aa1b2;">The agent writes and runs TypeScript in a sandbox against the corpus, picking from 30+ analysis functions, capped at eight steps. Every answer returns the code it ran and the posts it cites, and any run replays deterministically.</p>
+      <div class="scaleband mt24">
+        <div class="c"><div class="v">3.7M<small>+</small></div><div class="k">posts across investigations</div></div>
+        <div class="c"><div class="v">248B</div><div class="k">interactions on monitored accounts</div></div>
+        <div class="c"><div class="v">10<small> + news</small></div><div class="k">platforms, multilingual, entity-resolved</div></div>
+        <div class="c"><div class="v">540</div><div class="k">agent runs hand-graded across 9 studies</div></div>
+      </div>
+      <div class="adv mt24">
+        <div class="advrow fragment">
+          <div class="claim">
+            <div class="hd">We grade the agent's code, not just its prose</div>
+            <div class="why">An agent that chooses tools and writes code can be confidently wrong in quiet ways. An LLM judge scores each answer's code against a reference implementation we wrote, and error patterns feed an offline GEPA prompt-evolution pass our engineers review.</div>
+          </div>
+          <div class="metric">
+            <div class="row">top failure code <span class="numchip bad">no code written: 140</span></div>
+            <div class="row">judge reliability ceiling <span class="numchip key">~80% human agreement</span></div>
+            <span class="note">LLM judges swing with prompt formatting, so grading runs the agent's actual code against a known-good baseline rather than trusting a score.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · code: run-case-study-agent.ts (8-step TS sandbox), packages/agent-eval, tooling/scripts/replay-* · judge reliability: Zheng et al. 2023</span>
+      <span class="brand">ARBITER &middot; SIMPPL</span>
     </div>
   </div>
 </section>
