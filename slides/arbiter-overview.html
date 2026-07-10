@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arbiter by SimPPL</title><!-- v4: tech section + interactive concept map + reliability layer + verbal-pitch reframes; merged with the prompt-39 correction batch -->
+<title>Arbiter by SimPPL — Overview</title><!-- v4: tech section + interactive concept map + reliability layer + verbal-pitch reframes; merged with the prompt-39 correction batch -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,6 @@
 <body>
 <div class="reveal">
 <div class="slides">
-
 <!-- ═══ 01 · TITLE ═══ -->
 <section class="dark" data-background-color="#0b0d12">
   <div class="si">
@@ -52,6 +51,88 @@
       <span class="brand"><a href="https://arbiter.simppl.org" style="color:#9aa1b2; border:none;">arbiter.simppl.org</a></span>
     </div>
   </div>
+</section>
+
+<!-- ═══ L2 · PROBLEM ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si"><div class="si-body">
+    <h2 style="font-size:40px;">Manipulation runs across platforms. Moderation stops at each edge.</h2>
+    <p class="mt24" style="font-size:19px; max-width:96ch; color:#c9cdd8;">A single campaign runs on X, YouTube, Telegram, and more at once. Each platform's team sees only its own slice, and no one is looking at the whole picture.</p>
+    <div class="callout mt32" style="max-width:104ch;"><p style="font-size:17px;"><strong>OnPassive</strong>, an "AI-powered" tech scheme, ran its promotion across five platforms at once. The SEC charged it with fraudulently raising <strong>over $108 million from more than 800,000 investors</strong>, and each platform only ever saw a fragment of it.</p></div>
+    <p class="mt24" style="font-size:17px; max-width:96ch; color:#9aa1b2;">On social platforms, true stories take about six times as long as false ones to reach people. By the time a claim is checked, the campaign that planted it has moved on.</p>
+  </div><div class="foot"><span class="src">SRC · SEC LR-25809 (2023) · news.mit.edu</span><span class="brand">ARBITER &middot; SIMPPL</span></div></div>
+</section>
+
+<!-- ═══ L3 · SOLUTION ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si"><div class="si-body">
+    <h2 style="font-size:40px;">Arbiter reads the whole conversation, and answers with receipts</h2>
+    <div class="pipeline mt32">
+      <div class="pl-node"><div class="st">01 · COLLECT</div><h3>Across every surface</h3><p>Public social data from 10 platforms, plus 20,000+ newspapers and Wikidata, collected within platform terms.</p></div>
+      <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#7288ff"/></svg></div>
+      <div class="pl-node"><div class="st">02 · ORGANIZE</div><h3>Narratives and actors</h3><p>Posts cluster into narratives, and Arbiter maps the accounts driving each one, resolved to real-world entities.</p></div>
+      <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#7288ff"/></svg></div>
+      <div class="pl-node"><div class="st">03 · INVESTIGATE</div><h3>Ask, and act</h3><p>An agent answers any question over the corpus with a citation for every claim. You keep the judgment.</p></div>
+    </div>
+    <div class="callout mt32" style="max-width:104ch;"><p style="font-size:17px;">Arbiter plans the collection itself, so it surfaces the conversations you did not know to search for, not just the keywords you typed.</p></div>
+  </div><div class="foot"><span class="src">SRC · arbiter.simppl.org</span><span class="brand">ARBITER &middot; SIMPPL</span></div></div>
+</section>
+
+<!-- ═══ L4 · IMPACT ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si"><div class="si-body">
+    <h2 style="font-size:40px;">Platforms have acted on what Arbiter flagged</h2>
+    <div class="take mt24">
+      <div class="item" style="grid-template-columns:auto 1fr; gap:16px;"><span class="dot" style="background:#7288ff;">X</span><p style="margin:0; color:#c9cdd8; font-size:17px;">Our 2023 reporting prompted an <strong style="color:#e8eaf0;">internal investigation at X</strong> into pro-Russian bot networks.</p></div>
+      <div class="item" style="grid-template-columns:auto 1fr; gap:16px;"><span class="dot" style="background:#b4472e;">M</span><p style="margin:0; color:#c9cdd8; font-size:17px;">Findings we shared fed Meta's public Q1 2024 report on a Bangladesh takedown: <strong style="color:#e8eaf0;">50 accounts and 98 Pages with 3.4M followers</strong>.</p></div>
+      <div class="item" style="grid-template-columns:auto 1fr; gap:16px;"><span class="dot" style="background:#3f7d5a;">Y</span><p style="margin:0; color:#c9cdd8; font-size:17px;">YouTube <strong style="color:#e8eaf0;">independently terminated</strong> channels we had flagged for AI-generated propaganda.</p></div>
+    </div>
+    <div class="scaleband mt32">
+      <div class="c"><div class="v">3.7M<small>+</small></div><div class="k">posts analyzed across investigations</div></div>
+      <div class="c"><div class="v">248B</div><div class="k">interactions on monitored accounts</div></div>
+      <div class="c"><div class="v">30<small>+</small></div><div class="k">public case studies open to read</div></div>
+      <div class="c"><div class="v">150<small>+</small></div><div class="k">organizations signed up, 12 countries</div></div>
+    </div>
+  </div><div class="foot"><span class="src">SRC · Meta Q1 2024 Adversarial Threat Report · arbiter.simppl.org/studies</span><span class="brand">ARBITER &middot; SIMPPL</span></div></div>
+</section>
+
+<!-- ═══ L5 · TEAM ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si"><div class="si-body">
+    <h2>Built by researchers who ship</h2>
+    <div class="cols mt32 top">
+      <div>
+        <h3 class="blue-txt">Swapneel Mehta · Founder</h3>
+        <p class="mt10" style="font-size:17px;">Former postdoc in AI safety at MIT and Boston University. Board member at the Integrity Institute. Built AI systems at Twitter, Adobe, and Slack.</p>
+        <h3 class="mt24 blue-txt">Six full-time engineers</h3>
+        <p class="mt10" style="font-size:17px;">Systems and infrastructure, NLP and deep-research agents, platform backend and APIs.</p>
+      </div>
+      <div>
+        <h3 class="blue-txt">Backed by</h3>
+        <p class="mt10" style="font-size:17px;">Google, Mozilla, Wikimedia, Ford, Omidyar, MIT, Columbia, and UNDP.</p>
+        <h3 class="mt24 blue-txt">Peer-reviewed</h3>
+        <p class="mt10" style="font-size:17px;">Published at NeurIPS, EMNLP, ICML, AAAI, and ICWSM. A U.S. 501(c)(3) nonprofit.</p>
+      </div>
+    </div>
+  </div><div class="foot"><span class="src">SRC · simppl.org/team · simppl.org/research</span><span class="brand">ARBITER &middot; SIMPPL</span></div></div>
+</section>
+
+<!-- ═══ L6 · CTA ═══ -->
+<section class="cta" data-background-color="#f2d24b">
+  <div class="si"><div class="si-body" style="justify-content:center;">
+    <h2 style="font-size:52px;">See it on your issue.</h2>
+    <p class="mt24" style="font-size:22px; color:#12131a;">Request a demo: write to <a href="mailto:team@simppl.org" style="color:#12131a;">team@simppl.org</a>, and we follow up within the week.</p>
+    <p class="mt16" style="font-size:18px; color:#3a3720;">The full deck, methods, and live case studies continue behind this slide.</p>
+  </div><div class="foot"><span class="src">arbiter.simppl.org</span><span class="brand">ARBITER &middot; SIMPPL</span></div></div>
+</section>
+
+<!-- ═══ APPENDIX DIVIDER ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si"><div class="si-body" style="justify-content:center;">
+    <p style="font-family:'IBM Plex Mono',monospace; font-size:14px; letter-spacing:.2em; color:#7288ff;">DEEP DIVE</p>
+    <h2 style="font-size:46px; margin-top:12px;">Everything behind the summary</h2>
+    <p class="mt24" style="font-size:19px; max-width:90ch; color:#9aa1b2;">The problem in depth, how the pipeline works, the technical advances, and the full case files. Flip through only what a conversation calls for.</p>
+  </div><div class="foot"><span class="src">SRC · full deck follows</span><span class="brand">ARBITER &middot; SIMPPL</span></div></div>
 </section>
 
 <!-- ═══ 02 · PROBLEM ═══ -->
@@ -1083,7 +1164,6 @@
     </div>
   </div>
 </section>
-
 </div>
 </div>
 <script type="application/json" id="cmap-data">
