@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="arbiter-2026/arbiter.css?v=36">
+<link rel="stylesheet" href="arbiter-2026/arbiter.css?v=37">
 </head>
 <body>
 <div class="reveal">
@@ -211,8 +211,8 @@
     <div class="si-body">
       <div class="cols w46 top">
         <div>
-          <h2 style="font-size:36px;">Investigations start from a live case-study library</h2>
-          <p class="mt16" style="font-size:16.5px;">Pick a topic or a set of accounts, set a date window, and Arbiter builds the corpus. We've compiled reports on <strong>over 30 issues</strong>, ranging from job scams and human trafficking to the manosphere influencers impacting younger audiences.</p>
+          <h2 style="font-size:36px;">Trace conversations across platforms</h2>
+          <p class="mt16" style="font-size:16.5px;">Pick a topic or a set of accounts and a date window, and Arbiter compiles a month of cross-platform conversations in <strong>20 to 40 minutes</strong>. We've built reports on <strong>over 30 issues</strong> this way, from job scams and human trafficking to the manosphere influencers reaching younger audiences.</p>
           <div class="chips mt24"><i>X</i><i>YouTube</i><i>Reddit</i><i>Bluesky</i><i>Instagram</i><i>Facebook</i><i>TikTok</i><i>LinkedIn</i><i>Telegram</i><i>4chan</i><i>20k+ news</i><i>Wikidata</i></div>
           <p class="mt24 small muted">Every study keeps its sources attached: each number traces back to the posts behind it.</p>
         </div>
@@ -353,14 +353,14 @@
             <div class="n">03<small>Rerank</small></div>
             <div>
               <h3>One calibrated threshold</h3>
-              <p>A neural reranker scores each candidate against the original question, 0 to 1. Scores stay comparable across topics, so a single threshold <b>drops the clear non-matches</b> in one pass.</p>
+              <p>A neural reranker scores each candidate against the original question, 0 to 1. Scores stay comparable across topics, so a single threshold <b>drops 60 to 80% of candidates</b>.</p>
             </div>
           </div>
           <div class="act">
             <div class="n">04<small>Measure</small></div>
             <div>
               <h3>Graded against hand-labeled posts</h3>
-              <p>We grade the whole funnel against hand-labeled posts, and reranking <b>sharply raised the share of relevant results near the top</b>.</p>
+              <p>We grade the whole funnel against hand-labeled posts. Reranking lifted relevant results in the top 200 from <b>81% to 99%</b>.</p>
             </div>
           </div>
         </div>
@@ -386,7 +386,7 @@
       </div>
     </div>
     <div class="foot">
-      <span class="src">SRC · SimPPL retrieval pipeline · white-monkey study, arbiter.simppl.org</span>
+      <span class="src">SRC · SimPPL retrieval pipeline · entity prefilter cuts rerank GPU ~99% · white-monkey study, arbiter.simppl.org</span>
       <span class="brand">ARBITER · SIMPPL</span>
     </div>
   </div>
@@ -444,7 +444,7 @@
       <h2 style="font-size:36px;">Organize: geometry stops theme labels from repeating</h2>
       <div class="cols mt24 top">
         <div>
-          <p style="font-size:16px;">Say a search comes back with 100,000 posts. Point an LLM at them naively and the bill explodes while the labels collapse into duplicates: in one corpus, <strong>many clusters came back with the same label</strong>.</p>
+          <p style="font-size:16px;">Say a search comes back with 100,000 posts. Point an LLM at them naively and the bill explodes while the labels collapse into duplicates: <strong>28 of 53 clusters</strong> in one corpus came back with the same label.</p>
           <p class="mt16" style="font-size:16px;">We organize before any LLM reads the corpus. <strong>UMAP and HDBSCAN</strong> group posts by meaning, the combination that scored highest for cluster quality across the five clustering methods we tested.</p>
           <p class="mt16" style="font-size:16px;">The LLM then labels whole clusters, so cost scales with a few dozen clusters instead of a <strong>hundred thousand posts</strong>. It proposes several labels per cluster, and any that lands too close to an existing label is thrown out.</p>
           <p class="mt16" style="font-size:16.5px;"><strong class="yellow-txt">The LLM provides the vocabulary. The geometry enforces distinctness.</strong></p>
@@ -455,10 +455,10 @@
             <span style="color:#43c98b;">OURS</span>&nbsp; <span style="color:#c9cdd8;">Science Explainers · Extreme Impacts · Climate Policy · Indigenous Livelihoods</span>
           </div>
           <div class="ebars wide">
-            <div class="ebar fragment"><span class="lb">"AVOID PRIOR LABELS"</span><span class="track"><span class="fill red" style="width:100%"></span></span><span class="val"></span></div>
-            <div class="ebar fragment"><span class="lb">POST-HOC DEDUP</span><span class="track"><span class="fill" style="width:87%"></span></span><span class="val"></span></div>
-            <div class="ebar fragment"><span class="lb">TWO-PHASE EXTRACT</span><span class="track"><span class="fill" style="width:86%"></span></span><span class="val"></span></div>
-            <div class="ebar fragment"><span class="lb">OURS · HYBRID</span><span class="track"><span class="fill green" style="width:45%"></span></span><span class="val"></span></div>
+            <div class="ebar fragment"><span class="lb">"AVOID PRIOR LABELS"</span><span class="track"><span class="fill red" style="width:100%"></span></span><span class="val">0.509</span></div>
+            <div class="ebar fragment"><span class="lb">POST-HOC DEDUP</span><span class="track"><span class="fill" style="width:87%"></span></span><span class="val">0.443</span></div>
+            <div class="ebar fragment"><span class="lb">TWO-PHASE EXTRACT</span><span class="track"><span class="fill" style="width:86%"></span></span><span class="val">0.438</span></div>
+            <div class="ebar fragment"><span class="lb">OURS · HYBRID</span><span class="track"><span class="fill green" style="width:45%"></span></span><span class="val">0.231</span></div>
           </div>
           <p class="tiny muted mt16">Average pairwise label similarity across strategies, shorter is better. Ours keeps the labels <b>distinct</b> where the others repeat.</p>
           <p class="mt24" style="font-size:15.5px;">The same embedding space powers entity extraction: <strong>nine entity types</strong>, resolved to Wikidata, name variants merged automatically. Each actor gets sentiment, emotion, and a clickbait score on a five-point scale.</p>
@@ -466,7 +466,7 @@
       </div>
     </div>
     <div class="foot">
-      <span class="src">SRC · SimPPL labeling pipeline · arbiter.simppl.org</span>
+      <span class="src">SRC · SimPPL labeling benchmark, silhouette 0.71 vs 0.55 K-Means · arbiter.simppl.org</span>
       <span class="brand">ARBITER · SIMPPL</span>
     </div>
   </div>
@@ -508,12 +508,12 @@
         </div>
         <div>
           <div class="ebars wide">
-            <div class="ebar fragment"><span class="lb">NO CODE WRITTEN</span><span class="track"><span class="fill red" style="width:100%"></span></span><span class="val"></span></div>
-            <div class="ebar fragment"><span class="lb">GENERIC CODE</span><span class="track"><span class="fill yellow" style="width:77%"></span></span><span class="val"></span></div>
-            <div class="ebar fragment"><span class="lb">CONTRADICTS OUTPUT</span><span class="track"><span class="fill red" style="width:63%"></span></span><span class="val"></span></div>
-            <div class="ebar fragment"><span class="lb">NEEDLESS CLARIFYING</span><span class="track"><span class="fill" style="width:37%"></span></span><span class="val"></span></div>
+            <div class="ebar fragment"><span class="lb">NO CODE WRITTEN</span><span class="track"><span class="fill red" style="width:100%"></span></span><span class="val">140</span></div>
+            <div class="ebar fragment"><span class="lb">GENERIC CODE</span><span class="track"><span class="fill yellow" style="width:77%"></span></span><span class="val">108</span></div>
+            <div class="ebar fragment"><span class="lb">CONTRADICTS OUTPUT</span><span class="track"><span class="fill red" style="width:63%"></span></span><span class="val">88</span></div>
+            <div class="ebar fragment"><span class="lb">NEEDLESS CLARIFYING</span><span class="track"><span class="fill" style="width:37%"></span></span><span class="val">52</span></div>
           </div>
-          <p class="tiny muted mt16">The agent's failure modes, ranked; the most common is answering in prose when code was needed. Partners see what it gets wrong before they rely on it.</p>
+          <p class="tiny muted mt16">Top failure codes across 540 graded runs; the most common defect is answering in prose when code was needed. Partners see what the agent gets wrong before they rely on it.</p>
         </div>
       </div>
     </div>
@@ -771,18 +771,20 @@
             <div class="why">Fusion scores are not comparable across queries, so no fixed cutoff works. We calibrated the reranker to emit an absolute relevance score, then found a deterministic entity prefilter matched it on most candidates for almost no compute.</div>
           </div>
           <div class="metric">
-            <div class="result">Sharply more of the right posts near the top, and a plain entity filter carries most of the load for a fraction of the compute.</div>
-            <span class="note">Measured against hand-labeled posts on replayed studies; we are re-verifying the exact figures before we publish them.</span>
+            <div class="row">on-topic results, top 200 <span class="numchip bad">81%</span> <span class="arr">&#8594;</span> <span class="numchip good">99%</span></div>
+            <div class="row">rerank GPU per case study <span class="numchip key">~99% less</span> <span class="arr">&#8594;</span> <span class="numchip good">~$50</span></div>
+            <span class="note">Measured on replayed case studies against hand-labeled posts.</span>
           </div>
         </div>
         <div class="advrow fragment">
           <div class="claim">
             <div class="hd">Geometry keeps theme labels distinct, not the LLM</div>
-            <div class="why">An LLM labeling clusters one at a time repeats itself. So the LLM only proposes vocabulary; the embedding geometry discards any label that lands too close to an existing one. Nine entity types resolve to Wikidata, name variants merged by union-find.</div>
+            <div class="why">An LLM labeling clusters one at a time repeats itself. So the LLM only proposes vocabulary; the embedding geometry discards any label within 0.7 cosine of an existing one. Nine entity types resolve to Wikidata, name variants merged by union-find.</div>
           </div>
           <div class="metric">
-            <div class="result">Labels stay distinct instead of collapsing into duplicates, and the clustering we ship scored highest for quality in our tests.</div>
-            <span class="note">Cost scales with a few dozen clusters, not the full post count.</span>
+            <div class="row">unique cluster labels <span class="numchip bad">naive: 28 of 53 dupes</span> <span class="arr">&#8594;</span> <span class="numchip good">98% unique</span></div>
+            <div class="row">clustering quality, silhouette <span class="numchip good">0.71</span> vs <span class="numchip bad">0.55</span> K-Means</div>
+            <span class="note">Silhouette from our labeling benchmark. Cost scales with a few dozen clusters, not 100k posts.</span>
           </div>
         </div>
       </div>
@@ -804,7 +806,7 @@
         <div class="c"><div class="v">3.7M<small>+</small></div><div class="k">posts across investigations</div></div>
         <div class="c"><div class="v">248B</div><div class="k">interactions on monitored accounts</div></div>
         <div class="c"><div class="v">10<small> + news</small></div><div class="k">platforms, multilingual, entity-resolved</div></div>
-        <div class="c"><div class="v">9</div><div class="k">case studies with hand-graded agent runs</div></div>
+        <div class="c"><div class="v">540</div><div class="k">agent runs hand-graded across 9 studies</div></div>
       </div>
       <div class="adv mt24">
         <div class="advrow fragment">
@@ -813,8 +815,9 @@
             <div class="why">An agent that chooses tools and writes code can be confidently wrong in quiet ways. An LLM judge scores each answer's code against a reference implementation we wrote, and error patterns feed an offline GEPA prompt-evolution pass our engineers review.</div>
           </div>
           <div class="metric">
-            <div class="result">The agent's most common mistake is answering in prose when code was needed. We grade its actual code against reference implementations we wrote, rather than trusting a judge's score.</div>
-            <span class="note">Grading runs on every answer; error patterns feed an offline prompt-evolution pass we review.</span>
+            <div class="row">top failure code <span class="numchip bad">no code written: 140</span></div>
+            <div class="row">judge reliability ceiling <span class="numchip key">~80% human agreement</span></div>
+            <span class="note">LLM judges swing with prompt formatting, so grading runs the agent's actual code against a known-good baseline rather than trusting a score.</span>
           </div>
         </div>
       </div>
