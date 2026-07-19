@@ -1,0 +1,472 @@
+<meta charset="utf-8">
+<title>Sakhi · Mind and Machine Alignment Summit</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+<style>
+:root{
+  --ink:#1f2933;
+  --muted:#66727c;
+  --accent:#0f766e;
+  --bg:#fbf9f5;
+  --card:#ffffff;
+  --line:#e8e2d7;
+  --good:#0f766e;
+  --bad:#b4442f;
+  --goodbg:#e3efec;
+  --badbg:#f7e8e2;
+}
+
+/* ---- one font, one scale ---- */
+.reveal{ font-family:'Inter',system-ui,sans-serif; font-size:32px; color:var(--ink); font-weight:400; }
+.reveal .slides{ text-align:left; }
+.reveal .slides section{ padding:44px 52px 60px 52px; height:100%; box-sizing:border-box; }
+body{ background:var(--bg); }
+.reveal .backgrounds{ background:var(--bg); }
+
+.reveal h1{ font-family:'Inter',sans-serif; font-size:52px; font-weight:700; line-height:1.14; letter-spacing:-0.015em; margin:0; color:var(--ink); }
+.reveal h2{ font-family:'Inter',sans-serif; font-size:37px; font-weight:700; line-height:1.16; letter-spacing:-0.012em; margin:0; color:var(--ink); }
+.reveal p{ font-size:25px; line-height:1.5; margin:0; color:var(--ink); }
+.reveal strong{ font-weight:600; }
+.reveal a{ color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
+.reveal a:hover{ color:#0b5850; }
+
+/* ---- spacing floors as adjacency rules ---- */
+.reveal h2 + *{ margin-top:30px !important; }
+.reveal .sub + *{ margin-top:26px !important; }
+.reveal p + p{ margin-top:18px !important; }
+.reveal ul{ margin:0; padding:0; list-style:none; }
+.reveal li + li{ margin-top:22px !important; }
+
+.reveal .sub{ font-size:25px; color:var(--muted); line-height:1.44; font-weight:400; }
+.reveal .cap{ font-size:18px; color:var(--muted); line-height:1.42; margin-top:16px; }
+
+.reveal li{ font-size:25px; line-height:1.48; padding-left:30px; position:relative; color:var(--ink); }
+.reveal li::before{ content:""; position:absolute; left:0; top:13px; width:9px; height:9px; border-radius:50%; background:var(--accent); }
+.reveal li .k{ color:var(--accent); font-weight:600; }
+
+.reveal .footer{ position:absolute; left:52px; right:52px; bottom:20px; display:flex; justify-content:space-between;
+  font-size:17px; color:var(--muted); font-weight:500; }
+.reveal .footer .r{ color:var(--muted); }
+
+/* ---- title ---- */
+.title-wrap{ display:flex; flex-direction:column; align-items:flex-start; justify-content:center; height:100%; }
+.title-wrap h1{ max-width:23ch; }
+.title-wrap .tsub{ font-size:26px; color:var(--muted); margin-top:28px; max-width:40ch; line-height:1.44; }
+.title-wrap .tsub .mark{ color:var(--accent); font-weight:600; }
+.title-wrap .pres{ margin-top:44px; font-size:22px; color:var(--ink); font-weight:500; }
+.title-wrap .pres .role{ color:var(--muted); font-weight:400; }
+
+/* ---- columns ---- */
+.cols{ display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; }
+.cols.wfig{ grid-template-columns:1.05fr 1fr; }
+.cols.figw{ grid-template-columns:1fr 1.05fr; }
+
+/* ---- cards ---- */
+.grid{ display:grid; gap:18px; }
+.grid.g3{ grid-template-columns:1fr 1fr 1fr; }
+.card{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px 22px; }
+.card .lbl{ font-size:21px; color:var(--ink); line-height:1.46; }
+.card .lbl .k{ color:var(--accent); font-weight:600; }
+.card.tall{ min-height:214px; display:flex; align-items:center; padding:26px 24px; }
+.card.tall .lbl{ font-size:23px; line-height:1.5; }
+.reveal ul.biglist li{ font-size:31px; line-height:1.65; }
+.reveal ul.biglist li + li{ margin-top:56px !important; }
+
+/* real-question cards */
+.qlist{ display:flex; flex-direction:column; gap:14px; }
+.qcard{ background:var(--card); border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px;
+  padding:15px 18px; font-size:21px; line-height:1.4; color:var(--ink); }
+
+/* figure */
+.figwrap{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; text-align:center; }
+.figwrap img{ max-width:100%; max-height:400px; display:block; margin:0 auto; border-radius:4px; }
+.figwrap.big img{ max-height:510px; }
+
+/* rubric rows */
+.rrow{ display:grid; grid-template-columns:auto 1fr auto; gap:18px; align-items:center;
+  background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px 22px; }
+.rrow + .rrow{ margin-top:13px !important; }
+.rrow .ax{ font-weight:700; font-size:23px; color:var(--ink); }
+.rrow .de{ font-size:20px; color:var(--muted); line-height:1.32; }
+.rrow .wt{ font-size:22px; color:var(--accent); font-weight:700; font-variant-numeric:tabular-nums; }
+
+/* example answer cards */
+.qprompt{ background:#f3efe7; border-left:4px solid var(--accent); border-radius:8px; padding:16px 20px; font-size:23px; line-height:1.4; }
+.qa{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; }
+.qa + .qa{ margin-top:16px !important; }
+.qa .who{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:11px; }
+.qa .who .m{ font-weight:700; font-size:21px; }
+.qa .who .sc{ font-size:18px; font-weight:600; padding:3px 12px; border-radius:20px; font-variant-numeric:tabular-nums; }
+.qa .sc.g{ background:var(--goodbg); color:var(--good); }
+.qa .sc.b{ background:var(--badbg); color:var(--bad); }
+.qa .txt{ font-size:20px; line-height:1.46; color:var(--ink); }
+.qa .txt .hl{ color:var(--accent); font-weight:600; }
+
+/* callout */
+.callout{ background:#f1efe8; border-left:5px solid var(--accent); border-radius:8px; padding:20px 24px; }
+.callout p{ font-size:24px; line-height:1.46; }
+
+/* big numbers */
+.bignums{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.bignums .b{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:26px 20px; }
+.bignums .b .n{ font-size:52px; font-weight:700; color:var(--accent); line-height:1; font-variant-numeric:tabular-nums; }
+.bignums .b .l{ font-size:19px; color:var(--muted); margin-top:14px; line-height:1.4; }
+
+/* axis comparison bars */
+.axbars{ display:flex; flex-direction:column; gap:22px; }
+.axbar{ display:grid; grid-template-columns:220px 1fr; align-items:center; gap:18px; }
+.axbar .name{ font-size:22px; color:var(--ink); font-weight:500; }
+.axbar .track{ position:relative; height:34px; background:#efe9de; border-radius:7px; }
+.axbar .fill{ position:absolute; top:0; left:0; height:100%; border-radius:6px; background:var(--accent); opacity:.85; }
+.axbar .fill.prop{ background:#c9c2b4; }
+.axbar .val{ position:absolute; right:10px; top:5px; font-size:18px; color:#fff; font-weight:600; }
+
+.appdivider{ display:flex; flex-direction:column; justify-content:center; height:100%; }
+
+.reveal .fragment{ transition:all .16s ease; }
+</style>
+
+<div class="reveal"><div class="slides">
+
+<!-- 1 · TITLE -->
+<section>
+  <div class="title-wrap">
+    <h1>Large language models still fail maternal-health questions in non-English languages</h1>
+    <p class="tsub"><span class="mark">Sakhi</span>: a community-validated benchmark for rural India, in English, Hindi, and Marathi</p>
+    <p class="pres">Swapneel Mehta <span class="role">· SimPPL</span></p>
+  </div>
+</section>
+
+<!-- 2 · THE QUESTIONS WOMEN ASK -->
+<section>
+  <h2>In rural India, a chatbot often gives the first medical answer</h2>
+  <div class="cols" style="margin-top:28px;">
+    <div>
+      <ul>
+        <li class="fragment">India has <span class="k">609 million</span> Hindi and <span class="k">99 million</span> Marathi speakers</li>
+        <li class="fragment">Many of them ask pregnancy questions to chatbots on WhatsApp</li>
+        <li class="fragment">Their nearest health worker is an ASHA worker, and a doctor can be hours away</li>
+        <li class="fragment">If the answer is wrong in Marathi, the mother has little way to check it</li>
+      </ul>
+    </div>
+    <div class="fragment">
+      <div class="qlist">
+        <div class="qcard">"I am pregnant and live far from hospitals. How can I have a safe delivery?"</div>
+        <div class="qcard">"What warning signs during pregnancy should I watch for?"</div>
+        <div class="qcard">"I just had a baby at home with a dai. How do I get a birth certificate?"</div>
+        <div class="qcard">"I'm breastfeeding. Is it safe to take medicine for my health issues?"</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">2</span></div>
+</section>
+
+<!-- 3 · EVALUATION GAP -->
+<section>
+  <h2>Existing benchmarks test these models almost entirely in English</h2>
+  <p class="sub">The women who depend on them are the ones those benchmarks leave out.</p>
+  <div class="grid g3 fragment" style="margin-top:28px;">
+    <div class="card tall"><div class="lbl">Almost every medical benchmark uses English questions and English graders</div></div>
+    <div class="card tall"><div class="lbl">Translated benchmarks keep the English questions and Western graders</div></div>
+    <div class="card tall"><div class="lbl">To our knowledge, no open clinical checklist existed in Hindi or Marathi that the community had vetted</div></div>
+  </div>
+  <div class="callout fragment" style="margin-top:26px;">
+    <p>A model can give a medication warning in English and leave it out of the Marathi answer.</p>
+  </div>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">3</span></div>
+</section>
+
+<!-- 4 · KEY FINDING: answer diversity collapses in under-resourced languages -->
+<section>
+  <h2>Ask in Hindi or Marathi, and the models give a narrower set of answers</h2>
+  <div class="cols figw" style="margin-top:20px;">
+    <div>
+      <ul>
+        <li class="fragment">We asked the same 380 questions in English, Hindi, and Marathi</li>
+        <li class="fragment">In English the answers vary widely; in Hindi and Marathi they repeat</li>
+        <li class="fragment">The rarer the language, the tighter the answers cluster</li>
+      </ul>
+      <div class="callout fragment" style="margin-top:20px;">
+        <p>Most women our bot serves ask in Hindi or Marathi, and their answers vary the least.</p>
+      </div>
+    </div>
+    <div class="figwrap fragment">
+      <img src="images/sakhi-2026/fig_response_embedding_clusters.png" alt="Three panels mapping every model answer into a shared meaning space for English, Hindi, and Marathi. The English answers fill a wide region; the Hindi and Marathi answers collapse into a small cluster.">
+      <p class="cap">Each dot is one answer. The spread shrinks from English (box 4.9 by 6.9) to Hindi (1.6 by 2.1) to Marathi (1.5 by 1.2).</p>
+    </div>
+  </div>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">4</span></div>
+</section>
+
+<!-- 5 · WHAT WE BUILT (WhatsApp GIF + participatory triad) -->
+<section>
+  <h2>We built Sakhi with the community it serves</h2>
+  <div style="display:grid;grid-template-columns:0.7fr 1.3fr;gap:40px;align-items:center;margin-top:22px;">
+    <div class="fragment" style="text-align:center;">
+      <img src="images/sakhi-2026/sakhi_whatsapp.gif" alt="Animated screen recording of the Sakhi Maternal WhatsApp chatbot welcoming a mother and offering maternity questions to ask." style="max-height:430px;border-radius:18px;border:1px solid var(--line);box-shadow:0 3px 14px rgba(0,0,0,0.08);">
+      <p class="cap" style="margin-top:12px;">The deployed Sakhi bot on WhatsApp &middot; <a href="https://mehtaver.se/slides/images/sakhi-2026/sakhi_whatsapp.gif" target="_blank" rel="noopener">watch the clip</a></p>
+    </div>
+    <div>
+      <p class="sub" style="margin-bottom:20px;">Three groups shaped every question and answer:</p>
+      <div style="display:flex;flex-direction:column;gap:13px;">
+        <div class="card fragment" style="padding:16px 20px;"><div class="lbl"><span class="k">Expectant mothers</span> asked the real questions, through the WhatsApp bot</div></div>
+        <div class="card fragment" style="padding:16px 20px;"><div class="lbl"><span class="k">ASHA workers</span> fixed the local wording and the services a village actually has</div></div>
+        <div class="card fragment" style="padding:16px 20px;"><div class="lbl"><span class="k">Doctors and nonprofit staff</span> corrected the medicine and the cultural fit</div></div>
+        <div class="card fragment" style="padding:16px 20px;border-color:var(--accent);background:var(--goodbg);"><div class="lbl"><span class="k">380</span> question-answer pairs passed every review, in all three languages</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">4</span></div>
+</section>
+
+<!-- 5 · ONE ROW, THREE LANGUAGES (paper figure) -->
+<section>
+  <h2>One question, curated in all three languages</h2>
+  <div class="cols figw" style="margin-top:22px;">
+    <div>
+      <ul>
+        <li class="fragment">Every question is parallel in English, Hindi, and Marathi</li>
+        <li class="fragment">A model drafts a first answer, in the middle row</li>
+        <li class="fragment">A doctor rewrites it into the reference answer, in the bottom row</li>
+        <li class="fragment">The doctor changed the answer for 97 of the 149 expert questions</li>
+      </ul>
+    </div>
+    <div class="figwrap fragment">
+      <img src="images/sakhi-2026/fig_data_sample.png" alt="One benchmark row shown end to end: the TB-in-pregnancy question in English, Hindi, and Marathi across the columns, with the AI-drafted answer in the middle and the doctor-curated reference answer in the bottom row.">
+    </div>
+  </div>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">5</span></div>
+</section>
+
+<!-- 6 · RUBRIC -->
+<section>
+  <h2>We score each answer on five things a good reply needs</h2>
+  <p class="sub">A panel of doctors chose the five measures and how much each one counts.</p>
+  <div style="margin-top:24px;">
+    <div class="rrow fragment"><span class="ax">Accuracy</span><span class="de">Is the medical content correct?</span><span class="wt">0.30</span></div>
+    <div class="rrow fragment"><span class="ax">Completeness</span><span class="de">Does it cover what the question needs?</span><span class="wt">0.25</span></div>
+    <div class="rrow fragment"><span class="ax">Context</span><span class="de">Does it fit the woman's village and resources?</span><span class="wt">0.20</span></div>
+    <div class="rrow fragment"><span class="ax">Communication</span><span class="de">Does it read warmly and clearly?</span><span class="wt">0.15</span></div>
+    <div class="rrow fragment"><span class="ax">Terminology</span><span class="de">Can a village reader understand the words?</span><span class="wt">0.10</span></div>
+  </div>
+  <p class="cap fragment">We ran 13 models three times each, about 44,460 answers. An AI grader scored every answer against the checklist, and we checked its grades against 11 doctors.</p>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">6</span></div>
+</section>
+
+<!-- 7 · FINDING 1 -->
+<section>
+  <h2>Every model we tested struggles with the basics</h2>
+  <p class="sub">On this scale, 1.0 means an answer passes all 15 clinical checks.</p>
+  <div class="cols" style="margin-top:24px;">
+    <div>
+      <ul>
+        <li class="fragment">The best model, Claude Opus 4.7, reaches only <span class="k">0.33</span></li>
+        <li class="fragment">Every other model passes under a third of the checks</li>
+        <li class="fragment">The answers are medically correct and kindly written</li>
+        <li class="fragment">They still use clinic jargon and assume a Western clinic the woman cannot reach</li>
+      </ul>
+    </div>
+    <div class="fragment">
+      <div class="callout">
+        <p>Models score lowest on <strong>Context</strong> and <strong>Terminology</strong>, the two things that decide whether a woman can act on the answer.</p>
+      </div>
+      <p class="cap">Communication passes about 0.59; Terminology about 0.15 in English.</p>
+    </div>
+  </div>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">7</span></div>
+</section>
+
+<!-- 8 · EXAMPLE -->
+<section>
+  <h2>Here is a sample question, answered well and answered poorly</h2>
+  <div class="qprompt fragment" style="margin-top:22px;">"How can I get proper breastfeeding guidance in my village?"</div>
+  <div style="margin-top:16px;">
+    <div class="qa fragment">
+      <div class="who"><span class="m">Claude Opus 4.7</span><span class="sc g">scored 0.90 &middot; 13 of 15</span></div>
+      <p class="txt">"Ask your <span class="hl">ASHA worker</span> for home visits; she is trained in latching. <span class="hl">Anganwadi workers</span> also help with feeding, and <span class="hl">Helpline 104</span> gives free phone advice."</p>
+    </div>
+    <div class="qa fragment">
+      <div class="who"><span class="m">MedGemma 4B</span><span class="sc b">scored 0.25 &middot; 3 of 15</span></div>
+      <p class="txt">"I am sorry, I am unable to provide specific guidance in your village. You can contact a <span style="color:var(--bad);font-weight:600;">lactation consultant</span> for expert advice."</p>
+    </div>
+  </div>
+  <p class="cap fragment">We graded both English answers the same way. The ASHA worker and Helpline 104 exist in the village; a lactation consultant does not.</p>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">8</span></div>
+</section>
+
+<!-- 9 · THEME -->
+<section>
+  <h2>Models do worst on the most dangerous topics, and worse again in Marathi</h2>
+  <div class="cols wfig" style="margin-top:20px;">
+    <div class="figwrap fragment">
+      <img src="images/sakhi-2026/fig_theme_heatmap.png" alt="Heatmap of average score by topic and language across 13 models. Nutrition and Symptoms are green (higher); Clinical Procedures and Risk Management are red (lower). Risk Management falls from 0.19 in English to 0.08 in Marathi.">
+      <p class="cap">Green is a higher score, red is lower.</p>
+    </div>
+    <div>
+      <ul>
+        <li class="fragment">Across the three languages the average scores stay close</li>
+        <li class="fragment">The clear drop is on one topic: managing pregnancy risks and complications</li>
+        <li class="fragment">On that topic the score falls from <span class="k">0.19</span> in English to <span class="k">0.08</span> in Marathi</li>
+        <li class="fragment">In Hindi and Marathi the same answer often becomes shorter and more generic</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">9</span></div>
+</section>
+
+<!-- 10 · JUDGE -->
+<section>
+  <h2>Our AI grader and real doctors often disagree</h2>
+  <div class="cols figw" style="margin-top:20px;">
+    <div>
+      <ul>
+        <li class="fragment">Doctors and the AI grader agree on which parts of an answer are hardest</li>
+        <li class="fragment">They disagree on whether any single answer passes</li>
+        <li class="fragment">Doctors pass 75 to 88% of the checks; the AI grader passes far fewer</li>
+        <li class="fragment">The score changes more when we switch AI graders than when we switch the model being tested</li>
+      </ul>
+      <div class="callout fragment" style="margin-top:20px;">
+        <p>So the grader we choose, and the language it reads, shapes the result as much as the model does.</p>
+      </div>
+    </div>
+    <div class="figwrap fragment">
+      <img src="images/sakhi-2026/fig_doctor_judge_agreement.png" alt="Heatmap of agreement on each of the five measures between four AI graders and the doctors, with doctor-to-doctor agreement in the rightmost column.">
+      <p class="cap">Agreement runs from 1 (perfect) to 0 (chance). The AI graders sit near zero against doctors; doctors agree far more with each other.</p>
+    </div>
+  </div>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">10</span></div>
+</section>
+
+<!-- 11 · COST -->
+<section>
+  <h2>A small open model scores about the same for far less money</h2>
+  <div class="cols wfig" style="margin-top:20px;">
+    <div class="figwrap fragment">
+      <img src="images/sakhi-2026/fig_cost_vs_mqs.png" alt="Cost per answer against quality score. Open-weight 27B models sit in the same score range as the paid models but cost far less per answer.">
+      <p class="cap">Cost per answer, left is cheaper. Quality score, higher is better.</p>
+    </div>
+    <div>
+      <ul>
+        <li class="fragment">MedGemma 27B, an open model, scores about the same as the paid ones</li>
+        <li class="fragment">It costs roughly <span class="k">13 times less</span> per answer</li>
+        <li class="fragment">The groups deploying to rural mothers are nonprofits and ASHA networks</li>
+        <li class="fragment">For them, cost often decides which model they can run at all</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">11</span></div>
+</section>
+
+<!-- 12 · IMPLICATIONS -->
+<section>
+  <h2>What to take away</h2>
+  <div style="margin-top:24px;">
+    <ul>
+      <li class="fragment">Even the best model passes under a third of basic maternal-health checks</li>
+      <li class="fragment">In Hindi and Marathi the answers get narrower and more templated, and quality drops on pregnancy-risk questions</li>
+      <li class="fragment">The AI grader disagrees with doctors, so who evaluates, and in which language, is an alignment choice</li>
+      <li class="fragment">A small open medical model nearly matches the paid frontier, which puts good tools within reach of nonprofits</li>
+    </ul>
+  </div>
+  <div class="callout fragment" style="margin-top:24px;">
+    <p>Build the evaluation in the users' languages, with the people who serve them.</p>
+  </div>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">12</span></div>
+</section>
+
+<!-- 13 · CLOSE -->
+<section>
+  <h2>Everything is public for you to use and build on</h2>
+  <div class="bignums fragment" style="margin-top:28px;">
+    <div class="b"><div class="n">380</div><div class="l">questions, in English, Hindi, and Marathi</div></div>
+    <div class="b"><div class="n">11</div><div class="l">Indian doctors, 169 clinical ratings</div></div>
+    <div class="b"><div class="n">13</div><div class="l">models tested</div></div>
+    <div class="b"><div class="n">5</div><div class="l">measures, weighted by doctors</div></div>
+  </div>
+  <div class="grid fragment" style="grid-template-columns:1fr 1fr;margin-top:26px;">
+    <div class="card"><div class="lbl"><strong>Dataset and code</strong><br><a href="https://huggingface.co/datasets/SimPPL/sakhi" target="_blank" rel="noopener">huggingface.co/datasets/SimPPL/sakhi</a></div></div>
+    <div class="card"><div class="lbl"><strong>Project</strong><br><a href="https://simppl.org/ai4health" target="_blank" rel="noopener">simppl.org/ai4health</a></div></div>
+  </div>
+  <p class="cap fragment">Rubric, grader logs, and doctor ratings released under CC BY 4.0. <a href="mailto:swapneel@simppl.org">swapneel@simppl.org</a></p>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">13</span></div>
+</section>
+
+<!-- APPENDIX -->
+<section data-background-color="#0f766e">
+  <div class="appdivider">
+    <h2 style="color:#fff;font-size:46px;">Appendix</h2>
+    <p style="color:#d6e8e5;margin-top:20px;font-size:25px;">Backup detail on the grader, the language gap, and the limits of the benchmark.</p>
+  </div>
+</section>
+
+<!-- A1 · cross-lingual gap -->
+<section>
+  <h2>The narrower spread survives every robustness check</h2>
+  <div style="margin-top:26px;">
+    <ul class="biglist">
+      <li>The narrower spread in Hindi and Marathi survives dropping UMAP, swapping the embedder, and controlling for length</li>
+      <li>Lower spread does not track lower quality; across answers the two are uncorrelated</li>
+      <li>Average scores stay close across languages, though that closeness depends on which grader we use</li>
+      <li>The one clear quality drop is on managing pregnancy risks, and it is worse in Marathi</li>
+    </ul>
+  </div>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">A1</span></div>
+</section>
+
+<!-- A2 · grader controls -->
+<section>
+  <h2>What we control for in the AI grader</h2>
+  <div style="margin-top:26px;">
+    <ul class="biglist">
+      <li>The score is grader-relative, so we report which grader produced each number</li>
+      <li>Switching graders shifts every score by about 0.17 on our scale</li>
+      <li>One grader is much stricter than the rest</li>
+      <li>We trust a gap between two models only when a different grader shows it too</li>
+    </ul>
+  </div>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">A2</span></div>
+</section>
+
+<!-- A3 · limitations -->
+<section>
+  <h2>The limits of what Sakhi shows</h2>
+  <div style="margin-top:26px;">
+    <ul class="biglist">
+      <li>Translators produced the Hindi and Marathi from the English, so they miss how women phrase things there</li>
+      <li>The checklist is one turn and pass-or-fail; real conversations go back and forth</li>
+      <li>A benchmark is a starting point for safe deployment, but far from enough on its own</li>
+    </ul>
+  </div>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">A3</span></div>
+</section>
+
+<!-- A4 · open vs closed, beyond MQS -->
+<section>
+  <h2>A small open medical model nearly matches much larger paid ones</h2>
+  <p class="sub">MedGemma 27B, a 27B open model fine-tuned for medicine, against the average paid model.</p>
+  <div class="axbars" style="margin-top:26px;">
+    <div class="axbar"><span class="name">Accuracy</span><div class="track"><div class="fill prop" style="width:79.8%;"></div><div class="fill" style="width:75.6%;"><span class="val">0.38 vs 0.40</span></div></div></div>
+    <div class="axbar"><span class="name">Completeness</span><div class="track"><div class="fill prop" style="width:75.4%;"></div><div class="fill" style="width:70.2%;"><span class="val">0.35 vs 0.38</span></div></div></div>
+    <div class="axbar"><span class="name">Context</span><div class="track"><div class="fill prop" style="width:52.4%;"></div><div class="fill" style="width:46.8%;"><span class="val">0.23 vs 0.26</span></div></div></div>
+    <div class="axbar"><span class="name">Communication</span><div class="track"><div class="fill prop" style="width:100%;"></div><div class="fill" style="width:98.3%;"><span class="val">0.65 vs 0.67</span></div></div></div>
+    <div class="axbar"><span class="name">Terminology</span><div class="track"><div class="fill prop" style="width:33.6%;"></div><div class="fill" style="width:27.5%;"><span class="val">0.18 vs 0.22</span></div></div></div>
+  </div>
+  <p class="cap">Teal is MedGemma 27B, grey is the paid-model average. It comes within 0.01 to 0.04 on every measure, closest on Communication. A 27B open model tuned for the task keeps pace with models many times its size, at a fraction of the cost.</p>
+  <div class="footer"><span>Sakhi by SimPPL</span><span class="r">A4</span></div>
+</section>
+
+</div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+Reveal.initialize({ hash:true, center:true, margin:0.055, width:1280, height:720,
+  transition:'fade', controls:true, progress:true });
+// auto-number footers so inserting a slide never desyncs the numbers; appendix (A*) keeps its label
+Reveal.on('ready', () => {
+  document.querySelectorAll('.slides > section').forEach((s, i) => {
+    const r = s.querySelector('.footer .r');
+    if (r && !r.textContent.trim().startsWith('A')) r.textContent = i + 1;
+  });
+});
+</script>
