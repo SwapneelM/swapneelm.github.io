@@ -70,7 +70,7 @@
 .reveal .cmap .crow .lb{ font-size:14px; }
 .reveal .cmap .crow .ct{ font-size:13.5px; }
 .reveal .cmap .cpost .au{ font-size:13.5px; }
-.reveal .cmap .cpost .au small{ font-size:12px; }
+.reveal .cmap .cpost .au small{ font-size:13.5px; letter-spacing:.08em; }
 .reveal .cmap .cpost .tt{ font-size:14px; }
 .reveal .cmap .cpost .ints{ font-size:13.5px; }
 .reveal .cmap .cnote{ font-size:14px; }
@@ -121,43 +121,110 @@
   </div>
 </section>
 
-<!-- ═══ 02 · TRUTH CHANGES ═══ -->
+<!-- ═══ 02 · NEWSROOM AI ═══ -->
 <section class="lite" data-background-color="#f7f5f0">
   <div class="si">
     <div class="si-body">
-      <h2>Truth changes as evidence arrives</h2>
-      <p class="mt16" style="font-size:18px; max-width:62ch;">Rarely is all the evidence available on day one. What read as true yesterday may not hold today.</p>
-      <div class="pipeline mt32">
-        <div class="pl-node fragment">
-          <div class="st">DAY ONE</div>
-          <h3>First reports</h3>
-          <p>A few facts, many gaps. Early accounts fill the gaps with guesses.</p>
+      <h2>Newsrooms already report with AI</h2>
+      <div class="mt24" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <div class="fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
+          <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">2014 · AP · AUTOMATED EARNINGS STORIES</p>
+          <p class="mt10" style="font-size:16.5px;">The AP wrote about <strong>300</strong> quarterly earnings stories by hand. Automation took the count to <strong>3,000 a quarter</strong> within a year, then 3,700 by mid-2015.</p>
         </div>
-        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
-        <div class="pl-node fragment">
-          <div class="st">WEEKS</div>
-          <h3>The record builds</h3>
-          <p>Documents surface. Officials answer. Fact-checks land. The account shifts.</p>
+        <div class="fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
+          <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">2016 · WASHINGTON POST · HELIOGRAF</p>
+          <p class="mt10" style="font-size:16.5px;">Heliograf wrote about <strong>850 stories</strong> in its first year: around 300 Rio Olympics briefs, and 500 election stories that drew over 500,000 clicks.</p>
         </div>
-        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
-        <div class="pl-node fragment">
-          <div class="st">MONTHS</div>
-          <h3>The investigation lands</h3>
-          <p>Yesterday's version gets revised. That is evidence doing its job.</p>
+        <div class="fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
+          <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">2023 · LSE JOURNALISMAI SURVEY</p>
+          <p class="mt10" style="font-size:16.5px;">Across <strong>105 news organisations in 46 countries</strong>, around 85% of respondents had at least experimented with generative AI.</p>
+        </div>
+        <div class="fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
+          <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">2024 · CITYMEETINGS.NYC</p>
+          <p class="mt10" style="font-size:16.5px;">Vikram Oberoi built citymeetings.nyc: it transcribes <strong>every NYC Council meeting</strong>, and LLMs cut each one into chapters and summaries he reviews before publishing.</p>
         </div>
       </div>
-      <div class="mt44 fragment" style="border-left:4px solid #12131a; padding:14px 0 14px 20px; max-width:72ch;">
-        <p style="font-size:21px;"><strong>Post-truth, as I use the word:</strong> the version of the truth available today is not the same as yesterday's.</p>
+      <div class="mt24 fragment" style="border-left:4px solid #12131a; padding:12px 0 12px 20px; max-width:76ch;">
+        <p style="font-size:18px;"><strong>Lou Ferrara, AP managing editor, 2014:</strong> "I can't have journalists spending a ton of time data processing stuff. Instead I need them reporting."</p>
       </div>
     </div>
     <div class="foot">
-      <span class="src">SPEAKER'S FRAMING · EXAMPLES FOLLOW IN TWO CASE FILES</span>
+      <span class="src">SRC · Poynter 2014-15 · Digiday Sept 2017 · JournalismAI, LSE Polis 2023 · citymeetings.nyc · NY1 Oct 2024</span>
       <span class="brand">ARBITER · SIMPPL</span>
     </div>
   </div>
 </section>
 
-<!-- ═══ 03 · SMOKE AND FIRE ═══ -->
+<!-- ═══ 03 · OSINT + DATA JOURNALISM ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>The new toolkit: OSINT and data journalism</h2>
+      <p class="mt16" style="font-size:18px; max-width:74ch;">OSINT means reporting from open sources: public posts, satellite photos, flight logs. Data journalism means reporting from datasets too large to read page by page.</p>
+      <div class="mt24" style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
+        <div class="fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
+          <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">2016 · BELLINGCAT · MH17</p>
+          <p class="mt10" style="font-size:16px;">Bellingcat traced the Buk launcher that downed MH17 to a Russian brigade, from soldiers' social posts and satellite imagery. The official investigation reached <strong>the same conclusion</strong> in 2018.</p>
+        </div>
+        <div class="fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
+          <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">2019 · NYT VISUAL INVESTIGATIONS</p>
+          <p class="mt10" style="font-size:16px;">The Times proved Russian jets bombed <strong>four Syrian hospitals in 12 hours</strong>, from intercepted cockpit radio, plane-spotter logs, and video by local journalists.</p>
+        </div>
+        <div class="fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
+          <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">2021 · ICIJ · PANDORA PAPERS</p>
+          <p class="mt10" style="font-size:16px;"><strong>11.9 million leaked records</strong>, 2.94 terabytes. Machine learning separated the forms; ICIJ's Datashare opened them to 600+ journalists in 150 outlets.</p>
+        </div>
+      </div>
+      <p class="mt24 fragment" style="font-size:18px; max-width:74ch;">Arbiter applies the same method to public social media: the posts are the open source.</p>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · bellingcat.com Feb 2016 · Dutch Prosecution Service (JIT) May 2018 · NYT Oct 2019 · ICIJ Oct 2021</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 04 · AI IN THE NEWSROOM MAP ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>Four places AI already fits in the newsroom</h2>
+      <p class="mt16" style="font-size:18px; max-width:64ch;">This is the workflow we will walk through today, on two live case files.</p>
+      <div class="pipeline p4 mt24">
+        <div class="pl-node fragment">
+          <div class="st">01 · NEWSGATHERING</div>
+          <h3>See what is spreading</h3>
+          <p>What is moving, on which platforms, pushed by which accounts.</p>
+        </div>
+        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node fragment">
+          <div class="st">02 · CLAIMS SOURCING</div>
+          <h3>Pull out the checkable claims</h3>
+          <p>Separate what is asserted from the noise around it.</p>
+        </div>
+        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node fragment">
+          <div class="st">03 · VERIFICATION</div>
+          <h3>Set claims against the record</h3>
+          <p>Official statements, coverage, and fact-checks, attached to each claim.</p>
+        </div>
+        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node fragment">
+          <div class="st">04 · INVESTIGATION</div>
+          <h3>Ask deeper questions</h3>
+          <p>Who coordinates, what changed, and every answer cites its posts.</p>
+        </div>
+      </div>
+      <p class="mt24 fragment" style="font-size:17px;">The tool behind the walkthrough is <strong>Arbiter</strong>: it reads public conversation across X, YouTube, Facebook, Bluesky, Reddit, Telegram, and Instagram.</p>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · arbiter.simppl.org · two public case studies follow</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 05 · SMOKE AND FIRE ═══ -->
 <section class="lite" data-background-color="#f7f5f0">
   <div class="si">
     <div class="si-body">
@@ -198,51 +265,13 @@
       <p class="mt24 fragment" style="font-size:18px; max-width:70ch;">No ideology owns this trick; it is centuries old. It works even on real fires: decoy smoke points you at a different one.</p>
     </div>
     <div class="foot">
-      <span class="src">FRAMING SLIDE · HISTORICAL RECEIPTS NEXT</span>
+      <span class="src">FRAMING SLIDE · INDUSTRY RECEIPTS IN THE APPENDIX</span>
       <span class="brand">ARBITER · SIMPPL</span>
     </div>
   </div>
 </section>
 
-<!-- ═══ 04 · DECOY SMOKE: TOBACCO + SUGAR ═══ -->
-<section class="lite" data-background-color="#f7f5f0">
-  <div class="si">
-    <div class="si-body">
-      <h2>Decoy smoke is an old industry playbook</h2>
-      <p class="mt16" style="font-size:18px; max-width:66ch;">When the smoke was real, both industries manufactured other smoke and pointed at a different fire.</p>
-      <div class="cols mt32 top">
-        <div>
-          <h3>Tobacco: doubt the fire itself</h3>
-          <div class="mt16 fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
-            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">1954 · "A FRANK STATEMENT TO CIGARETTE SMOKERS"</p>
-            <p class="mt10" style="font-size:16.5px;">A full-page industry ad in <strong>448 newspapers</strong>, reaching some 43 million readers, promising research into "all phases of tobacco use and health."</p>
-          </div>
-          <div class="mt16 fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
-            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">1969 · BROWN &amp; WILLIAMSON INTERNAL MEMO</p>
-            <p class="mt10" style="font-size:18px;"><strong>"Doubt is our product</strong> since it is the best means of competing with the 'body of fact' that exists in the mind of the general public."</p>
-          </div>
-        </div>
-        <div>
-          <h3>Sugar: point at fat and sloth</h3>
-          <div class="mt16 fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
-            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">1967 · "PROJECT 226"</p>
-            <p class="mt10" style="font-size:16.5px;">The Sugar Research Foundation paid three Harvard scientists <strong>$6,500</strong> for a New England Journal of Medicine review that blamed heart disease on fat and cleared sugar. Undisclosed until 2016.</p>
-          </div>
-          <div class="mt16 fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
-            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">2015 · GLOBAL ENERGY BALANCE NETWORK</p>
-            <p class="mt10" style="font-size:16.5px;">Coca-Cola put <strong>$1.5 million</strong> behind a nonprofit blaming obesity on inactivity instead of diet. Exposed, it closed within months.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="foot">
-      <span class="src">SRC · Kearns, Schmidt &amp; Glantz, JAMA Int Med 2016 · NYT Aug 9 2015 · UCSF Tobacco Documents</span>
-      <span class="brand">ARBITER · SIMPPL</span>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ 05 · SMOKE IS MADE OF CLAIMS ═══ -->
+<!-- ═══ 06 · SMOKE IS MADE OF CLAIMS ═══ -->
 <section class="dark" data-background-color="#0b0d12">
   <div class="si">
     <div class="si-body">
@@ -268,7 +297,7 @@
   </div>
 </section>
 
-<!-- ═══ 06 · MISSION ═══ -->
+<!-- ═══ 07 · MISSION ═══ -->
 <section class="dark" data-background-color="#0b0d12">
   <div class="si">
     <div class="si-body">
@@ -299,46 +328,6 @@
     </div>
     <div class="foot">
       <span class="src">SIMPPL · NONPROFIT SINCE 2021 · 14 PEER-REVIEWED PAPERS</span>
-      <span class="brand">ARBITER · SIMPPL</span>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ 07 · AI IN THE NEWSROOM MAP ═══ -->
-<section class="lite" data-background-color="#f7f5f0">
-  <div class="si">
-    <div class="si-body">
-      <h2>Four places AI already fits in the newsroom</h2>
-      <p class="mt16" style="font-size:18px; max-width:64ch;">Not the whole newsroom, and not the only version. This is the one we will walk through today, on two live case files.</p>
-      <div class="pipeline p4 mt24">
-        <div class="pl-node fragment">
-          <div class="st">01 · NEWSGATHERING</div>
-          <h3>See what is spreading</h3>
-          <p>What is moving, on which platforms, pushed by which accounts.</p>
-        </div>
-        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
-        <div class="pl-node fragment">
-          <div class="st">02 · CLAIMS SOURCING</div>
-          <h3>Pull out the checkable claims</h3>
-          <p>Separate what is asserted from the noise around it.</p>
-        </div>
-        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
-        <div class="pl-node fragment">
-          <div class="st">03 · VERIFICATION</div>
-          <h3>Set claims against the record</h3>
-          <p>Official statements, coverage, and fact-checks, attached to each claim.</p>
-        </div>
-        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
-        <div class="pl-node fragment">
-          <div class="st">04 · INVESTIGATION</div>
-          <h3>Ask deeper questions</h3>
-          <p>Who coordinates, what changed, and every answer cites its posts.</p>
-        </div>
-      </div>
-      <p class="mt24 fragment" style="font-size:17px;">The tool behind the walkthrough is <strong>Arbiter</strong>: it reads public conversation across X, YouTube, Facebook, Bluesky, Reddit, Telegram, and Instagram.</p>
-    </div>
-    <div class="foot">
-      <span class="src">SRC · arbiter.simppl.org · two public case studies follow</span>
       <span class="brand">ARBITER · SIMPPL</span>
     </div>
   </div>
@@ -744,6 +733,80 @@
     </div>
     <div class="foot">
       <span class="src">SIMPPL · U.S. 501(C)(3) · NONPROFIT SINCE 2021</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 17 · TRUTH CHANGES ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>Truth changes as evidence arrives</h2>
+      <p class="mt16" style="font-size:18px; max-width:62ch;">Rarely is all the evidence available on day one. What read as true yesterday may not hold today.</p>
+      <div class="pipeline mt32">
+        <div class="pl-node">
+          <div class="st">DAY ONE</div>
+          <h3>First reports</h3>
+          <p>A few facts, many gaps. Early accounts fill the gaps with guesses.</p>
+        </div>
+        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node">
+          <div class="st">WEEKS</div>
+          <h3>The record builds</h3>
+          <p>Documents surface. Officials answer. Fact-checks land. The account shifts.</p>
+        </div>
+        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node">
+          <div class="st">MONTHS</div>
+          <h3>The investigation lands</h3>
+          <p>Yesterday's version gets revised. That is evidence doing its job.</p>
+        </div>
+      </div>
+      <div class="mt44" style="border-left:4px solid #12131a; padding:14px 0 14px 20px; max-width:72ch;">
+        <p style="font-size:21px;"><strong>Post-truth, as I use the word:</strong> the version of the truth available today is not the same as yesterday's.</p>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">APPENDIX · SPEAKER'S FRAMING · THE CASE FILES ARE THE EXAMPLES</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 18 · DECOY SMOKE: TOBACCO + SUGAR ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>Decoy smoke is an old industry playbook</h2>
+      <p class="mt16" style="font-size:18px; max-width:66ch;">When the smoke was real, both industries manufactured other smoke and pointed at a different fire.</p>
+      <div class="cols mt32 top">
+        <div>
+          <h3>Tobacco: doubt the fire itself</h3>
+          <div class="mt16" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
+            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">1954 · "A FRANK STATEMENT TO CIGARETTE SMOKERS"</p>
+            <p class="mt10" style="font-size:16.5px;">A full-page industry ad in <strong>448 newspapers</strong>, reaching some 43 million readers, promising research into "all phases of tobacco use and health."</p>
+          </div>
+          <div class="mt16" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
+            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">1969 · BROWN &amp; WILLIAMSON INTERNAL MEMO</p>
+            <p class="mt10" style="font-size:18px;"><strong>"Doubt is our product</strong> since it is the best means of competing with the 'body of fact' that exists in the mind of the general public."</p>
+          </div>
+        </div>
+        <div>
+          <h3>Sugar: point at fat and sloth</h3>
+          <div class="mt16" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
+            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">1967 · "PROJECT 226"</p>
+            <p class="mt10" style="font-size:16.5px;">The Sugar Research Foundation paid three Harvard scientists <strong>$6,500</strong> for a New England Journal of Medicine review that blamed heart disease on fat and cleared sugar. Undisclosed until 2016.</p>
+          </div>
+          <div class="mt16" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
+            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">2015 · GLOBAL ENERGY BALANCE NETWORK</p>
+            <p class="mt10" style="font-size:16.5px;">Coca-Cola put <strong>$1.5 million</strong> behind a nonprofit blaming obesity on inactivity instead of diet. Exposed, it closed within months.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">APPENDIX · SRC · Kearns, Schmidt &amp; Glantz, JAMA Int Med 2016 · NYT Aug 9 2015 · UCSF Tobacco Documents</span>
       <span class="brand">ARBITER · SIMPPL</span>
     </div>
   </div>
