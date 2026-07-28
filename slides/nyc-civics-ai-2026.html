@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What should we believe? · NYC Civics Pilot</title><!-- v1: talk deck, Maryland + Fountains case files · aligned to NYC Civics Pilot Part 2 (Social Media, Technology, and AI) -->
+<link rel="stylesheet" href="nyc-civics-2026/assets/vendor/reveal/reset.css">
+<link rel="stylesheet" href="nyc-civics-2026/assets/vendor/reveal/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="nyc-civics-2026/components/arbiter.css?v=1">
+<style>
+/* deck-local components, arbiter tokens only */
+.reveal .postwall{ display:flex; flex-direction:column; gap:14px; }
+.reveal .post{ border:1px solid var(--vline); background:var(--panel); border-radius:8px;
+  padding:14px 16px 12px; }
+.reveal .post .ph{ display:flex; align-items:baseline; gap:10px; }
+.reveal .post .ph .hd{ font-family:"IBM Plex Mono",monospace; font-size:14px; color:#ffd900;
+  letter-spacing:.03em; }
+.reveal .post .ph .pl{ margin-left:auto; font-family:"IBM Plex Mono",monospace; font-size:14px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--dfaint); }
+.reveal .post .pt{ font-size:16px; line-height:1.5; color:var(--dmut); margin-top:9px; }
+.reveal .post .pt b{ color:var(--dtext); }
+.reveal .post .pm{ font-family:"IBM Plex Mono",monospace; font-size:14px; color:var(--dfaint);
+  margin-top:9px; }
+.reveal .post .pm b{ color:#ff7a6b; font-weight:600; }
+.reveal .post.official .ph .hd{ color:#5fe0a0; }
+.reveal section.lite .post{ background:#fffdf8; border-color:#dcd8cd; }
+.reveal section.lite .post .pt{ color:#3c4048; }
+.reveal section.lite .post .pt b{ color:#12131a; }
+.reveal section.lite .post .pm{ color:#878b9d; }
+.reveal .ytwall{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.reveal .ytcard{ background:#0f1218; border:1px solid #272c39; border-radius:8px; overflow:hidden;
+  display:flex; flex-direction:column; }
+.reveal .ytcard img{ width:100%; aspect-ratio:16/9; object-fit:cover; display:block; }
+.reveal .ytwall.tight .ytcard img{ aspect-ratio:2.15/1; object-position:50% 100%; }
+.reveal .ytwall.tight .ytcard .tt{ font-size:14px; }
+.reveal .ytcard .cap{ padding:10px 12px 12px; display:flex; flex-direction:column; gap:5px; }
+.reveal .ytcard .tt{ font-size:15px; font-weight:600; line-height:1.35; color:#e8eaf0; }
+.reveal .ytcard .mt{ font-family:"IBM Plex Mono",monospace; font-size:14px; color:#9aa1b2; }
+.reveal .ytcard .mt b{ color:#ffd900; font-weight:600; }
+.reveal .pipeline.p4{ grid-template-columns:1fr 36px 1fr 36px 1fr 36px 1fr; }
+.reveal .pipeline.p4 .pl-node{ padding:16px 16px 14px; }
+.reveal .pipeline.p4 .pl-node h3{ font-size:19px; }
+.reveal .pipeline.p4 .pl-arrow svg{ width:22px; height:22px; }
+.reveal .stagechips{ display:flex; gap:10px; flex-wrap:wrap; }
+.reveal .stagechips i{ font-family:"IBM Plex Mono",monospace; font-style:normal; font-size:14px;
+  letter-spacing:.06em; border:1px solid var(--vline); color:var(--dmut); padding:6px 12px 5px; }
+.reveal .stagechips i.on{ border-color:#ffd900; color:#ffd900; }
+.reveal section.lite .stagechips i{ border-color:#cfc9ba; color:#5a5e6a; }
+.reveal section.lite .stagechips i.on{ border-color:#b8860b; color:#8a6d00; }
+/* GATE-1 type-floor raise (2026-07-28): kit micro-labels measured 10.5-13px at
+   1280x720. Content labels go to >= 14px; foot/SRC and cmap mono counters sit at
+   13.5px as the dense-reference exception. Deck-local so other kit decks keep
+   their own scale. */
+.reveal .si .foot{ font-size:13.5px; }
+.reveal .case-plate .no{ font-size:14px; letter-spacing:.18em; white-space:nowrap; }
+.reveal .case-plate .win{ font-size:14px; letter-spacing:.04em; white-space:nowrap; }
+.reveal .pl-node .st{ font-size:14px; letter-spacing:.1em; }
+.reveal .act .n small{ font-size:14px; letter-spacing:.06em; }
+.reveal .act p{ font-size:16px; }
+.reveal .claimrow .c{ font-size:16px; }
+.reveal .claimrow .verdict{ font-size:14px; }
+.reveal .tiny{ font-size:14px; }
+.reveal .net text{ font-size:14px; }
+.reveal .dcard .cap{ font-size:14px; }
+.reveal .dcard .cap .fr{ font-size:14px; }
+.reveal .cmap .chead{ font-size:13.5px; letter-spacing:.1em; }
+.reveal .cmap .crow .lb{ font-size:14px; }
+.reveal .cmap .crow .ct{ font-size:13.5px; }
+.reveal .cmap .cpost .au{ font-size:13.5px; }
+.reveal .cmap .cpost .au small{ font-size:12px; }
+.reveal .cmap .cpost .tt{ font-size:14px; }
+.reveal .cmap .cpost .ints{ font-size:13.5px; }
+.reveal .cmap .cnote{ font-size:14px; }
+.reveal .cmap-hint{ font-size:13.5px; letter-spacing:.1em; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══ 01 · TITLE ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <div class="cols w64">
+        <div>
+          <h1 style="color:#e9eaf0; font-size:88px; line-height:1.02;">What should we believe?</h1>
+          <p class="lede mt24" style="font-size:26px; max-width:46ch; color:#c9cdd8;">How stories about government get rewritten in your feed, and the AI we built to check them against the record.</p>
+          <p class="mt44" style="font-size:17px; color:#9aa1b2;"><b style="color:#e9eaf0;">Swapneel Mehta</b> · Founder, SimPPL · NYC Civics Pilot · Part 2: Social Media, Technology, and AI</p>
+        </div>
+        <div>
+          <svg class="net" viewBox="0 0 520 520" style="width:100%; max-height:460px;">
+            <line x1="330" y1="260" x2="180" y2="180"/><line x1="330" y1="260" x2="280" y2="120"/>
+            <line x1="330" y1="260" x2="420" y2="90"/><line x1="330" y1="260" x2="470" y2="200"/>
+            <line x1="330" y1="260" x2="450" y2="370"/><line x1="330" y1="260" x2="350" y2="440"/>
+            <line x1="330" y1="260" x2="210" y2="420"/><line x1="330" y1="260" x2="100" y2="350"/>
+            <line x1="180" y1="180" x2="90" y2="80"/><line x1="180" y1="180" x2="60" y2="220"/>
+            <line x1="280" y1="120" x2="200" y2="60"/><line x1="420" y1="90" x2="280" y2="120"/>
+            <line x1="450" y1="370" x2="480" y2="300"/><line x1="210" y1="420" x2="140" y2="470"/>
+            <line x1="100" y1="350" x2="60" y2="220"/><line x1="470" y1="200" x2="480" y2="300"/>
+            <circle cx="90" cy="80" r="7"/><circle cx="200" cy="60" r="5" class="b"/>
+            <circle cx="420" cy="90" r="8"/><circle cx="470" cy="200" r="6" class="b"/>
+            <circle cx="450" cy="370" r="9"/><circle cx="350" cy="440" r="6"/>
+            <circle cx="210" cy="420" r="10" class="b"/><circle cx="100" cy="350" r="7"/>
+            <circle cx="60" cy="220" r="5"/><circle cx="180" cy="180" r="8" class="b"/>
+            <circle cx="280" cy="120" r="6"/><circle cx="140" cy="470" r="4"/>
+            <circle cx="480" cy="300" r="5"/><circle cx="330" cy="260" r="14" class="hub"/>
+            <circle cx="222" cy="495" r="6" class="hub"/>
+            <text x="234" y="500">= AMPLIFIER</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SIMPPL · U.S. 501(C)(3) · AWARDED BY GOOGLE · MOZILLA · WIKIMEDIA · FORD · OMIDYAR</span>
+      <span class="brand"><a href="https://arbiter.simppl.org" style="color:#9aa1b2; border:none;">arbiter.simppl.org</a></span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 02 · TRUTH CHANGES ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>Truth changes as evidence arrives</h2>
+      <p class="mt16" style="font-size:18px; max-width:62ch;">Rarely is all the evidence available on day one. What read as true yesterday may not hold today.</p>
+      <div class="pipeline mt32">
+        <div class="pl-node fragment">
+          <div class="st">DAY ONE</div>
+          <h3>First reports</h3>
+          <p>A few facts, many gaps. Early accounts fill the gaps with guesses.</p>
+        </div>
+        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node fragment">
+          <div class="st">WEEKS</div>
+          <h3>The record builds</h3>
+          <p>Documents surface. Officials answer. Fact-checks land. The account shifts.</p>
+        </div>
+        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node fragment">
+          <div class="st">MONTHS</div>
+          <h3>The investigation lands</h3>
+          <p>Yesterday's version gets revised. That is evidence doing its job.</p>
+        </div>
+      </div>
+      <div class="mt44 fragment" style="border-left:4px solid #12131a; padding:14px 0 14px 20px; max-width:72ch;">
+        <p style="font-size:21px;"><strong>Post-truth, as I use the word:</strong> the version of the truth available today is not the same as yesterday's.</p>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SPEAKER'S FRAMING · EXAMPLES FOLLOW IN TWO CASE FILES</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 03 · SMOKE AND FIRE ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>Enough smoke, and we assume a fire</h2>
+      <p class="mt16" style="font-size:18px; max-width:66ch;">"Where there's smoke, there's fire" served us well. It is now a target: produce enough smoke and people supply the fire themselves.</p>
+      <svg viewBox="0 0 1100 350" style="width:100%; max-width:1050px; display:block; margin:26px auto 0;">
+        <g class="fragment" data-fragment-index="1">
+          <path d="M 150 250 C 138 230 142 216 152 202 C 156 214 162 218 164 212 C 172 220 176 234 170 246 C 184 238 186 222 180 208 C 196 222 200 240 190 254 C 180 266 160 266 150 250 Z" fill="#b4472e"/>
+          <rect x="112" y="258" width="106" height="7" rx="3.5" fill="#12131a"/>
+          <ellipse cx="163" cy="180" rx="26" ry="14" fill="#12131a" opacity="0.85"/>
+          <ellipse cx="172" cy="146" rx="32" ry="16" fill="#12131a" opacity="0.6"/>
+          <ellipse cx="158" cy="110" rx="38" ry="18" fill="#12131a" opacity="0.4"/>
+          <ellipse cx="170" cy="72" rx="46" ry="20" fill="#12131a" opacity="0.25"/>
+          <text x="165" y="310" text-anchor="middle" font-family="IBM Plex Mono" font-size="15" letter-spacing="2" fill="#12131a" font-weight="600">ONE FIRE, ONE SMOKE</text>
+        </g>
+        <line x1="380" y1="20" x2="380" y2="300" stroke="#cfc9ba" stroke-width="1.5" stroke-dasharray="2 6"/>
+        <g class="fragment" data-fragment-index="2">
+          <g font-family="Inter">
+            <circle cx="490" cy="230" r="17" fill="#fffdf8" stroke="#12131a" stroke-width="2"/>
+            <circle cx="580" cy="230" r="17" fill="#12131a"/>
+            <circle cx="670" cy="230" r="17" fill="#d64545"/>
+            <circle cx="760" cy="230" r="17" fill="#fffdf8" stroke="#12131a" stroke-width="2"/>
+            <circle cx="850" cy="230" r="17" fill="#12131a"/>
+            <circle cx="940" cy="230" r="17" fill="#fffdf8" stroke="#12131a" stroke-width="2"/>
+          </g>
+          <g fill="#d64545">
+            <ellipse cx="490" cy="185" rx="20" ry="11" opacity="0.8"/><ellipse cx="497" cy="155" rx="26" ry="13" opacity="0.55"/><ellipse cx="486" cy="122" rx="32" ry="15" opacity="0.3"/>
+            <ellipse cx="580" cy="185" rx="20" ry="11" opacity="0.8"/><ellipse cx="573" cy="155" rx="26" ry="13" opacity="0.55"/><ellipse cx="584" cy="122" rx="32" ry="15" opacity="0.3"/>
+            <ellipse cx="670" cy="185" rx="20" ry="11" opacity="0.8"/><ellipse cx="677" cy="155" rx="26" ry="13" opacity="0.55"/><ellipse cx="666" cy="122" rx="32" ry="15" opacity="0.3"/>
+            <ellipse cx="760" cy="185" rx="20" ry="11" opacity="0.8"/><ellipse cx="753" cy="155" rx="26" ry="13" opacity="0.55"/><ellipse cx="764" cy="122" rx="32" ry="15" opacity="0.3"/>
+            <ellipse cx="850" cy="185" rx="20" ry="11" opacity="0.8"/><ellipse cx="857" cy="155" rx="26" ry="13" opacity="0.55"/><ellipse cx="846" cy="122" rx="32" ry="15" opacity="0.3"/>
+            <ellipse cx="940" cy="185" rx="20" ry="11" opacity="0.8"/><ellipse cx="933" cy="155" rx="26" ry="13" opacity="0.55"/><ellipse cx="944" cy="122" rx="32" ry="15" opacity="0.3"/>
+          </g>
+          <line x1="440" y1="262" x2="990" y2="262" stroke="#12131a" stroke-width="2.5"/>
+          <text x="715" y="310" text-anchor="middle" font-family="IBM Plex Mono" font-size="15" letter-spacing="2" fill="#d64545" font-weight="600">MANY SMOKES, NO FIRE</text>
+        </g>
+      </svg>
+      <p class="mt24 fragment" style="font-size:18px; max-width:70ch;">No ideology owns this trick; it is centuries old. It works even on real fires: decoy smoke points you at a different one.</p>
+    </div>
+    <div class="foot">
+      <span class="src">FRAMING SLIDE · HISTORICAL RECEIPTS NEXT</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 04 · DECOY SMOKE: TOBACCO + SUGAR ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>Decoy smoke is an old industry playbook</h2>
+      <p class="mt16" style="font-size:18px; max-width:66ch;">When the smoke was real, both industries manufactured other smoke and pointed at a different fire.</p>
+      <div class="cols mt32 top">
+        <div>
+          <h3>Tobacco: doubt the fire itself</h3>
+          <div class="mt16 fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
+            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">1954 · "A FRANK STATEMENT TO CIGARETTE SMOKERS"</p>
+            <p class="mt10" style="font-size:16.5px;">A full-page industry ad in <strong>448 newspapers</strong>, reaching some 43 million readers, promising research into "all phases of tobacco use and health."</p>
+          </div>
+          <div class="mt16 fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
+            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">1969 · BROWN &amp; WILLIAMSON INTERNAL MEMO</p>
+            <p class="mt10" style="font-size:18px;"><strong>"Doubt is our product</strong> since it is the best means of competing with the 'body of fact' that exists in the mind of the general public."</p>
+          </div>
+        </div>
+        <div>
+          <h3>Sugar: point at fat and sloth</h3>
+          <div class="mt16 fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
+            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">1967 · "PROJECT 226"</p>
+            <p class="mt10" style="font-size:16.5px;">The Sugar Research Foundation paid three Harvard scientists <strong>$6,500</strong> for a New England Journal of Medicine review that blamed heart disease on fat and cleared sugar. Undisclosed until 2016.</p>
+          </div>
+          <div class="mt16 fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:14px 18px;">
+            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">2015 · GLOBAL ENERGY BALANCE NETWORK</p>
+            <p class="mt10" style="font-size:16.5px;">Coca-Cola put <strong>$1.5 million</strong> behind a nonprofit blaming obesity on inactivity instead of diet. Exposed, it closed within months.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · Kearns, Schmidt &amp; Glantz, JAMA Int Med 2016 · NYT Aug 9 2015 · UCSF Tobacco Documents</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 05 · SMOKE IS MADE OF CLAIMS ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <h2>The smoke is made of claims</h2>
+      <p class="mt16" style="font-size:18px; max-width:64ch; color:#c9cdd8;">Outrageous, controversial, sticky. A claim needs no basis to travel; outrage is fuel enough.</p>
+      <svg viewBox="0 0 1100 300" style="width:100%; max-width:1000px; display:block; margin:30px auto 0;">
+        <text x="30" y="60" font-family="IBM Plex Mono" font-size="16" fill="#ff7a6b" letter-spacing="2">FALSE STORY</text>
+        <rect x="30" y="80" width="160" height="44" fill="#d64545" class="fragment" data-fragment-index="1"/>
+        <text x="210" y="108" font-family="Space Grotesk" font-size="20" font-weight="700" fill="#e9eaf0" class="fragment" data-fragment-index="1">reaches 1,500 people</text>
+        <text x="30" y="190" font-family="IBM Plex Mono" font-size="16" fill="#5fe0a0" letter-spacing="2">TRUE STORY</text>
+        <rect x="30" y="210" width="960" height="44" fill="#2e3442" stroke="#5fe0a0" stroke-width="1.5" class="fragment" data-fragment-index="2"/>
+        <text x="520" y="238" font-family="Space Grotesk" font-size="20" font-weight="700" fill="#5fe0a0" text-anchor="middle" class="fragment" data-fragment-index="2">takes about six times as long</text>
+      </svg>
+      <div class="cols mt32">
+        <p class="fragment" style="font-size:17px; color:#c9cdd8;">On Twitter, true stories took <strong style="color:#e9eaf0;">about six times as long</strong> as false ones to reach 1,500 people.</p>
+        <p class="fragment" style="font-size:17px; color:#c9cdd8;">Falsehoods were <strong style="color:#e9eaf0;">70% more likely to be retweeted</strong> than the truth. 126,000 retweet chains, 4.5M tweets.</p>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · Vosoughi, Roy &amp; Aral, Science 2018 · news.mit.edu 2018-03-08</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 06 · MISSION ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <h2>My job: make the investigation faster than the smoke</h2>
+      <div class="cols w64 mt32 top">
+        <div>
+          <p style="font-size:19px; color:#c9cdd8;">Facts are how you judge claims. Investigations produce the facts. But investigations take time, and the smoke does not wait.</p>
+          <p class="mt16" style="font-size:19px; color:#c9cdd8;">We build AI that speeds investigations up. You <strong style="color:#ffd900;">dispel the smoke</strong>, and see whether a fire exists, and where.</p>
+          <p class="mt24" style="font-size:19px; color:#e9eaf0;"><strong>We fight public deception campaigns</strong> that work to bend public opinion on:</p>
+          <div class="stagechips mt16">
+            <i class="fragment">ELECTIONS</i><i class="fragment">HEALTH</i><i class="fragment">POLICY</i><i class="fragment">DEMOCRACY</i>
+          </div>
+        </div>
+        <div>
+          <svg viewBox="0 0 400 360" style="width:100%; max-width:380px;">
+            <ellipse cx="200" cy="90" rx="120" ry="48" fill="#2e3442" opacity="0.9"/>
+            <ellipse cx="200" cy="90" rx="120" ry="48" fill="none" stroke="#3a4152" stroke-width="1.5"/>
+            <text x="200" y="97" text-anchor="middle" font-family="IBM Plex Mono" font-size="15" fill="#9aa1b2" letter-spacing="2">THE SMOKE</text>
+            <rect x="188" y="158" width="24" height="46" fill="#ffd900"/>
+            <polygon points="200,236 184,204 216,204" fill="#ffd900"/>
+            <text x="252" y="230" font-family="IBM Plex Mono" font-size="14" fill="#ffd900" letter-spacing="1">INVESTIGATE</text>
+            <path d="M 160 290 C 148 270 152 256 162 242 C 166 254 172 258 174 252 C 182 260 186 274 180 286 C 194 278 196 262 190 248 C 206 262 210 280 200 294 C 190 306 170 306 160 290 Z" fill="#d64545"/>
+            <rect x="128" y="300" width="120" height="7" rx="3.5" fill="#e9eaf0"/>
+            <text x="200" y="340" text-anchor="middle" font-family="IBM Plex Mono" font-size="14" fill="#e9eaf0" letter-spacing="2">THE FIRE, IF ANY</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SIMPPL · NONPROFIT SINCE 2021 · 14 PEER-REVIEWED PAPERS</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 07 · AI IN THE NEWSROOM MAP ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>Four places AI already fits in the newsroom</h2>
+      <p class="mt16" style="font-size:18px; max-width:64ch;">Not the whole newsroom, and not the only version. This is the one we will walk through today, on two live case files.</p>
+      <div class="pipeline p4 mt24">
+        <div class="pl-node fragment">
+          <div class="st">01 · NEWSGATHERING</div>
+          <h3>See what is spreading</h3>
+          <p>What is moving, on which platforms, pushed by which accounts.</p>
+        </div>
+        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node fragment">
+          <div class="st">02 · CLAIMS SOURCING</div>
+          <h3>Pull out the checkable claims</h3>
+          <p>Separate what is asserted from the noise around it.</p>
+        </div>
+        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node fragment">
+          <div class="st">03 · VERIFICATION</div>
+          <h3>Set claims against the record</h3>
+          <p>Official statements, coverage, and fact-checks, attached to each claim.</p>
+        </div>
+        <div class="pl-arrow"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node fragment">
+          <div class="st">04 · INVESTIGATION</div>
+          <h3>Ask deeper questions</h3>
+          <p>Who coordinates, what changed, and every answer cites its posts.</p>
+        </div>
+      </div>
+      <p class="mt24 fragment" style="font-size:17px;">The tool behind the walkthrough is <strong>Arbiter</strong>: it reads public conversation across X, YouTube, Facebook, Bluesky, Reddit, Telegram, and Instagram.</p>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · arbiter.simppl.org · two public case studies follow</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 08 · CASE 01 · OFFICIAL RECORD ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="case-plate">
+      <span class="no">Case file 01</span>
+      <span class="nm">Maryland: a vendor error, fixed in the open</span>
+      <span class="win">May 1 – 19 2026 · X · YouTube · Facebook · Bluesky</span>
+    </div>
+    <div class="si-body">
+      <div class="cols top">
+        <div>
+          <div class="acts">
+            <div class="act fragment">
+              <div class="n">01<small>Error</small></div>
+              <div>
+                <p style="font-size:16px;">A vendor coding error sends some voters the <b>wrong party's primary ballot</b>. The vendor cannot tell who was affected.</p>
+              </div>
+            </div>
+            <div class="act fragment">
+              <div class="n">02<small>Fix</small></div>
+              <div>
+                <p style="font-size:16px;">The state announces the error, then mails <b>replacement ballots to everyone</b> served before May 14. Over 500,000 requests.</p>
+              </div>
+            </div>
+            <div class="act fragment">
+              <div class="n">03<small>Safeguard</small></div>
+              <div>
+                <p style="font-size:16px;">Originals are voided. Each return envelope has a unique identifier: <b>one ballot counted per voter</b>.</p>
+              </div>
+            </div>
+          </div>
+          <p class="mt24 fragment" style="font-size:16px; color:#c9cdd8;">The state's election administrator, on the record: <strong style="color:#5fe0a0;">"no fake OR illegal mail-in ballots were distributed."</strong></p>
+        </div>
+        <div>
+          <p class="mono" style="font-size:14px; letter-spacing:.14em; color:#9aa1b2;">HOW IT WAS ANNOUNCED · REAL POSTS FROM THE STUDY</p>
+          <div class="postwall mt16">
+            <div class="post official fragment">
+              <div class="ph"><span class="hd">Maryland Democratic Party</span><span class="pl">Facebook · May 14</span></div>
+              <p class="pt">"The Maryland State Board of Elections has officially begun mailing out primary ballots for the June 23rd election. If you have already requested a mail-in ballot, you should expect it to arrive in your mailbox within the next 4 days."</p>
+              <p class="pm">675 interactions</p>
+            </div>
+            <div class="post official fragment">
+              <div class="ph"><span class="hd">WMAR-2 News Baltimore</span><span class="pl">Facebook · May 15</span></div>
+              <p class="pt">"Maryland State Board of Elections announces mail-in ballot error affecting voters who received ballots before May 14, 2026."</p>
+              <p class="pm">122 interactions</p>
+            </div>
+          </div>
+          <p class="tiny muted mt10">Post text verbatim from the study; a transparent correction, announced before replacements went out.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · elections.maryland.gov (2026 replacement ballots) · FactCheck.org May 2026 · 1,485-post study</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 09 · CASE 01 · THE FEED ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="case-plate">
+      <span class="no">Case file 01</span>
+      <span class="nm">The feed rewrote it: 500,000 "illegal ballots"</span>
+      <span class="win">May 16 – 19 2026 · the same 1,485-post study</span>
+    </div>
+    <div class="si-body">
+      <div class="cols top">
+        <div>
+          <div class="postwall">
+            <div class="post fragment">
+              <div class="ph"><span class="hd">nicksortor</span><span class="pl">X · May 18</span></div>
+              <p class="pt">"🚨 HOLY CRAP! President Trump just revealed over <b>500,000 ILLEGAL MAIL-IN BALLOTS</b> were sent out by Maryland..."</p>
+              <p class="pm"><b>428,941</b> interactions</p>
+            </div>
+            <div class="post fragment">
+              <div class="ph"><span class="hd">EricLDaugh</span><span class="pl">X · May 18</span></div>
+              <p class="pt">"🚨 HOLY CRAP!! ...DOUBLE the amount of mail-in ballots are now circulating the state of Maryland... <b>500,000 turned into 1 MILLION</b>"</p>
+              <p class="pm"><b>495,014</b> interactions</p>
+            </div>
+          </div>
+          <p class="mt16 fragment" style="font-size:16px; color:#c9cdd8;">The coordination run found <strong style="color:#ff7a6b;">one templated line repeated by 50+ distinct accounts</strong>, minutes to hours apart. Nearly all are commentary or activist accounts.</p>
+        </div>
+        <div>
+          <p class="mono" style="font-size:14px; letter-spacing:.14em; color:#9aa1b2;">AND PACKAGED AS NEWS · SITES SHARED IN THE STUDY</p>
+          <div class="dwall mt16" style="grid-template-columns:1fr; gap:12px;">
+            <figure class="dcard fragment"><img class="shot" src="nyc-civics-2026/assets/headlines/crops/zerohedge_card.png" alt="ZeroHedge: Trump Demands DOJ Probe Of Maryland's 500,000 Illegal Mail-In Ballots">
+              <figcaption class="cap"><span class="fr">ZeroHedge · May 18</span></figcaption></figure>
+            <figure class="dcard fragment"><img class="shot" src="nyc-civics-2026/assets/headlines/crops/wnd_card.png" alt="WorldNetDaily: They got caught! Trump urges DOJ investigation into hundreds of thousands of illegal mail-in ballots">
+              <figcaption class="cap"><span class="fr">WND · May 19</span></figcaption></figure>
+          </div>
+          <p class="mt16 fragment" style="font-size:15.5px; color:#9aa1b2;">Also in the study: Newsmax, Fox News, The Gateway Pundit, Townhall.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · saved claims + coordination runs, 1,485-post study · headlines captured Jul 2026</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 10 · CASE 01 · CONCEPT MAP (INTERACTIVE) ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="case-plate">
+      <span class="no">Case file 01</span>
+      <span class="nm">One claim, 256 posts: clustering finds the smoke</span>
+      <span class="win">Twitter tab · 620 posts · 436 users</span>
+    </div>
+    <div class="si-body">
+      <p style="font-size:16px; color:#c9cdd8;">Arbiter clusters the 620 posts into concepts and sub-concepts, with the real posts beneath them.<span class="cmap-hint">click any row</span></p>
+      <div class="cmap mt16" id="cmap">
+        <div class="ccol c1">
+          <div class="chead">Concepts <b>5 of 21 shown</b></div>
+          <div class="crow" data-k="c" data-id="Political Dynamics and Accountability"><span class="lb">Political Dynamics and Accountability</span><span class="ct">166 · 2.7M</span></div>
+          <div class="crow on" data-k="c" data-id="Electoral Integrity Challenges"><span class="lb">Electoral Integrity Challenges</span><span class="ct">357 · 2.4M</span></div>
+          <div class="crow" data-k="c" data-id="Political Conflict and Controversy"><span class="lb">Political Conflict and Controversy</span><span class="ct">39 · 1.3M</span></div>
+          <div class="crow" data-k="c" data-id="Political Manipulation Strategies"><span class="lb">Political Manipulation Strategies</span><span class="ct">18 · 418.6K</span></div>
+          <div class="crow" data-k="c" data-id="Political Maneuvering and Governance"><span class="lb">Political Maneuvering and Governance</span><span class="ct">40 · 208.9K</span></div>
+        </div>
+        <div class="ccol c2">
+          <div class="chead">Sub-concepts <b>4 of 21</b></div>
+          <div class="crow on" data-k="s" data-id="Mail-In Ballot Controversy"><span class="lb">Mail-In Ballot Controversy</span><span class="ct">256 &#9662;</span></div>
+          <div class="crow" data-k="s" data-id="Misinformation in Politics"><span class="lb">Misinformation in Politics</span><span class="ct">52 &#9656;</span></div>
+          <div class="crow" data-k="s" data-id="Political Manipulation Claims"><span class="lb">Political Manipulation Claims</span><span class="ct">26</span></div>
+          <div class="crow" data-k="s" data-id="Democracy Preservation Efforts"><span class="lb">Democracy Preservation Efforts</span><span class="ct">23</span></div>
+        </div>
+        <div class="ccol c3">
+          <div class="chead">Posts <b>3 of 256 · Mail-In Ballot Controversy</b></div>
+          <div class="cpost"><div class="au">EricLDaugh <small>TWITTER</small></div><div class="tt">"🚨 HOLY CRAP!! President Trump just said DOUBLE the amount of mail-in ballots are now circulating the state of Maryland..."</div><div class="ints">495,014 interactions</div></div>
+          <div class="cpost"><div class="au">nicksortor <small>TWITTER</small></div><div class="tt">"🚨 HOLY CRAP! President Trump just revealed over 500,000 ILLEGAL MAIL-IN BALLOTS were sent out by Maryland..."</div><div class="ints">428,941 interactions</div></div>
+          <div class="cpost"><div class="au">nicksortor <small>TWITTER</small></div><div class="tt">"🚨 NOW: President Trump is VERY CONCERNED about mail-in ballots ahead of the midterms..."</div><div class="ints">304,273 interactions</div></div>
+        </div>
+      </div>
+      <p class="tiny muted mt16">The Twitter tab clusters 620 posts from 436 users; the full study spans 1,485 posts on four platforms. The rest opens in <a href="https://arbiter.simppl.org/case-studies/jd713nc58q6xcz718xd9041k9x87054c" style="color:#ff7a6b;">the live study</a>.</p>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · Maryland study topic map, Twitter tab · counts and post text verbatim · captured Jul 2026</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 11 · CASE 01 · SAVE AMERICA ACT ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="case-plate">
+      <span class="no">Case file 01</span>
+      <span class="nm">The claims became ammunition for a bill</span>
+      <span class="win">SAVE America Act · H.R. 7296 · 119th Congress</span>
+    </div>
+    <div class="si-body">
+      <div class="cols top">
+        <div>
+          <h3 class="red-txt">What the bill would do</h3>
+          <div class="claims mt16">
+            <div class="claimrow fragment">
+              <div class="c">Registering to vote requires <b>documentary proof of citizenship, presented in person</b>: a passport, a birth certificate, or equivalent.</div>
+              <div class="verdict contested">Registration</div>
+            </div>
+            <div class="claimrow fragment">
+              <div class="c">Universal mail voting ends; voting by mail requires <b>a photo ID copy to request and to return</b> a ballot.</div>
+              <div class="verdict contested">Mail ballots</div>
+            </div>
+            <div class="claimrow fragment">
+              <div class="c">The Brennan Center estimates <b>21.3 million voting-age citizens</b> lack ready access to the required documents.</div>
+              <div class="verdict fails">Who it hits</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="blue-txt">How the claims and the bill met</h3>
+          <div class="claims mt16">
+            <div class="claimrow fragment">
+              <div class="c"><b>May 15.</b> Maryland announces the vendor error and the replacement plan.</div>
+              <div class="verdict holds">The record</div>
+            </div>
+            <div class="claimrow fragment">
+              <div class="c"><b>May 16.</b> The study's top post (<b>1.32M interactions</b>) demands the Senate attach the SAVE America Act.</div>
+              <div class="verdict fails">The demand</div>
+            </div>
+            <div class="claimrow fragment">
+              <div class="c"><b>May 16–19.</b> The "500,000 illegal ballots" template bursts across 50+ accounts as the Senate weighs the bill.</div>
+              <div class="verdict contested">The smoke</div>
+            </div>
+          </div>
+          <p class="mt16 fragment" style="font-size:16px; color:#c9cdd8;">It passed the House <strong>218–213</strong>; a Senate amendment version fell <strong>48–50</strong> in June. The false-ballot claims circulated exactly while the Senate weighed it.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · congress.gov H.R. 7296 · FactCheck.org Mar/May 2026 · brennancenter.org · NBC News Feb 11 2026</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 12 · CASE 02 · FOUNTAINS HOOK ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="case-plate">
+      <span class="no">Case file 02</span>
+      <span class="nm">Why am I seeing fountains on my feed?</span>
+      <span class="win">May 12 – Jun 2 2026 · YouTube · X · Bluesky · 743 posts</span>
+    </div>
+    <div class="si-body">
+      <div class="ytwall tight">
+        <div class="ytcard fragment"><img src="nyc-civics-2026/assets/yt_thumbs/ZbC0Ml2AdQc_max.jpg" alt="Anton Daniels video thumbnail">
+          <div class="cap"><span class="tt">"People are amazed Trump fixed the fountains in Washington, D.C. ..."</span><span class="mt">Anton Daniels · <b>1.1M views</b></span></div></div>
+        <div class="ytcard fragment"><img src="nyc-civics-2026/assets/yt_thumbs/LnodT9sAGk0_max.jpg" alt="BlackConservative24 video thumbnail">
+          <div class="cap"><span class="tt">"People in D.C Can FINALLY Do This Thanks To Trump!"</span><span class="mt">BlackConservative24 · <b>315K views</b></span></div></div>
+        <div class="ytcard fragment"><img src="nyc-civics-2026/assets/yt_thumbs/FufJOFzRz7A_max.jpg" alt="Black Conservative Perspective video thumbnail">
+          <div class="cap"><span class="tt">"Washington DC Residents SHOCKED They Can Enjoy Life..."</span><span class="mt">Black Conservative Perspective · <b>177K views</b></span></div></div>
+        <div class="ytcard fragment"><img src="nyc-civics-2026/assets/yt_thumbs/f4Nh8UYKIvQ_max.jpg" alt="Anton Daniels second video thumbnail">
+          <div class="cap"><span class="tt">"I've Never Seen These Fountains Work or the City This Clean"</span><span class="mt">Anton Daniels · <b>217K views</b></span></div></div>
+        <div class="ytcard fragment"><img src="nyc-civics-2026/assets/yt_thumbs/SHeX_6iZy9g_max.jpg" alt="US Sun video thumbnail">
+          <div class="cap"><span class="tt">"Trump beautifies reflecting pool with patriotic blue paint"</span><span class="mt">The US Sun · <b>107K views</b></span></div></div>
+        <div class="ytcard fragment"><img src="nyc-civics-2026/assets/yt_thumbs/J3_SGY-_J8g_max.jpg" alt="ABC 7 News video thumbnail">
+          <div class="cap"><span class="tt">"Columbus Fountain in DC flows again after nearly 2 decades"</span><span class="mt">ABC 7 News WJLA · <b>105K views</b></span></div></div>
+      </div>
+      <p class="mt16 fragment" style="font-size:16px; color:#c9cdd8;">Real footage, real reopenings, and a very particular story about who to thank.</p>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · YouTube tab of the fountain study · titles and view counts verbatim · thumbnails from YouTube</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 13 · CASE 02 · THE RECORD ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="case-plate">
+      <span class="no">Case file 02</span>
+      <span class="nm">The record: the repairs are in trouble</span>
+      <span class="win">Same window · biggest post in the study</span>
+    </div>
+    <div class="si-body">
+      <div class="cols w46 top">
+        <div>
+          <div class="ytcard">
+            <img src="nyc-civics-2026/assets/yt_thumbs/1Fe3CLeG_Xs_max.jpg" alt="New York Times video: Why Trump's Reflecting Pool Repairs Are in Trouble">
+            <div class="cap"><span class="tt">"Why Trump's Reflecting Pool Repairs Are in Trouble"</span><span class="mt">The New York Times · May 15 · <b>5.1M views</b></span></div>
+          </div>
+          <p class="tiny muted mt10">The single dominant post in the study: 217.6K interactions. Arbiter's clickbait score for it: a clean 0 of 5, where 5 is heavy engagement bait.</p>
+        </div>
+        <div>
+          <div class="claims">
+            <div class="claimrow fragment">
+              <div class="c">The renovation was announced at roughly <b>$1.8 million and about a week</b> of work.</div>
+              <div class="verdict contested">The pitch</div>
+            </div>
+            <div class="claimrow fragment">
+              <div class="c">Procurement records showed <b>no-bid contracts near $16 million</b>: $14.7M coating, $1.7M purification.</div>
+              <div class="verdict fails">The cost</div>
+            </div>
+            <div class="claimrow fragment">
+              <div class="c">The pool was <b>drained again on July 10</b>: algae, peeling coating, and a cut liner.</div>
+              <div class="verdict fails">The outcome</div>
+            </div>
+            <div class="claimrow fragment">
+              <div class="c">The study's claims analysis surfaces the same threads: <b>park-fee funding, no-bid contracts, inflated costs</b>.</div>
+              <div class="verdict contested">62 claims</div>
+            </div>
+          </div>
+          <p class="mt16 fragment" style="font-size:15.5px; color:#c9cdd8;">There is a real fire here. It is just not the one the fountain videos point at.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · NYT video May 15 2026 · PBS NewsHour Jul 2026 · WTOP Jul 2026 · claims run (62 claims, 287 news)</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 14 · CASE 02 · SPIKE ANATOMY ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="case-plate">
+      <span class="no">Case file 02</span>
+      <span class="nm">A ten-minute Cabinet meeting set off the spike</span>
+      <span class="win">posts per day · 768-post pull · May 13 – Jun 3</span>
+    </div>
+    <div class="si-body">
+      <svg viewBox="0 0 1100 360" style="width:100%; max-width:1080px; display:block; margin:0 auto;">
+        <line x1="60" y1="330" x2="1090" y2="330" stroke="#3a4152" stroke-width="2"/>
+        <rect x="78.7" y="304.1" width="28.5" height="25.9" fill="#3a4152"/>
+        <text x="93.0" y="350" font-family="IBM Plex Mono" font-size="14" fill="#878b9d" text-anchor="middle">May 13</text>
+        <rect x="124.6" y="319.6" width="28.5" height="10.4" fill="#3a4152"/>
+        <rect x="170.5" y="317.1" width="28.5" height="12.9" fill="#4a7dff"/>
+        <rect x="216.4" y="317.1" width="28.5" height="12.9" fill="#3a4152"/>
+        <rect x="262.4" y="324.8" width="28.5" height="5.2" fill="#3a4152"/>
+        <rect x="308.3" y="286.0" width="28.5" height="44.0" fill="#3a4152"/>
+        <text x="322.5" y="350" font-family="IBM Plex Mono" font-size="14" fill="#878b9d" text-anchor="middle">18</text>
+        <rect x="354.2" y="296.3" width="28.5" height="33.7" fill="#3a4152"/>
+        <rect x="400.1" y="304.1" width="28.5" height="25.9" fill="#3a4152"/>
+        <rect x="446.0" y="278.2" width="28.5" height="51.8" fill="#3a4152"/>
+        <rect x="491.9" y="309.3" width="28.5" height="20.7" fill="#3a4152"/>
+        <rect x="537.8" y="291.2" width="28.5" height="38.8" fill="#3a4152"/>
+        <text x="552.0" y="350" font-family="IBM Plex Mono" font-size="14" fill="#878b9d" text-anchor="middle">23</text>
+        <rect x="583.7" y="311.9" width="28.5" height="18.1" fill="#3a4152"/>
+        <rect x="629.6" y="314.5" width="28.5" height="15.5" fill="#3a4152"/>
+        <rect x="675.5" y="322.2" width="28.5" height="7.8" fill="#3a4152"/>
+        <rect x="721.5" y="205.7" width="28.5" height="124.3" fill="#d64545"/>
+        <text x="735.7" y="350" font-family="IBM Plex Mono" font-size="14" fill="#878b9d" text-anchor="middle">27</text>
+        <rect x="767.4" y="89.2" width="28.5" height="240.8" fill="#d64545"/>
+        <text x="781.6" y="350" font-family="IBM Plex Mono" font-size="14" fill="#878b9d" text-anchor="middle">28</text>
+        <rect x="813.3" y="45.2" width="28.5" height="284.8" fill="#d64545"/>
+        <text x="827.5" y="350" font-family="IBM Plex Mono" font-size="14" fill="#878b9d" text-anchor="middle">29</text>
+        <rect x="859.2" y="182.4" width="28.5" height="147.6" fill="#d64545"/>
+        <text x="873.4" y="350" font-family="IBM Plex Mono" font-size="14" fill="#878b9d" text-anchor="middle">30</text>
+        <rect x="905.1" y="117.7" width="28.5" height="212.3" fill="#d64545"/>
+        <text x="919.3" y="350" font-family="IBM Plex Mono" font-size="14" fill="#878b9d" text-anchor="middle">31</text>
+        <rect x="951.0" y="50.4" width="28.5" height="279.6" fill="#d64545"/>
+        <text x="965.2" y="350" font-family="IBM Plex Mono" font-size="14" fill="#878b9d" text-anchor="middle">Jun 1</text>
+        <rect x="996.9" y="40.0" width="28.5" height="290.0" fill="#d64545"/>
+        <text x="1009.5" y="58" font-family="IBM Plex Mono" font-size="14" fill="#0b0d12" text-anchor="middle">112</text>
+        <text x="1011.1" y="350" font-family="IBM Plex Mono" font-size="14" fill="#878b9d" text-anchor="middle">2</text>
+        <rect x="1042.8" y="244.6" width="28.5" height="85.4" fill="#d64545"/>
+        <text x="1057.0" y="350" font-family="IBM Plex Mono" font-size="14" fill="#878b9d" text-anchor="middle">3</text>
+        <g class="fragment">
+          <text x="184" y="290" font-family="IBM Plex Mono" font-size="14" fill="#4a7dff" text-anchor="middle">MAY 15</text>
+          <text x="184" y="306" font-family="Inter" font-size="14" fill="#9aa1b2" text-anchor="middle">NYT investigation</text>
+        </g>
+        <g class="fragment">
+          <text x="700" y="150" font-family="IBM Plex Mono" font-size="14" fill="#ffd900" text-anchor="end">MAY 27</text>
+          <text x="700" y="166" font-family="Inter" font-size="14" fill="#c9cdd8" text-anchor="end">Cabinet meeting:</text>
+          <text x="700" y="181" font-family="Inter" font-size="14" fill="#c9cdd8" text-anchor="end">~10 min on fountains</text>
+          <line x1="706" y1="176" x2="733" y2="200" stroke="#ffd900" stroke-width="1.2"/>
+        </g>
+        <g class="fragment">
+          <text x="1085" y="22" font-family="Inter" font-size="14" fill="#c9cdd8" text-anchor="end"><tspan font-family="IBM Plex Mono" font-size="14" fill="#ffd900">MAY 29</tspan>  @Interior: "The fountains are flowing."  1.27M</text>
+        </g>
+      </svg>
+      <div class="cols mt24">
+        <p class="fragment" style="font-size:16px; color:#c9cdd8;">Baseline: 2 to 20 posts a day. After the Cabinet meeting, official accounts seed the story; <strong style="color:#e9eaf0;">May 31 alone draws 3.86M interactions</strong>, led by a 2.22M-interaction "AWESTRUCK" clip.</p>
+        <p class="fragment" style="font-size:16px; color:#c9cdd8;">The loudest amplifier here, <strong style="color:#ff7a6b;">EricLDaugh</strong>, also topped the Maryland study. Officials seeded the story, influencer accounts templated it, and the feed filled with fountains.</p>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · daily counts, 768-post pull (study uses 743) · @Interior May 29 · @WhiteHouse Jun 1 · MS NOW May 28</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 15 · FOUR CHECKS (NYC CIVICS ALIGNMENT) ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>How to be informed: four checks from the case files</h2>
+      <div class="cols mt44 top">
+        <div>
+          <div class="fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:18px 22px;">
+            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">CHECK 01 · FIND THE ORIGINAL ANNOUNCEMENT</p>
+            <p class="mt10" style="font-size:19px;">Maryland announced the vendor error on <strong>May 15</strong>. The "500,000 illegal ballots" wave started May 16, a day behind the public record.</p>
+          </div>
+          <div class="mt24 fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:18px 22px;">
+            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">CHECK 02 · REPETITION IS NOT VERIFICATION</p>
+            <p class="mt10" style="font-size:19px;">One templated line, repeated by <strong>50+ distinct accounts</strong> minutes to hours apart. The accounts repeating it did not each verify it.</p>
+          </div>
+        </div>
+        <div>
+          <div class="fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:18px 22px;">
+            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">CHECK 03 · ASK WHAT SET OFF THE SPIKE</p>
+            <p class="mt10" style="font-size:19px;">Fountain posts ran <strong>2 to 20 a day</strong> until a Cabinet meeting spent about ten minutes on them. Officials seeded the story; influencer accounts templated it.</p>
+          </div>
+          <div class="mt24 fragment" style="border:1.5px solid #12131a; background:#fffdf8; padding:18px 22px;">
+            <p class="mono" style="font-size:14px; letter-spacing:.08em; color:#878b9d;">CHECK 04 · ASK AI FOR ITS SOURCES</p>
+            <p class="mt10" style="font-size:19px;">Every Arbiter answer cites the posts it read. An AI answer without sources you can open is <strong>an unverified lead</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">RECEIPTS · case files 01 and 02, preceding slides · NYC CIVICS PILOT · PART 2</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 16 · DEMO / CTA ═══ -->
+<section class="cta" data-background-color="#ffd900">
+  <div class="si">
+    <div class="si-body">
+      <div class="cols w64">
+        <div>
+          <h2>Let's open it live.</h2>
+          <p class="mt24" style="font-size:20px; color:#12131a;">Both case files are public studies on <a href="https://arbiter.simppl.org/studies">arbiter.simppl.org</a>. We will browse one, ask the agent a question, and check a claim together.</p>
+          <p class="mt24" style="font-size:17px; color:#3d3a10;">Free for journalists and fact-checkers, subsidized by our grants. Investigation reports land in your inbox via <a href="https://simppl.org/newsletter">simppl.org/newsletter</a>. Write to <a href="mailto:team@simppl.org">team@simppl.org</a>.</p>
+        </div>
+        <div style="display:flex; justify-content:center;">
+          <svg width="280" height="280" viewBox="0 0 100 100" style="transform:rotate(-45deg)"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#12131a"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SIMPPL · U.S. 501(C)(3) · NONPROFIT SINCE 2021</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+</div>
+</div>
+<script type="application/json" id="cmap-data">
+{
+  "study": {
+    "title": "Maryland mail-in ballots trump administration",
+    "url": "https://arbiter.simppl.org/case-studies/jd713nc58q6xcz718xd9041k9x87054c",
+    "conceptWeb": { "concepts": 21, "subConcepts": 21, "posts": 620, "users": 436 }
+  },
+  "concepts": [
+    { "label": "Political Dynamics and Accountability", "posts": 166, "interactions": "2.7M" },
+    { "label": "Electoral Integrity Challenges", "posts": 357, "interactions": "2.4M", "focused": true },
+    { "label": "Political Conflict and Controversy", "posts": 39, "interactions": "1.3M" },
+    { "label": "Political Manipulation Strategies", "posts": 18, "interactions": "418.6K" },
+    { "label": "Political Maneuvering and Governance", "posts": 40, "interactions": "208.9K" }
+  ],
+  "subConcepts": {
+    "Electoral Integrity Challenges": [
+      { "label": "Mail-In Ballot Controversy", "posts": 256, "expanded": true },
+      { "label": "Misinformation in Politics", "posts": 52 },
+      { "label": "Political Manipulation Claims", "posts": 26 },
+      { "label": "Democracy Preservation Efforts", "posts": 23 }
+    ],
+    "Political Dynamics and Accountability": [
+      { "label": "Legislative Push for Reform", "posts": 141 },
+      { "label": "Anti-Trump Sentiment", "posts": 20 },
+      { "label": "Leadership Expectations for Thune", "posts": 5 }
+    ]
+  },
+  "posts": {
+    "Mail-In Ballot Controversy": [
+      { "author": "EricLDaugh", "platform": "Twitter", "title": "\"🚨 HOLY CRAP!! President Trump just said DOUBLE the amount of mail-in ballots are now circulating the state of Maryland...\"", "interactions": 495014 },
+      { "author": "nicksortor", "platform": "Twitter", "title": "\"🚨 HOLY CRAP! President Trump just revealed over 500,000 ILLEGAL MAIL-IN BALLOTS were sent out by Maryland...\"", "interactions": 428941 },
+      { "author": "nicksortor", "platform": "Twitter", "title": "\"🚨 NOW: President Trump is VERY CONCERNED about mail-in ballots ahead of the midterms...\"", "interactions": 304273 }
+    ],
+    "Legislative Push for Reform": [
+      { "author": "EricLDaugh", "platform": "Twitter", "title": "\"🚨 HOLY SMOKES. President Trump just went HARDBALL mode and demanded Senate Republicans ATTACH the SAVE America Act...\"", "interactions": 1319250 },
+      { "author": "TonySeruga", "platform": "Twitter", "title": "\"🚨 TRUMP'S BRILLIANT POWER PLAY: FORCE THE SAVE AMERICA ACT INTO HOUSING & FISA BILLS NOW...\"", "interactions": 218719 },
+      { "author": "EricLDaugh", "platform": "Twitter", "title": "\"🚨 HOLY SMOKES. President Trump announces DOJ investigation into 500,000 *illegal* mail-in ballots...\"", "interactions": 129748 }
+    ],
+    "Misinformation in Politics": [
+      { "author": "shipwreckedcrew", "platform": "Twitter", "title": "Commentary thread on the Maryland ballot story.", "interactions": 28000 }
+    ]
+  }
+}
+</script>
+<script src="nyc-civics-2026/assets/vendor/jquery-3.7.1.min.js"></script>
+<script src="nyc-civics-2026/assets/vendor/reveal/reveal.js"></script>
+<script src="nyc-civics-2026/components/arbiter.js?v=1"></script>
+<script>
+/* Concept-map behaviour, adapted from arbiter deck_v6. Static markup holds the
+   default expanded state (Electoral Integrity Challenges -> Mail-In Ballot
+   Controversy -> 3 posts) for print/JS-off; live browsers get click-to-walk. */
+(function ($) {
+  'use strict';
+  var PRINT = /print-pdf/gi.test(window.location.search);
+  if (PRINT || typeof $ === 'undefined') return;
+
+  var DATA = JSON.parse(document.getElementById('cmap-data').textContent);
+  var FOCUS = 'Electoral Integrity Challenges';
+  var SUB = 'Mail-In Ballot Controversy';
+  var $map = $('#cmap');
+  if (!$map.length) return;
+  var state = { concept: FOCUS, sub: SUB, open: true };
+
+  function esc(s) { return $('<i>').text(s).html(); }
+  function fmtI(n) { return n >= 1e6 ? (Math.round(n / 1e5) / 10) + 'M' : n >= 1e3 ? (Math.round(n / 1e2) / 10) + 'K' : n; }
+  function row(kind, label, count, on) {
+    return '<div class="crow' + (on ? ' on' : '') + '" data-k="' + kind + '" data-id="' + esc(label) + '">' +
+           '<span class="lb">' + esc(label) + '</span><span class="ct">' + count + '</span></div>';
+  }
+
+  function render() {
+    var h1 = '<div class="chead">Concepts <b>5 of ' + DATA.study.conceptWeb.concepts + ' shown</b></div>';
+    DATA.concepts.forEach(function (c) {
+      h1 += row('c', c.label, c.posts + ' · ' + c.interactions, c.label === state.concept);
+    });
+    $map.find('.ccol.c1').html(h1);
+
+    var subs = DATA.subConcepts[state.concept];
+    var h2, h3;
+    if (subs) {
+      h2 = '<div class="chead">Sub-concepts <b>' + subs.length + ' of ' + DATA.study.conceptWeb.subConcepts + '</b></div>';
+      subs.forEach(function (s) {
+        var on = s.label === state.sub && state.open;
+        var ct = DATA.posts[s.label] ? s.posts + (on ? ' &#9662;' : ' &#9656;') : s.posts;
+        h2 += row('s', s.label, ct, on);
+      });
+      var posts = state.open && DATA.posts[state.sub];
+      if (posts) {
+        var subCount = 0;
+        subs.forEach(function (s) { if (s.label === state.sub) subCount = s.posts; });
+        h3 = '<div class="chead">Posts <b>' + posts.length + ' of ' + subCount + ' · ' + esc(state.sub) + '</b></div>';
+        posts.forEach(function (p) {
+          h3 += '<div class="cpost"><div class="au">' + esc(p.author) + ' <small>' + esc(p.platform).toUpperCase() + '</small></div>' +
+                '<div class="tt">' + esc(p.title) + '</div>' +
+                '<div class="ints">' + p.interactions.toLocaleString('en-US') + ' interactions</div></div>';
+        });
+      } else if (DATA.posts[state.sub]) {
+        h3 = '<div class="chead">Posts <b>collapsed</b></div>' +
+             '<div class="cnote">' + esc(state.sub) + ' is collapsed. Click it again to expand its posts.</div>';
+      } else {
+        var picked = null;
+        subs.forEach(function (s) { if (s.label === state.sub) picked = s; });
+        h3 = '<div class="chead">Posts <b>in the full study</b></div>' +
+             '<div class="cnote">' + (picked ? picked.posts + ' posts sit under ' + esc(state.sub) + '. ' : '') +
+             'This sample expands the two biggest paths; the rest open in the live study.</div>';
+      }
+    } else {
+      var c = null;
+      DATA.concepts.forEach(function (x) { if (x.label === state.concept) c = x; });
+      h2 = '<div class="chead">Sub-concepts <b>in the full study</b></div>' +
+           '<div class="cnote">' + esc(state.concept) + ': ' + (c ? c.posts + ' posts · ' + c.interactions + ' interactions. ' : '') +
+           'Its breakdown opens in the live study; this sample walks Electoral Integrity Challenges and Political Dynamics and Accountability.</div>';
+      h3 = '<div class="chead">Posts <b>·</b></div>' +
+           '<div class="cnote">Pick Electoral Integrity Challenges to walk down to the template posts and their authors.</div>';
+    }
+    $map.find('.ccol.c2').html(h2);
+    $map.find('.ccol.c3').html(h3);
+  }
+
+  $map.on('click', '.crow', function () {
+    var $r = $(this), kind = $r.attr('data-k'), id = $r.attr('data-id');
+    if (kind === 'c') {
+      state.concept = id;
+      state.sub = (DATA.subConcepts[id] && DATA.subConcepts[id][0]) ? DATA.subConcepts[id][0].label : null;
+      state.open = !!(state.sub && DATA.posts[state.sub]);
+    } else {
+      if (state.sub === id) { state.open = !state.open; }
+      else { state.sub = id; state.open = true; }
+    }
+    render();
+  });
+
+  render();
+}(window.jQuery));
+</script>
+<script>
+  Reveal.initialize({
+    width: 1280, height: 720, margin: 0,
+    center: false, hash: true, controls: false, progress: true,
+    transition: 'fade', transitionSpeed: 'fast',
+    pdfSeparateFragments: false, pdfMaxPagesPerSlide: 1
+  }).then(function () { ArbiterDeck.init(Reveal); });
+</script>
+</body>
+</html>
