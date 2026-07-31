@@ -190,6 +190,12 @@
   .out-n { font-family: var(--font-display); font-size: 2.6em; font-weight: 600; color: var(--ink); letter-spacing: -0.02em; line-height: 1; }
   .reveal .out-card p.out-l { font-size: 0.64em !important; color: var(--ink); margin: 14px 0 0 0; line-height: 1.5; }
   .reveal .out-card p.out-src { font-size: 0.54em !important; color: var(--ink-muted); margin: 10px 0 0 0; line-height: 1.45; }
+  /* tighter tier cards where a slide runs four bullets */
+  .tight .tier-card { padding: 12px 18px 13px 18px; }
+  .tight .tier-card h3 { margin: 5px 0 7px 0; font-size: 0.56em; }
+  .tight .tier-card ul { margin-top: 8px; }
+  .reveal .tight .tier-card li { font-size: 0.5em; line-height: 1.36; margin-bottom: 0.3em; }
+
   /* two-sided model: who does the work, who pays */
   .two-side { display: grid; grid-template-columns: 1fr 118px 1fr; align-items: stretch; margin-top: 26px; }
   .side-k { font-family: var(--font-body); font-size: 0.48em; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; color: var(--coral-deep); }
@@ -205,13 +211,22 @@
   .side-mid { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
   .side-mid .lab { font-family: var(--font-body); font-size: 0.42em; font-weight: 700; color: var(--ink-muted); text-align: center; line-height: 1.3; }
 
-  /* expansion ladder: each customer opens the next */
-  .lad2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 34px; margin-top: 16px; }
-  .lad2 h3 { font-family: var(--font-body); font-size: 0.46em; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; color: var(--coral-deep); margin: 0 0 4px 0; }
-  .lrow { display: grid; grid-template-columns: 128px 1fr; gap: 12px; padding: 8px 0; border-top: 1px solid var(--rule); align-items: baseline; }
-  .lrow .lnm { font-family: var(--font-body); font-size: 0.48em; font-weight: 700; color: var(--ink); line-height: 1.25; }
-  .reveal .lrow p.lt { font-size: 0.45em !important; line-height: 1.4; margin: 0; color: var(--ink-muted); }
-  .reveal .lrow p.lt b { color: var(--ink); }
+  /* expansion paths: two coloured routes, one platform */
+  .lad2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 44px; margin-top: 20px; }
+  .lcol { position: relative; padding-left: 27px; }
+  .lcol::before { content: ""; position: absolute; left: 8px; top: 34px; bottom: 12px; width: 2px; border-radius: 1px; }
+  .lcol.pub::before { background: #b9b4cd; }
+  .lcol.com::before { background: #eeb3a3; }
+  .lad2 h3 { display: inline-block; margin: 0 0 6px 0; padding: 4px 12px 5px; border-radius: 4px; font-family: var(--font-body); font-size: 0.42em; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+  .lcol.pub h3 { background: var(--ink); color: var(--paper); }
+  .lcol.com h3 { background: var(--coral-wash); color: var(--coral-deep); }
+  .lstep { position: relative; padding: 11px 0 12px; }
+  .lstep::before { content: ""; position: absolute; left: -24px; top: 15px; width: 12px; height: 12px; border-radius: 50%; border: 2.5px solid var(--paper); }
+  .lcol.pub .lstep::before { background: var(--ink); }
+  .lcol.com .lstep::before { background: var(--coral); }
+  .lstep .lnm { font-family: var(--font-body); font-size: 0.5em; font-weight: 700; color: var(--ink); line-height: 1.25; }
+  .lstep .lnm .tagk { font-weight: 700; color: var(--coral-deep); }
+  .reveal .lstep p.lt { font-size: 0.46em !important; line-height: 1.42; margin: 3px 0 0 0; color: var(--ink-muted); }
 
   /* case sequence: dated spine, then the posts that followed (Maryland slide) */
   .tl-case { margin-top: 14px; padding-top: 16px; }
@@ -225,17 +240,17 @@
 
   /* rendered platform posts */
   .post-row { display: flex; gap: 15px; margin-top: 12px; align-items: stretch; }
-  .post { flex: 1; background: #ffffff; border: 1px solid #e3ded0; border-radius: 13px; padding: 11px 15px 9px 15px; display: flex; flex-direction: column; }
+  .post { flex: 1; background: #f2efe7; border: 1px solid #d5cdb8; border-radius: 12px; padding: 9px 13px 8px 13px; display: flex; flex-direction: column; box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 1px 3px rgba(23,21,59,0.07); }
   .post-head { display: flex; align-items: center; gap: 9px; }
-  .post-av { width: 32px; height: 32px; border-radius: 50%; background: var(--paper-2); border: 1px solid var(--rule); flex: none; }
+  .post-av { width: 27px; height: 27px; border-radius: 50%; background: #e2dbc8; border: 1px solid #cec5ae; flex: none; }
   .post-id { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
-  .post-name { font-family: var(--font-body); font-size: 0.45em; font-weight: 700; color: var(--ink); }
-  .post-sub { font-family: var(--font-body); font-size: 0.4em; color: var(--ink-faint); }
+  .post-name { font-family: var(--font-body); font-size: 0.41em; font-weight: 700; color: var(--ink); }
+  .post-sub { font-family: var(--font-body); font-size: 0.36em; color: var(--ink-faint); }
   .post-mark { margin-left: auto; flex: none; line-height: 0; }
-  .reveal .post p.post-body { font-size: 0.52em !important; line-height: 1.42; margin: 9px 0 0 0; color: var(--ink); }
+  .reveal .post p.post-body { font-size: 0.47em !important; line-height: 1.42; margin: 8px 0 0 0; color: var(--ink); }
   .reveal .post p.post-body b { color: var(--coral-deep); }
-  .post-foot { margin-top: auto; padding-top: 8px; border-top: 1px solid #eee8da; }
-  .reveal .post p.post-metric { font-family: var(--font-body); font-size: 0.42em !important; color: var(--ink-faint); margin: 0; }
+  .post-foot { margin-top: auto; padding-top: 7px; border-top: 1px solid #ddd5c0; }
+  .reveal .post p.post-metric { font-family: var(--font-body); font-size: 0.38em !important; color: var(--ink-faint); margin: 0; }
   .reveal .post p.post-metric b { color: var(--ink); font-weight: 700; }
 
   /* claim-vs-correction reach comparison */
@@ -856,9 +871,9 @@
 
 <!-- 9b · MARYLAND: STAKES + DEMOCRACY INTERNATIONAL OUTCOME (v18) -->
 <section style="height:648px;">
-  <h2 style="margin-bottom:0.15em;">What the argument is for, and who came to us about it</h2>
-  <p class="fragment" style="font-size:0.56em; color:var(--ink-muted); margin-top:6px;">The same distrust of mail voting is the argument behind the SAVE Act, inside the same window.</p>
-  <article class="post fragment" style="max-width:58%; margin:11px 0 0 0;">
+  <h2 style="margin-bottom:0.15em;">What the argument is for, and what Maryland did about it</h2>
+  <p class="fragment" style="font-size:0.54em; color:var(--ink-muted); margin-top:5px;">The same distrust of mail voting is the argument behind the SAVE Act.</p>
+  <article class="post fragment" style="max-width:52%; margin:9px 0 0 0;">
     <div class="post-head">
       <span class="post-av"></span>
       <span class="post-id"><span class="post-name">Financial news account</span><span class="post-sub">16 May 2026 &middot; handle withheld</span></span>
@@ -867,7 +882,7 @@
     <p class="post-body">TRUMP: <b>PASS THE SAVE AMERICA ACT NOW</b>, citing concerns over mail-in voting</p>
     <div class="post-foot"><p class="post-metric"><b>111,142</b> interactions</p></div>
   </article>
-  <div style="display:flex; gap:26px; margin-top:13px;">
+  <div class="tight" style="display:flex; gap:26px; margin-top:12px;">
     <div class="tier-card" style="flex:1; padding-top:13px; padding-bottom:14px;">
       <span class="pillar-tag">The stakes &middot; the SAVE Act</span>
       <ul style="margin-top:11px;">
@@ -880,11 +895,12 @@
     <div class="tier-card lead" style="flex:1; padding-top:13px; padding-bottom:14px;">
       <span class="pillar-tag">The response</span>
       <ul style="margin-top:11px;">
-        <li class="fragment">Maryland's election consultants <b>found us through a partner newsroom</b></li>
-        <li class="fragment">Two weeks on the platform; their first study <b>built in under an hour</b></li>
-        <li class="fragment">Their commissioner <b>has written a letter of support</b> and committed to a <b>statewide rollout</b></li>
+        <li class="fragment">Maryland&rsquo;s election consultants <b>found Arbiter through a partner newsroom</b></li>
+        <li class="fragment">In <b>under an hour</b> they mapped the networks pushing the SAVE Act</li>
+        <li class="fragment">The false ballot claim was the <b>pretext</b> those networks used</li>
+        <li class="fragment">The <b>State Administrator of Elections</b> signed a letter committing to county and statewide deployment</li>
       </ul>
-      <p class="smallnote fragment" style="margin-top:10px;">Democracy International: 100+ projects worldwide, a USAID partner since 2003.</p>
+      <p class="smallnote fragment" style="margin-top:10px;">Deployment is subject to funding. Democracy International: 100+ projects worldwide, a USAID partner since 2003.</p>
     </div>
   </div>
     <p class="smallnote" style="position:absolute; bottom:10px; left:44px; font-size:0.42em; margin:0; text-align:left; opacity:0.85;">Sources: <a href="https://www.congress.gov/bill/118th-congress/house-bill/8281" target="_blank" rel="noopener">H.R. 8281</a> &middot; <a href="https://www.congress.gov/bill/119th-congress/house-bill/22" target="_blank" rel="noopener">H.R. 22</a> &middot; <a href="https://www.brennancenter.org/our-work/analysis-opinion/save-act-would-undermine-voter-registration-all-americans" target="_blank" rel="noopener">Brennan Center</a> &middot; <a href="https://democracyinternational.com/about/" target="_blank" rel="noopener">Democracy International</a>.</p>
@@ -1140,34 +1156,34 @@
     <div class="side-pay fragment">
       <div class="side-k">Paying</div>
       <div class="side-big">Agencies, civil society, government</div>
-      <p class="side-t">About <b>$2,500 to $4,000 a month</b>, signed by a director. We are in conversation with M+C Saatchi, ISD, George Washington University, Maryland, and the New York Attorney General.</p>
+      <p class="side-t">About <b>$2,500 to $15,000 a month</b>, signed by a director. We are in conversation with M+C Saatchi, ISD, George Washington University, Maryland, and the New York Attorney General.</p>
     </div>
   </div>
-  <p class="smallnote fragment" style="margin-top:20px;">Those five are prospects. Conversations are ongoing and subject to change. Our signed contracts this year are on the revenue slide.</p>
+  <p class="smallnote" style="position:absolute; bottom:10px; left:44px; font-size:0.4em; margin:0; text-align:left; opacity:0.8;">The commercial clients listed are prospects with ongoing conversations.</p>
 </section>
 
 <!-- 17b · EXPANSION PATH (from the Columbia demo-day deck) -->
 <section style="height:648px;">
   <h2 style="margin-bottom:0.1em;">Each customer opens the next one up</h2>
   <div class="lad2">
-    <div>
+    <div class="lcol pub">
       <h3>Public interest</h3>
-      <div class="lrow fragment" style="border-top:0;"><div class="lnm">Journalists, free seats</div><p class="lt">Networks distribute us: the IFCN&rsquo;s fact-checkers, and Indicator.media&rsquo;s 14,000 readers.</p></div>
-      <div class="lrow fragment"><div class="lnm">Media that pays</div><p class="lt">We measure a newsroom&rsquo;s own mentions, so audience teams renew annually.</p></div>
-      <div class="lrow fragment"><div class="lnm">Civil society</div><p class="lt">Extremism researchers already license data. We sell the analytics layer on top.</p></div>
-      <div class="lrow fragment"><div class="lnm">Government</div><p class="lt">The setup we build for one agency becomes the next agency&rsquo;s starting point.</p></div>
+      <div class="lstep fragment"><div class="lnm">Journalists, free seats</div><p class="lt">Networks distribute us: the IFCN&rsquo;s fact-checkers, and Indicator.media&rsquo;s 14,000 readers.</p></div>
+      <div class="lstep fragment"><div class="lnm">Media that pays</div><p class="lt">We measure a newsroom&rsquo;s own mentions, so audience teams renew annually.</p></div>
+      <div class="lstep fragment"><div class="lnm">Civil society</div><p class="lt">Extremism researchers already license data. We sell the analytics layer on top.</p></div>
+      <div class="lstep fragment"><div class="lnm">Government</div><p class="lt">The setup we build for one agency becomes the next agency&rsquo;s starting point.</p></div>
     </div>
-    <div>
+    <div class="lcol com">
       <h3>Commercial, which funds the free seats</h3>
-      <div class="lrow fragment" style="border-top:0;"><div class="lnm">Pass the Salt</div><p class="lt">A consumer brand, and where we learned audience analytics.</p></div>
-      <div class="lrow fragment"><div class="lnm">Ychance &middot; <b>$60K signed</b></div><p class="lt">A prediction market. It prices public response into its odds.</p></div>
-      <div class="lrow fragment"><div class="lnm">M+C Saatchi</div><p class="lt">A global agency, and a channel into every brand it serves.</p></div>
+      <div class="lstep fragment"><div class="lnm">Pass the Salt</div><p class="lt">A consumer brand, and where we learned audience analytics.</p></div>
+      <div class="lstep fragment"><div class="lnm">Ychance <span class="tagk">&middot; $60K signed</span></div><p class="lt">A prediction market. It prices public response into its odds.</p></div>
+      <div class="lstep fragment"><div class="lnm">M+C Saatchi</div><p class="lt">A global agency, and a channel into every brand it serves.</p></div>
     </div>
   </div>
-  <div class="ask-umbrella fragment" style="margin-top:20px;">
+  <div class="ask-umbrella fragment" style="margin-top:26px;">
     <p style="font-size:0.56em !important;">The two sides run on one platform. The public-interest side finds the problems and wins the grants; the commercial side pays for the free seats underneath it.</p>
   </div>
-  <p class="smallnote fragment" style="margin-top:14px;">Ychance is signed. ISD, George Washington University, Maryland, the New York Attorney General, M+C Saatchi, and Pass the Salt are prospects, with conversations ongoing and subject to change.</p>
+  <p class="smallnote" style="position:absolute; bottom:10px; left:44px; font-size:0.4em; margin:0; text-align:left; opacity:0.8;">The commercial clients listed are prospects with ongoing conversations. Ychance is signed.</p>
 </section>
 
 <!-- 18 · PROGRESS TIMELINE -->
@@ -1285,7 +1301,7 @@
     </div>
   </div>
   <div class="ask-umbrella fragment">
-    <p>Pilot grants from <span class="umbrella-amt">$25K to $250K</span> fund one specific program. Tell us which space matters most to you and we will cost it together.</p>
+    <p>Pilot grants from <span class="umbrella-amt">$25K to $250K</span> fund one specific program. Tell us which space matters most to you and we will align the scope with your priorities.</p>
   </div>
   <p class="smallnote fragment" style="margin-top:14px;">Budgets and milestones are ready for whichever scope you want to discuss. <a href="mailto:team@simppl.org">team@simppl.org</a></p>
 </section>
