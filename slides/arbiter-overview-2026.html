@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arbiter by SimPPL - Funder Briefing - July 2026</title>
-<!-- deck version: v19 (Filipino investigation primary; Indonesia replication) -->
+<!-- deck version: v20 (six-vertical map; three-lever outcomes) -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.6.1/dist/reveal.css">
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.6.1/dist/theme/white.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -138,11 +138,6 @@
   .pc-flag { display: inline-block; font-size: 1em; background: var(--coral-wash); color: var(--coral-deep); font-weight: 700; border-radius: 3px; padding: 0 5px; }
 
   /* ---------- agent verdict panel ---------- */
-  .verdict { background: var(--ink); border-radius: 10px; padding: 16px 20px 18px 20px; }
-  .verdict .v-head { font-size: 0.53em; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #f4a08c; margin-bottom: 10px; font-family: var(--font-body); }
-  .reveal .verdict p.v-line { font-size: 0.56em !important; color: var(--paper); line-height: 1.5; margin: 8px 0 0 0; }
-  .reveal .verdict p.v-line b { color: #f4a08c; }
-  .verdict .v-src { display: inline-block; font-size: 0.95em; background: rgba(244,160,140,0.18); color: #f4a08c; border-radius: 4px; padding: 0 6px; font-weight: 700; white-space: nowrap; }
 
   /* ---------- agentic capability strip ---------- */
   .cap-row { display: flex; gap: 16px; margin-top: 22px; }
@@ -195,6 +190,65 @@
   .out-n { font-family: var(--font-display); font-size: 2.6em; font-weight: 600; color: var(--ink); letter-spacing: -0.02em; line-height: 1; }
   .reveal .out-card p.out-l { font-size: 0.64em !important; color: var(--ink); margin: 14px 0 0 0; line-height: 1.5; }
   .reveal .out-card p.out-src { font-size: 0.54em !important; color: var(--ink-muted); margin: 10px 0 0 0; line-height: 1.45; }
+  /* case sequence: dated spine, then the posts that followed (Maryland slide) */
+  .tl-case { margin-top: 14px; padding-top: 16px; }
+  .tl-case .tl-item { padding-right: 28px; }
+  .tl-case .tl-item::before { top: -23px; width: 11px; height: 11px; background: var(--ink); }
+  .tl-case .tl-item.late::before { background: var(--coral); width: 15px; height: 15px; top: -25px; }
+  .tl-date { font-family: var(--font-body); font-size: 0.5em; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
+  .tl-case .tl-item.late .tl-date { color: var(--coral-deep); }
+  .reveal .tl-case .tl-item p { font-size: 0.46em !important; line-height: 1.44; margin: 5px 0 0 0; color: var(--ink-muted); }
+  .reveal .tl-case .tl-item p b { color: var(--ink); }
+
+  /* rendered platform posts */
+  .post-row { display: flex; gap: 15px; margin-top: 12px; align-items: stretch; }
+  .post { flex: 1; background: #ffffff; border: 1px solid #e3ded0; border-radius: 13px; padding: 11px 15px 9px 15px; display: flex; flex-direction: column; }
+  .post-head { display: flex; align-items: center; gap: 9px; }
+  .post-av { width: 32px; height: 32px; border-radius: 50%; background: var(--paper-2); border: 1px solid var(--rule); flex: none; }
+  .post-id { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
+  .post-name { font-family: var(--font-body); font-size: 0.45em; font-weight: 700; color: var(--ink); }
+  .post-sub { font-family: var(--font-body); font-size: 0.4em; color: var(--ink-faint); }
+  .post-mark { margin-left: auto; flex: none; line-height: 0; }
+  .reveal .post p.post-body { font-size: 0.52em !important; line-height: 1.42; margin: 9px 0 0 0; color: var(--ink); }
+  .reveal .post p.post-body b { color: var(--coral-deep); }
+  .post-foot { margin-top: auto; padding-top: 8px; border-top: 1px solid #eee8da; }
+  .reveal .post p.post-metric { font-family: var(--font-body); font-size: 0.42em !important; color: var(--ink-faint); margin: 0; }
+  .reveal .post p.post-metric b { color: var(--ink); font-weight: 700; }
+
+  /* claim-vs-correction reach comparison */
+  .reach { margin-top: 12px; }
+  .reach-row { display: grid; grid-template-columns: 162px 1fr 226px; align-items: center; column-gap: 14px; margin-top: 7px; }
+  .reach-lab { font-family: var(--font-body); font-size: 0.42em; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; text-align: right; }
+  .reach-lab.c { color: var(--coral-deep); }
+  .reach-lab.o { color: var(--ink); }
+  .reach-fill { height: 18px; border-radius: 3px; display: block; min-width: 3px; }
+  .reach-fill.c { background: var(--coral); }
+  .reach-fill.o { background: var(--ink); }
+  .reveal p.reach-val { font-family: var(--font-body); font-size: 0.42em !important; color: var(--ink-muted); margin: 0; text-align: left; line-height: 1.3; }
+  .reveal p.reach-val b { font-family: var(--font-display); font-size: 1.45em; font-weight: 600; color: var(--ink); }
+
+  /* the spread, as a typographic stat stack rather than a card */
+  .spread { flex: 0 0 27%; display: flex; flex-direction: column; justify-content: center; padding-left: 20px; border-left: 2px solid var(--coral); }
+  .sp-n { font-family: var(--font-display); font-size: 1.5em; font-weight: 600; color: var(--ink); line-height: 1; letter-spacing: -0.02em; }
+  .reveal .spread p.sp-l { font-size: 0.44em !important; line-height: 1.4; margin: 5px 0 0 0; color: var(--ink-muted); }
+  .reveal .spread p.sp-l b { color: var(--ink); }
+  .sp-item + .sp-item { margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--rule); }
+
+  /* six-vertical map */
+  .vert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; margin-top: 12px; }
+  .vert-card { background: var(--card); border: 1px solid var(--rule); border-top: 3px solid var(--coral); border-radius: 8px; padding: 12px 15px 11px 15px; display: flex; flex-direction: column; }
+  .vert-head { display: flex; align-items: center; gap: 9px; margin-bottom: 7px; }
+  .vert-head svg { flex: none; }
+  .vert-name { font-family: var(--font-body); font-size: 0.48em; font-weight: 800; letter-spacing: 0.11em; text-transform: uppercase; color: var(--coral-deep); }
+  .reveal .vert-card p.vert-b { font-size: 0.5em !important; line-height: 1.48; margin: 0; color: var(--ink-muted); }
+  .reveal .vert-card p.vert-b b { color: var(--ink); }
+  .reveal .vert-card p.vert-s { font-size: 0.44em !important; line-height: 1.4; margin: 10px 0 0 0; color: var(--ink-muted); }
+  .reveal .vert-card p.vert-s a { color: var(--coral-deep); }
+  .out-row.three { gap: 22px; margin-top: 30px; align-items: stretch; }
+  .out-row.three .out-card { padding: 22px 24px 26px 24px; }
+  .out-row.three .out-n { font-size: 1.7em; margin-top: 12px; }
+  .reveal .out-row.three .out-card p.out-l { font-size: 0.56em !important; margin-top: 11px; }
+  .reveal .out-row.three .out-card p.out-src { font-size: 0.48em !important; }
 
   /* ---------- timeline ---------- */
   .timeline { position: relative; margin-top: 60px; padding-top: 26px; border-top: 2px solid var(--rule); display: flex; }
@@ -274,7 +328,7 @@
   .chip.grant { background: #efece1; }
 
   .gantt { width: 97%; margin: 8px auto 0; }
-  .g-head, .g-row { display: grid; grid-template-columns: 330px repeat(5, 1fr); align-items: center; }
+  .g-head, .g-row { display: grid; grid-template-columns: 372px repeat(5, 1fr); align-items: center; }
   .g-head div { font-family: var(--font-body); font-size: 0.53em; color: var(--ink-faint); text-align: left; padding: 0 0 6px 8px; border-left: 1px dashed #ddd6c4; }
   .g-head div:first-child { border-left: none; padding-left: 0; }
   .reveal p.g-group { font-family: var(--font-body); font-size: 0.53em; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--coral-deep); margin: 26px 0 8px; text-align: left; }
@@ -722,114 +776,180 @@
 </section>
 
 <!-- 7 · WHAT THE JOURNALIST SEES (NOVELTY) -->
-<section>
-  <h2 style="margin-bottom:0.25em;">Monitoring tools show what trends. Arbiter shows who is behind it, with receipts.</h2>
-  <p class="fragment" style="font-size:0.56em; color:var(--ink-muted); margin-top:0;">Officials fixed a vendor error in the open. Here is how that was turned against them, from our live case study.</p>
-  <div style="display:flex; gap:22px; align-items:flex-start; margin-top:14px;">
-    <div class="fragment" style="flex:0 0 47%;">
-      <div class="postwall">
-        <div class="pcard flag">
-          <div class="pcard-head"><div class="pcard-av"></div><p class="pc-handle">commentary account</p><span class="pc-plat">X</span></div>
-          <p class="pc-text">🚨 Maryland revealed over <b>500,000 ILLEGAL MAIL-IN BALLOTS</b> were sent out, and they got caught.</p>
-          <p class="pc-meta">428,941 interactions</p>
-        </div>
-        <div class="pcard flag">
-          <div class="pcard-head"><div class="pcard-av"></div><p class="pc-handle">activist account</p><span class="pc-plat">Bluesky</span></div>
-          <p class="pc-text">500,000 illegal mail-in ballots in Maryland. <b>They got caught.</b></p>
-          <p class="pc-meta">near-identical wording, minutes apart</p>
-        </div>
-      </div>
-      <p class="shot-cap" style="margin-top:10px;"><span class="pc-flag">coordination</span> the same templated line, repeated by <b>50+ distinct accounts across X, Facebook, and Bluesky</b> in one window.</p>
+<section style="height:648px;">
+  <h2 style="margin-bottom:0.1em; max-width:17em;">Monitoring tools show what trends. Arbiter shows who is behind it.</h2>
+
+  <div class="timeline tl-case">
+    <div class="tl-item fragment">
+      <div class="tl-date">15 May</div>
+      <p>Maryland announces a <b>printing vendor error</b>: some voters were sent the wrong primary ballot.</p>
     </div>
-    <div class="verdict fragment" style="flex:1;">
-      <div class="v-head">What the agent found, with receipts</div>
-      <p class="v-line"><span style="color:#ff7a6b; font-weight:800;">&#10007; THE CLAIM</span> &nbsp;Maryland "revealed 500,000 illegal mail-in ballots," <a href="https://www.factcheck.org/2026/05/trump-distorts-marylands-primary-ballot-mix-up-to-attack-mail-in-voting/" target="_blank" rel="noopener" style="color:#f4a08c;">amplified by President Trump</a>, echoed by 50+ coordinated accounts.</p>
-      <p class="v-line"><span style="color:#5fe0a0; font-weight:800;">&#10003; THE RECORD</span> &nbsp;the state announced the vendor error in advance (May 15) and mailed marked replacement ballots, one counted per voter. <span class="v-src">news · 469 cited</span></p>
-      <p class="v-line"><span style="color:#5fe0a0; font-weight:800;">&#10003; THE VERDICT</span> &nbsp;Maryland election officials contradict the "fake ballots" framing.</p>
-      <p class="v-line" style="margin-top:14px; font-size:0.53em !important; color:#c9c3d8;">Every line traces to the posts and the coverage behind it, so an editor can check each one. <a href="https://arbiter.simppl.org/studies" style="color:#f4a08c;">live study</a></p>
+    <div class="tl-item fragment">
+      <div class="tl-date">22&ndash;27 May</div>
+      <p>The vendor cannot say who was affected, so replacements go to <b>every mail-in voter</b>, in envelopes marked <b>&ldquo;REPLACEMENT BALLOT INSIDE&rdquo;</b>. One ballot counts per voter.</p>
+    </div>
+    <div class="tl-item late fragment">
+      <div class="tl-date">Days later</div>
+      <p>Those mailings are recast online as <b>&ldquo;500,000 illegal mail-in ballots&rdquo;</b>: the same templated line from <b>50+ accounts</b> across platforms.</p>
     </div>
   </div>
+
+  <div class="post-row">
+    <article class="post fragment">
+      <div class="post-head">
+        <span class="post-av"></span>
+        <span class="post-id"><span class="post-name">Commentary account</span><span class="post-sub">handle withheld</span></span>
+        <span class="post-mark"><svg viewBox="0 0 24 24" width="16" height="16" fill="#0f1419" aria-label="X"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
+      </div>
+      <p class="post-body">Trump announces DOJ investigation into <b>500,000 *illegal* mail-in ballots</b> sent out by the blue state of Maryland. Stop the fraud!</p>
+      <div class="post-foot"><p class="post-metric"><b>1,944,012</b> interactions across three posts</p></div>
+    </article>
+    <article class="post fragment">
+      <div class="post-head">
+        <span class="post-av"></span>
+        <span class="post-id"><span class="post-name">Jared DeMarinis</span><span class="post-sub">Maryland State Administrator of Elections</span></span>
+        <span class="post-mark"><svg viewBox="0 0 24 24" width="16" height="16" fill="#0f1419" aria-label="X"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
+      </div>
+      <p class="post-body">It bears repeating that <b>no fake OR illegal mail-in ballots were distributed</b>. Mail-in voting is not a fraud.</p>
+      <div class="post-foot"><p class="post-metric"><b>16,277</b> interactions across two posts</p></div>
+    </article>
+  </div>
+
+  <div class="reach fragment">
+    <div class="reach-row">
+      <span class="reach-lab c">The claim</span>
+      <span class="reach-fill c" style="width:100%;"></span>
+      <p class="reach-val"><b>1,944,012</b>&nbsp; the loudest account pushing it</p>
+    </div>
+    <div class="reach-row">
+      <span class="reach-lab o">The correction</span>
+      <span class="reach-fill o" style="width:0.84%;"></span>
+      <p class="reach-val"><b>16,277</b>&nbsp; the state's chief election official</p>
+    </div>
+  </div>
+
+  <p class="smallnote" style="position:absolute; bottom:8px; left:44px; font-size:0.42em; margin:0; text-align:left; opacity:0.85;">Sources: <a href="https://www.factcheck.org/2026/05/trump-distorts-marylands-primary-ballot-mix-up-to-attack-mail-in-voting/" target="_blank" rel="noopener">FactCheck.org, May 2026</a> &middot; <a href="https://elections.maryland.gov/elections/2026/2026_replacement_mib.html" target="_blank" rel="noopener">Maryland State Board of Elections</a>. Interactions per account, 1&ndash;19 May; the study cites 469 news documents. <a href="https://arbiter.simppl.org/studies" target="_blank" rel="noopener">Live study</a>.</p>
 </section>
 
 <!-- 9b · MARYLAND: STAKES + DEMOCRACY INTERNATIONAL OUTCOME (v18) -->
 <section style="height:648px;">
-  <h2 style="margin-bottom:0.2em;">The narrative nearly became law. Maryland's consultants acted.</h2>
-  <p class="fragment" style="font-size:0.6em; color:var(--ink-muted); margin-top:8px;">The same fraud story feeds federal legislation, and the people who run elections took note.</p>
-  <div style="display:flex; gap:26px; margin-top:18px;">
-    <div class="tier-card" style="flex:1;">
-      <span class="pillar-tag">The stakes &middot; the SAVE Act</span>
-      <ul style="margin-top:14px;">
-        <li class="fragment">The SAVE Act <b>passed the House twice</b>: 221-198 (2024), 220-208 (2025)</li>
-        <li class="fragment">It stalled in the Senate; it would <b>effectively end mail and online voter registration</b></li>
-        <li class="fragment"><b>21.3 million citizens</b> lack ready access to the required documents (Brennan Center)</li>
-      </ul>
-      <p class="smallnote fragment" style="margin-top:12px;">The same false-ballot narrative family behind the Maryland claim.</p>
+  <h2 style="margin-bottom:0.15em;">What the argument is for, and who came to us about it</h2>
+  <p class="fragment" style="font-size:0.56em; color:var(--ink-muted); margin-top:6px;">The same distrust of mail voting is the argument behind the SAVE Act, inside the same window.</p>
+  <article class="post fragment" style="max-width:58%; margin:11px 0 0 0;">
+    <div class="post-head">
+      <span class="post-av"></span>
+      <span class="post-id"><span class="post-name">Financial news account</span><span class="post-sub">16 May 2026 &middot; handle withheld</span></span>
+      <span class="post-mark"><svg viewBox="0 0 24 24" width="16" height="16" fill="#0f1419" aria-label="X"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
     </div>
-    <div class="tier-card lead" style="flex:1;">
-      <span class="pillar-tag">The response &middot; Democracy International</span>
-      <ul style="margin-top:14px;">
+    <p class="post-body">TRUMP: <b>PASS THE SAVE AMERICA ACT NOW</b>, citing concerns over mail-in voting</p>
+    <div class="post-foot"><p class="post-metric"><b>111,142</b> interactions</p></div>
+  </article>
+  <div style="display:flex; gap:26px; margin-top:13px;">
+    <div class="tier-card" style="flex:1; padding-top:13px; padding-bottom:14px;">
+      <span class="pillar-tag">The stakes &middot; the SAVE Act</span>
+      <ul style="margin-top:11px;">
+        <li class="fragment">It requires <b>documentary proof of citizenship to register</b>, in person</li>
+        <li class="fragment">Analysts say that would <b>effectively end mail and online voter registration</b></li>
+        <li class="fragment"><b>21.3 million citizens</b> lack ready access to those documents (Brennan Center)</li>
+        <li class="fragment"><b>Passed the House twice</b>; stalled in the Senate at the 60-vote threshold</li>
+      </ul>
+    </div>
+    <div class="tier-card lead" style="flex:1; padding-top:13px; padding-bottom:14px;">
+      <span class="pillar-tag">The response</span>
+      <ul style="margin-top:11px;">
         <li class="fragment">Maryland's election consultants <b>found us through a partner newsroom</b></li>
         <li class="fragment">Two weeks on the platform; their first study <b>built in under an hour</b></li>
         <li class="fragment">A <b>letter of support</b> and a joint concept note to fund <b>statewide integration</b></li>
       </ul>
-      <p class="smallnote fragment" style="margin-top:12px;">Democracy International: 100+ democracy projects worldwide as a USAID partner since 2003.</p>
+      <p class="smallnote fragment" style="margin-top:10px;">Democracy International: 100+ projects worldwide, a USAID partner since 2003.</p>
     </div>
   </div>
-    <p class="smallnote" style="position:absolute; bottom:10px; left:44px; font-size:0.42em; margin:0; text-align:left; opacity:0.85;">Sources: <a href="https://www.congress.gov/bill/118th-congress/house-bill/8281" target="_blank" rel="noopener">H.R. 8281</a> &middot; <a href="https://www.congress.gov/bill/119th-congress/house-bill/22" target="_blank" rel="noopener">H.R. 22</a> &middot; <a href="https://www.brennancenter.org/our-work/analysis-opinion/save-act-would-undermine-voter-registration-all-americans" target="_blank" rel="noopener">Brennan Center</a> &middot; <a href="https://democracyinternational.com/about/" target="_blank" rel="noopener">Democracy International</a>. Engagement facts: team, July 2026.</p>
+    <p class="smallnote" style="position:absolute; bottom:10px; left:44px; font-size:0.42em; margin:0; text-align:left; opacity:0.85;">Sources: <a href="https://www.congress.gov/bill/118th-congress/house-bill/8281" target="_blank" rel="noopener">H.R. 8281</a> &middot; <a href="https://www.congress.gov/bill/119th-congress/house-bill/22" target="_blank" rel="noopener">H.R. 22</a> &middot; <a href="https://www.brennancenter.org/our-work/analysis-opinion/save-act-would-undermine-voter-registration-all-americans" target="_blank" rel="noopener">Brennan Center</a> &middot; <a href="https://democracyinternational.com/about/" target="_blank" rel="noopener">Democracy International</a>.</p>
 </section>
 
 <!-- 8 · BEFORE / AFTER -->
 <section>
-  <h2 style="margin-bottom:0.15em;">Two weeks and five people &rarr; thirty minutes and one</h2>
-  <p class="fragment" style="font-size:0.6em; color:var(--ink-muted); margin-top:0;">Arbiter cuts the effort an investigation takes, and makes it reproducible.</p>
+  <h2 style="margin-bottom:0.15em;">An investigation that took two weeks now takes thirty minutes</h2>
+  <p class="fragment" style="font-size:0.6em; color:var(--ink-muted); margin-top:0;">Arbiter cuts the time an investigation takes, and makes it reproducible.</p>
   <div class="ba-row">
     <div class="ba-col before fragment">
       <span class="ba-kicker">Before Arbiter</span>
-      <div class="ba-num dim">2 weeks · 5 people</div>
+      <div class="ba-num dim">2 weeks</div>
       <p class="ba-sub">manual cross-platform triage of scam-recruitment ads, one platform and one post at a time</p>
     </div>
     <div class="ba-col after fragment">
       <span class="ba-kicker">With Arbiter</span>
-      <div class="ba-num">30 min · 1 person</div>
+      <div class="ba-num">30 min</div>
       <p class="ba-sub">the agent collects hundreds of suspect ads, maps the coordinated networks, and drafts the investigation; the analyst verifies and publishes</p>
     </div>
   </div>
   <div class="ask-umbrella fragment" style="margin-top:22px;">
     <p><b>And it replicates.</b> The pipeline we built for the Filipino investigation re-ran for Indonesia: new country, new language, same afternoon. Every partner we onboard makes the next one faster.</p>
   </div>
-  <p class="smallnote fragment">Effort figures from our Migrasia engagement. Public reports: <a href="https://arbiter.simppl.org/report/understanding-overseas-job-recruitment-and-scam-networks-for-filipino-workers">Philippines</a> · <a href="https://arbiter.simppl.org/report/understanding-overseas-job-recruitment-and-scam-networks-for-indonesian-workers">Indonesia replication</a>.</p>
+  <p class="smallnote fragment">Time figures from our Migrasia engagement. Public reports: <a href="https://arbiter.simppl.org/report/understanding-overseas-job-recruitment-and-scam-networks-for-filipino-workers">Philippines</a> · <a href="https://arbiter.simppl.org/report/understanding-overseas-job-recruitment-and-scam-networks-for-indonesian-workers">Indonesia replication</a>.</p>
 </section>
 
 <!-- 9 · THREE PROGRAMS, WHY THESE -->
 <section>
-  <h2 style="margin-bottom:0.5em;">Reliable information: global, state-wide, and last-mile</h2>
-  <div class="pillar-grid">
-    <div class="pillar-card fragment">
-      <span class="pillar-glyph"><svg width="26" height="26" viewBox="0 0 30 30" fill="none" stroke="#b94a32" stroke-width="1.7"><circle cx="15" cy="15" r="11"/><path d="M4 15h22"/><ellipse cx="15" cy="15" rx="5.5" ry="11"/><path d="M6.5 9.5h17M6.5 20.5h17"/></svg></span>
-      <img src="images/funder-2026/v10/prog_civic.jpg" alt="SimPPL training a room of journalists in Bangalore">
-      <div class="pillar-body">
-        <span class="pillar-tag">Global &middot; 21 countries</span>
-        <p><span class="pillar-prog">Civic trust.</span> Elections are where manipulation concentrates. Newsrooms across 21 countries investigate and publish with receipts.</p>
+  <h2 style="margin-bottom:0.2em;">Six spaces we work in</h2>
+  <div class="vert-grid">
+
+    <div class="vert-card fragment">
+      <div class="vert-head">
+        <svg width="24" height="24" viewBox="0 0 30 30" fill="none" stroke="#b94a32" stroke-width="2.3" stroke-linejoin="round"><path d="M15 3l10 4v8c0 6-4.5 10.5-10 12.5C9.5 25.5 5 21 5 15V7z"/></svg>
+        <span class="vert-name">Youth safety</span>
       </div>
+      <p class="vert-b">Manosphere and online-masculinity narratives: <b>3,361 posts drew 127M interactions</b> on X in two months. In <b>Odisha</b> we are building child-safety early warning with state officials.</p>
+      <p class="vert-s"><a href="https://arbiter.simppl.org/report/manosphere-narratives" target="_blank" rel="noopener">Manosphere report &#8599;</a></p>
     </div>
-    <div class="pillar-card fragment">
-      <span class="pillar-glyph"><svg width="26" height="26" viewBox="0 0 30 30" fill="none" stroke="#b94a32" stroke-width="1.7" stroke-linejoin="round"><path d="M4 8l7-2.5 8 3 7-2.5v16l-7 2.5-8-3-7 2.5z"/><path d="M11 5.5v18M19 8.5v18"/></svg></span>
-      <img src="images/funder-2026/v10/prog_child.jpg" alt="Meeting with officials and collaborators in Odisha">
-      <div class="pillar-body">
-        <span class="pillar-tag">State-wide &middot; Odisha</span>
-        <p><span class="pillar-prog">Child safety.</span> We are building an early-warning system with state officials that joins online signals to law-enforcement data.</p>
+
+    <div class="vert-card fragment">
+      <div class="vert-head">
+        <svg width="24" height="24" viewBox="0 0 30 30" fill="none" stroke="#b94a32" stroke-width="2.3" stroke-linecap="round"><path d="M4 11L15 5l11 6" stroke-linejoin="round"/><path d="M7 12v10M13 12v10M19 12v10M25 12v10"/><path d="M3 25h24"/></svg>
+        <span class="vert-name">Democracy</span>
       </div>
+      <p class="vert-b">Election monitoring with <b>Maryland's election consultants</b>. We traced the false &ldquo;500,000 illegal mail-in ballots&rdquo; claim across <b>50+ coordinated accounts</b> on three platforms.</p>
+      <p class="vert-s">Full case earlier in this deck &middot; Democracy International</p>
     </div>
-    <div class="pillar-card fragment">
-      <span class="pillar-glyph"><svg width="26" height="26" viewBox="0 0 30 30" fill="none" stroke="#b94a32" stroke-width="1.7"><path d="M15 26c5-6 8-9.5 8-13a8 8 0 10-16 0c0 3.5 3 7 8 13z" stroke-linejoin="round"/><circle cx="15" cy="13" r="2.8"/></svg></span>
-      <img src="images/funder-2026/v10/prog_health.jpg" alt="SimPPL fieldworkers with families in Jalgaon, Maharashtra">
-      <div class="pillar-body">
-        <span class="pillar-tag">Hyperlocal &middot; last mile</span>
-        <p><span class="pillar-prog">Health.</span> Reliable answers at the last mile: <b>Sakhi</b> answers families' health questions, a person checking each one, for 350+ families in Maharashtra and Bangladesh.</p>
+
+    <div class="vert-card fragment">
+      <div class="vert-head">
+        <svg width="24" height="24" viewBox="0 0 30 30" fill="none" stroke="#b94a32" stroke-width="2.3" stroke-linejoin="round"><rect x="3" y="10" width="24" height="15" rx="2"/><path d="M11 10V7.5A2 2 0 0113 5.5h4a2 2 0 012 2V10"/><path d="M3 16h24"/></svg>
+        <span class="vert-name">Anti-scam</span>
       </div>
+      <p class="vert-b">Fake overseas job ads that end in trafficking. With <b>Migrasia</b> we mapped <b>14 coordination networks across 383 Facebook accounts</b> in the Philippines, then repeated the study in Indonesia.</p>
+      <p class="vert-s"><a href="https://arbiter.simppl.org/report/understanding-overseas-job-recruitment-and-scam-networks-for-filipino-workers" target="_blank" rel="noopener">Philippines &#8599;</a> &middot; <a href="https://arbiter.simppl.org/report/understanding-overseas-job-recruitment-and-scam-networks-for-indonesian-workers" target="_blank" rel="noopener">Indonesia &#8599;</a></p>
     </div>
+
+    <div class="vert-card fragment">
+      <div class="vert-head">
+        <svg width="24" height="24" viewBox="0 0 30 30" fill="none" stroke="#b94a32" stroke-width="2.3" stroke-linecap="round"><circle cx="15" cy="15" r="11"/><path d="M4 15h22" stroke-linejoin="round"/><ellipse cx="15" cy="15" rx="5.5" ry="11" stroke-linejoin="round"/></svg>
+        <span class="vert-name">Climate</span>
+      </div>
+      <p class="vert-b">Evidence for advocacy groups facing organized denial. Across 645 posts on X and YouTube, the narrative &ldquo;climate change is a hoax, clean energy is a scam&rdquo; took <b>45% of all interactions</b>.</p>
+      <p class="vert-s">Full case in the appendix &middot; DeSmog signed up</p>
+    </div>
+
+    <div class="vert-card fragment">
+      <div class="vert-head">
+        <svg width="24" height="24" viewBox="0 0 30 30" fill="none" stroke="#b94a32" stroke-width="2.3" stroke-linejoin="round"><path d="M15 25.5C8 19.5 4 15.5 4 11.5A6 6 0 0115 8.5a6 6 0 0111 3c0 4-4 8-11 14z"/></svg>
+        <span class="vert-name">Health</span>
+      </div>
+      <p class="vert-b">Antenatal and menstrual-health literacy over WhatsApp, in trials with <b>Aadhar Bahuddeshiya Sanstha</b> in Maharashtra and <b>Spreeha</b> in Bangladesh. We benchmark how well LLMs answer these questions in Hindi and Marathi.</p>
+      <p class="vert-s"><a href="https://simppl.org/ai4health" target="_blank" rel="noopener">simppl.org/ai4health &#8599;</a></p>
+    </div>
+
+    <div class="vert-card fragment">
+      <div class="vert-head">
+        <svg width="24" height="24" viewBox="0 0 30 30" fill="none" stroke="#b94a32" stroke-width="2.3" stroke-linejoin="round"><path d="M15 5L3 11l12 6 12-6z"/><path d="M8 14v6.5c0 2 3.4 3.5 7 3.5s7-1.5 7-3.5V14"/></svg>
+        <span class="vert-name">Economic mobility</span>
+      </div>
+      <p class="vert-b">We train newsroom staff with <b>DW Akademie</b> and <b>JournalismAI</b>, undergraduates through <b>NextGenAI</b>, and the health workers who run Sakhi. <b>2,000+ students trained</b> so far.</p>
+      <p class="vert-s"><a href="https://www.simppl.org/programs/ai-for-journalists" target="_blank" rel="noopener">Journalists &#8599;</a> &middot; <a href="https://www.simppl.org/nextgenai" target="_blank" rel="noopener">Students &#8599;</a> &middot; <a href="https://simppl.org/ai4health" target="_blank" rel="noopener">Health workers &#8599;</a></p>
+    </div>
+
   </div>
-  <p class="smallnote fragment" style="margin-top:12px;">The three programs on one page: <a href="https://simppl.org/simppl-brochure.pdf">simppl.org/simppl-brochure.pdf</a></p>
+  <p class="smallnote fragment" style="margin-top:10px;">All six on one page: <a href="https://simppl.org/simppl-brochure.pdf">simppl.org/simppl-brochure.pdf</a></p>
 </section>
 
 <!-- 11 · WHO SIGNED UP -->
@@ -853,7 +973,6 @@
     <span>Sakal Media</span>
     <span>Nepal Fact Check</span>
     <span>Migrasia</span>
-    <span>Mongabay</span>
     <span>The Baltimore Banner</span>
     <span class="intl">UNDP</span>
     <span class="intl">UNHCR</span>
@@ -866,16 +985,24 @@
 <!-- 12 · OUTCOMES -->
 <section>
   <h2>When partners publish, institutions act</h2>
-  <div class="out-row">
+  <div class="out-row three">
     <div class="out-card fragment">
+      <span class="pillar-tag">Partners publish</span>
       <div class="out-n">19 days early</div>
       <p class="out-l"><b>NEST</b> caught the coordinated push behind a secret defamation bill before it surfaced publicly, reading the signal from fewer than 60 accounts.</p>
       <p class="out-src">Mongolia's only internationally accredited fact-checkers · <a href="https://arbiter.simppl.org/case-study-reports/nest-mongolia-article-13-14.html">case report</a></p>
     </div>
     <div class="out-card fragment">
+      <span class="pillar-tag">Platforms act</span>
       <div class="out-n">2 platforms</div>
       <p class="out-l">acted on evidence our partners published: <b>Meta's Q1 2024 Bangladesh takedown</b>, and <b>YouTube terminating flagged channels</b>.</p>
       <p class="out-src">Meta Adversarial Threat Report Q1 2024 · Burkina Faso case (appendix)</p>
+    </div>
+    <div class="out-card fragment">
+      <span class="pillar-tag">Governments act</span>
+      <div class="out-n">5 governments</div>
+      <p class="out-l">opened conversations with us about running this work in their jurisdiction: <b>Maryland, California, New York</b>; <b>Odisha</b> in India; and the Philippines' <b>Department of Migrant Workers</b>.</p>
+      <p class="out-src">Proposals and scoping conversations, July 2026</p>
     </div>
   </div>
 </section>
@@ -930,7 +1057,7 @@
     <div class="rev-text">
       <ul>
         <li class="fragment">Subscriptions from <b>larger newsrooms and civil-society clients</b>: annual earned revenue</li>
-        <li class="fragment">Grants carry the <b>free access</b> for independent journalists and fact-checkers</li>
+        <li class="fragment">Grants pay for the <b>free access</b> that independent journalists and fact-checkers get</li>
         <li class="fragment">Inbound demand is real: users arriving from <b>Dataminr and Meltwater</b> asking to switch</li>
       </ul>
     </div>
@@ -945,7 +1072,7 @@
     <span class="chip grant">INSEAD <b>$110K</b></span>
     <span class="chip grant">Columbia · Brown Institute <b>$100K</b></span>
   </div>
-  <p class="smallnote fragment" style="margin-top:14px;">Team figures, July 2026. $120K counts earned revenue this year; multi-year contract values run higher. INSEAD and Columbia are grants, listed separately.</p>
+  <p class="smallnote fragment" style="margin-top:14px;">$120K counts earned revenue this year; multi-year contract values run higher. INSEAD and Columbia are grants, listed separately.</p>
 </section>
 
 <!-- 16 · FIVE-YEAR GROWTH PLAN (gantt) -->
@@ -961,7 +1088,7 @@
     <div class="g-row fragment"><div class="g-lab">NEST, Migrasia, UNDP cohorts</div><div class="g-bar live" style="grid-column:2 / span 2;">live</div></div>
     <div class="g-row fragment"><div class="g-lab">Odisha child-safety early warning</div><div class="g-bar live" style="grid-column:2 / span 3;">live, seeded</div></div>
     <div class="g-row fragment"><div class="g-lab">State election + AG programs</div><div class="g-bar prop" style="grid-column:2 / span 3;">Maryland + NY, proposals available</div></div>
-    <div class="g-row fragment"><div class="g-lab">Foundation measurement programs</div><div class="g-bar prop" style="grid-column:3 / span 4;">scoping: Packard, Clinton</div></div>
+    <div class="g-row fragment"><div class="g-lab">Measurement of Effects for Interventions</div><div class="g-bar prop" style="grid-column:3 / span 4;">ongoing conversations with several philanthropic funders</div></div>
     <p class="g-group">Commercial · agencies</p>
     <div class="g-row fragment"><div class="g-lab">M+C Saatchi campaign pilot</div><div class="g-bar prop" style="grid-column:2 / span 2;">pilot scoping</div></div>
     <div class="g-row fragment"><div class="g-lab">3-4 enterprise deals, $300K earned</div><div class="g-bar prop" style="grid-column:3 / span 2;">plan</div></div>
@@ -972,7 +1099,7 @@
     <span><i style="background:var(--coral);"></i>proposal or scoping, dated 2026</span>
     <span><i style="border:1.5px dashed #b9b19a;"></i>modeled target</span>
   </div>
-  <p class="smallnote" style="position:absolute; bottom:10px; left:44px; font-size:0.42em; margin:0; text-align:left; opacity:0.85;">Grants fund journalist access; contracts pay for programs and measurement. Assembled from our Columbia/Brown venture-program materials and financial planner, July 2026.</p>
+  <p class="smallnote" style="position:absolute; bottom:10px; left:44px; font-size:0.42em; margin:0; text-align:left; opacity:0.85;">Grants fund journalist access; contracts pay for programs and measurement.</p>
 </section>
 
 <!-- 17 · REVENUE MIX PROJECTION (Chart.js) -->
@@ -1195,7 +1322,7 @@
     </div>
     <div style="flex:1;">
       <ul>
-        <li>Uniform 100%-positive sentiment and single-post spikes match coordination, not organic support</li>
+        <li>Uniform 100%-positive sentiment and single-post spikes are signatures of coordination</li>
         <li>Some clips were later <b>labeled as altered</b> by the platforms</li>
         <li><b>YouTube terminated channels</b> our partners flagged, independent enforcement that validated the early detection</li>
       </ul>
@@ -1250,12 +1377,12 @@
 <!-- APPENDIX · CLIMATE CASE STUDY (v17) -->
 <section>
   <p class="appendix-note">Case study · Climate</p>
-  <h2 style="margin-bottom:0.2em;">One line, "climate change is a hoax", carries 45% of engagement</h2>
+  <h2 style="margin-bottom:0.2em;">One narrative takes 45% of all interactions in our climate study</h2>
   <p style="font-size:0.6em; color:var(--ink-muted); margin-top:4px;">Our "Narratives regarding Climate change" study: 645 posts across X and YouTube, scored account by account.</p>
   <div class="out-row" style="margin-top:14px;">
     <div class="out-card" style="padding:24px 30px 26px;">
       <div class="out-n">45%</div>
-      <p class="out-l">of all interactions carry one narrative: <b>"climate change is a hoax, clean energy is a scam."</b></p>
+      <p class="out-l">of all interactions repeat one narrative: <b>"climate change is a hoax, clean energy is a scam."</b></p>
     </div>
     <div class="out-card" style="padding:26px 30px 28px;">
       <div class="out-n">4.2 / 5</div>
@@ -1360,7 +1487,7 @@
 
 <section>
   <p class="appendix-note">Appendix</p>
-  <h2 style="margin-bottom:0.3em;">Partners by country: 8 named here, 21 served</h2>
+  <h2 style="margin-bottom:0.3em;">Partners by country: 8 listed here, 21 served</h2>
   <table class="tight" style="font-size:0.54em;">
     <thead><tr><th>Country</th><th>Partner</th><th>Work</th></tr></thead>
     <tbody>
