@@ -190,6 +190,29 @@
   .out-n { font-family: var(--font-display); font-size: 2.6em; font-weight: 600; color: var(--ink); letter-spacing: -0.02em; line-height: 1; }
   .reveal .out-card p.out-l { font-size: 0.64em !important; color: var(--ink); margin: 14px 0 0 0; line-height: 1.5; }
   .reveal .out-card p.out-src { font-size: 0.54em !important; color: var(--ink-muted); margin: 10px 0 0 0; line-height: 1.45; }
+  /* two-sided model: who does the work, who pays */
+  .two-side { display: grid; grid-template-columns: 1fr 118px 1fr; align-items: stretch; margin-top: 26px; }
+  .side-k { font-family: var(--font-body); font-size: 0.48em; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; color: var(--coral-deep); }
+  .side-big { font-family: var(--font-display); font-size: 0.92em; font-weight: 600; color: var(--ink); line-height: 1.2; margin-top: 7px; letter-spacing: -0.01em; }
+  .reveal .two-side p.side-t { font-size: 0.52em !important; line-height: 1.45; margin: 9px 0 0 0; color: var(--ink-muted); }
+  .reveal .two-side p.side-t b { color: var(--ink); }
+  .side-pay { background: var(--ink); border-radius: 10px; padding: 18px 22px 20px; }
+  .side-pay .side-k { color: #f4a08c; }
+  .side-pay .side-big { color: var(--paper); }
+  .reveal .side-pay p.side-t { color: #c9c3d8; }
+  .reveal .side-pay p.side-t b { color: #f4a08c; }
+  .side-free { padding: 18px 22px 20px 0; }
+  .side-mid { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
+  .side-mid .lab { font-family: var(--font-body); font-size: 0.42em; font-weight: 700; color: var(--ink-muted); text-align: center; line-height: 1.3; }
+
+  /* expansion ladder: each customer opens the next */
+  .lad2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 34px; margin-top: 16px; }
+  .lad2 h3 { font-family: var(--font-body); font-size: 0.46em; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; color: var(--coral-deep); margin: 0 0 4px 0; }
+  .lrow { display: grid; grid-template-columns: 128px 1fr; gap: 12px; padding: 8px 0; border-top: 1px solid var(--rule); align-items: baseline; }
+  .lrow .lnm { font-family: var(--font-body); font-size: 0.48em; font-weight: 700; color: var(--ink); line-height: 1.25; }
+  .reveal .lrow p.lt { font-size: 0.45em !important; line-height: 1.4; margin: 0; color: var(--ink-muted); }
+  .reveal .lrow p.lt b { color: var(--ink); }
+
   /* case sequence: dated spine, then the posts that followed (Maryland slide) */
   .tl-case { margin-top: 14px; padding-top: 16px; }
   .tl-case .tl-item { padding-right: 28px; }
@@ -354,7 +377,7 @@
     <h1 style="margin-bottom:0.3em; font-size:2em; max-width:14em;">Rebuilding trust in <span style="color:var(--coral);">online information</span></h1>
     <p class="subtitle" style="margin-top:0; max-width:21em;">A public-interest AI system to combat public deception.</p>
     <p class="subtitle" style="margin-top:48px; color:var(--ink); font-size:0.72em;"><strong>Swapneel Mehta &amp; Dhara Mungra</strong> · Founders, SimPPL</p>
-    <p class="subtitle" style="margin-top:10px; color:var(--ink-faint); font-size:0.55em;">A U.S. 501(c)(3) nonprofit · founders@simppl.org · July 2026</p>
+    <p class="subtitle" style="margin-top:10px; color:var(--ink-faint); font-size:0.55em;">A U.S. 501(c)(3) nonprofit · team@simppl.org · July 2026</p>
   </div>
 </section>
 
@@ -899,7 +922,7 @@
         <svg width="24" height="24" viewBox="0 0 30 30" fill="none" stroke="#b94a32" stroke-width="2.3" stroke-linejoin="round"><path d="M15 3l10 4v8c0 6-4.5 10.5-10 12.5C9.5 25.5 5 21 5 15V7z"/></svg>
         <span class="vert-name">Youth safety</span>
       </div>
-      <p class="vert-b">Manosphere and online-masculinity narratives: <b>3,361 posts drew 127M interactions</b> on X in two months. In <b>Odisha</b> we are building child-safety early warning with state officials.</p>
+      <p class="vert-b">Manosphere narratives: <b>3,361 posts, 127M interactions</b> on X in two months. Child-safety early warning with <b>Odisha</b> state officials.</p>
       <p class="vert-s"><a href="https://arbiter.simppl.org/report/manosphere-narratives" target="_blank" rel="noopener">Manosphere report &#8599;</a></p>
     </div>
 
@@ -908,7 +931,7 @@
         <svg width="24" height="24" viewBox="0 0 30 30" fill="none" stroke="#b94a32" stroke-width="2.3" stroke-linecap="round"><path d="M4 11L15 5l11 6" stroke-linejoin="round"/><path d="M7 12v10M13 12v10M19 12v10M25 12v10"/><path d="M3 25h24"/></svg>
         <span class="vert-name">Democracy</span>
       </div>
-      <p class="vert-b">Election monitoring with <b>Maryland's election consultants</b>. We traced the false &ldquo;500,000 illegal mail-in ballots&rdquo; claim across <b>50+ coordinated accounts</b> on three platforms.</p>
+      <p class="vert-b">Election monitoring with <b>Maryland&rsquo;s election consultants</b>. We traced one false ballot claim across <b>50+ coordinated accounts</b>.</p>
       <p class="vert-s">Full case earlier in this deck &middot; Democracy International</p>
     </div>
 
@@ -917,7 +940,7 @@
         <svg width="24" height="24" viewBox="0 0 30 30" fill="none" stroke="#b94a32" stroke-width="2.3" stroke-linejoin="round"><rect x="3" y="10" width="24" height="15" rx="2"/><path d="M11 10V7.5A2 2 0 0113 5.5h4a2 2 0 012 2V10"/><path d="M3 16h24"/></svg>
         <span class="vert-name">Anti-scam</span>
       </div>
-      <p class="vert-b">Fake overseas job ads that end in trafficking. With <b>Migrasia</b> we mapped <b>14 coordination networks across 383 Facebook accounts</b> in the Philippines, then repeated the study in Indonesia.</p>
+      <p class="vert-b">Fake overseas job ads that end in trafficking. With <b>Migrasia</b> we mapped <b>14 coordination networks across 383 accounts</b>, twice.</p>
       <p class="vert-s"><a href="https://arbiter.simppl.org/report/understanding-overseas-job-recruitment-and-scam-networks-for-filipino-workers" target="_blank" rel="noopener">Philippines &#8599;</a> &middot; <a href="https://arbiter.simppl.org/report/understanding-overseas-job-recruitment-and-scam-networks-for-indonesian-workers" target="_blank" rel="noopener">Indonesia &#8599;</a></p>
     </div>
 
@@ -926,7 +949,7 @@
         <svg width="24" height="24" viewBox="0 0 30 30" fill="none" stroke="#b94a32" stroke-width="2.3" stroke-linecap="round"><circle cx="15" cy="15" r="11"/><path d="M4 15h22" stroke-linejoin="round"/><ellipse cx="15" cy="15" rx="5.5" ry="11" stroke-linejoin="round"/></svg>
         <span class="vert-name">Climate</span>
       </div>
-      <p class="vert-b">Evidence for advocacy groups facing organized denial. Across 645 posts on X and YouTube, the narrative &ldquo;climate change is a hoax, clean energy is a scam&rdquo; took <b>45% of all interactions</b>.</p>
+      <p class="vert-b">Evidence for advocacy groups facing organized denial. Across 645 posts, one narrative took <b>45% of all interactions</b>.</p>
       <p class="vert-s">Full case in the appendix &middot; DeSmog signed up</p>
     </div>
 
@@ -935,7 +958,7 @@
         <svg width="24" height="24" viewBox="0 0 30 30" fill="none" stroke="#b94a32" stroke-width="2.3" stroke-linejoin="round"><path d="M15 25.5C8 19.5 4 15.5 4 11.5A6 6 0 0115 8.5a6 6 0 0111 3c0 4-4 8-11 14z"/></svg>
         <span class="vert-name">Health</span>
       </div>
-      <p class="vert-b">Antenatal and menstrual-health literacy over WhatsApp, in trials with <b>Aadhar Bahuddeshiya Sanstha</b> in Maharashtra and <b>Spreeha</b> in Bangladesh. We benchmark how well LLMs answer these questions in Hindi and Marathi.</p>
+      <p class="vert-b">Antenatal and menstrual-health literacy over WhatsApp, in trials in <b>Maharashtra</b> and <b>Bangladesh</b>. We benchmark LLMs in Hindi and Marathi.</p>
       <p class="vert-s"><a href="https://simppl.org/ai4health" target="_blank" rel="noopener">simppl.org/ai4health &#8599;</a></p>
     </div>
 
@@ -944,7 +967,7 @@
         <svg width="24" height="24" viewBox="0 0 30 30" fill="none" stroke="#b94a32" stroke-width="2.3" stroke-linejoin="round"><path d="M15 5L3 11l12 6 12-6z"/><path d="M8 14v6.5c0 2 3.4 3.5 7 3.5s7-1.5 7-3.5V14"/></svg>
         <span class="vert-name">Economic mobility</span>
       </div>
-      <p class="vert-b">We train newsroom staff with <b>DW Akademie</b> and <b>JournalismAI</b>, undergraduates through <b>NextGenAI</b>, and the health workers who run Sakhi. <b>2,000+ students trained</b> so far.</p>
+      <p class="vert-b">We train newsroom staff with <b>DW Akademie</b> and <b>JournalismAI</b>, undergraduates through <b>NextGenAI</b>, and health workers. <b>2,200+ trained</b>.</p>
       <p class="vert-s"><a href="https://www.simppl.org/programs/ai-for-journalists" target="_blank" rel="noopener">Journalists &#8599;</a> &middot; <a href="https://www.simppl.org/nextgenai" target="_blank" rel="noopener">Students &#8599;</a> &middot; <a href="https://simppl.org/ai4health" target="_blank" rel="noopener">Health workers &#8599;</a></p>
     </div>
 
@@ -959,13 +982,11 @@
     <span>Rappler</span>
     <span>dpa</span>
     <span>Deutsche Welle</span>
-    <span>Reuters</span>
-    <span>Hearst</span>
+    <span>Bloomberg</span>
     <span>Chequeado</span>
     <span>Maldita.es</span>
     <span>La Nación</span>
     <span>Factchequeado</span>
-    <span>BOOM</span>
     <span>Africa Uncensored</span>
     <span>NEST Mongolia</span>
     <span>Jagran</span>
@@ -974,6 +995,7 @@
     <span>Nepal Fact Check</span>
     <span>Migrasia</span>
     <span>The Baltimore Banner</span>
+    <span class="intl">Ofcom</span>
     <span class="intl">UNDP</span>
     <span class="intl">UNHCR</span>
     <span class="intl">Internet Archive</span>
@@ -1102,14 +1124,50 @@
   <p class="smallnote" style="position:absolute; bottom:10px; left:44px; font-size:0.42em; margin:0; text-align:left; opacity:0.85;">Grants fund journalist access; contracts pay for programs and measurement.</p>
 </section>
 
-<!-- 17 · REVENUE MIX PROJECTION (Chart.js) -->
+<!-- 17a · TWO-SIDED MODEL (from the Columbia demo-day deck) -->
 <section>
-  <h2>Earned revenue catches grants by 2030</h2>
-  <div class="fragment" style="margin-top:24px;">
-    <canvas id="revmix" width="880" height="330" style="max-width:92%;"></canvas>
+  <h2 style="margin-bottom:0.1em;">Two customers: one does the work, one pays for it</h2>
+  <div class="two-side">
+    <div class="side-free fragment">
+      <div class="side-k">Impact</div>
+      <div class="side-big">Fact-checkers and newsrooms</div>
+      <p class="side-t">Free seats. They run the investigations and publish what we find, in their own language and their own byline.</p>
+    </div>
+    <div class="side-mid fragment">
+      <svg width="52" height="26" viewBox="0 0 52 26" fill="none"><path d="M50 13H6" stroke="#d55a40" stroke-width="2.6" stroke-linecap="round"/><path d="M14 5L4 13l10 8" stroke="#d55a40" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="lab">pays for<br>those seats</div>
+    </div>
+    <div class="side-pay fragment">
+      <div class="side-k">Paying</div>
+      <div class="side-big">Agencies, civil society, government</div>
+      <p class="side-t">About <b>$2,500 to $4,000 a month</b>, signed by a director. We are in conversation with M+C Saatchi, ISD, George Washington University, Maryland, and the New York Attorney General.</p>
+    </div>
   </div>
-  <p class="fragment" style="font-size:0.56em; color:var(--ink-muted); width:88%; margin:16px auto 0;">The 2027 plan is $1M: $700K grants and $300K earned. The modeled years extend it until contracts match grants and free access outlasts any single funder.</p>
-  <p class="smallnote fragment" style="margin-top:10px;">2026 (team, July 2026; Columbia's $100K spans 2026-27) · 2027 from our $1M working model, $200K of grants already committed.</p>
+  <p class="smallnote fragment" style="margin-top:20px;">Those five are prospects. Conversations are ongoing and subject to change. Our signed contracts this year are on the revenue slide.</p>
+</section>
+
+<!-- 17b · EXPANSION PATH (from the Columbia demo-day deck) -->
+<section style="height:648px;">
+  <h2 style="margin-bottom:0.1em;">Each customer opens the next one up</h2>
+  <div class="lad2">
+    <div>
+      <h3>Public interest</h3>
+      <div class="lrow fragment" style="border-top:0;"><div class="lnm">Journalists, free seats</div><p class="lt">Networks distribute us: the IFCN&rsquo;s fact-checkers, and Indicator.media&rsquo;s 14,000 readers.</p></div>
+      <div class="lrow fragment"><div class="lnm">Media that pays</div><p class="lt">We measure a newsroom&rsquo;s own mentions, so audience teams renew annually.</p></div>
+      <div class="lrow fragment"><div class="lnm">Civil society</div><p class="lt">Extremism researchers already license data. We sell the analytics layer on top.</p></div>
+      <div class="lrow fragment"><div class="lnm">Government</div><p class="lt">The setup we build for one agency becomes the next agency&rsquo;s starting point.</p></div>
+    </div>
+    <div>
+      <h3>Commercial, which funds the free seats</h3>
+      <div class="lrow fragment" style="border-top:0;"><div class="lnm">Pass the Salt</div><p class="lt">A consumer brand, and where we learned audience analytics.</p></div>
+      <div class="lrow fragment"><div class="lnm">Ychance &middot; <b>$60K signed</b></div><p class="lt">A prediction market. It prices public response into its odds.</p></div>
+      <div class="lrow fragment"><div class="lnm">M+C Saatchi</div><p class="lt">A global agency, and a channel into every brand it serves.</p></div>
+    </div>
+  </div>
+  <div class="ask-umbrella fragment" style="margin-top:20px;">
+    <p style="font-size:0.56em !important;">The two sides run on one platform. The public-interest side finds the problems and wins the grants; the commercial side pays for the free seats underneath it.</p>
+  </div>
+  <p class="smallnote fragment" style="margin-top:14px;">Ychance is signed. ISD, George Washington University, Maryland, the New York Attorney General, M+C Saatchi, and Pass the Salt are prospects, with conversations ongoing and subject to change.</p>
 </section>
 
 <!-- 18 · PROGRESS TIMELINE -->
@@ -1194,45 +1252,42 @@
     </div>
   </div>
   <div class="ask-umbrella fragment" style="margin-top:22px;">
-    <p><b>2,000+ students trained</b> across these programs. Alumni have gone on to Ivy League PhD programs, the <b>Microsoft Research Fellowship</b>, FAANG companies, and prominent startups.</p>
+    <p><b>2,200+ trained</b> across these programs. Alumni have gone on to Ivy League PhD programs, the <b>Microsoft Research Fellowship</b>, FAANG companies, and prominent startups.</p>
   </div>
   <p class="smallnote fragment" style="margin-top:16px;">Awards from <b>Google</b> and <b>Mozilla</b>. Programs backed by Genentech, DeepMind (via the NYU AI School), the University of Mannheim, DW Akademie, JournalismAI, and MIT. <a href="https://simppl.org/programs">simppl.org/programs</a> &middot; <a href="https://simppl.org/testimonials">simppl.org/testimonials</a></p>
 </section>
 
-<!-- 21 · THE ASK -->
+<!-- 21 · THE ASK (single slide, brochure-aligned) -->
 <section>
-  <h2 style="margin-bottom:0.3em;">Come in at a tier, or anchor the whole plan</h2>
-  <p class="fragment" style="font-size:0.62em; color:var(--ink-muted); margin-top:0;">Three funded activities; each is an annual tier of support you can lead on its own.</p>
+  <h2 style="margin-bottom:0.25em;">Areas of funding</h2>
+  <p class="fragment" style="font-size:0.6em; color:var(--ink-muted); margin-top:0;">Annual support, at whichever level fits your program.</p>
   <div class="tier-grid">
-    <div class="tier-card lead fragment">
+    <div class="tier-card fragment">
+      <div class="tier-amt">$250K <span style="font-size:0.55em; color:var(--ink-muted); font-family:var(--font-body); font-weight:600;">a year</span></div>
+      <h3>One issue area</h3>
+      <ul>
+        <li>Our work in any <b>one of the six spaces</b></li>
+      </ul>
+    </div>
+    <div class="tier-card fragment">
       <div class="tier-amt">$500K <span style="font-size:0.55em; color:var(--ink-muted); font-family:var(--font-body); font-weight:600;">a year</span></div>
-      <h3>Every IFCN fact-checker equipped</h3>
+      <h3>The IFCN network equipped</h3>
       <ul>
-        <li>Subsidized access for <b>142 verified IFCN orgs</b></li>
-        <li>Training cohorts in <b>partner countries</b></li>
-        <li>Reliable AI in <b>Mongolian, Swahili, Bahasa, Hindi</b></li>
+        <li>Access for <b>142 verified IFCN fact-checkers</b>, with training in partner countries</li>
       </ul>
     </div>
-    <div class="tier-card fragment">
-      <div class="tier-amt">$250K <span style="font-size:0.55em; color:var(--ink-muted); font-family:var(--font-body); font-weight:600;">a year</span></div>
-      <h3>One US civic program</h3>
+    <div class="tier-card lead fragment">
+      <div class="tier-amt">$1M <span style="font-size:0.55em; color:var(--ink-muted); font-family:var(--font-body); font-weight:600;">a year</span></div>
+      <h3>All six areas</h3>
       <ul>
-        <li>Election-integrity work with <b>a state elections commission</b>, or a state attorney general's study of extremist narratives</li>
-      </ul>
-    </div>
-    <div class="tier-card fragment">
-      <div class="tier-amt">$250K <span style="font-size:0.55em; color:var(--ink-muted); font-family:var(--font-body); font-weight:600;">a year</span></div>
-      <h3>Child safety at full scope</h3>
-      <ul>
-        <li><b>Odisha early-warning rollout</b> with state officials</li>
-        <li>Case-study library doubled to <b>60+ public</b>; audience reach measured across partners</li>
+        <li><b>General operating support</b> across all six spaces for a year</li>
       </ul>
     </div>
   </div>
   <div class="ask-umbrella fragment">
-    <p>The complete 24-month proposal is <span class="umbrella-amt">$1.8M</span>: all three programs at full scope, with budget and milestones ready for review. Anchor the full plan, fund all three for a year (<b>$1M</b>), or lead a single activity.</p>
+    <p>Pilot grants from <span class="umbrella-amt">$25K to $250K</span> fund one specific program. Tell us which space matters most to you and we will cost it together.</p>
   </div>
-  <p class="smallnote fragment" style="margin-top:12px;">Happy to start with a <b>project-based pilot ($20K–$50K)</b> that grows into larger grants; detail in the appendix.</p>
+  <p class="smallnote fragment" style="margin-top:14px;">Budgets and milestones are ready for whichever scope you want to discuss. <a href="mailto:team@simppl.org">team@simppl.org</a></p>
 </section>
 
 <!-- 17 · THREE TAKEAWAYS -->
@@ -1249,10 +1304,10 @@
     </div>
     <div class="tk-item fragment">
       <div class="tk-num">3</div>
-      <p>The full 24-month plan is <b>$1.8M, with annual tiers from $250K up</b>; every tier has a number attached.</p>
+      <p>Support runs from a <b>$25K pilot</b> to <b>$1M a year</b> of general operating support across all six areas.</p>
     </div>
   </div>
-  <p style="margin-top:20px;"><a class="link-pill" href="mailto:founders@simppl.org">founders@simppl.org</a>&nbsp;&nbsp;<span class="smallnote" style="margin-top:0; font-size:0.72em;">simppl.org · arbiter.simppl.org · a U.S. 501(c)(3) nonprofit</span></p>
+  <p style="margin-top:20px;"><a class="link-pill" href="mailto:team@simppl.org">team@simppl.org</a>&nbsp;&nbsp;<span class="smallnote" style="margin-top:0; font-size:0.72em;">simppl.org · arbiter.simppl.org · a U.S. 501(c)(3) nonprofit</span></p>
 </section>
 
 <!-- 18 · MATERIALS -->
@@ -1263,34 +1318,11 @@
   <div class="mat-row fragment"><div class="mat-name">Public case-study library</div><div class="mat-desc">31 investigations, each traceable to source: <a href="https://arbiter.simppl.org/studies">arbiter.simppl.org/studies</a></div></div>
   <div class="mat-row fragment"><div class="mat-name">Technical deck</div><div class="mat-desc">The full technical walkthrough, with the climate-skepticism example: <a href="https://mehtaver.se/slides/arbiter.html">mehtaver.se/slides/arbiter.html</a></div></div>
   <div class="mat-row fragment"><div class="mat-name">Methods &amp; AI footprint</div><div class="mat-desc">Token-efficient models that cut the climate cost of large-scale analysis: <a href="https://mehtaver.se/slides/css-methods.html">mehtaver.se/slides/css-methods</a></div></div>
-  <div class="mat-row fragment"><div class="mat-name">Proposal &amp; business plan</div><div class="mat-desc">On request: <a href="mailto:founders@simppl.org">founders@simppl.org</a></div></div>
+  <div class="mat-row fragment"><div class="mat-name">Proposal &amp; business plan</div><div class="mat-desc">On request: <a href="mailto:team@simppl.org">team@simppl.org</a></div></div>
 </section>
 
 <!-- APPENDIX -->
-<section>
-  <p class="appendix-note">Appendix (optional)</p>
-  <h2>If your grant sits outside the $1M plan</h2>
-  <div class="tier-grid">
-    <div class="tier-card fragment">
-      <div class="tier-amt">$25K – $150K</div>
-      <h3>Fund one specific activity in the plan</h3>
-      <ul>
-        <li>A <b>training cohort</b> on the Kenya model: 10 journalists, one country</li>
-        <li>One new <b>language</b> made reliable, or one partner <b>investigation sprint</b></li>
-        <li>Reporting stays proportionate: <b>the public case studies plus a one-page annual letter</b></li>
-      </ul>
-    </div>
-    <div class="tier-card lead fragment">
-      <div class="tier-amt">$1.5M – $3M</div>
-      <h3>The complete proposal, then depth</h3>
-      <ul>
-        <li>The full 24-month proposal is <b>$1.8M</b>: all three programs at full scope</li>
-        <li>Beyond it: a <b>third year</b> of the same programs, and subsidy widened past the IFCN's 142 orgs</li>
-      </ul>
-    </div>
-  </div>
-  <p class="smallnote fragment" style="margin-top:16px;">Every level buys a specific deliverable; no grant is too small to point at something real.</p>
-</section>
+
 
 <section>
   <p class="appendix-note">Appendix</p>
@@ -1508,7 +1540,6 @@
 </div>
 <script src="https://unpkg.com/reveal.js@4.6.1/dist/reveal.js"></script>
 <script src="https://unpkg.com/reveal.js@4.6.1/plugin/notes/notes.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script>
   Reveal.initialize({
     width: 1280,
@@ -1525,42 +1556,6 @@
     plugins: [ RevealNotes ]
   });
 
-  /* v15: revenue-mix chart (built on first show; hidden slides render 0x0) */
-  var revMixBuilt = false;
-  function buildRevMix() {
-    if (revMixBuilt || typeof Chart === "undefined") return;
-    var el = document.getElementById("revmix");
-    if (!el || el.getBoundingClientRect().width === 0) return;
-    Chart.defaults.font.family = '"Instrument Sans", sans-serif';
-    Chart.defaults.font.size = 14;
-    Chart.defaults.color = "#56516f";
-    var inkSolid = "rgba(23,21,59,0.85)", inkFade = "rgba(23,21,59,0.35)";
-    var corSolid = "rgba(213,90,64,0.9)", corFade = "rgba(213,90,64,0.42)";
-    new Chart(el, {
-      type: "bar",
-      data: {
-        labels: ["2026", ["2027", "plan"], ["2028", "modeled"], ["2029", "modeled"], ["2030", "modeled"]],
-        datasets: [
-          { label: "Grants and philanthropy", data: [210, 700, 800, 900, 1000],
-            backgroundColor: [inkSolid, inkSolid, inkFade, inkFade, inkFade], borderRadius: 3 },
-          { label: "Earned: contracts, subscriptions, agencies", data: [120, 300, 500, 750, 1000],
-            backgroundColor: [corSolid, corSolid, corFade, corFade, corFade], borderRadius: 3 }
-        ]
-      },
-      options: {
-        responsive: false,
-        animation: false,
-        plugins: { legend: { position: "top", labels: { boxWidth: 18, boxHeight: 12 } } },
-        scales: {
-          x: { stacked: true, grid: { display: false } },
-          y: { stacked: true, ticks: { callback: function (v) { return v >= 1000 ? "$" + (v / 1000) + "M" : "$" + v + "K"; } }, grid: { color: "#eee8d8" } }
-        }
-      }
-    });
-    revMixBuilt = true;
-  }
-  Reveal.on("ready", buildRevMix);
-  Reveal.on("slidechanged", buildRevMix);
 </script>
 </body>
 </html>
