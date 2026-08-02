@@ -196,6 +196,14 @@
   .tight .tier-card ul { margin-top: 8px; }
   .reveal .tight .tier-card li { font-size: 0.5em; line-height: 1.36; margin-bottom: 0.3em; }
 
+  /* confidentiality marker, on every slide */
+  .confmark {
+    position: fixed; top: 13px; right: 20px; z-index: 40;
+    font-family: var(--font-body); font-size: 11px; font-weight: 700;
+    letter-spacing: 0.13em; text-transform: uppercase;
+    color: var(--coral-deep); opacity: 0.72; pointer-events: none;
+  }
+
   /* two-way investigation diagram (ported from the demo-day deck) */
   .twoway { display: block; width: 1130px; max-width: 100%; height: auto; margin: 18px auto 0; }
   .twoway text { font-family: "Instrument Sans", sans-serif; }
@@ -403,7 +411,25 @@
 </style>
 </head>
 <body>
+<script>
+(function () {
+  var ok = sessionStorage.getItem("arb_ok") === "1";
+  if (!ok) {
+    var t = prompt("This deck is confidential. Enter the password to continue:");
+    if (t !== "RebuildTrust-2026") {
+      document.documentElement.innerHTML =
+        "<body style=\"font-family:system-ui;background:#faf6ee;color:#17153b;display:flex;align-items:center;justify-content:center;height:100vh;margin:0\">" +
+        "<div style=\"text-align:center\"><h1 style=\"font-weight:600\">Access denied</h1>" +
+        "<p style=\"color:#56516f\">Contact team@simppl.org for access.</p></div></body>";
+      throw new Error("unauthorized");
+    }
+    sessionStorage.setItem("arb_ok", "1");
+  }
+})();
+</script>
 <div class="reveal">
+<div class="confmark">Confidential &middot; not for distribution</div>
+
 <div class="slides">
 
 <!-- 1 · TITLE -->
@@ -1073,7 +1099,7 @@
         <span class="vert-name">Climate</span>
       </div>
       <p class="vert-b">Evidence for advocacy groups facing organized denial. Across 645 posts, one narrative took <b>45% of all interactions</b>.</p>
-      <p class="vert-s">Full case in the appendix &middot; DeSmog signed up</p>
+      <p class="vert-s">DeSmog signed up on their own</p>
     </div>
 
     <div class="vert-card fragment">
@@ -1315,7 +1341,7 @@
       <p><b>Scale</b>: Fast Forward accelerator; <b>100+ orgs, 21 countries, 318 case studies created</b>; earned revenue reaches <b>$120K</b>. <b style="color:#2a9d63;">Stanford picks Arbiter for its platform workshop, a slot Meta, TikTok, and YouTube held in past years. 4 state governments reach out to partner</b></p>
     </div>
   </div>
-  <p class="smallnote fragment" style="margin-top:22px;">Funded by Google, Mozilla, Ford, Omidyar, Wikimedia, and the Brown Institute at Columbia. Sources in the appendix.</p>
+  <p class="smallnote fragment" style="margin-top:22px;">Funded by Google, Mozilla, Ford, Omidyar, Wikimedia, and the Brown Institute at Columbia.</p>
 </section>
 
 <!-- 15 · TEAM + BOARD -->
@@ -1444,238 +1470,3 @@
 <!-- APPENDIX -->
 
 
-<section>
-  <p class="appendix-note">Appendix</p>
-  <h2>How we measure impact</h2>
-  <p style="font-size:0.62em; color:var(--ink-muted); margin-top:0;">The way fact-checking funders expect: who we equip, what they publish, who acts on it.</p>
-  <table class="tight" style="font-size:0.52em;">
-    <thead><tr><th>What we count</th><th>How</th><th>Status</th></tr></thead>
-    <tbody>
-      <tr><td><b>Investigations published by partners</b></td><td>31 public case studies, each linked</td><td>Measured today</td></tr>
-      <tr><td><b>Detection lead time</b></td><td>Days from partner finding to public confirmation: 19 in Mongolia</td><td>Measured today</td></tr>
-      <tr><td><b>Platform enforcement on flagged content</b></td><td>Actions on the public record: Meta takedown, YouTube terminations</td><td>Measured today</td></tr>
-      <tr><td><b>Health literacy</b></td><td>Pre/post surveys, 350+ families</td><td>Measured today</td></tr>
-      <tr><td><b>Journalists trained, active at 6 months</b></td><td>Per-cohort follow-up, starting with Kenya</td><td>Planned</td></tr>
-      <tr><td><b>Audience reached via partner publications</b></td><td>Partner analytics: dpa, Rappler, Jagran</td><td>Planned, in the 24-month plan</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<section>
-  <p class="appendix-note">Appendix · pull up if asked</p>
-  <h2 style="margin-bottom:0.25em;">Influence operations: the Burkina Faso case</h2>
-  <p style="font-size:0.6em; color:var(--ink-muted); margin-top:0;">A manufactured pan-African praise campaign around Ibrahim Traoré, and the takedowns that followed.</p>
-  <div style="display:flex; gap:24px; align-items:flex-start; margin-top:14px;">
-    <div style="flex:1.1;">
-      <div class="shot-frame">
-        <img src="images/funder-2026/v10/actor_panel.png" alt="Arbiter Top Actors panel from the Traore investigation" style="max-height:300px; object-fit:contain;">
-      </div>
-      <p class="shot-cap">Live product: our Top Actors panel; one account drew <b>302.5M interactions across 17 posts</b> in a 100%-positive campaign.</p>
-    </div>
-    <div style="flex:1;">
-      <ul>
-        <li>Uniform 100%-positive sentiment and single-post spikes are signatures of coordination</li>
-        <li>Some clips were later <b>labeled as altered</b> by the platforms</li>
-        <li><b>YouTube terminated channels</b> our partners flagged, independent enforcement that validated the early detection</li>
-      </ul>
-      <p class="smallnote" style="margin-top:10px;">Burkina Faso / Traoré case study; platform actions on the public record.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <p class="appendix-note">Appendix · pull up if asked</p>
-  <h2 style="margin-bottom:0.12em;">Yes, we score at the account level</h2>
-  <p style="font-size:0.6em; color:var(--ink-muted); margin-top:0;">In our Bloomberg study, we uncovered sleeper-cell accounts promoting Russian disinformation.</p>
-  <div style="display:flex; gap:18px; align-items:center; margin-top:16px;">
-    <div class="pcard flag" style="flex:1;">
-      <div class="pcard-head"><div class="pcard-av"></div><p class="pc-handle">Tali</p><span class="pc-plat">YouTube &middot; English</span></div>
-      <p class="pc-text">P.17 &mdash; Former CIA Glenn Corn: The Truth About Russian Disinformation | ALLATRA TV <span style="color:var(--ink-faint);">#allatra #ukraine</span></p>
-      <p class="pc-meta">Joined <b>Dec 2024</b> &middot; 456 videos &middot; clickbait <b>4.8/5</b></p>
-    </div>
-    <div style="flex:0 0 auto; text-align:center; font-family:var(--font-display); color:var(--coral-deep); font-weight:600; font-size:0.6em; line-height:1.2;">same<br>catalogue</div>
-    <div class="pcard flag" style="flex:1;">
-      <div class="pcard-head"><div class="pcard-av"></div><p class="pc-handle">Vitalina Sumy</p><span class="pc-plat">YouTube &middot; Russian / Ukrainian</span></div>
-      <p class="pc-text">Ч.7 &mdash; Колишній співробітник ЦРУ Гленн Корн: Правда про російську дезінформацію | АЛЛАТРА ТБ Львів <span style="color:var(--ink-faint);">#аллатра #україна</span></p>
-      <p class="pc-meta">Joined <b>Feb 2020</b> &middot; 465 videos &middot; same ALLATRA series</p>
-    </div>
-  </div>
-  <div class="ask-umbrella" style="margin-top:16px;">
-    <p style="font-size:0.58em !important;">Created nearly <b>five years apart</b> (Feb 2020, Dec 2024), yet promoting the <b>same ~460-video catalogue</b> in two languages, posing as independent voices.</p>
-  </div>
-</section>
-
-<section>
-  <p class="appendix-note">Case study &middot; Arbiter for a partner</p>
-  <h2 style="margin-bottom:0.12em;">Measuring a behaviour-change campaign in Pakistan</h2>
-  <p style="font-size:0.6em; color:var(--ink-muted); margin-top:0;">A creative agency runs online reproductive-health campaigns. Arbiter maps the conversation so they can target the work and measure its effect.</p>
-  <div style="display:flex; gap:28px; margin-top:18px; align-items:flex-start;">
-    <div style="flex:1;">
-      <h3 style="font-size:0.6em; margin-bottom:12px;">What Arbiter surfaces</h3>
-      <ul style="margin:0;">
-        <li style="font-size:0.56em;"><b>Who supports and who opposes</b> family planning, and the religious and cultural taboos in play</li>
-        <li style="font-size:0.56em;">The <b>messengers</b> that move engagement: the Punjab Family Planning Program, health influencers, and opposition voices</li>
-        <li style="font-size:0.56em; margin-bottom:0;">The <b>formats</b> that land: one gynaecologist-recommended contraception post drew <b>50,197 interactions</b> in a week</li>
-      </ul>
-    </div>
-    <div style="flex:0 0 34%; display:flex; flex-direction:column; gap:12px;">
-      <div class="out-card" style="padding:12px 18px;"><div class="out-n" style="font-size:1.25em;">11,626</div><p class="out-l" style="font-size:0.5em !important; margin-top:8px;">posts collected, 92 analysed (YouTube + X, June 2026)</p></div>
-      <div class="out-card" style="padding:12px 18px;"><div class="out-n" style="font-size:1.25em;">119.4K</div><p class="out-l" style="font-size:0.5em !important; margin-top:8px;">interactions on the "parental-health media" theme</p></div>
-    </div>
-  </div>
-  <p class="smallnote" style="margin-top:12px;">A baseline map; the partner uses it to target campaigns and measure their effect over successive windows. Live study on <a href="https://arbiter.simppl.org/studies">arbiter.simppl.org</a>.</p>
-</section>
-
-<!-- APPENDIX · CLIMATE CASE STUDY (v17) -->
-<section>
-  <p class="appendix-note">Case study · Climate</p>
-  <h2 style="margin-bottom:0.2em;">One narrative takes 45% of all interactions in our climate study</h2>
-  <p style="font-size:0.6em; color:var(--ink-muted); margin-top:4px;">Our "Narratives regarding Climate change" study: 645 posts across X and YouTube, scored account by account.</p>
-  <div class="out-row" style="margin-top:14px;">
-    <div class="out-card" style="padding:24px 30px 26px;">
-      <div class="out-n">45%</div>
-      <p class="out-l">of all interactions repeat one narrative: <b>"climate change is a hoax, clean energy is a scam."</b></p>
-    </div>
-    <div class="out-card" style="padding:26px 30px 28px;">
-      <div class="out-n">4.2 / 5</div>
-      <p class="out-l">on <b>both clickbait and emotional manipulation</b> for the loudest account, an anonymous conspiracy page.</p>
-    </div>
-  </div>
-  <div class="chiprow" style="margin-top:10px;"><span class="chiplab">Top skeptic reach</span>
-    <span class="chip">@BGatesIsaPyscho <b>2.4M</b></span>
-    <span class="chip">Sen. Matt Canavan <b>1.1M</b></span>
-    <span class="chip">@MatrixMysteries <b>859K</b></span>
-  </div>
-  <p class="smallnote" style="margin-top:14px;"><b>DeSmog</b> signed up on its own; the <b>Disinfo Institute</b> asked us to trace the ads behind climate-hoax campaigns.</p>
-  <p class="smallnote" style="margin-top:6px;">Panels captured July 2026. Scores are five-point scales, high means heavier manipulation; reach is follower count.</p>
-</section>
-
-<section>
-  <p class="appendix-note">Appendix</p>
-  <h2>Why this took three years to build</h2>
-  <ul style="margin-top:14px;">
-    <li>Every question Arbiter answers is <b>benchmarked against hand-labeled data</b>, which is unusual in this field; a self-healing loop improves it with each fix</li>
-    <li><b>Multilingual by design</b>: internal benchmarks in non-Latin scripts, and our Sakhi health assistant is benchmarked for health literacy in <b>Hindi and Marathi</b></li>
-    <li>Methods peer-reviewed at NeurIPS, ICML, AAAI, and ICWSM; per-investigation cost stays flat, so small newsrooms can afford us</li>
-    <li>Public social data collected within platform terms of service (YouTube granted us 1.2M API calls a day); Dataminr and Meltwater users ask to switch</li>
-  </ul>
-  <p style="margin:6px 0 0;"><a class="link-pill" href="https://mehtaver.se/slides/arbiter.html">Benchmarks &amp; methods, in depth → mehtaver.se/slides/arbiter.html</a></p>
-</section>
-
-<section>
-  <p class="appendix-note">Appendix</p>
-  <h2 style="margin-bottom:0.3em;">Where these numbers come from (1 of 2)</h2>
-  <table class="tight xtight" style="font-size:0.44em; line-height:1.3;">
-    <thead><tr><th>Claim</th><th>Value</th><th>Source</th></tr></thead>
-    <tbody>
-      <tr><td>Posts collected</td><td>3.7M+</td><td>arbiter.simppl.org counters; team, July 2026 (refresh before presenting)</td></tr>
-      <tr><td>Interactions tracked</td><td>~20B a month; 248B cumulative on monitored accounts</td><td>team, July 2026; metric is interactions (views, comments, likes), not people</td></tr>
-      <tr><td>Organizations / countries / users</td><td>100+ (production shows ~160+ deduped; we cite the conservative floor) / 21 / 261 users</td><td>production analytics 2026-07-02 (self-reported affiliations); 21 countries per team; 100+ per user ruling 2026-07-13</td></tr>
-      <tr><td>Case studies</td><td>318 on-platform; 31 public; map NA 9 · EU 8 · Asia 7 · Africa 5 · ME 1 · AU 1</td><td>production analytics 2026-07-02; arbiter.simppl.org/studies</td></tr>
-      <tr><td>Signup name wall</td><td>as shown</td><td>production analytics 2026-07-02, self-reported organization field, curated for recognizability</td></tr>
-      <tr><td>IFCN network / verified signatories</td><td>170+ organizations / ~142 verified; distribution interest per team</td><td>poynter.org/ifcn; github.com/IFCN/verified-signatories; team, July 2026</td></tr>
-      <tr><td>X API pricing</td><td>free tier ended; enterprise from ~$42K/month</td><td>X enterprise API public pricing, cited in our 2026 Mozilla proposal</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<section>
-  <p class="appendix-note">Appendix</p>
-  <h2 style="margin-bottom:0.3em;">Where these numbers come from (continued)</h2>
-  <table class="tight xtight" style="font-size:0.44em; line-height:1.3;">
-    <thead><tr><th>Claim</th><th>Value</th><th>Source</th></tr></thead>
-    <tbody>
-      <tr><td>Telegram investigation</td><td>~4,500 pro-Russian channels mapped</td><td>mehtaver.se research figure; presented at Stanford Trust &amp; Safety Research Conference</td></tr>
-      <tr><td>Mongolia early warning</td><td>19 days; direction read from &lt;60 accounts while redraft was secret</td><td>NEST case study; SimPPL funder brochure</td></tr>
-      <tr><td>Migrasia investigation</td><td>16 impersonated manufacturers; 1,025 ads triaged; 575 screened in two days</td><td>Migrasia case study; SimPPL funder brochure</td></tr>
-      <tr><td>Traoré actor panel</td><td>302.5M interactions across 17 posts</td><td>on-screenshot, Burkina Faso investigation</td></tr>
-      <tr><td>Gambling investigations (flow + answer panel)</td><td>6,345 posts; MetaWin 23.5M; 72 themes; 964 users; 333/397 documents</td><td>arbiter.simppl.org/studies; two investigations + agent-answer screenshot</td></tr>
-      <tr><td>"Days of analysis into minutes"</td><td>measured effort reduction</td><td>measured with Migrasia and NEST (partner engagements, 2026)</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<section>
-  <p class="appendix-note">Appendix</p>
-  <h2 style="margin-bottom:0.35em;">Program, team, and finance numbers</h2>
-  <table class="tight xtight" style="font-size:0.46em;">
-    <thead><tr><th>Claim</th><th>Value</th><th>Source</th></tr></thead>
-    <tbody>
-      <tr><td>Meta Q1 2024 Bangladesh takedown</td><td>followed partner reporting</td><td>Meta Adversarial Threat Report Q1 2024 (public); SimPPL Annual Report 2025</td></tr>
-      <tr><td>YouTube channel terminations</td><td>channels partners flagged, later independently terminated</td><td>Burkina Faso / Traoré case study; SimPPL Annual Report 2025</td></tr>
-      <tr><td>Board of directors</td><td>8 members, as listed on the team slide</td><td>simppl.org/team (confirmed by team, July 2026)</td></tr>
-      <tr><td>Timeline milestones</td><td>2021 NYC Media Lab; 2023 Mozilla/NSF; 2024 CrowdTangle shut; 2025 UNDP + revenue; 2026 Fast Forward</td><td>SimPPL Annual Report 2025; Schmidt concept note v6</td></tr>
-      <tr><td>Earned revenue</td><td>$15K/quarter reached 2025; $60K/$120K/$300K annual (reached/planned/target)</td><td>Annual Report 2025; 24-month proposal budget</td></tr>
-      <tr><td>Raised since 2021</td><td>~$450K to SimPPL from jointly-raised grants</td><td>SimPPL Annual Report 2025</td></tr>
-      <tr><td>Kenya training cohort</td><td>10 journalists, Africa Uncensored, DW Akademie</td><td>SimPPL Annual Report 2025</td></tr>
-      <tr><td>Sakhi families reached</td><td>350+ (100 study Maharashtra + 250 Bangladesh)</td><td>SimPPL Annual Report 2025</td></tr>
-      <tr><td>Peer-reviewed papers</td><td>14</td><td>simppl.org/research</td></tr>
-      <tr><td>CrowdTangle shutdown</td><td>Meta closed it in August 2024</td><td>Meta announcement, on the public record</td></tr>
-      <tr><td>Odisha seed funding</td><td>German foundation grant, infrastructure + early work</td><td>grant agreement (in data room)</td></tr>
-      <tr><td>YouTube API access</td><td>1.2M calls/day granted</td><td>YouTube Data API grant letter (in data room)</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- APPENDIX · FOOTPRINT MAP (moved from main deck, v15) -->
-<section>
-  <p class="appendix-note">Appendix</p>
-  <h2>Signed up across 21 countries</h2>
-  <div class="fp-row">
-    <div class="fp-stats">
-      <div class="fp-n">100<span class="accent">+</span></div>
-      <p class="fp-l">organizations signed up</p>
-      <div class="fp-n">21</div>
-      <p class="fp-l">countries</p>
-    </div>
-    <div class="fp-map">
-      <div class="shot-frame">
-        <img src="images/funder-2026/v10/map_studies.png" alt="Arbiter case-study world map" style="max-height:378px; width:auto; margin:0 auto; display:block;">
-      </div>
-      <p class="shot-cap" style="margin-top:4px;">Public case studies with newsroom and NGO partners, each in the local language: <a href="https://arbiter.simppl.org/studies">arbiter.simppl.org/studies</a>.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <p class="appendix-note">Appendix</p>
-  <h2 style="margin-bottom:0.3em;">Partners by country: 8 listed here, 21 served</h2>
-  <table class="tight" style="font-size:0.54em;">
-    <thead><tr><th>Country</th><th>Partner</th><th>Work</th></tr></thead>
-    <tbody>
-      <tr><td>Mongolia</td><td>NEST Center for Journalism</td><td>Legislative early warning, fact-checking</td></tr>
-      <tr><td>Philippines</td><td>Migrasia · Rappler</td><td>Recruitment-ad screening</td></tr>
-      <tr><td>Indonesia</td><td>Migrasia (based in Hong Kong)</td><td>Scam-recruitment investigations</td></tr>
-      <tr><td>Kenya</td><td>DW Akademie · Africa Uncensored + 10 journalists</td><td>Influence-operation training and investigations</td></tr>
-      <tr><td>Germany</td><td>dpa · DW Akademie</td><td>National press agency partnership</td></tr>
-      <tr><td>India</td><td>Jagran New Media · Odisha state partnership</td><td>Fact-checking, child-safety early warning</td></tr>
-      <tr><td>Bangladesh</td><td>Spreeha Foundation · policy think tank</td><td>Health program, threat reporting</td></tr>
-      <tr><td>United States</td><td>Gothamist/NYPR · Factchequeado</td><td>Local newsroom investigations, Spanish-language fact-checking</td></tr>
-    </tbody>
-  </table>
-  <p class="smallnote" style="margin-top:14px;">Verified against arbiter.simppl.org and the SimPPL Annual Report 2025. Country count updated to 21 per the team (2026-07-12); simppl.org/about counted 8 at the last crawl, Hong Kong among them.</p>
-</section>
-
-</div>
-</div>
-<script src="https://unpkg.com/reveal.js@4.6.1/dist/reveal.js"></script>
-<script src="https://unpkg.com/reveal.js@4.6.1/plugin/notes/notes.js"></script>
-<script>
-  Reveal.initialize({
-    width: 1280,
-    height: 720,
-    margin: 0.1,
-    minScale: 0.2,
-    maxScale: 2.0,
-    center: true,
-    hash: true,
-    transition: "slide",
-    slideNumber: "c/t",
-    controls: true,
-    progress: true,
-    plugins: [ RevealNotes ]
-  });
-
-</script>
-</body>
-</html>
