@@ -191,10 +191,10 @@
   .reveal .out-card p.out-l { font-size: 0.64em !important; color: var(--ink); margin: 14px 0 0 0; line-height: 1.5; }
   .reveal .out-card p.out-src { font-size: 0.54em !important; color: var(--ink-muted); margin: 10px 0 0 0; line-height: 1.45; }
   /* tighter tier cards where a slide runs four bullets */
-  .tight .tier-card { padding: 12px 18px 13px 18px; }
+  .tight .tier-card { padding: 10px 17px 11px 17px; }
   .tight .tier-card h3 { margin: 5px 0 7px 0; font-size: 0.56em; }
   .tight .tier-card ul { margin-top: 8px; }
-  .reveal .tight .tier-card li { font-size: 0.5em; line-height: 1.36; margin-bottom: 0.3em; }
+  .reveal .tight .tier-card li { font-size: 0.48em; line-height: 1.33; margin-bottom: 0.26em; }
 
   /* confidentiality marker, on every slide */
   .confmark {
@@ -223,6 +223,18 @@
   .reveal .loopcaps p { font-size: 0.46em !important; line-height: 1.4; margin: 0; color: var(--ink-muted); text-align: center; }
   .reveal .loopcaps p b { color: var(--ink); font-weight: 700; }
   .reveal .loopcaps p.now b { color: var(--coral-deep); }
+
+  /* narrative link: the claim theme against the regulation theme */
+  .nlink { display: grid; grid-template-columns: 1fr 30px 1fr; align-items: center; gap: 0 4px; }
+  .nl { border-left: 2.5px solid var(--rule); padding-left: 11px; }
+  .nl.reg { border-left-color: var(--coral); }
+  .nl .nn { font-family: var(--font-display); font-size: 0.95em; font-weight: 600; color: var(--ink); line-height: 1; letter-spacing: -0.02em; }
+  .nl.reg .nn { color: var(--coral-deep); }
+  .reveal .nl p.nt { font-size: 0.42em !important; line-height: 1.3; margin: 4px 0 0 0; color: var(--ink-muted); }
+  .reveal .nl p.nt b { color: var(--ink); }
+  .nlink .narrow { display: flex; align-items: center; justify-content: center; }
+  .reveal p.nlcap { font-size: 0.4em !important; line-height: 1.32; margin: 7px 0 0 0; color: var(--ink-muted); }
+  .reveal p.nlcap b { color: var(--ink); }
 
   /* two-sided model: who does the work, who pays */
   .two-side { display: grid; grid-template-columns: 1fr 118px 1fr; align-items: stretch; margin-top: 26px; }
@@ -737,7 +749,7 @@
     </g>
   </svg>
   <div class="loopcaps">
-    <p class="fragment"><b>Telling you what happened is too late.</b> The keywords never change, so the finding lands after the campaign has run.</p>
+    <p class="fragment"><b>Telling you what happened is too late.</b> The keywords never change, so the finding arrives after the campaign has run.</p>
     <p class="now fragment"><b>Telling you as it happens enables response.</b> Conversations rewrite the keywords, so the net widens while it is still running.</p>
   </div>
 </section>
@@ -1006,7 +1018,8 @@
 <section style="height:648px;">
   <h2 style="margin-bottom:0.15em;">What the argument is for, and what Maryland did about it</h2>
   <p class="fragment" style="font-size:0.54em; color:var(--ink-muted); margin-top:5px;">The same distrust of mail voting is the argument behind the SAVE Act.</p>
-  <article class="post fragment" style="max-width:52%; margin:9px 0 0 0;">
+  <div style="display:flex; gap:20px; align-items:center; margin-top:7px;">
+  <article class="post fragment" style="flex:0 0 50%; margin:0;">
     <div class="post-head">
       <span class="post-av"></span>
       <span class="post-id"><span class="post-name">Financial news account</span><span class="post-sub">16 May 2026 &middot; handle withheld</span></span>
@@ -1015,7 +1028,22 @@
     <p class="post-body">TRUMP: <b>PASS THE SAVE AMERICA ACT NOW</b>, citing concerns over mail-in voting</p>
     <div class="post-foot"><p class="post-metric"><b>111,142</b> interactions</p></div>
   </article>
-  <div class="tight" style="display:flex; gap:26px; margin-top:12px;">
+  <div class="fragment" style="flex:1;">
+    <div class="nlink">
+      <div class="nl">
+        <div class="nn">2.1M</div>
+        <p class="nt"><b>Mail-in ballot controversy</b><br>256 posts</p>
+      </div>
+      <div class="narrow"><svg width="26" height="16" viewBox="0 0 26 16" fill="none"><path d="M1 8h20M15 2l6 6-6 6" stroke="#d55a40" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="nl reg">
+        <div class="nn">2.4M</div>
+        <p class="nt"><b>Legislative push for reform</b><br>141 posts</p>
+      </div>
+    </div>
+    <p class="nlcap">Two themes, one window. The ballot claim opened the conversation; <b>the argument for new rules drew more than the claim itself</b>.</p>
+  </div>
+  </div>
+  <div class="tight" style="display:flex; gap:26px; margin-top:9px;">
     <div class="tier-card" style="flex:1; padding-top:13px; padding-bottom:14px;">
       <span class="pillar-tag">The stakes &middot; the SAVE Act</span>
       <ul style="margin-top:11px;">
