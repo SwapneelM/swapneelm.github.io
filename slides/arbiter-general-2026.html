@@ -1,0 +1,945 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arbiter · General tech overview</title><!-- v4: tech section + interactive concept map + reliability layer + verbal-pitch reframes; merged with the prompt-39 correction batch -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="arbiter-2026/arbiter.css?v=46">
+</head>
+<body>
+<script>
+(function () {
+  var ok = sessionStorage.getItem("arbg_ok") === "1";
+  if (!ok) {
+    var t = prompt("This deck is shared by request. Enter the password to continue:");
+    if (t !== "Arbiter2026!") {
+      document.documentElement.innerHTML =
+        "<body style=\"font-family:system-ui;background:#0b0d12;color:#e8eaf0;display:flex;align-items:center;justify-content:center;height:100vh;margin:0\">" +
+        "<div style=\"text-align:center\"><h1 style=\"font-weight:600\">Access denied</h1>" +
+        "<p style=\"color:#9aa1b2\">Contact team@simppl.org for access.</p></div></body>";
+      throw new Error("unauthorized");
+    }
+    sessionStorage.setItem("arbg_ok", "1");
+  }
+})();
+</script>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══ 01 · TITLE ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <div class="cols w64">
+        <div>
+          <div style="font-family:'Inter',sans-serif; font-size:15px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#5fe0a0; margin-bottom:14px;">General tech overview</div>
+          <h1 style="color:#e9eaf0; font-size:128px;">Arbiter</h1>
+          <p class="lede mt24" style="font-size:27px; max-width:44ch; color:#c9cdd8;">See the accounts shaping your feed before they shape your views.</p>
+          <p class="mt44" style="font-size:16px; color:#9aa1b2;">An AI copilot for public discourse · by SimPPL, a U.S. <span style="white-space:nowrap">501(c)(3)</span> nonprofit</p>
+        </div>
+        <div>
+          <svg class="net" viewBox="0 0 520 520" style="width:100%; max-height:480px;">
+            <line x1="330" y1="260" x2="180" y2="180"/><line x1="330" y1="260" x2="280" y2="120"/>
+            <line x1="330" y1="260" x2="420" y2="90"/><line x1="330" y1="260" x2="470" y2="200"/>
+            <line x1="330" y1="260" x2="450" y2="370"/><line x1="330" y1="260" x2="350" y2="440"/>
+            <line x1="330" y1="260" x2="210" y2="420"/><line x1="330" y1="260" x2="100" y2="350"/>
+            <line x1="180" y1="180" x2="90" y2="80"/><line x1="180" y1="180" x2="60" y2="220"/>
+            <line x1="280" y1="120" x2="200" y2="60"/><line x1="420" y1="90" x2="280" y2="120"/>
+            <line x1="450" y1="370" x2="480" y2="300"/><line x1="210" y1="420" x2="140" y2="470"/>
+            <line x1="100" y1="350" x2="60" y2="220"/><line x1="470" y1="200" x2="480" y2="300"/>
+            <circle cx="90" cy="80" r="7"/><circle cx="200" cy="60" r="5" class="b"/>
+            <circle cx="420" cy="90" r="8"/><circle cx="470" cy="200" r="6" class="b"/>
+            <circle cx="450" cy="370" r="9"/><circle cx="350" cy="440" r="6"/>
+            <circle cx="210" cy="420" r="10" class="b"/><circle cx="100" cy="350" r="7"/>
+            <circle cx="60" cy="220" r="5"/><circle cx="180" cy="180" r="8" class="b"/>
+            <circle cx="280" cy="120" r="6"/><circle cx="140" cy="470" r="4"/>
+            <circle cx="480" cy="300" r="5"/><circle cx="330" cy="260" r="14" class="hub"/>
+            <text x="352" y="252">AMPLIFIER</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SUPPORTED BY GOOGLE · MOZILLA · WIKIMEDIA · FORD · OMIDYAR · MIT · COLUMBIA · UNDP</span>
+      <span class="brand"><a href="https://arbiter.simppl.org" style="color:#9aa1b2; border:none;">arbiter.simppl.org</a></span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DECEPTION CLIPPING WALL ═══ -->
+<style>
+.dfull .si-body{ justify-content:flex-start; }
+.dfull .dwall{ display:flex; flex-direction:column; flex:1 1 auto; min-height:0; margin-top:18px; gap:14px; }
+.dfull .dcard{ display:grid; grid-template-columns:58% 1fr; flex:1 1 0; min-height:0; }
+.dfull .dcard .shot{ width:100%; height:100%; min-height:0; object-fit:cover; object-position:center top; }
+.dfull .dcard .cap{ justify-content:center; padding:0 22px; gap:7px; }
+.dfull .dcard .dl{ font-size:13px; }
+.dfull .dcard .fr{ font-size:17px; line-height:1.5; }
+.dfull .dcard .sr{ font-size:11px; }
+.case-plate .no{ font-family:"Inter",sans-serif; font-size:13.5px; font-weight:700; letter-spacing:.06em; white-space:nowrap; }
+.case-plate .nm{ font-size:26px; }
+</style>
+<section class="dark dfull" data-background-color="#0b0d12">
+  <div class="si"><div class="si-body">
+    <h2 style="font-size:36px;">Manipulation reaches the decisions that matter</h2>
+    <p class="tldr" style="margin-top:8px; max-width:none; font-size:18px; font-weight:500;">Jobs, health, elections: real, documented cases, sourced on every card.</p>
+    <div class="dwall">
+      <figure class="dcard"><img class="shot" src="images/arbiter-2026/deception/bbc_cambodia.png?v=46" alt="BBC News: Cambodia scams, lured and trapped into slavery in South East Asia">
+        <figcaption class="cap"><div class="dl">Jobs &middot; trafficking</div><div class="fr">Fake online job ads lure workers into South East Asia's forced-labour scam compounds.</div><a class="sr" href="https://www.bbc.com/news/world-asia-62792875" target="_blank" rel="noopener">Src &middot; BBC News &#8599;</a></figcaption></figure>
+      <figure class="dcard"><img class="shot" src="images/arbiter-2026/deception/guardian_samoa.png?v=46" alt="The Guardian: Samoa measles outbreak, WHO blames anti-vaccine scare as death toll hits 39">
+        <figcaption class="cap"><div class="dl">Health &middot; vaccines</div><div class="fr">Samoa's vaccination rate fell to about 31% amid online anti-vaccine fear; a measles outbreak killed dozens of children.</div><a class="sr" href="https://www.theguardian.com/world/2019/nov/28/samoa-measles-outbreak-who-blames-anti-vaccine-scare-death-toll" target="_blank" rel="noopener">Src &middot; The Guardian &#8599;</a></figcaption></figure>
+      <figure class="dcard"><img class="shot" style="object-position:center bottom;" src="images/arbiter-2026/deception/romania_crop.png?v=46" alt="Al Jazeera: Romania's top court annuls results of presidential election's first round">
+        <figcaption class="cap"><div class="dl">Elections &middot; Romania</div><div class="fr">A court annulled Romania's presidential election over a coordinated TikTok operation; the evidence later vanished.</div><a class="sr" href="https://www.aljazeera.com/news/2024/12/6/romanias-top-court-annuls-results-of-presidential-elections-first-round" target="_blank" rel="noopener">Src &middot; Al Jazeera &#8599;</a></figcaption></figure>
+    </div>
+  </div><div class="foot"><span class="src">Three documented cases &middot; full source on each card</span><span class="brand">ARBITER &middot; SIMPPL</span></div></div>
+</section>
+
+<!-- ═══ 03 · GAP ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>Campaigns cross platforms. Moderation stops at each platform's edge.</h2>
+      <div class="cols w64 mt32 top">
+        <div>
+          <p style="font-size:18px;">On Twitter, true stories took <strong>about six times as long</strong> as false ones to reach 1,500 people (MIT study, 2018). By the time a claim is checked, the campaign that planted it has moved on.</p>
+          <p class="mt16" style="font-size:18px;">We rely on journalists and fact-checkers to catch this, but they've lost their view: <strong>CrowdTangle shut down in 2024</strong>, and paid access now costs <strong>thousands a month</strong>. And each platform moderates only its own feed, so a campaign across X, YouTube, Telegram, and WhatsApp shows each watcher <strong>a quarter of the picture</strong>.</p>
+          <div class="mt24" style="border-left:4px solid #d64545; padding:12px 0 12px 18px;">
+            <p style="font-size:16px;"><strong>OnPassive</strong>, an "AI-powered" tech scheme, recruited across social platforms at once. The SEC charged it with fraudulently raising <strong>over $108 million from more than 800,000 investors</strong>. Each platform saw only its own slice.</p>
+          </div>
+        </div>
+        <div>
+          <svg viewBox="0 0 360 330" style="width:100%;">
+            <text x="45" y="22" font-family="IBM Plex Mono" font-size="11" fill="#878b9d" text-anchor="middle">X</text>
+            <text x="130" y="22" font-family="IBM Plex Mono" font-size="11" fill="#878b9d" text-anchor="middle">YOUTUBE</text>
+            <text x="215" y="22" font-family="IBM Plex Mono" font-size="11" fill="#878b9d" text-anchor="middle">TELEGRAM</text>
+            <text x="300" y="22" font-family="IBM Plex Mono" font-size="11" fill="#878b9d" text-anchor="middle">WHATSAPP</text>
+            <line x1="45" y1="34" x2="45" y2="300" stroke="#dcd8cd" stroke-width="2"/>
+            <line x1="130" y1="34" x2="130" y2="300" stroke="#dcd8cd" stroke-width="2"/>
+            <line x1="215" y1="34" x2="215" y2="300" stroke="#dcd8cd" stroke-width="2"/>
+            <line x1="300" y1="34" x2="300" y2="300" stroke="#dcd8cd" stroke-width="2"/>
+            <polyline points="45,70 130,105 215,90 300,140 215,180 130,210 45,190 130,260 215,245 300,280" fill="none" stroke="#d64545" stroke-width="2.5"/>
+            <circle cx="45" cy="70" r="6" fill="#d64545"/><circle cx="130" cy="105" r="6" fill="#d64545"/>
+            <circle cx="215" cy="90" r="6" fill="#d64545"/><circle cx="300" cy="140" r="6" fill="#d64545"/>
+            <circle cx="215" cy="180" r="6" fill="#d64545"/><circle cx="130" cy="210" r="6" fill="#d64545"/>
+            <circle cx="45" cy="190" r="6" fill="#d64545"/><circle cx="130" cy="260" r="6" fill="#d64545"/>
+            <circle cx="215" cy="245" r="6" fill="#d64545"/><circle cx="300" cy="280" r="6" fill="#d64545"/>
+            <text x="180" y="325" font-family="IBM Plex Mono" font-size="12" fill="#878b9d" text-anchor="middle">ONE CAMPAIGN · FOUR PARTIAL VIEWS</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · <a href="https://news.mit.edu/2018/study-twitter-false-news-travels-faster-true-stories-0308" target="_blank" rel="noopener">MIT (Vosoughi et al., 2018)</a> · <a href="https://www.sec.gov/enforcement-litigation/litigation-releases/lr-25809" target="_blank" rel="noopener">SEC v. Mufareh / OnPassive, LR-25809</a></span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 04 · WHAT ARBITER IS ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>Arbiter reads public conversation across platforms</h2>
+      <div class="pipeline mt32">
+        <div class="pl-node fragment">
+          <div class="st">01 · COLLECT</div>
+          <h3>Public data, collected within platform rules</h3>
+          <p>We help collect public social data from sources within platform terms of service, including platform-granted APIs, across X, YouTube, Reddit, Bluesky, Instagram, Facebook, TikTok, LinkedIn, Telegram, and 4chan, plus 20,000+ newspapers and Wikidata.</p>
+        </div>
+        <div class="pl-arrow fragment"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node fragment">
+          <div class="st">02 · AGGREGATE</div>
+          <h3>Themes, actors, networks</h3>
+          <p>Posts cluster into themes and sub-themes. Each theme surfaces the accounts moving it, with per-actor dossiers and influence maps.</p>
+        </div>
+        <div class="pl-arrow fragment"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#2b48f0"/></svg></div>
+        <div class="pl-node fragment">
+          <div class="st">03 · INVESTIGATE</div>
+          <h3>Agentic investigations</h3>
+          <p>Deep research agents answer your questions across the collected posts and cite every post they draw on. You keep the judgment.</p>
+        </div>
+      </div>
+      <div class="statrail mt44">
+        <div class="cell"><div class="v"><span class="counter" data-final="3.7" data-decimals="1">3.7</span><small>M+</small></div><div class="k">posts collected across investigations</div></div>
+        <div class="cell"><div class="v"><span class="counter" data-final="20">20</span><small>B</small></div><div class="k">interactions a month across platforms</div></div>
+        <div class="cell"><div class="v"><span class="counter" data-final="100">100</span><small>+</small></div><div class="k">organizations with journalists signed up</div></div>
+        <div class="cell"><div class="v"><span class="counter" data-final="21">21</span></div><div class="k">countries with newsroom and civil-society partners</div></div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · arbiter.simppl.org live counters (May 2026) · simppl.org/about</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ T1 · TECH · THREE PROBLEMS ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <h2 style="font-size:36px;">Under the hood: three problems we solve through rigorous science</h2>
+      <div class="pipeline mt32">
+        <div class="pl-node fragment">
+          <div class="st">01 · SEARCH</div>
+          <h3>Find the posts you meant, not the words you typed</h3>
+          <p>The language that carries a story is coded, multilingual, and shifts week to week. The hard part is retrieving what someone intended even when the obvious keywords would miss it.</p>
+        </div>
+        <div class="pl-arrow fragment"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#7288ff"/></svg></div>
+        <div class="pl-node fragment">
+          <div class="st">02 · AGGREGATE</div>
+          <h3>Map who drives which narrative, across languages</h3>
+          <p>A feed of millions of posts hides its own structure. Turning it into a navigable map of narratives and the accounts moving each one, resolved to real entities, is more than clustering.</p>
+        </div>
+        <div class="pl-arrow fragment"><svg viewBox="0 0 100 100"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#7288ff"/></svg></div>
+        <div class="pl-node fragment">
+          <div class="st">03 · INVESTIGATE</div>
+          <h3>Interrogate millions of posts on demand</h3>
+          <p>Ask any question of the collection and an agent writes and runs the analysis, returning a cited answer. Surfacing custom insight on demand is the value; grading each answer against baselines is what makes it safe to rely on.</p>
+        </div>
+      </div>
+      <p class="mt32" style="font-size:16.5px;">Most listening tools answer with RAG over whatever their feeds already collected. <strong>Arbiter plans the collection itself</strong> and surfaces conversations you did not know to ask for. The next slides show the method; the appendix lists every model.</p>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · SimPPL methods talk, NYU CSMAP (Mar 2026)</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ T2 · TECH · SEARCH ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <h2 style="font-size:34px;">Adaptive listening: your question finds posts you never typed</h2>
+      <div class="query" style="margin-top:18px;"><span class="ps">&gt;</span><span class="typed">Climate skepticism and pushback on glacier-melt reporting</span></div>
+      <div style="margin-top:16px; display:flex; flex-direction:column; gap:15px;">
+
+        <div class="fragment" style="display:flex; gap:26px; align-items:center;">
+          <div style="flex:1;">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; color:#7288ff; font-weight:600;">01 · PLAN</div>
+            <p style="font-size:16px; line-height:1.5; margin-top:6px; color:#c9cdd8;">Your question expands into a <b style="color:#e8eaf0;">typed plan</b>: the actors, places, and domains it implies, from a daily-refreshed knowledge graph.</p>
+          </div>
+          <div style="flex:1; background:#12151d; border:1px solid #262b38; padding:12px 15px; font-family:'IBM Plex Mono',monospace; font-size:11.5px; line-height:1.95; color:#9aa1b2; border-radius:8px;">
+            <span style="color:#7288ff;">ORGANIZATIONS</span> · Danish Met Institute · Columbia Climate School<br>
+            <span style="color:#7288ff;">LOCATIONS</span> · Antarctica · Greenland · Andes<br>
+            <span style="color:#7288ff;">DOMAINS</span> · <span style="color:#ff6b5e;">sepp.org (skeptic)</span> · nature.com<br>
+            <span style="color:#7288ff;">PLATFORMS</span> · X 68 · YouTube 46 · Bluesky 16
+          </div>
+        </div>
+
+        <div class="fragment" style="display:flex; gap:26px; align-items:center;">
+          <div style="flex:1;">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; color:#f2d24b; font-weight:600;">02 · RETRIEVE &amp; RERANK</div>
+            <p style="font-size:16px; line-height:1.5; margin-top:6px; color:#c9cdd8;">Keyword and meaning search, fused, then reranked to what actually answers. One threshold <b style="color:#e8eaf0;">drops 60 to 80% of the noise</b>.</p>
+          </div>
+          <div style="flex:1; display:flex; align-items:center; gap:16px; background:#12151d; border:1px solid #262b38; padding:15px 18px; border-radius:8px;">
+            <div><div style="font-family:'Space Grotesk',sans-serif; font-size:29px; font-weight:700; color:#e8eaf0;">10,231</div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8891a6;">collected</div></div>
+            <div style="color:#5d6373; font-size:20px;">&#8594;</div>
+            <div><div style="font-family:'Space Grotesk',sans-serif; font-size:29px; font-weight:700; color:#5fe0a0;">138</div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8891a6;">relevant</div></div>
+          </div>
+        </div>
+
+        <div class="fragment" style="display:flex; gap:26px; align-items:center;">
+          <div style="flex:1;">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; color:#5fe0a0; font-weight:600;">03 · THE PAYOFF</div>
+            <p style="font-size:16px; line-height:1.5; margin-top:6px; color:#c9cdd8;">No one labels their own post <i>skeptical</i>. Search the word <b style="color:#e8eaf0;">skeptic</b> and you find almost nothing. The pushback itself, <i>"the models always run hot," "ice has advanced before,"</i> shares <b style="color:#e8eaf0;">none of your words</b>, and Arbiter surfaces it by meaning.</p>
+          </div>
+          <div style="flex:1; background:#12151d; border:1px solid #262b38; padding:15px 18px; border-radius:8px; text-align:center;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:700; color:#e8eaf0;">81% <span style="color:#5d6373;">&#8594;</span> <span style="color:#5fe0a0;">99%</span></div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8891a6; margin-top:4px;">relevant results in the top 200, after reranking</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · SimPPL retrieval pipeline · entity prefilter cuts rerank GPU ~99% · climate-skepticism case, <a href="https://arbiter.simppl.org" style="color:inherit;text-decoration:underline;">arbiter.simppl.org</a></span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 05 · PROOF ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <h2>Platform enforcement lines up with what Arbiter flagged</h2>
+      <div class="dossier mt24">
+        <div class="row">
+          <div class="who">X <small>2023</small></div>
+          <div class="what">Our 2023 reporting prompted an internal investigation at X into <b>pro-Russian bot networks</b>.</div>
+          <div class="st"><span class="stamp blue">Investigation opened</span></div>
+        </div>
+        <div class="row">
+          <div class="who">Meta <small>Q1 2024</small></div>
+          <div class="what">We shared findings with Meta's team; their <a href="https://transparency.meta.com/sr/Q1-2024-Adversarial-threat-report">public Q1 2024 Adversarial Threat Report</a> details the takedown of a Bangladesh network: <b>50 accounts and 98 Pages with 3.4M followers</b>.</div>
+          <div class="st"><span class="stamp red">Network removed</span></div>
+        </div>
+        <div class="row">
+          <div class="who">YouTube <small>2025</small></div>
+          <div class="what">Channels we flagged for AI-generated propaganda were <b>terminated by YouTube independently</b>. We had filed no report; enforcement confirmed the detection.</div>
+          <div class="st"><span class="stamp green">Channels terminated</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · transparency.meta.com/sr/Q1-2024-Adversarial-threat-report</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT AND GROWTH · WHO SIGNED UP (ported from arbiter-overview-2026) -->
+<style>
+.whofull .wall{ margin-top:30px; line-height:2.25; }
+.whofull .wall span{ font-family:"Space Grotesk",sans-serif; font-size:25px; font-weight:500; color:#e8eaf0; white-space:nowrap; }
+.whofull .wall span::after{ content:"·"; color:#ff6b5e; margin:0 14px; font-weight:600; }
+.whofull .wall span:last-child::after{ content:""; margin:0; }
+.whofull .wall span.intl{ color:#9aa1b2; }
+.whofull .wnote{ font-size:15.5px; color:#9aa1b2; margin-top:30px; line-height:1.55; }
+.whofull .wnote b{ color:#e8eaf0; }
+.whofull .hl{ background:#2a2410; color:#ffd900; padding:1px 7px; border-radius:3px; font-weight:700; }
+</style>
+<section class="dark whofull" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <h2 style="font-size:36px;">100+ organizations in 21 countries signed up</h2>
+      <div class="wall">
+        <span>Rappler</span>
+        <span>dpa</span>
+        <span>Deutsche Welle</span>
+        <span>Bloomberg</span>
+        <span>Chequeado</span>
+        <span>Maldita.es</span>
+        <span>La Nación</span>
+        <span>Factchequeado</span>
+        <span>Africa Uncensored</span>
+        <span>NEST Mongolia</span>
+        <span>Jagran</span>
+        <span>DeSmog</span>
+        <span>Sakal Media</span>
+        <span>Nepal Fact Check</span>
+        <span>Migrasia</span>
+        <span>The Baltimore Banner</span>
+        <span class="intl">Ofcom</span>
+        <span class="intl">UNDP</span>
+        <span class="intl">UNHCR</span>
+        <span class="intl">Internet Archive</span>
+        <span class="intl">Columbia Journalism School</span>
+      </div>
+      <p class="wnote"><span class="hl">100+ organizations</span> across 21 countries signed up on their own; we work with a growing subset as resources allow. <b>A global fact-checking network wants Arbiter across its whole verified membership</b>, and that network leads the field with 140+ member organizations. Client names available on request.</p>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · arbiter.simppl.org partner strip · simppl.org/about · July 2026</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 06 · PRODUCT · LIBRARY ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <div class="cols w46 top">
+        <div>
+          <h2 style="font-size:36px;">Newsgathering: trace emerging stories across platforms</h2>
+          <p class="mt16" style="font-size:16.5px;">Pick a topic or a set of accounts and a date window, and Arbiter compiles a month of cross-platform conversations in <strong>20 to 40 minutes</strong>. We've built reports on <strong>over 30 issues</strong> this way, from job scams and human trafficking to the manosphere influencers reaching younger audiences.</p>
+          <div class="chips mt24"><i>X</i><i>YouTube</i><i>Reddit</i><i>Bluesky</i><i>Instagram</i><i>Facebook</i><i>TikTok</i><i>LinkedIn</i><i>Telegram</i><i>4chan</i><i>20k+ news</i><i>Wikidata</i></div>
+          <p class="mt24 small muted">Every study keeps its sources attached: each number traces back to the posts behind it.</p>
+        </div>
+        <div class="wire">
+          <div class="bar"><i></i><i></i><i></i><span class="url">arbiter.simppl.org/studies</span></div>
+          <div><img src="images/arbiter-2026/library_cropped.png" alt="Arbiter case-study library"></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · arbiter.simppl.org/studies · product screenshot</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 07 · PRODUCT · NETWORKS ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <div class="cols w64 top">
+        <div class="wire">
+          <div class="bar"><i></i><i></i><i></i><span class="url">arbiter.simppl.org · topic modeling</span></div>
+          <div style="height:430px; overflow:hidden;"><img src="images/arbiter-2026/network_from_pdf.png" alt="Arbiter influence network graph"></div>
+        </div>
+        <div>
+          <h2 style="font-size:36px;">Consumer and product intelligence</h2>
+          <p class="mt16" style="font-size:16.5px;">Posts cluster into themes, themes into sub-themes, and each cluster names the accounts driving it. The graph turns a feed into a map: <strong>who amplifies whom, in which language, on which platform</strong>.</p>
+          <p class="mt16" style="font-size:16.5px;">Reports built this way sit behind both platform outcomes on the track-record slide: <strong>X's internal investigation</strong> and <strong>Meta's Bangladesh takedown</strong>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · product screenshot</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TS · TECH · DECEPTION SIGNALS ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <h2 style="font-size:36px;">Threat intelligence: the deception signals Arbiter scores</h2>
+      <div class="modeltable mt24">
+        <div class="mrow fragment"><div class="stage">Sentiment uniformity</div><div class="model">Discourse that agrees too much</div><div class="why">The Traoré PR campaign read 100% positive, 100% joy across coordinated pages. Organic discourse rarely does.</div></div>
+        <div class="mrow fragment"><div class="stage">Clickbait score</div><div class="model">Bait at 5, camouflage at 1</div><div class="why">The top jailbreak seller scores 4.2. The Traoré operation scores 1, polished to pass as organic praise.</div></div>
+        <div class="mrow fragment"><div class="stage">Amplification anomaly</div><div class="model">Reach with no audience trail</div><div class="why">One crypto casino drew 36.9M interactions from four identical posts; one Traoré post drew 88.8K alone.</div></div>
+        <div class="mrow fragment"><div class="stage">Entity mention share</div><div class="model">Who benefits from the story</div><div class="why">1win was the most-mentioned brand in the betting study while mirror domains kept the banned brand alive.</div></div>
+        <div class="mrow fragment"><div class="stage">Impersonation</div><div class="model">Borrowed legitimacy</div><div class="why">Entity resolution surfaced one page posing as 16 real manufacturers, Indofood to Yamaha, recruiting into scam compounds.</div></div>
+        <div class="mrow fragment"><div class="stage">Sponsorship disclosure</div><div class="model">Paid voice posing as organic</div><div class="why">Influencer dossiers separate disclosed from undisclosed promotion and flag paid-promotion patterns that break India's securities-disclosure rules.</div></div>
+      </div>
+      <p class="mt24" style="font-size:16px;">Arbiter sits as an <strong>analytical layer over social platforms and online sources</strong>. These signals add up to tactics: manufactured consensus, coordinated amplification, borrowed legitimacy, undisclosed promotion. We test the classifiers in non-Latin scripts too, from Hindi to Cyrillic, so manipulation in those languages isn't missed.</p>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · public Arbiter studies + partner case reports · arbiter.simppl.org/studies</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 08 · PRODUCT · AGENT ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <h2 style="font-size:34px;">Verifiable and traceable agentic investigations</h2>
+      <div class="cols w46 mt24 top">
+        <div>
+          <p style="font-size:16px;">We put this to a live study of the manufactured attention around Ibrahim Traoré, the officer who seized power in Burkina Faso. The agent read all 191 posts and ranked the accounts driving the conversation.</p>
+          <p style="font-size:16px;">You interrogate a collection too large to read in plain language and get an answer you can act on. The engagement traces to a handful of accounts spiking in single bursts rather than sustained volume, the shape of a coordinated push, not a real audience.</p>
+          <p style="font-size:16px;"><strong>Every row ties back to the posts behind it.</strong> A question like this costs 5 credits and takes under a minute.</p>
+        </div>
+        <div class="aq">
+          <div class="aq-head"><i></i><i></i><i></i>traoré study · 191 posts · 3 platforms<span class="win">MAY 26 – JUN 2, 2026</span></div>
+          <div class="aq-body">
+            <div class="q">Which accounts drive the most engagement on Ibrahim Traore content in this window, and where do their outbound links point?</div>
+            <div class="typing">ANALYZING PATTERNS…</div>
+            <div class="a">
+              <p>Engagement is driven by a small set of accounts, mostly via high-performing posts that <b>don't include outbound links</b>: native video and text rather than link-sharing.</p>
+              <table class="mini">
+                <thead><tr><th>Account</th><th class="n">Posts</th><th class="n">Interactions</th><th>Outbound links</th></tr></thead>
+                <tbody>
+                  <tr class="fragment"><td>zoomafrika1</td><td class="n">1</td><td class="n">56,860</td><td>none detected</td></tr>
+                  <tr class="fragment"><td>SahelAlerte</td><td class="n">1</td><td class="n">29,721</td><td>none detected</td></tr>
+                  <tr class="fragment"><td>WelcomeTheGulag</td><td class="n">1</td><td class="n">23,175</td><td>none detected</td></tr>
+                  <tr class="fragment"><td>kelevitch</td><td class="n">1</td><td class="n">22,426</td><td>none detected</td></tr>
+                  <tr class="fragment"><td>WithoutHistory</td><td class="n">1</td><td class="n">10,499</td><td>none detected</td></tr>
+                  <tr class="fragment"><td>kwadwosheldon</td><td class="n">1</td><td class="n">8,725</td><td>youtube.com</td></tr>
+                </tbody>
+              </table>
+              <div class="takeaway">"Driver" status here is concentrated in single spikes rather than sustained volume.</div>
+            </div>
+            <div class="pills"><span>Which accounts are amplifying this narrative the most</span><span>How did this discussion spike and evolve over time</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · live agent answer, Jul 8 2026 · question, table, and takeaway verbatim, prose condensed (research/09)</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 15 · SCOPING ═══ -->
+<section class="lite" data-background-color="#f7f5f0">
+  <div class="si">
+    <div class="si-body">
+      <h2>Claims assessment: one fact-check covers thousands of posts</h2>
+      <div class="cols mt32 top">
+        <div>
+          <h3 class="blue-txt">The agent</h3>
+          <p class="mt10" style="font-size:17px;">Collects public social data within platform terms of service, clusters themes, maps actors and networks, and answers questions <strong>with a citation for every claim</strong>.</p>
+          <h3 class="mt24 blue-txt">The human</h3>
+          <p class="mt10" style="font-size:17px;">Draws the conclusions. Journalists, researchers, and trust &amp; safety teams keep the judgment; Arbiter keeps the evidence attached.</p>
+        </div>
+        <div>
+          <h3>Scope</h3>
+          <p class="mt10" style="font-size:17px;">We <strong>fact-source</strong>: the system surfaces claims and groups related ones, so one verified fact-check scales to thousands of posts. We spent a year building this with <a href="https://enterprise.wikimedia.com/blog/how-simppl-fact-checks-social-media/">Wikimedia</a>.</p>
+          <p class="mt16" style="font-size:17px;">The case files in this deck are <strong>public studies from 2025 and 2026 windows</strong>. A study scoped to your issue tracks your actors, in your languages, on your timeline.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · arbiter.simppl.org/studies · methods grounded in peer-reviewed research</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ T4c · SCALING AGENTIC INVESTIGATIONS ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <h2 style="font-size:36px;">Scaling agentic investigations to millions of posts</h2>
+      <p class="mt16" style="font-size:16px; max-width:104ch; color:#9aa1b2;">The agent writes and runs its analysis code in an isolated environment against the collected posts, picking from 30+ analysis functions, capped at eight steps. Every answer returns the code it ran and the posts it cites, and any run replays deterministically.</p>
+      <div class="scaleband mt24">
+        <div class="c"><div class="v">3.7M<small>+</small></div><div class="k">posts across investigations</div></div>
+        <div class="c"><div class="v">20B</div><div class="k">interactions a month across platforms</div></div>
+        <div class="c"><div class="v">9<small> + news</small></div><div class="k">platforms, multilingual, entity-resolved</div></div>
+        <div class="c"><div class="v">540</div><div class="k">agent runs hand-graded across 9 studies</div></div>
+      </div>
+      <div class="adv mt24">
+        <div class="advrow fragment">
+          <div class="claim">
+            <div class="hd">We grade the agent's code, not just its prose</div>
+            <div class="why">An agent that chooses tools and writes code can be confidently wrong in quiet ways. An LLM judge scores each answer's code against a reference implementation we wrote, and error patterns feed an offline GEPA prompt-evolution pass our engineers review.</div>
+          </div>
+          <div class="metric">
+            <div class="row">analysis functions the agent composes <span class="numchip good">30+</span></div>
+            <div class="row">every answer replays from its code <span class="numchip good">deterministic</span></div>
+            <span class="note">Grading executes the agent's actual code against a known-good baseline, so an answer is only accepted when its code reproduces the reference result.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · code: run-case-study-agent.ts (8-step TS sandbox), packages/agent-eval, tooling/scripts/replay-*</span>
+      <span class="brand">ARBITER &middot; SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES METRICS (ported from arbiter-overview-2026) -->
+<style>
+.outfull .ocards{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:28px; flex:1 1 auto; min-height:0; align-items:stretch; }
+.outfull .ocard{ background:#12151d; border:1px solid #262b38; border-top:3px solid #5fe0a0; border-radius:8px; padding:24px 26px; display:flex; flex-direction:column; }
+.outfull .ocard .tag{ font-family:"Inter",sans-serif; font-size:12.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:#5fe0a0; }
+.outfull .ocard .num{ font-family:"Space Grotesk",sans-serif; font-size:38px; font-weight:700; color:#e8eaf0; margin-top:14px; line-height:1; }
+.outfull .ocard p{ font-size:15.5px; line-height:1.5; color:#c9cdd8; margin-top:12px; }
+.outfull .ocard .srcline{ font-family:"IBM Plex Mono",monospace; font-size:10.5px; color:#6b7386; margin-top:auto; padding-top:14px; line-height:1.5; }
+.outfull .ocard.b2{ border-top-color:#7288ff; } .outfull .ocard.b2 .tag{ color:#7288ff; }
+.outfull .ocard.b3{ border-top-color:#ffd900; } .outfull .ocard.b3 .tag{ color:#ffd900; }
+</style>
+<section class="dark outfull" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <h2 style="font-size:36px;">When partners publish, institutions act</h2>
+      <div class="ocards">
+        <div class="ocard fragment">
+          <div class="tag">Partners publish</div>
+          <div class="num">19 days early</div>
+          <p><b>NEST</b> caught the coordinated push behind a secret defamation bill before it surfaced publicly, from a signal of fewer than 60 accounts.</p>
+          <div class="srcline">Mongolia’s only internationally accredited fact-checkers · public case report</div>
+        </div>
+        <div class="ocard b2 fragment">
+          <div class="tag">Platforms act</div>
+          <div class="num">2 platforms</div>
+          <p>acted on evidence our partners published: <b>Meta’s Q1 2024 Bangladesh takedown</b>, and <b>YouTube terminating flagged channels</b>.</p>
+          <div class="srcline">Meta Adversarial Threat Report Q1 2024 · Burkina Faso case</div>
+        </div>
+        <div class="ocard b3 fragment">
+          <div class="tag">Governments act</div>
+          <div class="num">5 governments</div>
+          <p>opened conversations about running this work in their jurisdiction: <b>Maryland, California, New York</b>; <b>Odisha</b> in India; and the Philippines’ <b>Department of Migrant Workers</b>.</p>
+          <div class="srcline">Maryland has committed to a statewide rollout; the rest are proposals and scoping conversations, July 2026</div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · partner case reports · transparency.meta.com Q1 2024 · status as of July 2026</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES DIVIDER -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body" style="justify-content:center; align-items:center; text-align:center;">
+      <h1 style="font-family:'Space Grotesk',sans-serif; font-size:84px; font-weight:700; color:#e8eaf0; letter-spacing:-0.02em;">Case studies</h1>
+      <p style="font-size:19px; color:#9aa1b2; margin-top:20px;">Three follow. The full library is public at <a href="https://arbiter.simppl.org/studies" style="color:#5fe0a0; border:none;">arbiter.simppl.org/studies</a>.</p>
+    </div>
+    <div class="foot">
+      <span class="src">arbiter.simppl.org/studies</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 11 · CASE FILE 02 · FAKE OVERSEAS JOBS ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="case-plate">
+      <span class="no">Case study 01 · Job scams</span>
+      <span class="nm">Fake overseas jobs, Indonesia and the Philippines</span>
+      <span class="win">Dec 2025 – Apr 2026 · Facebook · Migrasia</span>
+    </div>
+    <div class="si-body">
+      <div class="cols w46 top">
+        <div>
+          <p style="font-size:16.5px;">Fake job ads on Facebook promise work abroad and deliver workers into scam compounds. With <strong>Migrasia</strong>, we traced 2,251 of these ads across Indonesia and the Philippines.</p>
+          <p style="font-size:16.5px;">The pages share phone numbers, emails and links, and those shared contact details tie them into <strong>14 recruiting networks</strong>. One agency was still posting under an expired license.</p>
+          <p style="font-size:16.5px;"><strong>The Global Anti-Scam Alliance, 124 members across 90 countries, invited us to present the findings at its Bangkok summit.</strong> The investigation compiled in under two hours, and both studies are public.</p>
+          <div class="mt24"><span class="stamp yellow">14 recruiting networks mapped</span></div>
+        </div>
+        <div>
+          <div class="ebars">
+            <div class="ebar fragment"><span class="lb">LEGITIMACY SCRIPT</span><span class="track"><span class="fill yellow" style="width:100%"></span></span><span class="val">489</span></div>
+            <div class="ebar fragment"><span class="lb">TESTIMONIALS</span><span class="track"><span class="fill" style="width:47%"></span></span><span class="val">229</span></div>
+            <div class="ebar fragment"><span class="lb">URGENCY</span><span class="track"><span class="fill" style="width:34%"></span></span><span class="val">167</span></div>
+            <div class="ebar fragment"><span class="lb">PHONE NUMBER</span><span class="track"><span class="fill" style="width:31%"></span></span><span class="val">154</span></div>
+            <div class="ebar fragment"><span class="lb">WHATSAPP</span><span class="track"><span class="fill" style="width:25%"></span></span><span class="val">124</span></div>
+          </div>
+          <p class="tiny muted">Recruitment tactics by post count, Indonesian collection (1,492 posts); bars scaled to the leader.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · two public Arbiter × Migrasia reports, linked on the partners slide · arbiter.simppl.org/studies</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 09 · CASE FILE 01 · DETECT ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="case-plate">
+      <span class="no">Case study 02 · AI-generated propaganda</span>
+      <span class="nm">Burkina Faso · a manufactured PR campaign</span>
+      <span class="win">Jun 30 – Aug 30 2025 · X · YouTube · Reddit</span>
+    </div>
+    <div class="si-body">
+      <div class="cols w64 top">
+        <div class="acts">
+          <div class="act">
+            <div class="n">01<small>Detect</small></div>
+            <div>
+              <h3>A fake PR wave for a military ruler</h3>
+              <p>Pages promote Ibrahim Traoré with sentiment reading <b>100% positive, 100% joy</b>. Organic audiences rarely agree like this.</p>
+            </div>
+          </div>
+          <div class="act">
+            <div class="n">02<small>Identify</small></div>
+            <div>
+              <h3>The videos are AI-generated</h3>
+              <p>Fake factories, fake railways, fake tributes, drawing <b>millions of views</b> before any platform labeled them.</p>
+            </div>
+          </div>
+          <div class="act">
+            <div class="n">03<small>Impact</small></div>
+            <div>
+              <h3>YouTube terminated the channels</h3>
+              <p><b>YouTube acted on its own review; we had filed no report.</b> A year later the network rebuilt as 30 channels selling merch, and we caught the rebuild in a follow-up study.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="wire">
+            <div class="bar"><i></i><i></i><i></i><span class="url">ibrahim traoré · key narrative</span></div>
+            <div style="height:320px; overflow:hidden;"><img src="images/arbiter-2026/traore_sentiment_pdf.png" alt="Traore panel: 100% positive sentiment, 100% joy, Info Pulse top post"></div>
+          </div>
+          <div class="ebars mt16">
+            <div class="ebar fragment"><span class="lb">POSITIVE</span><span class="track"><span class="fill green" style="width:100%"></span></span><span class="val">100%</span></div>
+            <div class="ebar fragment"><span class="lb">JOY</span><span class="track"><span class="fill green" style="width:100%"></span></span><span class="val">100%</span></div>
+          </div>
+          <p class="tiny muted mt10">Uniformly green panels are the anomaly that starts the investigation.</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · public Arbiter study panels · arbiter.simppl.org/studies</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 13 · CASE FILE 04 · MARYLAND ═══ -->
+<section class="dark" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="case-plate">
+      <span class="no">Case study 03 · Elections</span>
+      <span class="nm">Maryland's mail-in ballots: record vs feed</span>
+      <span class="win">May 1 – 19 2026 · X · YouTube · Facebook · Bluesky</span>
+    </div>
+    <div class="si-body">
+      <div class="cols top">
+        <div>
+          <h3 class="green-txt">What officially happened</h3>
+          <p style="font-size:15.5px;">A vendor printing error sent some voters the wrong primary ballot. The state re-sent replacements to everyone, voided the originals, and put a unique identifier on every return envelope, so officials state there is <strong>no risk of duplicate voting</strong>.</p>
+          <div class="wire mt16">
+            <div class="bar"><i></i><i></i><i></i><span class="url">state board explanation, cross-platform</span></div>
+            <div><img src="images/arbiter-2026/maryland_official_cards.png" alt="Maryland State Board of Elections explanation cited across three platforms"></div>
+          </div>
+          <p class="tiny muted">The official explanation, cited in the study.</p>
+        </div>
+        <div>
+          <h3 class="red-txt">What the feed made of it</h3>
+          <div class="claims mt10">
+            <div class="claimrow">
+              <div class="c"><b>The claim: 500,000 fake or illegal ballots revealed.</b> False per the state's election administrator and independent fact-checkers.</div>
+              <div class="verdict fails">Rated false</div>
+            </div>
+            <div class="claimrow">
+              <div class="c"><b>The claim: a million ballots now circulating.</b> Originals plus replacements, recast as duplicates; the study's claims review found the leap unsubstantiated.</div>
+              <div class="verdict fails">Escalation</div>
+            </div>
+            <div class="claimrow">
+              <div class="c"><b>One sentence, 50+ accounts.</b> The same wording appeared across platforms within hours, mostly from commentary accounts.</div>
+              <div class="verdict contested">Identical wording</div>
+            </div>
+          </div>
+          <p class="mt16" style="font-size:15.5px;"><strong>The claims reached Congress:</strong> the top post (<strong>1.32M interactions</strong>) demanded the Senate attach the SAVE America Act, which passed the House and failed in the Senate. <strong>Maryland’s State Administrator of Elections signed a letter committing to county and statewide deployment of Arbiter.</strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · 1,485-post study, saved claims + coordination runs · elections.maryland.gov · FactCheck.org · AP · congress.gov (H.R. 7296)</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 13 · WHO USES IT (map) ═══ -->
+
+
+<!-- ═══ 14 · TEAM ═══ -->
+<style>
+.teamfull .team-row{ display:flex; gap:34px; margin-top:22px; }
+.teamfull .team-col{ flex:1.15; }
+.teamfull .board-col{ flex:1; border-left:1px solid #262b38; padding-left:30px; }
+.teamfull .founder{ display:flex; gap:16px; align-items:center; margin-bottom:18px; }
+.teamfull .founder img{ width:84px; height:84px; border-radius:50%; object-fit:cover; border:2px solid #262b38; }
+.teamfull .founder p{ font-size:15px; line-height:1.5; margin:0; color:#9aa1b2; }
+.teamfull .founder p b{ color:#e8eaf0; font-size:17px; }
+.teamfull .avatar-row{ display:flex; gap:10px; margin-top:6px; }
+.teamfull .avatar-row img{ width:52px; height:52px; border-radius:50%; object-fit:cover; border:2px solid #262b38; }
+.teamfull .avatar-cap{ font-size:13.5px; color:#9aa1b2; margin:10px 0 0 0; }
+.teamfull .avatar-cap b{ color:#e8eaf0; }
+.teamfull .board-head{ font-family:"Inter",sans-serif; font-size:12.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#5fe0a0; margin-bottom:12px; }
+.teamfull .board-m{ font-size:15px; line-height:1.5; margin:0 0 8px 0; color:#9aa1b2; }
+.teamfull .board-m b{ color:#e8eaf0; }
+</style>
+<section class="dark teamfull" data-background-color="#0b0d12">
+  <div class="si">
+    <div class="si-body">
+      <h2 style="font-size:36px;">The team, and the board behind it</h2>
+      <div class="team-row">
+        <div class="team-col">
+          <div class="founder">
+            <img src="images/arbiter-general-2026/team/swapneel.png" alt="Swapneel Mehta">
+            <p><b>Swapneel Mehta</b> · Founder &amp; Executive Director<br>Former postdoc at MIT and BU in AI safety. Integrity Institute Board Member, advising EU, UK, and LatAm policymakers on online safety.</p>
+          </div>
+          <div class="founder">
+            <img src="images/arbiter-general-2026/team/dhara.jpeg" alt="Dhara Mungra">
+            <p><b>Dhara Mungra</b> · Co-Founder, leads engineering<br>NYU MS; former Data Scientist III at Bombora; CAIDP &amp; U. Mannheim fellow; black belt and marathoner</p>
+          </div>
+          <div>
+            <div class="avatar-row">
+              <img src="images/arbiter-general-2026/team/atmik.jpeg" alt=""><img src="images/arbiter-general-2026/team/utkarsh.jpeg" alt=""><img src="images/arbiter-general-2026/team/dev.jpeg" alt=""><img src="images/arbiter-general-2026/team/varun.jpeg" alt=""><img src="images/arbiter-general-2026/team/delisha.jpeg" alt=""><img src="images/arbiter-general-2026/team/arhaan.jpeg" alt="">
+            </div>
+            <p class="avatar-cap"><b>Six full-time engineers</b> build and run the platform: retrieval, agents, evaluation, infrastructure</p>
+          </div>
+        </div>
+        <div class="board-col">
+          <div class="board-head">Board of directors</div>
+          <p class="board-m"><b>Mukund Sudarshan</b> · Anthropic</p>
+          <p class="board-m"><b>Christian Schroeder de Witt</b> · University of Oxford</p>
+          <p class="board-m"><b>Chirag Raman</b> · TU Delft</p>
+          <p class="board-m"><b>Sandra Khalil</b> · All Tech Is Human</p>
+          <p class="board-m"><b>Rebecca Harvey</b> · UK FCDO</p>
+          <p class="board-m"><b>Karan Dhabalia</b> · entrepreneur (exited to Stripe)</p>
+          <p class="board-m"><b>Mansi Panchamia</b> · World Bank</p>
+          <p class="board-m"><b>Stacey Peters</b> · ex-VTDigger</p>
+          <p class="board-m" style="margin-top:12px; color:#6b7386;">Full board and team: <a href="https://simppl.org/team" style="color:#5fe0a0; border:none;">simppl.org/team</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SRC · simppl.org/team</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 16 · CTA ═══ -->
+<!-- ═══ ASK ═══ -->
+<section class="cta" data-background-color="#ffd900">
+  <div class="si">
+    <div class="si-body">
+      <div class="cols w64">
+        <div>
+          <h2>Try it now.</h2>
+          <p class="mt24" style="font-size:20px; color:#12131a;">Request a demo: write to <a href="mailto:team@simppl.org">team@simppl.org</a><br>and we follow up within the week.</p>
+          <p class="mt24" style="font-size:17px; color:#3d3a10;">A pilot is one case study scoped to your issue: we set the date window together, run the investigation with you, and you keep the evidence and the sources. Free investigation reports arrive in your inbox via <a href="https://simppl.org/newsletter">simppl.org/newsletter</a>. The platform is live at <a href="https://arbiter.simppl.org">arbiter.simppl.org</a>.</p>
+        </div>
+        <div style="display:flex; justify-content:center;">
+          <svg width="300" height="300" viewBox="0 0 100 100" style="transform:rotate(-45deg)"><polygon points="0,40 60,40 60,20 100,50 60,80 60,60 0,60" fill="#12131a"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span class="src">SIMPPL · U.S. 501(C)(3) · BOOTSTRAPPED SINCE 2021</span>
+      <span class="brand">ARBITER · SIMPPL</span>
+    </div>
+  </div>
+</section>
+
+</div>
+</div>
+<script type="application/json" id="cmap-data">
+{
+  "study": {
+    "title": "Ibrahim Traore conversations in Burkina Faso",
+    "url": "https://arbiter.simppl.org/case-studies/jd72d7yvdhmq41xy29g9mkrr6s87dz70",
+    "collected": 22719,
+    "relevant": 19532,
+    "conceptWeb": { "concepts": 51, "subConcepts": 41, "posts": 3817, "users": 1115 }
+  },
+  "concepts": [
+    { "label": "Governance Challenges in West Africa", "posts": 1253, "interactions": "143.7K" },
+    { "label": "Cohesive National Development", "posts": 883, "interactions": "315.5K", "focused": true },
+    { "label": "Sovereignty and Cultural Resilience", "posts": 395, "interactions": "103.4K" },
+    { "label": "Strategic Governance and Economic Transformation", "posts": 370, "interactions": "284.3K" },
+    { "label": "Political Discourse and Rights", "posts": 310, "interactions": "64.4K" },
+    { "label": "Political Authority and Resistance Dynamics", "posts": 264, "interactions": "81.3K" },
+    { "label": "Cultural and Political Empowerment", "posts": 258, "interactions": "323.1K" },
+    { "label": "International Relations and Reconciliation", "posts": 60, "interactions": "6.3K" },
+    { "label": "Judicial Inquiry Narratives", "posts": 24, "interactions": "3.3K" }
+  ],
+  "subConcepts": {
+    "Cohesive National Development": [
+      { "label": "National Unity and Progress", "posts": 719 },
+      { "label": "Bobo-Dioulasso Event Highlights", "posts": 68 },
+      { "label": "Historical Prison Visit Impact", "posts": 58 },
+      { "label": "Western Criticism Response", "posts": 12 },
+      { "label": "Unfiltered Interview Insights", "posts": 12 },
+      { "label": "Leadership and Patriotism", "posts": 8, "expanded": true },
+      { "label": "April Ministerial Resolutions", "posts": 6 }
+    ]
+  },
+  "posts": {
+    "Leadership and Patriotism": [
+      { "author": "TrueMamle", "platform": "YouTube", "title": "Captain Ibrahim Traore Speech 1st Of April : Revolutionary Spirit Of Burkina Faso (English)", "interactions": 504 },
+      { "author": "Bridge24", "platform": "YouTube", "title": "Interview of Captain Ibrahim Traoré | President of Burkina-Faso | (Part1)", "interactions": 9 },
+      { "author": "FLPLOUZANE TV", "platform": "YouTube", "title": "News : President for life' Inside Traoré's Burkina Faso (UK, 13 april of 2026)", "interactions": 2 }
+    ]
+  }
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script src="arbiter-2026/arbiter.js?v=4"></script>
+<script>
+/* Concept-map behaviour (deck_v4). The markup ships the FINAL default state
+   (Cohesive National Development -> Leadership and Patriotism -> 3 posts), so
+   print-pdf and JS-off readers see the expanded hierarchy with no JS at all.
+   In a live browser this wires click-to-walk interactions, re-rendering the
+   columns from JSON: fetched from data/traore_concept_map.json when served
+   over HTTP, falling back to the inline #cmap-data block on file:// or fetch
+   failure. Print detection matches components/arbiter.js. */
+(function ($) {
+  'use strict';
+  var PRINT = /print-pdf/gi.test(window.location.search);
+  if (PRINT || typeof $ === 'undefined') return;   // static markup = expanded state
+
+  var INLINE = JSON.parse(document.getElementById('cmap-data').textContent);
+  var FOCUS = 'Cohesive National Development';
+  var SUB = 'Leadership and Patriotism';
+
+  function load(cb) {
+    if (window.location.protocol === 'file:' || typeof window.fetch !== 'function') return cb(INLINE);
+    window.fetch('data/traore_concept_map.json')
+      .then(function (r) { return r.ok ? r.json() : INLINE; })
+      .then(function (d) { cb(d && d.concepts ? d : INLINE); })
+      .catch(function () { cb(INLINE); });
+  }
+
+  load(function (data) {
+    var $map = $('#cmap');
+    if (!$map.length) return;
+    var state = { concept: FOCUS, sub: SUB, open: true };
+
+    function esc(s) { return $('<i>').text(s).html(); }
+    function row(kind, label, count, on) {
+      return '<div class="crow' + (on ? ' on' : '') + '" data-k="' + kind + '" data-id="' + esc(label) + '">' +
+             '<span class="lb">' + esc(label) + '</span><span class="ct">' + count + '</span></div>';
+    }
+
+    function render() {
+      var h1 = '<div class="chead">Concepts <b>9 of ' + data.study.conceptWeb.concepts + ' shown</b></div>';
+      data.concepts.forEach(function (c) {
+        h1 += row('c', c.label, c.posts, c.label === state.concept);
+      });
+      $map.find('.ccol.c1').html(h1);
+
+      var subs = data.subConcepts[state.concept];
+      var h2, h3;
+      if (subs) {
+        h2 = '<div class="chead">Sub-concepts <b>' + subs.length + ' of ' + data.study.conceptWeb.subConcepts + '</b></div>';
+        subs.forEach(function (s) {
+          var on = s.label === state.sub && state.open;
+          var ct = data.posts[s.label] ? s.posts + (on ? ' &#9662;' : ' &#9656;') : s.posts;
+          h2 += row('s', s.label, ct, on);
+        });
+        var posts = state.open && data.posts[state.sub];
+        if (posts) {
+          h3 = '<div class="chead">Posts <b>' + posts.length + ' of 8 · ' + esc(state.sub) + '</b></div>';
+          posts.forEach(function (p) {
+            h3 += '<div class="cpost"><div class="au">' + esc(p.author) + ' <small>' + esc(p.platform).toUpperCase() + '</small></div>' +
+                  '<div class="tt">' + esc(p.title) + '</div>' +
+                  '<div class="ints">' + p.interactions + ' interactions</div></div>';
+          });
+        } else if (data.posts[state.sub]) {
+          h3 = '<div class="chead">Posts <b>collapsed</b></div>' +
+               '<div class="cnote">' + esc(state.sub) + ' is collapsed. Click it again to expand its posts.</div>';
+        } else {
+          var picked = null;
+          subs.forEach(function (s) { if (s.label === state.sub) picked = s; });
+          h3 = '<div class="chead">Posts <b>in the full study</b></div>' +
+               '<div class="cnote">' + (picked ? picked.posts + ' posts sit under ' + esc(state.sub) + '. ' : '') +
+               'This sample expands Leadership and Patriotism; the rest open in the live study.</div>';
+        }
+      } else {
+        var c = null;
+        data.concepts.forEach(function (x) { if (x.label === state.concept) c = x; });
+        h2 = '<div class="chead">Sub-concepts <b>in the full study</b></div>' +
+             '<div class="cnote">' + esc(state.concept) + ': ' + (c ? c.posts + ' posts · ' + c.interactions + ' interactions. ' : '') +
+             'Its sub-concept breakdown opens in the live study; this sample walks the Cohesive National Development path.</div>';
+        h3 = '<div class="chead">Posts <b>·</b></div>' +
+             '<div class="cnote">Pick Cohesive National Development to walk the sampled path down to posts and authors.</div>';
+      }
+      $map.find('.ccol.c2').html(h2);
+      $map.find('.ccol.c3').html(h3);
+    }
+
+    $map.on('click', '.crow', function () {
+      var $r = $(this), kind = $r.attr('data-k'), id = $r.attr('data-id');
+      if (kind === 'c') {
+        state.concept = id;
+        state.sub = (id === FOCUS) ? SUB : null;
+        state.open = (id === FOCUS);
+      } else {
+        if (state.sub === id) { state.open = !state.open; }
+        else { state.sub = id; state.open = true; }
+      }
+      render();
+    });
+
+    render();
+  });
+}(window.jQuery));
+</script>
+<script>
+  Reveal.initialize({
+    width: 1280, height: 720, margin: 0,
+    center: false, hash: true, controls: false, progress: true,
+    transition: 'fade', transitionSpeed: 'fast',
+    pdfSeparateFragments: false, pdfMaxPagesPerSlide: 1
+  }).then(function () { ArbiterDeck.init(Reveal); });
+</script>
+</body>
+</html>
