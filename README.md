@@ -1,4 +1,37 @@
-# al-folio
+# mehtaver.se — local development and deployment
+
+This checkout contains the Jekyll source for Swapneel Mehta's website. `_site/` is a separate Git repository holding the generated website.
+
+| Directory | Upstream | Branch | Purpose |
+| --- | --- | --- | --- |
+| Project root | `SwapneelM/github-io-template` | `master` | Source, content and templates |
+| `_site/` | `SwapneelM/swapneelm.github.io` | `master` | Generated public site at `mehtaver.se` |
+
+The current homepage is `_pages/v4.html`; its shared styling and navigation live in `_includes/v4/`. The project index is `_pages/v4-projects.html`, individual projects live in `_projects/`, and homepage project cards come from `_data/current_projects.yml`.
+
+### Local preview on this Mac
+
+The installed Ruby used by this project is 4.0.2. Calling it explicitly avoids changing shell profiles, PATH, or system Ruby. Dependencies were checked successfully on 12 November 2026; no installation was needed.
+
+```bash
+/opt/homebrew/Cellar/ruby/4.0.2/bin/ruby /opt/homebrew/Cellar/ruby/4.0.2/bin/bundle check
+/opt/homebrew/Cellar/ruby/4.0.2/bin/ruby /opt/homebrew/Cellar/ruby/4.0.2/bin/bundle exec jekyll build --disable-disk-cache --destination /private/tmp/mehtaverse-preview
+python3 -m http.server 4711 --bind 127.0.0.1 --directory /private/tmp/mehtaverse-preview
+```
+
+Open `http://127.0.0.1:4711`. If the port is occupied, choose another port; leave the existing process running. This build goes to a temporary directory and does not regenerate the deployment checkout. Check desktop/mobile rendering, project navigation and links before preparing deployment output.
+
+### Deployment after review
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) and [CLAUDE.md](CLAUDE.md) for the established manual workflow. Confirm both repositories' status and remotes first. A production build normally generates `_site/`; review its diff and stage only intended files, because unrelated local source changes can also reach that build. Commit source and generated files in their respective repositories. Push each reviewed commit to its own `origin/master` only with publication approval, then compare remote commit IDs and verify the live pages.
+
+The theme's GitHub Actions workflow targets a `gh-pages` branch in the source repository. It is not the documented deployment route for this site's separate generated repository. Keep the existing `CNAME` value `mehtaver.se` in both source and generated output.
+
+`labs.mehtaver.se` is a separate proposed site. Its repository, custom domain and DNS record must be reviewed independently; the existing personal site's custom domain must not be repurposed for Labs.
+
+---
+
+# Original al-folio documentation
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [maintainers]: https://img.shields.io/badge/maintainers-3-success.svg 'Number of maintainers'
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
